@@ -1,0 +1,124 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "jest": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "simple-import-sort",
+    "testing-library",
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "extends": ["plugin:@typescript-eslint/recommended"]
+    },
+    {
+      "files": ["src/stories/**"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": ["*.mdx"],
+      "extends": ["plugin:mdx/recommended"]
+    },
+    {
+      "env": {
+        "jest/globals": true
+      },
+      "files": ["*.spec.ts", "*.spec.tsx"],
+      "extends": [
+        "plugin:testing-library/recommended",
+        "plugin:jest/recommended"
+      ]
+    }
+  ],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": [
+      "warn",
+      {
+        "ts-expect-error": "allow-with-description",
+        "ts-ignore": false,
+        "ts-nocheck": "allow-with-description",
+        "ts-check": false
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "jsx-a11y/label-has-for": "off",
+    "no-console": "warn",
+    "react/no-unescaped-entities": "warn",
+    "prettier/prettier": "error",
+    "space-before-function-paren": 0,
+    "react/prop-types": 0,
+    "react/jsx-handler-names": 0,
+    "react/jsx-fragments": 0,
+    "react/no-unused-prop-types": 0,
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // nodejs builtins
+          [
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
+          ],
+          // side effects
+          ["^\\u0000"],
+          // react and related packages
+          ["^react", "^@?\\w"],
+          // @arc alias internal imports
+          ["^(@arc)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports; Puts `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Puts same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
+        ]
+      }
+    ]
+  }
+}
