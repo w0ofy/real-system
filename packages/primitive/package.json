@@ -1,0 +1,41 @@
+{
+  "name": "@realsystem/primitive",
+  "version": "0.0.0",
+  "description": "primitive components for real system",
+  "main": "lib/index.js",
+  "main:dev": "src/index.ts",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production node ../../tools/build.js",
+    "dev": "NODE_ENV=development node ../../tools/dev.js",
+    "deploy": "node ../../tools/publish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigwoof91/realsystem.git"
+  },
+  "keywords": [
+    "real-system",
+    "primitive",
+    "components"
+  ],
+  "author": "Mike Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigwoof91/realsystem/issues"
+  },
+  "homepage": "https://github.com/bigwoof91/realsystem#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "theme-ui": "^0.11.3",
+    "@theme-ui/presets": "^0.11.3"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

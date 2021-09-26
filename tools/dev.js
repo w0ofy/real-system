@@ -1,5 +1,4 @@
 const esbuild = require('esbuild');
-const { commandSync } = require('execa');
 const {
   logger,
   generateTypes,
@@ -10,13 +9,10 @@ const {
 } = require('./utils');
 
 /**
- * @function build bundle package for cjs and esm output
+ * @function dev bundle package for cjs and esm output
  * @param {*} packageJson package's package.json
  */
-function build() {
-  // clean outdirectory
-  commandSync(`rimraf ./lib`);
-
+function dev() {
   const { entryPoint, outFileCJS, outFileESM, outFileTypes, ...packageJson } =
     getPackageJsonFields();
 
@@ -25,13 +21,12 @@ function build() {
     ...packageJson.peerDependencies,
     ...packageJson.devDependencies,
   });
-
   const watch = isProduction
     ? false
     : {
         onRebuild(err, result) {
           if (err) throw err;
-          logger.blue(`${packageJson.name} rebundled!`);
+          logger.blue(result);
         },
       };
   // ESbuild config
@@ -76,7 +71,7 @@ function build() {
     })
     // bundle typings and copy package.json
     .then(async (result) => {
-      isProduction && (await generateTypes(entryPoint, outFileTypes));
+      await generateTypes(entryPoint, outFileTypes);
       logger.green(`SUCCESSFULLY BUNDLED "${packageJson.name}"!`);
     })
     .catch((e) => {
@@ -85,4 +80,4 @@ function build() {
     });
 }
 
-build();
+dev();

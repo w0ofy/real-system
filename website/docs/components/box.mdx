@@ -1,0 +1,29 @@
+---
+sidebar_position: 2
+---
+
+import { PropTable } from '../../src/components/PropTable';
+
+# Box
+
+Box is a simple wrapper around [ui-box](https://github.com/segmentio/ui-box). Box is part of Real System's low-level component API.
+It should be used to build, enhance and compose "real system components".
+
+> ui-box is a low level CSS-in-JS solution that focuses on being simple, fast and extensible. All CSS properties are set using simple React props, which allows you to easily create reusable components that can be enhanced with additional CSS properties. This is very useful for adding things like margins to components, which would normally require adding non-reusable wrapper elements/classes.
+
+## Usage
+
+```jsx live
+function BoxUsage(props) {
+  return (
+    <Box display="flex">
+      <Box marginRight=".5rem">hello</Box>
+      <Box>world</Box>
+    </Box>
+  );
+}
+```
+
+## Props
+
+<PropTable name="Box" />
