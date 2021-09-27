@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { deep } from '@realsystem/primitive';
+import { defaultTheme, useTheme } from '@realsystem/primitive';
 
 function makeState() {
   const [state, setState] = useState(undefined);
@@ -8,7 +8,8 @@ function makeState() {
 
 export default () => ({
   local: makeState(),
+  theme: useTheme(),
   themes: {
-    deep,
+    default: defaultTheme,
   },
 });

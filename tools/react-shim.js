@@ -1,2 +1,2 @@
-import * as React from 'react';
-export { React };
+import { jsx, css } from '@emotion/react';
+export { jsx, css };

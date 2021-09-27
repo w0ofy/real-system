@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "playroom": "^0.27.4"
+    "playroom": "^0.27.4",
+    "@realsystem/primitive": "0.0.0",
+    "@realsystem/button": "0.0.0"
   }
 }

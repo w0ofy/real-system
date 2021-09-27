@@ -1,4 +1,4 @@
-export { Button, ButtonProps } from 'theme-ui';
-export { deep, dark } from '@theme-ui/presets';
-export { useThemeUI as useTheme } from 'theme-ui';
+export { useTheme, css } from '@emotion/react';
+export { default as styled } from '@emotion/styled';
 export * from './ThemeProvider';
+export * from './defaultTheme';

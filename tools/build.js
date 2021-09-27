@@ -50,9 +50,11 @@ function build() {
       'process.env.NODE_ENV': `"${env}"`,
     },
     inject: [`${__dirname}/react-shim.js`],
+    jsxFactory: `jsx`,
     logLevel: 'error',
     watch,
     external,
+    sourcemap: 'external',
   };
 
   // bundle commonjs

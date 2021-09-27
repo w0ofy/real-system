@@ -1,15 +1,17 @@
-import {
-  Button as Primitive,
-  ButtonProps as PrimitiveProps,
-  useTheme,
-} from '@realsystem/primitive';
+import { useTheme, styled } from '@realsystem/primitive';
 
-export type ButtonProps = PrimitiveProps;
+export type ButtonProps = {
+  children: React.ReactNode;
+};
+
+const Primitive = styled.button`
+  border: 5px solid ${(props) => props.theme?.colors?.primary};
+`;
 
 const Button = (props: ButtonProps) => {
-  const t = useTheme();
-  console.log('button', t);
-  return <Primitive sx={{ color: 'primary' }} {...props} />;
+  const theme = useTheme();
+  console.log('button', theme);
+  return <Primitive {...props} />;
 };
 
 export { Button };

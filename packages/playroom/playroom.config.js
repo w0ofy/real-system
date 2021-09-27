@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Real System',
-  components: './src/components.ts',
+  components: './src/components.tsx',
   frameComponent: './src/FrameComponent.tsx',
   outputPath: './dist/playroom',
   // themes: './src/themes',

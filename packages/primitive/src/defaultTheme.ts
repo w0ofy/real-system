@@ -1,13 +1,14 @@
 const defaultTheme = {
-  borders: ['5px'],
+  borders: ['2px'],
   borderStyles: ['solid', 'dashed'],
   borderWidths: [1, 4],
   colors: {
     text: '#ffffff',
     background: '#282a36',
     primary: '##ff57b6',
-    primaryHighlight: '#ff57b6',
+    primaryHighlight: '#f547aa',
     secondary: '#8be9fd',
+    secondaryHighlight: '#62ddf8',
     muted: '#8394ca',
     highlight: '#50fa7b',
     gray: '#808080',
