@@ -29,9 +29,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {
-    "@realsystem/primitive": "0.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

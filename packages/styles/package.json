@@ -1,7 +1,7 @@
 {
-  "name": "@realsystem/primitive",
+  "name": "@realsystem/styles",
   "version": "0.0.0",
-  "description": "primitive theme and components for real system",
+  "description": "theme and components for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -17,7 +17,7 @@
   },
   "keywords": [
     "real-system",
-    "primitive",
+    "styles",
     "components"
   ],
   "author": "Mike Wolf",
@@ -33,6 +33,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@types/styled-system": "^5.1.13",
     "styled-system": "5.1.5"
   },
   "devDependencies": {

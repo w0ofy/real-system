@@ -1,4 +1,6 @@
-const defaultTheme = {
+import { Theme } from '@emotion/react';
+
+const defaultTheme: Theme = {
   borders: ['2px'],
   borderStyles: ['solid', 'dashed'],
   borderWidths: [1, 4],
@@ -328,3 +330,5 @@ const defaultTheme = {
 };
 
 export { defaultTheme };
+
+export type Scales = keyof typeof defaultTheme;

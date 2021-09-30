@@ -21,15 +21,12 @@ function build() {
     getPackageJsonFields();
 
   // Things we don't want to bundle
-  const external = getWildcardExternalPeers({
-    ...packageJson.peerDependencies,
-    ...packageJson.devDependencies,
-  });
+  const external = getWildcardExternalPeers(packageJson);
 
   const watch = isProduction
     ? false
     : {
-        onRebuild(err, result) {
+        onRebuild(err, _result) {
           if (err) throw err;
           logger.blue(`${packageJson.name} rebundled!`);
         },

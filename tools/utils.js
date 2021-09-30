@@ -41,8 +41,11 @@ const generateTypes = (entry, output) => {
   ).generate();
 };
 
-const getWildcardExternalPeers = (peerAndDevDeps = {}) => {
-  const externalDeps = Object.keys(peerAndDevDeps);
+const getWildcardExternalPeers = (packageJson = {}) => {
+  const externalDeps = Object.keys({
+    ...packageJson.peerDependencies,
+    ...packageJson.devDependencies,
+  });
   const wildcardedExternalDeps = externalDeps.map((dep) => `${dep}/*`);
   return [...externalDeps, ...wildcardedExternalDeps];
 };

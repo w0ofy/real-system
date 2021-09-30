@@ -7,14 +7,20 @@
     "paths": {
       "@realsystem/*": ["packages/*"]
     },
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "declaration": true,
     "target": "esnext",
     "lib": ["esnext", "dom"],
     "strict": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "module": "esnext",
     "outDir": "lib"
   }
 }
