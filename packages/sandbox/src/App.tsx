@@ -1,9 +1,9 @@
 import React from 'react';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 import { Button } from '@realsystem/button';
-import { ThemeProvider, defaultTheme } from '@realsystem/styles';
+import { ThemeProvider, defaultTheme, useTheme } from '@realsystem/styles';
 import theme from 'prism-react-renderer/themes/dracula';
-const scope = { Button, ThemeProvider, defaultTheme };
+const scope = { Button, ThemeProvider, defaultTheme, useTheme };
 
 const code = `
 <ThemeProvider theme={defaultTheme}>

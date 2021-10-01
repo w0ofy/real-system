@@ -1,5 +1,5 @@
 import {
-  useTheme,
+  StyleProps,
   styled,
   compose,
   space,
@@ -10,18 +10,21 @@ import {
   boxShadow,
   position,
   typography,
+  useTheme,
 } from '@realsystem/styles';
 
 export type ButtonProps = {
   children: React.ReactNode;
 };
 
-const Primitive = styled.button(
-  {
-    border: 0,
-    cursor: 'pointer',
-  },
-  compose(
+const Primitive = styled.button<StyleProps>`
+  border: 0;
+  cursor: pointer;
+  background: ${({ theme }) => {
+    console.log(theme);
+    return theme?.colors?.primary || 'black';
+  }};
+  ${compose(
     space,
     layout,
     flexbox,
@@ -30,12 +33,12 @@ const Primitive = styled.button(
     boxShadow,
     position,
     typography
-  )
-);
+  )}
+`;
 
 const Button = (props: ButtonProps) => {
-  const theme = useTheme();
-  console.log('button', theme);
+  const t = useTheme();
+  console.log(t);
   return <Primitive {...props} p={2} />;
 };
 

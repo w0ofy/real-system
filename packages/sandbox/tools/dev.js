@@ -14,10 +14,8 @@ const generateBuild = async () => {
     format: 'cjs',
     target: ['es2020', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
     // loader: { '.svg': 'dataurl', '.png': 'dataurl' },
-    jsxFactory: `jsx`,
     platform: 'node',
     inject: [`${__dirname}/../../../tools/react-shim.js`],
-    // external: ['react', 'react-dom'],
     define: {
       global: 'window',
       'process.env.NODE_ENV': "'development'",

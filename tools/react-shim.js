@@ -1,1 +1,1 @@
-export { jsx, css } from '@emotion/react';
+export * as React from 'react';

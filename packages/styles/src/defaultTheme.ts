@@ -1,6 +1,4 @@
-import { Theme } from '@emotion/react';
-
-const defaultTheme: Theme = {
+const defaultTheme = {
   borders: ['2px'],
   borderStyles: ['solid', 'dashed'],
   borderWidths: [1, 4],
