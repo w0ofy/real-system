@@ -60,10 +60,7 @@ function build() {
       format: 'cjs',
       outfile: outFileCJS,
     })
-    .catch((e) => {
-      console.error(e);
-      process.exit(1);
-    });
+    .catch(() => process.exit(1));
 
   // bundle esmodule
   esbuild
@@ -77,10 +74,7 @@ function build() {
       isProduction && (await generateTypes(entryPoint, outFileTypes));
       logger.green(`SUCCESSFULLY BUNDLED "${packageJson.name}"!`);
     })
-    .catch((e) => {
-      console.error(e);
-      process.exit(1);
-    });
+    .catch(() => process.exit(1));
 }
 
 build();

@@ -5,7 +5,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@realsystem/*": ["packages/*"]
+      "@realsystem/*": ["packages/*"],
+      "@styling/*": ["packages/styling/src/*"]
     },
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,

@@ -1,45 +1,24 @@
-import {
-  StyleProps,
-  styled,
-  compose,
-  space,
-  layout,
-  flexbox,
-  background,
-  border,
-  boxShadow,
-  position,
-  typography,
-  useTheme,
-} from '@realsystem/styles';
+import { Box, BoxProps } from '@realsystem/box';
+import { styled, composeStyleProps } from '@realsystem/styling';
+// import { ButtonSizes, ButtonVariants } from './@types/button';
+import { BaseStyles } from './styles';
 
-export type ButtonProps = {
+export type ButtonProps = BoxProps & {
   children: React.ReactNode;
+  // size?: ButtonSizes;
+  disabled?: boolean;
+  loading?: boolean;
 };
 
-const Primitive = styled.button<StyleProps>`
-  border: 0;
-  cursor: pointer;
-  background: ${({ theme }) => {
-    console.log(theme);
-    return theme?.colors?.primary || 'black';
-  }};
-  ${compose(
-    space,
-    layout,
-    flexbox,
-    background,
-    border,
-    boxShadow,
-    position,
-    typography
-  )}
-`;
+const Primitive = styled(Box)<ButtonProps>(composeStyleProps());
 
 const Button = (props: ButtonProps) => {
-  const t = useTheme();
-  console.log(t);
-  return <Primitive {...props} p={2} />;
+  const buttonStateStyles =
+    BaseStyles[
+      props.disabled ? 'disabled' : props.loading ? 'loading' : 'default'
+    ];
+
+  return <Primitive {...props} {...buttonStateStyles} />;
 };
 
 export { Button };
