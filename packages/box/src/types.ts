@@ -30,8 +30,6 @@ export type BoxBaseStyleProps = StyleProps & {
   userSelect?: Property.UserSelect;
   visibility?: Property.Visibility;
   willChange?: Property.WillChange;
-  '-webkit-text-fill-color'?: string;
-  '-webkit-opacity'?: string;
 };
 
 // Omits potential clashes from our style props with HTMLAttributes (i.e. color)

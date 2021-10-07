@@ -1,11 +1,10 @@
 import { merge } from '@realsystem/utils';
-import { ButtonStates, ButtonSizes } from './@types/button';
 import { BoxProps } from '@realsystem/box';
-import { CSSObject } from '@realsystem/styling';
+import { ButtonStates, ButtonSizes } from './types';
 
 const ResetStyles: BoxProps = {
   appearance: 'none',
-  backgroundColor: 'none',
+  backgroundColor: 'transparent',
   display: 'inline-block',
   border: 'none',
   outline: 'none',

@@ -1,6 +1,5 @@
 import get from 'lodash/get';
-import { DefaultTheme } from 'styled-components';
-import type { ThemeScale } from '@styling/@types/theme';
+import { DefaultTheme, ThemeScale } from 'styled-components';
 import {
   backgroundColors,
   borderColors,
@@ -14,6 +13,7 @@ import {
   shadows,
   space,
   textColors,
+  sizes,
   zIndices,
 } from '../themes/default';
 
@@ -51,6 +51,7 @@ type ThemeToken =
   | keyof typeof radii
   | keyof typeof shadows
   | keyof typeof space
+  | keyof typeof sizes
   | keyof typeof textColors
   | keyof typeof zIndices
   | keyof typeof colors

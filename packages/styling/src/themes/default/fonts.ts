@@ -1,6 +1,6 @@
 const fonts = {
   'font-family-text':
-    '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol',
+    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif',
   'font-family-code': "'Fira Mono', 'Courier New', Courier, monospace",
 };
 

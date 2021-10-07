@@ -32,6 +32,7 @@ export const decorators = [
   (Story, context) => {
     const theme = THEMES[context.globals.theme || 'default'];
 
+    console.log(theme);
     return (
       <ThemeProvider theme={theme}>
         <Story />

@@ -1,4 +1,4 @@
-const size = {
+const sizes = {
   'size-0': '0',
   'size-10': '5.5rem',
   'size-20': '12rem',
@@ -51,4 +51,4 @@ const size = {
   'size-square-200': '4.75rem',
 };
 
-export default size;
+export default sizes;

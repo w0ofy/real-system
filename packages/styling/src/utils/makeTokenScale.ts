@@ -1,11 +1,14 @@
+import camelCase from 'lodash/camelCase';
+
 const makeTokenScale = <T = Record<string, any>>(
   scale: T
-): (string | number)[] => {
-  const values = Object.values(scale);
+): Record<string, any> => {
+  const tokenScale = {};
   Object.keys(scale).forEach((key, i) => {
-    values[key] = values[i];
+    tokenScale[camelCase(key)] = scale[key];
+    tokenScale[i] = scale[key];
   });
-  return values;
+  return tokenScale;
 };
 
 export { makeTokenScale };

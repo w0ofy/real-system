@@ -34,7 +34,6 @@ module.exports = {
     ];
 
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];
-
     return config;
   },
 };

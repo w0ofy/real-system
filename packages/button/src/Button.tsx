@@ -1,6 +1,5 @@
 import { Box, BoxProps } from '@realsystem/box';
-import { styled, composeStyleProps } from '@realsystem/styling';
-// import { ButtonSizes, ButtonVariants } from './@types/button';
+import { styled } from '@realsystem/styling';
 import { BaseStyles } from './styles';
 
 export type ButtonProps = BoxProps & {
@@ -10,7 +9,7 @@ export type ButtonProps = BoxProps & {
   loading?: boolean;
 };
 
-const Primitive = styled(Box)<ButtonProps>(composeStyleProps());
+const Primitive = styled(Box)<ButtonProps>``;
 
 const Button = (props: ButtonProps) => {
   const buttonStateStyles =
@@ -18,7 +17,15 @@ const Button = (props: ButtonProps) => {
       props.disabled ? 'disabled' : props.loading ? 'loading' : 'default'
     ];
 
-  return <Primitive {...props} {...buttonStateStyles} />;
+  return (
+    <Primitive
+      as="button"
+      {...props}
+      {...buttonStateStyles}
+      p={8}
+      color="colorBrand"
+    />
+  );
 };
 
 export { Button };

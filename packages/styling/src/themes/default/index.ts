@@ -1,4 +1,4 @@
-import { ThemeShape } from '@styling/@types/theme';
+import { DefaultTheme } from 'styled-components';
 import { makeTokenScale } from '@styling/utils';
 
 import backgroundColors from './backgroundColors';
@@ -12,19 +12,19 @@ import fontWeights from './fontWeights';
 import lineHeights from './lineHeights';
 import radii from './radii';
 import shadows from './shadows';
-import size from './size';
+import sizes from './sizes';
 import space from './space';
 import textColors from './textColors';
 import zIndices from './zIndices';
 
-const realsystem: ThemeShape = {
+const realsystem: DefaultTheme = {
   colors: {
     ...colors,
     ...backgroundColors,
     ...borderColors,
     ...textColors,
   },
-  fonts,
+  fonts: makeTokenScale(fonts),
   fontSizes: makeTokenScale(fontSizes),
   fontWeights: makeTokenScale(fontWeights),
   lineHeights: makeTokenScale(lineHeights),
@@ -32,7 +32,7 @@ const realsystem: ThemeShape = {
   borderWidths: makeTokenScale(borderWidths),
   radii: makeTokenScale(radii),
   shadows: makeTokenScale(shadows),
-  size: makeTokenScale(size),
+  sizes: makeTokenScale(sizes),
   zIndices: makeTokenScale(zIndices),
   space: makeTokenScale(space),
 };
@@ -48,6 +48,7 @@ export {
   lineHeights,
   radii,
   shadows,
+  sizes,
   space,
   textColors,
   zIndices,
