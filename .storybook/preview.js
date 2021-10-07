@@ -18,16 +18,6 @@ export const globalTypes = {
   },
 };
 
-const GlobalStyles = () => (
-  <StylingGlobals
-    styles={{
-      body: {
-        padding: '0 !important',
-      },
-    }}
-  />
-);
-
 export const decorators = [
   (Story, context) => {
     const theme = THEMES[context.globals.theme || 'default'];
@@ -35,7 +25,9 @@ export const decorators = [
     console.log(theme);
     return (
       <ThemeProvider theme={theme}>
-        <Story />
+        <div>
+          <Story />
+        </div>
       </ThemeProvider>
     );
   },

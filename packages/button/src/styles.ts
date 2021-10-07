@@ -20,7 +20,6 @@ const ResetStyles: BoxProps = {
 export const BaseStyles: { [key in ButtonStates]: BoxProps } = {
   default: merge(ResetStyles, {
     cursor: 'pointer',
-    _active: { boxShadow: 'none' },
   }),
   disabled: merge(ResetStyles, {
     cursor: 'not-allowed',

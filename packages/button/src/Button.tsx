@@ -1,8 +1,8 @@
-import { Box, BoxProps } from '@realsystem/box';
+import { Box, BoxProps, safelySpreadProps } from '@realsystem/box';
 import { styled } from '@realsystem/styling';
 import { BaseStyles } from './styles';
 
-export type ButtonProps = BoxProps & {
+export type ButtonProps = Partial<BoxProps> & {
   children: React.ReactNode;
   // size?: ButtonSizes;
   disabled?: boolean;
@@ -11,20 +11,20 @@ export type ButtonProps = BoxProps & {
 
 const Primitive = styled(Box)<ButtonProps>``;
 
-const Button = (props: ButtonProps) => {
+const Button = ({ children, ...otherProps }: ButtonProps) => {
   const buttonStateStyles =
     BaseStyles[
-      props.disabled ? 'disabled' : props.loading ? 'loading' : 'default'
+      otherProps.disabled
+        ? 'disabled'
+        : otherProps.loading
+        ? 'loading'
+        : 'default'
     ];
 
   return (
-    <Primitive
-      as="button"
-      {...props}
-      {...buttonStateStyles}
-      p={8}
-      color="colorBrand"
-    />
+    <Primitive {...safelySpreadProps(otherProps)} {...buttonStateStyles}>
+      {children}
+    </Primitive>
   );
 };
 

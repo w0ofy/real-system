@@ -6,7 +6,11 @@ module.exports = {
     '../packages/**/*.stories.mdx',
     '../packages/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    'storybook-addon-performance',
+  ],
   typescript: {
     // enable type checking
     check: true,
@@ -30,7 +34,7 @@ module.exports = {
         honorPackage: ['main:dev', 'main'],
         exclude: /node_modules/,
       }),
-      new TsconfigPathsPlugin(),
+      // new TsconfigPathsPlugin(),
     ];
 
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];

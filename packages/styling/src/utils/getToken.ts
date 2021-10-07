@@ -1,5 +1,5 @@
 import get from 'lodash/get';
-import { DefaultTheme, ThemeScale } from 'styled-components';
+import { DefaultTheme } from 'styled-components';
 import {
   backgroundColors,
   borderColors,
@@ -61,7 +61,7 @@ type ThemeToken =
   | OrdinalTokens;
 
 type Fallback = string | number | null;
-
+type ThemeScale = keyof DefaultTheme;
 type Props = { theme: DefaultTheme };
 
 /**
@@ -77,4 +77,4 @@ const getToken = (
   };
 };
 
-export { ThemeToken, getToken };
+export { ThemeToken, getToken, ThemeScale };

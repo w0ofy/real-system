@@ -4,8 +4,6 @@ import { BoxProps } from './types';
 /**
  * Use `Box` to create other components
  */
-const Box = styled.div<BoxProps>`
-  ${composeStyleProps()}
-`;
+const Box = styled.div<BoxProps>(composeStyleProps());
 
 export { Box, BoxProps };
