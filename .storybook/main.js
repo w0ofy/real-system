@@ -1,4 +1,3 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 
 module.exports = {
@@ -21,10 +20,17 @@ module.exports = {
     // choose react-docgen-typescript to generate the prop tables
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
+      skipPropsWithoutDoc: false,
       shouldExtractLiteralValuesFromEnum: true,
-      // don't include node_module props as you'll cause the machine to run out of memory on our repo
-      propFilter: (prop) =>
-        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+      // // don't include node_module props as you'll cause the machine to run out of memory on our repo
+      propFilter: (prop) => {
+        // document props from styled-system
+        return prop.parent
+          ? /realsystem\/node_modules\/@types\/styled-system\/index.d.ts/.test(
+              prop?.parent?.fileName
+            )
+          : false;
+      },
     },
   },
 
