@@ -24,7 +24,7 @@ $ yarn install
 # bootstrap package
 $ yarn bootstrap
 
-# develop components locally (with storybook)
+# develop components locally w/ yarn workspaces and storybook
 $ yarn dev
 
 # develop the documentation website
