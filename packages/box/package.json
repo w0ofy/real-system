@@ -1,14 +1,14 @@
 {
   "name": "@realsystem/box",
-  "version": "0.0.3",
-  "description": "base component to build every other component",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "A basic div with style props that should be used to build other components",
+  "main": "lib/index.js",
   "main:dev": "src/index.ts",
-  "module": "index.esm.js",
-  "types": "index.d.ts",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production node ../../tools/build.js",
-    "build:dev": "NODE_ENV=development node ../../tools/build.js",
+    "dev": "NODE_ENV=development node ../../tools/dev.js",
     "deploy": "node ../../tools/publish.js"
   },
   "repository": {
@@ -17,7 +17,8 @@
   },
   "keywords": [
     "real-system",
-    "box"
+    "utils",
+    "utilities"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -30,7 +31,8 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "ui-box": "^5.0.0"
+    "csstype": "^3.0.9",
+    "deepmerge": "^4.2.2"
   },
   "devDependencies": {
     "react": "^17.0.2",

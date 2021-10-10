@@ -1,9 +1,27 @@
-import UIBox, { BoxProps as UIBoxProps } from 'ui-box';
+import {
+  composeStyleProps,
+  styled,
+  StyledInterface,
+} from '@realsystem/styling';
+import { getPseudoStyles } from './styleFunctions';
+import { BoxProps } from './types';
 
-export type BoxProps = UIBoxProps<any>;
+/**
+ * Use `Box` to create other components
+ */
+const Box = styled.div<BoxProps>(
+  { boxSizing: 'border-box' },
+  composeStyleProps(),
+  getPseudoStyles
+);
 
-const Box = (props: BoxProps) => {
-  return <UIBox is="div" {...props} />;
+const BoxAs = (el: keyof JSX.IntrinsicElements) => {
+  const StyledComponent: ReturnType<StyledInterface> = styled[el];
+  return StyledComponent<BoxProps>(
+    { boxSizing: 'border-box' },
+    composeStyleProps(),
+    getPseudoStyles
+  );
 };
 
-export { Box };
+export { Box, BoxProps, BoxAs };
