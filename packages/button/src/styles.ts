@@ -1,66 +1,59 @@
 import { merge } from '@realsystem/utils';
-import { BoxProps } from '@realsystem/box';
-import { ButtonStates, ButtonSizes } from './types';
+import { BoxStyleProps } from '@realsystem/box';
+import { ButtonStates, ButtonSizes, ButtonIntents } from './types';
 
-const ResetStyles: BoxProps = {
+const ResetStyles: BoxStyleProps = {
   appearance: 'none',
-  backgroundColor: 'transparent',
+  color: 'color-text',
+  background: 'none',
   display: 'inline-block',
-  border: 'none',
+  border: 1,
+  borderRadius: 2,
   outline: 'none',
   transition:
-    'background-color 100ms ease-in, box-shadow 100ms ease-in, color 100ms ease-in',
-  fontFamily: 'fontFamilyText',
-  fontWeight: 'fontWeightSemibold',
+    'background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out',
+  fontSize: 1,
+  fontFamily: 'font-family-text',
+  fontWeight: 'font-weight-semibold',
   textDecoration: 'none',
   position: 'relative',
-  margin: 'space0',
+  px: 5,
+  py: 4,
+  margin: 'space-0',
+  outlineOffset: '1px',
+  _focus: { outlineStyle: 'solid' },
+  _active: { transform: 'translateY(1px)' },
 };
 
-export const BaseStyles: { [key in ButtonStates]: BoxProps } = {
+export const BaseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   default: merge(ResetStyles, {
     cursor: 'pointer',
   }),
   disabled: merge(ResetStyles, {
     cursor: 'not-allowed',
+    pointerEvents: 'none',
   }),
   loading: merge(ResetStyles, {
     cursor: 'wait',
+    pointerEvents: 'none',
   }),
 };
 
-export const SizeStyles: { [key in ButtonSizes]: BoxProps } = {
+export const SizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
   default: {
-    paddingTop: 'space30',
-    paddingBottom: 'space30',
-    paddingLeft: 'space40',
-    paddingRight: 'space40',
-    borderRadius: 'borderRadius20',
-    fontSize: 'fontSize30',
-    lineHeight: 'lineHeight20',
+    py: 5,
+    px: 4,
+    fontSize: 1,
   },
   small: {
-    paddingTop: 'space20',
-    paddingBottom: 'space20',
-    paddingLeft: 'space30',
-    paddingRight: 'space30',
-    borderRadius: 'borderRadius10',
-    fontSize: 'fontSize30',
-    lineHeight: 'lineHeight20',
+    py: 3,
+    px: 2,
+    fontSize: 0,
   },
-  icon: {
-    padding: 'space30',
-    borderRadius: 'borderRadius20',
-  },
-  icon_small: {
-    padding: 'space20',
-    borderRadius: 'borderRadius20',
-  },
-  reset: {
-    paddingTop: 'space0',
-    paddingRight: 'space0',
-    paddingBottom: 'space0',
-    paddingLeft: 'space0',
-    borderWidth: 'borderWidth0',
-  },
+};
+
+export const IntentStyles: { [key in ButtonIntents]: BoxStyleProps } = {
+  default: {},
+  success: {},
+  danger: {},
 };

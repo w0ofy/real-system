@@ -1,5 +1,6 @@
 import type { StyleProps } from '@realsystem/styling';
 import type { Property } from 'csstype';
+import type { PseudoPropStyles } from './pseudoPropStyles';
 
 export type BoxBaseStyleProps = StyleProps & {
   animation?: Property.Animation;
@@ -30,12 +31,18 @@ export type BoxBaseStyleProps = StyleProps & {
   userSelect?: Property.UserSelect;
   visibility?: Property.Visibility;
   willChange?: Property.WillChange;
+} & BoxPseudoStyleProps;
+
+export type BoxPseudoStyleProps = {
+  [key in keyof typeof PseudoPropStyles]?: BoxBaseStyleProps;
 };
+
+export type BoxStyleProps = BoxBaseStyleProps & BoxPseudoStyleProps;
 
 // Omits potential clashes from our style props with HTMLAttributes (i.e. color)
 export type BoxElementProps = Omit<
   React.HTMLAttributes<HTMLElement>,
-  keyof BoxBaseStyleProps
+  keyof BoxStyleProps
 > & {
   as?: keyof JSX.IntrinsicElements;
   type?: string;
@@ -59,4 +66,4 @@ export type BoxElementProps = Omit<
   variant?: string;
 };
 
-export type BoxProps = BoxElementProps & BoxBaseStyleProps;
+export type BoxProps = BoxElementProps & BoxStyleProps;

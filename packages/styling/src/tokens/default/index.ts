@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'styled-components';
-import { makeTokenScale } from '../../utils';
+import { makeTokenScale } from '../makeTokenScale';
 
 import backgroundColors from './backgroundColors';
 import borderColors from './borderColors';
@@ -43,6 +43,7 @@ export {
   borders,
   borderWidths,
   colors,
+  fonts,
   fontSizes,
   fontWeights,
   lineHeights,

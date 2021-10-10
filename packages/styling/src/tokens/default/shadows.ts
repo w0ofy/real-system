@@ -4,12 +4,12 @@ const boxShadow = {
   'shadow-weak': '0 0 0 1px #cacdd8',
   'shadow-weaker': '0 0 0 1px #e1e3ea',
 
-  'shadow-destructive': '0 0 0 1px #d61f1f',
-  'shadow-destructive-strong': '0 0 0 1px #750c0c',
-  'shadow-destructive-stronger': '0 0 0 1px #4a0b0b',
-  'shadow-destructive-strongest': '0 0 0 1px #310c0c',
-  'shadow-destructive-weak': '0 0 0 1px #f6b1b1',
-  'shadow-destructive-weaker': '0 0 0 1px #fccfcf',
+  'shadow-danger': '0 0 0 1px #d61f1f',
+  'shadow-danger-strong': '0 0 0 1px #750c0c',
+  'shadow-danger-stronger': '0 0 0 1px #4a0b0b',
+  'shadow-danger-strongest': '0 0 0 1px #310c0c',
+  'shadow-danger-weak': '0 0 0 1px #f6b1b1',
+  'shadow-danger-weaker': '0 0 0 1px #fccfcf',
 
   'shadow-error': '0 0 0 1px #d61f1f',
   'shadow-error-strong': '0 0 0 1px #750c0c',

@@ -18,17 +18,17 @@ Some super detailed notes before you begin development.
 ### Setup and Local Dev
 
 ```bash
-# install deps in root (this will install all deps and link them between packages)
-$ npm install
+# install deps
+$ yarn install
 
 # bootstrap package
-$ npm run bootstrap
+$ yarn bootstrap
 
 # develop components locally (with playroom)
-$ npm run dev
+$ yarn dev
 
 # develop the documentation website
-$ npm run website
+$ yarn website
 ```
 
 ## Tools, Dependencies, Resources

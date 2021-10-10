@@ -1,6 +1,6 @@
 {
   "name": "realsystem",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A real component system for responsive web applications that is themeable and extendable.",
   "private": true,
   "workspaces": [
@@ -68,6 +68,7 @@
     "@typescript-eslint/parser": "^4.31.0",
     "babel-jest": "^27.2.3",
     "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.13.2",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.2",
     "concurrently": "^6.2.1",
@@ -91,6 +92,7 @@
     "storybook-addon-performance": "^0.16.1"
   },
   "dependencies": {
+    "csstype": "^3.0.9",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

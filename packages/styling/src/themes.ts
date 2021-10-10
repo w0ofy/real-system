@@ -1,4 +1,4 @@
-import DEFAULT from './default';
+import DEFAULT from './tokens/default';
 
 const THEMES = {
   default: DEFAULT,

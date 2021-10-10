@@ -21,7 +21,7 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       skipPropsWithoutDoc: false,
-      shouldExtractLiteralValuesFromEnum: true,
+      // shouldExtractLiteralValuesFromEnum: true,
       // // don't include node_module props as you'll cause the machine to run out of memory on our repo
       propFilter: (prop) => {
         // document props from styled-system
@@ -29,7 +29,7 @@ module.exports = {
           ? /realsystem\/node_modules\/@types\/styled-system\/index.d.ts/.test(
               prop?.parent?.fileName
             )
-          : false;
+          : true;
       },
     },
   },

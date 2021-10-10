@@ -7,10 +7,14 @@ export default {
   component: Button,
   args: {
     children: 'Button',
-    variant: 'mini',
+    variant: 'primary',
   },
 } as Meta;
 
 const Template = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const Primary = Template.bind({});
+
+export const Secondary = (args) => <Button {...args} variant="secondary" />;
+
+Secondary.title = 'Components/Button/Variants/Secondary';

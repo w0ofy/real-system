@@ -3,11 +3,10 @@ import { Meta } from '@storybook/react/types-6-0';
 import { Box } from '@realsystem/box';
 
 export default {
-  title: 'Components/Button',
+  title: 'Primitives/Box',
   component: Box,
   args: {
-    children: 'Button',
-    variant: 'mini',
+    children: 'Box',
   },
 } as Meta;
 

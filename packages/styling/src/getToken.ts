@@ -6,6 +6,7 @@ import {
   borders,
   borderWidths,
   colors,
+  fonts,
   fontSizes,
   fontWeights,
   lineHeights,
@@ -15,7 +16,7 @@ import {
   textColors,
   sizes,
   zIndices,
-} from '../themes/default';
+} from './tokens/default';
 
 type OrdinalTokens =
   | 0
@@ -39,12 +40,13 @@ type OrdinalTokens =
   | 18
   | 19;
 
-type ThemeToken =
+type ThemeTokens =
   | keyof typeof backgroundColors
   | keyof typeof borderColors
   | keyof typeof borders
   | keyof typeof borderWidths
   | keyof typeof colors
+  | keyof typeof fonts
   | keyof typeof fontSizes
   | keyof typeof fontWeights
   | keyof typeof lineHeights
@@ -61,15 +63,15 @@ type ThemeToken =
   | OrdinalTokens;
 
 type Fallback = string | number | null;
-type ThemeScale = keyof DefaultTheme;
+type ThemeScales = keyof DefaultTheme;
 type Props = { theme: DefaultTheme };
 
 /**
  * A styleFn to get theme tokens
  */
 const getToken = (
-  token: ThemeToken,
-  scale: ThemeScale = 'colors',
+  token: ThemeTokens,
+  scale: ThemeScales = 'colors',
   fallback: Fallback = null
 ) => {
   return function (props: Props) {
@@ -77,4 +79,4 @@ const getToken = (
   };
 };
 
-export { ThemeToken, getToken, ThemeScale };
+export { ThemeTokens, getToken, ThemeScales };

@@ -1,31 +1,51 @@
-import { Box, BoxProps, safelySpreadProps } from '@realsystem/box';
 import { styled } from '@realsystem/styling';
-import { BaseStyles } from './styles';
+import { BoxStyleProps } from '@realsystem/box';
+import { ButtonStates, ButtonVariants, ButtonProps } from './types';
+import { PrimaryButton } from './PrimaryButton';
+import { SecondaryButton } from './SecondaryButton';
+import { InternalButtonProps } from './types';
 
-export type ButtonProps = Partial<BoxProps> & {
-  children: React.ReactNode;
-  // size?: ButtonSizes;
-  disabled?: boolean;
-  loading?: boolean;
+const getButtonState = (
+  disabled?: boolean,
+  loading?: boolean
+): ButtonStates => {
+  if (disabled) {
+    return 'disabled';
+  }
+  if (loading) {
+    return 'loading';
+  }
+  return 'default';
+};
+const BUTTON_VARIANT_MAP: {
+  [key in ButtonVariants]: React.FC<InternalButtonProps>;
+} = {
+  primary: PrimaryButton,
+  secondary: SecondaryButton,
 };
 
-const Primitive = styled(Box)<ButtonProps>``;
-
-const Button = ({ children, ...otherProps }: ButtonProps) => {
-  const buttonStateStyles =
-    BaseStyles[
-      otherProps.disabled
-        ? 'disabled'
-        : otherProps.loading
-        ? 'loading'
-        : 'default'
-    ];
+const Button = ({
+  children,
+  disabled,
+  loading,
+  variant = 'primary',
+  ...otherProps
+}: ButtonProps) => {
+  const buttonState = getButtonState(disabled, loading);
+  // const showLoading = buttonState === 'loading';
+  const showDisabled = buttonState !== 'default';
+  const ButtonComponent = BUTTON_VARIANT_MAP[variant];
 
   return (
-    <Primitive {...safelySpreadProps(otherProps)} {...buttonStateStyles}>
+    <ButtonComponent
+      role="button"
+      {...otherProps}
+      buttonState={buttonState}
+      disabled={showDisabled}>
       {children}
-    </Primitive>
+    </ButtonComponent>
   );
 };
 
+const ExtendableButton = styled(Button)({});
 export { Button };

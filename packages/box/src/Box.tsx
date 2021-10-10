@@ -1,9 +1,27 @@
-import { composeStyleProps, styled } from '@realsystem/styling';
+import {
+  composeStyleProps,
+  styled,
+  StyledInterface,
+} from '@realsystem/styling';
+import { getPseudoStyles } from './styleFunctions';
 import { BoxProps } from './types';
 
 /**
  * Use `Box` to create other components
  */
-const Box = styled.div<BoxProps>(composeStyleProps());
+const Box = styled.div<BoxProps>(
+  { boxSizing: 'border-box' },
+  composeStyleProps(),
+  getPseudoStyles
+);
 
-export { Box, BoxProps };
+const BoxAs = (el: keyof JSX.IntrinsicElements) => {
+  const StyledComponent: ReturnType<StyledInterface> = styled[el];
+  return StyledComponent<BoxProps>(
+    { boxSizing: 'border-box' },
+    composeStyleProps(),
+    getPseudoStyles
+  );
+};
+
+export { Box, BoxProps, BoxAs };
