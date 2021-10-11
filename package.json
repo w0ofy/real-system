@@ -32,6 +32,7 @@
     "lint": "eslint packages/**/*.{ts,tsx}",
     "lint:fix": "yarn lint -- --fix",
     "precise-commits": "precise-commits",
+    "commit": "git-cz",
     "__RELEASE": "",
     "release": "yarn changeset publish",
     "changeset": "changeset",
@@ -54,6 +55,11 @@
     "website": "cd website && yarn start",
     "storybook": "start-storybook -p 6006"
   },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
@@ -70,6 +76,7 @@
     "@changesets/cli": "^2.17.0",
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/cz-commitlint": "^13.2.1",
     "@commitlint/prompt-cli": "^13.2.1",
     "@storybook/addon-actions": "^6.3.9",
     "@storybook/addon-essentials": "^6.3.9",
@@ -91,6 +98,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.2",
+    "commitizen": "^4.2.4",
     "concurrently": "^6.2.1",
     "directory-named-webpack-plugin": "^4.0.1",
     "esbuild": "^0.12.25",
