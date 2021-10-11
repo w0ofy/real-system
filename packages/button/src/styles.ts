@@ -1,6 +1,7 @@
-import { merge } from '@realsystem/utils';
 import { BoxStyleProps } from '@realsystem/box';
-import { ButtonStates, ButtonSizes, ButtonIntents } from './types';
+import { merge } from '@realsystem/utils';
+
+import { ButtonIntents, ButtonSizes, ButtonStates } from './types';
 
 const ResetStyles: BoxStyleProps = {
   appearance: 'none',

@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components';
+
 import { makeTokenScale } from '../makeTokenScale';
 
 import backgroundColors from './backgroundColors';

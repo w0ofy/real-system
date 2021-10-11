@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components';
+
 import { getToken } from '../getToken';
 
 const normalize = css`

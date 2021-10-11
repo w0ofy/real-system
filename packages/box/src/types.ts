@@ -1,5 +1,7 @@
-import type { StyleProps } from '@realsystem/styling';
 import type { Property } from 'csstype';
+
+import type { StyleProps } from '@realsystem/styling';
+
 import type { PseudoPropStyles } from './pseudoPropStyles';
 
 export type BoxBaseStyleProps = StyleProps & {

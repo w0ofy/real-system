@@ -1,3 +1,4 @@
+import { Property } from 'csstype';
 import {
   background,
   BackgroundProps,
@@ -20,7 +21,6 @@ import {
   typography,
   TypographyProps,
 } from 'styled-system';
-import { Property } from 'csstype';
 
 const textWrap = system({
   whiteSpace: true,
