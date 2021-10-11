@@ -10,6 +10,9 @@
   "module": "index.esm.js",
   "types": "index.d.ts",
   "scripts": {
+    "__QUALITY__": "",
+    "lint": "eslint packages/**/*.{ts,tsx}",
+    "lint:fix": "yarn lint -- --fix",
     "__BUILD__": "build scripts",
     "build": "run-s build:styling build:utils build:box build:button",
     "build:button": "yarn workspace @realsystem/button build",
@@ -93,6 +96,7 @@
   },
   "dependencies": {
     "csstype": "^3.0.9",
+    "eslint-plugin-testing-library": "^4.12.4",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

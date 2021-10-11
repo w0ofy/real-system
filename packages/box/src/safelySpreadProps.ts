@@ -13,4 +13,4 @@ const safelySpreadProps = (props: Props): Props => {
   }, {});
 };
 
-export { safelySpreadProps, PROPS_TO_BLOCK };
+export { PROPS_TO_BLOCK, safelySpreadProps };

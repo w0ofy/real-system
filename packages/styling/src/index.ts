@@ -2,13 +2,15 @@
  * libs
  * styled-system and styled-components
  */
-export * from 'styled-system';
-export { default as styled } from 'styled-components';
 export type {
-  StyledComponent,
   CSSObject,
+  StyledComponent,
+  StyledComponentProps,
   StyledInterface,
+  ThemedStyledFunction,
 } from 'styled-components';
+export { default as styled } from 'styled-components';
+export * from 'styled-system';
 
 /**
  * theme provider and global styles
@@ -20,7 +22,7 @@ export * from './themes';
 /**
  * styled system, props, css and token utilities
  */
-export { default as css } from '@styled-system/css';
-export * from './styleProps';
-export { getToken } from './getToken';
 export type { ThemeTokens } from './getToken';
+export { getToken } from './getToken';
+export * from './styleProps';
+export { default as css } from '@styled-system/css';

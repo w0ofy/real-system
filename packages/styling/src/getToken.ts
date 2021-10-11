@@ -1,5 +1,6 @@
 import get from 'lodash/get';
 import { DefaultTheme } from 'styled-components';
+
 import {
   backgroundColors,
   borderColors,
@@ -12,9 +13,9 @@ import {
   lineHeights,
   radii,
   shadows,
+  sizes,
   space,
   textColors,
-  sizes,
   zIndices,
 } from './tokens/default';
 
@@ -79,4 +80,4 @@ const getToken = (
   };
 };
 
-export { ThemeTokens, getToken, ThemeScales };
+export { getToken, ThemeScales, ThemeTokens };

@@ -3,6 +3,7 @@ import {
   styled,
   StyledInterface,
 } from '@realsystem/styling';
+
 import { getPseudoStyles } from './styleFunctions';
 import { BoxProps } from './types';
 
@@ -24,4 +25,4 @@ const BoxAs = (el: keyof JSX.IntrinsicElements) => {
   );
 };
 
-export { Box, BoxProps, BoxAs };
+export { Box, BoxAs, BoxProps };

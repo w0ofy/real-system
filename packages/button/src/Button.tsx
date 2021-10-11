@@ -1,8 +1,9 @@
-import { styled } from '@realsystem/styling';
 import { BoxStyleProps } from '@realsystem/box';
-import { ButtonStates, ButtonVariants, ButtonProps } from './types';
+import { styled } from '@realsystem/styling';
+
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
+import { ButtonProps, ButtonStates, ButtonVariants } from './types';
 import { InternalButtonProps } from './types';
 
 const getButtonState = (
