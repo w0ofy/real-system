@@ -44,7 +44,7 @@
     "build:box": "yarn workspace @realsystem/box build",
     "build:storybook": "build-storybook",
     "__DEVELOPMENT__": "dev scripts",
-    "bootstrap": "lerna bootstrap && husky install",
+    "bootstrap": "yarn && husky install",
     "dev": "concurrently yarn:dev:* yarn:storybook",
     "dev:utils": "yarn workspace @realsystem/utils dev",
     "dev:button": "yarn workspace @realsystem/button dev",

@@ -1,18 +1,17 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "ignoreChanges": [
-        "**/stories/**",
-        "**/__tests__/**",
-        "**/*.md"
-      ],
-      "npmClient": "npm"
+      "ignoreChanges": ["**/stories/**", "**/__tests__/**", "**/*.md"],
+      "npmClient": "npm",
+      "conventionalCommits": true,
+      "yes": true
     }
+  },
+  "publishConfig": {
+    "access": "restricted"
   },
   "version": "0.1.1"
 }

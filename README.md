@@ -19,10 +19,7 @@ Some super detailed notes before you begin development.
 ### Setup and Local Dev
 
 ```bash
-# install deps
-$ yarn 
-
-# bootstrap package
+# bootstrap project dependencies
 $ yarn bootstrap
 
 # develop components locally w/ yarn workspaces and storybook
