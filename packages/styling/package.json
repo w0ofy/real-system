@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/styling",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "theme and components for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",

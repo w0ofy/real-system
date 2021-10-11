@@ -35,7 +35,7 @@ function run() {
       logger.green(`pkg versioned ${stdout}`);
       buildPkg(tag);
     })
-    .catch((err) => logger.error('ERR: '), err);
+    .catch((err) => logger.error('ERR: ', err));
 }
 
 /**

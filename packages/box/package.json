@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/box",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A basic div with style props that should be used to build other components",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
