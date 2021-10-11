@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/styling",
-  "version": "0.0.0",
+  "version": "0.1.2",
   "description": "theme and components for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
-    "@types/styled-components": "^5.1.14",
+    "@types/styled-components": "^5.1.15",
     "@types/styled-system": "5.1.13",
     "csstype": "^3.0.9",
     "styled-components": "^5.3.1",
