@@ -55,7 +55,7 @@
       },
       "files": ["*.spec.ts", "*.spec.tsx"],
       "extends": [
-        "plugin:testing-library/recommended",
+        "plugin:testing-library/react",
         "plugin:jest/recommended"
       ]
     }
