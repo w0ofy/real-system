@@ -5,7 +5,9 @@
 export type {
   CSSObject,
   StyledComponent,
+  StyledComponentProps,
   StyledInterface,
+  ThemedStyledFunction,
 } from 'styled-components';
 export { default as styled } from 'styled-components';
 export * from 'styled-system';
