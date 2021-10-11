@@ -17,6 +17,7 @@
     "build:utils": "yarn workspace @realsystem/utils build",
     "build:box": "yarn workspace @realsystem/box build",
     "build:storybook": "build-storybook",
+    "lint": "eslint packages/**/*.{ts,tsx}",
     "__DEVELOPMENT__": "dev scripts",
     "bootstrap": "yarn build",
     "dev": "concurrently yarn:dev:* yarn:storybook",

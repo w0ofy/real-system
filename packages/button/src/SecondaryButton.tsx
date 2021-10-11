@@ -1,8 +1,9 @@
 import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
 import { styled } from '@realsystem/styling';
 import { merge } from '@realsystem/utils';
+
 import { BaseStyles } from './styles';
-import { ButtonStates, ButtonIntents, InternalButtonProps } from './types';
+import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 

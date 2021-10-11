@@ -1,9 +1,10 @@
 import {
-  ThemeProvider as SCThemeProvider,
-  ThemeConsumer,
   DefaultTheme,
+  ThemeConsumer,
+  ThemeProvider as SCThemeProvider,
   useTheme,
 } from 'styled-components';
+
 import { THEMES } from '../themes';
 
 export type ThemeProviderProps = {
@@ -22,4 +23,4 @@ const ThemeProvider = ({
   );
 };
 
-export { ThemeProvider, ThemeConsumer, useTheme };
+export { ThemeConsumer, ThemeProvider, useTheme };
