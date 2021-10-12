@@ -38,7 +38,6 @@
     "commit": "git-cz",
     "__RELEASE": "",
     "changeset": "changeset",
-    "version": "yarn changeset version",
     "release": "yarn changeset publish",
     "__BUILD__": "build scripts",
     "prebuild": "yarn packages:check",
