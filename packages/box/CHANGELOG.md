@@ -1,5 +1,16 @@
 # @realsystem/box
 
+## 3.0.0
+
+### Minor Changes
+
+- fixing entry points
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @realsystem/styling@1.1.0
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @realsystem/styling
 
+## 1.1.0
+
+### Minor Changes
+
+- fixing entry points
+
 ## 1.0.0
 
 ### Major Changes
