@@ -1,5 +1,11 @@
 # @realsystem/utils
 
+## 1.0.0
+
+### Major Changes
+
+- [#13](https://github.com/bigwoof91/realsystem/pull/13) [`723cd5b`](https://github.com/bigwoof91/realsystem/commit/723cd5b627ae60e935b0ec6000745da117e50b28) Thanks [@bigwoof91](https://github.com/bigwoof91)! - udpating entry points for all packages
+
 ## 0.2.0
 
 ### Minor Changes

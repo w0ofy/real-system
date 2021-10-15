@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -35,10 +35,10 @@
     "types": "tsc"
   },
   "dependencies": {
-    "@realsystem/box": "^1.0.0",
-    "@realsystem/button": "^1.0.0",
-    "@realsystem/styling": "^0.2.0",
-    "@realsystem/utils": "^0.2.0"
+    "@realsystem/box": "^2.0.0",
+    "@realsystem/button": "^2.0.0",
+    "@realsystem/styling": "^1.0.0",
+    "@realsystem/utils": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
