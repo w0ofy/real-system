@@ -40,4 +40,4 @@ async function runCmdJson(cmd, args = [], options = {}) {
   return getJsonFromCmdResults(await runCmd(cmd, args, options));
 }
 
-module.exports = { runCmd, getJsonFromCmdResults, runCmdJson };
+module.exports = { runCmdJson };

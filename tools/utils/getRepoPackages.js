@@ -1,4 +1,4 @@
-const { runCmdJson } = require('./runCmd');
+const { runCmdJson } = require('./runCmdJson');
 
 const LERNA_INDEX_PATH = require.resolve('lerna');
 const LERNA_CLI_PATH = LERNA_INDEX_PATH.replace('index.js', 'cli.js');

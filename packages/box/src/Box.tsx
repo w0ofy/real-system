@@ -7,8 +7,6 @@ import {
 import { getPseudoStyles } from './styleFunctions';
 import { BoxProps } from './types';
 
-
-
 /**
  * Use `Box` to create other components
  */
@@ -20,7 +18,7 @@ const Box = styled.div<BoxProps>(
 
 const BoxAs = (el: keyof JSX.IntrinsicElements) => {
   const StyledComponent: ReturnType<StyledInterface> = styled[el];
-  return StyledComponent<BoxProps>(
+  return StyledComponent(
     { boxSizing: 'border-box' },
     composeStyleProps(),
     getPseudoStyles

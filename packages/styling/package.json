@@ -2,14 +2,14 @@
   "name": "@realsystem/styling",
   "version": "0.2.0",
   "description": "theme and components for real system",
-  "main": "lib/index.js",
+  "main": "lib/styling/index.js",
   "main:dev": "src/index.ts",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "module": "lib/styling/index.esm.js",
+  "types": "lib/styling/types/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production node ../../tools/build.js",
     "dev": "NODE_ENV=development node ../../tools/dev.js",
-    "deploy": "node ../../tools/publish.js"
+    "types": "tsc"
   },
   "repository": {
     "type": "git",

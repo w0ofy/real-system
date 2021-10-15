@@ -1,0 +1,6 @@
+# Automatically generated from "yarn generate-packages"
+/lib
+/styling
+/utils
+/box
+/button
