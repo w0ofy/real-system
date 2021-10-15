@@ -1,80 +1,40 @@
 const esbuild = require('esbuild');
 const { commandSync } = require('execa');
-const {
-  logger,
-  generateTypes,
-  env,
-  isProduction,
-  getWildcardExternalPeers,
-  getPackageJsonFields,
-} = require('./utils');
+const { logger, getPkgJson, makeEsbuildConfig } = require('./utils');
 
 /**
  * @function build bundle package for cjs and esm output
- * @param {*} packageJson package's package.json
  */
-function build() {
+async function build() {
   // clean outdirectory
-  commandSync(`rimraf ./lib`);
+  commandSync('rimraf ./lib');
 
-  const { entryPoint, outFileCJS, outFileESM, outFileTypes, ...packageJson } =
-    getPackageJsonFields();
+  const { outfile, ...pkgJson } = getPkgJson();
+  const cjsConfig = makeEsbuildConfig(pkgJson, {
+    format: 'cjs',
+    outfile: outfile.cjs,
+  });
 
-  // Things we don't want to bundle
-  const external = getWildcardExternalPeers(packageJson);
-
-  const watch = isProduction
-    ? false
-    : {
-        onRebuild(err, _result) {
-          if (err) throw err;
-          logger.blue(`${packageJson.name} rebundled!`);
-        },
-      };
-  // ESbuild config
-  const config = {
-    color: true,
-    entryPoints: [entryPoint],
-    mainFields: ['module', 'main'],
-    // Fixes issues related to SSR (website builds)
-    platform: 'node',
-    bundle: true,
-    // Changes code to fit given target environments
-    target: ['es2020', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
-    // Only minify in prod
-    minify: isProduction,
-    define: {
-      'process.env.NODE_ENV': `"${env}"`,
-    },
-    inject: [`${__dirname}/react-shim.js`],
-    logLevel: 'error',
-    watch,
-    external,
-    sourcemap: 'external',
-  };
+  const esmConfig = makeEsbuildConfig(pkgJson, {
+    format: 'esm',
+    outfile: outfile.esm,
+  });
 
   // bundle commonjs
-  esbuild
-    .build({
-      ...config,
-      format: 'cjs',
-      outfile: outFileCJS,
-    })
+  await esbuild
+    .build(cjsConfig)
+    .then(async () => logger.green(`Bundled CJS for "${pkgJson.name}"!`))
     .catch(() => process.exit(1));
 
   // bundle esmodule
-  esbuild
-    .build({
-      ...config,
-      format: 'esm',
-      outfile: outFileESM,
-    })
-    // bundle typings and copy package.json
-    .then(async (result) => {
-      isProduction && (await generateTypes(entryPoint, outFileTypes));
-      logger.green(`SUCCESSFULLY BUNDLED "${packageJson.name}"!`);
-    })
+  await esbuild
+    .build(esmConfig)
+    // eslint-disable-next-line no-unused-vars
+    .then(async (result) => logger.green(`Bundled ESM for "${pkgJson.name}"!`))
     .catch(() => process.exit(1));
+  logger.yellow(`Generating types for "${pkgJson.name}"!`);
+  commandSync('yarn types');
+  logger.green(`Types generated for "${pkgJson.name}"!`);
 }
 
 build();

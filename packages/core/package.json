@@ -1,0 +1,51 @@
+{
+  "name": "@realsystem/core",
+  "version": "0.0.0",
+  "status": "production",
+  "description": "Contains all the packages from Real System.",
+  "author": "Michael Wolf",
+  "license": "MIT",
+  "main:dev": "src/index.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    "box": {
+      "import": "./lib/box/index.esm.js",
+      "require": "./lib/box/index.js"
+    },
+    "button": {
+      "import": "./lib/button/index.esm.js",
+      "require": "./lib/button/index.js"
+    },
+    "utils": {
+      "import": "./lib/utils/index.esm.js",
+      "require": "./lib/utils/index.js"
+    },
+    "styling": {
+      "import": "./lib/styling/index.esm.js",
+      "require": "./lib/styling/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "NODE_ENV=production node ../../tools/build.js && yarn build:unbarreled",
+    "build:unbarreled": "NODE_ENV=production node ./tools/buildUnbarreledExports.js",
+    "dev": "NODE_ENV=development node ../../tools/dev.js",
+    "types": "tsc"
+  },
+  "dependencies": {
+    "@realsystem/box": "^1.0.0",
+    "@realsystem/button": "^1.0.0",
+    "@realsystem/styling": "^0.2.0",
+    "@realsystem/utils": "^0.2.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

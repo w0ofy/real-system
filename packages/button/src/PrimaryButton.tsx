@@ -92,7 +92,7 @@ const PrimaryButton = ({
   buttonState,
   intent = 'default',
   ...otherProps
-}: InternalButtonProps) => {
+}: InternalButtonProps): React.ReactElement => {
   return (
     <BoxAsButton {...STYLE_MAP[intent][buttonState]} {...otherProps}>
       {children}

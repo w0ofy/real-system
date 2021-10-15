@@ -6,17 +6,50 @@
  * Until this bites us, we should automate this because not bumping peers has bit us.
  */
 const chalk = require('chalk');
-const {resolve} = require('path');
-const {getRepoPackages} = require('./getRepoPackages');
-const {writeToFile} = require('./writeToFile');
+const { resolve } = require('path');
+const { writeFile } = require('fs');
+const { getRepoPackages } = require('./getRepoPackages');
 
-const isRealSystemDependency = packageName => packageName.includes('@realsystem/');
-const getRealSystemDependencyList = dependencyObject => Object.keys(dependencyObject).filter(isRealSystemDependency);
+function writeToFile(
+  filePath,
+  content,
+  { successMessage, errorMessage, formatJson = false }
+) {
+  const output = formatJson ? JSON.stringify(content, null, 2) : content;
 
-async function updatePackagePeerDependencies(packageJsonPath, peerDepsList = [], packageJsonData, packagesList) {
+  writeFile(filePath, output, 'utf8', (error) => {
+    if (error) {
+      if (errorMessage != null) {
+        // eslint-disable-next-line no-console
+        console.log(chalk.red(errorMessage));
+      }
+      // eslint-disable-next-line no-console
+      console.log(error);
+      return false;
+    }
+    if (successMessage != null) {
+      // eslint-disable-next-line no-console
+      console.log(chalk.green(successMessage));
+    }
+  });
+}
+
+const isRealSystemDependency = (packageName) =>
+  packageName.includes('@realsystem/');
+const getRealSystemDependencyList = (dependencyObject) =>
+  Object.keys(dependencyObject).filter(isRealSystemDependency);
+
+async function updatePackagePeerDependencies(
+  packageJsonPath,
+  peerDepsList = [],
+  packageJsonData,
+  packagesList
+) {
   const calibratedPeerDeps = {};
-  peerDepsList.forEach(peerDepName => {
-    const latestVersion = `^${packagesList.find(({name}) => name === peerDepName).version}`;
+  peerDepsList.forEach((peerDepName) => {
+    const latestVersion = `^${
+      packagesList.find(({ name }) => name === peerDepName).version
+    }`;
     const currentVersion = packageJsonData.peerDependencies[peerDepName];
     if (latestVersion !== currentVersion) {
       calibratedPeerDeps[peerDepName] = latestVersion;
@@ -29,7 +62,10 @@ async function updatePackagePeerDependencies(packageJsonPath, peerDepsList = [],
 
   const newPackageJson = {
     ...packageJsonData,
-    peerDependencies: {...packageJsonData.peerDependencies, ...calibratedPeerDeps},
+    peerDependencies: {
+      ...packageJsonData.peerDependencies,
+      ...calibratedPeerDeps,
+    },
   };
 
   // Formatted and with a new line at the end for prettier
@@ -37,26 +73,28 @@ async function updatePackagePeerDependencies(packageJsonPath, peerDepsList = [],
 
   // Write it to file
   writeToFile(packageJsonPath, newPackageJsonString, {
-    successMessage: `[${packageJsonData.name}] Successfully updated ${JSON.stringify(calibratedPeerDeps)}`,
+    successMessage: `[${
+      packageJsonData.name
+    }] Successfully updated ${JSON.stringify(calibratedPeerDeps)}`,
   });
 }
 
 async function calibratePackagePeerDepsVersions() {
   // eslint-disable-next-line no-console
-  console.log(chalk.green.bold(`Calibrating package peerDependencies...`));
+  console.log(chalk.green.bold('Calibrating package peerDependencies...'));
 
   // Use lerna to get all packages and their version info
   const packagesList = await getRepoPackages();
 
-  packagesList.forEach(async package => {
-    const PACKAGE_JSON_PATH = resolve(package.location, 'package.json');
-    // eslint-disable-next-line import/no-dynamic-require, global-require
+  packagesList.forEach(async (pkg) => {
+    const PACKAGE_JSON_PATH = resolve(pkg.location, 'package.json');
     const packageJsonData = require(PACKAGE_JSON_PATH);
 
     // realsystem repos shouldnt be dependencies
     if (packageJsonData.dependencies != null) {
-      const depsList = getRealSystemDependencyList(packageJsonData.dependencies);
-      console.log(depsList)
+      const depsList = getRealSystemDependencyList(
+        packageJsonData.dependencies
+      );
       if (depsList.length > 0) {
         // eslint-disable-next-line no-console
         console.log(
@@ -69,10 +107,17 @@ async function calibratePackagePeerDepsVersions() {
     }
 
     if (packageJsonData.peerDependencies != null) {
-      const peerDepsList = getRealSystemDependencyList(packageJsonData.peerDependencies);
+      const peerDepsList = getRealSystemDependencyList(
+        packageJsonData.peerDependencies
+      );
 
       if (peerDepsList.length !== 0) {
-        await updatePackagePeerDependencies(PACKAGE_JSON_PATH, peerDepsList, packageJsonData, packagesList);
+        await updatePackagePeerDependencies(
+          PACKAGE_JSON_PATH,
+          peerDepsList,
+          packageJsonData,
+          packagesList
+        );
       }
     }
   });

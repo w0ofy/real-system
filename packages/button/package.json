@@ -2,14 +2,14 @@
   "name": "@realsystem/button",
   "version": "1.0.0",
   "description": "Real System Button component",
-  "main": "lib/index.js",
+  "main": "lib/button/index.js",
   "main:dev": "src/index.ts",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "module": "lib/button/index.esm.js",
+  "types": "lib/button/types/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production node ../../tools/build.js",
     "dev": "NODE_ENV=development node ../../tools/dev.js",
-    "deploy": "node ../../tools/publish.js"
+    "types": "tsc"
   },
   "repository": {
     "type": "git",
