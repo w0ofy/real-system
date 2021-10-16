@@ -26,6 +26,10 @@ const baseEsbuildConfig = {
   inject: [`${__dirname}/../reactShim.js`],
   logLevel: 'error',
   sourcemap: 'external',
+  /**
+   * resolves https://github.com/evanw/esbuild/issues/1088
+   */
+  treeShaking: 'ignore-annotations',
 };
 
 const shouldWatch = (pkg = {}) =>
