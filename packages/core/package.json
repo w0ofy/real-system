@@ -11,9 +11,11 @@
   "scripts": {
     "clean-packages": "./tools/clean-packages.sh",
     "build-types": "./tools/build-types.sh",
-    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn build-types",
+    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn compile && yarn build-types",
     "build:unbarreled": "NODE_ENV=production node ./tools/buildUnbarreledExports.js",
-    "dev": "NODE_ENV=development node ../../tools/dev.js"
+    "dev": "NODE_ENV=development node ../../tools/dev.js",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && node ./tools/minify",
+    "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'"
   },
   "dependencies": {
     "@realsystem/box": "^5.0.0",

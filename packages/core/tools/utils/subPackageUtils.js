@@ -1,4 +1,12 @@
 const { commandSync } = require('execa');
+const { join } = require('path');
+const { CORE_BUNDLE_PATH } = require('../constants');
+
+const getUnbarreledFilePath = (pkg) => `src/${getPurePkgName(pkg.name)}.ts`;
+const getUnbarreledOutputFilePath = (pkg) =>
+  `lib/${getPurePkgName(pkg.name)}.js`;
+const getUnbarreledFileFullPath = (pkg) =>
+  join(CORE_BUNDLE_PATH, getUnbarreledFilePath(pkg));
 
 const getPurePkgName = (pkgName) => pkgName.replace('@realsystem/', '');
 
@@ -27,4 +35,7 @@ const getWorkspacesInfo = () => {
 module.exports = {
   getPurePkgName,
   getWorkspacesInfo,
+  getUnbarreledOutputFilePath,
+  getUnbarreledFilePath,
+  getUnbarreledFileFullPath,
 };
