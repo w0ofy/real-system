@@ -5,7 +5,7 @@
   "main": "lib/styling/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/styling/index.esm.js",
-  "types": "lib/styling/types/index.d.ts",
+  "types": "lib/styling/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production node ../../tools/build.js",
     "dev": "NODE_ENV=development node ../../tools/dev.js",

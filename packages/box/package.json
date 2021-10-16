@@ -5,7 +5,7 @@
   "main": "lib/box/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/box/index.esm.js",
-  "types": "lib/box/types/index.d.ts",
+  "types": "lib/box/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production node ../../tools/build.js",
     "dev": "NODE_ENV=development node ../../tools/dev.js",

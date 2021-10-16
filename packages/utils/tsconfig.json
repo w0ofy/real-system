@@ -3,6 +3,6 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "outDir": "lib/utils/types/"
+    "outDir": "./lib/utils/"
   }
 }

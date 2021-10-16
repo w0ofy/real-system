@@ -7,32 +7,13 @@
   "license": "MIT",
   "main:dev": "src/index.ts",
   "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/types/index.d.ts",
-  "exports": {
-    "box": {
-      "import": "./lib/box/index.esm.js",
-      "require": "./lib/box/index.js"
-    },
-    "button": {
-      "import": "./lib/button/index.esm.js",
-      "require": "./lib/button/index.js"
-    },
-    "utils": {
-      "import": "./lib/utils/index.esm.js",
-      "require": "./lib/utils/index.js"
-    },
-    "styling": {
-      "import": "./lib/styling/index.esm.js",
-      "require": "./lib/styling/index.js"
-    }
-  },
-  "sideEffects": false,
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "NODE_ENV=production node ../../tools/build.js && yarn build:unbarreled",
+    "clean-packages": "./tools/clean-packages.sh",
+    "build-types": "./tools/build-types.sh",
+    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn build-types",
     "build:unbarreled": "NODE_ENV=production node ./tools/buildUnbarreledExports.js",
-    "dev": "NODE_ENV=development node ../../tools/dev.js",
-    "types": "tsc"
+    "dev": "NODE_ENV=development node ../../tools/dev.js"
   },
   "dependencies": {
     "@realsystem/box": "^3.0.0",

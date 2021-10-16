@@ -1,7 +1,7 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
-import { THEMES, ThemeProvider, GlobalStyles } from '@realsystem/core';
+import { THEMES, ThemeProvider, GlobalStyles } from '@realsystem/core/styling';
 
 export const globalTypes = {
   title: 'Real System',
@@ -22,6 +22,7 @@ export const globalTypes = {
 export const decorators = [
   (Story, context) => {
     const theme = THEMES[context.globals.theme || 'default'];
+    console.log(theme);
     return (
       <ThemeProvider theme={theme}>
         <>
