@@ -1,5 +1,11 @@
 # @realsystem/styling
 
+## 1.4.0
+
+### Minor Changes
+
+- [`fdeb480`](https://github.com/bigwoof91/realsystem/commit/fdeb48032b6d5442363631da8c364f7af6d972e3) - using babel for core and minifying entry points
+
 ## 1.3.0
 
 ### Minor Changes

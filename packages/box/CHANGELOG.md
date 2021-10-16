@@ -1,5 +1,16 @@
 # @realsystem/box
 
+## 6.0.0
+
+### Minor Changes
+
+- [`fdeb480`](https://github.com/bigwoof91/realsystem/commit/fdeb48032b6d5442363631da8c364f7af6d972e3) - using babel for core and minifying entry points
+
+### Patch Changes
+
+- Updated dependencies [[`fdeb480`](https://github.com/bigwoof91/realsystem/commit/fdeb48032b6d5442363631da8c364f7af6d972e3)]:
+  - @realsystem/styling@1.4.0
+
 ## 5.0.0
 
 ### Minor Changes
