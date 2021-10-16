@@ -1,5 +1,3 @@
 ./tools
 ./src
 tsconfig.json
-tsconfig.build.json
-.babelrc.json

@@ -5,7 +5,7 @@ const { logger } = require('./logger');
 // ESbuild config
 const baseEsbuildConfig = {
   color: true,
-  mainFields: ['module', 'main'],
+  // mainFields: ['module', 'main'],
   // Fixes issues related to SSR (website builds)
   platform: 'node',
   bundle: true,

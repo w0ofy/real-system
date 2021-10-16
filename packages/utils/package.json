@@ -1,11 +1,11 @@
 {
   "name": "@realsystem/utils",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "utilities for real system",
   "main": "lib/utils/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/utils/index.esm.js",
-  "types": "lib/utils/types/index.d.ts",
+  "types": "lib/utils/index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production node ../../tools/build.js",
     "dev": "NODE_ENV=development node ../../tools/dev.js",
