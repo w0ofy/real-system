@@ -10,7 +10,15 @@ const baseEsbuildConfig = {
   platform: 'node',
   bundle: true,
   // Changes code to fit given target environments
-  target: ['es2020', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
+  target: [
+    'esnext',
+    'es2020',
+    'chrome58',
+    'firefox57',
+    'safari11',
+    'edge18',
+    'node12',
+  ],
   minify: isProduction,
   define: {
     'process.env.NODE_ENV': `"${env}"`,

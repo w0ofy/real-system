@@ -1,4 +1,5 @@
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   stories: [
@@ -44,6 +45,37 @@ module.exports = {
     ];
 
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@realsystem/styling': path.resolve(
+        __dirname,
+        '..',
+        'node_modules',
+        '@realsystem/core',
+        'styling'
+      ),
+      '@realsystem/utils': path.resolve(
+        __dirname,
+        '..',
+        'node_modules',
+        '@realsystem/core',
+        'utils'
+      ),
+      '@realsystem/box': path.resolve(
+        __dirname,
+        '..',
+        'node_modules',
+        '@realsystem/core',
+        'box'
+      ),
+      '@realsystem/button': path.resolve(
+        __dirname,
+        '..',
+        'node_modules',
+        '@realsystem/core',
+        'button'
+      ),
+    };
     return config;
   },
 };

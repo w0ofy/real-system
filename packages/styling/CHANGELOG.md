@@ -1,5 +1,11 @@
 # @realsystem/styling
 
+## 1.3.0
+
+### Minor Changes
+
+- [`9d8b343`](https://github.com/bigwoof91/realsystem/commit/9d8b343ec0289cffffaf4d839de819ce319e08e8) - fixing nested libs in bundles
+
 ## 1.2.0
 
 ### Minor Changes

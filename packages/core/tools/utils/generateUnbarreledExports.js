@@ -15,10 +15,10 @@ const generatePkgJson = async (pkgName) => {
   const pkgJson = {
     name: pkg.name,
     version: pkg.version,
+    private: true,
+    sideEffects: false,
     main: `../lib/${pkgName}.js`,
     types: `../lib/${pkgName}.d.ts`,
-    dependencies: 'dependencies' in pkg ? pkg.dependencies : {},
-    peerDependencies: pkg.peerDependencies,
   };
 
   let data = JSON.stringify(pkgJson, null, 2);

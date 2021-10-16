@@ -1,5 +1,19 @@
 # @realsystem/core
 
+## 1.3.0
+
+### Minor Changes
+
+- [`9d8b343`](https://github.com/bigwoof91/realsystem/commit/9d8b343ec0289cffffaf4d839de819ce319e08e8) - fixing nested libs in bundles
+
+### Patch Changes
+
+- Updated dependencies [[`9d8b343`](https://github.com/bigwoof91/realsystem/commit/9d8b343ec0289cffffaf4d839de819ce319e08e8)]:
+  - @realsystem/box@5.0.0
+  - @realsystem/button@5.0.0
+  - @realsystem/styling@1.3.0
+  - @realsystem/utils@1.3.0
+
 ## 1.2.0
 
 ### Minor Changes
