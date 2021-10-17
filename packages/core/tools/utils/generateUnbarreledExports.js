@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-const fs = require('fs');
-const { logger } = require('../../../../tools/utils');
+const { writeToFile } = require('../../../../tools/utils');
 const {
   getWorkspacesInfo,
   getUnbarreledFileFullPath,
@@ -10,15 +8,13 @@ function generateUnbarreledExports() {
   const { pkgNames, purePkgNames } = getWorkspacesInfo();
 
   pkgNames.forEach((pkg, i) => {
-    fs.writeFile(
+    writeToFile(
       getUnbarreledFileFullPath(purePkgNames[i]),
       `export * from '${pkg}';\n`,
-      (err) =>
-        err
-          ? logger.error(err)
-          : logger.success(
-              `[@realsystem/core] Exports have been successfully updated within: ${pkg}`
-            )
+      {
+        successMessage: `[@realsystem/core] Exports have been successfully updated within: ${pkg}`,
+        errorMessage: `[@realsystem/core] Failed to update export within: ${pkg}`,
+      }
     );
   });
 }

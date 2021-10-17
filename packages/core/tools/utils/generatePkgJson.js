@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs');
-const { logger } = require('../../../../tools/utils');
+const { logger, writeToFile } = require('../../../../tools/utils');
 const { getWorkspacesInfo } = require('./subPackageUtils');
 
 const writePkgJson = async (pkg) => {
@@ -14,13 +14,14 @@ const writePkgJson = async (pkg) => {
     types: `../lib/${pkg}.d.ts`,
   };
 
-  let data = JSON.stringify(pkgJson, null, 2);
   const dir = `../core/${pkg}`;
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  return await fs.writeFile(`${dir}/package.json`, data, () => {});
+  return await writeToFile(`${dir}/package.json`, pkgJson, {
+    formatJson: true,
+  });
 };
 
 /**

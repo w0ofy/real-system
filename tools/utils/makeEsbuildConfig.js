@@ -14,7 +14,7 @@ const baseEsbuildConfig = {
   define: {
     'process.env.NODE_ENV': `"${env}"`,
   },
-  inject: [`${__dirname}/../reactShim.js`],
+  inject: [`${__dirname}/reactShim.js`],
   logLevel: 'error',
   sourcemap: 'external',
 };

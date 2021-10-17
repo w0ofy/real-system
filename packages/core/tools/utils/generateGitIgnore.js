@@ -1,20 +1,19 @@
-const fs = require('fs');
 const path = require('path');
+const { writeToFile } = require('../../../../tools/utils');
 const { getPurePkgName, getWorkspacesInfo } = require('./subPackageUtils');
 
-const generateGitIgnore = async () => {
+const generateGitIgnore = () => {
   const { pkgNames } = getWorkspacesInfo();
   const ignoreList = pkgNames.map((pkg) => `/${getPurePkgName(pkg)}`);
 
-  const output = `# Automatically generated from "yarn generate-packages"
+  const content = `# Automatically generated from "yarn generate-packages"
 /lib
 ${ignoreList.join('\n')}`;
 
-  return await fs.writeFile(
-    path.join(__dirname, '../../.gitignore'),
-    output,
-    () => {}
-  );
+  return writeToFile(path.join(__dirname, '../../.gitignore'), content, {
+    successMessage: 'Generated .gitignore for @realsystem/core',
+    errorMessage: 'Failed to generate .gitignore for @realsystem/core',
+  });
 };
 
 module.exports = generateGitIgnore;

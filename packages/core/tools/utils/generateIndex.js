@@ -1,5 +1,4 @@
-const fs = require('fs');
-const { logger } = require('../../../../tools/utils');
+const { writeToFile } = require('../../../../tools/utils');
 const { getWorkspacesInfo } = require('./subPackageUtils');
 const { CORE_BUNDLE_INDEX_PATH } = require('./constants');
 
@@ -14,13 +13,10 @@ function getIndexOutput() {
 }
 
 function generateIndex() {
-  fs.writeFile(CORE_BUNDLE_INDEX_PATH, getIndexOutput(), (err) =>
-    err
-      ? logger.error(err)
-      : logger.success(
-          `[@realsystem/core] Exports have been successfully updated within: ${CORE_BUNDLE_INDEX_PATH}`
-        )
-  );
+  writeToFile(CORE_BUNDLE_INDEX_PATH, getIndexOutput(), {
+    successMessage: `[@realsystem/core] Exports have been successfully updated within: ${CORE_BUNDLE_INDEX_PATH}`,
+    errorMessage: `[@realsystem/core] Failed to update exports within: ${CORE_BUNDLE_INDEX_PATH}`,
+  });
 }
 
 module.exports = generateIndex;

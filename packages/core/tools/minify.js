@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const Terser = require('terser');
 const { CORE_BUNDLE_OUTPUT_PATH } = require('./utils/constants');
-const { logger } = require('../../../tools/utils/logger');
+const { writeToFile } = require('../../../tools/utils');
 
 function getAllJsFiles(dirPath) {
   const files = fs.readdirSync(dirPath);
@@ -20,8 +20,9 @@ function getAllJsFiles(dirPath) {
 
   filePaths.forEach(async (filePath) => {
     const result = await Terser.minify(fs.readFileSync(filePath, 'utf8'), {});
-    fs.writeFile(filePath, result.code, 'utf8', (err) =>
-      err ? logger.error(err) : logger.success(`Minified ${filePath}`)
-    );
+    writeToFile(filePath, result.code, {
+      errorMessage: `Failed to minify ${filePath}`,
+      successMessage: `Minified ${filePath}`,
+    });
   });
 })();
