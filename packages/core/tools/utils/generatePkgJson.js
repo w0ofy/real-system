@@ -1,27 +1,27 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs');
-const { logger, readPackageJson } = require('../../../../tools/utils');
+const { logger, writeToFile } = require('../../../../tools/utils');
 const { getWorkspacesInfo } = require('./subPackageUtils');
 
-const writePkgJson = async (pkgName) => {
-  process.chdir(`../${pkgName}`);
-  const pkg = readPackageJson();
+const writePkgJson = async (pkg) => {
+  const packageJson = require(`${__dirname}/../../../${pkg}/package.json`);
   const pkgJson = {
-    name: pkg.name,
-    version: pkg.version,
+    name: packageJson.name,
+    version: packageJson.version,
     private: true,
     sideEffects: false,
-    main: `../lib/${pkgName}.js`,
-    types: `../lib/${pkgName}.d.ts`,
+    main: `../lib/${pkg}.js`,
+    types: `../lib/${pkg}.d.ts`,
   };
 
-  let data = JSON.stringify(pkgJson, null, 2);
-  const dir = `../core/${pkgName}`;
+  const dir = `../core/${pkg}`;
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  return await fs.writeFile(`${dir}/package.json`, data, () => {});
+  return await writeToFile(`${dir}/package.json`, pkgJson, {
+    formatJson: true,
+  });
 };
 
 /**
@@ -32,10 +32,10 @@ async function generatePkgJson() {
 
   for (let i = 0; i < pkgList.length; i++) {
     const pkg = pkgList[i];
-    const pkgName = pkg.pureName;
+    const pureName = pkg.pureName;
 
     logger.magenta(`Generating ${pkg.name} \n`);
-    await writePkgJson(pkgName);
+    await writePkgJson(pureName);
     logger.green('Generated package.json \n');
     logger.blue('-------------------------------------------------- \n');
   }

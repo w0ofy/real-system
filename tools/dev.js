@@ -1,17 +1,17 @@
 const esbuild = require('esbuild');
-const { logger, getPkgJson, makeEsbuildConfig } = require('./utils');
+const { logger, makeEsbuildConfig, getFieldsFromPkgJson } = require('./utils');
 
 /**
  * @function dev bundle package for cjs and esm output
  * @param {*} packageJson package's package.json
  */
-function dev() {
-  const { outfile, ...packageJson } = getPkgJson();
-  const cjsConfig = makeEsbuildConfig(packageJson, {
+function dev(packageJson) {
+  const { outfile, ...pkgJson } = getFieldsFromPkgJson(packageJson);
+  const cjsConfig = makeEsbuildConfig(pkgJson, {
     format: 'cjs',
     outfile: outfile.cjs,
   });
-  const esmConfig = makeEsbuildConfig(packageJson, {
+  const esmConfig = makeEsbuildConfig(pkgJson, {
     format: 'esm',
     outfile: outfile.esm,
   });
@@ -19,14 +19,14 @@ function dev() {
   // bundle commonjs
   esbuild
     .build(cjsConfig)
-    .then(async () => logger.green(`Bundled CJS for "${packageJson.name}"!`))
+    .then(async () => logger.green(`Bundled CJS for "${pkgJson.name}"!`))
     .catch(() => process.exit(1));
 
   // bundle esmodule
   esbuild
     .build(esmConfig)
-    .then(async () => logger.green(`Bundled ESM for "${packageJson.name}"!`))
+    .then(async () => logger.green(`Bundled ESM for "${pkgJson.name}"!`))
     .catch(() => process.exit(1));
 }
 
-dev();
+module.exports = dev;
