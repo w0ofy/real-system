@@ -21,7 +21,8 @@ async function getRepoPackages() {
   }
 
   repoPackages = await runCmdJson(LERNA_CLI_PATH, ['la', '--json']);
-  return repoPackages;
+  // exclude core bundle
+  return repoPackages.filter((pkg) => pkg.name !== '@realsystem/core');
 }
 
 module.exports = { getRepoPackages };

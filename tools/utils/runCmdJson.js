@@ -1,5 +1,5 @@
 const spawnAsync = require('@expo/spawn-async');
-const chalk = require('chalk');
+const { logger } = require('./logger');
 
 /**
  * Simple wrapper for spawnSync to handle failures
@@ -10,8 +10,7 @@ const chalk = require('chalk');
  * @return {Object} spawn result
  */
 async function runCmd(cmd, args = [], options = {}) {
-  // eslint-disable-next-line no-console
-  console.log(chalk.yellow(`>> Running command: ${cmd} ${args.join(' ')}`));
+  logger.warn(`>> Running command: ${cmd} ${args.join(' ')}`);
   const result = await spawnAsync(cmd, args, options);
   return result;
 }

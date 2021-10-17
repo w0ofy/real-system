@@ -4,7 +4,7 @@ const { logger } = require('../../../../tools/utils');
 const { getWorkspacesInfo } = require('./subPackageUtils');
 
 const writePkgJson = async (pkg) => {
-  const packageJson = require(`../${pkg}/package.json`);
+  const packageJson = require(`${__dirname}/../../../${pkg}/package.json`);
   const pkgJson = {
     name: packageJson.name,
     version: packageJson.version,

@@ -40,7 +40,7 @@
     "changeset": "changeset",
     "release": "yarn changeset publish",
     "__BUILD__": "build scripts",
-    "prebuild": "yarn packages:check",
+    "prebuild": "run-s packages:check packages:check:version",
     "build": "run-s build:styling build:utils build:box build:button build:core",
     "build:core": "yarn workspace @realsystem/core build",
     "build:button": "yarn workspace @realsystem/button build",

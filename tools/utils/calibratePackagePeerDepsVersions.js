@@ -5,10 +5,10 @@
  *
  * Until this bites us, we should automate this because not bumping peers has bit us.
  */
-const chalk = require('chalk');
 const { resolve } = require('path');
 const { writeFile } = require('fs');
 const { getRepoPackages } = require('./getRepoPackages');
+const { logger } = require('./logger');
 
 function writeToFile(
   filePath,
@@ -20,16 +20,14 @@ function writeToFile(
   writeFile(filePath, output, 'utf8', (error) => {
     if (error) {
       if (errorMessage != null) {
-        // eslint-disable-next-line no-console
-        console.log(chalk.red(errorMessage));
+        logger.error(errorMessage);
       }
-      // eslint-disable-next-line no-console
-      console.log(error);
+
+      logger(error);
       return false;
     }
     if (successMessage != null) {
-      // eslint-disable-next-line no-console
-      console.log(chalk.green(successMessage));
+      logger.success(successMessage);
     }
   });
 }
@@ -80,13 +78,11 @@ async function updatePackagePeerDependencies(
 }
 
 async function calibratePackagePeerDepsVersions() {
-  // eslint-disable-next-line no-console
-  console.log(chalk.green.bold('Calibrating package peerDependencies...'));
+  logger.success('Calibrating package peerDependencies...');
 
   // Use lerna to get all packages and their version info
   const packagesList = await getRepoPackages();
 
-  console.log(packagesList);
   packagesList.forEach(async (pkg) => {
     const PACKAGE_JSON_PATH = resolve(pkg.location, 'package.json');
     const packageJsonData = require(PACKAGE_JSON_PATH);
@@ -97,11 +93,8 @@ async function calibratePackagePeerDepsVersions() {
         packageJsonData.dependencies
       );
       if (depsList.length > 0) {
-        // eslint-disable-next-line no-console
-        console.log(
-          chalk.red.bold.underline(
-            `[Error] ${packageJsonData.name}: do not declare @realsystem packages as dependencies!`
-          )
+        logger.error(
+          `[Error] ${packageJsonData.name}: do not declare @realsystem packages as dependencies!`
         );
         throw new Error('Move deps to peerDeps and devDeps');
       }

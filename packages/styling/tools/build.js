@@ -1,3 +1,3 @@
-const { build } = require('../../../tools/build');
+const build = require('../../../tools/build');
 
 build(require('../package.json'));
