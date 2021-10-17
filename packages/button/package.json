@@ -7,8 +7,8 @@
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "NODE_ENV=production node ../../tools/build.js",
-    "dev": "NODE_ENV=development node ../../tools/dev.js",
+    "build": "NODE_ENV=production node ../tools/build.js",
+    "dev": "NODE_ENV=development node ./tools/dev.js",
     "types": "tsc"
   },
   "repository": {

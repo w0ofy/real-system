@@ -86,6 +86,7 @@ async function calibratePackagePeerDepsVersions() {
   // Use lerna to get all packages and their version info
   const packagesList = await getRepoPackages();
 
+  console.log(packagesList);
   packagesList.forEach(async (pkg) => {
     const PACKAGE_JSON_PATH = resolve(pkg.location, 'package.json');
     const packageJsonData = require(PACKAGE_JSON_PATH);

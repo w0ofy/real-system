@@ -1,15 +1,15 @@
 const esbuild = require('esbuild');
 const { commandSync } = require('execa');
-const { logger, getPkgJson, makeEsbuildConfig } = require('./utils');
+const { logger, getFieldsFromPkgJson, makeEsbuildConfig } = require('./utils');
 
 /**
  * @function build bundle package for cjs and esm output
  */
-async function build() {
+async function build(packageJson) {
   // clean outdirectory
   commandSync('rimraf ./lib');
 
-  const { outfile, ...pkgJson } = getPkgJson();
+  const { outfile, ...pkgJson } = getFieldsFromPkgJson(packageJson);
   const cjsConfig = makeEsbuildConfig(pkgJson, {
     format: 'cjs',
     outfile: outfile.cjs,
@@ -37,4 +37,4 @@ async function build() {
   logger.green(`Types generated for "${pkgJson.name}"!`);
 }
 
-build();
+module.exports = build;
