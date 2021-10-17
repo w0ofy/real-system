@@ -5,12 +5,11 @@ const { logger } = require('./logger');
 // ESbuild config
 const baseEsbuildConfig = {
   color: true,
-  // mainFields: ['module', 'main'],
-  // Fixes issues related to SSR (website builds)
+  mainFields: ['module', 'main'],
   platform: 'node',
   bundle: true,
   // Changes code to fit given target environments
-  target: ['es2020', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
+  target: ['chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
   minify: isProduction,
   define: {
     'process.env.NODE_ENV': `"${env}"`,
@@ -25,7 +24,7 @@ const shouldWatch = (pkg = {}) =>
     ? {
         // eslint-disable-next-line no-unused-vars
         onRebuild(err, _result) {
-          if (err) throw err;
+          if (err) logger.error(err);
           logger.blue(`${pkg.name} rebundled!`);
         },
       }

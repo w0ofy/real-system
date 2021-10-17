@@ -1,65 +1,26 @@
 /* eslint-disable no-unused-vars */
-const esbuild = require('esbuild');
 const fs = require('fs');
+const { logger } = require('../../../../tools/utils');
 const {
-  logger,
-  getPkgJson,
-  makeEsbuildConfig,
-  readPackageJson,
-} = require('../../../../tools/utils');
-const { getWorkspacesInfo } = require('./subPackageUtils');
+  getWorkspacesInfo,
+  getUnbarreledFileFullPath,
+} = require('./subPackageUtils');
 
-const generatePkgJson = async (pkgName) => {
-  process.chdir(`../${pkgName}`);
-  const pkg = readPackageJson();
-  const pkgJson = {
-    name: pkg.name,
-    version: pkg.version,
-    main: `../lib/${pkgName}.js`,
-    types: `../lib/${pkgName}.d.ts`,
-    dependencies: 'dependencies' in pkg ? pkg.dependencies : {},
-    peerDependencies: pkg.peerDependencies,
-  };
+function generateUnbarreledExports() {
+  const { pkgNames, purePkgNames } = getWorkspacesInfo();
 
-  let data = JSON.stringify(pkgJson, null, 2);
-  const dir = `../core/${pkgName}`;
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir);
-  }
-  return await fs.writeFile(`${dir}/package.json`, data, () => {});
-};
-
-/**
- * @function generateUnbarreledExports bundle esm & cjs package for unbarreled exports
- */
-async function generateUnbarreledExports() {
-  const { pkgList } = getWorkspacesInfo();
-
-  for (let i = 0; i < pkgList.length; i++) {
-    const pkg = pkgList[i];
-    const pkgDirectory = pkg.relativeLocationFromCore;
-    const { outfile, ...pkgJson } = getPkgJson(pkgDirectory);
-    const pkgName = pkg.pureName;
-
-    const cjsConfig = makeEsbuildConfig(pkgJson, {
-      format: 'cjs',
-      outfile: `lib/${pkgName}.js`,
-      entryPoints: [`src/${pkgName}.ts`],
-    });
-
-    logger.magenta(`Generating ${pkg.name} \n`);
-
-    await esbuild
-      .build(cjsConfig)
-      .then(async () => {
-        logger.green('Bundled CJS');
-        await generatePkgJson(pkgName);
-        logger.green('Generated package.json \n');
-        logger.blue('-------------------------------------------------- \n');
-      })
-      .catch(() => process.exit(1));
-  }
+  pkgNames.forEach((pkg, i) => {
+    fs.writeFile(
+      getUnbarreledFileFullPath(purePkgNames[i]),
+      `export * from '${pkg}';\n`,
+      (err) =>
+        err
+          ? logger.error(err)
+          : logger.success(
+              `[@realsystem/core] Exports have been successfully updated within: ${pkg}`
+            )
+    );
+  });
 }
 
 module.exports = generateUnbarreledExports;

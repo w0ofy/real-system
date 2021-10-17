@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "1.2.0",
+  "version": "1.4.2",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -11,15 +11,17 @@
   "scripts": {
     "clean-packages": "./tools/clean-packages.sh",
     "build-types": "./tools/build-types.sh",
-    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn build-types",
+    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn compile && yarn build-types",
     "build:unbarreled": "NODE_ENV=production node ./tools/buildUnbarreledExports.js",
-    "dev": "NODE_ENV=development node ../../tools/dev.js"
+    "dev": "NODE_ENV=development node ../../tools/dev.js",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && node ./tools/minify",
+    "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'"
   },
   "dependencies": {
-    "@realsystem/box": "^4.0.0",
-    "@realsystem/button": "^4.0.0",
-    "@realsystem/styling": "^1.2.0",
-    "@realsystem/utils": "^1.2.0"
+    "@realsystem/box": "^6.0.2",
+    "@realsystem/button": "^6.0.2",
+    "@realsystem/styling": "^1.4.2",
+    "@realsystem/utils": "^1.4.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",

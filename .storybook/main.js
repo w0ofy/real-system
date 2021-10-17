@@ -1,4 +1,5 @@
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   stories: [
