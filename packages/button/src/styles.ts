@@ -3,7 +3,7 @@ import { merge } from '@realsystem/utils';
 
 import { ButtonIntents, ButtonSizes, ButtonStates } from './types';
 
-const ResetStyles: BoxStyleProps = {
+const resetStyles: BoxStyleProps = {
   appearance: 'none',
   color: 'color-text',
   background: 'none',
@@ -26,21 +26,21 @@ const ResetStyles: BoxStyleProps = {
   _active: { transform: 'translateY(1px)' },
 };
 
-export const BaseStyles: { [key in ButtonStates]: BoxStyleProps } = {
-  default: merge(ResetStyles, {
+export const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
+  default: merge(resetStyles, {
     cursor: 'pointer',
   }),
-  disabled: merge(ResetStyles, {
+  disabled: merge(resetStyles, {
     cursor: 'not-allowed',
     pointerEvents: 'none',
   }),
-  loading: merge(ResetStyles, {
+  loading: merge(resetStyles, {
     cursor: 'wait',
     pointerEvents: 'none',
   }),
 };
 
-export const SizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
+export const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
   default: {
     py: 5,
     px: 4,
@@ -53,7 +53,7 @@ export const SizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
   },
 };
 
-export const IntentStyles: { [key in ButtonIntents]: BoxStyleProps } = {
+export const intentStyles: { [key in ButtonIntents]: BoxStyleProps } = {
   default: {},
   success: {},
   danger: {},

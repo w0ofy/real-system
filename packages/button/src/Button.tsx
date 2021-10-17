@@ -1,4 +1,3 @@
-import { BoxStyleProps } from '@realsystem/box';
 import { styled } from '@realsystem/styling';
 
 import { PrimaryButton } from './PrimaryButton';
@@ -25,13 +24,13 @@ const BUTTON_VARIANT_MAP: {
   secondary: SecondaryButton,
 };
 
-const Button = ({
+const ButtonAPI = ({
   children,
   disabled,
   loading,
   variant = 'primary',
   ...otherProps
-}: ButtonProps) => {
+}: ButtonProps): React.ReactElement => {
   const buttonState = getButtonState(disabled, loading);
   // const showLoading = buttonState === 'loading';
   const showDisabled = buttonState !== 'default';
@@ -48,5 +47,5 @@ const Button = ({
   );
 };
 
-const ExtendableButton = styled(Button)({});
+const Button = styled(ButtonAPI)({});
 export { Button };
