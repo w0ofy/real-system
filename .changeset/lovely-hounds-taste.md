@@ -6,4 +6,4 @@
 '@realsystem/utils': patch
 ---
 
-resolving esbuild re-exports issue
+trying to fix 'cannot find module react' error in prod

@@ -1,2 +1,3 @@
-src
-stories
+./tools
+./src
+tsconfig.json

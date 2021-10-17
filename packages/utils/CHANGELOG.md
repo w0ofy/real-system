@@ -1,5 +1,11 @@
 # @realsystem/utils
 
+## 1.4.1
+
+### Patch Changes
+
+- [`302206a`](https://github.com/bigwoof91/realsystem/commit/302206afa3d729071b8ee4d45cab8e72284534f2) - resolving esbuild re-exports issue
+
 ## 1.4.0
 
 ### Minor Changes

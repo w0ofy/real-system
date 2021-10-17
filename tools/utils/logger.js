@@ -10,6 +10,7 @@ logger.warn = (...args) => console.warn(yellow(...args));
 logger.blue = (...args) => logger(blue(...args));
 logger.yellow = (...args) => logger(yellow(...args));
 logger.green = (...args) => logger(green(...args));
+logger.success = (...args) => logger(green(...args));
 logger.red = (...args) => logger(red(...args));
 logger.gray = (...args) => logger(gray(...args));
 logger.magenta = (...args) => logger(magenta(...args));
