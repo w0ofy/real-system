@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -18,10 +18,10 @@
     "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'"
   },
   "dependencies": {
-    "@realsystem/box": "^6.0.1",
-    "@realsystem/button": "^6.0.1",
-    "@realsystem/styling": "^1.4.1",
-    "@realsystem/utils": "^1.4.1"
+    "@realsystem/box": "^6.0.2",
+    "@realsystem/button": "^6.0.2",
+    "@realsystem/styling": "^1.4.2",
+    "@realsystem/utils": "^1.4.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",

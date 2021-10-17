@@ -1,12 +1,21 @@
 /* eslint-disable no-unused-vars */
-// const generateCoreBundle = require('./utils/generateCoreBundle');
 const generateGitIgnore = require('./utils/generateGitIgnore');
+const generateIndex = require('./utils/generateIndex');
 const generatePkgJson = require('./utils/generatePkgJson');
+const generateUnbarreledExports = require('./utils/generateUnbarreledExports');
 
 /**
- * @function build bundle esm & cjs package for unbarreled exports
+ * @function generate generate core bundle from real system package workspaces
  */
 (async function generate() {
+  /*
+   * Write index file
+   */
+  await generateIndex();
+  /*
+   * Write each unbarreled file
+   */
+  await generateUnbarreledExports();
   /*
    * Generate a .gitignore file to prevent committing built files
    */

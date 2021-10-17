@@ -1,5 +1,11 @@
 # @realsystem/styling
 
+## 1.4.2
+
+### Patch Changes
+
+- [`e9ef3ae`](https://github.com/bigwoof91/realsystem/commit/e9ef3ae181b51d3768d05ce2a57a10e2e6ac5145) - trying to fix 'cannot find module react' error in prod
+
 ## 1.4.1
 
 ### Patch Changes

@@ -1,12 +1,11 @@
 const { commandSync } = require('execa');
 const { join } = require('path');
-const { CORE_BUNDLE_PATH } = require('../constants');
+const { CORE_BUNDLE_PATH } = require('./constants');
 
-const getUnbarreledFilePath = (pkg) => `src/${getPurePkgName(pkg.name)}.ts`;
-const getUnbarreledOutputFilePath = (pkg) =>
-  `lib/${getPurePkgName(pkg.name)}.js`;
-const getUnbarreledFileFullPath = (pkg) =>
-  join(CORE_BUNDLE_PATH, getUnbarreledFilePath(pkg));
+const getUnbarreledFilePath = (pkgName) => `src/${pkgName}.ts`;
+
+const getUnbarreledFileFullPath = (pkgName) =>
+  join(CORE_BUNDLE_PATH, getUnbarreledFilePath(pkgName));
 
 const getPurePkgName = (pkgName) => pkgName.replace('@realsystem/', '');
 
@@ -17,17 +16,23 @@ const getWorkspacesInfo = () => {
   const workspaceNames = Object.keys(data).filter(
     (name) => !name.includes('core')
   );
+  const purePkgNames = [];
 
-  const pkgList = workspaceNames.map((name) => ({
-    name,
-    pureName: getPurePkgName(name),
-    relativeLocationFromCore: `../${getPurePkgName(name)}`,
-    ...data[name],
-  }));
+  const pkgList = workspaceNames.map((name) => {
+    const pureName = getPurePkgName(name);
+    purePkgNames.push(pureName);
+    return {
+      name,
+      pureName,
+      relativeLocationFromCore: `../${pureName}`,
+      ...data[name],
+    };
+  });
 
   return {
     pkgList,
-    pkgNames: workspaceNames.map((name) => getPurePkgName(name)),
+    pkgNames: workspaceNames,
+    purePkgNames: purePkgNames,
     data,
   };
 };
@@ -35,7 +40,6 @@ const getWorkspacesInfo = () => {
 module.exports = {
   getPurePkgName,
   getWorkspacesInfo,
-  getUnbarreledOutputFilePath,
   getUnbarreledFilePath,
   getUnbarreledFileFullPath,
 };
