@@ -2,13 +2,13 @@ import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
 import { styled } from '@realsystem/styling';
 import { merge } from '@realsystem/utils';
 
-import { BaseStyles } from './styles';
+import { baseStyles } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const buttonStyles: ButtonStyles = {
-  default: merge(BaseStyles.default, {
+  default: merge(baseStyles.default, {
     color: 'color-text-alt',
     backgroundColor: 'color-background-brand-inverse',
     borderColor: 'color-border-alt',
@@ -22,12 +22,12 @@ const buttonStyles: ButtonStyles = {
       borderColor: 'color-border-brand-strong',
     },
   }),
-  loading: merge(BaseStyles.loading, {
+  loading: merge(baseStyles.loading, {
     color: 'color-text-brand-muted',
     backgroundColor: 'color-background-brand-muted',
     borderColor: 'color-border-brand-muted',
   }),
-  disabled: merge(BaseStyles.disabled, {
+  disabled: merge(baseStyles.disabled, {
     color: 'color-text-brand-muted',
     backgroundColor: 'color-background-brand-muted',
     borderColor: 'color-border-brand-muted',
@@ -35,7 +35,7 @@ const buttonStyles: ButtonStyles = {
 };
 
 const successButtonStyles: ButtonStyles = {
-  default: merge(BaseStyles.default, {
+  default: merge(baseStyles.default, {
     color: 'color-text-success',
     backgroundColor: 'color-background-success-inverse',
     borderColor: 'color-border-success',
@@ -50,12 +50,12 @@ const successButtonStyles: ButtonStyles = {
       borderColor: 'color-border-success-strong',
     },
   }),
-  loading: merge(BaseStyles.loading, {
+  loading: merge(baseStyles.loading, {
     color: 'color-text-success-muted',
     backgroundColor: 'color-background-success-muted',
     borderColor: 'color-border-success-muted',
   }),
-  disabled: merge(BaseStyles.disabled, {
+  disabled: merge(baseStyles.disabled, {
     color: 'color-text-success-muted',
     backgroundColor: 'color-background-success-muted',
     borderColor: 'color-border-success-muted',
@@ -63,7 +63,7 @@ const successButtonStyles: ButtonStyles = {
 };
 
 const dangerButtonStyles: ButtonStyles = {
-  default: merge(BaseStyles.default, {
+  default: merge(baseStyles.default, {
     color: 'color-text-danger',
     backgroundColor: 'color-background-danger-inverse',
     borderColor: 'color-border-danger',
@@ -78,12 +78,12 @@ const dangerButtonStyles: ButtonStyles = {
       borderColor: 'color-border-danger-strong',
     },
   }),
-  loading: merge(BaseStyles.loading, {
+  loading: merge(baseStyles.loading, {
     color: 'color-text-danger-muted',
     backgroundColor: 'color-background-danger-muted',
     borderColor: 'color-border-danger-muted',
   }),
-  disabled: merge(BaseStyles.disabled, {
+  disabled: merge(baseStyles.disabled, {
     color: 'color-text-danger-muted',
     backgroundColor: 'color-background-danger-muted',
     borderColor: 'color-border-danger-muted',
@@ -112,7 +112,7 @@ const SecondaryButton = ({
   buttonState,
   intent = 'default',
   ...otherProps
-}: InternalButtonProps) => {
+}: InternalButtonProps): React.ReactElement => {
   return (
     <Primitive {...STYLE_MAP[intent][buttonState]} {...otherProps}>
       {children}
