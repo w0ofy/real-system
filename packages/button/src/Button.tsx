@@ -1,4 +1,4 @@
-import { styled } from '@realsystem/styling';
+import styled from '@realsystem/styling';
 
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';

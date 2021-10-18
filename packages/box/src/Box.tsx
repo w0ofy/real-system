@@ -1,6 +1,5 @@
-import {
+import styled, {
   composeStyleProps,
-  styled,
   StyledInterface,
 } from '@realsystem/styling';
 

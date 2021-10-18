@@ -65,14 +65,7 @@ const composeStyleProps = () =>
   );
 
 export type TextWrapProps = {
-  whiteSpace?:
-    | 'normal'
-    | 'nowrap'
-    | 'pre'
-    | 'pre-line'
-    | 'pre-wrap'
-    | 'initial'
-    | 'inherit';
+  whiteSpace?: Property.WhiteSpace;
 };
 
 export type CursorProps = {
@@ -92,7 +85,9 @@ export type OutlineProps = {
 /** Workaround for color prop typing issue.
  * More info: https://spectrum.chat/styled-system/general/types-of-property-color-are-incompatible~9227ce42-00f2-473a-8924-f476f0ce6ae1
  * */
-export type SafeColorProps = Omit<SSColorProps, 'color'> & { color?: any };
+export type SafeColorProps = Omit<SSColorProps, 'color'> & {
+  color?: Property.Color | string;
+};
 export type StyleProps = Partial<
   SpaceProps &
     FlexboxProps &

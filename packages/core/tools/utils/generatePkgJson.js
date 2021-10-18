@@ -1,10 +1,23 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs');
 const { logger, writeToFile } = require('../../../../tools/utils');
+const { CORE_LIBRARIES } = require('./constants');
 const { getWorkspacesInfo } = require('./subPackageUtils');
 
+const getPackageJsonLocation = (pkg) => {
+  const pathToPackagesDirectory = `${__dirname}/../../..`;
+  const pathToPackageJson = `${pkg}/package.json`;
+  if (CORE_LIBRARIES.includes(pkg)) {
+    return `${pathToPackagesDirectory}/libraries/${pathToPackageJson}`;
+  }
+  return `${pathToPackagesDirectory}/${pathToPackageJson}`;
+};
+
+/**
+ * @todo refactor to use lerna / yarn commands
+ */
 const writePkgJson = async (pkg) => {
-  const packageJson = require(`${__dirname}/../../../${pkg}/package.json`);
+  const packageJson = require(getPackageJsonLocation(pkg));
   const pkgJson = {
     name: packageJson.name,
     version: packageJson.version,

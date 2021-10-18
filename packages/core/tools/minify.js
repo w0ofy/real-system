@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Terser = require('terser');
-const { CORE_BUNDLE_OUTPUT_PATH } = require('./utils/constants');
+const { CORE_OUTPUT_PATH } = require('./utils/constants');
 const { writeToFile } = require('../../../tools/utils');
 
 function getAllJsFiles(dirPath) {
@@ -16,7 +16,7 @@ function getAllJsFiles(dirPath) {
 
 // Applied terserJS to provided file paths
 (function minifyFiles() {
-  const filePaths = getAllJsFiles(CORE_BUNDLE_OUTPUT_PATH);
+  const filePaths = getAllJsFiles(CORE_OUTPUT_PATH);
 
   filePaths.forEach(async (filePath) => {
     const result = await Terser.minify(fs.readFileSync(filePath, 'utf8'), {});

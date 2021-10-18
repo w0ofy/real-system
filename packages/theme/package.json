@@ -1,0 +1,43 @@
+{
+  "name": "@realsystem/theme",
+  "version": "0.0.0",
+  "description": "theming for real system",
+  "main": "lib/index.js",
+  "main:dev": "src/index.ts",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production node ./tools/build.js",
+    "dev": "NODE_ENV=development node ./tools/dev.js",
+    "types": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigwoof91/realsystem.git"
+  },
+  "keywords": [
+    "real-system",
+    "styles",
+    "components"
+  ],
+  "author": "Mike Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigwoof91/realsystem/issues"
+  },
+  "homepage": "https://github.com/bigwoof91/realsystem#readme",
+  "peerDependencies": {
+    "@realsystem/styling": "1.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "csstype": "^3.0.9",
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "@realsystem/styling": "1.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
