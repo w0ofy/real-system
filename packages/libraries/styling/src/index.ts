@@ -17,6 +17,7 @@ export type {
   DefaultTheme,
   GlobalStyleComponent,
   isStyledComponent,
+  ThemeProviderProps as PrimitiveThemeProviderProps,
   StyledComponent,
   StyledComponentBase,
   StyledComponentInnerAttrs,
@@ -38,7 +39,6 @@ export type {
   ThemedStyledProps,
   ThemeProps,
   ThemeProviderComponent,
-  ThemeProviderProps,
   WithThemeFnInterface,
 } from 'styled-components';
 export {

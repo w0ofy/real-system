@@ -3,6 +3,7 @@ import {
   PrimitiveThemeConsumer as ThemeConsumer,
   PrimitiveThemeContext as ThemeContext,
   PrimitiveThemeProvider,
+  PrimitiveThemeProviderProps,
   primitiveUseTheme as useTheme,
   primitiveWithTheme as withTheme,
 } from '@realsystem/styling';
@@ -11,14 +12,13 @@ import { THEMES } from '../themes';
 import { GlobalStyles } from '..';
 
 export type ThemeProviderProps = {
-  children: React.ReactChild;
   theme?: DefaultTheme;
-};
+} & Pick<PrimitiveThemeProviderProps<ThemeProviderProps>, 'children'>;
 
 const ThemeProvider = ({
   children,
   ...otherProps
-}: Partial<ThemeProviderProps>): React.ReactElement => {
+}: ThemeProviderProps): React.ReactElement => {
   return (
     <PrimitiveThemeProvider theme={THEMES.DEFAULT} {...otherProps}>
       <>

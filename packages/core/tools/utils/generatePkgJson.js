@@ -32,7 +32,9 @@ const writePkgJson = async (pkg) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  return await writeToFile(`${dir}/package.json`, pkgJson, {
+  writeToFile(`${dir}/package.json`, pkgJson, {
+    successMessage: `[@realsystem/core/${pkg}]: Generated "package.json".`,
+    errorMessage: `[@realsystem/core/${pkg}]: Failed to generate "package.json".`,
     formatJson: true,
   });
 };
@@ -40,18 +42,14 @@ const writePkgJson = async (pkg) => {
 /**
  * @function generatePkgJson bundle esm & cjs package for unbarreled exports
  */
-async function generatePkgJson() {
+function generatePkgJson() {
   const { pkgList } = getWorkspacesInfo();
 
-  for (let i = 0; i < pkgList.length; i++) {
-    const pkg = pkgList[i];
+  logger.gray("Generating package.json's for unbarreled exports");
+  return pkgList.forEach((pkg) => {
     const pureName = pkg.pureName;
-
-    logger.magenta(`Generating ${pkg.name} \n`);
-    await writePkgJson(pureName);
-    logger.green('Generated package.json \n');
-    logger.blue('-------------------------------------------------- \n');
-  }
+    writePkgJson(pureName);
+  });
 }
 
 module.exports = generatePkgJson;

@@ -30,7 +30,7 @@
   "types": "index.d.ts",
   "scripts": {
     "__QUALITY__": "code quality and maintenance",
-    "lint": "eslint packages/**/*.{ts,tsx}",
+    "lint": "eslint packages/**/*.{ts,tsx,mdx}",
     "lint:fix": "yarn lint -- --fix",
     "precise-commits": "precise-commits",
     "packages:check": "manypkg check",

@@ -11,7 +11,7 @@ const getPurePkgName = (pkgName) => pkgName.replace('@realsystem/', '');
 
 const getWorkspacesInfo = () => {
   let data = commandSync('yarn workspaces info --json').stdout;
-  data = JSON.parse(JSON.parse(data).data);
+  data = JSON.parse(data);
 
   const workspaceNames = Object.keys(data)
     .filter((name) => !name.includes('core'))

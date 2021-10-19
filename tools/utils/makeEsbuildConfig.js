@@ -1,6 +1,7 @@
 const { getExternalDeps } = require('./getExternalDeps');
 const { env, isProduction } = require('./env');
 const { logger } = require('./logger');
+const { commandSync } = require('execa');
 
 // ESbuild config
 const baseEsbuildConfig = {
@@ -25,7 +26,8 @@ const shouldWatch = (pkg = {}) =>
         // eslint-disable-next-line no-unused-vars
         onRebuild(err, _result) {
           if (err) logger.error(err);
-          logger.blue(`${pkg.name} rebundled!`);
+          commandSync('yarn types');
+          logger.blue(`Rebundled ${pkg.name}.`);
         },
       }
     : false;

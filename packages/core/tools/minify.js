@@ -4,25 +4,25 @@ const Terser = require('terser');
 const { CORE_OUTPUT_PATH } = require('./utils/constants');
 const { writeToFile } = require('../../../tools/utils');
 
-function getAllJsFiles(dirPath) {
-  const files = fs.readdirSync(dirPath);
+function getAllJsFiles() {
+  const files = fs.readdirSync(CORE_OUTPUT_PATH);
   const arrayOfFiles = [];
 
   files.forEach((file) => {
-    arrayOfFiles.push(path.join(dirPath, '/', file));
+    arrayOfFiles.push(path.join(CORE_OUTPUT_PATH, '/', file));
   });
   return arrayOfFiles.filter((file) => file.match(/\.js$/));
 }
 
-// Applied terserJS to provided file paths
+// Minify core bundle js files w/ terser
 (function minifyFiles() {
-  const filePaths = getAllJsFiles(CORE_OUTPUT_PATH);
+  const filePaths = getAllJsFiles();
 
-  filePaths.forEach(async (filePath) => {
+  return filePaths.forEach(async (filePath) => {
     const result = await Terser.minify(fs.readFileSync(filePath, 'utf8'), {});
     writeToFile(filePath, result.code, {
-      errorMessage: `Failed to minify ${filePath}`,
-      successMessage: `Minified ${filePath}`,
+      errorMessage: `Failed to minify ${filePath}.`,
+      successMessage: `[${filePath}]: Minified.`,
     });
   });
 })();

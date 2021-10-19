@@ -9,13 +9,13 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "clean-packages": "./tools/clean-packages.sh",
-    "build-types": "./tools/build-types.sh",
-    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn compile && yarn build-types",
-    "build:unbarreled": "NODE_ENV=production node ./tools/buildUnbarreledExports.js",
-    "dev": "NODE_ENV=development node ../../tools/dev.js",
-    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && node ./tools/minify",
-    "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'"
+    "build": "yarn clean && yarn generate-bundle && yarn compile && yarn build:types",
+    "build:types": "./tools/build-types.sh",
+    "clean": "./tools/clean-packages.sh",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && yarn minify-bundle",
+    "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'",
+    "generate-bundle": "node ./tools/generate.js",
+    "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
     "@realsystem/box": "^6.0.2",

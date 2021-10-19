@@ -1,4 +1,4 @@
-const { writeToFile } = require('../../../../tools/utils');
+const { writeToFile, logger } = require('../../../../tools/utils');
 const {
   getWorkspacesInfo,
   getUnbarreledFileFullPath,
@@ -7,13 +7,14 @@ const {
 function generateUnbarreledExports() {
   const { pkgNames, purePkgNames } = getWorkspacesInfo();
 
-  pkgNames.forEach((pkg, i) => {
+  logger.gray('Generating unbarreled exports');
+  return pkgNames.forEach((pkg, i) => {
     writeToFile(
       getUnbarreledFileFullPath(purePkgNames[i]),
       `export * from '${pkg}';\n`,
       {
-        successMessage: `[@realsystem/core] Exports have been successfully updated within: ${pkg}`,
-        errorMessage: `[@realsystem/core] Failed to update export within: ${pkg}`,
+        successMessage: `[@realsystem/core/${pkg}] Generated unbarreled exports.`,
+        errorMessage: `[@realsystem/core/${pkg}] Failed to generate exports.`,
       }
     );
   });
