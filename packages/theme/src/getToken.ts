@@ -1,5 +1,6 @@
-import get from 'lodash/get';
-import { DefaultTheme } from 'styled-components';
+import get from 'lodash.get';
+
+import { DefaultTheme } from '@realsystem/styling';
 
 import {
   backgroundColors,
@@ -75,7 +76,7 @@ const getToken = (
   scale: ThemeScales = 'colors',
   fallback: Fallback = null
 ) => {
-  return function (props: Props) {
+  return function (props: Props): string | number | null {
     return get(props.theme, `${scale}.${token}`, fallback);
   };
 };

@@ -1,7 +1,7 @@
 {
-  "name": "@realsystem/button",
-  "version": "7.0.0",
-  "description": "Real System Button component",
+  "name": "@realsystem/theme",
+  "version": "1.0.0",
+  "description": "theming for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -17,7 +17,8 @@
   },
   "keywords": [
     "real-system",
-    "box"
+    "styles",
+    "components"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -26,17 +27,16 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/box": "^7.0.0",
-    "@realsystem/styling": "^1.5.0",
-    "@realsystem/utils": "^1.4.2",
+    "@realsystem/styling": "1.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "csstype": "^3.0.9",
+    "lodash.get": "^4.4.2"
+  },
   "devDependencies": {
-    "@realsystem/box": "^7.0.0",
-    "@realsystem/styling": "^1.5.0",
-    "@realsystem/utils": "^1.4.2",
+    "@realsystem/styling": "1.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

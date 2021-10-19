@@ -1,0 +1,80 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Getting Started"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Getting Started
+
+## Installation & Setup
+
+### Peer dependencies
+
+To start using Real System, you must first install the following third party dependencies:
+
+```json copy=false
+
+"peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+}
+```
+
+```bash
+#npm
+$ npm install --save react react-dom
+
+# yarn
+$ yarn add react react-dom
+```
+
+### Real System Packages
+
+Everything exposed inside Real System Core can also be installed individually; you could install `@realsystem/button` and import only that one package. However, we recommend using the Core package for ease of maintenance and only falling back to the individual packages if you need to pin to a specific version.
+
+```bash
+# npm
+$ npm install --save @realsystem/core
+
+# yarn
+$ yarn add @realsystem/core
+```
+
+### Theme Provider
+
+```jsx
+// index.js
+import React, { ReactDOM } from 'react';
+
+import { ThemeProvider } from '@realsystem/core/theme';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ThemeProvider>...</ThemeProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+> `ThemeProvider` renders `GlobalStyles` which uses `styled-component`'s `createGlobalStyles` utility; It is responsible for font smoothing, setting the `html` base font-size (`.625rem`) and normalizing styles for browsers via `normalize.css`
+
+## Usage
+
+### Real System Components
+
+You can use the Real System components anywhere that is wrapped by the Theme Provider.
+
+```jsx
+import { Box } from '@twilio-paste/core/box';
+
+const MyComponent = () => (
+  <Box margin={2} backgroundColor="color-background">
+    Hello, my name is Box!
+  </Box>
+);
+```

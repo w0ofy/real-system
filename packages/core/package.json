@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -9,18 +9,18 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "clean-packages": "./tools/clean-packages.sh",
-    "build-types": "./tools/build-types.sh",
-    "build": "yarn clean-packages && NODE_ENV=production node ./tools/generate.js && yarn compile && yarn build-types",
-    "build:unbarreled": "NODE_ENV=production node ./tools/buildUnbarreledExports.js",
-    "dev": "NODE_ENV=development node ../../tools/dev.js",
-    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && node ./tools/minify",
-    "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'"
+    "build": "yarn clean && yarn generate-bundle && yarn compile && yarn build:types",
+    "build:types": "./tools/build-types.sh",
+    "clean": "./tools/clean-packages.sh",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && yarn minify-bundle",
+    "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'",
+    "generate-bundle": "node ./tools/generate.js",
+    "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
-    "@realsystem/box": "^6.0.2",
-    "@realsystem/button": "^6.0.2",
-    "@realsystem/styling": "^1.4.2",
+    "@realsystem/box": "^7.0.0",
+    "@realsystem/button": "^7.0.0",
+    "@realsystem/styling": "^1.5.0",
     "@realsystem/utils": "^1.4.2"
   },
   "peerDependencies": {

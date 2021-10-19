@@ -1,10 +1,23 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs');
 const { logger, writeToFile } = require('../../../../tools/utils');
+const { CORE_LIBRARIES } = require('./constants');
 const { getWorkspacesInfo } = require('./subPackageUtils');
 
+const getPackageJsonLocation = (pkg) => {
+  const pathToPackagesDirectory = `${__dirname}/../../..`;
+  const pathToPackageJson = `${pkg}/package.json`;
+  if (CORE_LIBRARIES.includes(pkg)) {
+    return `${pathToPackagesDirectory}/libraries/${pathToPackageJson}`;
+  }
+  return `${pathToPackagesDirectory}/${pathToPackageJson}`;
+};
+
+/**
+ * @todo refactor to use lerna / yarn commands
+ */
 const writePkgJson = async (pkg) => {
-  const packageJson = require(`${__dirname}/../../../${pkg}/package.json`);
+  const packageJson = require(getPackageJsonLocation(pkg));
   const pkgJson = {
     name: packageJson.name,
     version: packageJson.version,
@@ -19,7 +32,9 @@ const writePkgJson = async (pkg) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  return await writeToFile(`${dir}/package.json`, pkgJson, {
+  writeToFile(`${dir}/package.json`, pkgJson, {
+    successMessage: `[@realsystem/core/${pkg}]: Generated "package.json".`,
+    errorMessage: `[@realsystem/core/${pkg}]: Failed to generate "package.json".`,
     formatJson: true,
   });
 };
@@ -27,18 +42,14 @@ const writePkgJson = async (pkg) => {
 /**
  * @function generatePkgJson bundle esm & cjs package for unbarreled exports
  */
-async function generatePkgJson() {
+function generatePkgJson() {
   const { pkgList } = getWorkspacesInfo();
 
-  for (let i = 0; i < pkgList.length; i++) {
-    const pkg = pkgList[i];
+  logger.gray("Generating package.json's for unbarreled exports");
+  return pkgList.forEach((pkg) => {
     const pureName = pkg.pureName;
-
-    logger.magenta(`Generating ${pkg.name} \n`);
-    await writePkgJson(pureName);
-    logger.green('Generated package.json \n');
-    logger.blue('-------------------------------------------------- \n');
-  }
+    writePkgJson(pureName);
+  });
 }
 
 module.exports = generatePkgJson;

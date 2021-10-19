@@ -7,9 +7,8 @@
     "jest": true
   },
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": 12,
     "ecmaFeatures": {
-      "legacyDecorators": true,
       "jsx": true
     },
     "sourceType": "module"
@@ -50,7 +49,10 @@
     },
     {
       "files": ["*.mdx"],
-      "extends": ["plugin:mdx/recommended"]
+      "extends": ["plugin:mdx/recommended"],
+      "settings": {
+        "mdx/code-blocks": false
+      }
     },
     {
       "env": {

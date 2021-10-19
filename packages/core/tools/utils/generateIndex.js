@@ -1,6 +1,6 @@
-const { writeToFile } = require('../../../../tools/utils');
+const { writeToFile, logger } = require('../../../../tools/utils');
 const { getWorkspacesInfo } = require('./subPackageUtils');
-const { CORE_BUNDLE_INDEX_PATH } = require('./constants');
+const { CORE_INDEX_PATH } = require('./constants');
 
 // Given a list of packages, output the index.tsx exports string
 function getIndexOutput() {
@@ -13,9 +13,10 @@ function getIndexOutput() {
 }
 
 function generateIndex() {
-  writeToFile(CORE_BUNDLE_INDEX_PATH, getIndexOutput(), {
-    successMessage: `[@realsystem/core] Exports have been successfully updated within: ${CORE_BUNDLE_INDEX_PATH}`,
-    errorMessage: `[@realsystem/core] Failed to update exports within: ${CORE_BUNDLE_INDEX_PATH}`,
+  logger.gray('Generating index exports');
+  return writeToFile(CORE_INDEX_PATH, getIndexOutput(), {
+    successMessage: '[@realsystem/core] Generated index exports.',
+    errorMessage: '[@realsystem/core] Failed to generate index exports.',
   });
 }
 

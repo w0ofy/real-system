@@ -20,21 +20,24 @@ async function build(packageJson) {
     outfile: outfile.esm,
   });
 
+  logger.magenta(`Bundling ${pkgJson.name}\n`);
+
   // bundle commonjs
   await esbuild
     .build(cjsConfig)
-    .then(async () => logger.green(`Bundled CJS for "${pkgJson.name}"!`))
+    .then(async () => logger.success(`Bundled CJS for "${pkgJson.name}"`))
     .catch(() => process.exit(1));
 
   // bundle esmodule
   await esbuild
     .build(esmConfig)
     // eslint-disable-next-line no-unused-vars
-    .then(async (result) => logger.green(`Bundled ESM for "${pkgJson.name}"!`))
+    .then(async (result) => logger.success(`Bundled ESM for "${pkgJson.name}"`))
     .catch(() => process.exit(1));
-  logger.yellow(`Generating types for "${pkgJson.name}"!`);
+  logger.gray(`Bundling types for "${pkgJson.name}"`);
   commandSync('yarn types');
-  logger.green(`Types generated for "${pkgJson.name}"!`);
+  logger.success(`Types bundled for "${pkgJson.name}"\n`);
+  logger.blue('-------------------------------------------------- \n');
 }
 
 module.exports = build;

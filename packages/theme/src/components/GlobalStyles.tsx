@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle, css } from '@realsystem/styling';
 
 import { getToken } from '../getToken';
 
