@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -21,6 +21,7 @@
     "@realsystem/box": "^7.0.0",
     "@realsystem/button": "^7.0.0",
     "@realsystem/styling": "^1.5.0",
+    "@realsystem/theme": "^1.0.0",
     "@realsystem/utils": "^1.4.2"
   },
   "peerDependencies": {

@@ -1,5 +1,11 @@
 # @realsystem/core
 
+## 1.6.0
+
+### Minor Changes
+
+- [`d84a62e`](https://github.com/bigwoof91/realsystem/commit/d84a62e9eb1fc1ed2cb8b9753f4cad68c98ddae2) - fixing broken theme import
+
 ## 1.5.0
 
 ### Minor Changes
