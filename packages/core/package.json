@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -18,9 +18,9 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
-    "@realsystem/box": "^6.0.2",
-    "@realsystem/button": "^6.0.2",
-    "@realsystem/styling": "^1.4.2",
+    "@realsystem/box": "^7.0.0",
+    "@realsystem/button": "^7.0.0",
+    "@realsystem/styling": "^1.5.0",
     "@realsystem/utils": "^1.4.2"
   },
   "peerDependencies": {

@@ -1,5 +1,11 @@
 # @realsystem/styling
 
+## 1.5.0
+
+### Minor Changes
+
+- [#19](https://github.com/bigwoof91/realsystem/pull/19) [`f76b1bf`](https://github.com/bigwoof91/realsystem/commit/f76b1bfa8b22ce9cb47c05c42d5924f07b5ed98e) Thanks [@bigwoof91](https://github.com/bigwoof91)! - breaking out theming from styling package and converting styling to a primitive library
+
 ## 1.4.2
 
 ### Patch Changes
