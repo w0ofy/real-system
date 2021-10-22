@@ -3,8 +3,7 @@ module.exports = {
     [
       'babel-plugin-styled-components',
       {
-        displayName: false,
-        pure: true,
+        displayName: true,
       },
     ],
   ],

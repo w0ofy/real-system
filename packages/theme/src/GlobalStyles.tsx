@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from '@realsystem/styling';
 
-import { getToken } from '../getToken';
+import { getToken } from './getToken';
 
 const normalize = css`
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

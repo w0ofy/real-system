@@ -6,8 +6,12 @@
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js",
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "NODE_ENV=development node ./tools/dev.js",
     "types": "tsc"
   },

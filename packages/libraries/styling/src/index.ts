@@ -5,10 +5,12 @@ import styled from 'styled-components';
  * styled-system (with css prop util) and styled-components
  */
 export * from './styled-components';
-export type {
+export {
   AnyStyledComponent,
   BaseThemeProviderComponent,
   BaseWithThemeFnInterface,
+  createGlobalStyle,
+  css,
   CSSKeyframes,
   CSSObject,
   CSSProp,
@@ -17,7 +19,12 @@ export type {
   DefaultTheme,
   GlobalStyleComponent,
   isStyledComponent,
+  ThemeConsumer as PrimitiveThemeConsumer,
+  ThemeContext as PrimitiveThemeContext,
+  ThemeProvider as PrimitiveThemeProvider,
   ThemeProviderProps as PrimitiveThemeProviderProps,
+  useTheme as primitiveUseTheme,
+  withTheme as primitiveWithTheme,
   StyledComponent,
   StyledComponentBase,
   StyledComponentInnerAttrs,
@@ -40,15 +47,6 @@ export type {
   ThemeProps,
   ThemeProviderComponent,
   WithThemeFnInterface,
-} from 'styled-components';
-export {
-  createGlobalStyle,
-  css,
-  ThemeConsumer as PrimitiveThemeConsumer,
-  ThemeContext as PrimitiveThemeContext,
-  ThemeProvider as PrimitiveThemeProvider,
-  useTheme as primitiveUseTheme,
-  withTheme as primitiveWithTheme,
 } from 'styled-components';
 export * from 'styled-system';
 /**
