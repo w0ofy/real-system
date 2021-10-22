@@ -1,5 +1,18 @@
 # @realsystem/button
 
+## 8.0.0
+
+### Minor Changes
+
+- [`b368e1a`](https://github.com/bigwoof91/realsystem/commit/b368e1a88d11cab75d402c0b74c694f73c023672) - trying to fix bundle
+
+### Patch Changes
+
+- Updated dependencies [[`b368e1a`](https://github.com/bigwoof91/realsystem/commit/b368e1a88d11cab75d402c0b74c694f73c023672)]:
+  - @realsystem/box@8.0.0
+  - @realsystem/styling@1.6.0
+  - @realsystem/utils@1.5.0
+
 ## 7.0.0
 
 ### Minor Changes
