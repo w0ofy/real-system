@@ -13,8 +13,8 @@
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "target": "es6",
-    "lib": ["es2017", "DOM"],
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
     "strict": true,
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -22,7 +22,7 @@
     "noImplicitAny": false,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "module": "ESNext",
+    "module": "esnext",
     "outDir": "lib"
   }
 }

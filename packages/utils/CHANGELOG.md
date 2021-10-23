@@ -1,5 +1,17 @@
 # @realsystem/utils
 
+## 1.5.2
+
+### Patch Changes
+
+- [`7f2e030`](https://github.com/bigwoof91/realsystem/commit/7f2e030d3939bc532e4b754f427059bac09299b7) - reversioning
+
+## 1.5.1
+
+### Patch Changes
+
+- [`80b0570`](https://github.com/bigwoof91/realsystem/commit/80b0570ebf4006168e70849dc022eb606e862414) - reversioning
+
 ## 1.5.0
 
 ### Minor Changes

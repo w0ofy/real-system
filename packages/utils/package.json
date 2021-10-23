@@ -1,15 +1,12 @@
 {
   "name": "@realsystem/utils",
-  "version": "1.5.0",
+  "version": "1.5.2",
   "description": "utilities for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "sideEffects": false,
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "NODE_ENV=development node ./tools/dev.js",

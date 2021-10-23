@@ -1,5 +1,23 @@
 # @realsystem/box
 
+## 8.0.2
+
+### Patch Changes
+
+- [`7f2e030`](https://github.com/bigwoof91/realsystem/commit/7f2e030d3939bc532e4b754f427059bac09299b7) - reversioning
+
+- Updated dependencies [[`7f2e030`](https://github.com/bigwoof91/realsystem/commit/7f2e030d3939bc532e4b754f427059bac09299b7)]:
+  - @realsystem/styling@1.6.2
+
+## 8.0.1
+
+### Patch Changes
+
+- [`80b0570`](https://github.com/bigwoof91/realsystem/commit/80b0570ebf4006168e70849dc022eb606e862414) - reversioning
+
+- Updated dependencies [[`80b0570`](https://github.com/bigwoof91/realsystem/commit/80b0570ebf4006168e70849dc022eb606e862414)]:
+  - @realsystem/styling@1.6.1
+
 ## 8.0.0
 
 ### Minor Changes

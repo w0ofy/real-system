@@ -5,7 +5,6 @@ const presets = [
     '@babel/preset-env',
     {
       targets: '> 0.25%, not dead',
-      esmodules: true,
     },
   ],
   '@babel/preset-react',
