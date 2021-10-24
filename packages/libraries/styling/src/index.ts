@@ -41,7 +41,6 @@ export type {
 } from 'styled-components';
 export {
   createGlobalStyle,
-  css,
   isStyledComponent,
   ThemeConsumer as PrimitiveThemeConsumer,
   ThemeContext as PrimitiveThemeContext,
@@ -54,5 +53,5 @@ export * from 'styled-system';
  * styled, css and token utilities
  */
 export * from './styleProps';
-export { default as cssProp } from '@styled-system/css';
+export { default as css } from '@styled-system/css';
 export default styled;

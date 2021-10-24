@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
 import styled from '@realsystem/styling';
@@ -80,26 +80,24 @@ const STYLE_MAP: {
   danger: dangerButtonStyles,
 };
 
-export type ButtonProps = Partial<BoxProps> & {
-  children: React.ReactNode;
-  disabled?: boolean;
-  loading?: boolean;
-  buttonState: ButtonStates;
-};
+const BoxAsButton = BoxAs('button');
 
-const BoxAsButton = styled(BoxAs('button'))<BoxProps>({});
+const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
+  (
+    { children, buttonState, intent = 'default', ...otherProps },
+    ref
+  ): React.ReactElement => {
+    return (
+      <BoxAsButton
+        {...STYLE_MAP[intent][buttonState]}
+        {...otherProps}
+        ref={ref}>
+        {children}
+      </BoxAsButton>
+    );
+  }
+);
 
-const PrimaryButton = ({
-  children,
-  buttonState,
-  intent = 'default',
-  ...otherProps
-}: InternalButtonProps): React.ReactElement => {
-  return (
-    <BoxAsButton {...STYLE_MAP[intent][buttonState]} {...otherProps}>
-      {children}
-    </BoxAsButton>
-  );
-};
+PrimaryButton.displayName = 'PrimaryButton';
 
 export { PrimaryButton };

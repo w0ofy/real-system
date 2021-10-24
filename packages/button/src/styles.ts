@@ -18,7 +18,7 @@ const resetStyles: BoxStyleProps = {
   fontWeight: 'font-weight-semibold',
   textDecoration: 'none',
   position: 'relative',
-  px: 5,
+  px: 6,
   py: 4,
   margin: 'space-0',
   outlineOffset: '1px',
@@ -42,7 +42,7 @@ export const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
 
 export const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
   default: {
-    py: 5,
+    py: 6,
     px: 4,
     fontSize: 1,
   },

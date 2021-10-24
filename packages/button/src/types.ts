@@ -23,4 +23,5 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
 
 export type InternalButtonProps = Omit<ButtonProps, 'variant'> & {
   buttonState: ButtonStates;
+  ref?: any;
 };

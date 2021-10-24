@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import styled from '@realsystem/styling';
 
@@ -26,28 +26,30 @@ const BUTTON_VARIANT_MAP: {
   secondary: SecondaryButton,
 };
 
-const ButtonAPI = ({
-  children,
-  disabled,
-  loading,
-  variant = 'primary',
-  ...otherProps
-}: ButtonProps): React.ReactElement => {
-  const buttonState = getButtonState(disabled, loading);
-  // const showLoading = buttonState === 'loading';
-  const showDisabled = buttonState !== 'default';
-  const ButtonComponent = BUTTON_VARIANT_MAP[variant];
+const ButtonAPI = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    { children, disabled, loading, variant = 'primary', ...otherProps },
+    ref
+  ): React.ReactElement => {
+    const buttonState = getButtonState(disabled, loading);
+    // const showLoading = buttonState === 'loading';
+    const showDisabled = buttonState !== 'default';
+    const ButtonComponent = BUTTON_VARIANT_MAP[variant];
 
-  return (
-    <ButtonComponent
-      role="button"
-      {...otherProps}
-      buttonState={buttonState}
-      disabled={showDisabled}>
-      {children}
-    </ButtonComponent>
-  );
-};
+    return (
+      <ButtonComponent
+        role="button"
+        {...otherProps}
+        buttonState={buttonState}
+        disabled={showDisabled}
+        ref={ref}>
+        {children}
+      </ButtonComponent>
+    );
+  }
+);
+
+ButtonAPI.displayName = 'Button';
 
 const Button = styled(ButtonAPI)({});
 export { Button };

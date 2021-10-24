@@ -22,7 +22,6 @@ export const globalTypes = {
 export const decorators = [
   (Story, context) => {
     const theme = THEMES[context.globals.theme || 'DEFAULT'];
-    console.log(theme);
     return (
       <ThemeProvider theme={theme}>
           <Story />

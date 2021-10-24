@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
 import styled from '@realsystem/styling';
@@ -107,19 +107,21 @@ export type ButtonProps = Partial<BoxProps> & {
   buttonState: ButtonStates;
 };
 
-const Primitive = styled(BoxAs('button'))<BoxProps>({});
+const Primitive = BoxAs('button');
 
-const SecondaryButton = ({
-  children,
-  buttonState,
-  intent = 'default',
-  ...otherProps
-}: InternalButtonProps): React.ReactElement => {
-  return (
-    <Primitive {...STYLE_MAP[intent][buttonState]} {...otherProps}>
-      {children}
-    </Primitive>
-  );
-};
+const SecondaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
+  (
+    { children, buttonState, intent = 'default', ...otherProps },
+    ref
+  ): React.ReactElement => {
+    return (
+      <Primitive {...STYLE_MAP[intent][buttonState]} {...otherProps} ref={ref}>
+        {children}
+      </Primitive>
+    );
+  }
+);
+
+SecondaryButton.displayName = 'SecondaryButton';
 
 export { SecondaryButton };
