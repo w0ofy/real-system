@@ -1,6 +1,6 @@
 const backgroundColors = {
   // in use
-  'color-background-brand': 'rgb(99,91,255)',
+  'color-background-brand': 'rgb(99,102,241)',
   'color-background-brand-highlight': 'rgb(244,244,246)',
   'color-background-brand-muted': 'rgb(227, 225, 255)',
   'color-background-brand-weakest': 'rgb(227, 225, 255)',

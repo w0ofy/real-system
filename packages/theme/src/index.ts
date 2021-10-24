@@ -1,8 +1,8 @@
 /*
  * Theme provider and global styles
  */
-export * from './components/GlobalStyles';
-export * from './components/ThemeProvider';
+export * from './GlobalStyles';
+export * from './ThemeProvider';
 export * from './themes';
 
 /*

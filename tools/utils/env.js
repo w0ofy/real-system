@@ -1,10 +1,12 @@
 /**
  * environment utilities
  */
-const env = process.env.NODE_ENV;
-const isProduction = env === 'production';
+const ENV = process.env.NODE_ENV;
+const isProduction = ENV === 'production';
+const BUNDLE_OUTPUT_DIR = 'lib';
 
 module.exports = {
-  env,
+  ENV,
   isProduction,
+  BUNDLE_OUTPUT_DIR,
 };

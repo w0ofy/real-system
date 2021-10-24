@@ -4,7 +4,7 @@ import styled, {
 } from '@realsystem/styling';
 
 import { getPseudoStyles } from './styleFunctions';
-import { BoxProps } from './types';
+import type { BoxProps } from './types';
 
 /**
  * Use `Box` to create other components

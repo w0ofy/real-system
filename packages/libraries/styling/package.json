@@ -1,13 +1,14 @@
 {
   "name": "@realsystem/styling",
-  "version": "1.5.0",
+  "version": "1.6.3",
   "description": "theme and components for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js",
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "NODE_ENV=development node ./tools/dev.js",
     "types": "tsc"
   },
@@ -35,7 +36,7 @@
     "@types/styled-components": "^5.1.15",
     "@types/styled-system": "5.1.13",
     "csstype": "^3.0.9",
-    "styled-components": "^5.3.1",
+    "styled-components": "^5.3.3",
     "styled-system": "5.1.5"
   },
   "devDependencies": {

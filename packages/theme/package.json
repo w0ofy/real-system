@@ -1,13 +1,14 @@
 {
   "name": "@realsystem/theme",
-  "version": "1.0.0",
+  "version": "2.0.3",
   "description": "theming for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js",
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "NODE_ENV=development node ./tools/dev.js",
     "types": "tsc"
   },
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/styling": "1.5.0",
+    "@realsystem/styling": "1.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -36,7 +37,7 @@
     "lodash.get": "^4.4.2"
   },
   "devDependencies": {
-    "@realsystem/styling": "1.5.0",
+    "@realsystem/styling": "1.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

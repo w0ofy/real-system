@@ -14,9 +14,9 @@ export const managerConfig = {
   },
   theme: create({
     ...themes.light,
-    barSelectedColor: 'rgb(99,91,255)',
+    barSelectedColor: 'rgb(99,102,241)',
     colorPrimary: 'rgb(18, 28, 45)',
-    colorSecondary: 'rgb(99,91,255)',
+    colorSecondary: 'rgb(99,102,241)',
     brandTitle: `Real System v${pkg.version}`,
     brandUrl: 'https://github.com/bigwoof91/realsystem',
     gridCellSize: 12,

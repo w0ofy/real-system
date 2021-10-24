@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
   DefaultTheme,
   PrimitiveThemeConsumer as ThemeConsumer,
@@ -8,8 +10,8 @@ import {
   primitiveWithTheme as withTheme,
 } from '@realsystem/styling';
 
-import { THEMES } from '../themes';
-import { GlobalStyles } from '..';
+import { GlobalStyles } from './GlobalStyles';
+import { THEMES } from './themes';
 
 export type ThemeProviderProps = {
   theme?: DefaultTheme;

@@ -1,13 +1,14 @@
 {
   "name": "@realsystem/button",
-  "version": "7.0.0",
+  "version": "8.0.3",
   "description": "Real System Button component",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js",
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "NODE_ENV=development node ./tools/dev.js",
     "types": "tsc"
   },
@@ -26,17 +27,17 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/box": "^7.0.0",
-    "@realsystem/styling": "^1.5.0",
-    "@realsystem/utils": "^1.4.2",
+    "@realsystem/box": "^8.0.3",
+    "@realsystem/styling": "^1.6.3",
+    "@realsystem/utils": "^1.5.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "dependencies": {},
   "devDependencies": {
-    "@realsystem/box": "^7.0.0",
-    "@realsystem/styling": "^1.5.0",
-    "@realsystem/utils": "^1.4.2",
+    "@realsystem/box": "^8.0.3",
+    "@realsystem/styling": "^1.6.3",
+    "@realsystem/utils": "^1.5.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

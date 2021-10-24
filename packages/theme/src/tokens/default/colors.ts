@@ -1,5 +1,5 @@
 const colors = {
-  'color-brand': 'rgb(99,91,255)',
+  'color-brand': 'rgb(99,102,241)',
   'color-outline': 'rgb(96, 107, 133)',
   'color-brand-highweak': 'rgb(242, 47, 70)',
   'color-gray-weakest': 'rgb(225, 255, 255)',

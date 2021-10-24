@@ -1,3 +1,4 @@
 tools
 src
 tsconfig.json
+babel.config.js

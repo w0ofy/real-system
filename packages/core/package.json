@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/core",
-  "version": "1.5.0",
+  "version": "1.7.3",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -8,20 +8,22 @@
   "main:dev": "src/index.ts",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "yarn clean && yarn generate-bundle && yarn compile && yarn build:types",
     "build:types": "./tools/build-types.sh",
     "clean": "./tools/clean-packages.sh",
-    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' && yarn minify-bundle",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && node ./tools/minify",
     "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'",
     "generate-bundle": "node ./tools/generate.js",
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
-    "@realsystem/box": "^7.0.0",
-    "@realsystem/button": "^7.0.0",
-    "@realsystem/styling": "^1.5.0",
-    "@realsystem/utils": "^1.4.2"
+    "@realsystem/box": "^8.0.3",
+    "@realsystem/button": "^8.0.3",
+    "@realsystem/styling": "^1.6.3",
+    "@realsystem/theme": "^2.0.3",
+    "@realsystem/utils": "^1.5.3"
   },
   "peerDependencies": {
     "react": "^17.0.2",

@@ -1,11 +1,16 @@
+const presets = [
+  '@babel/preset-env',
+  '@babel/preset-react',
+  '@babel/preset-typescript',
+];
+
+const plugins = [
+  '@babel/proposal-class-properties',
+  '@babel/proposal-object-rest-spread',
+  '@babel/plugin-transform-runtime',
+];
+
 module.exports = {
-  plugins: [
-    [
-      'babel-plugin-styled-components',
-      {
-        displayName: false,
-        pure: true,
-      },
-    ],
-  ],
+  presets,
+  plugins,
 };

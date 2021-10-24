@@ -8,20 +8,20 @@ export const globalTypes = {
   theme: {
     name: 'Real System Theme',
     description: 'Global theme for components',
-    defaultValue: 'default',
+    defaultValue: 'DEFAULT',
     toolbar: {
       // All available icons
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
       icon: 'paintbrush',
       // array of plain string values or MenuItem shape (see below)
-      items: ['default'],
+      items: ['DEFAULT'],
     },
   },
 };
 
 export const decorators = [
   (Story, context) => {
-    const theme = THEMES[context.globals.theme || 'default'];
+    const theme = THEMES[context.globals.theme || 'DEFAULT'];
     console.log(theme);
     return (
       <ThemeProvider theme={theme}>

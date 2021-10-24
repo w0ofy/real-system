@@ -6,7 +6,6 @@ import styled from 'styled-components';
  */
 export * from './styled-components';
 export type {
-  AnyStyledComponent,
   BaseThemeProviderComponent,
   BaseWithThemeFnInterface,
   CSSKeyframes,
@@ -16,7 +15,6 @@ export type {
   CSSPseudos,
   DefaultTheme,
   GlobalStyleComponent,
-  isStyledComponent,
   ThemeProviderProps as PrimitiveThemeProviderProps,
   StyledComponent,
   StyledComponentBase,
@@ -44,6 +42,7 @@ export type {
 export {
   createGlobalStyle,
   css,
+  isStyledComponent,
   ThemeConsumer as PrimitiveThemeConsumer,
   ThemeContext as PrimitiveThemeContext,
   ThemeProvider as PrimitiveThemeProvider,

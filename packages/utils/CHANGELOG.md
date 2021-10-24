@@ -1,5 +1,29 @@
 # @realsystem/utils
 
+## 1.5.3
+
+### Patch Changes
+
+- [`4102d1b`](https://github.com/bigwoof91/realsystem/commit/4102d1b1ad90660377eac7e2010167fe28a1931b) - experimenting with babel
+
+## 1.5.2
+
+### Patch Changes
+
+- [`7f2e030`](https://github.com/bigwoof91/realsystem/commit/7f2e030d3939bc532e4b754f427059bac09299b7) - reversioning
+
+## 1.5.1
+
+### Patch Changes
+
+- [`80b0570`](https://github.com/bigwoof91/realsystem/commit/80b0570ebf4006168e70849dc022eb606e862414) - reversioning
+
+## 1.5.0
+
+### Minor Changes
+
+- [`b368e1a`](https://github.com/bigwoof91/realsystem/commit/b368e1a88d11cab75d402c0b74c694f73c023672) - trying to fix bundle
+
 ## 1.4.2
 
 ### Patch Changes

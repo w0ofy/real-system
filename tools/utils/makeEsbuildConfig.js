@@ -1,5 +1,5 @@
 const { getExternalDeps } = require('./getExternalDeps');
-const { env, isProduction } = require('./env');
+const { ENV, isProduction } = require('./env');
 const { logger } = require('./logger');
 const { commandSync } = require('execa');
 
@@ -13,11 +13,11 @@ const baseEsbuildConfig = {
   target: ['chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
   minify: isProduction,
   define: {
-    'process.env.NODE_ENV': `"${env}"`,
+    'process.env.NODE_ENV': `"${ENV}"`,
   },
-  inject: [`${__dirname}/reactShim.js`],
+  // inject: [`${__dirname}/reactShim.js`],
   logLevel: 'error',
-  sourcemap: 'external',
+  sourcemap: !isProduction,
 };
 
 const shouldWatch = (pkg = {}) =>
@@ -36,15 +36,18 @@ const shouldWatch = (pkg = {}) =>
  *
  * @param {object} customConfig
  * @param {object} pkgJson
+ * @param {object} overrides {format: 'cjs' | 'esm'}
  * @returns {object}
  */
-const makeEsbuildConfig = (pkgJson, overrides = {}) => {
+const makeEsbuildConfig = (pkgJson, overrides = { format: 'cjs' }) => {
   getExternalDeps;
   return {
     ...baseEsbuildConfig,
     entryPoints: [pkgJson['main:dev']],
     watch: shouldWatch(pkgJson),
     external: getExternalDeps(pkgJson),
+    format: 'cjs',
+    outfile: overrides.format === 'cjs' ? pkgJson.main : pkgJson.module,
     ...overrides,
   };
 };
