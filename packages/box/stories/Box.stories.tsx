@@ -1,3 +1,4 @@
+import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
 import { Box } from '@realsystem/core/box';
