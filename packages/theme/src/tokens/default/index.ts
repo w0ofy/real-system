@@ -10,6 +10,7 @@ import colors from './colors';
 import fonts from './fonts';
 import fontSizes from './fontSizes';
 import fontWeights from './fontWeights';
+import letterSpacings from './letterSpacings';
 import lineHeights from './lineHeights';
 import radii from './radii';
 import shadows from './shadows';
@@ -28,6 +29,7 @@ const realsystem: DefaultTheme = {
   fonts: makeTokenScale(fonts),
   fontSizes: makeTokenScale(fontSizes),
   fontWeights: makeTokenScale(fontWeights),
+  letterSpacings: makeTokenScale(letterSpacings),
   lineHeights: makeTokenScale(lineHeights),
   borders: makeTokenScale(borders),
   borderWidths: makeTokenScale(borderWidths),
@@ -47,6 +49,7 @@ export {
   fonts,
   fontSizes,
   fontWeights,
+  letterSpacings,
   lineHeights,
   radii,
   shadows,

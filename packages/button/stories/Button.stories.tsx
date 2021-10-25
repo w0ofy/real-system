@@ -13,7 +13,20 @@ export default {
   },
 } as Meta;
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => (
+  <Box
+    display="flex"
+    justifyContent="flex-start"
+    alignItems="center"
+    width="100%">
+    <Button {...args} mr={10}>
+      Default
+    </Button>
+    <Button {...args} size="small">
+      Small
+    </Button>
+  </Box>
+);
 
 export const Primary = Template.bind({});
 
@@ -23,8 +36,12 @@ export const Secondary = (args) => (
     justifyContent="flex-start"
     alignItems="center"
     width="100%">
-    <Button {...args} variant="secondary" />
-    <Button {...args} variant="secondary" size="small" />
+    <Button {...args} variant="secondary" mr={10}>
+      Default
+    </Button>
+    <Button {...args} variant="secondary" size="small">
+      Small
+    </Button>
   </Box>
 );
 

@@ -11,6 +11,8 @@ import {
   FlexboxProps,
   layout,
   LayoutProps,
+  letterSpacing,
+  LetterSpacingProps,
   position,
   PositionProps,
   shadow,
@@ -47,7 +49,7 @@ const outline = system({
   outlineOffset: true,
 });
 
-const composeStyleProps = () =>
+const composeStyleProps = (): ReturnType<typeof compose> =>
   compose(
     background,
     space,
@@ -61,7 +63,8 @@ const composeStyleProps = () =>
     textWrap,
     cursor,
     transition,
-    outline
+    outline,
+    letterSpacing
   );
 
 export type TextWrapProps = {
@@ -101,9 +104,11 @@ export type StyleProps = Partial<
     TextWrapProps &
     CursorProps &
     TransitionProps &
-    OutlineProps
+    OutlineProps &
+    LetterSpacingProps
 >;
 
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const STYLE_PROPS = composeStyleProps().propNames!;
 
 export { composeStyleProps, STYLE_PROPS, textWrap };

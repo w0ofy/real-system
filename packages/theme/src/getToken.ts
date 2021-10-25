@@ -11,6 +11,7 @@ import {
   fonts,
   fontSizes,
   fontWeights,
+  letterSpacings,
   lineHeights,
   radii,
   shadows,
@@ -51,6 +52,7 @@ type ThemeTokens =
   | keyof typeof fonts
   | keyof typeof fontSizes
   | keyof typeof fontWeights
+  | keyof typeof letterSpacings
   | keyof typeof lineHeights
   | keyof typeof radii
   | keyof typeof shadows
