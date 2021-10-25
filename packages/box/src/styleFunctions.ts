@@ -9,7 +9,7 @@ import { BoxProps } from './types';
  * @param {BoxProps} props any prop that Box can take
  * @return {*}  {(((props?: Record<string, unknown> | undefined) => CSSObject) | Record<string, never>)}
  */
-export const getPseudoStyles = (
+const getPseudoStyles = (
   props: BoxProps
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
@@ -29,3 +29,5 @@ export const getPseudoStyles = (
 
   return css(pseudoStyles);
 };
+
+export { getPseudoStyles };

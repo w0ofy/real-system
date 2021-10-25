@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
-import styled from '@realsystem/styling';
 import { merge } from '@realsystem/utils';
 
 import { baseStyles } from './styles';
@@ -111,11 +110,11 @@ const Primitive = BoxAs('button');
 
 const SecondaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
   (
-    { children, buttonState, intent = 'default', ...otherProps },
+    { children, buttonState, intent = 'default', ...restProps },
     ref
   ): React.ReactElement => {
     return (
-      <Primitive {...STYLE_MAP[intent][buttonState]} {...otherProps} ref={ref}>
+      <Primitive {...STYLE_MAP[intent][buttonState]} {...restProps} ref={ref}>
         {children}
       </Primitive>
     );

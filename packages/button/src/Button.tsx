@@ -4,6 +4,7 @@ import styled from '@realsystem/styling';
 
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
+import { sizeStyles } from './styles';
 import { ButtonProps, ButtonStates, ButtonVariants } from './types';
 import { InternalButtonProps } from './types';
 
@@ -19,6 +20,7 @@ const getButtonState = (
   }
   return 'default';
 };
+
 const BUTTON_VARIANT_MAP: {
   [key in ButtonVariants]: React.FC<InternalButtonProps>;
 } = {
@@ -26,9 +28,16 @@ const BUTTON_VARIANT_MAP: {
   secondary: SecondaryButton,
 };
 
-const ButtonAPI = forwardRef<HTMLButtonElement, ButtonProps>(
+const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, disabled, loading, variant = 'primary', ...otherProps },
+    {
+      children,
+      disabled,
+      loading,
+      variant = 'primary',
+      size = 'default',
+      ...restProps
+    },
     ref
   ): React.ReactElement => {
     const buttonState = getButtonState(disabled, loading);
@@ -39,7 +48,8 @@ const ButtonAPI = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <ButtonComponent
         role="button"
-        {...otherProps}
+        {...restProps}
+        {...sizeStyles[size]}
         buttonState={buttonState}
         disabled={showDisabled}
         ref={ref}>
@@ -49,7 +59,7 @@ const ButtonAPI = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-ButtonAPI.displayName = 'Button';
+ButtonApi.displayName = 'Button';
 
-const Button = styled(ButtonAPI)({});
+const Button = styled(ButtonApi)<ButtonProps>({});
 export { Button };

@@ -1,7 +1,7 @@
 {
-  "name": "@realsystem/button",
-  "version": "8.0.3",
-  "description": "Real System Button component",
+  "name": "@realsystem/typography",
+  "version": "0.0.0",
+  "description": "Real System Typography components",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -18,7 +18,9 @@
   },
   "keywords": [
     "real-system",
-    "button"
+    "typography",
+    "text",
+    "heading"
   ],
   "author": "Mike Wolf",
   "license": "MIT",

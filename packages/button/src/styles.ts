@@ -1,7 +1,7 @@
 import { BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
-import { ButtonIntents, ButtonSizes, ButtonStates } from './types';
+import { ButtonSizes, ButtonStates } from './types';
 
 const resetStyles: BoxStyleProps = {
   appearance: 'none',
@@ -19,14 +19,27 @@ const resetStyles: BoxStyleProps = {
   textDecoration: 'none',
   position: 'relative',
   px: 6,
-  py: 4,
+  py: 5,
   margin: 'space-0',
   outlineOffset: '1px',
   _focus: { outlineStyle: 'solid' },
   _active: { transform: 'translateY(1px)' },
 };
 
-export const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
+const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
+  default: {
+    px: 6,
+    py: 5,
+    fontSize: 1,
+  },
+  small: {
+    px: 4,
+    py: 3,
+    fontSize: 1,
+  },
+};
+
+const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   default: merge(resetStyles, {
     cursor: 'pointer',
   }),
@@ -40,21 +53,4 @@ export const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   }),
 };
 
-export const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
-  default: {
-    py: 6,
-    px: 4,
-    fontSize: 1,
-  },
-  small: {
-    py: 3,
-    px: 2,
-    fontSize: 0,
-  },
-};
-
-export const intentStyles: { [key in ButtonIntents]: BoxStyleProps } = {
-  default: {},
-  success: {},
-  danger: {},
-};
+export { baseStyles, resetStyles, sizeStyles };

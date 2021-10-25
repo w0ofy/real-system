@@ -9,7 +9,7 @@ type ButtonTypes = 'submit' | 'button' | 'reset';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   BoxStyleProps & {
-    // size: ButtonSizes;
+    size?: ButtonSizes;
     children: React.ReactNode;
     fullWidth?: boolean;
     href?: string;

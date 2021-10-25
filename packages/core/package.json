@@ -23,6 +23,7 @@
     "@realsystem/button": "^8.0.3",
     "@realsystem/styling": "^1.6.3",
     "@realsystem/theme": "^2.0.3",
+    "@realsystem/typography": "^0.0.0",
     "@realsystem/utils": "^1.5.3"
   },
   "peerDependencies": {
