@@ -16,15 +16,41 @@ export default {
 const Template = (args) => (
   <Box
     display="flex"
+    flexDirection="column"
     justifyContent="flex-start"
     alignItems="center"
     width="100%">
-    <Button {...args} mr={10}>
-      Default
-    </Button>
-    <Button {...args} size="small">
-      Small
-    </Button>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%"
+      mb={10}>
+      <Button {...args} mr={10}>
+        Default
+      </Button>
+      <Button {...args} mr={10} intent="danger">
+        Danger
+      </Button>
+      <Button {...args} intent="success">
+        Success
+      </Button>
+    </Box>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%">
+      <Button {...args} mr={10} size="small">
+        Small
+      </Button>
+      <Button {...args} mr={10} intent="danger" size="small">
+        Danger
+      </Button>
+      <Button {...args} intent="success" size="small">
+        Success
+      </Button>
+    </Box>
   </Box>
 );
 
@@ -33,15 +59,46 @@ export const Primary = Template.bind({});
 export const Secondary = (args) => (
   <Box
     display="flex"
+    flexDirection="column"
     justifyContent="flex-start"
     alignItems="center"
     width="100%">
-    <Button {...args} variant="secondary" mr={10}>
-      Default
-    </Button>
-    <Button {...args} variant="secondary" size="small">
-      Small
-    </Button>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%"
+      mb={10}>
+      <Button {...args} variant="secondary" mr={10}>
+        Default
+      </Button>
+      <Button {...args} variant="secondary" mr={10} intent="danger">
+        Danger
+      </Button>
+      <Button {...args} variant="secondary" intent="success">
+        Success
+      </Button>
+    </Box>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%">
+      <Button {...args} variant="secondary" mr={10} size="small">
+        Small
+      </Button>
+      <Button
+        {...args}
+        variant="secondary"
+        mr={10}
+        intent="danger"
+        size="small">
+        Danger
+      </Button>
+      <Button {...args} variant="secondary" intent="success" size="small">
+        Success
+      </Button>
+    </Box>
   </Box>
 );
 

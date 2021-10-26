@@ -8,26 +8,39 @@ export default {
   title: 'Components/Typography',
   component: Typography,
   args: {
-    children: 'Button',
+    children: 'The quick brown fox jumps over the lazy dog',
     variant: 'primary',
   },
 } as Meta;
 
-const Template = (args) => <Typography {...args} />;
+const Template = (args) => {
+  return (
+    <>
+      <Typography {...args}>
+        Inline Variant: The quick brown fox jumps over the lazy dog
+      </Typography>
+      <Typography {...args} variant="inline">
+        Inline Variant: The quick brown fox jumps over the lazy dog
+      </Typography>
+    </>
+  );
+};
 
 export const Default = Template.bind({});
 
-export const Heading = (args) => (
+export const Heading = () => (
   <Box
     display="flex"
     flexDirection="column"
     justifyContent="center"
     alignItems="flex-start"
     width="100%">
-    <Typography.Heading variant="h1">Heading 1</Typography.Heading>
-    <Typography.Heading variant="h2">Heading 2</Typography.Heading>
-    <Typography.Heading variant="h3">Heading 3</Typography.Heading>
-    <Typography.Heading variant="h4">Heading 4</Typography.Heading>
+    <Typography.Heading variant="heading1">Heading 1</Typography.Heading>
+    <Typography.Heading variant="heading2">Heading 2</Typography.Heading>
+    <Typography.Heading variant="heading3">Heading 3</Typography.Heading>
+    <Typography.Heading variant="heading4">Heading 4</Typography.Heading>
+    <Typography.Heading variant="heading5">Heading 5</Typography.Heading>
+    <Typography.Heading variant="heading6">Heading 6</Typography.Heading>
   </Box>
 );
 

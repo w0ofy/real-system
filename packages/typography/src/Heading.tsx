@@ -3,49 +3,71 @@ import React from 'react';
 import { BoxAs, BoxStyleProps } from '@realsystem/box';
 import styled from '@realsystem/styling';
 
-import { HeadingVariants, InternalTypographyProps } from './types';
+import {
+  HeadingAsTags,
+  HeadingVariants,
+  InternalTypographyProps,
+} from './types';
 
-const H1 = BoxAs('h1');
+const Div = BoxAs('div');
 
-type HeadingVariantMap = {
-  [key in HeadingVariants]: keyof JSX.IntrinsicElements;
-};
-
-const VariantMap: HeadingVariantMap = {
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-};
-
-const styles: { [key in HeadingVariants]: BoxStyleProps } = {
-  h1: {
+const styles: {
+  [key in HeadingVariants]: Pick<
+    BoxStyleProps,
+    'fontSize' | 'lineHeight' | 'mb' | 'fontWeight'
+  >;
+} = {
+  heading1: {
     fontSize: 8,
+    fontWeight: 4,
+    lineHeight: 11,
+    mb: 9,
   },
-  h2: {
+  heading2: {
     fontSize: 6,
+    lineHeight: 10,
+    fontWeight: 4,
+    mb: 7,
   },
-  h3: {
+  heading3: {
     fontSize: 5,
+    lineHeight: 9,
+    fontWeight: 4,
+    mb: 6,
   },
-  h4: {
+  heading4: {
     fontSize: 3,
+    fontWeight: 4,
+    mb: 5,
+  },
+  heading5: {
+    fontSize: 2,
+    fontWeight: 4,
+    mb: 4,
+  },
+  heading6: {
+    fontSize: 1,
+    fontWeight: 4,
+    mb: 2,
   },
 };
 
 export type HeadingProps = {
   children?: React.ReactNode;
   variant?: HeadingVariants;
+  as?: HeadingAsTags;
 } & InternalTypographyProps;
 
 const HeadingApi = ({
-  variant = 'h1',
+  variant = 'heading1',
   children,
+  mb,
+  as = 'div',
 }: HeadingProps): React.ReactElement => {
   return (
-    <H1 as={VariantMap[variant]} {...styles[variant]}>
+    <Div as={as} m={0} {...styles[variant]} mb={mb || styles[variant].mb}>
       {children}
-    </H1>
+    </Div>
   );
 };
 

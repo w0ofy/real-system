@@ -4,7 +4,7 @@ const PROPS_TO_BLOCK = [...STYLE_PROPS, 'className', 'style'];
 
 type Props = { [key: string]: any };
 
-const safelySpreadProps = (props: Props): Props => {
+const filterStyleProps = (props: Props): Props => {
   return Object.keys(props).reduce((newProps: Props, key: string): Props => {
     if (!PROPS_TO_BLOCK.includes(key)) {
       newProps[key] = props[key];
@@ -13,4 +13,4 @@ const safelySpreadProps = (props: Props): Props => {
   }, {});
 };
 
-export { PROPS_TO_BLOCK, safelySpreadProps };
+export { filterStyleProps, PROPS_TO_BLOCK };

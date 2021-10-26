@@ -42,12 +42,12 @@ const successButtonStyles: ButtonStyles = {
     borderColor: 'color-border-success',
     _hover: {
       color: 'color-text-success-strong',
-      backgroundColor: 'color-background-success-weakest',
+      backgroundColor: 'color-background-success-weak',
       borderColor: 'color-border-success-strong',
     },
     _active: {
       color: 'color-text-success-strong',
-      backgroundColor: 'color-background-success-weakest',
+      backgroundColor: 'color-background-success-weak',
       borderColor: 'color-border-success-strong',
     },
   }),

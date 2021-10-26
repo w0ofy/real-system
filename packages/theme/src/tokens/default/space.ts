@@ -7,7 +7,7 @@ const space = {
   'space-50': '1rem',
   'space-60': '1.25rem',
   'space-70': '1.5rem',
-  'space-80': '220px',
+  'space-80': '1.75rem',
   'space-90': '2rem',
   'space-100': '2.25rem',
   'space-110': '2.5rem',
