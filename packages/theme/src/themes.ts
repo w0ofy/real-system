@@ -1,7 +1,7 @@
-import DEFAULT from './tokens/default';
+import realsystem from './tokens/default';
 
-const THEMES = {
-  DEFAULT,
+const themes = {
+  realsystem,
 };
 
-export { THEMES };
+export { themes };

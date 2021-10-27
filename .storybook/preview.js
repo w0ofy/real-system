@@ -1,26 +1,26 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
-import { THEMES, ThemeProvider } from '@realsystem/core/theme';
+import { themes, ThemeProvider } from '@realsystem/core/theme';
 
 export const globalTypes = {
   theme: {
     name: 'Real System Theme',
     description: 'Global theme for components',
-    defaultValue: 'DEFAULT',
+    defaultValue: 'realsystem',
     toolbar: {
       // All available icons
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
       icon: 'paintbrush',
       // array of plain string values or MenuItem shape (see below)
-      items: ['DEFAULT'],
+      items: ['realsystem'],
     },
   },
 };
 
 export const decorators = [
   (Story, context) => {
-    const theme = THEMES[context.globals.theme || 'DEFAULT'];
+    const theme = themes[context.globals.theme || 'realsystem'];
     return (
       <ThemeProvider theme={theme()}>
         <Story />
