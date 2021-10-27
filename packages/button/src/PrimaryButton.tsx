@@ -20,33 +20,12 @@ const defaultStyles: ButtonStyles = {
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-muted',
-    backgroundColor: 'color-background-brand-muted',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-muted',
-    backgroundColor: 'color-background-brand-muted',
-  }),
-};
-
-const successButtonStyles: ButtonStyles = {
-  default: merge(baseStyles.default, {
-    backgroundColor: 'color-background-success',
-    color: 'color-text-inverse',
-    _hover: {
-      backgroundColor: 'color-background-success-strong',
-    },
-    _active: {
-      backgroundColor: 'color-background-success-strong',
-    },
-  }),
-  loading: merge(baseStyles.loading, {
-    color: 'color-text-success-muted',
-    backgroundColor: 'color-background-success-muted',
-  }),
-  disabled: merge(baseStyles.disabled, {
-    color: 'color-text-success-muted',
-    backgroundColor: 'color-background-success-muted',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
   }),
 };
 
@@ -62,12 +41,12 @@ const dangerButtonStyles: ButtonStyles = {
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-danger-muted',
-    backgroundColor: 'color-background-danger-muted',
+    color: 'color-text-danger-weaker',
+    backgroundColor: 'color-background-danger-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-danger-muted',
-    backgroundColor: 'color-background-danger-muted',
+    color: 'color-text-danger-weaker',
+    backgroundColor: 'color-background-danger-weakest',
   }),
 };
 
@@ -75,7 +54,6 @@ const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
   default: defaultStyles,
-  success: successButtonStyles,
   danger: dangerButtonStyles,
 };
 

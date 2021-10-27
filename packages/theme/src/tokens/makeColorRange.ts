@@ -3,30 +3,33 @@ import { Property } from 'csstype';
 import { polished } from '@realsystem/styling';
 
 import palette from './default/palette';
+import { ColorPrefixes, ColorSuffixes, PaletteColors } from './types';
 
 const { tint, shade, invert, complement } = polished;
 
+type FnReturnValue<T extends ColorPrefixes, O extends PaletteColors> = Record<
+  `${T}-${O}-${ColorSuffixes}` | `${T}-${O}`,
+  Property.Color
+>;
+
 const makeColorRange =
-  (prefix: string) =>
-  (
-    givenColor: keyof typeof palette | Property.Color,
-    givenRoot?: string
-  ): Record<string, string> => {
-    const isPaletteColor = !!palette[givenColor];
-    const color = palette[givenColor] || givenColor;
-    const root = givenRoot ? givenRoot : isPaletteColor ? color : 'NO_ROOT';
+  <T extends ColorPrefixes>(colorPrefix: T) =>
+  <O extends PaletteColors>(paletteColor: O): FnReturnValue<T, O> => {
+    const color = palette[paletteColor];
+    const paletteColorName = paletteColor as O;
+    const prefix = colorPrefix as T;
     return {
-      [`${prefix}-${root}`]: color,
-      [`${prefix}-${root}-highlight`]: invert(color),
-      [`${prefix}-${root}-complement`]: complement(color),
-      [`${prefix}-${root}-muted`]: tint(0.3, color),
-      [`${prefix}-${root}-weak`]: tint(0.4, color),
-      [`${prefix}-${root}-weaker`]: tint(0.6, color),
-      [`${prefix}-${root}-weakest`]: tint(0.9, color),
-      [`${prefix}-${root}-strong`]: shade(0.3, color),
-      [`${prefix}-${root}-stronger`]: shade(0.6, color),
-      [`${prefix}-${root}-strongest`]: shade(0.9, color),
-    };
+      [`${prefix}-${paletteColorName}`]: color,
+      [`${prefix}-${paletteColorName}-highlight`]: invert(color),
+      [`${prefix}-${paletteColorName}-complement`]: complement(color),
+      [`${prefix}-${paletteColorName}-muted`]: tint(0.3, color),
+      [`${prefix}-${paletteColorName}-weak`]: tint(0.3, color),
+      [`${prefix}-${paletteColorName}-weaker`]: tint(0.6, color),
+      [`${prefix}-${paletteColorName}-weakest`]: tint(0.9, color),
+      [`${prefix}-${paletteColorName}-strong`]: shade(0.3, color),
+      [`${prefix}-${paletteColorName}-stronger`]: shade(0.6, color),
+      [`${prefix}-${paletteColorName}-strongest`]: shade(0.9, color),
+    } as FnReturnValue<T, O>;
   };
 
 export { makeColorRange };

@@ -22,8 +22,8 @@ export const decorators = [
   (Story, context) => {
     const theme = THEMES[context.globals.theme || 'DEFAULT'];
     return (
-      <ThemeProvider theme={theme}>
-          <Story />
+      <ThemeProvider theme={theme()}>
+        <Story />
       </ThemeProvider>
     );
   },

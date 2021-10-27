@@ -2,7 +2,7 @@ import { BoxStyleProps } from '@realsystem/box';
 
 export type ButtonSizes = 'small' | 'default';
 export type ButtonVariants = 'primary' | 'secondary';
-export type ButtonIntents = 'default' | 'success' | 'danger';
+export type ButtonIntents = 'default' | 'danger';
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';

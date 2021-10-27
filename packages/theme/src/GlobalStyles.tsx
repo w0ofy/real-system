@@ -332,9 +332,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${getToken('font-family-text', 'fonts')};
     font-weight: ${getToken(0, 'fontWeights')};
     letter-spacing: 0.2px;
-    outline-color: ${getToken('color-outline')};
-    outline-width: 2px;
+  }
+
+  * {
     outline-offset: 1px;
+    outline-color: ${getToken('color-neutral')};
   }
 `;
 

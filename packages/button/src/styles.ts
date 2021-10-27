@@ -9,32 +9,30 @@ const resetStyles: BoxStyleProps = {
   background: 'none',
   display: 'inline-block',
   border: 1,
-  borderRadius: 2,
+  borderRadius: 1,
   outline: 'none',
   transition:
     'background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out',
   fontSize: 2,
   fontFamily: 'font-family-text',
-  fontWeight: 'font-weight-semibold',
+  fontWeight: 'font-weight-normal',
   textDecoration: 'none',
   position: 'relative',
-  px: 7,
-  py: 5,
+  px: 9,
+  py: 6,
   margin: 'space-0',
-  outlineOffset: '1px',
-  _focus: { outlineStyle: 'solid' },
   _active: { transform: 'translateY(1px)' },
 };
 
 const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
   default: {
-    px: 7,
-    py: 5,
-    fontSize: 1,
+    px: 9,
+    py: 6,
+    fontSize: 2,
   },
   small: {
-    px: 5,
-    py: 3,
+    px: 7,
+    py: 4,
     fontSize: 1,
   },
 };

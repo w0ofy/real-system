@@ -32,8 +32,31 @@ const Template = (args) => (
       <Button {...args} mr={10} intent="danger">
         Danger
       </Button>
-      <Button {...args} intent="success">
-        Success
+    </Box>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%"
+      mb={10}>
+      <Button {...args} mr={10} disabled>
+        Default
+      </Button>
+      <Button {...args} mr={10} intent="danger" disabled>
+        Danger
+      </Button>
+    </Box>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%"
+      mb={10}>
+      <Button {...args} mr={10} size="small">
+        Small
+      </Button>
+      <Button {...args} mr={10} intent="danger" size="small">
+        Danger
       </Button>
     </Box>
     <Box
@@ -41,14 +64,11 @@ const Template = (args) => (
       justifyContent="flex-start"
       alignItems="center"
       width="100%">
-      <Button {...args} mr={10} size="small">
+      <Button {...args} mr={10} size="small" disabled>
         Small
       </Button>
-      <Button {...args} mr={10} intent="danger" size="small">
+      <Button {...args} mr={10} intent="danger" size="small" disabled>
         Danger
-      </Button>
-      <Button {...args} intent="success" size="small">
-        Success
       </Button>
     </Box>
   </Box>
@@ -75,15 +95,26 @@ export const Secondary = (args) => (
       <Button {...args} variant="secondary" mr={10} intent="danger">
         Danger
       </Button>
-      <Button {...args} variant="secondary" intent="success">
-        Success
+    </Box>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%"
+      mb={10}>
+      <Button {...args} variant="secondary" mr={10} disabled>
+        Default
+      </Button>
+      <Button {...args} variant="secondary" mr={10} intent="danger" disabled>
+        Danger
       </Button>
     </Box>
     <Box
       display="flex"
       justifyContent="flex-start"
       alignItems="center"
-      width="100%">
+      width="100%"
+      mb={10}>
       <Button {...args} variant="secondary" mr={10} size="small">
         Small
       </Button>
@@ -95,8 +126,23 @@ export const Secondary = (args) => (
         size="small">
         Danger
       </Button>
-      <Button {...args} variant="secondary" intent="success" size="small">
-        Success
+    </Box>
+    <Box
+      display="flex"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%">
+      <Button {...args} variant="secondary" mr={10} size="small" disabled>
+        Small
+      </Button>
+      <Button
+        {...args}
+        variant="secondary"
+        mr={10}
+        intent="danger"
+        size="small"
+        disabled>
+        Danger
       </Button>
     </Box>
   </Box>

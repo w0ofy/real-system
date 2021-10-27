@@ -2,6 +2,19 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    palette: Record<
+      | 'brand'
+      | 'primary'
+      | 'secondary'
+      | 'success'
+      | 'warning'
+      | 'danger'
+      | 'info'
+      | 'strong'
+      | 'weak'
+      | 'neutral',
+      any
+    >;
     colors: Record<string, string>;
     borders: Record<string, any>;
     borderWidths: Record<string, any>;

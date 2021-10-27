@@ -10,84 +10,57 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const buttonStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-alt',
+    color: 'color-text-brand-strong',
     backgroundColor: 'color-background-brand-inverse',
-    borderColor: 'color-border-alt',
+    borderColor: 'color-border-brand-strong',
     _hover: {
-      color: 'color-text',
-      backgroundColor: 'color-background',
-      borderColor: 'color-border-brand-strong',
+      color: 'color-text-brand-stronger',
+      backgroundColor: 'color-background-brand-weakest',
+      borderColor: 'color-border-brand-stronger',
     },
     _active: {
-      backgroundColor: 'color-background',
-      borderColor: 'color-border-brand-strong',
+      color: 'color-text-brand-stronger',
+      backgroundColor: 'color-background-brand-weakest',
+      borderColor: 'color-border-brand-stronger',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-muted',
-    backgroundColor: 'color-background-brand-muted',
-    borderColor: 'color-border-brand-muted',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
+    borderColor: 'color-border-brand-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-muted',
-    backgroundColor: 'color-background-brand-muted',
-    borderColor: 'color-border-brand-muted',
-  }),
-};
-
-const successButtonStyles: ButtonStyles = {
-  default: merge(baseStyles.default, {
-    color: 'color-text-success',
-    backgroundColor: 'color-background-success-inverse',
-    borderColor: 'color-border-success',
-    _hover: {
-      color: 'color-text-success-strong',
-      backgroundColor: 'color-background-success-weak',
-      borderColor: 'color-border-success-strong',
-    },
-    _active: {
-      color: 'color-text-success-strong',
-      backgroundColor: 'color-background-success-weak',
-      borderColor: 'color-border-success-strong',
-    },
-  }),
-  loading: merge(baseStyles.loading, {
-    color: 'color-text-success-muted',
-    backgroundColor: 'color-background-success-muted',
-    borderColor: 'color-border-success-muted',
-  }),
-  disabled: merge(baseStyles.disabled, {
-    color: 'color-text-success-muted',
-    backgroundColor: 'color-background-success-muted',
-    borderColor: 'color-border-success-muted',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
+    borderColor: 'color-border-brand-weakest',
   }),
 };
 
 const dangerButtonStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-danger',
-    backgroundColor: 'color-background-danger-inverse',
+    backgroundColor: 'color-background',
     borderColor: 'color-border-danger',
     _hover: {
-      color: 'color-text-danger-strong',
+      color: 'color-text-danger-stronger',
       backgroundColor: 'color-background-danger-weakest',
-      borderColor: 'color-border-danger-strong',
+      borderColor: 'color-border-danger-stronger',
     },
     _active: {
-      color: 'color-text-danger-strong',
+      color: 'color-text-danger-stronger',
       backgroundColor: 'color-background-danger-weakest',
-      borderColor: 'color-border-danger-strong',
+      borderColor: 'color-border-danger-stronger',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-danger-muted',
-    backgroundColor: 'color-background-danger-muted',
-    borderColor: 'color-border-danger-muted',
+    color: 'color-text-danger-weaker',
+    backgroundColor: 'color-background-danger-weakest',
+    borderColor: 'color-border-danger-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-danger-muted',
-    backgroundColor: 'color-background-danger-muted',
-    borderColor: 'color-border-danger-muted',
+    color: 'color-text-danger-weaker',
+    backgroundColor: 'color-background-danger-weakest',
+    borderColor: 'color-border-danger-weakest',
   }),
 };
 
@@ -95,7 +68,6 @@ const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
   default: buttonStyles,
-  success: successButtonStyles,
   danger: dangerButtonStyles,
 };
 

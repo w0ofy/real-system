@@ -22,7 +22,7 @@ const ThemeProvider = ({
   ...restProps
 }: ThemeProviderProps): React.ReactElement => {
   return (
-    <PrimitiveThemeProvider theme={THEMES.DEFAULT} {...restProps}>
+    <PrimitiveThemeProvider theme={THEMES.DEFAULT()} {...restProps}>
       <>
         <GlobalStyles />
         {children}
