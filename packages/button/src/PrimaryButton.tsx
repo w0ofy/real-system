@@ -3,14 +3,14 @@ import React, { forwardRef } from 'react';
 import { BoxAs, BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
-import { baseStyles } from './styles';
+import { baseStyles, BoxAsButton } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-brand-inverse',
+    color: 'color-text-inverse',
     backgroundColor: 'color-background-brand',
     _hover: {
       backgroundColor: 'color-background-brand-strong',
@@ -56,8 +56,6 @@ const STYLE_MAP: {
   default: defaultStyles,
   danger: dangerButtonStyles,
 };
-
-const BoxAsButton = BoxAs('button');
 
 const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
   (

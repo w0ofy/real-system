@@ -1,6 +1,6 @@
 export type PaletteColors =
   | 'brand'
-  | 'brandInverse'
+  | 'inverse'
   | 'primary'
   | 'secondary'
   | 'success'
@@ -11,6 +11,7 @@ export type PaletteColors =
   | 'weak'
   | 'neutral'
   | 'medium';
+
 export type ColorSuffixes =
   | 'highlight'
   | 'complement'
@@ -21,6 +22,7 @@ export type ColorSuffixes =
   | 'strong'
   | 'stronger'
   | 'strongest';
+
 export type ColorPrefixes =
   | 'color'
   | 'color-background'

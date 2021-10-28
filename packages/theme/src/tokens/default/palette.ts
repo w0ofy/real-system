@@ -1,7 +1,7 @@
 import { PaletteColors } from '../types';
 
-export type PaletteValues =
-  | '#3843cd'
+export type DefaultPaletteValues =
+  | '#635bff'
   | '#0a2540'
   | '#2e2e2e'
   | '#198038'
@@ -10,14 +10,15 @@ export type PaletteValues =
   | '#0043ce'
   | '#161616'
   | '#ffffff'
+  | '#f9f9f9'
   | '#babbc7'
   | '#121c2d';
 
-export type DefaultPalette = { [key in PaletteColors]: PaletteValues };
+export type DefaultPalette = { [key in PaletteColors]: DefaultPaletteValues };
 
 const palette: DefaultPalette = {
-  brand: '#3843cd',
-  brandInverse: '#ffffff',
+  brand: '#635bff',
+  inverse: '#f9f9f9',
   primary: '#0a2540',
   secondary: '#2e2e2e',
   success: '#198038',

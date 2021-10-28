@@ -1,7 +1,7 @@
 import { BoxStyleProps } from '@realsystem/box';
 
 export type ButtonSizes = 'small' | 'default';
-export type ButtonVariants = 'primary' | 'secondary';
+export type ButtonVariants = 'primary' | 'secondary' | 'ghost';
 export type ButtonIntents = 'default' | 'danger';
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
@@ -11,8 +11,8 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   BoxStyleProps & {
     size?: ButtonSizes;
     children: React.ReactNode;
-    fullWidth?: boolean;
-    href?: string;
+    /** @todo add fullwidth feature */
+    // fullWidth?: boolean;
     tabIndex?: ButtonTabIndexes;
     disabled?: boolean;
     type?: ButtonTypes;

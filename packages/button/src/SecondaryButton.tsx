@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
-import { baseStyles } from './styles';
+import { baseStyles, BoxAsButton } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
@@ -11,7 +11,7 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 const buttonStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-brand-strong',
-    backgroundColor: 'color-background-brand-inverse',
+    backgroundColor: 'color-background-inverse',
     borderColor: 'color-border-brand-strong',
     _hover: {
       color: 'color-text-brand-stronger',
@@ -78,17 +78,15 @@ export type ButtonProps = Partial<BoxProps> & {
   buttonState: ButtonStates;
 };
 
-const Primitive = BoxAs('button');
-
 const SecondaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
   (
     { children, buttonState, intent = 'default', ...restProps },
     ref
   ): React.ReactElement => {
     return (
-      <Primitive {...STYLE_MAP[intent][buttonState]} {...restProps} ref={ref}>
+      <BoxAsButton {...STYLE_MAP[intent][buttonState]} {...restProps} ref={ref}>
         {children}
-      </Primitive>
+      </BoxAsButton>
     );
   }
 );

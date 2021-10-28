@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { Box } from '@realsystem/core/box';
+import { Box } from '@realsystem/box';
 
 export default {
   title: 'Primitives/Box',

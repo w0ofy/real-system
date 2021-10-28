@@ -335,8 +335,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   * {
-    outline-offset: 1px;
-    outline-color: ${getToken('color-neutral')};
+    outline-offset: 3px;
+    outline-color: ${getToken('color-border-primary-weak')};
   }
 `;
 

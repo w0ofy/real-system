@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { Box } from '@realsystem/core/box';
-import { Button } from '@realsystem/core/button';
+import { Box } from '@realsystem/box';
+import { Button } from '@realsystem/button';
 
 export default {
   title: 'Components/Button',
@@ -148,4 +148,34 @@ export const Secondary = (args) => (
   </Box>
 );
 
-Secondary.title = 'Components/Button/Variants/Secondary';
+export const Ghost = (...args) => {
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="flex-start"
+      alignItems="center"
+      width="100%">
+      <Box
+        display="flex"
+        justifyContent="flex-start"
+        alignItems="center"
+        width="100%"
+        mb={10}>
+        <Button {...args} mr={10} variant="ghost">
+          Default
+        </Button>
+      </Box>
+      <Box
+        display="flex"
+        justifyContent="flex-start"
+        alignItems="center"
+        width="100%"
+        mb={10}>
+        <Button {...args} mr={10} variant="ghost" disabled>
+          Default
+        </Button>
+      </Box>
+    </Box>
+  );
+};

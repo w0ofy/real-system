@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 
 import styled from '@realsystem/styling';
 
+import { GhostButton } from './GhostButton';
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
 import { sizeStyles } from './styles';
@@ -21,11 +22,12 @@ const getButtonState = (
   return 'default';
 };
 
-const BUTTON_VARIANT_MAP: {
+const BUTTON_VARIANTS: {
   [key in ButtonVariants]: React.FC<InternalButtonProps>;
 } = {
   primary: PrimaryButton,
   secondary: SecondaryButton,
+  ghost: GhostButton,
 };
 
 const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -43,10 +45,10 @@ const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
     const buttonState = getButtonState(disabled, loading);
     // const showLoading = buttonState === 'loading';
     const showDisabled = buttonState !== 'default';
-    const ButtonComponent = BUTTON_VARIANT_MAP[variant];
+    const Button = BUTTON_VARIANTS[variant];
 
     return (
-      <ButtonComponent
+      <Button
         role="button"
         {...restProps}
         {...sizeStyles[size]}
@@ -54,7 +56,7 @@ const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={showDisabled}
         ref={ref}>
         {children}
-      </ButtonComponent>
+      </Button>
     );
   }
 );
