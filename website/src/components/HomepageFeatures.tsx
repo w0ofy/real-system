@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Real System was built atomically so you can compose components, extend
-        the API and customize a theme.
+        the Api and customize a theme.
       </>
     ),
   },

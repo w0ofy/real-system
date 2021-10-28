@@ -1,7 +1,7 @@
-import { BoxStyleProps } from '@realsystem/box';
+import { BoxAs, BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
-import { ButtonIntents, ButtonSizes, ButtonStates } from './types';
+import { ButtonSizes, ButtonStates } from './types';
 
 const resetStyles: BoxStyleProps = {
   appearance: 'none',
@@ -9,24 +9,35 @@ const resetStyles: BoxStyleProps = {
   background: 'none',
   display: 'inline-block',
   border: 1,
-  borderRadius: 2,
+  borderRadius: 1,
   outline: 'none',
   transition:
     'background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out',
-  fontSize: 1,
+  fontSize: 2,
   fontFamily: 'font-family-text',
-  fontWeight: 'font-weight-semibold',
+  fontWeight: 'font-weight-normal',
   textDecoration: 'none',
   position: 'relative',
-  px: 5,
-  py: 4,
+  px: 9,
+  py: 6,
   margin: 'space-0',
-  outlineOffset: '1px',
-  _focus: { outlineStyle: 'solid' },
   _active: { transform: 'translateY(1px)' },
 };
 
-export const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
+const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
+  default: {
+    px: 9,
+    py: 6,
+    fontSize: 2,
+  },
+  small: {
+    px: 7,
+    py: 4,
+    fontSize: 1,
+  },
+};
+
+const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   default: merge(resetStyles, {
     cursor: 'pointer',
   }),
@@ -40,21 +51,6 @@ export const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   }),
 };
 
-export const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
-  default: {
-    py: 5,
-    px: 4,
-    fontSize: 1,
-  },
-  small: {
-    py: 3,
-    px: 2,
-    fontSize: 0,
-  },
-};
+const BoxAsButton = BoxAs('button');
 
-export const intentStyles: { [key in ButtonIntents]: BoxStyleProps } = {
-  default: {},
-  success: {},
-  danger: {},
-};
+export { baseStyles, BoxAsButton, resetStyles, sizeStyles };

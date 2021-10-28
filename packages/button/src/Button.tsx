@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import styled from '@realsystem/styling';
 
+import { GhostButton } from './GhostButton';
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
+import { sizeStyles } from './styles';
 import { ButtonProps, ButtonStates, ButtonVariants } from './types';
 import { InternalButtonProps } from './types';
 
@@ -19,35 +21,47 @@ const getButtonState = (
   }
   return 'default';
 };
-const BUTTON_VARIANT_MAP: {
+
+const BUTTON_VARIANTS: {
   [key in ButtonVariants]: React.FC<InternalButtonProps>;
 } = {
   primary: PrimaryButton,
   secondary: SecondaryButton,
+  ghost: GhostButton,
 };
 
-const ButtonAPI = ({
-  children,
-  disabled,
-  loading,
-  variant = 'primary',
-  ...otherProps
-}: ButtonProps): React.ReactElement => {
-  const buttonState = getButtonState(disabled, loading);
-  // const showLoading = buttonState === 'loading';
-  const showDisabled = buttonState !== 'default';
-  const ButtonComponent = BUTTON_VARIANT_MAP[variant];
+const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      children,
+      disabled,
+      loading,
+      variant = 'primary',
+      size = 'default',
+      ...restProps
+    },
+    ref
+  ): React.ReactElement => {
+    const buttonState = getButtonState(disabled, loading);
+    // const showLoading = buttonState === 'loading';
+    const showDisabled = buttonState !== 'default';
+    const Button = BUTTON_VARIANTS[variant];
 
-  return (
-    <ButtonComponent
-      role="button"
-      {...otherProps}
-      buttonState={buttonState}
-      disabled={showDisabled}>
-      {children}
-    </ButtonComponent>
-  );
-};
+    return (
+      <Button
+        role="button"
+        {...restProps}
+        {...sizeStyles[size]}
+        buttonState={buttonState}
+        disabled={showDisabled}
+        ref={ref}>
+        {children}
+      </Button>
+    );
+  }
+);
 
-const Button = styled(ButtonAPI)({});
+ButtonApi.displayName = 'Button';
+
+const Button = styled(ButtonApi)<ButtonProps>({});
 export { Button };

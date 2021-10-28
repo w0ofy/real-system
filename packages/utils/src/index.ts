@@ -1,3 +1,2 @@
-import merge from 'deepmerge';
-
-export { merge };
+export * from './merge';
+export * from './typeUtils';

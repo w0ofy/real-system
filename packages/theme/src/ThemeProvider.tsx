@@ -11,7 +11,7 @@ import {
 } from '@realsystem/styling';
 
 import { GlobalStyles } from './GlobalStyles';
-import { THEMES } from './themes';
+import { themes } from './themes';
 
 export type ThemeProviderProps = {
   theme?: DefaultTheme;
@@ -19,10 +19,10 @@ export type ThemeProviderProps = {
 
 const ThemeProvider = ({
   children,
-  ...otherProps
+  ...restProps
 }: ThemeProviderProps): React.ReactElement => {
   return (
-    <PrimitiveThemeProvider theme={THEMES.DEFAULT} {...otherProps}>
+    <PrimitiveThemeProvider theme={themes.realsystem()} {...restProps}>
       <>
         <GlobalStyles />
         {children}

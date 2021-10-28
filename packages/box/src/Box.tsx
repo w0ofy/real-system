@@ -17,7 +17,7 @@ const Box = styled.div<BoxProps>(
 
 const BoxAs = (el: keyof JSX.IntrinsicElements) => {
   const StyledComponent: ReturnType<StyledInterface> = styled[el];
-  return StyledComponent(
+  return StyledComponent<BoxProps>(
     { boxSizing: 'border-box' },
     composeStyleProps(),
     getPseudoStyles

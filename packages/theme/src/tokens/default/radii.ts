@@ -1,9 +1,0 @@
-const radii = {
-  'border-radius-0': '0',
-  'border-radius-10': '2px',
-  'border-radius-20': '4px',
-  'border-radius-30': '8px',
-  'border-radius-circle': '50%',
-};
-
-export default radii;

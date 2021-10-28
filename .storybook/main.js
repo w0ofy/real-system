@@ -1,5 +1,4 @@
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
-const path = require('path');
 
 module.exports = {
   stories: [
@@ -20,6 +19,13 @@ module.exports = {
     },
     // choose react-docgen-typescript to generate the prop tables
     reactDocgen: 'react-docgen-typescript',
+    // reactDocgenTypescriptOptions: {
+    //   shouldExtractLiteralValuesFromEnum: true,
+    //   propFilter: (prop) =>
+
+    //     prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+    // },
+    // these options will include styled-system props
     reactDocgenTypescriptOptions: {
       skipPropsWithoutDoc: false,
       // shouldExtractLiteralValuesFromEnum: true,

@@ -1,5 +1,14 @@
 # @realsystem/box
 
+## 8.0.4
+
+### Patch Changes
+
+- [`e678b9c`](https://github.com/bigwoof91/realsystem/commit/e678b9c1cbe68f1a9ca6b3bb58a36c94222f9b40) - added ghost button variant and theme-palette inheritance
+
+- Updated dependencies [[`e678b9c`](https://github.com/bigwoof91/realsystem/commit/e678b9c1cbe68f1a9ca6b3bb58a36c94222f9b40)]:
+  - @realsystem/styling@1.6.4
+
 ## 8.0.3
 
 ### Patch Changes

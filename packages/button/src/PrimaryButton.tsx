@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
-import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
-import styled from '@realsystem/styling';
+import { BoxAs, BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
-import { baseStyles } from './styles';
+import { baseStyles, BoxAsButton } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-brand-inverse',
+    color: 'color-text-inverse',
     backgroundColor: 'color-background-brand',
     _hover: {
       backgroundColor: 'color-background-brand-strong',
@@ -21,33 +20,12 @@ const defaultStyles: ButtonStyles = {
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-muted',
-    backgroundColor: 'color-background-brand-muted',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-muted',
-    backgroundColor: 'color-background-brand-muted',
-  }),
-};
-
-const successButtonStyles: ButtonStyles = {
-  default: merge(baseStyles.default, {
-    backgroundColor: 'color-background-success',
-    color: 'color-text-inverse',
-    _hover: {
-      backgroundColor: 'color-background-success-strong',
-    },
-    _active: {
-      backgroundColor: 'color-background-success-strong',
-    },
-  }),
-  loading: merge(baseStyles.loading, {
-    color: 'color-text-success-muted',
-    backgroundColor: 'color-background-success-muted',
-  }),
-  disabled: merge(baseStyles.disabled, {
-    color: 'color-text-success-muted',
-    backgroundColor: 'color-background-success-muted',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
   }),
 };
 
@@ -63,12 +41,12 @@ const dangerButtonStyles: ButtonStyles = {
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-danger-muted',
-    backgroundColor: 'color-background-danger-muted',
+    color: 'color-text-danger-weaker',
+    backgroundColor: 'color-background-danger-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-danger-muted',
-    backgroundColor: 'color-background-danger-muted',
+    color: 'color-text-danger-weaker',
+    backgroundColor: 'color-background-danger-weakest',
   }),
 };
 
@@ -76,30 +54,22 @@ const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
   default: defaultStyles,
-  success: successButtonStyles,
   danger: dangerButtonStyles,
 };
 
-export type ButtonProps = Partial<BoxProps> & {
-  children: React.ReactNode;
-  disabled?: boolean;
-  loading?: boolean;
-  buttonState: ButtonStates;
-};
+const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
+  (
+    { children, buttonState, intent = 'default', ...restProps },
+    ref
+  ): React.ReactElement => {
+    return (
+      <BoxAsButton {...STYLE_MAP[intent][buttonState]} {...restProps} ref={ref}>
+        {children}
+      </BoxAsButton>
+    );
+  }
+);
 
-const BoxAsButton = styled(BoxAs('button'))<BoxProps>({});
-
-const PrimaryButton = ({
-  children,
-  buttonState,
-  intent = 'default',
-  ...otherProps
-}: InternalButtonProps): React.ReactElement => {
-  return (
-    <BoxAsButton {...STYLE_MAP[intent][buttonState]} {...otherProps}>
-      {children}
-    </BoxAsButton>
-  );
-};
+PrimaryButton.displayName = 'PrimaryButton';
 
 export { PrimaryButton };

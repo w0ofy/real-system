@@ -5,6 +5,7 @@ import styled from 'styled-components';
  * styled-system (with css prop util) and styled-components
  */
 export * from './styled-components';
+export * as polished from 'polished';
 export type {
   BaseThemeProviderComponent,
   BaseWithThemeFnInterface,
@@ -41,7 +42,6 @@ export type {
 } from 'styled-components';
 export {
   createGlobalStyle,
-  css,
   isStyledComponent,
   ThemeConsumer as PrimitiveThemeConsumer,
   ThemeContext as PrimitiveThemeContext,
@@ -49,10 +49,9 @@ export {
   useTheme as primitiveUseTheme,
   withTheme as primitiveWithTheme,
 } from 'styled-components';
-export * from 'styled-system';
 /**
  * styled, css and token utilities
  */
 export * from './styleProps';
-export { default as cssProp } from '@styled-system/css';
+export { default as css } from '@styled-system/css';
 export default styled;

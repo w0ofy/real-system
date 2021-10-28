@@ -11,6 +11,7 @@ import {
   fonts,
   fontSizes,
   fontWeights,
+  letterSpacings,
   lineHeights,
   radii,
   shadows,
@@ -44,24 +45,24 @@ type OrdinalTokens =
 
 type ThemeTokens =
   | keyof typeof backgroundColors
-  | keyof typeof borderColors
+  | keyof ReturnType<typeof borderColors>
   | keyof typeof borders
   | keyof typeof borderWidths
   | keyof typeof colors
   | keyof typeof fonts
   | keyof typeof fontSizes
   | keyof typeof fontWeights
+  | keyof typeof letterSpacings
   | keyof typeof lineHeights
   | keyof typeof radii
-  | keyof typeof shadows
+  | keyof ReturnType<typeof shadows>
   | keyof typeof space
   | keyof typeof sizes
-  | keyof typeof textColors
   | keyof typeof zIndices
-  | keyof typeof colors
-  | keyof typeof backgroundColors
-  | keyof typeof textColors
-  | keyof typeof borderColors
+  | keyof ReturnType<typeof colors>
+  | keyof ReturnType<typeof backgroundColors>
+  | keyof ReturnType<typeof textColors>
+  | keyof ReturnType<typeof borderColors>
   | OrdinalTokens;
 
 type Fallback = string | number | null;
