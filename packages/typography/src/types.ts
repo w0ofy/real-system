@@ -2,7 +2,10 @@ import { BoxStyleProps } from '@realsystem/box';
 
 export type InternalTypographyProps = Pick<BoxStyleProps, 'mb'>;
 export type TypographyVariants = 'paragraph' | 'inline';
-export type TypographyAsTags = 'p' | 'span' | 'div' | 'label';
+export type TypographyAsTags = Extract<
+  keyof JSX.IntrinsicElements,
+  'p' | 'span' | 'div' | 'label'
+>;
 export type HeadingVariants =
   | 'heading1'
   | 'heading2'

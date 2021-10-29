@@ -89,10 +89,10 @@ export const Secondary = (args) => (
       alignItems="center"
       width="100%"
       mb={10}>
-      <Button {...args} variant="secondary" mr={10}>
+      <Button variant="secondary" mr={10}>
         Default
       </Button>
-      <Button {...args} variant="secondary" mr={10} intent="danger">
+      <Button variant="secondary" mr={10} intent="danger">
         Danger
       </Button>
     </Box>
@@ -102,10 +102,10 @@ export const Secondary = (args) => (
       alignItems="center"
       width="100%"
       mb={10}>
-      <Button {...args} variant="secondary" mr={10} disabled>
+      <Button variant="secondary" mr={10} disabled>
         Default
       </Button>
-      <Button {...args} variant="secondary" mr={10} intent="danger" disabled>
+      <Button variant="secondary" mr={10} intent="danger" disabled>
         Danger
       </Button>
     </Box>
@@ -115,15 +115,10 @@ export const Secondary = (args) => (
       alignItems="center"
       width="100%"
       mb={10}>
-      <Button {...args} variant="secondary" mr={10} size="small">
+      <Button variant="secondary" mr={10} size="small">
         Small
       </Button>
-      <Button
-        {...args}
-        variant="secondary"
-        mr={10}
-        intent="danger"
-        size="small">
+      <Button variant="secondary" mr={10} intent="danger" size="small">
         Danger
       </Button>
     </Box>
@@ -132,23 +127,17 @@ export const Secondary = (args) => (
       justifyContent="flex-start"
       alignItems="center"
       width="100%">
-      <Button {...args} variant="secondary" mr={10} size="small" disabled>
+      <Button variant="secondary" mr={10} size="small" disabled>
         Small
       </Button>
-      <Button
-        {...args}
-        variant="secondary"
-        mr={10}
-        intent="danger"
-        size="small"
-        disabled>
+      <Button variant="secondary" mr={10} intent="danger" size="small" disabled>
         Danger
       </Button>
     </Box>
   </Box>
 );
 
-export const Ghost = (...args) => {
+export const Ghost = () => {
   return (
     <Box
       display="flex"
@@ -162,7 +151,7 @@ export const Ghost = (...args) => {
         alignItems="center"
         width="100%"
         mb={10}>
-        <Button {...args} mr={10} variant="ghost">
+        <Button mr={10} variant="ghost">
           Default
         </Button>
       </Box>
@@ -172,7 +161,7 @@ export const Ghost = (...args) => {
         alignItems="center"
         width="100%"
         mb={10}>
-        <Button {...args} mr={10} variant="ghost" disabled>
+        <Button mr={10} variant="ghost" disabled>
           Default
         </Button>
       </Box>

@@ -17,10 +17,10 @@ const Template = (args) => {
   return (
     <>
       <Typography {...args}>
-        Inline Variant: The quick brown fox jumps over the lazy dog
-      </Typography>
-      <Typography {...args} variant="inline">
-        Inline Variant: The quick brown fox jumps over the lazy dog
+        Default Variant: The quick brown fox jumps over the lazy dog &nbsp;
+        <Typography {...args} variant="inline" fontWeight={4}>
+          Inline Variant: The quick brown fox jumps over the lazy dog
+        </Typography>
       </Typography>
     </>
   );

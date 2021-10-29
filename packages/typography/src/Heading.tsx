@@ -9,8 +9,6 @@ import {
   InternalTypographyProps,
 } from './types';
 
-const Div = BoxAs('div');
-
 const styles: {
   [key in HeadingVariants]: Pick<
     BoxStyleProps,
@@ -57,6 +55,8 @@ export type HeadingProps = {
   variant?: HeadingVariants;
   as?: HeadingAsTags;
 } & InternalTypographyProps;
+
+const Div = BoxAs<HeadingProps>('div');
 
 const HeadingApi = ({
   variant = 'heading1',

@@ -21,7 +21,7 @@ import {
   zIndices,
 } from './tokens/default';
 
-type OrdinalTokens =
+export type OrdinalTokens =
   | 0
   | 1
   | 2
@@ -43,7 +43,7 @@ type OrdinalTokens =
   | 18
   | 19;
 
-type ThemeTokens =
+export type ThemeTokens =
   | keyof typeof backgroundColors
   | keyof ReturnType<typeof borderColors>
   | keyof typeof borders
@@ -66,7 +66,7 @@ type ThemeTokens =
   | OrdinalTokens;
 
 type Fallback = string | number | null;
-type ThemeScales = keyof DefaultTheme;
+export type ThemeScales = keyof DefaultTheme;
 type Props = { theme: DefaultTheme };
 
 /**
@@ -82,4 +82,4 @@ const getToken = (
   };
 };
 
-export { getToken, ThemeScales, ThemeTokens };
+export { getToken };

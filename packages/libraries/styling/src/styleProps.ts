@@ -112,3 +112,14 @@ export type StyleProps = Partial<
 const STYLE_PROPS = composeStyleProps().propNames!;
 
 export { composeStyleProps, STYLE_PROPS, textWrap };
+export type {
+  BackgroundProps,
+  BorderProps,
+  FlexboxProps,
+  LayoutProps,
+  LetterSpacingProps,
+  PositionProps,
+  ShadowProps,
+  SpaceProps,
+  TypographyProps,
+};

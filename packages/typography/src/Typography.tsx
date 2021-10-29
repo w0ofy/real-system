@@ -48,7 +48,7 @@ const TypographyApi: TypographyComponent = forwardRef<
         lineHeight={4}
         m={0}
         color="color-text"
-        {...filterStyleProps(restProps)}
+        {...restProps}
         as={as || TypographyApiVariants[variant]}
         mb={mb || 4}
         ref={ref}>

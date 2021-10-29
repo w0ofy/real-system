@@ -7,6 +7,7 @@ import styled from 'styled-components';
 export * from './styled-components';
 export * as polished from 'polished';
 export type {
+  AnyStyledComponent,
   BaseThemeProviderComponent,
   BaseWithThemeFnInterface,
   CSSKeyframes,

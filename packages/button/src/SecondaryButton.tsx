@@ -11,7 +11,7 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 const buttonStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-brand-strong',
-    backgroundColor: 'color-background-inverse',
+    backgroundColor: 'color-background',
     borderColor: 'color-border-brand-strong',
     _hover: {
       color: 'color-text-brand-stronger',
