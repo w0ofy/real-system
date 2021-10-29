@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
+import { Box } from '@realsystem/box';
 import { Icon, ICONS } from '@realsystem/icon';
 
 export default {
@@ -11,19 +12,19 @@ export default {
   },
   args: {
     size: 'size-icon-80',
-    mr: 4,
+    mr: 8,
   },
 } as Meta;
 
 const Template = (args) => (
-  <>
-    <Icon icon="Briefcase" intent="default" {...args} />
-    <Icon icon="Box" intent="brand" {...args} />
-    <Icon icon="UserCheck" intent="success" {...args} />
-    <Icon icon="AlertCircle" intent="warning" {...args} />
-    <Icon icon="Trash2" intent="danger" {...args} />
-  </>
+  <Box display="flex">
+    <Icon {...args} icon="Box" intent="default" />
+    <Icon {...args} icon="Box" intent="brand" />
+    <Icon {...args} icon="Box" intent="success" />
+    <Icon {...args} icon="Box" intent="warning" />
+    <Icon {...args} icon="Box" intent="danger" />
+  </Box>
 );
-// export const Playground = (args) => <Icon {...args} />;
+// export const Playground = (args) => <Icon  />;
 
 export const Default = Template.bind({});

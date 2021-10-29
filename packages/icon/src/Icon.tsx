@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
 import * as Feather from 'react-feather';
 
-import { BoxAs } from '@realsystem/box';
+import { Box, BoxAs } from '@realsystem/box';
+import styled from '@realsystem/styling';
 import { getToken, ThemeTokens, useTheme } from '@realsystem/theme';
 
 import {
@@ -29,30 +30,46 @@ const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
 
 const IconApi = forwardRef<HTMLOrSVGElement, IconProps>(
   (
-    { size = 'size-icon-10', icon, intent = 'default', ...restProps },
+    {
+      size = 'size-icon-20',
+      icon,
+      intent = 'default',
+      currentColor = true,
+      ...restProps
+    },
     ref
   ): React.ReactElement<SVGElement> => {
     const theme = useTheme();
     const iconSize = getToken(size, 'sizes')({ theme });
-    const iconIntent = getToken(INTENT_MAP[intent])({ theme });
+    const iconIntent = currentColor
+      ? 'currentColor'
+      : getToken(INTENT_MAP[intent])({ theme });
 
     return (
-      <BoxAsIcon
-        {...restProps}
-        ref={ref}
-        icon={icon}
-        alt={icon}
-        title={icon}
-        size={iconSize}
-        color={iconIntent}
-      />
+      <Box
+        as="span"
+        display="flex"
+        flexShrink={0}
+        flexGrow={0}
+        width={iconSize}
+        height={iconSize}
+        {...restProps}>
+        <BoxAsIcon
+          ref={ref}
+          icon={icon}
+          alt={icon}
+          title={icon}
+          size={iconSize}
+          color={iconIntent}
+        />
+      </Box>
     );
   }
 );
 
 IconApi.displayName = 'Icon';
 
-const Icon = IconApi;
+const Icon = styled(IconApi)<IconProps>({});
 
 export { Icon, ICONS };
 export type { IconProps, Icons };

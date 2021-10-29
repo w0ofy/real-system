@@ -22,6 +22,7 @@ export type IconProps = {
     | 'size-icon-110'
   >;
   intent?: IconIntent;
+  currentColor?: boolean;
 };
 
 const ICONS = (() => {

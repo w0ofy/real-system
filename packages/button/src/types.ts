@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { BoxStyleProps } from '@realsystem/box';
 import { SpaceProps } from '@realsystem/styling';
 
@@ -21,6 +23,8 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
     variant?: ButtonVariants;
     intent?: ButtonIntents;
     loading?: boolean;
+    leadingIcon?: React.ReactElement;
+    trailingIcon?: React.ReactElement;
   };
 
 export type InternalButtonProps = Omit<ButtonProps, 'variant'> & {

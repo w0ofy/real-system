@@ -24,9 +24,9 @@ const shouldWatch = (pkg = {}) =>
   !isProduction
     ? {
         // eslint-disable-next-line no-unused-vars
-        onRebuild(err, _result) {
+        async onRebuild(err, _result) {
           if (err) logger.error(err);
-          commandSync('yarn types');
+          await commandSync('yarn types');
           logger.blue(`Rebundled ${pkg.name}.`);
         },
       }

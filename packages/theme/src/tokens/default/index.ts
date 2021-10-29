@@ -30,8 +30,8 @@ const realsystem = (paletteParam: DefaultPalette = palette): DefaultTheme => ({
   colors: {
     ...colors(palette),
     ...backgroundColors(palette),
-    ...borderColors(palette),
     ...textColors(palette),
+    ...borderColors(palette),
   },
   borders: makeTokenScale(borders(palette)),
   shadows: makeTokenScale(shadows(palette)),

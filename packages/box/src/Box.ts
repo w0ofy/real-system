@@ -2,14 +2,11 @@ import React from 'react';
 
 import styled, {
   composeStyleProps,
-  DefaultTheme,
   StyledInterface,
-  ThemedStyledFunction,
 } from '@realsystem/styling';
 
 import { getPseudoStyles } from './styleFunctions';
 import type { BoxProps } from './types';
-import { filterStyleProps } from '.';
 
 type Element = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
@@ -23,9 +20,7 @@ const Box = styled.div<BoxProps>(
 );
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-const BoxAs = <T extends object>(
-  el: Element
-): ReturnType<ThemedStyledFunction<Element, DefaultTheme, BoxProps & T>> => {
+const BoxAs = <T extends object>(el: Element) => {
   const StyledComponent: ReturnType<StyledInterface> =
     typeof el !== 'string' ? styled(el) : styled[el];
   return StyledComponent<BoxProps & T>(

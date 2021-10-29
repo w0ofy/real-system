@@ -45,17 +45,13 @@ export type OrdinalTokens =
 
 export type ThemeTokens =
   | keyof typeof backgroundColors
-  | keyof ReturnType<typeof borderColors>
-  | keyof typeof borders
   | keyof typeof borderWidths
-  | keyof typeof colors
   | keyof typeof fonts
   | keyof typeof fontSizes
   | keyof typeof fontWeights
   | keyof typeof letterSpacings
   | keyof typeof lineHeights
   | keyof typeof radii
-  | keyof ReturnType<typeof shadows>
   | keyof typeof space
   | keyof typeof sizes
   | keyof typeof zIndices
@@ -63,6 +59,8 @@ export type ThemeTokens =
   | keyof ReturnType<typeof backgroundColors>
   | keyof ReturnType<typeof textColors>
   | keyof ReturnType<typeof borderColors>
+  | keyof ReturnType<typeof borders>
+  | keyof ReturnType<typeof shadows>
   | OrdinalTokens;
 
 type Fallback = string | number | null;
