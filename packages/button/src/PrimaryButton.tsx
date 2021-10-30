@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { BoxAs, BoxStyleProps } from '@realsystem/box';
+import { BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
 import { baseStyles, BoxAsButton } from './styles';
