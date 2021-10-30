@@ -2,19 +2,23 @@ import { Property } from 'csstype';
 
 import { polished } from '@realsystem/styling';
 
-import palette from './default/palette';
-import { ColorPrefixes, ColorSuffixes, PaletteColors } from './types';
+import { AnyPalette, PaletteKeys } from '../palettes';
+
+import { ColorPrefixes, ColorSuffixes } from './types';
 
 const { tint, shade, invert, complement } = polished;
 
-type FnReturnValue<T extends ColorPrefixes, O extends PaletteColors> = Record<
+type FnReturnValue<T extends ColorPrefixes, O extends PaletteKeys> = Record<
   `${T}-${O}-${ColorSuffixes}` | `${T}-${O}`,
   Property.Color
 >;
 
 const makeColorRange =
   <T extends ColorPrefixes>(colorPrefix: T) =>
-  <O extends PaletteColors>(paletteColor: O): FnReturnValue<T, O> => {
+  <O extends PaletteKeys>(
+    paletteColor: O,
+    palette: AnyPalette
+  ): FnReturnValue<T, O> => {
     const color = palette[paletteColor];
     const paletteColorName = paletteColor as O;
     const prefix = colorPrefix as T;

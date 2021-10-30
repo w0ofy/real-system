@@ -6,6 +6,7 @@ export type TypographyAsTags = Extract<
   keyof JSX.IntrinsicElements,
   'p' | 'span' | 'div' | 'label'
 >;
+export type TypographyElement = HTMLParagraphElement | HTMLSpanElement;
 export type HeadingVariants =
   | 'heading1'
   | 'heading2'
@@ -24,3 +25,8 @@ export type HeadingAsTags =
   | 'label'
   | 'span'
   | 'header';
+export type HeadingElement =
+  | HTMLDivElement
+  | HTMLHeadingElement
+  | HTMLSpanElement
+  | HTMLLabelElement;

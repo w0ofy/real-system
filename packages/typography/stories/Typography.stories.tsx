@@ -35,12 +35,24 @@ export const Heading = () => (
     justifyContent="center"
     alignItems="flex-start"
     width="100%">
-    <Typography.Heading variant="heading1">Heading 1</Typography.Heading>
-    <Typography.Heading variant="heading2">Heading 2</Typography.Heading>
-    <Typography.Heading variant="heading3">Heading 3</Typography.Heading>
-    <Typography.Heading variant="heading4">Heading 4</Typography.Heading>
-    <Typography.Heading variant="heading5">Heading 5</Typography.Heading>
-    <Typography.Heading variant="heading6">Heading 6</Typography.Heading>
+    <Typography.Heading as="h1" variant="heading1">
+      Heading 1
+    </Typography.Heading>
+    <Typography.Heading as="h2" variant="heading2">
+      Heading 2
+    </Typography.Heading>
+    <Typography.Heading as="h3" variant="heading3">
+      Heading 3
+    </Typography.Heading>
+    <Typography.Heading as="h4" variant="heading4">
+      Heading 4
+    </Typography.Heading>
+    <Typography.Heading as="h5" variant="heading5">
+      Heading 5
+    </Typography.Heading>
+    <Typography.Heading as="h6" variant="heading6">
+      Heading 6
+    </Typography.Heading>
   </Box>
 );
 

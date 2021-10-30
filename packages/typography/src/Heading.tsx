@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { Box, BoxStyleProps } from '@realsystem/box';
-import styled from '@realsystem/styling';
 
 import {
   HeadingAsTags,
+  HeadingElement,
   HeadingVariants,
   InternalTypographyProps,
 } from './types';
@@ -56,24 +56,25 @@ export type HeadingProps = {
   as?: HeadingAsTags;
 } & InternalTypographyProps;
 
-const HeadingApi = ({
-  variant = 'heading1',
-  children,
-  mb,
-  as = 'div',
-}: HeadingProps): React.ReactElement => {
-  return (
-    <Box
-      as={as}
-      m={0}
-      color="color-text"
-      {...styles[variant]}
-      mb={mb || styles[variant].mb}>
-      {children}
-    </Box>
-  );
-};
+const Heading = forwardRef<HeadingElement, HeadingProps>(
+  (
+    { variant = 'heading1', children, mb, as = 'div' },
+    ref
+  ): React.ReactElement => {
+    return (
+      <Box
+        as={as}
+        m={0}
+        color="color-text"
+        {...styles[variant]}
+        ref={ref}
+        mb={mb || styles[variant].mb}>
+        {children}
+      </Box>
+    );
+  }
+);
 
-const Heading = styled(HeadingApi)<HeadingProps>({});
+Heading.displayName = 'Heading';
 
 export { Heading };

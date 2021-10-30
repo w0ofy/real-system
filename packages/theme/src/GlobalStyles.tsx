@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${getToken('font-family-text', 'fonts')};
     font-weight: ${getToken(0, 'fontWeights')};
     letter-spacing: 0.2px;
+    background-color: ${getToken('color-background')};
   }
 `;
 

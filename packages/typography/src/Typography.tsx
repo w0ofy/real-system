@@ -1,12 +1,13 @@
 import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 
-import { BoxAs, filterStyleProps } from '@realsystem/box';
+import { BoxAs } from '@realsystem/box';
 import styled from '@realsystem/styling';
 
 import { Heading } from './Heading';
 import {
   InternalTypographyProps,
   TypographyAsTags,
+  TypographyElement,
   TypographyVariants,
 } from './types';
 
@@ -34,7 +35,7 @@ interface TypographyComponent
 
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
 const TypographyApi: TypographyComponent = forwardRef<
-  HTMLParagraphElement | HTMLSpanElement,
+  TypographyElement,
   TypographyComponentProps
 >(
   (

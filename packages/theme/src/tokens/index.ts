@@ -1,8 +1,8 @@
 import { DefaultTheme } from 'styled-components';
 
-import { makeTokenScale } from '../makeTokenScale';
+import { AnyPalette, defaultPalette } from '../palettes';
 
-import palette, { DefaultPalette } from './palette';
+import { makeTokenScale } from './makeTokenScale';
 import {
   backgroundColors,
   borderColors,
@@ -24,8 +24,10 @@ import {
   zIndices,
 } from './staticScales';
 
-const realsystem = (paletteParam: DefaultPalette = palette): DefaultTheme => ({
-  palette: paletteParam,
+const palette = defaultPalette;
+
+const realsystem = (palette: AnyPalette = defaultPalette): DefaultTheme => ({
+  palette: palette,
   // scales that inherit the palette
   colors: {
     ...colors(palette),

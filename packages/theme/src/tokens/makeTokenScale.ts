@@ -1,6 +1,6 @@
-const makeTokenScale = <T = Record<string, any>>(
+const makeTokenScale = <T = Record<string, unknown>>(
   scale: T
-): Record<string, any> => {
+): Record<string, unknown> => {
   const tokenScale = {};
   Object.keys(scale).forEach((key, i) => {
     tokenScale[key] = scale[key];

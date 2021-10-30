@@ -19,7 +19,7 @@ import {
   space,
   textColors,
   zIndices,
-} from './tokens/default';
+} from './tokens';
 
 export type OrdinalTokens =
   | 0

@@ -1,16 +1,3 @@
-export type PaletteColors =
-  | 'brand'
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'info'
-  | 'strong'
-  | 'weak'
-  | 'neutral'
-  | 'medium';
-
 export type ColorSuffixes =
   | 'highlight'
   | 'complement'
