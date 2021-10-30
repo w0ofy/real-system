@@ -5,7 +5,7 @@ import { SpaceProps } from '@realsystem/styling';
 
 export type ButtonSizes = 'small' | 'default';
 export type ButtonVariants = 'primary' | 'secondary' | 'ghost';
-export type ButtonIntents = 'default' | 'danger';
+export type ButtonIntents = 'default' | 'danger' | 'neutral';
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';

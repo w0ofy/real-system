@@ -59,10 +59,7 @@ const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={showDisabled}
         ref={ref}>
         {leadingIcon ? leadingIcon : null}
-        <Box
-          display="inline-flex"
-          ml={leadingIcon ? 5 : 0}
-          mr={trailingIcon ? 5 : 0}>
+        <Box as="span" ml={leadingIcon ? 5 : 0} mr={trailingIcon ? 5 : 0}>
           {children}
         </Box>
         {trailingIcon ? trailingIcon : null}

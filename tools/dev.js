@@ -6,7 +6,7 @@ const { logger, makeEsbuildConfig } = require('./utils');
  * @param {*} packageJson package's package.json
  * @todo update onrebuild in each package
  */
-function dev(packageJson) {
+async function dev(packageJson) {
   const cjsConfig = makeEsbuildConfig(packageJson);
   const esmConfig = makeEsbuildConfig(packageJson, {
     format: 'esm',
@@ -15,19 +15,20 @@ function dev(packageJson) {
   logger.magenta(`Bundling ${packageJson.name}\n`);
 
   // bundle commonjs
-  esbuild
+  await esbuild
     .build(cjsConfig)
     .then(async () => logger.success(`Bundled CJS for "${packageJson.name}"`))
     .catch(() => process.exit(1));
 
   // bundle esmodule
-  esbuild
+  await esbuild
     .build(esmConfig)
     .then(async () => {
       logger.success(`Bundled ESM for "${packageJson.name}"\n`);
       logger.blue('-------------------------------------------------- \n');
     })
     .catch(() => process.exit(1));
+  return;
 }
 
 module.exports = dev;

@@ -1,9 +1,14 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useCallback } from 'react';
 import * as Feather from 'react-feather';
 
 import { Box, BoxAs } from '@realsystem/box';
 import styled from '@realsystem/styling';
-import { getToken, ThemeTokens, useTheme } from '@realsystem/theme';
+import {
+  getToken,
+  ThemeScales,
+  ThemeTokens,
+  useTheme,
+} from '@realsystem/theme';
 
 import {
   IconIntent,
@@ -30,20 +35,17 @@ const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
 
 const IconApi = forwardRef<HTMLOrSVGElement, IconProps>(
   (
-    {
-      size = 'size-icon-20',
-      icon,
-      intent = 'default',
-      currentColor = true,
-      ...restProps
-    },
+    { size = 'size-icon-20', icon, intent, ...restProps },
     ref
   ): React.ReactElement<SVGElement> => {
     const theme = useTheme();
-    const iconSize = getToken(size, 'sizes')({ theme });
-    const iconIntent = currentColor
-      ? 'currentColor'
-      : getToken(INTENT_MAP[intent])({ theme });
+    const token = useCallback(
+      (token: ThemeTokens, scale?: ThemeScales) =>
+        getToken(token, scale)({ theme }),
+      [theme]
+    );
+    const iconSize = token(size, 'sizes');
+    const iconIntent = !intent ? 'currentColor' : token(INTENT_MAP[intent]);
 
     return (
       <Box

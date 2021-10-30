@@ -11,20 +11,19 @@ export default {
     icon: { control: { type: 'select', options: ICONS } },
   },
   args: {
+    icon: 'Activity',
     size: 'size-icon-80',
-    mr: 8,
   },
 } as Meta;
 
-const Template = (args) => (
+export const Showcase = () => (
   <Box display="flex">
-    <Icon {...args} icon="Box" intent="default" />
-    <Icon {...args} icon="Box" intent="brand" />
-    <Icon {...args} icon="Box" intent="success" />
-    <Icon {...args} icon="Box" intent="warning" />
-    <Icon {...args} icon="Box" intent="danger" />
+    <Icon mr={8} icon="Box" intent="default" size="size-icon-60" />
+    <Icon mr={8} icon="Box" intent="brand" size="size-icon-60" />
+    <Icon mr={8} icon="Box" intent="success" size="size-icon-60" />
+    <Icon mr={8} icon="Box" intent="warning" size="size-icon-60" />
+    <Icon mr={8} icon="Box" intent="danger" size="size-icon-60" />
   </Box>
 );
-// export const Playground = (args) => <Icon  />;
 
-export const Default = Template.bind({});
+export const Default = (args) => <Icon {...args} />;

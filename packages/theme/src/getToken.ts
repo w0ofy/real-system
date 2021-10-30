@@ -43,8 +43,13 @@ export type OrdinalTokens =
   | 18
   | 19;
 
+export type ColorTokens =
+  | keyof ReturnType<typeof colors>
+  | keyof ReturnType<typeof backgroundColors>
+  | keyof ReturnType<typeof textColors>
+  | keyof ReturnType<typeof borderColors>;
+
 export type ThemeTokens =
-  | keyof typeof backgroundColors
   | keyof typeof borderWidths
   | keyof typeof fonts
   | keyof typeof fontSizes
@@ -55,18 +60,15 @@ export type ThemeTokens =
   | keyof typeof space
   | keyof typeof sizes
   | keyof typeof zIndices
-  | keyof ReturnType<typeof colors>
-  | keyof ReturnType<typeof backgroundColors>
-  | keyof ReturnType<typeof textColors>
-  | keyof ReturnType<typeof borderColors>
+  | ColorTokens
   | keyof ReturnType<typeof borders>
   | keyof ReturnType<typeof shadows>
   | OrdinalTokens;
 
-type Fallback = string | number | null;
 export type ThemeScales = keyof DefaultTheme;
-type Props = { theme: DefaultTheme };
 
+type Props = { theme: DefaultTheme };
+type Fallback = string | number | null;
 /**
  * A styleFn to get theme tokens
  */

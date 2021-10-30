@@ -70,6 +70,8 @@ const sizes = {
   'size-icon-80': '3.8rem',
   'size-icon-90': '4.2rem',
   'size-icon-100': '4.6rem',
+  'size-icon-button': '1.4rem',
+  'size-icon-button-small': '1.2rem',
 
   'size-sidebar': '13.75rem',
 

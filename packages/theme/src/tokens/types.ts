@@ -1,6 +1,5 @@
 export type PaletteColors =
   | 'brand'
-  | 'inverse'
   | 'primary'
   | 'secondary'
   | 'success'

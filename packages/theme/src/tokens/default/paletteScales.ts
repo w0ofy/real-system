@@ -15,10 +15,11 @@ const colorBackground = makeColorRange<'color-background'>('color-background');
 const backgroundColors = (palette: DefaultPalette) => ({
   // in use
   'color-background': palette.weak,
-  'color-background-inverse': palette.inverse,
+  'color-background-inverse': palette.strong,
   ...colorBackground<'brand'>('brand'),
   ...colorBackground<'success'>('success'),
   ...colorBackground<'danger'>('danger'),
+  ...colorBackground<'neutral'>('neutral'),
 
   /** @todo WIP */
   'color-background-overlay': polished.transparentize(0.6, palette.strong),
@@ -26,12 +27,13 @@ const backgroundColors = (palette: DefaultPalette) => ({
 
 const colorText = makeColorRange<'color-text'>('color-text');
 const textColors = (palette: DefaultPalette) => ({
-  'color-text': palette.strong,
-  'color-text-inverse': palette.inverse,
+  'color-text': palette.medium,
+  'color-text-inverse': palette.weak,
   ...colorText<'brand'>('brand'),
   ...colorText<'success'>('success'),
   ...colorText<'warning'>('warning'),
   ...colorText<'danger'>('danger'),
+  ...colorText<'neutral'>('neutral'),
 });
 
 const colorBorder = makeColorRange<'color-border'>('color-border');
