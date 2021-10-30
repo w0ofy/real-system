@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/utils",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "utilities for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -9,7 +9,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "NODE_ENV=production node ./tools/build.js && yarn types",
-    "dev": "NODE_ENV=development node ./tools/dev.js",
+    "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
+    "types:watch": "tsc --watch",
     "types": "tsc"
   },
   "repository": {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styled, {
   composeStyleProps,
   StyledInterface,
@@ -5,6 +7,8 @@ import styled, {
 
 import { getPseudoStyles } from './styleFunctions';
 import type { BoxProps } from './types';
+
+type Element = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
 /**
  * Use `Box` to create other components
@@ -15,9 +19,11 @@ const Box = styled.div<BoxProps>(
   getPseudoStyles
 );
 
-const BoxAs = (el: keyof JSX.IntrinsicElements) => {
-  const StyledComponent: ReturnType<StyledInterface> = styled[el];
-  return StyledComponent<BoxProps>(
+// eslint-disable-next-line @typescript-eslint/ban-types
+const BoxAs = <T extends object>(el: Element) => {
+  const StyledComponent: ReturnType<StyledInterface> =
+    typeof el !== 'string' ? styled(el) : styled[el];
+  return StyledComponent<BoxProps & T>(
     { boxSizing: 'border-box' },
     composeStyleProps(),
     getPseudoStyles

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 
+import { Box } from '@realsystem/box';
 import styled from '@realsystem/styling';
 
 import { GhostButton } from './GhostButton';
@@ -38,6 +39,8 @@ const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
       loading,
       variant = 'primary',
       size = 'default',
+      leadingIcon,
+      trailingIcon,
       ...restProps
     },
     ref
@@ -55,7 +58,11 @@ const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
         buttonState={buttonState}
         disabled={showDisabled}
         ref={ref}>
-        {children}
+        {leadingIcon ? leadingIcon : null}
+        <Box as="span" ml={leadingIcon ? 5 : 0} mr={trailingIcon ? 5 : 0}>
+          {children}
+        </Box>
+        {trailingIcon ? trailingIcon : null}
       </Button>
     );
   }

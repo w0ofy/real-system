@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { BoxAs, BoxProps, BoxStyleProps } from '@realsystem/box';
+import { BoxProps, BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
 import { baseStyles, BoxAsButton } from './styles';
@@ -8,10 +8,10 @@ import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
-const buttonStyles: ButtonStyles = {
+const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-brand-strong',
-    backgroundColor: 'color-background-inverse',
+    backgroundColor: 'color-background',
     borderColor: 'color-border-brand-strong',
     _hover: {
       color: 'color-text-brand-stronger',
@@ -19,9 +19,9 @@ const buttonStyles: ButtonStyles = {
       borderColor: 'color-border-brand-stronger',
     },
     _active: {
-      color: 'color-text-brand-stronger',
-      backgroundColor: 'color-background-brand-weakest',
-      borderColor: 'color-border-brand-stronger',
+      color: 'color-text-brand-strongest',
+      backgroundColor: 'color-background-brand-weaker',
+      borderColor: 'color-border-brand-strongest',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -36,7 +36,7 @@ const buttonStyles: ButtonStyles = {
   }),
 };
 
-const dangerButtonStyles: ButtonStyles = {
+const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-danger',
     backgroundColor: 'color-background',
@@ -47,9 +47,9 @@ const dangerButtonStyles: ButtonStyles = {
       borderColor: 'color-border-danger-stronger',
     },
     _active: {
-      color: 'color-text-danger-stronger',
-      backgroundColor: 'color-background-danger-weakest',
-      borderColor: 'color-border-danger-stronger',
+      color: 'color-text-danger-strongest',
+      backgroundColor: 'color-background-danger-weaker',
+      borderColor: 'color-border-danger-strongest',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -64,11 +64,40 @@ const dangerButtonStyles: ButtonStyles = {
   }),
 };
 
+const neutralStyles: ButtonStyles = {
+  default: merge(baseStyles.default, {
+    color: 'color-text-neutral',
+    backgroundColor: 'color-background',
+    borderColor: 'color-border-neutral',
+    _hover: {
+      color: 'color-text-neutral-stronger',
+      backgroundColor: 'color-background-neutral-weakest',
+      borderColor: 'color-border-neutral-stronger',
+    },
+    _active: {
+      color: 'color-text-neutral-strongest',
+      backgroundColor: 'color-background-neutral-weaker',
+      borderColor: 'color-border-neutral-strongest',
+    },
+  }),
+  loading: merge(baseStyles.loading, {
+    color: 'color-text-neutral-weaker',
+    backgroundColor: 'color-background-neutral-weakest',
+    borderColor: 'color-border-neutral-weakest',
+  }),
+  disabled: merge(baseStyles.disabled, {
+    color: 'color-text-neutral-weaker',
+    backgroundColor: 'color-background-neutral-weakest',
+    borderColor: 'color-border-neutral-weakest',
+  }),
+};
+
 const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
-  default: buttonStyles,
-  danger: dangerButtonStyles,
+  default: defaultStyles,
+  danger: dangerStyles,
+  neutral: neutralStyles,
 };
 
 export type ButtonProps = Partial<BoxProps> & {

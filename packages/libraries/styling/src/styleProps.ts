@@ -9,6 +9,8 @@ import {
   compose,
   flexbox,
   FlexboxProps,
+  grid,
+  GridProps,
   layout,
   LayoutProps,
   letterSpacing,
@@ -49,6 +51,11 @@ const outline = system({
   outlineOffset: true,
 });
 
+const placement = system({
+  placeItems: true,
+  placeContent: true,
+});
+
 const composeStyleProps = (): ReturnType<typeof compose> =>
   compose(
     background,
@@ -64,7 +71,9 @@ const composeStyleProps = (): ReturnType<typeof compose> =>
     cursor,
     transition,
     outline,
-    letterSpacing
+    letterSpacing,
+    grid,
+    placement
   );
 
 export type TextWrapProps = {
@@ -84,6 +93,11 @@ export type OutlineProps = {
   outlineStyle?: Property.OutlineStyle;
   outlineColor?: Property.OutlineColor;
   outlineWidth?: Property.OutlineWidth;
+};
+
+export type PlacementProps = {
+  placeItems?: Property.PlaceItems;
+  placeContent?: Property.PlaceContent;
 };
 /** Workaround for color prop typing issue.
  * More info: https://spectrum.chat/styled-system/general/types-of-property-color-are-incompatible~9227ce42-00f2-473a-8924-f476f0ce6ae1
@@ -105,10 +119,23 @@ export type StyleProps = Partial<
     CursorProps &
     TransitionProps &
     OutlineProps &
-    LetterSpacingProps
+    LetterSpacingProps &
+    GridProps &
+    PlacementProps
 >;
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const STYLE_PROPS = composeStyleProps().propNames!;
 
 export { composeStyleProps, STYLE_PROPS, textWrap };
+export type {
+  BackgroundProps,
+  BorderProps,
+  FlexboxProps,
+  LayoutProps,
+  LetterSpacingProps,
+  PositionProps,
+  ShadowProps,
+  SpaceProps,
+  TypographyProps,
+};

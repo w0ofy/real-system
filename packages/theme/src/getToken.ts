@@ -21,7 +21,7 @@ import {
   zIndices,
 } from './tokens/default';
 
-type OrdinalTokens =
+export type OrdinalTokens =
   | 0
   | 1
   | 2
@@ -43,32 +43,32 @@ type OrdinalTokens =
   | 18
   | 19;
 
-type ThemeTokens =
-  | keyof typeof backgroundColors
-  | keyof ReturnType<typeof borderColors>
-  | keyof typeof borders
+export type ColorTokens =
+  | keyof ReturnType<typeof colors>
+  | keyof ReturnType<typeof backgroundColors>
+  | keyof ReturnType<typeof textColors>
+  | keyof ReturnType<typeof borderColors>;
+
+export type ThemeTokens =
   | keyof typeof borderWidths
-  | keyof typeof colors
   | keyof typeof fonts
   | keyof typeof fontSizes
   | keyof typeof fontWeights
   | keyof typeof letterSpacings
   | keyof typeof lineHeights
   | keyof typeof radii
-  | keyof ReturnType<typeof shadows>
   | keyof typeof space
   | keyof typeof sizes
   | keyof typeof zIndices
-  | keyof ReturnType<typeof colors>
-  | keyof ReturnType<typeof backgroundColors>
-  | keyof ReturnType<typeof textColors>
-  | keyof ReturnType<typeof borderColors>
+  | ColorTokens
+  | keyof ReturnType<typeof borders>
+  | keyof ReturnType<typeof shadows>
   | OrdinalTokens;
 
-type Fallback = string | number | null;
-type ThemeScales = keyof DefaultTheme;
-type Props = { theme: DefaultTheme };
+export type ThemeScales = keyof DefaultTheme;
 
+type Props = { theme: DefaultTheme };
+type Fallback = string | number | null;
 /**
  * A styleFn to get theme tokens
  */
@@ -82,4 +82,4 @@ const getToken = (
   };
 };
 
-export { getToken, ThemeScales, ThemeTokens };
+export { getToken };

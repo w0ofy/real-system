@@ -1,27 +1,28 @@
 import { BoxAs, BoxStyleProps } from '@realsystem/box';
 import { merge } from '@realsystem/utils';
 
-import { ButtonSizes, ButtonStates } from './types';
+import { ButtonSizes, ButtonStates, InternalButtonProps } from './types';
 
 const resetStyles: BoxStyleProps = {
   appearance: 'none',
   color: 'color-text',
   background: 'none',
-  display: 'inline-block',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   border: 1,
   borderRadius: 1,
-  outline: 'none',
   transition:
     'background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out',
   fontSize: 2,
   fontFamily: 'font-family-text',
-  fontWeight: 'font-weight-normal',
+  fontWeight: 'font-weight-medium',
   textDecoration: 'none',
   position: 'relative',
   px: 9,
   py: 6,
   margin: 'space-0',
-  _active: { transform: 'translateY(1px)' },
+  _focus: { outline: '2px solid', outlineColor: 'color-border-brand' },
 };
 
 const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
@@ -44,13 +45,15 @@ const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   disabled: merge(resetStyles, {
     cursor: 'not-allowed',
     pointerEvents: 'none',
+    transform: 'none',
   }),
   loading: merge(resetStyles, {
     cursor: 'wait',
     pointerEvents: 'none',
+    transform: 'none',
   }),
 };
 
-const BoxAsButton = BoxAs('button');
+const BoxAsButton = BoxAs<InternalButtonProps>('button');
 
 export { baseStyles, BoxAsButton, resetStyles, sizeStyles };

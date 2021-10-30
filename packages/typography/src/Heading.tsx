@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BoxAs, BoxStyleProps } from '@realsystem/box';
+import { Box, BoxStyleProps } from '@realsystem/box';
 import styled from '@realsystem/styling';
 
 import {
@@ -9,12 +9,10 @@ import {
   InternalTypographyProps,
 } from './types';
 
-const Div = BoxAs('div');
-
 const styles: {
   [key in HeadingVariants]: Pick<
     BoxStyleProps,
-    'fontSize' | 'lineHeight' | 'mb' | 'fontWeight'
+    'fontSize' | 'lineHeight' | 'mb' | 'fontWeight' | 'color'
   >;
 } = {
   heading1: {
@@ -65,9 +63,14 @@ const HeadingApi = ({
   as = 'div',
 }: HeadingProps): React.ReactElement => {
   return (
-    <Div as={as} m={0} {...styles[variant]} mb={mb || styles[variant].mb}>
+    <Box
+      as={as}
+      m={0}
+      color="color-text"
+      {...styles[variant]}
+      mb={mb || styles[variant].mb}>
       {children}
-    </Div>
+    </Box>
   );
 };
 

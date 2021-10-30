@@ -16,7 +16,7 @@ const defaultStyles: ButtonStyles = {
       backgroundColor: 'color-background-brand-strong',
     },
     _active: {
-      backgroundColor: 'color-background-brand-strong',
+      backgroundColor: 'color-background-brand-stronger',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -29,7 +29,7 @@ const defaultStyles: ButtonStyles = {
   }),
 };
 
-const dangerButtonStyles: ButtonStyles = {
+const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     backgroundColor: 'color-background-danger',
     color: 'color-text-inverse',
@@ -37,7 +37,7 @@ const dangerButtonStyles: ButtonStyles = {
       backgroundColor: 'color-background-danger-strong',
     },
     _active: {
-      backgroundColor: 'color-background-danger-strong',
+      backgroundColor: 'color-background-danger-stronger',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -50,11 +50,33 @@ const dangerButtonStyles: ButtonStyles = {
   }),
 };
 
+const neutralStyles: ButtonStyles = {
+  default: merge(baseStyles.default, {
+    backgroundColor: 'color-background-neutral',
+    color: 'color-text-inverse',
+    _hover: {
+      backgroundColor: 'color-background-neutral-strong',
+    },
+    _active: {
+      backgroundColor: 'color-background-neutral-stronger',
+    },
+  }),
+  loading: merge(baseStyles.loading, {
+    color: 'color-text-neutral-weaker',
+    backgroundColor: 'color-background-neutral-weakest',
+  }),
+  disabled: merge(baseStyles.disabled, {
+    color: 'color-text-neutral-weaker',
+    backgroundColor: 'color-background-neutral-weakest',
+  }),
+};
+
 const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
   default: defaultStyles,
-  danger: dangerButtonStyles,
+  danger: dangerStyles,
+  neutral: neutralStyles,
 };
 
 const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(

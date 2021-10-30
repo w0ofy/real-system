@@ -1,7 +1,7 @@
 {
-  "name": "@realsystem/theme",
-  "version": "2.0.5",
-  "description": "theming for real system",
+  "name": "@realsystem/icon",
+  "version": "0.0.1",
+  "description": "icon component for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -19,8 +19,8 @@
   },
   "keywords": [
     "real-system",
-    "styles",
-    "components"
+    "utils",
+    "utilities"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -29,16 +29,19 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/styling": "1.6.5",
+    "@realsystem/box": "^8.0.5",
+    "@realsystem/styling": "^1.6.5",
+    "@realsystem/theme": "^2.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "csstype": "^3.0.9",
-    "lodash.get": "^4.4.2"
+    "react-feather": "^2.0.9"
   },
   "devDependencies": {
-    "@realsystem/styling": "1.6.5",
+    "@realsystem/box": "^8.0.5",
+    "@realsystem/styling": "^1.6.5",
+    "@realsystem/theme": "^2.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
