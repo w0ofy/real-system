@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/theme",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "theming for real system",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/styling": "1.6.4",
+    "@realsystem/styling": "1.6.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -38,7 +38,7 @@
     "lodash.get": "^4.4.2"
   },
   "devDependencies": {
-    "@realsystem/styling": "1.6.4",
+    "@realsystem/styling": "1.6.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/button",
-  "version": "8.0.4",
+  "version": "8.0.5",
   "description": "Real System Button component",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -28,17 +28,17 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/box": "^8.0.4",
-    "@realsystem/styling": "^1.6.4",
-    "@realsystem/utils": "^1.5.4",
+    "@realsystem/box": "^8.0.5",
+    "@realsystem/styling": "^1.6.5",
+    "@realsystem/utils": "^1.5.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "dependencies": {},
   "devDependencies": {
-    "@realsystem/box": "^8.0.4",
-    "@realsystem/styling": "^1.6.4",
-    "@realsystem/utils": "^1.5.4",
+    "@realsystem/box": "^8.0.5",
+    "@realsystem/styling": "^1.6.5",
+    "@realsystem/utils": "^1.5.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

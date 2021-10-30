@@ -1,5 +1,11 @@
 # @realsystem/utils
 
+## 1.5.5
+
+### Patch Changes
+
+- [`0d999f9`](https://github.com/bigwoof91/realsystem/commit/0d999f97098a4daa4cc69322fee33ea385a97078) - adding icon, fixing typography colors, restyling button with icon integration
+
 ## 1.5.4
 
 ### Patch Changes
