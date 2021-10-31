@@ -17,8 +17,11 @@ const backgroundColors = (palette: AnyPalette) => ({
   'color-background': palette.weak,
   'color-background-inverse': palette.strong,
   ...colorBackground<'brand'>('brand', palette),
+  ...colorBackground<'primary'>('primary', palette),
   ...colorBackground<'success'>('success', palette),
+  ...colorBackground<'info'>('info', palette),
   ...colorBackground<'danger'>('danger', palette),
+  ...colorBackground<'warning'>('warning', palette),
   ...colorBackground<'neutral'>('neutral', palette),
 
   /** @todo WIP */
@@ -27,10 +30,12 @@ const backgroundColors = (palette: AnyPalette) => ({
 
 const colorText = makeColorRange<'color-text'>('color-text');
 const textColors = (palette: AnyPalette) => ({
-  'color-text': palette.medium,
+  'color-text': palette.neutral,
   'color-text-inverse': palette.weak,
   ...colorText<'brand'>('brand', palette),
+  ...colorText<'primary'>('primary', palette),
   ...colorText<'success'>('success', palette),
+  ...colorText<'info'>('info', palette),
   ...colorText<'warning'>('warning', palette),
   ...colorText<'danger'>('danger', palette),
   ...colorText<'neutral'>('neutral', palette),
@@ -40,11 +45,12 @@ const colorBorder = makeColorRange<'color-border'>('color-border');
 const borderColors = (palette: AnyPalette) => ({
   'color-border': palette.neutral,
   ...colorBorder<'brand'>('brand', palette),
-  ...colorBorder<'neutral'>('neutral', palette),
+  ...colorBorder<'primary'>('primary', palette),
   ...colorBorder<'success'>('success', palette),
+  ...colorBorder<'info'>('info', palette),
   ...colorBorder<'warning'>('warning', palette),
   ...colorBorder<'danger'>('danger', palette),
-  ...colorBorder<'primary'>('primary', palette),
+  ...colorBorder<'neutral'>('neutral', palette),
 });
 
 const borders = (palette: AnyPalette) => ({

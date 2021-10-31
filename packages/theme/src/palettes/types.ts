@@ -1,4 +1,4 @@
-export type PaletteKeys =
+export type PaletteIntents =
   | 'brand'
   | 'primary'
   | 'secondary'
@@ -6,40 +6,10 @@ export type PaletteKeys =
   | 'warning'
   | 'danger'
   | 'info'
-  | 'strong'
-  | 'weak'
-  | 'neutral'
-  | 'medium';
+  | 'neutral';
 
-export type DefaultPaletteValues =
-  | '#635bff'
-  | '#0a2540'
-  | '#333333'
-  | '#198038'
-  | '#f1c21b'
-  | '#da1e28'
-  | '#0043ce'
-  | '#161616'
-  | '#ffffff'
-  | '#121c2d';
+export type PaletteKeys = PaletteIntents | 'strong' | 'weak';
 
-export type DefaultPalette = { [key in PaletteKeys]: DefaultPaletteValues };
+export type Palette<T> = { [key in PaletteKeys]: T };
 
-export type DarkBrandPaletteValues =
-  | '#232323'
-  | '#0a2540'
-  | '#333333'
-  | '#198038'
-  | '#f1c21b'
-  | '#da1e28'
-  | '#0043ce'
-  | '#161616'
-  | '#ffffff'
-  | '#121c2d'
-  | '#4a4a4a';
-
-export type DarkBrandPalette = {
-  [key in PaletteKeys]: DarkBrandPaletteValues;
-};
-
-export type AnyPalette = DefaultPalette | DarkBrandPalette;
+export type AnyPalette = Palette<any>;

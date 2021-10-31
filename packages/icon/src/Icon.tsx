@@ -27,10 +27,11 @@ const BoxAsIcon = BoxAs<Pick<IconProps, 'icon'> & InternalIconProps>(
 
 const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
   default: 'color-text',
-  brand: 'color-text-brand',
+  primary: 'color-text-primary',
   success: 'color-text-success',
   danger: 'color-text-danger',
   warning: 'color-text-warning',
+  info: 'color-text-info',
 };
 
 const IconApi = forwardRef<HTMLOrSVGElement, IconProps>(

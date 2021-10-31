@@ -11,21 +11,21 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-inverse',
-    backgroundColor: 'color-background-brand',
+    backgroundColor: 'color-background-primary',
     _hover: {
-      backgroundColor: 'color-background-brand-strong',
+      backgroundColor: 'color-background-primary-strong',
     },
     _active: {
-      backgroundColor: 'color-background-brand-stronger',
+      backgroundColor: 'color-background-primary-stronger',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
+    color: 'color-text-primary-weaker',
+    backgroundColor: 'color-background-primary-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
+    color: 'color-text-primary-weaker',
+    backgroundColor: 'color-background-primary-weakest',
   }),
 };
 

@@ -4,6 +4,7 @@
 export * from './GlobalStyles';
 export * from './makeTheme';
 export { normalize as normalizeCSS } from './normalize';
+export * from './palettes';
 export * from './ThemeProvider';
 export * from './themes';
 export * from './tokens/makeColorRange';

@@ -10,29 +10,29 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-brand-strong',
+    color: 'color-text-primary-strong',
     backgroundColor: 'color-background',
-    borderColor: 'color-border-brand-strong',
+    borderColor: 'color-border-primary-strong',
     _hover: {
-      color: 'color-text-brand-stronger',
-      backgroundColor: 'color-background-brand-weakest',
-      borderColor: 'color-border-brand-stronger',
+      color: 'color-text-primary-stronger',
+      backgroundColor: 'color-background-primary-weakest',
+      borderColor: 'color-border-primary-stronger',
     },
     _active: {
-      color: 'color-text-brand-strongest',
-      backgroundColor: 'color-background-brand-weaker',
-      borderColor: 'color-border-brand-strongest',
+      color: 'color-text-primary-strongest',
+      backgroundColor: 'color-background-primary-weaker',
+      borderColor: 'color-border-primary-strongest',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
-    borderColor: 'color-border-brand-weakest',
+    color: 'color-text-primary-weaker',
+    backgroundColor: 'color-background-primary-weakest',
+    borderColor: 'color-border-primary-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
-    borderColor: 'color-border-brand-weakest',
+    color: 'color-text-primary-weaker',
+    backgroundColor: 'color-background-primary-weakest',
+    borderColor: 'color-border-primary-weakest',
   }),
 };
 

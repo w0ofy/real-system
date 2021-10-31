@@ -11,18 +11,19 @@ export default {
     icon: { control: { type: 'select', options: ICONS } },
   },
   args: {
-    icon: 'Activity',
+    icon: 'activity',
     size: 'size-icon-80',
   },
 } as Meta;
 
 export const Showcase = () => (
   <Box display="flex">
-    <Icon mr={8} icon="Box" intent="default" size="size-icon-60" />
-    <Icon mr={8} icon="Box" intent="brand" size="size-icon-60" />
-    <Icon mr={8} icon="Box" intent="success" size="size-icon-60" />
-    <Icon mr={8} icon="Box" intent="warning" size="size-icon-60" />
-    <Icon mr={8} icon="Box" intent="danger" size="size-icon-60" />
+    <Icon mr={8} icon="box" intent="default" size="size-icon-60" />
+    <Icon mr={8} icon="box" intent="primary" size="size-icon-60" />
+    <Icon mr={8} icon="box" intent="success" size="size-icon-60" />
+    <Icon mr={8} icon="box" intent="info" size="size-icon-60" />
+    <Icon mr={8} icon="box" intent="warning" size="size-icon-60" />
+    <Icon mr={8} icon="box" intent="danger" size="size-icon-60" />
   </Box>
 );
 
