@@ -1,6 +1,10 @@
 # `@real-system/utils`
 
-A series of javascript and typescript helpers for Real System.
+
+<p align="center">
+<p>Real System's series of javascript and typescript helpers.</p>
+<a href="https://badge.fury.io/js/@real-system%2Futils"><img src="https://badge.fury.io/js/@real-system%2Futils.svg" alt="npm version" height="18"/></a>
+</p>
 
 ## Usage
 

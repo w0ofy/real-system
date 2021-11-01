@@ -1,5 +1,10 @@
 # `@real-system/icon`
 
+<p align="center">
+<p>Real System's Icon component.</p>
+<a href="https://badge.fury.io/js/@real-system%2Ficon"><img src="https://badge.fury.io/js/@real-system%2Ficon.svg" alt="npm version" height="18"/></a>
+</p>
+
 ## Usage
 
 ### Installation

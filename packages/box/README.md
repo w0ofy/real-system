@@ -1,5 +1,10 @@
 # `@real-system/box`
 
+<p align="center">
+<p>Real System's primitive Box component.</p>
+<a href="https://badge.fury.io/js/@real-system%2Fbox"><img src="https://badge.fury.io/js/@real-system%2Fbox.svg" alt="npm version" height="18"/></a>
+</p>
+
 ## Usage
 
 ### Installation

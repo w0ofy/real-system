@@ -1,5 +1,10 @@
 # `@real-system/button`
 
+<p align="center">
+<p>Real System's Button component.</p>
+<a href="https://badge.fury.io/js/@real-system%2Fbutton"><img src="https://badge.fury.io/js/@real-system%2Fbutton.svg" alt="npm version" height="18"/></a>
+</p>
+
 ## Usage
 
 ```bash
