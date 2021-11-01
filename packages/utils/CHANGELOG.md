@@ -1,5 +1,11 @@
 # @realsystem/utils
 
+## 1.6.1
+
+### Patch Changes
+
+- [`199d998`](https://github.com/bigwoof91/realsystem/commit/199d998295925312e7bf112f9dd809d1b64ce628) - testing publishing
+
 ## 1.6.0
 
 ### Minor Changes
