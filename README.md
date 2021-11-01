@@ -1,13 +1,20 @@
 # `@real-system`
 
-An easily themeable, extendable "**Real**" component "**System**" for responsive web applications.
-
-<br />
+<p align="center">
+<p>An easily themeable, extendable "Real" component "System" for responsive web applications.</p>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>&nbsp;&nbsp;
+<a href="https://badge.fury.io/js/@real-system%2Fcore"><img src="https://badge.fury.io/js/@real-system%2Fcore.svg" alt="npm version" height="18"/></a>
+</p>
 
 Some nice consumer-friendly features and patterns we follow
 
-- **Every component is its own package.** This supports a superior DX. Imagine an engineering team simply wants to use the Real System `Box`; we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
-- **The entire library can be installed** via `@real-system/core` but every component is importing by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at build time.
+### **Every component is its own package via `@realsystem/<name-of-package>`**
+
+- This supports a superior DX. Imagine an engineering team simply wants to use the Real System `Box`; we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
+
+### **The entire library can be installed via `@real-system/core`**
+
+- But it is recommended that every component be imported by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at build time.
 
 <br />
 
