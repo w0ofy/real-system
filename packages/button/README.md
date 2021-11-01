@@ -15,12 +15,12 @@ $ npm install @real-system/styling @real-system/box @real-system/utils react rea
 # yarn
 $ yarn add @real-system/styling @real-system/box @real-system/utils react react-dom
 
-# install icon
+# install button
 
 # npm
-$ npm install @real-system/icon
+$ npm install @real-system/button
 # yarn
-$ yarn add @real-system/icon
+$ yarn add @real-system/button
 ```
 
 ### Code Example

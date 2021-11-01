@@ -17,12 +17,12 @@ $ npm install --save @real-system/styling react react-dom
 # yarn
 $ yarn add @real-system/styling react react-dom
 
-# install icon
+# install box
 
 # npm
-$ npm install --save @real-system/icon
+$ npm install --save @real-system/box
 # yarn
-$ yarn add @real-system/icon
+$ yarn add @real-system/box
 ```
 
 ### Code Example
