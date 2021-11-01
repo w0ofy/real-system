@@ -2,11 +2,12 @@ import * as Feather from 'react-feather';
 
 import { SpaceProps } from '@realsystem/styling';
 import { PaletteIntents, ThemeTokens } from '@realsystem/theme';
-import { KebabCase, kebabCase } from '@realsystem/utils';
+import { KebabCase } from '@realsystem/utils';
 
-type FeatherIcons = keyof typeof Feather;
+export type FeatherIconKeys = keyof typeof Feather;
+export type FeatherIconValues = typeof Feather[FeatherIconKeys];
 export type InternalIconProps = Feather.IconProps;
-export type Icons = KebabCase<FeatherIcons>;
+export type Icons = KebabCase<FeatherIconKeys>;
 export type IconIntent =
   | Extract<
       PaletteIntents,
@@ -34,17 +35,3 @@ export type IconProps = {
     | 'size-icon-button-small';
   intent?: IconIntent;
 } & SpaceProps;
-
-type IconsMap = { [key in Icons]: Icons };
-
-const ICONS = (() => {
-  const featherIcons = Object.keys(Feather) as FeatherIcons[];
-  const icons = featherIcons.reduce((o, rawKey) => {
-    const key = kebabCase<typeof rawKey>(rawKey);
-    return { ...o, [key]: key };
-  }, {} as IconsMap);
-
-  return icons;
-})();
-
-export { ICONS };

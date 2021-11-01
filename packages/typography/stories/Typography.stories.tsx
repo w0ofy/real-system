@@ -17,24 +17,22 @@ const Template = (args) => {
   return (
     <>
       <Typography {...args}>
-        Default Variant: The quick brown fox jumps over the lazy dog &nbsp;
+        The quick brown fox jumps over the{' '}
         <Typography {...args} variant="inline" fontWeight={4}>
-          Inline Variant: The quick brown fox jumps over the lazy dog
-        </Typography>
+          lazy
+        </Typography>{' '}
+        dog.
       </Typography>
     </>
   );
 };
 
+Template.storyName = 'Typography';
+
 export const Default = Template.bind({});
 
 export const Heading = () => (
-  <Box
-    display="flex"
-    flexDirection="column"
-    justifyContent="center"
-    alignItems="flex-start"
-    width="100%">
+  <Box display="flex" flexDirection="column">
     <Typography.Heading as="h1" variant="heading1">
       Heading 1
     </Typography.Heading>

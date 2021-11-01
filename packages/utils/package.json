@@ -2,6 +2,7 @@
   "name": "@realsystem/utils",
   "version": "1.5.5",
   "description": "utilities for real system",
+  "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",

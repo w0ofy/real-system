@@ -1,7 +1,6 @@
 import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 
 import { BoxAs } from '@realsystem/box';
-import styled from '@realsystem/styling';
 
 import { Heading } from './Heading';
 import {
@@ -17,24 +16,28 @@ type TypographyVariantMap = {
   [key in TypographyVariants]: keyof JSX.IntrinsicElements;
 };
 
-const TypographyApiVariants: TypographyVariantMap = {
+const TYPOGRAPHY_VARIANT_MAP: TypographyVariantMap = {
   paragraph: 'p',
   inline: 'span',
 };
 
+/**
+ * Named `TypographyComponentProps` instead of `TypographyProps` because:
+ * Module '@realsystem/styling' has already exported a member named 'TypographyProps'
+ */
 export type TypographyComponentProps = {
   children?: React.ReactNode;
-  variant?: keyof typeof TypographyApiVariants;
+  variant?: keyof typeof TYPOGRAPHY_VARIANT_MAP;
   as?: TypographyAsTags;
 } & InternalTypographyProps;
 
-interface TypographyComponent
+export interface TypographyComponent
   extends ForwardRefExoticComponent<TypographyComponentProps> {
   Heading: (HeadingProps) => ReturnType<typeof Heading>;
 }
 
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
-const TypographyApi: TypographyComponent = forwardRef<
+const Typography: TypographyComponent = forwardRef<
   TypographyElement,
   TypographyComponentProps
 >(
@@ -50,7 +53,7 @@ const TypographyApi: TypographyComponent = forwardRef<
         m={0}
         color="color-text"
         {...restProps}
-        as={as || TypographyApiVariants[variant]}
+        as={as || TYPOGRAPHY_VARIANT_MAP[variant]}
         mb={mb || 4}
         ref={ref}>
         {children}
@@ -59,9 +62,7 @@ const TypographyApi: TypographyComponent = forwardRef<
   }
 );
 
-TypographyApi.displayName = 'Typography';
-TypographyApi.Heading = Heading;
-
-const Typography = styled(TypographyApi)<TypographyComponentProps>({});
+Typography.displayName = 'Typography';
+Typography.Heading = Heading;
 
 export { Typography };

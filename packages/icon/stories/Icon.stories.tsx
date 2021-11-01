@@ -2,13 +2,13 @@ import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
 import { Box } from '@realsystem/box';
-import { Icon, ICONS } from '@realsystem/icon';
+import { Icon, ICON_NAMES } from '@realsystem/icon';
 
 export default {
   title: 'Components/Icon',
   component: Icon,
   argTypes: {
-    icon: { control: { type: 'select', options: ICONS } },
+    icon: { control: { type: 'select', options: ICON_NAMES } },
   },
   args: {
     icon: 'activity',

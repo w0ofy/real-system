@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 import { Box } from '@realsystem/box';
-import styled from '@realsystem/styling';
 
 import { GhostButton } from './GhostButton';
 import { PrimaryButton } from './PrimaryButton';
@@ -31,7 +30,7 @@ const BUTTON_VARIANTS: {
   ghost: GhostButton,
 };
 
-const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
@@ -68,7 +67,6 @@ const ButtonApi = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-ButtonApi.displayName = 'Button';
+Button.displayName = 'Button';
 
-const Button = styled(ButtonApi)<ButtonProps>({});
 export { Button };

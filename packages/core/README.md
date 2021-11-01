@@ -1,21 +1,49 @@
 # @realsystem/core
 
-One bundle containing every package within paste except icons.
+One bundle containing every package within `realsystem`
 
-## How it works
+[bundlephobia](https://bundlephobia.com/package/@realsystem/core@1.7.5)
 
-### Procedure (happens in pre-build; see tools/generate.js)
+## Usage
 
-1- Use lerna to fetch all the packages (see /tools/.cache/packages.json).
-2- Filter out all packages that aren't productionized or not in core
+### Installation
 
-(For the remaining packages:)
+```bash
+# npm
+$ npm install --save @realsystem/core react react-dom
 
-1- Add them to this package's dependencies.
-2- Add the export lines to the index.tsx file.
-3- Create individual export files in ./lib/ (unbarreled exports, 1 per package)
-4- Create fake packages pointing to the lib file in the root folder of this package (for easier importing)
+# yarn
+$ yarn add @realsystem/core react react-dom
+```
 
-### When is this procedure is triggered?
+### Code Example
 
-This happens automatically during prebuild, to guarantee correctness on releases.
+```jsx
+import { ThemeProvider } from '@realsystem/core/theme`;
+import { Box } from '@realsystem/core/box`;
+import { Button } from '@realsystem/core/button`;
+
+const MyComponent = () => {
+  return (
+    <ThemeProvider>
+      <Box>
+        <Button>Button</Button>
+      </Box>
+    </ThemeProvider>
+  )
+}
+
+```
+
+## How bundling works
+
+### Build Procedure (see `prebuild` and `build` npm scripts)
+
+1. Fetch all the packages with yarn workspaces
+2. Filter out all packages that aren't productionized or not in core `packageJson.status === 'production'`
+3. Update core's package.json dependencies
+4. Generate
+   1. core index bundle
+   2. unbarreled export bundles
+   3. core's .gitignore to include unbarreled exprots
+   4. each package's package.json

@@ -1,8 +1,6 @@
 import React, { forwardRef, useCallback } from 'react';
-import * as Feather from 'react-feather';
 
 import { Box, BoxAs } from '@realsystem/box';
-import styled from '@realsystem/styling';
 import {
   getToken,
   ThemeScales,
@@ -10,17 +8,12 @@ import {
   useTheme,
 } from '@realsystem/theme';
 
-import {
-  IconIntent,
-  IconProps,
-  ICONS,
-  Icons,
-  InternalIconProps,
-} from './types';
+import { ICON_NAMES, ICONS } from './icons';
+import { IconIntent, IconProps, Icons, InternalIconProps } from './types';
 
 const BoxAsIcon = BoxAs<Pick<IconProps, 'icon'> & InternalIconProps>(
   ({ icon, ...restProps }) => {
-    const Icon = Feather[icon];
+    const Icon = ICONS[icon];
     return <Icon {...restProps} />;
   }
 );
@@ -34,7 +27,7 @@ const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
   info: 'color-text-info',
 };
 
-const IconApi = forwardRef<HTMLOrSVGElement, IconProps>(
+const Icon = forwardRef<HTMLOrSVGElement, IconProps>(
   (
     { size = 'size-icon-20', icon, intent, ...restProps },
     ref
@@ -70,9 +63,7 @@ const IconApi = forwardRef<HTMLOrSVGElement, IconProps>(
   }
 );
 
-IconApi.displayName = 'Icon';
+Icon.displayName = 'Icon';
 
-const Icon = styled(IconApi)<IconProps>({});
-
-export { Icon, ICONS };
+export { Icon, ICON_NAMES, ICONS };
 export type { IconProps, Icons };

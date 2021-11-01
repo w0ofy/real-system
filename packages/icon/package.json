@@ -2,6 +2,7 @@
   "name": "@realsystem/icon",
   "version": "0.0.1",
   "description": "icon component for real system",
+  "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",

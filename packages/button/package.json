@@ -2,6 +2,7 @@
   "name": "@realsystem/button",
   "version": "8.0.5",
   "description": "Real System Button component",
+  "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",

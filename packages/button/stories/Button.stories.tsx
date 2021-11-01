@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react/types-6-0';
 
 import { Box } from '@realsystem/box';
 import { Button } from '@realsystem/button';
-import { Icon, ICONS } from '@realsystem/icon';
+import { Icon, ICON_NAMES } from '@realsystem/icon';
 import { Heading } from '@realsystem/typography';
 import { capitalize } from '@realsystem/utils';
 
@@ -11,8 +11,8 @@ export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    trailingIcon: { control: { type: 'select', options: ICONS } },
-    leadingIcon: { control: { type: 'select', options: ICONS } },
+    trailingIcon: { control: { type: 'select', options: ICON_NAMES } },
+    leadingIcon: { control: { type: 'select', options: ICON_NAMES } },
   },
   args: {
     children: 'Button',
@@ -217,5 +217,5 @@ export const IconButton = ({ icon, ...args }) => (
 );
 
 IconButton.argTypes = {
-  icon: { control: { type: 'select', options: ICONS } },
+  icon: { control: { type: 'select', options: ICON_NAMES } },
 };

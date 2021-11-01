@@ -75,14 +75,6 @@ const shadows = (palette: AnyPalette) => {
     'shadow-weak': `0 0 0 1px ${shadowNeutral['shadow-neutral-weak']}neutral`,
     'shadow-weaker': `0 0 0 1px ${shadowNeutral['shadow-neutral-weaker']}neutral`,
     'shadow-weakest': `0 0 0 1px ${shadowNeutral['shadow-neutral-weakest']}neutral`,
-
-    'shadow-outline': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral']}, inset 0 0 0 2px #fff`,
-    'shadow-outline-strong': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral-strong']}, inset 0 0 0 2px #fff`,
-    'shadow-outline-stronger': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral-stronger']}, inset 0 0 0 2px #fff`,
-    'shadow-outline-strongest': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral-strongest']}, inset 0 0 0 2px #fff`,
-    'shadow-outline-weak': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral-weak']}, inset 0 0 0 2px #fff`,
-    'shadow-outline-weaker': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral-weaker']}, inset 0 0 0 2px #fff`,
-    'shadow-outline-weakest': `inset 0 0 0 1px ${shadowNeutral['shadow-neutral-weakest']}, inset 0 0 0 2px #fff`,
   };
 };
 
