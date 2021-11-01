@@ -1,4 +1,4 @@
-import { primitiveUseTheme } from '@realsystem/styling';
+import { primitiveUseTheme } from '@real-system/styling';
 
 import {
   getToken,

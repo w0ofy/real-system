@@ -1,4 +1,4 @@
-import { css } from '@realsystem/styling';
+import { css } from '@real-system/styling';
 
 const normalize = css`
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

@@ -1,6 +1,6 @@
 import { Property } from 'csstype';
 
-import { polished } from '@realsystem/styling';
+import { polished } from '@real-system/styling';
 
 import { AnyPalette, PaletteKeys } from '../palettes';
 

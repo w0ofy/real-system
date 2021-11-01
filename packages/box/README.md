@@ -1,4 +1,4 @@
-# `@realsystem/box`
+# `@real-system/box`
 
 ## Usage
 
@@ -8,23 +8,23 @@
 # install peer dependencies
 
 # npm
-$ npm install --save @realsystem/styling react react-dom
+$ npm install --save @real-system/styling react react-dom
 # yarn
-$ yarn add @realsystem/styling react react-dom
+$ yarn add @real-system/styling react react-dom
 
 # install icon
 
 # npm
-$ npm install --save @realsystem/icon
+$ npm install --save @real-system/icon
 # yarn
-$ yarn add @realsystem/icon
+$ yarn add @real-system/icon
 ```
 
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@realsystem/theme`;
-import { Box, BoxAs } from '@realsystem/box`;
+import { ThemeProvider } from '@real-system/theme`;
+import { Box, BoxAs } from '@real-system/box`;
 
 const Aside = BoxAs('aside');
 

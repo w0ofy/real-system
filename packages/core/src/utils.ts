@@ -1,1 +1,1 @@
-export * from '@realsystem/utils';
+export * from '@real-system/utils';

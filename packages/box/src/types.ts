@@ -1,6 +1,6 @@
 import type { Property } from 'csstype';
 
-import type { StyleProps } from '@realsystem/styling';
+import type { StyleProps } from '@real-system/styling';
 
 import { PseudoPropStyles } from './pseudoPropStyles';
 

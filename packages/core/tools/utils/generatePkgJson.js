@@ -18,7 +18,7 @@ const { getWorkspacesInfo } = require('./subPackageUtils');
  */
 const writePkgJson = async (pkg) => {
   const pkgJson = {
-    name: `@realsystem/${pkg}`,
+    name: `@real-system/${pkg}`,
     version: '0.0.0',
     private: true,
     sideEffects: false,
@@ -32,8 +32,8 @@ const writePkgJson = async (pkg) => {
     fs.mkdirSync(dir);
   }
   writeToFile(`${dir}/package.json`, pkgJson, {
-    successMessage: `[@realsystem/core/${pkg}]: Generated "package.json".`,
-    errorMessage: `[@realsystem/core/${pkg}]: Failed to generate "package.json".`,
+    successMessage: `[@real-system/core/${pkg}]: Generated "package.json".`,
+    errorMessage: `[@real-system/core/${pkg}]: Failed to generate "package.json".`,
     formatJson: true,
   });
 };

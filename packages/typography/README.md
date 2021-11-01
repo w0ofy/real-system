@@ -1,4 +1,4 @@
-# `@realsystem/typography`
+# `@real-system/typography`
 
 Real System's Typography component.
 
@@ -8,26 +8,26 @@ Real System's Typography component.
 # install peer dependencies
 
 # npm
-$ npm install @realsystem/styling @realsystem/box @realsystem/utils react react-dom
+$ npm install @real-system/styling @real-system/box @real-system/utils react react-dom
 # yarn
-$ yarn add @realsystem/styling @realsystem/box @realsystem/utils react react-dom
+$ yarn add @real-system/styling @real-system/box @real-system/utils react react-dom
 
 # install typography
 
 # npm
-$ npm install @realsystem/typography
+$ npm install @real-system/typography
 # yarn
-$ yarn add @realsystem/typography
+$ yarn add @real-system/typography
 ```
 
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@realsystem/theme`;
-import { Typography } from '@realsystem/typography`;
+import { ThemeProvider } from '@real-system/theme`;
+import { Typography } from '@real-system/typography`;
 
 /** can also import Heading separately like this
- * import { Heading } from '@realsystem/typography`;
+ * import { Heading } from '@real-system/typography`;
  */
 const MyComponent = () => {
   return (

@@ -1,4 +1,4 @@
-# `@realsystem/styling`
+# `@real-system/styling`
 
 ## Usage
 
@@ -15,15 +15,15 @@ $ yarn add react react-dom
 # install styling
 
 # npm
-$ npm install @realsystem/styling
+$ npm install @real-system/styling
 # yarn
-$ yarn add @realsystem/styling
+$ yarn add @real-system/styling
 ```
 
 ### Code Example
 
 ```jsx
-import styled from '@realsystem/styling`;
+import styled from '@real-system/styling`;
 
 const Flex = styled.div`
   display: flex;

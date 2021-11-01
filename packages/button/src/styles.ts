@@ -1,5 +1,5 @@
-import { BoxAs, BoxStyleProps } from '@realsystem/box';
-import { merge } from '@realsystem/utils';
+import { BoxAs, BoxStyleProps } from '@real-system/box';
+import { merge } from '@real-system/utils';
 
 import { ButtonSizes, ButtonStates, InternalButtonProps } from './types';
 

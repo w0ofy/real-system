@@ -13,8 +13,8 @@ function generateUnbarreledExports() {
       getUnbarreledFileFullPath(purePkgNames[i]),
       `export * from '${pkg}';\n`,
       {
-        successMessage: `[@realsystem/core/${pkg}] Generated unbarreled exports.`,
-        errorMessage: `[@realsystem/core/${pkg}] Failed to generate exports.`,
+        successMessage: `[@real-system/core/${pkg}] Generated unbarreled exports.`,
+        errorMessage: `[@real-system/core/${pkg}] Failed to generate exports.`,
       }
     );
   });

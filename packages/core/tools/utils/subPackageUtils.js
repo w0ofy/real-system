@@ -8,7 +8,7 @@ const getUnbarreledFilePath = (pkgName) => `src/${pkgName}.ts`;
 const getUnbarreledFileFullPath = (pkgName) =>
   join(CORE_PATH, getUnbarreledFilePath(pkgName));
 
-const getPurePkgName = (pkgName) => pkgName.replace('@realsystem/', '');
+const getPurePkgName = (pkgName) => pkgName.replace('@real-system/', '');
 
 const getPkgJson = (workspace) =>
   require(`${__dirname}/../../../../${workspace.location}/package.json`);

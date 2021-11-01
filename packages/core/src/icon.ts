@@ -1,1 +1,1 @@
-export * from '@realsystem/icon';
+export * from '@real-system/icon';

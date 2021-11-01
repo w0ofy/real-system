@@ -4,7 +4,7 @@ import styled, {
   composeStyleProps,
   DefaultTheme,
   StyledComponent,
-} from '@realsystem/styling';
+} from '@real-system/styling';
 
 import { getPseudoStyles } from './styleFunctions';
 import type { BoxProps } from './types';

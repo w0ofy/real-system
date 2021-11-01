@@ -1,4 +1,4 @@
-import { createGlobalStyle } from '@realsystem/styling';
+import { createGlobalStyle } from '@real-system/styling';
 
 import { getToken } from './getToken';
 import { normalize } from './normalize';

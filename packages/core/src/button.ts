@@ -1,1 +1,1 @@
-export * from '@realsystem/button';
+export * from '@real-system/button';

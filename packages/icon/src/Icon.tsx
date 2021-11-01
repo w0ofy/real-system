@@ -1,12 +1,12 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Box, BoxAs } from '@realsystem/box';
+import { Box, BoxAs } from '@real-system/box';
 import {
   getToken,
   ThemeScales,
   ThemeTokens,
   useTheme,
-} from '@realsystem/theme';
+} from '@real-system/theme';
 
 import { ICON_NAMES, ICONS } from './icons';
 import { IconIntent, IconProps, Icons, InternalIconProps } from './types';

@@ -1,4 +1,4 @@
-import { SpaceProps, TypographyProps } from '@realsystem/styling';
+import { SpaceProps, TypographyProps } from '@real-system/styling';
 
 export type InternalTypographyProps = SpaceProps & TypographyProps;
 export type TypographyVariants = 'paragraph' | 'inline';

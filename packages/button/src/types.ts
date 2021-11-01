@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { BoxStyleProps } from '@realsystem/box';
-import { SpaceProps } from '@realsystem/styling';
+import { BoxStyleProps } from '@real-system/box';
+import { SpaceProps } from '@real-system/styling';
 
 import { PaletteIntents } from '../../theme/src/palettes/types';
 

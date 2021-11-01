@@ -1,1 +1,1 @@
-export * from '@realsystem/typography';
+export * from '@real-system/typography';
