@@ -2,8 +2,7 @@ import React from 'react';
 
 import { BoxStyleProps } from '@real-system/box';
 import { SpaceProps } from '@real-system/styling';
-
-import { PaletteIntents } from '../../theme/src/palettes/types';
+import { PaletteIntents } from '@real-system/theme';
 
 export type ButtonSizes = 'small' | 'default';
 export type ButtonVariants = 'primary' | 'secondary' | 'ghost';
