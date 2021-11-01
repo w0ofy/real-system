@@ -1,8 +1,6 @@
-# `@real-system/theme`
-
-
+<h1 align="center">@real-system/theme</h1>
+<p align="center">Real System's theming components and helpers.</p>
 <p align="center">
-<p>Real System's theming components and helpers.</p>
 <a href="https://badge.fury.io/js/@real-system%2Ftheme"><img src="https://badge.fury.io/js/@real-system%2Ftheme.svg" alt="npm version" height="18"/></a>
 </p>
 

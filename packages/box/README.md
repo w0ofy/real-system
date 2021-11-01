@@ -1,7 +1,6 @@
-# `@real-system/box`
-
+<h1 align="center">@realsystem/box</h1>
+<p align="center">Real System's primitive Box component.</p>
 <p align="center">
-<p>Real System's primitive Box component.</p>
 <a href="https://badge.fury.io/js/@real-system%2Fbox"><img src="https://badge.fury.io/js/@real-system%2Fbox.svg" alt="npm version" height="18"/></a>
 </p>
 

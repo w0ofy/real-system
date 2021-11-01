@@ -1,7 +1,6 @@
-# `@real-system/typography`
-
+<h1 align="center">@real-system/typography</h1>
+<p align="center">Real System's Typography components.</p>
 <p align="center">
-<p>Real System's Typography components.</p>
 <a href="https://badge.fury.io/js/@real-system%2Ftypography"><img src="https://badge.fury.io/js/@real-system%2Ftypography.svg" alt="npm version" height="18"/></a>
 </p>
 

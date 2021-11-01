@@ -1,7 +1,6 @@
-# `@real-system/styling`
-
+<h1 align="center">@real-system/styling</h1>
+<p align="center">Real System's styling library.</p>
 <p align="center">
-<p>Real System's styling library.</p>
 <a href="https://badge.fury.io/js/@real-system%2Fstyling"><img src="https://badge.fury.io/js/@real-system%2Fstyling.svg" alt="npm version" height="18"/></a>
 </p>
 

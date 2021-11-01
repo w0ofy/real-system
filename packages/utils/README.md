@@ -1,8 +1,6 @@
-# `@real-system/utils`
-
-
+<h1 align="center">@real-system/utils</h1>
+<p align="center">Real System's series of javascript and typescript helpers.</p>
 <p align="center">
-<p>Real System's series of javascript and typescript helpers.</p>
 <a href="https://badge.fury.io/js/@real-system%2Futils"><img src="https://badge.fury.io/js/@real-system%2Futils.svg" alt="npm version" height="18"/></a>
 </p>
 
