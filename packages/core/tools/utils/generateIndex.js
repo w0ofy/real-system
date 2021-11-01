@@ -15,8 +15,8 @@ function getIndexOutput() {
 function generateIndex() {
   logger.gray('Generating index exports');
   return writeToFile(CORE_INDEX_PATH, getIndexOutput(), {
-    successMessage: '[@realsystem/core] Generated index exports.',
-    errorMessage: '[@realsystem/core] Failed to generate index exports.',
+    successMessage: '[@real-system/core] Generated index exports.',
+    errorMessage: '[@real-system/core] Failed to generate index exports.',
   });
 }
 

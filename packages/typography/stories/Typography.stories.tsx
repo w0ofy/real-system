@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { Box } from '@realsystem/box';
-import { Typography } from '@realsystem/typography';
+import { Box } from '@real-system/box';
+import { Typography } from '@real-system/typography';
 
 export default {
   title: 'Components/Typography',

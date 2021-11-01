@@ -1,8 +1,8 @@
-# @realsystem/core
+# @real-system/core
 
-One bundle containing every package within `realsystem`
+One bundle containing every package within `real-system`
 
-[bundlephobia](https://bundlephobia.com/package/@realsystem/core@1.7.5)
+[bundlephobia](https://bundlephobia.com/package/@real-system/core@1.7.5)
 
 ## Usage
 
@@ -10,18 +10,18 @@ One bundle containing every package within `realsystem`
 
 ```bash
 # npm
-$ npm install --save @realsystem/core react react-dom
+$ npm install --save @real-system/core react react-dom
 
 # yarn
-$ yarn add @realsystem/core react react-dom
+$ yarn add @real-system/core react react-dom
 ```
 
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@realsystem/core/theme`;
-import { Box } from '@realsystem/core/box`;
-import { Button } from '@realsystem/core/button`;
+import { ThemeProvider } from '@real-system/core/theme`;
+import { Box } from '@real-system/core/box`;
+import { Button } from '@real-system/core/button`;
 
 const MyComponent = () => {
   return (

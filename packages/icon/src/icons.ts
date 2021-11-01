@@ -1,6 +1,6 @@
 import * as Feather from 'react-feather';
 
-import { kebabCase } from '@realsystem/utils';
+import { kebabCase } from '@real-system/utils';
 
 import { FeatherIconKeys, FeatherIconValues, Icons } from './types';
 

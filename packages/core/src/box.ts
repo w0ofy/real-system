@@ -1,1 +1,1 @@
-export * from '@realsystem/box';
+export * from '@real-system/box';

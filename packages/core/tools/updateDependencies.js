@@ -14,7 +14,7 @@ const getPackageJsonOutput = () => {
   logger.gray('Updating core package dependencies');
   return writeToFile(CORE_PACKAGE_PATH, getPackageJsonOutput(), {
     formatJson: true,
-    successMessage: '[@realsystem/core] Updated core package deps.',
-    errorMessage: '[@realsystem/core] Failed to update core package deps.',
+    successMessage: '[@real-system/core] Updated core package deps.',
+    errorMessage: '[@real-system/core] Failed to update core package deps.',
   });
 })();

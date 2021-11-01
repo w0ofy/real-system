@@ -1,4 +1,4 @@
-# `@realsystem/theme`
+# `@real-system/theme`
 
 Real System's Theming components and helpers
 
@@ -10,22 +10,22 @@ Real System's Theming components and helpers
 # install peer dependencies
 
 # npm
-$ npm install --save @realsystem/styling react react-dom
+$ npm install --save @real-system/styling react react-dom
 # yarn
-$ yarn add @realsystem/styling react react-dom
+$ yarn add @real-system/styling react react-dom
 
 # install theme
 
 # npm
-$ npm install --save @realsystem/theme
+$ npm install --save @real-system/theme
 # yarn
-$ yarn add @realsystem/theme
+$ yarn add @real-system/theme
 ```
 
 ### Code Example
 
 ```jsx
-import { ThemeProvider, useToken } from '@realsystem/theme`;
+import { ThemeProvider, useToken } from '@real-system/theme`;
 
 const OtherComponent = () => {
   const token = useToken('color-background');

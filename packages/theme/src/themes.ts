@@ -1,4 +1,4 @@
-import { DefaultTheme } from '@realsystem/styling';
+import { DefaultTheme } from '@real-system/styling';
 
 import { darkBrandPalette } from './palettes';
 import realsystem from './tokens';

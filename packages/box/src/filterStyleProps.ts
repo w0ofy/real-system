@@ -1,4 +1,4 @@
-import { STYLE_PROPS } from '@realsystem/styling';
+import { STYLE_PROPS } from '@real-system/styling';
 
 const PROPS_TO_BLOCK = [...STYLE_PROPS, 'className', 'style'];
 

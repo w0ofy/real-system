@@ -1,4 +1,4 @@
-import { DefaultTheme } from '@realsystem/styling';
+import { DefaultTheme } from '@real-system/styling';
 
 import defaultTheme, { palette } from './tokens';
 

@@ -1,1 +1,1 @@
-export * from '@realsystem/styling';
+export * from '@real-system/styling';

@@ -35,14 +35,14 @@ $ yarn add react react-dom
 
 ### Real System Packages
 
-Everything exposed inside Real System Core can also be installed individually. For instance, you could install `@realsystem/button` and simply import `Button` from that package. However, we recommend using the Core package for ease of maintenance and only falling back to the individual packages if you need to pin to a specific version.
+Everything exposed inside Real System Core can also be installed individually. For instance, you could install `@real-system/button` and simply import `Button` from that package. However, we recommend using the Core package for ease of maintenance and only falling back to the individual packages if you need to pin to a specific version.
 
 ```bash
 # npm
-$ npm install --save @realsystem/core
+$ npm install --save @real-system/core
 
 # yarn
-$ yarn add @realsystem/core
+$ yarn add @real-system/core
 ```
 
 ### Theme Provider
@@ -51,7 +51,7 @@ $ yarn add @realsystem/core
 // index.js
 import React, { ReactDOM } from 'react';
 
-import { ThemeProvider } from '@realsystem/core/theme';
+import { ThemeProvider } from '@real-system/core/theme';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -70,8 +70,8 @@ ReactDOM.render(
 You can use the Real System components anywhere that is wrapped by the Theme Provider.
 
 ```jsx
-import { Box } from '@realsystem/core/box';
-import { ThemeProvider } from '@realsystem/core/theme';
+import { Box } from '@real-system/core/box';
+import { ThemeProvider } from '@real-system/core/theme';
 
 const MyComponent = () => (
   <ThemeProvider>

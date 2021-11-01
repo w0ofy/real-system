@@ -12,8 +12,8 @@ ${ignoreList.join('\n')}`;
 
   logger.gray('Generating .gitignore');
   return writeToFile(path.join(__dirname, '../../.gitignore'), content, {
-    successMessage: '[@realsystem/core] Generated ".gitignore".',
-    errorMessage: '[@realsystem/core] Failed to generate ".gitignore".',
+    successMessage: '[@real-system/core] Generated ".gitignore".',
+    errorMessage: '[@real-system/core] Failed to generate ".gitignore".',
   });
 };
 

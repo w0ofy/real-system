@@ -34,7 +34,7 @@ module.exports = {
       propFilter: (prop) => {
         // document props from styled-system
         return prop.parent
-          ? /realsystem\/node_modules\/@types\/styled-system\/index.d.ts/.test(
+          ? /real-system\/node_modules\/@types\/styled-system\/index.d.ts/.test(
               prop?.parent?.fileName
             )
           : true;

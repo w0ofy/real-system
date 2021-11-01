@@ -1,6 +1,6 @@
 const { join } = require('path');
 
-const BLOCKLIST = ['@realsystem/core'];
+const BLOCKLIST = ['@real-system/core'];
 
 const PACKAGES_ROOT_PATH = join(__dirname, '../../../..');
 const CORE_LIBRARIES = ['styling'];

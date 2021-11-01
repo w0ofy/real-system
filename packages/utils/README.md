@@ -1,4 +1,4 @@
-# `@realsystem/utils`
+# `@real-system/utils`
 
 A series of javascript and typescript helpers for Real System.
 
@@ -15,15 +15,15 @@ $ yarn add react react-dom
 # install utils
 
 # npm
-$ npm install @realsystem/utils
+$ npm install @real-system/utils
 # yarn
-$ yarn add @realsystem/utils
+$ yarn add @real-system/utils
 ```
 
 ### Code Example
 
 ```javascript
-import { ValueOf } from '@realsystem/utils`;
+import { ValueOf } from '@real-system/utils`;
 
 const obj = {
   keyOne: 'one',

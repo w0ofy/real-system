@@ -1,10 +1,10 @@
 function capitalize<T = string>(str: string): T | string {
   if (!str || typeof str !== 'string') {
     /**
-     * @todo add logger util in `@realsystem/utils`
+     * @todo add logger util in `@real-system/utils`
      */
     console.log(
-      '[@realsystem/utils/capitalize]: capitalize requires a string argument'
+      '[@real-system/utils/capitalize]: capitalize requires a string argument'
     );
     return '';
   }

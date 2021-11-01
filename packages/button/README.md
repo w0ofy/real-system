@@ -1,4 +1,4 @@
-# `@realsystem/button`
+# `@real-system/button`
 
 ## Usage
 
@@ -6,23 +6,23 @@
 # install peer dependencies
 
 # npm
-$ npm install @realsystem/styling @realsystem/box @realsystem/utils react react-dom
+$ npm install @real-system/styling @real-system/box @real-system/utils react react-dom
 # yarn
-$ yarn add @realsystem/styling @realsystem/box @realsystem/utils react react-dom
+$ yarn add @real-system/styling @real-system/box @real-system/utils react react-dom
 
 # install icon
 
 # npm
-$ npm install @realsystem/icon
+$ npm install @real-system/icon
 # yarn
-$ yarn add @realsystem/icon
+$ yarn add @real-system/icon
 ```
 
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@realsystem/theme`;
-import { Button } from '@realsystem/button`;
+import { ThemeProvider } from '@real-system/theme`;
+import { Button } from '@real-system/button`;
 
 const MyComponent = () => {
   return (

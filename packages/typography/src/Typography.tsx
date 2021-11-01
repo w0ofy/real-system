@@ -1,6 +1,6 @@
 import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 
-import { BoxAs } from '@realsystem/box';
+import { BoxAs } from '@real-system/box';
 
 import { Heading } from './Heading';
 import {
@@ -23,7 +23,7 @@ const TYPOGRAPHY_VARIANT_MAP: TypographyVariantMap = {
 
 /**
  * Named `TypographyComponentProps` instead of `TypographyProps` because:
- * Module '@realsystem/styling' has already exported a member named 'TypographyProps'
+ * Module '@real-system/styling' has already exported a member named 'TypographyProps'
  */
 export type TypographyComponentProps = {
   children?: React.ReactNode;

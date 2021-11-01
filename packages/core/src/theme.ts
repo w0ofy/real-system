@@ -1,1 +1,1 @@
-export * from '@realsystem/theme';
+export * from '@real-system/theme';

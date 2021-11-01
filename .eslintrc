@@ -114,7 +114,7 @@
           // react and related packages
           ["^react", "^@?\\w"],
           // @arc alias internal imports
-          ["^(@realsystem)(/.*|$)"],
+          ["^(@real-system)(/.*|$)"],
           // Side effect imports.
           ["^\\u0000"],
           // Parent imports; Puts `..` last.

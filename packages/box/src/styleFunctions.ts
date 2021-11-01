@@ -1,4 +1,4 @@
-import { css } from '@realsystem/styling';
+import { css } from '@real-system/styling';
 
 import { PseudoPropStyles } from './pseudoPropStyles';
 import { BoxProps } from './types';

@@ -19,7 +19,7 @@ export const managerConfig = {
     colorPrimary: defaultPalette.neutral,
     colorSecondary: defaultPalette.brand,
     brandTitle: `Real System v${pkg.version}`,
-    brandUrl: 'https://github.com/bigwoof91/realsystem',
+    brandUrl: 'https://github.com/bigwoof91/real-system',
     gridCellSize: 12,
   }),
 };

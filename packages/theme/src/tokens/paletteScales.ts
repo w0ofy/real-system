@@ -1,4 +1,4 @@
-import { polished } from '@realsystem/styling';
+import { polished } from '@real-system/styling';
 
 import { AnyPalette } from '../palettes';
 

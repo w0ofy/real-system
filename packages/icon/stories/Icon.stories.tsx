@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { Box } from '@realsystem/box';
-import { Icon, ICON_NAMES } from '@realsystem/icon';
+import { Box } from '@real-system/box';
+import { Icon, ICON_NAMES } from '@real-system/icon';
 
 export default {
   title: 'Components/Icon',

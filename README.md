@@ -1,4 +1,4 @@
-# `@realsystem`
+# `@real-system`
 
 An easily themeable, extendable "**Real**" component "**System**" for responsive web applications.
 
@@ -7,7 +7,7 @@ An easily themeable, extendable "**Real**" component "**System**" for responsive
 Some nice consumer-friendly features and patterns we follow
 
 - **Every component is its own package.** This supports a superior DX. Imagine an engineering team simply wants to use the Real System `Box`; we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
-- **The entire library can be installed** via `@realsystem/core` but every component is importing by accessing subfolders e.g. `@realsystem/core/button`. This resolves the need to treeshake `@realsystem/core` at build time.
+- **The entire library can be installed** via `@real-system/core` but every component is importing by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at build time.
 
 <br />
 
@@ -24,24 +24,24 @@ $ yarn add react react-dom
 # install core
 
 # npm
-$ npm install @realsystem/core
+$ npm install @real-system/core
 # yarn
-$ yarn add @realsystem/core
+$ yarn add @real-system/core
 
 # or install individual packages (remember, some packages peer-depend on other real system packages)
 
 # npm
-$ npm install @realsystem/styling @realsystem/theme @realsystem/utils @realsystem/button
+$ npm install @real-system/styling @real-system/theme @real-system/utils @real-system/button
 # yarn
-$ yarn add @realsystem/styling @realsystem/theme @realsystem/utils @realsystem/button
+$ yarn add @real-system/styling @real-system/theme @real-system/utils @real-system/button
 ```
 
 ## Usage
 
 ```jsx
-import { ThemeProvider } from '@realsystem/core/theme`;
-import { Box } from '@realsystem/core/box`;
-import { Button } from '@realsystem/core/button`;
+import { ThemeProvider } from '@real-system/core/theme`;
+import { Box } from '@real-system/core/box`;
+import { Button } from '@real-system/core/button`;
 
 
 const MyComponent = () => {
@@ -61,7 +61,7 @@ const MyComponent = () => {
 
 Some notes before you begin.
 
-- [Github Issues/Projects](https://github.com/bigwoof91/realsystem/issues) are used to track work to be completed.
+- [Github Issues/Projects](https://github.com/bigwoof91/real-system/issues) are used to track work to be completed.
 - [Yarn Workspaces](https://yarnpkg.com/features/workspaces) is used to manage the monorepo
 - Commit messages are linted and uses [commitlint](https://commitlint.js.org/#/) with [commitizen](https://commitizen-tools.github.io/commitizen/) to assist with this effort.
 

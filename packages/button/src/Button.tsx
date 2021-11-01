@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@realsystem/box';
+import { Box } from '@real-system/box';
 
 import { GhostButton } from './GhostButton';
 import { PrimaryButton } from './PrimaryButton';

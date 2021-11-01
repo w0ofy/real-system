@@ -8,7 +8,7 @@ import {
   PrimitiveThemeProviderProps,
   primitiveUseTheme as useTheme,
   primitiveWithTheme as withTheme,
-} from '@realsystem/styling';
+} from '@real-system/styling';
 
 import { GlobalStyles } from './GlobalStyles';
 import { themes } from './themes';

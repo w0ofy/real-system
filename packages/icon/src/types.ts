@@ -1,8 +1,8 @@
 import * as Feather from 'react-feather';
 
-import { SpaceProps } from '@realsystem/styling';
-import { PaletteIntents, ThemeTokens } from '@realsystem/theme';
-import { KebabCase } from '@realsystem/utils';
+import { SpaceProps } from '@real-system/styling';
+import { PaletteIntents, ThemeTokens } from '@real-system/theme';
+import { KebabCase } from '@real-system/utils';
 
 export type FeatherIconKeys = keyof typeof Feather;
 export type FeatherIconValues = typeof Feather[FeatherIconKeys];

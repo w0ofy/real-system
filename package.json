@@ -1,11 +1,11 @@
 {
-  "name": "realsystem",
+  "name": "real-system",
   "private": true,
   "version": "0.0.0",
   "description": "A real component system for responsive web applications that is themeable and extendable.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigwoof91/realsystem.git"
+    "url": "git+https://github.com/bigwoof91/real-system.git"
   },
   "keywords": [
     "design system",
@@ -18,9 +18,9 @@
   "author": "Michael Wolf",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bigwoof91/realsystem/issues"
+    "url": "https://github.com/bigwoof91/real-system/issues"
   },
-  "homepage": "https://github.com/bigwoof91/realsystem#readme",
+  "homepage": "https://github.com/bigwoof91/real-system#readme",
   "workspaces": [
     "packages/*",
     "packages/libraries/*"
@@ -43,25 +43,25 @@
     "__BUILD__": "build scripts",
     "prebuild": "run-s pkgs:check",
     "build": "run-s build:styling build:theme build:utils build:box build:icon build:typography build:button build:core",
-    "build:button": "yarn workspace @realsystem/button build",
-    "build:box": "yarn workspace @realsystem/box build",
-    "build:core": "yarn workspace @realsystem/core build",
-    "build:icon": "yarn workspace @realsystem/icon build",
-    "build:styling": "yarn workspace @realsystem/styling build",
-    "build:theme": "yarn workspace @realsystem/theme build",
-    "build:typography": "yarn workspace @realsystem/typography build",
-    "build:utils": "yarn workspace @realsystem/utils build",
+    "build:button": "yarn workspace @real-system/button build",
+    "build:box": "yarn workspace @real-system/box build",
+    "build:core": "yarn workspace @real-system/core build",
+    "build:icon": "yarn workspace @real-system/icon build",
+    "build:styling": "yarn workspace @real-system/styling build",
+    "build:theme": "yarn workspace @real-system/theme build",
+    "build:typography": "yarn workspace @real-system/typography build",
+    "build:utils": "yarn workspace @real-system/utils build",
     "build:storybook": "build-storybook",
     "__DEVELOPMENT__": "dev scripts",
     "bootstrap": "yarn && husky install",
     "dev": "concurrently 'yarn:dev:*' 'yarn storybook'",
-    "dev:button": "yarn workspace @realsystem/button dev",
-    "dev:box": "yarn workspace @realsystem/box dev",
-    "dev:icon": "yarn workspace @realsystem/icon dev",
-    "dev:styling": "yarn workspace @realsystem/styling dev",
-    "dev:theme": "yarn workspace @realsystem/theme dev",
-    "dev:typography": "yarn workspace @realsystem/typography dev",
-    "dev:utils": "yarn workspace @realsystem/utils dev",
+    "dev:button": "yarn workspace @real-system/button dev",
+    "dev:box": "yarn workspace @real-system/box dev",
+    "dev:icon": "yarn workspace @real-system/icon dev",
+    "dev:styling": "yarn workspace @real-system/styling dev",
+    "dev:theme": "yarn workspace @real-system/theme dev",
+    "dev:typography": "yarn workspace @real-system/typography dev",
+    "dev:utils": "yarn workspace @real-system/utils dev",
     "__SANDBOX__": "local sandbox & website scripts",
     "website": "cd website && yarn start",
     "storybook": "start-storybook -p 6006"

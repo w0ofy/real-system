@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxStyleProps } from '@realsystem/box';
+import { Box, BoxStyleProps } from '@real-system/box';
 
 import {
   HeadingAsTags,

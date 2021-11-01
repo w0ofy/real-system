@@ -1,6 +1,6 @@
 import get from 'lodash.get';
 
-import { DefaultTheme } from '@realsystem/styling';
+import { DefaultTheme } from '@real-system/styling';
 
 import {
   backgroundColors,
