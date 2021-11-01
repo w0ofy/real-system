@@ -2,7 +2,7 @@
  * The selectors are based on [WAI-ARIA state properties](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties) and common CSS Selectors
  * Based on the excellent work done in https://github.com/chakra-ui/chakra-ui
  */
-const PseudoPropStyles = {
+const PSEUDO_PROP_STYLES = {
   _hover: '&:hover',
   _active: '&:active, &[data-active=true]',
   _focus: '&:focus',
@@ -39,4 +39,4 @@ const PseudoPropStyles = {
     '&::-webkit-calendar-picker-indicator:hover',
 };
 
-export { PseudoPropStyles };
+export { PSEUDO_PROP_STYLES };

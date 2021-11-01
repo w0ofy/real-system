@@ -2,7 +2,7 @@ import type { Property } from 'csstype';
 
 import type { StyleProps } from '@real-system/styling';
 
-import { PseudoPropStyles } from './pseudoPropStyles';
+import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 
 export type BoxBaseStyleProps = StyleProps & {
   animation?: Property.Animation;
@@ -36,7 +36,7 @@ export type BoxBaseStyleProps = StyleProps & {
 };
 
 export type BoxPseudoStyleProps = {
-  [key in keyof typeof PseudoPropStyles]?: BoxBaseStyleProps;
+  [key in keyof typeof PSEUDO_PROP_STYLES]?: BoxBaseStyleProps;
 };
 
 export type BoxStyleProps = BoxBaseStyleProps & BoxPseudoStyleProps;
