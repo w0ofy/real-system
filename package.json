@@ -39,7 +39,7 @@
     "__RELEASE": "",
     "pkgs:changeset": "changeset",
     "pkgs:version": "changeset version",
-    "pkgs:release:": "yarn changeset publish",
+    "pkgs:publish": "yarn changeset publish",
     "__BUILD__": "build scripts",
     "prebuild": "run-s pkgs:check",
     "build": "run-s build:styling build:theme build:utils build:box build:icon build:typography build:button build:core",
