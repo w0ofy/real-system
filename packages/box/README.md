@@ -1,7 +1,8 @@
 <h1 align="center">@realsystem/box</h1>
 <p align="center">Real System's primitive Box component.</p>
 <p align="center">
-<a href="https://badge.fury.io/js/@real-system%2Fbox"><img src="https://badge.fury.io/js/@real-system%2Fbox.svg" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/box"><img src="https://badgen.net/npm/v/@real-system/box?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/box"><img src="https://badgen.net/bundlephobia/min/@real-system/box" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

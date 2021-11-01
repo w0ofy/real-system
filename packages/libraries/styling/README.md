@@ -1,7 +1,8 @@
 <h1 align="center">@real-system/styling</h1>
 <p align="center">Real System's styling library.</p>
 <p align="center">
-<a href="https://badge.fury.io/js/@real-system%2Fstyling"><img src="https://badge.fury.io/js/@real-system%2Fstyling.svg" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/styling"><img src="https://badgen.net/npm/v/@real-system/styling?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/styling"><img src="https://badgen.net/bundlephobia/min/@real-system/styling" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

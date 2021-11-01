@@ -1,7 +1,8 @@
 <h1 align="center">@real-system/theme</h1>
 <p align="center">Real System's theming components and helpers.</p>
 <p align="center">
-<a href="https://badge.fury.io/js/@real-system%2Ftheme"><img src="https://badge.fury.io/js/@real-system%2Ftheme.svg" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/theme"><img src="https://badgen.net/npm/v/@real-system/theme?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/theme"><img src="https://badgen.net/bundlephobia/min/@real-system/theme" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

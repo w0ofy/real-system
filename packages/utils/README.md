@@ -1,7 +1,8 @@
 <h1 align="center">@real-system/utils</h1>
 <p align="center">Real System's series of javascript and typescript helpers.</p>
 <p align="center">
-<a href="https://badge.fury.io/js/@real-system%2Futils"><img src="https://badge.fury.io/js/@real-system%2Futils.svg" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/utils"><img src="https://badgen.net/npm/v/@real-system/utils?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/utils"><img src="https://badgen.net/bundlephobia/min/@real-system/utils" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage
