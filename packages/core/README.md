@@ -5,8 +5,6 @@
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/bundlephobia/min/@real-system/core" alt="minified size" height="18"/></a>
 </p>
 
-[bundlephobia](https://bundlephobia.com/package/@real-system/core@1.7.5)
-
 ## Usage
 
 ### Installation
