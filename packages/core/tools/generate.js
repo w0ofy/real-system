@@ -17,11 +17,11 @@ const generateUnbarreledExports = require('./utils/generateUnbarreledExports');
    */
   await generateUnbarreledExports();
   /*
-   * Generate a .gitignore file to prevent committing built files
-   */
-  await generateGitIgnore();
-  /*
    * Generate package.json for each unbarreled export
    */
   await generatePkgJson();
+  /*
+   * Generate a .gitignore file to prevent committing built files
+   */
+  await generateGitIgnore();
 })();

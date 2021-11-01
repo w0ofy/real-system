@@ -1,11 +1,19 @@
 import * as Feather from 'react-feather';
 
 import { SpaceProps } from '@realsystem/styling';
-import { ThemeTokens } from '@realsystem/theme';
+import { PaletteIntents, ThemeTokens } from '@realsystem/theme';
+import { KebabCase } from '@realsystem/utils';
 
+export type FeatherIconKeys = keyof typeof Feather;
+export type FeatherIconValues = typeof Feather[FeatherIconKeys];
 export type InternalIconProps = Feather.IconProps;
-export type Icons = keyof typeof Feather;
-export type IconIntent = 'default' | 'brand' | 'success' | 'danger' | 'warning';
+export type Icons = KebabCase<FeatherIconKeys>;
+export type IconIntent =
+  | Extract<
+      PaletteIntents,
+      'primary' | 'success' | 'danger' | 'warning' | 'info'
+    >
+  | 'default';
 export type IconProps = {
   icon: Icons;
   size?:
@@ -27,11 +35,3 @@ export type IconProps = {
     | 'size-icon-button-small';
   intent?: IconIntent;
 } & SpaceProps;
-
-const ICONS = (() => {
-  const icons = {};
-  Object.keys(Feather).forEach((icon) => (icons[icon] = icon));
-  return icons as { [key in Icons]: Icons };
-})();
-
-export { ICONS };

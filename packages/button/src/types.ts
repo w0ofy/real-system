@@ -3,9 +3,13 @@ import React from 'react';
 import { BoxStyleProps } from '@realsystem/box';
 import { SpaceProps } from '@realsystem/styling';
 
+import { PaletteIntents } from '../../theme/src/palettes/types';
+
 export type ButtonSizes = 'small' | 'default';
 export type ButtonVariants = 'primary' | 'secondary' | 'ghost';
-export type ButtonIntents = 'default' | 'danger' | 'neutral';
+export type ButtonIntents =
+  | 'default'
+  | Extract<PaletteIntents, 'danger' | 'neutral'>;
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';

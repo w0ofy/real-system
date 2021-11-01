@@ -1,7 +1,8 @@
 {
   "name": "@realsystem/utils",
-  "version": "1.5.5",
+  "version": "1.6.0",
   "description": "utilities for real system",
+  "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -33,7 +34,8 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "deepmerge": "^4.2.2"
+    "deepmerge": "^4.2.2",
+    "type-fest": "^2.5.2"
   },
   "devDependencies": {
     "react": "^17.0.2",

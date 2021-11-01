@@ -1,6 +1,6 @@
-import { BoxStyleProps } from '@realsystem/box';
+import { SpaceProps, TypographyProps } from '@realsystem/styling';
 
-export type InternalTypographyProps = Pick<BoxStyleProps, 'mb'>;
+export type InternalTypographyProps = SpaceProps & TypographyProps;
 export type TypographyVariants = 'paragraph' | 'inline';
 export type TypographyAsTags = Extract<
   keyof JSX.IntrinsicElements,

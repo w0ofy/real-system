@@ -68,16 +68,16 @@ export type ThemeTokens =
 export type ThemeScales = keyof DefaultTheme;
 
 type Props = { theme: DefaultTheme };
-type Fallback = string | number | null;
+export type GetTokenReturnValue = string | number | null;
 /**
  * A styleFn to get theme tokens
  */
 const getToken = (
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
-  fallback: Fallback = null
+  fallback: GetTokenReturnValue = null
 ) => {
-  return function (props: Props): string | number | null {
+  return function (props: Props): GetTokenReturnValue {
     return get(props.theme, `${scale}.${token}`, fallback);
   };
 };

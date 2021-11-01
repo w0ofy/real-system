@@ -1,3 +1,3 @@
 export * from './Box';
 export * from './filterStyleProps';
-export type { BoxPseudoStyleProps, BoxStyleProps } from './types';
+export type { BoxProps, BoxPseudoStyleProps, BoxStyleProps } from './types';

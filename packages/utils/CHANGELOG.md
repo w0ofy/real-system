@@ -1,5 +1,11 @@
 # @realsystem/utils
 
+## 1.6.0
+
+### Minor Changes
+
+- [`25e0179`](https://github.com/bigwoof91/realsystem/commit/25e01792f6f1e1293285b1777cd803e48aea88e9) - kebab-cased icons; added useToken hook; updated token values; updated docs; buttons now a11y compliant
+
 ## 1.5.5
 
 ### Patch Changes
