@@ -1,6 +1,6 @@
 {
   "name": "@real-system/core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@real-system/box": "^0.0.0",
-    "@real-system/button": "^0.0.0",
+    "@real-system/button": "^0.0.1",
     "@real-system/icon": "^0.0.0",
     "@real-system/styling": "^0.0.0",
     "@real-system/theme": "^0.0.0",
