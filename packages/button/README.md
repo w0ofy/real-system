@@ -25,8 +25,8 @@ $ yarn add @real-system/icon
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme`;
-import { Button } from '@real-system/button`;
+import { ThemeProvider } from '@real-system/theme';
+import { Button } from '@real-system/button';
 
 const MyComponent = () => {
   return (

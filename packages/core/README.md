@@ -21,9 +21,9 @@ $ yarn add @real-system/core react react-dom
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/core/theme`;
-import { Box } from '@real-system/core/box`;
-import { Button } from '@real-system/core/button`;
+import { ThemeProvider } from '@real-system/core/theme';
+import { Box } from '@real-system/core/box';
+import { Button } from '@real-system/core/button';
 
 const MyComponent = () => {
   return (

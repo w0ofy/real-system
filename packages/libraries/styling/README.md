@@ -27,7 +27,7 @@ $ yarn add @real-system/styling
 ### Code Example
 
 ```jsx
-import styled from '@real-system/styling`;
+import styled from '@real-system/styling';
 
 const Flex = styled.div`
   display: flex;

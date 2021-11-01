@@ -25,11 +25,11 @@ $ yarn add @real-system/typography
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme`;
-import { Typography } from '@real-system/typography`;
+import { ThemeProvider } from '@real-system/theme';
+import { Typography } from '@real-system/typography';
 
 /** can also import Heading separately like this
- * import { Heading } from '@real-system/typography`;
+ * import { Heading } from '@real-system/typography';
  */
 const MyComponent = () => {
   return (

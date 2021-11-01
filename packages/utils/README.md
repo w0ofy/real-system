@@ -25,7 +25,7 @@ $ yarn add @real-system/utils
 ### Code Example
 
 ```javascript
-import { ValueOf } from '@real-system/utils`;
+import { ValueOf } from '@real-system/utils';
 
 const obj = {
   keyOne: 'one',

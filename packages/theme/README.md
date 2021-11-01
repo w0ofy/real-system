@@ -27,7 +27,7 @@ $ yarn add @real-system/theme
 ### Code Example
 
 ```jsx
-import { ThemeProvider, useToken } from '@real-system/theme`;
+import { ThemeProvider, useToken } from '@real-system/theme';
 
 const OtherComponent = () => {
   const token = useToken('color-background');
