@@ -1,6 +1,6 @@
 import { css } from '@real-system/styling';
 
-import { PseudoPropStyles } from './pseudoPropStyles';
+import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 import { BoxProps } from './types';
 
 /**
@@ -14,7 +14,7 @@ const getPseudoStyles = (
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
-  ) as Array<keyof typeof PseudoPropStyles>;
+  ) as Array<keyof typeof PSEUDO_PROP_STYLES>;
 
   if (pseudoProps.length === 0) {
     return {};
@@ -22,8 +22,8 @@ const getPseudoStyles = (
 
   const pseudoStyles: { [key: string]: any } = {};
   pseudoProps.forEach((pseudoProp) => {
-    if (PseudoPropStyles[pseudoProp] != null) {
-      pseudoStyles[PseudoPropStyles[pseudoProp]] = props[pseudoProp];
+    if (PSEUDO_PROP_STYLES[pseudoProp] != null) {
+      pseudoStyles[PSEUDO_PROP_STYLES[pseudoProp]] = props[pseudoProp];
     }
   });
 
