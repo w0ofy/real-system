@@ -11,6 +11,52 @@ Some nice consumer-friendly features and patterns we follow
 
 <br />
 
+## Installation
+
+```bash
+# install peer dependencies
+
+# npm
+$ npm install react react-dom
+# yarn
+$ yarn add react react-dom
+
+# install core
+
+# npm
+$ npm install @realsystem/core
+# yarn
+$ yarn add @realsystem/core
+
+# or install individual packages (remember, some packages peer-depend on other real system packages)
+
+# npm
+$ npm install @realsystem/styling @realsystem/theme @realsystem/utils @realsystem/button
+# yarn
+$ yarn add @realsystem/styling @realsystem/theme @realsystem/utils @realsystem/button
+```
+
+## Usage
+
+```jsx
+import { ThemeProvider } from '@realsystem/core/theme`;
+import { Box } from '@realsystem/core/box`;
+import { Button } from '@realsystem/core/button`;
+
+
+const MyComponent = () => {
+  return (
+    <ThemeProvider>
+      <Box display="flex" flexDirection="column">
+        <Button mb={8}>Primary Button</Button>
+        <Button mb={8} variant="secondary">Secondary Button</Button>
+        <Button variant="ghost">Ghost Button</Button>
+      </Box>
+    </ThemeProvider>
+  );
+};
+```
+
 ## Local Dev
 
 Some notes before you begin.
