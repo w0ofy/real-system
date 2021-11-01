@@ -1,6 +1,6 @@
 {
   "name": "@realsystem/box",
-  "version": "8.0.5",
+  "version": "9.0.0",
   "description": "A basic div with style props that should be used to build other components",
   "status": "production",
   "main": "lib/index.js",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/realsystem#readme",
   "peerDependencies": {
-    "@realsystem/styling": "^1.6.5",
+    "@realsystem/styling": "^1.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -39,7 +39,7 @@
     "deepmerge": "^4.2.2"
   },
   "devDependencies": {
-    "@realsystem/styling": "^1.6.5",
+    "@realsystem/styling": "^1.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

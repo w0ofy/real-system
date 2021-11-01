@@ -1,5 +1,16 @@
 # @realsystem/styling
 
+## 3.0.0
+
+### Minor Changes
+
+- [`25e0179`](https://github.com/bigwoof91/realsystem/commit/25e01792f6f1e1293285b1777cd803e48aea88e9) - kebab-cased icons; added useToken hook; updated token values; updated docs; buttons now a11y compliant
+
+### Patch Changes
+
+- Updated dependencies [[`25e0179`](https://github.com/bigwoof91/realsystem/commit/25e01792f6f1e1293285b1777cd803e48aea88e9)]:
+  - @realsystem/styling@1.7.0
+
 ## 2.0.5
 
 ### Patch Changes
