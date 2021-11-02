@@ -38,7 +38,7 @@
     "commit": "git-cz",
     "__RELEASE": "",
     "changeset": "changeset",
-    "version": "yarn changeset version && yarn install --mode=update-lockfile",
+    "version:stable": "yarn changeset version && yarn install --mode=update-lockfile",
     "version:next": "yarn changeset pre enter next && yarn version",
     "release": "yarn build && yarn changeset publish",
     "__BUILD__": "build scripts",

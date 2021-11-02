@@ -39,7 +39,7 @@ jobs:
       - name: Version packages and create pull request
         uses: changesets/action@master
         with:
-          version: yarn version
+          version: yarn version:stable
           commit: "chore(release): version packages"
           title: "chore(release): version packages"
         env:
