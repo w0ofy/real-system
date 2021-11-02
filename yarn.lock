@@ -2129,6 +2129,44 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@real-system/box@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@real-system/box/-/box-0.0.0.tgz#adc1c9a9c1b82671cf6931cbc8c7dea67ed732d3"
+  integrity sha512-n0BV8oqYB7JJLL6KklWbD8OeCR1DQT6MLiY5Nn26JTLKa9zCzS9i194v0lLi2vMszLMFQ+EccmNHhZFVH1OXlg==
+  dependencies:
+    csstype "^3.0.9"
+    deepmerge "^4.2.2"
+
+"@real-system/button@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@real-system/button/-/button-0.0.1.tgz#7711545b5ac5cb3f700d3fe04273e9c0889294da"
+  integrity sha512-Yhadqei282Nrif9CEdJgdn3JV1oHlgUXLEkmW+znXD9gunLx/9W+8wGJeDzlr6sHJoQ18K82GDpZNf6LcZyK4g==
+
+"@real-system/core@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@real-system/core/-/core-0.0.1.tgz#b4a1b3a6fd67cc8674cd243fc486335ab9bb7d13"
+  integrity sha512-7sUyrH3OpzcOBAB2oVdv5iobpMO9w24jSRfZIAs+cCTqScH0J9BMpX3UoECy0GxomdjwMFXRcarxdnUGXOilAg==
+  dependencies:
+    "@real-system/box" "^0.0.0"
+    "@real-system/button" "^0.0.1"
+    "@real-system/icon" "^0.0.0"
+    "@real-system/styling" "^0.0.0"
+    "@real-system/theme" "^0.0.0"
+    "@real-system/typography" "^0.0.0"
+    "@real-system/utils" "^0.0.0"
+
+"@real-system/icon@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@real-system/icon/-/icon-0.0.0.tgz#f1a8c4102be2ae32735f5743140d7b88e7a7509f"
+  integrity sha512-I3iBwCqfQOmVlL1Fp+YOglFr/ofnBC79uI3HiaCvBDk1y5uXfrEvzWL9eWkkc0Wxvuf2E53PY1kObwNyVq+jtg==
+  dependencies:
+    react-feather "^2.0.9"
+
+"@real-system/typography@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@real-system/typography/-/typography-0.0.0.tgz#bdc1e1d2537ff44ad48cdd328c5d059779133eab"
+  integrity sha512-cCCBfPmSn9xBQygx6fKbX6R/lYZ0OcicO36LDFY1nmH6FH3WEIYEVO/d5/zWO8JpCFxsMbY+maRo0WTVKfAD6g==
+
 "@rollup/plugin-babel@^5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.0.tgz#9cb1c5146ddd6a4968ad96f209c50c62f92f9879"
