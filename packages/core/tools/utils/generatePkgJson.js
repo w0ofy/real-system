@@ -14,7 +14,7 @@ const { getWorkspacesInfo } = require('./subPackageUtils');
 // };
 
 /**
- * @todo refactor to use lerna / yarn commands
+ * @todo refactor to use yarn commands? maybe?
  */
 const writePkgJson = async (pkg) => {
   const pkgJson = {
