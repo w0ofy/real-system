@@ -2,11 +2,16 @@ import { Property } from 'csstype';
 
 import { polished } from '@real-system/styling';
 
-import { getPaletteColor, Palette, PaletteKeys } from '../palettes';
+import {
+  getPaletteColor,
+  getPaletteContrast,
+  Palette,
+  PaletteKeys,
+} from '../palettes';
 
 import { ColorPrefixes, ColorSuffixes } from './types';
 
-const { tint, shade, invert, complement } = polished;
+const { tint, shade, invert } = polished;
 
 type FnReturnValue<T extends ColorPrefixes, O extends PaletteKeys> = Record<
   `${T}-${O}-${ColorSuffixes}` | `${T}-${O}`,
@@ -25,7 +30,7 @@ const makeColorRange =
     return {
       [`${prefix}-${paletteKey}`]: color,
       [`${prefix}-${paletteKey}-highlight`]: invert(color),
-      [`${prefix}-${paletteKey}-complement`]: complement(color),
+      [`${prefix}-${paletteKey}-inverse`]: getPaletteContrast(palette, color),
       [`${prefix}-${paletteKey}-muted`]: tint(0.3, color),
       [`${prefix}-${paletteKey}-weak`]: tint(0.3, color),
       [`${prefix}-${paletteKey}-weaker`]: tint(0.6, color),

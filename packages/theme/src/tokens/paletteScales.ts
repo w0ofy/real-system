@@ -93,7 +93,6 @@ const borders = (palette: Palette) => ({
 });
 
 const shadow = makeColorRange<'shadow'>('shadow');
-
 const shadows = (palette: Palette) => {
   const shadowWeak = shadow<'weak'>('weak', palette);
   return {

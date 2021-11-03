@@ -10,7 +10,7 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-inverse',
+    color: 'color-background-brand-inverse',
     backgroundColor: 'color-background-brand',
     _hover: {
       backgroundColor: 'color-background-brand-strong',
@@ -32,7 +32,7 @@ const defaultStyles: ButtonStyles = {
 const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     backgroundColor: 'color-background-danger',
-    color: 'color-text-inverse',
+    color: 'color-background-danger-inverse',
     _hover: {
       backgroundColor: 'color-background-danger-strong',
     },
@@ -53,7 +53,7 @@ const dangerStyles: ButtonStyles = {
 const neutralStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     backgroundColor: 'color-background-neutral',
-    color: 'color-text-inverse',
+    color: 'color-background-neutral-inverse',
     _hover: {
       backgroundColor: 'color-background-neutral-strong',
     },

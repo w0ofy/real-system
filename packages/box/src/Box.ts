@@ -4,7 +4,6 @@ import styled, {
   composeStyleProps,
   DefaultTheme,
   StyledComponent,
-  StyledFunction,
 } from '@real-system/styling';
 
 import { getPseudoStyles } from './styleFunctions';

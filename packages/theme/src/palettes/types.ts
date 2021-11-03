@@ -1,5 +1,3 @@
-import get from 'lodash.get';
-
 import { AddPrefix } from '@real-system/utils';
 
 /**
@@ -52,13 +50,3 @@ export type Palette<T = string> = {
   accent: { [key in PaletteAccents]: T };
   status: { [key in PaletteStatuses]: T };
 } & { [key in PaletteRest]: T };
-
-const getPaletteColor = (palette: Palette, key: PaletteKeys): string => {
-  const color =
-    get(palette, key, false) ||
-    get(palette, `status.${key}`, false) ||
-    get(palette, `accent.${key}`, '');
-  return color;
-};
-
-export { getPaletteColor };

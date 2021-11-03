@@ -5,6 +5,7 @@ import styled from 'styled-components';
  * styled-system (with css prop util) and styled-components
  */
 export * from './styled-components';
+export { default as css } from '@styled-system/css';
 export * as polished from 'polished';
 export type {
   AnyStyledComponent,
@@ -53,6 +54,6 @@ export {
 /**
  * styled, css and token utilities
  */
+export * from './colorUtils';
 export * from './styleProps';
-export { default as css } from '@styled-system/css';
 export default styled;
