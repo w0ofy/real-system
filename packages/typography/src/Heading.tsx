@@ -16,13 +16,13 @@ const styles: {
   >;
 } = {
   heading1: {
-    fontSize: 8,
+    fontSize: 10,
     fontWeight: 4,
     lineHeight: 11,
     mb: 9,
   },
   heading2: {
-    fontSize: 6,
+    fontSize: 7,
     lineHeight: 10,
     fontWeight: 4,
     mb: 7,

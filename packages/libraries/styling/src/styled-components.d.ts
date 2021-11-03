@@ -2,19 +2,17 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    palette: Record<
-      | 'brand'
-      | 'primary'
-      | 'secondary'
-      | 'success'
-      | 'warning'
-      | 'danger'
-      | 'info'
-      | 'strong'
-      | 'weak'
-      | 'neutral',
-      any
-    >;
+    palette: {
+      brand: string;
+      accent: Record<'primary' | 'secondary' | 'tertiary' | 'quaternary', any>;
+      status: Record<
+        'success' | 'warning' | 'danger' | 'info' | 'disabled',
+        any
+      >;
+      strong: string;
+      weak: string;
+      neutral: string;
+    };
     colors: Record<string, string>;
     borders: Record<string, any>;
     borderWidths: Record<string, any>;

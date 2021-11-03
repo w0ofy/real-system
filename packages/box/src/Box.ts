@@ -22,12 +22,14 @@ type Element = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 const BoxAs = <T>(
-  element: Element
+  element: Element,
+  ...styleFn: any[]
 ): StyledComponent<Element, DefaultTheme, BoxProps & T> =>
   styled(element)<BoxProps & T>(
     { boxSizing: 'border-box' },
     composeStyleProps(),
-    getPseudoStyles
+    getPseudoStyles,
+    styleFn
   );
 
 export { Box, BoxAs };

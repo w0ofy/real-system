@@ -20,7 +20,7 @@ const BoxAsIcon = BoxAs<Pick<IconProps, 'icon'> & InternalIconProps>(
 
 const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
   default: 'color-text',
-  primary: 'color-text-primary',
+  primary: 'color-text-brand',
   success: 'color-text-success',
   danger: 'color-text-danger',
   warning: 'color-text-warning',

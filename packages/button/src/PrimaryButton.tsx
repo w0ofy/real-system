@@ -10,29 +10,29 @@ type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-inverse',
-    backgroundColor: 'color-background-primary',
+    color: 'color-background-brand-inverse',
+    backgroundColor: 'color-background-brand',
     _hover: {
-      backgroundColor: 'color-background-primary-strong',
+      backgroundColor: 'color-background-brand-strong',
     },
     _active: {
-      backgroundColor: 'color-background-primary-stronger',
+      backgroundColor: 'color-background-brand-stronger',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-primary-weaker',
-    backgroundColor: 'color-background-primary-weakest',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-primary-weaker',
-    backgroundColor: 'color-background-primary-weakest',
+    color: 'color-text-brand-weaker',
+    backgroundColor: 'color-background-brand-weakest',
   }),
 };
 
 const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     backgroundColor: 'color-background-danger',
-    color: 'color-text-inverse',
+    color: 'color-background-danger-inverse',
     _hover: {
       backgroundColor: 'color-background-danger-strong',
     },
@@ -53,7 +53,7 @@ const dangerStyles: ButtonStyles = {
 const neutralStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     backgroundColor: 'color-background-neutral',
-    color: 'color-text-inverse',
+    color: 'color-background-neutral-inverse',
     _hover: {
       backgroundColor: 'color-background-neutral-strong',
     },
