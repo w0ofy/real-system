@@ -22,7 +22,7 @@ const resetStyles: BoxStyleProps = {
   px: 9,
   py: 6,
   margin: 'space-0',
-  _focus: { outline: '2px solid', outlineColor: 'color-border-brand' },
+  _focus: { outline: '2px solid', outlineColor: 'color-border-primary' },
 };
 
 const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {

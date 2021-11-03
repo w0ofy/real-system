@@ -1,3 +1,2 @@
-export * from './darkBrand';
-export * from './defaultBrand';
+export * from './defaultPalette';
 export * from './types';

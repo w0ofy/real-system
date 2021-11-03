@@ -15,7 +15,7 @@ export const managerConfig = {
   },
   theme: create({
     ...themes.light,
-    barSelectedColor: defaultPalette.primary,
+    barSelectedColor: defaultPalette.brand,
     colorPrimary: defaultPalette.neutral,
     colorSecondary: defaultPalette.brand,
     brandTitle: `Real System v${pkg.version}`,

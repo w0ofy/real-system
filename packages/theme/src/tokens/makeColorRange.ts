@@ -2,7 +2,7 @@ import { Property } from 'csstype';
 
 import { polished } from '@real-system/styling';
 
-import { AnyPalette, PaletteKeys } from '../palettes';
+import { getPaletteColor, Palette, PaletteKeys } from '../palettes';
 
 import { ColorPrefixes, ColorSuffixes } from './types';
 
@@ -16,23 +16,23 @@ type FnReturnValue<T extends ColorPrefixes, O extends PaletteKeys> = Record<
 const makeColorRange =
   <T extends ColorPrefixes>(colorPrefix: T) =>
   <O extends PaletteKeys>(
-    paletteColor: O,
-    palette: AnyPalette
+    paletteKey: O,
+    palette: Palette
   ): FnReturnValue<T, O> => {
-    const color = palette[paletteColor];
-    const paletteColorName = paletteColor as O;
+    const color = getPaletteColor(palette, paletteKey);
     const prefix = colorPrefix as T;
+
     return {
-      [`${prefix}-${paletteColorName}`]: color,
-      [`${prefix}-${paletteColorName}-highlight`]: invert(color),
-      [`${prefix}-${paletteColorName}-complement`]: complement(color),
-      [`${prefix}-${paletteColorName}-muted`]: tint(0.3, color),
-      [`${prefix}-${paletteColorName}-weak`]: tint(0.3, color),
-      [`${prefix}-${paletteColorName}-weaker`]: tint(0.6, color),
-      [`${prefix}-${paletteColorName}-weakest`]: tint(0.9, color),
-      [`${prefix}-${paletteColorName}-strong`]: shade(0.3, color),
-      [`${prefix}-${paletteColorName}-stronger`]: shade(0.6, color),
-      [`${prefix}-${paletteColorName}-strongest`]: shade(0.9, color),
+      [`${prefix}-${paletteKey}`]: color,
+      [`${prefix}-${paletteKey}-highlight`]: invert(color),
+      [`${prefix}-${paletteKey}-complement`]: complement(color),
+      [`${prefix}-${paletteKey}-muted`]: tint(0.3, color),
+      [`${prefix}-${paletteKey}-weak`]: tint(0.3, color),
+      [`${prefix}-${paletteKey}-weaker`]: tint(0.6, color),
+      [`${prefix}-${paletteKey}-weakest`]: tint(0.9, color),
+      [`${prefix}-${paletteKey}-strong`]: shade(0.3, color),
+      [`${prefix}-${paletteKey}-stronger`]: shade(0.6, color),
+      [`${prefix}-${paletteKey}-strongest`]: shade(0.9, color),
     } as FnReturnValue<T, O>;
   };
 

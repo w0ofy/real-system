@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
  
   html {
     font-size: 0.625rem;
-    outline-color: ${getToken('color-border-brand')};
+    outline-color: ${getToken('color-border-primary')};
   }
 
   body {
