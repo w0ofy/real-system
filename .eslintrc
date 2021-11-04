@@ -113,7 +113,7 @@
           ["^\\u0000"],
           // react and related packages
           ["^react", "^@?\\w"],
-          // @arc alias internal imports
+          // @real-system alias internal imports
           ["^(@real-system)(/.*|$)"],
           // Side effect imports.
           ["^\\u0000"],
