@@ -53,10 +53,11 @@
     "build:theme": "yarn workspace @real-system/theme build",
     "build:typography": "yarn workspace @real-system/typography build",
     "build:utils": "yarn workspace @real-system/utils build",
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook -o .storybook/build",
+    "build:playroom": "playroom build",
     "__DEVELOPMENT__": "dev scripts",
     "bootstrap": "yarn && husky install",
-    "dev": "concurrently 'yarn:dev:*' 'yarn storybook'",
+    "dev": "concurrently 'yarn:dev:*' 'yarn storybook' 'yarn:playroom'",
     "dev:button": "yarn workspace @real-system/button dev",
     "dev:box": "yarn workspace @real-system/box dev",
     "dev:icon": "yarn workspace @real-system/icon dev",
@@ -66,7 +67,8 @@
     "dev:utils": "yarn workspace @real-system/utils dev",
     "__SANDBOX__": "local sandbox & website scripts",
     "website": "cd website && yarn start",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "playroom": "playroom start"
   },
   "config": {
     "commitizen": {
@@ -153,6 +155,7 @@
     "semantic-release": "^18.0.0",
     "semantic-release-monorepo": "^7.0.5",
     "storybook-addon-performance": "^0.16.1",
+    "storybook-addon-playroom": "^2.1.4",
     "styled-components": "^5.3.3",
     "terser": "^5.9.0",
     "type-fest": "^2.5.2",

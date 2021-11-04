@@ -57,7 +57,7 @@
       "env": {
         "jest/globals": true
       },
-      "files": ["*.spec.ts", "*.spec.tsx"],
+      "files": ["*.test.ts", "*.test.tsx"],
       "extends": [
         "plugin:testing-library/react",
         "plugin:jest/recommended"
@@ -113,7 +113,7 @@
           ["^\\u0000"],
           // react and related packages
           ["^react", "^@?\\w"],
-          // @real-system alias internal imports
+          // @real-system workspace/alias imports
           ["^(@real-system)(/.*|$)"],
           // Side effect imports.
           ["^\\u0000"],

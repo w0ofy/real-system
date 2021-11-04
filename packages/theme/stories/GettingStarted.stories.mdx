@@ -1,13 +1,8 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta
-  title="Getting Started"
-  parameters={{
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-  }}
-/>
+import { makeMdxParameters } from '/.storybook/utils';
+
+<Meta title="Real System/Getting Started" parameters={makeMdxParameters()} />
 
 # Getting Started
 
