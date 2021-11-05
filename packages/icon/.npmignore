@@ -2,3 +2,4 @@ src
 tools
 stories
 tsconfig.json
+__tests__
