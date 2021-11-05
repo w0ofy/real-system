@@ -36,17 +36,17 @@ export type PaletteAccents = Extract<
   PaletteKeys,
   'primary' | 'secondary' | 'tertiary' | 'quaternary'
 >;
-export type PaletteRest = Extract<
+export type PaletteColors = Extract<
   PaletteKeys,
   'brand' | 'neutral' | 'strong' | 'weak'
 >;
 
 export type PaletteAccessors =
-  | PaletteKeys
+  | PaletteColors
   | AddPrefix<PaletteAccents, 'accent.'>
   | AddPrefix<PaletteStatuses, 'status.'>;
 
 export type Palette<T = string> = {
   accent: { [key in PaletteAccents]: T };
   status: { [key in PaletteStatuses]: T };
-} & { [key in PaletteRest]: T };
+} & { [key in PaletteColors]: T };

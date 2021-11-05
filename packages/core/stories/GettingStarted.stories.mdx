@@ -47,10 +47,13 @@ $ yarn add @real-system/core
 import React, { ReactDOM } from 'react';
 
 import { ThemeProvider } from '@real-system/core/theme';
+import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>...</ThemeProvider>
+    <ThemeProvider>
+      <App>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -62,17 +65,28 @@ ReactDOM.render(
 
 ### Real System Components
 
-You can use the Real System components anywhere that is wrapped by the Theme Provider.
+You can use the Real System components so long is they are nested within Theme context.
 
-```jsx
-import { Box } from '@real-system/core/box';
+```js
+// index.js
+import React, { ReactDOM } from 'react';
+
 import { ThemeProvider } from '@real-system/core/theme';
+import { App } from './App';
 
-const MyComponent = () => (
-  <ThemeProvider>
-    <Box margin={2} backgroundColor="color-background">
-      Hello, my name is Box!
-    </Box>
-  </ThemeProvider>
+ReactDOM.render(
+  <React.StrictMode>
+    <ThemeProvider>
+      <App>
+    </ThemeProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// App.js
+import { Box } from '@real-system/core/box';
+
+const App = () => (
+  <Box margin={2} backgroundColor="color-background">...</Box>
 );
 ```

@@ -14,7 +14,7 @@ export const globalTypes = {
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
       icon: 'paintbrush',
       // array of plain string values or MenuItem shape (see below)
-      items: ['realsystem', 'darkBrand'],
+      items: ['realsystem'],
     },
   },
 };
@@ -38,9 +38,12 @@ export const parameters = {
     storySort: {
       method: 'alphabetical',
       order: [
-        'Real System','Getting Started', 'Theming'],
+        'Real System',
+        ['Getting Started', 'Theming'],
         'Sandbox',
-        'Primitives','Components'],
+        'Primitives',
+        'Components',
+      ],
     },
   },
   argTypes: {
