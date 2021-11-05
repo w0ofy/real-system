@@ -30,9 +30,7 @@ const palette = defaultPalette;
  *
  * @description generates a theme with the given Palette. Uses the realsystem palette by default
  */
-const makeThemeWithTokens = (
-  palette: Palette = defaultPalette
-): DefaultTheme => ({
+const makeTheme = (palette: Palette = defaultPalette): DefaultTheme => ({
   palette: palette,
   // scales that inherit the palette
   colors: {
@@ -67,7 +65,7 @@ export {
   fontWeights,
   letterSpacings,
   lineHeights,
-  makeThemeWithTokens,
+  makeTheme,
   palette,
   radii,
   shadows,

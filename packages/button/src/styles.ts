@@ -16,7 +16,7 @@ const resetStyles: BoxStyleProps = {
     'background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out',
   fontSize: 2,
   fontFamily: 'font-family-text',
-  fontWeight: 'font-weight-medium',
+  fontWeight: 1,
   textDecoration: 'none',
   position: 'relative',
   px: 9,

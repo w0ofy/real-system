@@ -17,35 +17,35 @@ const styles: {
 } = {
   heading1: {
     fontSize: 10,
-    fontWeight: 4,
+    fontWeight: 3,
     lineHeight: 11,
     mb: 9,
   },
   heading2: {
     fontSize: 7,
     lineHeight: 10,
-    fontWeight: 4,
+    fontWeight: 3,
     mb: 7,
   },
   heading3: {
     fontSize: 5,
     lineHeight: 9,
-    fontWeight: 4,
+    fontWeight: 3,
     mb: 6,
   },
   heading4: {
     fontSize: 3,
-    fontWeight: 4,
+    fontWeight: 3,
     mb: 5,
   },
   heading5: {
     fontSize: 2,
-    fontWeight: 4,
+    fontWeight: 3,
     mb: 4,
   },
   heading6: {
     fontSize: 1,
-    fontWeight: 4,
+    fontWeight: 3,
     mb: 2,
   },
 };

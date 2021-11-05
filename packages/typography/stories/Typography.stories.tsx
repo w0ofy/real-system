@@ -18,7 +18,7 @@ const Template = (args) => {
     <>
       <Typography {...args}>
         The quick brown fox jumps over the{' '}
-        <Typography {...args} variant="inline" fontWeight={4}>
+        <Typography {...args} variant="inline" fontWeight={3}>
           lazy
         </Typography>{' '}
         dog.

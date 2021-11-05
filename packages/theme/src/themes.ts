@@ -1,7 +1,7 @@
-import { makeThemeWithTokens } from './tokens';
+import { makeTheme } from './tokens';
 
 const themes = {
-  realsystem: makeThemeWithTokens,
+  realsystem: makeTheme,
 };
 
 export { themes };

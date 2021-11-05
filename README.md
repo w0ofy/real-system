@@ -84,7 +84,7 @@ $ yarn dev
 $ yarn website
 ```
 
-### Contributing
+## Contributing
 
 ```bash
 $ git checkout -b <branch_name>

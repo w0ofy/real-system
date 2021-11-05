@@ -10,6 +10,9 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     'storybook-addon-performance',
+    '@storybook/addon-actions',
+    '@storybook/addon-viewport',
+    'storybook-addon-playroom',
   ],
   typescript: {
     // enable type checking
@@ -48,7 +51,6 @@ module.exports = {
         honorPackage: ['main:dev', 'main'],
         exclude: /node_modules/,
       }),
-      // new TsconfigPathsPlugin(),
     ];
 
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];

@@ -1,17 +1,16 @@
 import { Property } from 'csstype';
-import get from 'lodash.get';
 
 import { getColorContrast } from '@real-system/styling';
+import { get } from '@real-system/utils';
 
 import { Palette, PaletteKeys } from './types';
 
-const getPaletteColor = (palette: Palette, key: PaletteKeys): string => {
-  const color =
-    get(palette, key, false) ||
-    get(palette, `status.${key}`, false) ||
-    get(palette, `accent.${key}`, '');
-  return color;
-};
+const getPaletteColor = (palette: Palette, key: PaletteKeys): string =>
+  get.oneOf<Palette, string>(
+    palette,
+    [key, `status.${key}`, `accent.${key}`],
+    ''
+  );
 
 const getPaletteContrast = (
   palette: Palette,

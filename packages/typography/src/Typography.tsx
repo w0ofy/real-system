@@ -48,7 +48,7 @@ const Typography: TypographyComponent = forwardRef<
     return (
       <P
         fontSize={2}
-        fontWeight={1}
+        fontWeight={0}
         lineHeight={4}
         m={0}
         color="color-text"

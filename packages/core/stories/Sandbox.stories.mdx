@@ -1,0 +1,27 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+import { makeMdxParameters } from '/.storybook/utils';
+
+<Meta
+  title="Sandbox/Live Coding"
+  parameters={{
+    ...makeMdxParameters({
+      playroom: {
+        disable: false,
+        code: '<Box> </Box>',
+      },
+      previewTabs: {
+        canvas: { hidden: true },
+        'storybook/playroom/panel': {
+          hidden: false,
+        },
+      },
+    }),
+  }}
+/>
+
+<Story name="Playroom" />
+
+## Real System Component Sandbox
+
+Click on the [playroom](?path=/playroom/sandbox-live-coding--playroom) tab on the top-left toolbar

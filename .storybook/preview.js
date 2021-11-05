@@ -2,6 +2,7 @@ import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
 import { themes, ThemeProvider } from '@real-system/core/theme';
+import { isProduction } from '../tools/utils/env';
 
 export const globalTypes = {
   theme: {
@@ -13,13 +14,14 @@ export const globalTypes = {
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
       icon: 'paintbrush',
       // array of plain string values or MenuItem shape (see below)
-      items: ['realsystem', 'darkBrand'],
+      items: ['realsystem'],
     },
   },
 };
 
 export const decorators = [
   (Story, context) => {
+    console.log(context);
     const theme = themes[context.globals.theme || 'realsystem'];
     return (
       <ThemeProvider theme={theme()}>
@@ -32,6 +34,18 @@ export const decorators = [
 
 export const parameters = {
   title: 'Real System',
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: [
+        'Real System',
+        ['Getting Started', 'Theming'],
+        'Sandbox',
+        'Primitives',
+        'Components',
+      ],
+    },
+  },
   argTypes: {
     theme: { table: { disable: true } },
     as: { table: { disable: true } },
@@ -40,5 +54,14 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
+  },
+  playroom: {
+    url: isProduction ? '/playroom/' : undefined,
+    disable: true,
+  },
+  previewTabs: {
+    'storybook/playroom/panel': {
+      hidden: true,
+    },
   },
 };
