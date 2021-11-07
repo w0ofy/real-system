@@ -14,9 +14,13 @@ jobs:
     name: Publish Next Packages
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Setup workflow
         id: workflow_setup_step
-        uses: action/workflow_setup@v1
+        uses: '@bigwoof91/real-system/.github/actions/workflow_setup@testing-github-actions'
 
       - name: Publish packages and create pull request
         uses: changesets/action@master

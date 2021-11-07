@@ -6,6 +6,9 @@ import { makeTestId } from '@real-system/utils';
 import { getPseudoStyles } from './styleFunctions';
 import type { BoxProps } from './types';
 
+/**
+ * @todo remove this comment after test
+ */
 const boxAttrs = (props: any) => ({
   'data-testid': props['data-testid'] || makeTestId('box'),
 });

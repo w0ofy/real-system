@@ -1,11 +1,6 @@
 name: Setup Env and Dependencies
 description: Checkout repo, setup env and install dependencies
 inputs:
-  should-checkout:
-    description: Should checkout repo
-    default: true
-    required: false
-    type: boolean
   use-node-14:
     description: Should setup nodejs@14.x
     default: true
@@ -22,11 +17,6 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Checkout repo
-      if: inputs.should-checkout == 'true'
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
     - name: Setup nodejs
       if: inputs.use-node-14 == 'true'
       uses: actions/setup-node@master
