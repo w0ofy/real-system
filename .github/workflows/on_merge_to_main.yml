@@ -19,7 +19,7 @@ jobs:
 
       - name: Setup workflow
         id: workflow_setup_step
-        uses: '@bigwoof91/real-system/.github/actions/workflow_setup@testing-github-actions'
+        uses: bigwoof91/real-system/.github/actions/workflow_setup@testing-github-actions
 
       - name: Version packages and create pull request
         uses: changesets/action@master

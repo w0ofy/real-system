@@ -22,7 +22,7 @@ jobs:
 
       - name: Setup and install deps
         id: workflow_setup_step
-        uses: '@bigwoof91/real-system/.github/actions/workflow_setup@testing-github-actions'
+        uses: bigwoof91/real-system/.github/actions/workflow_setup@testing-github-actions
 
       - name: Run tests
         run: yarn test
