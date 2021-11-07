@@ -1391,13 +1391,14 @@
   dependencies:
     conventional-changelog-conventionalcommits "^4.3.1"
 
-"@commitlint/cz-commitlint@^13.2.1":
-  version "13.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/cz-commitlint/-/cz-commitlint-13.2.1.tgz#5a6a23b886f5bc21237b2b02c2717114534a8691"
-  integrity sha512-ziYonQamenR+/VwMh4rqSuq6086yOajLYWEzH26m19gbpqE+6iyDsOpt/TWqvSjHQx3i8tRqduvIFiGjxBQi4g==
+"@commitlint/cz-commitlint@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/cz-commitlint/-/cz-commitlint-14.1.0.tgz#02a49b5833f81fddc420116ba4c266e23071a8ef"
+  integrity sha512-7bLVETWymyMgrEFzGMwjjbYbZG6MqXzi+v/FtNpQjnnl6yNT+rq/1/acHN4D9725Jbin7NrLk7FlL5w3taSOUg==
   dependencies:
-    "@commitlint/load" "^13.2.1"
-    "@commitlint/types" "^13.2.0"
+    "@commitlint/ensure" "^14.1.0"
+    "@commitlint/load" "^14.1.0"
+    "@commitlint/types" "^14.0.0"
     chalk "^4.1.0"
     lodash "^4.17.21"
     word-wrap "^1.2.3"
@@ -1408,6 +1409,14 @@
   integrity sha512-rqhT62RehdLTRBu8OrPHnRCCd/7RmHEE4TiTlT4BLlr5ls5jlZhecOQWJ8np872uCNirrJ5NFjnjYYdbkNoW9Q==
   dependencies:
     "@commitlint/types" "^13.2.0"
+    lodash "^4.17.19"
+
+"@commitlint/ensure@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-14.1.0.tgz#b58b2ffe2bc95be143ed8f188721b97df1043ba5"
+  integrity sha512-xrYvFdqVepT3XA1BmSh88eKbvYKtLuQu98QLfgxVmwS99Kj3yW0sT3D7jGvNsynbIx2dhbXofDyubf/DKkpFrQ==
+  dependencies:
+    "@commitlint/types" "^14.0.0"
     lodash "^4.17.19"
 
 "@commitlint/execute-rule@^13.2.0":
@@ -1446,7 +1455,7 @@
     "@commitlint/rules" "^13.2.0"
     "@commitlint/types" "^13.2.0"
 
-"@commitlint/load@>6.1.1":
+"@commitlint/load@>6.1.1", "@commitlint/load@^14.1.0":
   version "14.1.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-14.1.0.tgz#911e8625cfa1a80df2914b835834c6068fdfdab4"
   integrity sha512-p+HbgjhkqLsnxyjOUdEYHztHCp8n2oLVUJTmRPuP5FXLNevh6Gwmxf+NYC2J0sgD084aV2CFi3qu1W4yHWIknA==
