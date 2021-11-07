@@ -1,15 +1,14 @@
 const path = require('path');
 const { command } = require('execa');
 const { PACKAGE_STATUS } = require('./env');
-/**
- * @todo fix json parse ???
- */
+
 const getPkgJsonFromWorkspace = (workspace) =>
   require(`${__dirname}/../../${workspace.location}/package.json`);
 
 const getPurePkgName = (pkgName) => pkgName.replace('@real-system/', '');
 
 const DEFAULT_CONFIG = { withCore: false };
+
 const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
   let data = await command('yarn workspaces info --json');
 
