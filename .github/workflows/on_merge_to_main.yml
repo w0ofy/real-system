@@ -1,13 +1,15 @@
-name: Publish Next Packages
+name: Version Packages
 
 on:
   push:
+    paths:
+      - "packages/**"
     branches:
-      - next
+      - main
 
 jobs:
-  publish-next-packages:
-    name: Publish next-packages
+  version-packages:
+    name: Version packages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -33,17 +35,25 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn
 
-      - name: Install dependencies
+      - name: Load node modules cache
+        uses: actions/cache@v2
+        id: node_modules_cache_id
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Dependencies
+        if: steps.yarn_cache_id.outputs.cache-hit != 'true' || steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
-      - name: Publish packages and create pull request
+      - name: Version packages and create pull request
         uses: changesets/action@master
         with:
-          version: yarn version:next
-          publish: yarn release
-          commit: "chore(prerelease): version packages"
-          title: "chore(prerelease): version packages"
+          version: yarn version:stable
+          commit: "chore(release): version packages"
+          title: "chore(release): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           YARN_ENABLE_IMMUTABLE_INSTALLS: false

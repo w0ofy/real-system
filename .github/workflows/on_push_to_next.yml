@@ -1,13 +1,16 @@
-name: Version Packages
+name: Publish Next Packages
 
 on:
   push:
+    paths:
+      - "packages/**"
+      - ".changeset/**"
     branches:
-      - main
+      - next
 
 jobs:
-  version-packages:
-    name: Version packages
+  publish-next-packages:
+    name: Publish next-packages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -33,15 +36,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Version packages and create pull request
+      - name: Publish packages and create pull request
         uses: changesets/action@master
         with:
-          version: yarn version:stable
-          commit: "chore(release): version packages"
-          title: "chore(release): version packages"
+          version: yarn version:next
+          publish: yarn release
+          commit: "chore(prerelease): prerelease packages"
+          title: "chore(prerelease): prerelease packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
