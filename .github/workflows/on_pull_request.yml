@@ -3,11 +3,10 @@ name: PR Checks
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "packages/**"
 
 jobs:
   pr-categorizer:
+    name: Categorize PR
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v3
@@ -21,6 +20,7 @@ jobs:
           sync-labels: true
 
   require-pr-label:
+    name: Require PR Label
     runs-on: ubuntu-latest
     steps:
       - uses: mheap/github-action-required-labels@v1
@@ -33,45 +33,3 @@ jobs:
           mode: exactly
           count: 0
           labels: 'status: do not merge'
-
-  unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Setup nodejs 14.x
-        uses: actions/setup-node@master
-        with:
-          node-version: 14.x
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Load yarn cache
-        uses: actions/cache@v2
-        id: yarn_cache_id
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn
-
-      - name: Load node modules cache
-        uses: actions/cache@v2
-        id: node_modules_cache_id
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Install Dependencies
-        if: steps.yarn_cache_id.outputs.cache-hit != 'true' || steps.node_modules_cache_id.outputs.cache-hit != 'true'
-        run: yarn install --immutable
-
-      - name: Run tests
-        run: yarn test

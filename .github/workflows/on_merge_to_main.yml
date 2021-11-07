@@ -1,9 +1,10 @@
-name: Version Packages
+name: Merge to main
 
 on:
   push:
     paths:
       - "packages/**"
+      - ".changeset/*"
     branches:
       - main
 
@@ -12,41 +13,9 @@ jobs:
     name: Version packages
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Setup nodejs 14.x
-        uses: actions/setup-node@master
-        with:
-          node-version: 14.x
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Load yarn cache
-        uses: actions/cache@v2
-        id: yarn_cache_id
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn
-
-      - name: Load node modules cache
-        uses: actions/cache@v2
-        id: node_modules_cache_id
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Install Dependencies
-        if: steps.yarn_cache_id.outputs.cache-hit != 'true' || steps.node_modules_cache_id.outputs.cache-hit != 'true'
-        run: yarn install --immutable
+      - name: Setup workflow
+        id: workflow_setup_step
+        uses: action/workflow_setup@v1
 
       - name: Version packages and create pull request
         uses: changesets/action@master
