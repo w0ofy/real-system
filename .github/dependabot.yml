@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/box
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/button
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/core
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/icon
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/libraries/styling
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/theme
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/typography
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /packages/utils
+    schedule:
+      interval: daily
