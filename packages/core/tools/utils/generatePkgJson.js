@@ -1,17 +1,10 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs');
-const { logger, writeToFile } = require('../../../../tools/utils');
-// const { CORE_LIBRARIES } = require('./constants');
-const { getWorkspacesInfo } = require('./subPackageUtils');
-
-// const getPackageJsonLocation = (pkg) => {
-//   const pathToPackagesDirectory = `${__dirname}/../../..`;
-//   const pathToPackageJson = `${pkg}/package.json`;
-//   if (CORE_LIBRARIES.includes(pkg)) {
-//     return `${pathToPackagesDirectory}/libraries/${pathToPackageJson}`;
-//   }
-//   return `${pathToPackagesDirectory}/${pathToPackageJson}`;
-// };
+const {
+  logger,
+  writeToFile,
+  getWorkspacesInfo,
+} = require('../../../../tools/utils');
 
 /**
  * @todo refactor to use yarn commands? maybe?
@@ -41,14 +34,14 @@ const writePkgJson = async (pkg) => {
 /**
  * @function generatePkgJson bundle esm & cjs package for unbarreled exports
  */
-function generatePkgJson() {
-  const { pkgList } = getWorkspacesInfo();
+const generatePkgJson = async () => {
+  const { pkgList } = await getWorkspacesInfo();
 
   logger.gray("Generating package.json's for unbarreled exports");
   return pkgList.forEach((pkg) => {
     const pureName = pkg.pureName;
     writePkgJson(pureName);
   });
-}
+};
 
 module.exports = generatePkgJson;

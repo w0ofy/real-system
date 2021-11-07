@@ -6,7 +6,7 @@ import { KebabCase } from '@real-system/utils';
 
 export type FeatherIconKeys = keyof typeof Feather;
 export type FeatherIconValues = typeof Feather[FeatherIconKeys];
-export type InternalIconProps = Feather.IconProps;
+export type InternalIconProps = Omit<IconProps, 'size'> & Feather.IconProps;
 export type Icons = KebabCase<FeatherIconKeys>;
 export type IconIntent =
   | Extract<

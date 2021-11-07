@@ -1,11 +1,12 @@
-const { writeToFile, logger } = require('../../../../tools/utils');
 const {
+  writeToFile,
+  logger,
   getWorkspacesInfo,
-  getUnbarreledFileFullPath,
-} = require('./subPackageUtils');
+} = require('../../../../tools/utils');
+const { getUnbarreledFileFullPath } = require('./subPackageUtils');
 
-function generateUnbarreledExports() {
-  const { pkgNames, purePkgNames } = getWorkspacesInfo();
+const generateUnbarreledExports = async () => {
+  const { pkgNames, purePkgNames } = await getWorkspacesInfo();
 
   logger.gray('Generating unbarreled exports');
   return pkgNames.forEach((pkg, i) => {
@@ -18,6 +19,6 @@ function generateUnbarreledExports() {
       }
     );
   });
-}
+};
 
 module.exports = generateUnbarreledExports;

@@ -25,7 +25,7 @@ async function dev(packageJson) {
     .build(esmConfig)
     .then(async () => {
       logger.success(`Bundled ESM for "${packageJson.name}"\n`);
-      logger.blue('-------------------------------------------------- \n');
+      logger.magenta('-------------------------------------------------- \n');
     })
     .catch(() => process.exit(1));
   return;

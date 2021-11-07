@@ -8,13 +8,11 @@ const baseEsbuildConfig = {
   mainFields: ['module', 'main'],
   platform: 'node',
   bundle: true,
-  // Changes code to fit given target environments
-  target: ['chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
+  target: ['es2017', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
   minify: isProduction,
   define: {
     'process.env.NODE_ENV': `"${ENV}"`,
   },
-  // inject: [`${__dirname}/reactShim.js`],
   logLevel: 'error',
   sourcemap: !isProduction,
 };
@@ -25,9 +23,7 @@ const shouldWatch = (pkg = {}) =>
         // eslint-disable-next-line no-unused-vars
         async onRebuild(err, _result) {
           if (err) logger.error(err);
-          console.log(process.cwd());
-          // await command('yarn types');
-          logger.blue(`Rebundled ${pkg.name}.`);
+          logger.info(`Rebundled ${pkg.name}.`);
         },
       }
     : false;

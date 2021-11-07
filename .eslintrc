@@ -6,6 +6,9 @@
     "es6": true,
     "jest": true
   },
+  "globals": {
+    "TEST_THEME": true
+  },
   "parserOptions": {
     "ecmaVersion": 12,
     "ecmaFeatures": {

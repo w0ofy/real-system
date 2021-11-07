@@ -54,6 +54,7 @@ const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   }),
 };
 
-const BoxAsButton = BoxAs<InternalButtonProps>('button');
+export type BoxAsButtonProps = Omit<InternalButtonProps, 'buttonState'>;
+const BoxAsButton = BoxAs<BoxAsButtonProps>('button');
 
 export { baseStyles, BoxAsButton, resetStyles, sizeStyles };

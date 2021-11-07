@@ -1,18 +1,23 @@
-const { writeToFile, logger } = require('../../../tools/utils');
-const { getWorkspacesInfo } = require('./utils/subPackageUtils');
-const { CORE_PACKAGE_PATH } = require('./utils/constants');
+const {
+  writeToFile,
+  logger,
+  getWorkspacesInfo,
+} = require('../../../tools/utils');
+const { CORE_PACKAGE_JSON_PATH } = require('./utils/constants');
 
 // Given a list of packages, output the index.tsx exports string
-const getPackageJsonOutput = () => {
-  const { coreDependencies } = getWorkspacesInfo();
-  const pkgJson = require(CORE_PACKAGE_PATH);
+const getPackageJsonOutput = async () => {
+  const { coreDependencies } = await getWorkspacesInfo();
+  const pkgJson = require(CORE_PACKAGE_JSON_PATH);
   pkgJson.dependencies = coreDependencies;
   return pkgJson;
 };
 
-(function updateDependencies() {
+(async function updateDependencies() {
   logger.gray('Updating core package dependencies');
-  return writeToFile(CORE_PACKAGE_PATH, getPackageJsonOutput(), {
+  const packageJsonOutput = await getPackageJsonOutput();
+
+  await writeToFile(CORE_PACKAGE_JSON_PATH, packageJsonOutput, {
     formatJson: true,
     successMessage: '[@real-system/core] Updated core package deps.',
     errorMessage: '[@real-system/core] Failed to update core package deps.',

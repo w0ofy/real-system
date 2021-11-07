@@ -1,5 +1,9 @@
 {
-  "include": ["packages/**/*"],
+  "include": [
+    "packages/**/*",
+    ".jest/setupFilesAfterEnv.ts",
+    ".jest/globals/jest.d.ts"
+  ],
   "exclude": ["node_modules", "lib"],
   "compilerOptions": {
     "moduleResolution": "node",

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path');
+const { join } = require('path');
 const Terser = require('terser');
 const { CORE_OUTPUT_PATH } = require('./utils/constants');
 const { writeToFile } = require('../../../tools/utils');
@@ -9,7 +9,7 @@ function getAllJsFiles() {
   const arrayOfFiles = [];
 
   files.forEach((file) => {
-    arrayOfFiles.push(path.join(CORE_OUTPUT_PATH, '/', file));
+    arrayOfFiles.push(join(CORE_OUTPUT_PATH, '/', file));
   });
   return arrayOfFiles.filter((file) => file.match(/\.js$/));
 }

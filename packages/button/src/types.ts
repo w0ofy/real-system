@@ -14,7 +14,6 @@ export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  Pick<BoxStyleProps, 'size'> &
   SpaceProps & {
     size?: ButtonSizes;
     children: React.ReactNode;
@@ -30,7 +29,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
     trailingIcon?: React.ReactElement;
   };
 
-export type InternalButtonProps = Omit<ButtonProps, 'variant'> & {
+export type InternalButtonProps = Omit<ButtonProps, 'variant' | 'size'> & {
   buttonState: ButtonStates;
   ref?: any;
 } & BoxStyleProps;
