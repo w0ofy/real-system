@@ -66,6 +66,8 @@ export type BoxElementProps = Omit<
   element?: string;
   /** variant for variant styling */
   variant?: string;
+  /** testid for unit testing libraries like @testing-library/react */
+  'data-testid'?: string;
 };
 
 export type BoxProps = BoxElementProps & BoxStyleProps;

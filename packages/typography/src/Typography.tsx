@@ -10,10 +10,10 @@ import {
   TypographyVariants,
 } from './types';
 
-const P = BoxAs('p');
+const P = BoxAs<TypographyComponentProps>('p');
 
 type TypographyVariantMap = {
-  [key in TypographyVariants]: keyof JSX.IntrinsicElements;
+  [key in TypographyVariants]: Extract<TypographyAsTags, 'p' | 'span'>;
 };
 
 const TYPOGRAPHY_VARIANT_MAP: TypographyVariantMap = {

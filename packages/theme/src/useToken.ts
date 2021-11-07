@@ -14,7 +14,7 @@ import {
 const useToken = (
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
-  fallback: GetTokenReturnValue = null
+  fallback: GetTokenReturnValue = undefined
 ): GetTokenReturnValue => {
   const theme = primitiveUseTheme();
   const value = getToken(token, scale, fallback)({ theme });

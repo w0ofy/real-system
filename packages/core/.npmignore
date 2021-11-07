@@ -2,3 +2,4 @@ tools
 src
 tsconfig.json
 babel.config.js
+__tests__

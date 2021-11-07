@@ -1,20 +1,25 @@
-const { writeToFile, logger } = require('../../../../tools/utils');
-const { getWorkspacesInfo } = require('./subPackageUtils');
+const {
+  writeToFile,
+  logger,
+  getWorkspacesInfo,
+} = require('../../../../tools/utils');
 const { CORE_INDEX_PATH } = require('./constants');
 
 // Given a list of packages, output the index.tsx exports string
-function getIndexOutput() {
-  const { pkgNames } = getWorkspacesInfo();
+const getIndexOutput = async () => {
+  const { pkgNames } = await getWorkspacesInfo();
   let output = '';
   pkgNames.forEach((pkg) => {
     output = `${output}export * from '${pkg}';\n`;
   });
   return output;
-}
+};
 
-function generateIndex() {
+async function generateIndex() {
   logger.gray('Generating index exports');
-  return writeToFile(CORE_INDEX_PATH, getIndexOutput(), {
+  const indexOutput = await getIndexOutput();
+
+  return writeToFile(CORE_INDEX_PATH, indexOutput, {
     successMessage: '[@real-system/core] Generated index exports.',
     errorMessage: '[@real-system/core] Failed to generate index exports.',
   });

@@ -11,12 +11,10 @@ import {
 import { ICON_NAMES, ICONS } from './icons';
 import { IconIntent, IconProps, Icons, InternalIconProps } from './types';
 
-const BoxAsIcon = BoxAs<Pick<IconProps, 'icon'> & InternalIconProps>(
-  ({ icon, ...restProps }) => {
-    const Icon = ICONS[icon];
-    return <Icon {...restProps} />;
-  }
-);
+const BoxAsIcon = BoxAs<InternalIconProps>(({ icon, ...restProps }) => {
+  const Icon = ICONS[icon];
+  return <Icon {...restProps} />;
+});
 
 const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
   default: 'color-text',
