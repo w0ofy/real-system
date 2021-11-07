@@ -1,4 +1,3 @@
-const fs = require('fs');
 const { getWorkspacesInfo, writeToFile, logger } = require('../tools/utils');
 const { CACHE_FILE_PATH } = require('./constants');
 
@@ -22,14 +21,6 @@ const updatePackageCache = async () => {
  }, ...]
  * writes to ./.cache/packages.json. This file is a cache for jest to refer for resolving modules
  */
-(async function setupTest() {
-  if (!fs.existsSync(CACHE_FILE_PATH)) {
-    return updatePackageCache();
-  }
-
-  try {
-    require(CACHE_FILE_PATH);
-  } catch (err) {
-    updatePackageCache();
-  }
+(async function preTest() {
+  return updatePackageCache();
 })();

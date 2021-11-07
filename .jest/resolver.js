@@ -1,4 +1,11 @@
+const fs = require('fs');
 const { CACHE_FILE_PATH } = require('./constants');
+
+if (!fs.existsSync(CACHE_FILE_PATH)) {
+  throw new Error(
+    `[Jest resolver]: The "/.jest/.cache/packages.json" file does not exist.  Please run "yarn pre-test"`
+  );
+}
 
 const cachedPackages = require(CACHE_FILE_PATH);
 
