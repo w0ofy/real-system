@@ -3,6 +3,7 @@ import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 import { BoxAs } from '@real-system/box';
 
 import { Heading } from './Heading';
+import { Label } from './Label';
 import {
   InternalTypographyProps,
   TypographyAsTags,
@@ -34,6 +35,7 @@ export type TypographyComponentProps = {
 export interface TypographyComponent
   extends ForwardRefExoticComponent<TypographyComponentProps> {
   Heading: (HeadingProps) => ReturnType<typeof Heading>;
+  Label: (LabelProps) => ReturnType<typeof Label>;
 }
 
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
@@ -64,5 +66,6 @@ const Typography: TypographyComponent = forwardRef<
 
 Typography.displayName = 'Typography';
 Typography.Heading = Heading;
+Typography.Label = Label;
 
 export { Typography };

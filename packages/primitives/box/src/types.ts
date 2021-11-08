@@ -20,7 +20,6 @@ export type BoxBaseStyleProps = StyleProps & {
   listStyleType?: Property.ListStyleType;
   objectFit?: Property.ObjectFit;
   objectPosition?: Property.ObjectPosition<string>;
-  opacity?: Property.Opacity;
   outline?: Property.Outline<string>;
   pointerEvents?: Property.PointerEvents;
   resize?: Property.Resize;
@@ -68,6 +67,8 @@ export type BoxElementProps = Omit<
   variant?: string;
   /** testid for unit testing libraries like @testing-library/react */
   'data-testid'?: string;
+  /** generually used for inputs and labels */
+  htmlFor?: string | undefined;
 };
 
 export type BoxProps = BoxElementProps & BoxStyleProps;

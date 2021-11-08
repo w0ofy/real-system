@@ -27,7 +27,8 @@
     "@real-system/styling": "^0.0.0",
     "@real-system/theme": "^0.0.0",
     "@real-system/typography": "^0.0.1",
-    "@real-system/utils": "^0.0.0"
+    "@real-system/utils": "^0.0.0",
+    "@real-system/visually-hidden": "^0.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
