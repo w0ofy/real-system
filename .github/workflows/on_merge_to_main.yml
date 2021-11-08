@@ -9,7 +9,6 @@ on:
       - main
 
 jobs:
-  # todo: add publish job
   version-packages:
     name: Version packages
     runs-on: ubuntu-latest
@@ -30,4 +29,25 @@ jobs:
           title: "chore(release): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+  publish-packages:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, 'chore(release): version packages')"
+    steps:
+      - name: Setup environment
+        id: env_setup
+        uses: bigwoof91/real-system/.github/actions/setup-env@main
+
+      - name: Yarn install
+        if: steps.env_setup.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+        
+      - name: Test and Publish Packages
+        uses: changesets/action@master
+        with:
+          publish: yarn release:stable
+          commit: "chore(release): publish packages"
+          title: "chore(release): publish packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
