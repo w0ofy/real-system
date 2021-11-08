@@ -9,6 +9,7 @@ on:
       - main
 
 jobs:
+  # todo: add publish job
   version-packages:
     name: Version packages
     runs-on: ubuntu-latest
