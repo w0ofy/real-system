@@ -2,8 +2,8 @@ import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 
 import { BoxAs } from '@real-system/box';
 
-import { Heading } from './Heading';
-import { Label } from './Label';
+import { Heading, HeadingProps } from './Heading';
+import { Label, LabelProps } from './Label';
 import {
   InternalTypographyProps,
   TypographyAsTags,
@@ -34,8 +34,8 @@ export type TypographyComponentProps = {
 
 export interface TypographyComponent
   extends ForwardRefExoticComponent<TypographyComponentProps> {
-  Heading: (HeadingProps) => ReturnType<typeof Heading>;
-  Label: (LabelProps) => ReturnType<typeof Label>;
+  Heading: typeof Heading;
+  Label: typeof Label;
 }
 
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined

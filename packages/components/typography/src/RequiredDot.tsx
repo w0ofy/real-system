@@ -4,12 +4,19 @@ import type { BoxProps } from '@real-system/box';
 import { Box } from '@real-system/box';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
-const RequiredDot = (props: BoxProps): React.ReactElement => {
+export type RequiredDotProps = {
+  disabled: boolean | undefined;
+} & BoxProps;
+
+const RequiredDot = ({
+  disabled = false,
+  ...restProps
+}: RequiredDotProps): React.ReactElement => {
   return (
     <Box
-      {...props}
+      {...restProps}
       as="span"
-      color={props.color}
+      color={disabled ? 'color-text-danger-weak' : 'color-text-danger'}
       borderRadius="border-radius-circle"
       height="4px"
       width="4px"

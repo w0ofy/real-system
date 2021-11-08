@@ -34,11 +34,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
         color={textColor}
         {...restProps}
         ref={ref}>
-        {required ? (
-          <RequiredDot
-            color={disabled ? 'color-text-danger-weak' : 'color-text-danger'}
-          />
-        ) : null}
+        {required ? <RequiredDot disabled={disabled} /> : null}
         {children}
       </Box>
     );
