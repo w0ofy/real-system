@@ -1,30 +1,27 @@
 name: Setup Env and Dependencies
 description: Checkout repo, setup env and install dependencies
-inputs:
-  use-node-14:
-    description: Should setup nodejs@14.x
-    default: true
-    required: false
-    type: boolean
 outputs:
-  yarn-cache-hit:
+  cache-hit:
     description: Yarn cache hit flag
-    value: ${{ steps.yarn_cache_id.outputs.cache-hit }}
-  node-modules-cache-hit:
-    description: Yarn cache hit flag
-    value: ${{ steps.node_modules_cache_id.outputs.cache-hit }}
+    value: ${{ steps.yarn_cache_id.outputs.cache-hit || steps.node_modules_cache_id.outputs.cache-hit }}
 
 runs:
   using: composite
   steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
     - name: Setup nodejs
-      if: inputs.use-node-14 == 'true'
       uses: actions/setup-node@master
       with:
         node-version: 14.x
+
     - name: Get yarn cache directory path
+      shell: bash
       id: yarn_cache_dir_path
       run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
     - name: Load yarn cache
       uses: actions/cache@v2
       id: yarn_cache_id
@@ -33,6 +30,7 @@ runs:
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn
+
     - name: Load node modules cache
       uses: actions/cache@v2
       id: node_modules_cache_id
@@ -41,6 +39,3 @@ runs:
           node_modules
           */*/node_modules
         key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-    - name: Yarn install
-      if: steps.yarn_cache_id.outputs.cache-hit != 'true' || steps.node_modules_cache_id.outputs.cache-hit != 'true'
-      run: yarn install --immutable
