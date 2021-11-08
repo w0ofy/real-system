@@ -6,8 +6,7 @@ on:
       - next
 
 jobs:
-  # todo: add publish job
-  version-next-packages:
+  version-next:
     name: Version Next Packages
     runs-on: ubuntu-latest
     steps:
@@ -15,13 +14,26 @@ jobs:
         id: env_setup
         uses: bigwoof91/real-system/.github/actions/setup-env@main
 
-      - name: Publish packages and create pull request
+      - name: Release Packages
         uses: changesets/action@master
+        if: "!contains(github.event.head_commit.message, 'chore(prerelease): version packages')"
         with:
           version: yarn version:next
-          commit: "chore(version): prerelease packages"
-          title: "chore(version): prerelease packages"
+          commit: "chore(prerelease): version packages"
+          title: "chore(prerelease): version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-next:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, 'chore(prerelease): version packages')"
+    steps:
+      - name: Test and Publish Packages
+        uses: changesets/action@master
+        with:
+          publish: yarn release:next
+          commit: "chore(prerelease): publish packages"
+          title: "chore(prerelease): publish packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
