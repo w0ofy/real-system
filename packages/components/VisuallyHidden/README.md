@@ -1,8 +1,8 @@
-<h1 align="center">@real-system/theme</h1>
-<p align="center">Real System's theming components and helpers.</p>
+<h1 align="center">@real-system/visually-hidden</h1>
+<p align="center">Real System's screen-reader-only component.</p>
 <p align="center">
-<a href="https://www.npmjs.com/package/@real-system/theme"><img src="https://badgen.net/npm/v/@real-system/theme?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/theme"><img src="https://badgen.net/bundlephobia/min/@real-system/theme" alt="minified size" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/theme"><img src="https://badgen.net/npm/v/@real-system/visually-hidden?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
+<a href="https://www.npmjs.com/package/@real-system/theme"><img src="https://badgen.net/bundlephobia/min/@real-system/visually-hidden" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage
@@ -13,34 +13,28 @@
 # install peer dependencies
 
 # npm
-$ npm install --save @real-system/styling react react-dom
+$ npm install --save @real-system/styling @real-system/box react react-dom
 # yarn
-$ yarn add @real-system/styling react react-dom
+$ yarn add @real-system/styling @real-system/box react react-dom
 
-# install theme
+# install visually-hidden
 
 # npm
-$ npm install --save @real-system/theme
+$ npm install --save @real-system/visually-hidden
 # yarn
-$ yarn add @real-system/theme
+$ yarn add @real-system/visually-hidden
 ```
 
 ### Code Example
 
 ```jsx
-import { ThemeProvider, useToken } from '@real-system/theme';
-
-const OtherComponent = () => {
-  const token = useToken('color-background');
-  return (
-    <div style={{ backgroundColor: token }}>...</div>
-  );
-};
+import { ThemeProvider } from '@real-system/theme';
+import { VisuallyHidden } from '@real-system/visually-hidden';
 
 const MyComponent = () => {
   return (
     <ThemeProvider>
-      <OtherComponent />
+      <VisuallyHidden>Screen reader only text</VisuallyHidden>
     </ThemeProvider>
   );
 };
