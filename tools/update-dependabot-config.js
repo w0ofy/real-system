@@ -7,6 +7,7 @@ const applyUpdate = (directory, restOptions = {}) => ({
   'package-ecosystem': 'npm',
   directory,
   schedule: { interval: 'daily' },
+  labels: ['area: infra', 'area: security', 'area: repo'],
   ...restOptions,
 });
 
