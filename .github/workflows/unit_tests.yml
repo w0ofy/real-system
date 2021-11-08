@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Setup environment
         id: env_setup
-        uses: bigwoof91/real-system/.github/actions/setup-env@testing-github-actions
+        uses: bigwoof91/real-system/.github/actions/setup-env@main
 
       - name: Yarn install
         if: steps.env_setup.outputs.cache-hit != 'true'

@@ -6,15 +6,12 @@ import { makeTestId } from '@real-system/utils';
 import { getPseudoStyles } from './styleFunctions';
 import type { BoxProps } from './types';
 
-/**
- * @todo remove this comment after testing ci
- */
 const boxAttrs = (props: any) => ({
   'data-testid': props['data-testid'] || makeTestId('box'),
 });
 
 /**
- * Use `Box` to create other components
+ * `Box` primitive component. Used to create all block-level styles and elements in Real System.
  */
 const Box = styled.div.attrs(boxAttrs)<BoxProps>(
   { boxSizing: 'border-box' },
