@@ -1410,6 +1410,14 @@
     "@commitlint/types" "^13.2.0"
     lodash "^4.17.19"
 
+"@commitlint/ensure@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-14.1.0.tgz#b58b2ffe2bc95be143ed8f188721b97df1043ba5"
+  integrity sha512-xrYvFdqVepT3XA1BmSh88eKbvYKtLuQu98QLfgxVmwS99Kj3yW0sT3D7jGvNsynbIx2dhbXofDyubf/DKkpFrQ==
+  dependencies:
+    "@commitlint/types" "^14.0.0"
+    lodash "^4.17.19"
+
 "@commitlint/execute-rule@^13.2.0":
   version "13.2.0"
   resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-13.2.0.tgz#e112159d6647bc5afe2f77c2080ef0f615fd541f"
@@ -1446,7 +1454,7 @@
     "@commitlint/rules" "^13.2.0"
     "@commitlint/types" "^13.2.0"
 
-"@commitlint/load@>6.1.1":
+"@commitlint/load@>6.1.1", "@commitlint/load@^14.1.0":
   version "14.1.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-14.1.0.tgz#911e8625cfa1a80df2914b835834c6068fdfdab4"
   integrity sha512-p+HbgjhkqLsnxyjOUdEYHztHCp8n2oLVUJTmRPuP5FXLNevh6Gwmxf+NYC2J0sgD084aV2CFi3qu1W4yHWIknA==
@@ -1490,23 +1498,23 @@
     conventional-changelog-angular "^5.0.11"
     conventional-commits-parser "^3.2.2"
 
-"@commitlint/prompt-cli@^13.2.1":
-  version "13.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-13.2.1.tgz#f17108217df2d159a9f88095fde78eeb4a489878"
-  integrity sha512-hDkZgqnDuvCvAQn/ZFR5bS6IxmaGCwKTkqWVNl14Ve5XWYX9TOyyGLfTOQ6zCV8pZhbEZlaGa6oMHDmbkbxcBA==
+"@commitlint/prompt-cli@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-14.1.0.tgz#4daba66a1aaeeba331c1d5380dd275ec3bef24f8"
+  integrity sha512-A9ffnT+C1eXZalywdZEiftbZ0OXLm/6r2CNvbGIeYyWuBaanXoU3AGn6Le+DcI4ftO4DqTBPzRhZxd39zYyFfQ==
   dependencies:
-    "@commitlint/prompt" "^13.2.1"
+    "@commitlint/prompt" "^14.1.0"
     execa "^5.0.0"
 
-"@commitlint/prompt@^13.2.1":
-  version "13.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-13.2.1.tgz#c2e15ad35a26b6b9a7192fb4089ca45d27e11416"
-  integrity sha512-V5/zvz94wZgRA2cfFFQzG0tv1lfv0OKp4+qiUYYYUGlfztKoNxyZC96KXYADfzX9/fepaT54y8FpSN/+6gc0YQ==
+"@commitlint/prompt@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-14.1.0.tgz#5b5aa89ae38a5f8a352a5d9f3cd5dad9f10e91fa"
+  integrity sha512-lKxRlYpEp/7YYM5pUldBNbc/U4fO+oeKxlh2s4zWWhxRh6LIVSd3AKhE4Wq+Jl4KGNiFOKiId0xlJEhqrG+K6Q==
   dependencies:
-    "@commitlint/load" "^13.2.1"
-    "@commitlint/types" "^13.2.0"
+    "@commitlint/ensure" "^14.1.0"
+    "@commitlint/load" "^14.1.0"
+    "@commitlint/types" "^14.0.0"
     chalk "^4.0.0"
-    lodash "^4.17.19"
     throat "^6.0.0"
     vorpal "^1.12.0"
 
