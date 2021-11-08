@@ -132,7 +132,7 @@
     "concurrently": "^6.2.1",
     "csstype": "^3.0.9",
     "directory-named-webpack-plugin": "^4.0.1",
-    "esbuild": "^0.12.25",
+    "esbuild": "^0.13.12",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^25.2.3",
