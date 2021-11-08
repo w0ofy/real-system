@@ -41,9 +41,13 @@ jobs:
       - name: Yarn install
         if: steps.env_setup.outputs.cache-hit != 'true'
         run: yarn install --immutable
-
+        
       - name: Test and Publish Packages
-        uses: bigwoof91/real-system/.github/actions/publish-pkg@main
+        uses: changesets/action@master
         with:
-          command: yarn release:stable
-          commit-msg: "chore(release): publish packages"
+          publish: yarn release:stable
+          commit: "chore(release): publish packages"
+          title: "chore(release): publish packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
