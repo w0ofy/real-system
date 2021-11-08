@@ -1,4 +1,5 @@
 # https://github.com/actions/labeler
 
 'status: do not merge':
+  - '*'
   - '**/*'

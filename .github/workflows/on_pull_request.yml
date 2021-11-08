@@ -10,12 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v3
-        if: ${{ github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened') }}
+        if: ${{ github.event.action != 'labeled' && github.event.action != 'unlabeled' }}
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           configuration-path: .github/opened-pr-labeler.yml
       - uses: actions/labeler@v3
-        if: ${{ github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened') }}
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           sync-labels: true

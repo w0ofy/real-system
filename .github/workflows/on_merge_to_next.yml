@@ -1,34 +1,26 @@
 name: Publish Next Packages
 
 on:
-  pull_request:
-    paths:
-      - "packages/**"
-      - ".changeset/**"
+  push:
     branches:
       - next
-    types: [closed]
 
 jobs:
-  publish-next-packages:
-    name: Publish Next Packages
+  # todo: add publish job
+  version-next-packages:
+    name: Version Next Packages
     runs-on: ubuntu-latest
     steps:
       - name: Setup environment
         id: env_setup
         uses: bigwoof91/real-system/.github/actions/setup-env@main
 
-      - name: Yarn install
-        if: steps.env_setup.outputs.cache-hit != 'true'
-        run: yarn install --immutable
-
       - name: Publish packages and create pull request
         uses: changesets/action@master
         with:
           version: yarn version:next
-          publish: yarn release
-          commit: "chore(prerelease): prerelease packages"
-          title: "chore(prerelease): prerelease packages"
+          commit: "chore(version): prerelease packages"
+          title: "chore(version): prerelease packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
