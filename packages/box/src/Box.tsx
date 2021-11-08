@@ -11,7 +11,7 @@ const boxAttrs = (props: any) => ({
 });
 
 /**
- * Use `Box` to create other components
+ * `Box` primitive component. Used to create all block-level styles and elements in Real System.
  */
 const Box = styled.div.attrs(boxAttrs)<BoxProps>(
   { boxSizing: 'border-box' },
