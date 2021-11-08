@@ -1,7 +1,7 @@
 import { create, themes } from '@storybook/theming/create';
 import { addons } from '@storybook/addons';
 import pkg from '../packages/core/package.json';
-import { defaultPalette } from '../packages/theme/src/palettes';
+import { defaultPalette } from '../packages/components/theme/src/palettes';
 
 export const managerConfig = {
   showAddonsPanel: true,

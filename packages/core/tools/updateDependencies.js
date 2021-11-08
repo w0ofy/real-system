@@ -14,7 +14,7 @@ const getPackageJsonOutput = async () => {
 };
 
 (async function updateDependencies() {
-  logger.gray('Updating core package dependencies');
+  logger.gray('\nUpdating core package dependencies');
   const packageJsonOutput = await getPackageJsonOutput();
 
   await writeToFile(CORE_PACKAGE_JSON_PATH, packageJsonOutput, {

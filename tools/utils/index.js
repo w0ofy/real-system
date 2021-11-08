@@ -1,4 +1,4 @@
-const { logger } = require('./logger');
+const { logger, makeNewLine } = require('./logger');
 const {
   ENV,
   isProduction,
@@ -15,6 +15,7 @@ const { updatePackageCache } = require('./updatePackageCache');
 module.exports = {
   writeToFile,
   logger,
+  makeNewLine,
   ENV,
   isProduction,
   getExternalDeps,
