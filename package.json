@@ -44,7 +44,7 @@
     "test:coverage": "jest ./packages/ --runInBand --coverage",
     "__RELEASE": "",
     "changeset": "changeset",
-    "version:stable": "yarn changeset version && yarn install --mode=update-lockfile",
+    "version:stable": "yarn changeset version",
     "version:next": "yarn changeset pre enter rc && yarn version:stable",
     "prerelease": "yarn build:packages && yarn lint && yarn test --runInBand",
     "release": "yarn build && yarn changeset publish",
