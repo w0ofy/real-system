@@ -1,13 +1,9 @@
 name: Publish Next Packages
 
 on:
-  pull_request:
-    paths:
-      - "packages/**"
-      - ".changeset/**"
+  push:
     branches:
       - next
-    types: [closed]
 
 jobs:
   publish-next-packages:
