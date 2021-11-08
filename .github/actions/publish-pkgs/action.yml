@@ -1,0 +1,22 @@
+name: Publish Pkg
+description: Test and publish packages in a given env like main branch (stable) or next branch (prerelease/rc)
+inputs:
+  command:
+    description: command used to publish packages
+    required: true
+  commit-msg:
+    description: the commit message
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Test and Publish Packages
+      uses: changesets/action@master
+      with:
+        publish: ${{ inputs.command }}
+        commit: ${{ inputs.commit-msg }}
+        title: ${{ inputs.commit-msg }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

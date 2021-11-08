@@ -34,12 +34,16 @@ jobs:
     runs-on: ubuntu-latest
     if: "contains(github.event.head_commit.message, 'chore(release): version packages')"
     steps:
+      - name: Setup environment
+        id: env_setup
+        uses: bigwoof91/real-system/.github/actions/setup-env@main
+
+      - name: Yarn install
+        if: steps.env_setup.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+
       - name: Test and Publish Packages
-        uses: changesets/action@master
+        uses: bigwoof91/real-system/.github/actions/publish-pkg@main
         with:
-          publish: yarn release
-          commit: "chore(release): publish packages"
-          title: "chore(release): publish packages"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          command: yarn release:stable
+          commit-msg: "chore(release): publish packages"
