@@ -4,39 +4,79 @@ updates:
     directory: /
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/box
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/button
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/core
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/icon
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/libraries/styling
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/theme
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/typography
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/utils
     schedule:
       interval: daily
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
