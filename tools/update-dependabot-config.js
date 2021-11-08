@@ -6,7 +6,7 @@ const DEPENDABOT_CONFIG_PATH = `${__dirname}/../.github/dependabot.yml`;
 const applyUpdate = (directory, restOptions = {}) => ({
   'package-ecosystem': 'npm',
   directory,
-  schedule: { interval: 'daily' },
+  schedule: { interval: 'weekly' },
   labels: ['area: infra', 'area: security', 'area: repo'],
   ...restOptions,
 });

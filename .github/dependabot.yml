@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -11,7 +11,7 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -19,7 +19,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/box
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -27,7 +27,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/button
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -35,7 +35,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/core
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -43,7 +43,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/icon
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -51,7 +51,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/libraries/styling
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -59,7 +59,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/theme
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -67,7 +67,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/typography
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
@@ -75,7 +75,7 @@ updates:
   - package-ecosystem: npm
     directory: /packages/utils
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - 'area: infra'
       - 'area: security'
