@@ -16,7 +16,7 @@ const getIndexOutput = async () => {
 };
 
 async function generateIndex() {
-  logger.gray('Generating index exports');
+  logger.gray('\nGenerating index exports');
   const indexOutput = await getIndexOutput();
 
   return writeToFile(CORE_INDEX_PATH, indexOutput, {

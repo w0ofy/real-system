@@ -13,10 +13,10 @@ const generateGitIgnore = async () => {
 /lib
 ${ignoreList.join('\n')}`;
 
-  logger.gray('Generating .gitignore');
+  logger.gray('\nGenerating .gitignore');
   return writeToFile(join(__dirname, '../../.gitignore'), content, {
-    successMessage: '[@real-system/core] Generated ".gitignore".',
-    errorMessage: '[@real-system/core] Failed to generate ".gitignore".',
+    successMessage: '[@real-system/core] Generated ".gitignore".\n',
+    errorMessage: '[@real-system/core] Failed to generate ".gitignore".\n',
   });
 };
 

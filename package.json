@@ -24,7 +24,9 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "workspaces": [
     "packages/*",
-    "packages/libraries/*"
+    "packages/components/*",
+    "packages/libraries/*",
+    "packages/primitives/*"
   ],
   "main": "index.js",
   "module": "index.esm.js",

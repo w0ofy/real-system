@@ -19,12 +19,12 @@ const writePkgJson = async (pkg) => {
     types: `../lib/${pkg}.d.ts`,
   };
 
-  const dir = `../core/${pkg}`;
+  const dir = `${__dirname}/../../${pkg}`;
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  writeToFile(`${dir}/package.json`, pkgJson, {
+  return await writeToFile(`${dir}/package.json`, pkgJson, {
     successMessage: `[@real-system/core/${pkg}]: Generated "package.json".`,
     errorMessage: `[@real-system/core/${pkg}]: Failed to generate "package.json".`,
     formatJson: true,
@@ -37,10 +37,10 @@ const writePkgJson = async (pkg) => {
 const generatePkgJson = async () => {
   const { pkgList } = await getWorkspacesInfo();
 
-  logger.gray("Generating package.json's for unbarreled exports");
-  return pkgList.forEach((pkg) => {
+  logger.gray("\nGenerating package.json's for unbarreled exports");
+  return pkgList.forEach(async (pkg, i) => {
     const pureName = pkg.pureName;
-    writePkgJson(pureName);
+    await writePkgJson(pureName);
   });
 };
 
