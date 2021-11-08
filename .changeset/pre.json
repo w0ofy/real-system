@@ -1,0 +1,15 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "@real-system/box": "0.0.1",
+    "@real-system/button": "0.0.2",
+    "@real-system/core": "0.0.2",
+    "@real-system/icon": "0.0.1",
+    "@real-system/styling": "0.0.0",
+    "@real-system/theme": "0.0.0",
+    "@real-system/typography": "0.0.1",
+    "@real-system/utils": "0.0.0"
+  },
+  "changesets": []
+}
