@@ -45,7 +45,7 @@
     "__RELEASE": "",
     "changeset": "changeset",
     "version:stable": "yarn changeset version && yarn install --mode=update-lockfile",
-    "version:next": "yarn changeset pre enter next && yarn version",
+    "version:next": "yarn changeset pre enter next && version:stable",
     "prerelease": "yarn build:packages && yarn lint && yarn test --runInBand",
     "release": "yarn build && yarn changeset publish",
     "__BUILD__": "build scripts",
