@@ -18,8 +18,11 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
     { children, as = 'label', disabled, required, ...restProps },
     ref
   ): React.ReactElement => {
-    const textColor = useMemo(
-      () => (disabled ? 'color-text-disabled' : 'color-text'),
+    const dynamicStyles = useMemo(
+      () => ({
+        color: disabled ? 'color-text-disabled' : 'color-text',
+        cursor: disabled ? 'not-allowed' : 'pointer',
+      }),
       [disabled]
     );
 
@@ -28,14 +31,23 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
         display="block"
         as={as}
         m={0}
+        p={0}
         fontSize={1}
+        lineHeight={2}
         fontWeight={3}
-        mb={2}
-        color={textColor}
+        cursor={dynamicStyles.cursor}
+        mb={4}
+        color={dynamicStyles.color}
         {...restProps}
         ref={ref}>
-        {required ? <RequiredDot disabled={disabled} /> : null}
-        {children}
+        <Box
+          as="span"
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start">
+          {required ? <RequiredDot disabled={disabled} /> : null}
+          <Box as="span">{children}</Box>
+        </Box>
       </Box>
     );
   }

@@ -12,7 +12,6 @@ export type BoxBaseStyleProps = StyleProps & {
   boxSizing?: Property.BoxSizing;
   clip?: Property.Clip;
   content?: string;
-  cursor?: Property.Cursor;
   float?: Property.Float;
   fontVariantNumeric?: Property.FontVariantNumeric;
   listStyleImage?: Property.ListStyleImage;

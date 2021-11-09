@@ -31,7 +31,6 @@ const makeColorRange =
       [`${prefix}-${paletteKey}`]: color,
       [`${prefix}-${paletteKey}-highlight`]: invert(color),
       [`${prefix}-${paletteKey}-inverse`]: getPaletteContrast(palette, color),
-      [`${prefix}-${paletteKey}-muted`]: tint(0.3, color),
       [`${prefix}-${paletteKey}-weak`]: tint(0.3, color),
       [`${prefix}-${paletteKey}-weaker`]: tint(0.6, color),
       [`${prefix}-${paletteKey}-weakest`]: tint(0.9, color),

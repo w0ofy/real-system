@@ -14,16 +14,23 @@ const RequiredDot = ({
 }: RequiredDotProps): React.ReactElement => {
   return (
     <Box
-      {...restProps}
       as="span"
-      color={disabled ? 'color-text-danger-weak' : 'color-text-danger'}
-      borderRadius="border-radius-circle"
-      height="4px"
-      width="4px"
-      m={0}
-      p={0}
-      mr={2}>
-      *<VisuallyHidden>Required: </VisuallyHidden>
+      display="inline-flex"
+      alignItems="center"
+      justifyContent="center"
+      height="size-icon-10"
+      mr={2}
+      cursor="pointer">
+      <Box
+        {...restProps}
+        as="span"
+        borderRadius="border-radius-circle"
+        display="block"
+        height="4px"
+        width="4px"
+        bg={disabled ? 'color-text-danger-weaker' : 'color-text-danger-weak'}>
+        <VisuallyHidden>Required: </VisuallyHidden>
+      </Box>
     </Box>
   );
 };

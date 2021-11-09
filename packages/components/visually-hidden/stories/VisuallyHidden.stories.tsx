@@ -16,8 +16,8 @@ export default {
 const Template = (args) => {
   return (
     <Typography>
-      * First Name
-      <VisuallyHidden {...args}>Required:</VisuallyHidden>
+      First Name
+      <VisuallyHidden {...args}>Required: </VisuallyHidden>
     </Typography>
   );
 };

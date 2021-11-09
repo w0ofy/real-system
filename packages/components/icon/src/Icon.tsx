@@ -25,6 +25,9 @@ const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
   info: 'color-text-info',
 };
 
+/**
+ * @todo add a11y props and functionnality
+ */
 const Icon = forwardRef<HTMLOrSVGElement, IconProps>(
   (
     { size = 'size-icon-20', icon, intent, ...restProps },
