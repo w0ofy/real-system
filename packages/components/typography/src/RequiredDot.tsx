@@ -15,7 +15,7 @@ const RequiredDot = ({
   return (
     <Box
       as="span"
-      display="inline-flex"
+      display="flex"
       alignItems="center"
       justifyContent="center"
       height="size-icon-10"

@@ -28,16 +28,16 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
 
     return (
       <Box
-        display="block"
         as={as}
-        m={0}
+        display="block"
         p={0}
-        fontSize={1}
-        lineHeight={2}
-        fontWeight={3}
-        cursor={dynamicStyles.cursor}
+        m={0}
         mb={4}
+        fontSize={1}
+        fontWeight={3}
+        lineHeight={2}
         color={dynamicStyles.color}
+        cursor={dynamicStyles.cursor}
         {...restProps}
         ref={ref}>
         <Box
