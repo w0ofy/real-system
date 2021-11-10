@@ -6,6 +6,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
+    'addon-screen-reader',
     'storybook-addon-performance',
     '@storybook/addon-actions',
     '@storybook/addon-viewport',

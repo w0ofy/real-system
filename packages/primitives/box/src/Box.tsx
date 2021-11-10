@@ -23,13 +23,7 @@ type Element = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
 function BoxAs<T>(element: Element) {
   return function BoxAsInnerComponent(props: BoxProps & T): React.ReactElement {
-    return (
-      <Box
-        forwardedAs={element}
-        data-testid={makeTestId('box-as')}
-        {...props}
-      />
-    );
+    return <Box as={element} data-testid={makeTestId('box-as')} {...props} />;
   };
 }
 

@@ -1,7 +1,7 @@
 {
-  "name": "@real-system/typography",
-  "version": "0.0.1",
-  "description": "Real System Typography components",
+  "name": "@real-system/visually-hidden",
+  "version": "0.0.0",
+  "description": "screen-reader-only component for real system",
   "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -20,9 +20,9 @@
   },
   "keywords": [
     "real-system",
-    "typography",
-    "text",
-    "heading"
+    "visually hidden",
+    "screenreader",
+    "components"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -31,19 +31,17 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box": "^0.0.1",
-    "@real-system/styling": "^0.0.0",
-    "@real-system/utils": "^0.0.0",
-    "@real-system/visually-hidden": "^0.0.0",
+    "@real-system/box": "0.0.1",
+    "@real-system/styling": "0.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "csstype": "^3.0.9"
+  },
   "devDependencies": {
-    "@real-system/box": "^0.0.1",
-    "@real-system/styling": "^0.0.0",
-    "@real-system/utils": "^0.0.0",
-    "@real-system/visually-hidden": "^0.0.0",
+    "@real-system/box": "0.0.1",
+    "@real-system/styling": "0.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

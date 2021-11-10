@@ -1,0 +1,58 @@
+import React, { forwardRef, useMemo } from 'react';
+
+import { Box } from '@real-system/box';
+
+import { RequiredDot } from './RequiredDot';
+import { InternalTypographyProps } from './types';
+
+export type LabelProps = {
+  children?: React.ReactNode;
+  htmlFor?: string;
+  as?: 'label' | 'legend';
+  disabled?: boolean;
+  required?: boolean;
+} & InternalTypographyProps;
+
+const Label = forwardRef<HTMLLabelElement, LabelProps>(
+  (
+    { children, as = 'label', disabled, required, ...restProps },
+    ref
+  ): React.ReactElement => {
+    const dynamicStyles = useMemo(
+      () => ({
+        color: disabled ? 'color-text-disabled' : 'color-text',
+        cursor: disabled ? 'not-allowed' : 'pointer',
+      }),
+      [disabled]
+    );
+
+    return (
+      <Box
+        as={as}
+        display="block"
+        p={0}
+        m={0}
+        mb={4}
+        fontSize={1}
+        fontWeight={3}
+        lineHeight={2}
+        color={dynamicStyles.color}
+        cursor={dynamicStyles.cursor}
+        {...restProps}
+        ref={ref}>
+        <Box
+          as="span"
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start">
+          {required ? <RequiredDot disabled={disabled} /> : null}
+          <Box as="span">{children}</Box>
+        </Box>
+      </Box>
+    );
+  }
+);
+
+Label.displayName = 'Label';
+
+export { Label };

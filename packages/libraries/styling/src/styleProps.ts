@@ -15,6 +15,8 @@ import {
   LayoutProps,
   letterSpacing,
   LetterSpacingProps,
+  opacity,
+  OpacityProps,
   position,
   PositionProps,
   shadow,
@@ -56,6 +58,10 @@ const placement = system({
   placeContent: true,
 });
 
+const clip = system({
+  clip: true,
+});
+
 const composeStyleProps = (): ReturnType<typeof compose> =>
   compose(
     background,
@@ -73,11 +79,17 @@ const composeStyleProps = (): ReturnType<typeof compose> =>
     outline,
     letterSpacing,
     grid,
-    placement
+    placement,
+    clip,
+    opacity
   );
 
 export type TextWrapProps = {
   whiteSpace?: Property.WhiteSpace;
+};
+
+export type ClipProps = {
+  clip?: Property.Clip;
 };
 
 export type CursorProps = {
@@ -121,7 +133,9 @@ export type StyleProps = Partial<
     OutlineProps &
     LetterSpacingProps &
     GridProps &
-    PlacementProps
+    PlacementProps &
+    ClipProps &
+    OpacityProps
 >;
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion

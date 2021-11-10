@@ -54,4 +54,13 @@ export const Heading = () => (
   </Box>
 );
 
-Heading.title = 'Components/Button/Variants/Secondary';
+export const Label = () => (
+  <Box display="flex" flexDirection="column">
+    <Typography.Label>Label</Typography.Label>
+    <Typography.Label disabled>Disabled Label</Typography.Label>
+    <Typography.Label required>Required Label</Typography.Label>
+    <Typography.Label required disabled>
+      Disabled Required Label
+    </Typography.Label>
+  </Box>
+);

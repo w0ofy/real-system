@@ -1,7 +1,6 @@
 export type ColorSuffixes =
   | 'highlight'
   | 'inverse'
-  | 'muted'
   | 'weak'
   | 'weaker'
   | 'weakest'
