@@ -64,3 +64,12 @@ export const Label = () => (
     </Typography.Label>
   </Box>
 );
+
+export const HelpText = () => (
+  <Box display="flex" flexDirection="column">
+    <Typography.HelpText id="help-text">Help text</Typography.HelpText>
+    <Typography.HelpText id="help-text-danger" variant="danger">
+      Danger help text
+    </Typography.HelpText>
+  </Box>
+);

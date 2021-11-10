@@ -1,3 +1,5 @@
+import { polished } from '@real-system/styling';
+
 import { Palette } from './types';
 
 export type DefaultPaletteColors =
@@ -11,8 +13,8 @@ export type DefaultPaletteColors =
   | '#FD6FFF'
   | '#81FCED'
   | '#FFCA58'
-  | '#333333'
-  | '#161616'
+  | '#1d2737'
+  | '#121c2d'
   | '#ffffff';
 
 export type DefaultPalette = Palette<DefaultPaletteColors>;
@@ -32,9 +34,9 @@ const defaultPalette: DefaultPalette = {
     tertiary: '#81FCED',
     quaternary: '#FFCA58',
   },
-  neutral: '#333333',
-  strong: '#161616',
-  weak: '#ffffff',
+  neutral: '#1d2737',
+  dark: '#121c2d',
+  light: '#ffffff',
 };
 
 export { defaultPalette };

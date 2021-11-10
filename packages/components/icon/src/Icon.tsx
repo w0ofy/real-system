@@ -50,6 +50,10 @@ const Icon = forwardRef<HTMLOrSVGElement, IconProps>(
         flexGrow={0}
         width={iconSize}
         height={iconSize}
+        _focus={{
+          outline: '2px solid',
+          outlineColor: 'color-border-primary',
+        }}
         {...restProps}>
         <BoxAsIcon
           ref={ref}
