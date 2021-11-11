@@ -13,4 +13,5 @@ export type ColorPrefixes =
   | 'color-background'
   | 'color-text'
   | 'color-border'
-  | 'shadow';
+  | 'shadow'
+  | 'shadow-border';

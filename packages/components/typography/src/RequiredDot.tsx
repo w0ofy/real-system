@@ -19,7 +19,7 @@ const RequiredDot = ({
       alignItems="center"
       justifyContent="center"
       height="size-icon-10"
-      mr={2}
+      mr={3}
       cursor="pointer">
       <Box
         {...restProps}

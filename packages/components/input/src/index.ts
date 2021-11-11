@@ -1,1 +1,1 @@
-export const input = () => undefined;
+export * from './Input';

@@ -18,26 +18,44 @@ type FnReturnValue<T extends ColorPrefixes, O extends PaletteKeys> = Record<
   Property.Color
 >;
 
+type Options = {
+  prefix?: string;
+  suffix?: string;
+};
+
+const applyValueModifications =
+  (valueOptions: Options = { prefix: '', suffix: '' }) =>
+  (val: string) => {
+    const { prefix, suffix } = valueOptions;
+    return `${prefix || ''} ${val} ${suffix || ''}`;
+  };
+
 const makeColorRange =
   <T extends ColorPrefixes>(colorPrefix: T) =>
   <O extends PaletteKeys>(
     paletteKey: O,
-    palette: Palette
+    palette: Palette,
+    valueOptions?: Options
   ): FnReturnValue<T, O> => {
     const color = getPaletteColor(palette, paletteKey);
     const prefix = colorPrefix as T;
+    const modifyValue = applyValueModifications(valueOptions);
 
-    return {
-      [`${prefix}-${paletteKey}`]: color,
-      [`${prefix}-${paletteKey}-highlight`]: invert(color),
-      [`${prefix}-${paletteKey}-inverse`]: getPaletteContrast(palette, color),
-      [`${prefix}-${paletteKey}-weak`]: tint(0.3, color),
-      [`${prefix}-${paletteKey}-weaker`]: tint(0.6, color),
-      [`${prefix}-${paletteKey}-weakest`]: tint(0.9, color),
-      [`${prefix}-${paletteKey}-strong`]: shade(0.3, color),
-      [`${prefix}-${paletteKey}-stronger`]: shade(0.6, color),
-      [`${prefix}-${paletteKey}-strongest`]: shade(0.9, color),
+    const ReturnValue = {
+      [`${prefix}-${paletteKey}`]: modifyValue(color),
+      [`${prefix}-${paletteKey}-highlight`]: modifyValue(invert(color)),
+      [`${prefix}-${paletteKey}-inverse`]: modifyValue(
+        getPaletteContrast(palette, color)
+      ),
+      [`${prefix}-${paletteKey}-weak`]: modifyValue(tint(0.3, color)),
+      [`${prefix}-${paletteKey}-weaker`]: modifyValue(tint(0.6, color)),
+      [`${prefix}-${paletteKey}-weakest`]: modifyValue(tint(0.9, color)),
+      [`${prefix}-${paletteKey}-strong`]: modifyValue(shade(0.3, color)),
+      [`${prefix}-${paletteKey}-stronger`]: modifyValue(shade(0.6, color)),
+      [`${prefix}-${paletteKey}-strongest`]: modifyValue(shade(0.9, color)),
     } as FnReturnValue<T, O>;
+
+    return ReturnValue;
   };
 
 export { makeColorRange };

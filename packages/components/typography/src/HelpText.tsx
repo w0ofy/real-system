@@ -36,9 +36,9 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
         alignItems="center"
         p={0}
         m={0}
-        mt={3}
-        fontSize={1}
-        fontWeight={1}
+        mt={4}
+        fontSize={2}
+        fontWeight={0}
         lineHeight={2}
         color={`color-text-${LABEL_INTENT_MAP[variant]}`}
         {...restProps}

@@ -58,7 +58,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={showDisabled}
         ref={ref}>
         {leadingIcon ? leadingIcon : null}
-        <Box as="span" ml={leadingIcon ? 5 : 0} mr={trailingIcon ? 5 : 0}>
+        <Box
+          as="span"
+          lineHeight={4}
+          ml={leadingIcon ? 5 : 0}
+          mr={trailingIcon ? 5 : 0}>
           {children}
         </Box>
         {trailingIcon ? trailingIcon : null}

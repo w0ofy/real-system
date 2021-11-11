@@ -11,9 +11,9 @@ const resetStyles: BoxStyleProps = {
   alignItems: 'center',
   justifyContent: 'center',
   border: 1,
-  borderRadius: 1,
+  borderRadius: 2,
   transition:
-    'background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out, transform 150ms ease-in-out',
+    'background-color 150ms ease-in-out, box-shadow 150ms ease-in, color 150ms ease-in-out, transform 150ms ease-in-out',
   fontSize: 2,
   fontFamily: 'font-family-text',
   fontWeight: 1,
@@ -22,7 +22,8 @@ const resetStyles: BoxStyleProps = {
   px: 9,
   py: 6,
   margin: 'space-0',
-  _focus: { outline: '2px solid', outlineColor: 'color-border-primary' },
+  _focus: { boxShadow: 'shadow-border-brand-weak', outline: 'none' },
+  _active: { boxShadow: 'none' },
 };
 
 const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {

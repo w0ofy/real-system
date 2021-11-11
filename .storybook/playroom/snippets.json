@@ -45,6 +45,11 @@
     "code": "<Icon icon=\"download\" />"
   },
   {
+    "group": "Input",
+    "name": "Default",
+    "code": "<Input />"
+  },
+  {
     "group": "Typography",
     "name": "Default",
     "code": "<Typography>paragraph</Typography>"
