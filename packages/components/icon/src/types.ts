@@ -1,5 +1,6 @@
 import * as Feather from 'react-feather';
 
+import { BoxProps } from '@real-system/box';
 import { SpaceProps } from '@real-system/styling';
 import { PaletteIntents, ThemeTokens } from '@real-system/theme';
 import { KebabCase } from '@real-system/utils';
@@ -34,4 +35,5 @@ export type IconProps = {
     | 'size-icon-button'
     | 'size-icon-button-small';
   intent?: IconIntent;
-} & SpaceProps;
+} & SpaceProps &
+  Pick<BoxProps, 'tabIndex'>;

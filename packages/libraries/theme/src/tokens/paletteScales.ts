@@ -7,6 +7,8 @@ import { makeColorRange } from './makeColorRange';
 const color = makeColorRange<'color'>('color');
 
 const colors = (palette: Palette) => ({
+  'color-light': palette.light,
+  'color-dark': palette.dark,
   ...color<'brand'>('brand', palette),
   ...color<'primary'>('primary', palette),
   ...color<'secondary'>('secondary', palette),
@@ -19,15 +21,14 @@ const colors = (palette: Palette) => ({
   ...color<'danger'>('danger', palette),
   ...color<'disabled'>('disabled', palette),
   ...color<'neutral'>('neutral', palette),
-  ...color<'strong'>('strong', palette),
-  ...color<'weak'>('weak', palette),
 });
 
 const colorBackground = makeColorRange<'color-background'>('color-background');
 const backgroundColors = (palette: Palette) => ({
-  'color-background': palette.weak,
-  'color-background-inverse': palette.strong,
-  'color-background-overlay': polished.transparentize(0.6, palette.strong),
+  'color-background': palette.light,
+  'color-background-dark': palette.dark,
+  'color-background-light': palette.light,
+  'color-background-overlay': polished.transparentize(0.6, palette.dark),
   ...colorBackground<'brand'>('brand', palette),
   ...colorBackground<'primary'>('primary', palette),
   ...colorBackground<'secondary'>('secondary', palette),
@@ -40,14 +41,13 @@ const backgroundColors = (palette: Palette) => ({
   ...colorBackground<'danger'>('danger', palette),
   ...colorBackground<'disabled'>('disabled', palette),
   ...colorBackground<'neutral'>('neutral', palette),
-  ...colorBackground<'strong'>('strong', palette),
-  ...colorBackground<'weak'>('weak', palette),
 });
 
 const colorText = makeColorRange<'color-text'>('color-text');
 const textColors = (palette: Palette) => ({
   'color-text': palette.neutral,
-  'color-text-inverse': palette.weak,
+  'color-text-light': palette.light,
+  'color-text-dark': palette.dark,
   ...colorText<'brand'>('brand', palette),
   ...colorText<'primary'>('primary', palette),
   ...colorText<'secondary'>('secondary', palette),
@@ -60,13 +60,13 @@ const textColors = (palette: Palette) => ({
   ...colorText<'danger'>('danger', palette),
   ...colorText<'disabled'>('disabled', palette),
   ...colorText<'neutral'>('neutral', palette),
-  ...colorText<'strong'>('strong', palette),
-  ...colorText<'weak'>('weak', palette),
 });
 
 const colorBorder = makeColorRange<'color-border'>('color-border');
 const borderColors = (palette: Palette) => ({
   'color-border': palette.neutral,
+  'color-border-dark': palette.dark,
+  'color-border-light': palette.light,
   ...colorBorder<'brand'>('brand', palette),
   ...colorBorder<'primary'>('primary', palette),
   ...colorBorder<'secondary'>('secondary', palette),
@@ -79,8 +79,6 @@ const borderColors = (palette: Palette) => ({
   ...colorBorder<'danger'>('danger', palette),
   ...colorBorder<'disabled'>('disabled', palette),
   ...colorBorder<'neutral'>('neutral', palette),
-  ...colorBorder<'strong'>('strong', palette),
-  ...colorBorder<'weak'>('weak', palette),
 });
 
 const borders = (palette: Palette) => ({
@@ -93,17 +91,15 @@ const borders = (palette: Palette) => ({
 });
 
 const shadow = makeColorRange<'shadow'>('shadow');
+const shadowBorder = makeColorRange<'shadow-border'>('shadow-border');
 const shadows = (palette: Palette) => {
-  const shadowWeak = shadow<'weak'>('weak', palette);
   return {
-    /** @todo WIP */
-    shadow: `0 0 0 1px ${shadowWeak['shadow-weak']}`,
-    'shadow-strong': `0 0 0 1px ${shadowWeak['shadow-weak-strong']}`,
-    'shadow-stronger': `0 0 0 1px ${shadowWeak['shadow-weak-stronger']}`,
-    'shadow-strongest': `0 0 0 1px ${shadowWeak['shadow-weak-strongest']}`,
-    'shadow-weak': `0 0 0 1px ${shadowWeak['shadow-weak-weak']}`,
-    'shadow-weaker': `0 0 0 1px ${shadowWeak['shadow-weak-weaker']}`,
-    'shadow-weakest': `0 0 0 1px ${shadowWeak['shadow-weak-weakest']}`,
+    ...shadow<'neutral'>('neutral', palette, {
+      prefix: '0 0 0 1px',
+    }),
+    ...shadowBorder<'brand'>('brand', palette, {
+      prefix: '0 0 0 4px',
+    }),
   };
 };
 

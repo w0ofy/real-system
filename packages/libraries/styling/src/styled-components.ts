@@ -9,8 +9,8 @@ declare module 'styled-components' {
         'success' | 'warning' | 'danger' | 'info' | 'disabled',
         any
       >;
-      strong: string;
-      weak: string;
+      dark: string;
+      light: string;
       neutral: string;
     };
     colors: Record<string, string>;

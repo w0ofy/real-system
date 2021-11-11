@@ -19,11 +19,13 @@ const Box = styled.div.attrs(boxAttrs)<BoxProps>(
   getPseudoStyles
 );
 
-type Element = keyof JSX.IntrinsicElements | React.ComponentType<any>;
+type ElementTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
-function BoxAs<T>(element: Element) {
+function BoxAs<T>(elementTag: ElementTag) {
   return function BoxAsInnerComponent(props: BoxProps & T): React.ReactElement {
-    return <Box as={element} data-testid={makeTestId('box-as')} {...props} />;
+    return (
+      <Box as={elementTag} data-testid={makeTestId('box-as')} {...props} />
+    );
   };
 }
 

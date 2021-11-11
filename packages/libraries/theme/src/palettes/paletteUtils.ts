@@ -17,7 +17,7 @@ const getPaletteContrast = (
   hexcolor: Property.Color
 ): Property.Color => {
   // Check contrast
-  const paletteKey = getColorContrast(hexcolor) === 'black' ? 'strong' : 'weak';
+  const paletteKey = getColorContrast(hexcolor) === 'black' ? 'dark' : 'light';
 
   return get(palette, paletteKey);
 };

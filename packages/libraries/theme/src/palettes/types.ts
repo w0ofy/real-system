@@ -15,8 +15,8 @@ export type PaletteKeys =
   | 'danger'
   | 'disabled'
   | 'neutral'
-  | 'strong'
-  | 'weak';
+  | 'dark'
+  | 'light';
 
 export type PaletteIntents = Extract<
   PaletteKeys,
@@ -38,7 +38,7 @@ export type PaletteAccents = Extract<
 >;
 export type PaletteColors = Extract<
   PaletteKeys,
-  'brand' | 'neutral' | 'strong' | 'weak'
+  'brand' | 'neutral' | 'dark' | 'light'
 >;
 
 export type PaletteAccessors =
