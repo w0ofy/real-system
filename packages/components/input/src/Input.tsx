@@ -17,8 +17,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     readOnly,
     disabled,
     error,
-    insertAfter,
-    insertBefore,
+    suffix,
+    prefix,
     placeholder,
     id,
     value,
@@ -40,8 +40,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     <InputBox
       disabled={disabled}
       error={error}
-      insertAfter={insertAfter}
-      insertBefore={insertBefore}
+      suffix={suffix}
+      prefix={prefix}
       readOnly={readOnly}
       type={type}>
       <InputElement

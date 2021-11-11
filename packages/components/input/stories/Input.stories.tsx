@@ -31,27 +31,27 @@ const Template = (args) => {
       </Container>
       <Container>
         <Label htmlFor="input-1" required>
-          Email (insertBefore)
+          Email (prefix)
         </Label>
         <Input
           type="email"
           id="input-1"
           name="email-address"
           placeholder="personal@realsystem.com"
-          insertBefore={<Icon icon="at-sign" size="size-icon-10" />}
+          prefix={<Icon icon="at-sign" size="size-icon-10" />}
           {...args}
         />
       </Container>
       <Container>
         <Label htmlFor="input-2" required>
-          Email (insertAfter)
+          Email (suffix)
         </Label>
         <Input
           type="email"
           id="input-2"
           name="email-address"
           placeholder="personal@realsystem.com"
-          insertAfter={<Icon icon="info" intent="info" size="size-icon-20" />}
+          suffix={<Icon icon="info" intent="info" size="size-icon-20" />}
           {...args}
         />
       </Container>
@@ -63,6 +63,19 @@ const Template = (args) => {
           readOnly
           type="email"
           id="input-3"
+          name="email-address"
+          value="personal@realsystem.com"
+          {...args}
+        />
+      </Container>
+      <Container>
+        <Label htmlFor="input-4" required disabled>
+          Email (disabled)
+        </Label>
+        <Input
+          disabled
+          type="email"
+          id="input-4"
           name="email-address"
           value="personal@realsystem.com"
           {...args}

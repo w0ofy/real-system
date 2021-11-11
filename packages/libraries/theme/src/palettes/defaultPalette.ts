@@ -8,12 +8,12 @@ export type DefaultPaletteColors =
   | '#f1c21b'
   | '#da1e28'
   | '#0043ce'
-  | '#f4f4f6'
+  | '#e7e7e9'
   | '#6FFFB0'
   | '#FD6FFF'
   | '#81FCED'
   | '#FFCA58'
-  | '#1d1827'
+  | '#332f3c'
   | '#120c1d'
   | '#ffffff';
 
@@ -26,7 +26,7 @@ const defaultPalette: DefaultPalette = {
     warning: '#f1c21b',
     danger: '#da1e28',
     info: '#0043ce',
-    disabled: '#f4f4f6',
+    disabled: '#e7e7e9',
   },
   accent: {
     primary: '#6FFFB0',
@@ -34,9 +34,11 @@ const defaultPalette: DefaultPalette = {
     tertiary: '#81FCED',
     quaternary: '#FFCA58',
   },
-  neutral: '#1d1827',
+  neutral: '#332f3c',
   dark: '#120c1d',
   light: '#ffffff',
 };
+
+console.log(defaultPalette.status.disabled);
 
 export { defaultPalette };

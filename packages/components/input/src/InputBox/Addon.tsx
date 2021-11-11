@@ -19,15 +19,12 @@ const makePositionalStyles = (isSuffix = false) => {
 };
 
 const makeColorStyles = (isDisabled = false) => {
-  let styles = {
-    backgroundColor: 'color-background-neutral-weakest',
-    borderColor: 'color-border-neutral-weaker',
+  const styles = {
+    backgroundColor: 'color-background-disabled-weak-5',
+    borderColor: 'color-border-disabled',
   };
   if (isDisabled) {
-    styles = {
-      backgroundColor: 'none',
-      borderColor: 'color-border-neutral-weakest',
-    };
+    styles.backgroundColor = 'none';
   }
   return styles;
 };

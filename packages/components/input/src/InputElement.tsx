@@ -43,6 +43,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
           color: 'color-text-neutral-weaker',
         }}
         _focus={{ outline: 'none' }}
+        _disabled={{ cursor: 'not-allowed' }}
         {...props}
       />
     );

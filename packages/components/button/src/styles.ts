@@ -20,6 +20,7 @@ const resetStyles: BoxStyleProps = {
   textDecoration: 'none',
   position: 'relative',
   margin: 0,
+  _hover: {},
   _focus: { boxShadow: 'shadow-focus', outline: 'none' },
   _active: { boxShadow: 'none' },
 };

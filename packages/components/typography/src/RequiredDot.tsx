@@ -20,7 +20,7 @@ const RequiredDot = ({
       justifyContent="center"
       height="size-icon-10"
       mr={3}
-      cursor="pointer">
+      cursor={disabled ? 'not-allowed' : 'pointer'}>
       <Box
         {...restProps}
         as="span"

@@ -96,12 +96,14 @@ const shadows = (palette: Palette) => {
   const shadowBorderBrand = shadowBorder<'brand'>('brand', palette, {
     prefix: '0 0 0 4px',
   });
+  const shadowBorderNeutral = shadow<'neutral'>('neutral', palette, {
+    prefix: '0 0 0 1px',
+  });
+
   return {
-    'shadow-focus': shadowBorderBrand['shadow-border-brand-weak'],
-    ...shadow<'neutral'>('neutral', palette, {
-      prefix: '0 0 0 1px',
-    }),
+    'shadow-focus': shadowBorderBrand['shadow-border-brand-weak-3'],
     ...shadowBorderBrand,
+    ...shadowBorderNeutral,
   };
 };
 
