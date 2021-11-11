@@ -39,4 +39,6 @@ const defaultPalette: DefaultPalette = {
   light: '#ffffff',
 };
 
+console.log(defaultPalette.status.disabled);
+
 export { defaultPalette };
