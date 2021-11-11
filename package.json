@@ -66,6 +66,7 @@
     "build:pkg:typography": "yarn workspace @real-system/typography build",
     "build:pkg:input": "yarn workspace @real-system/input build",
     "build:core": "yarn workspace @real-system/core build",
+    "prebuild:storybook": "yarn build",
     "build:storybook": "build-storybook -o .storybook/build && yarn build:playroom",
     "build:playroom": "playroom build",
     "__DEVELOPMENT__": "dev scripts",
