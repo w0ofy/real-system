@@ -3,6 +3,8 @@ import * as React from 'react';
 import { Box, BoxStyleProps } from '@real-system/box';
 import { merge } from '@real-system/utils';
 
+import { Addon } from './Addon';
+
 export type InputBoxTypes =
   | 'text'
   | 'email'
@@ -36,16 +38,17 @@ const baseStyles: BoxStyleProps = {
   bg: 'color-background',
   cursor: 'text',
   outline: 'none',
+  boxShadow: 'none',
   _hover: {
+    borderColor: 'color-border-neutral-strong',
+  },
+  _focusWithin: {
     borderColor: 'color-border-neutral-stronger',
+    boxShadow: 'shadow-focus',
   },
   _active: {
     borderColor: 'color-border-neutral-stronger',
     boxShadow: 'none',
-  },
-  _focusWithin: {
-    borderColor: 'color-border-neutral-stronger',
-    boxShadow: 'shadow-border-brand-weak',
   },
 };
 
@@ -56,43 +59,54 @@ const styles: { [key in InputBoxStates]: BoxStyleProps } = {
     borderColor: 'color-border-disabled-strong',
     cursor: 'not-allowed',
     _hover: { borderColor: 'color-border-disabled-strong' },
-    _active: { borderColor: 'color-border-disabled-strong' },
     _focusWithin: {
       boxShadow: 'none',
       borderColor: 'color-border-disabled-strong',
     },
+    _active: { borderColor: 'color-border-disabled-strong' },
   }),
   readonly: merge(baseStyles, {
     bg: 'color-background-disabled',
     borderColor: 'color-border-disabled-strong',
     _hover: { borderColor: 'color-border-disabled-strong' },
-    _active: { borderColor: 'color-border-disabled-strong' },
     _focusWithin: {
       borderColor: 'color-border-disabled-strong',
     },
+    _active: { borderColor: 'color-border-disabled-strong' },
   }),
   error: merge(baseStyles, {
     borderColor: 'color-border-danger',
     _hover: { borderColor: 'color-border-danger-strong' },
-    _active: { borderColor: 'color-border-danger-strong' },
     _focusWithin: {
       borderColor: 'color-border-danger-strong',
     },
+    _active: { borderColor: 'color-border-danger-strong' },
   }),
   hidden: merge(baseStyles, {
     bg: 'none',
     border: 0,
     _hover: { border: 0 },
-    _active: { border: 0 },
     _focusWithin: {
       boxShadow: 'none',
       border: 0,
     },
+    _active: { border: 0 },
   }),
 };
 
 const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
-  ({ disabled, error = false, readOnly, children, type }, ref) => {
+  (
+    {
+      disabled,
+      error = false,
+      readOnly,
+      children,
+      type,
+      insertAfter,
+      insertBefore,
+    },
+    ref
+  ) => {
     const isHidden = type === 'hidden';
     const isDisabled = disabled && !isHidden;
     const isDanger = error && !isHidden;
@@ -111,7 +125,13 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
 
     return (
       <Box ref={ref} {...styles[state]}>
+        {insertBefore && <Addon disabled={disabled}>{insertBefore}</Addon>}
         {children}
+        {insertAfter && (
+          <Addon disabled={disabled} isSuffix>
+            {insertAfter}
+          </Addon>
+        )}
       </Box>
     );
   }

@@ -19,17 +19,15 @@ const resetStyles: BoxStyleProps = {
   fontWeight: 1,
   textDecoration: 'none',
   position: 'relative',
-  px: 9,
-  py: 6,
-  margin: 'space-0',
-  _focus: { boxShadow: 'shadow-border-brand-weak', outline: 'none' },
+  margin: 0,
+  _focus: { boxShadow: 'shadow-focus', outline: 'none' },
   _active: { boxShadow: 'none' },
 };
 
 const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
   default: {
     px: 9,
-    py: 6,
+    py: 5,
     fontSize: 2,
   },
   small: {

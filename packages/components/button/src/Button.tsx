@@ -60,7 +60,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {leadingIcon ? leadingIcon : null}
         <Box
           as="span"
-          lineHeight={4}
+          lineHeight={3}
           ml={leadingIcon ? 5 : 0}
           mr={trailingIcon ? 5 : 0}>
           {children}
@@ -74,3 +74,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button };
+export type { ButtonProps };

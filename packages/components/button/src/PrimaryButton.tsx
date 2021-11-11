@@ -16,7 +16,7 @@ const defaultStyles: ButtonStyles = {
       backgroundColor: 'color-background-brand-strong',
     },
     _active: {
-      backgroundColor: 'color-background-brand-stronger',
+      backgroundColor: 'color-background-brand-strongest',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -55,10 +55,10 @@ const neutralStyles: ButtonStyles = {
     backgroundColor: 'color-background-neutral',
     color: 'color-background-neutral-inverse',
     _hover: {
-      backgroundColor: 'color-background-neutral-strong',
+      backgroundColor: 'color-background-neutral-stronger',
     },
     _active: {
-      backgroundColor: 'color-background-neutral-stronger',
+      backgroundColor: 'color-background-neutral-strongest',
     },
   }),
   loading: merge(baseStyles.loading, {

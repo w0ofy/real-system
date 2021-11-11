@@ -42,17 +42,17 @@ const makeColorRange =
     const modifyValue = applyValueModifications(valueOptions);
 
     const ReturnValue = {
+      [`${prefix}-${paletteKey}-weakest`]: modifyValue(tint(0.9, color)),
+      [`${prefix}-${paletteKey}-weaker`]: modifyValue(tint(0.6, color)),
+      [`${prefix}-${paletteKey}-weak`]: modifyValue(tint(0.3, color)),
       [`${prefix}-${paletteKey}`]: modifyValue(color),
+      [`${prefix}-${paletteKey}-strong`]: modifyValue(shade(0.3, color)),
+      [`${prefix}-${paletteKey}-stronger`]: modifyValue(shade(0.6, color)),
+      [`${prefix}-${paletteKey}-strongest`]: modifyValue(shade(0.9, color)),
       [`${prefix}-${paletteKey}-highlight`]: modifyValue(invert(color)),
       [`${prefix}-${paletteKey}-inverse`]: modifyValue(
         getPaletteContrast(palette, color)
       ),
-      [`${prefix}-${paletteKey}-weak`]: modifyValue(tint(0.3, color)),
-      [`${prefix}-${paletteKey}-weaker`]: modifyValue(tint(0.6, color)),
-      [`${prefix}-${paletteKey}-weakest`]: modifyValue(tint(0.9, color)),
-      [`${prefix}-${paletteKey}-strong`]: modifyValue(shade(0.3, color)),
-      [`${prefix}-${paletteKey}-stronger`]: modifyValue(shade(0.6, color)),
-      [`${prefix}-${paletteKey}-strongest`]: modifyValue(shade(0.9, color)),
     } as FnReturnValue<T, O>;
 
     return ReturnValue;
