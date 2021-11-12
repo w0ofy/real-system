@@ -45,6 +45,7 @@ export type {
 export {
   createGlobalStyle,
   isStyledComponent,
+  keyframes,
   ThemeConsumer as PrimitiveThemeConsumer,
   ThemeContext as PrimitiveThemeContext,
   ThemeProvider as PrimitiveThemeProvider,

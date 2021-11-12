@@ -40,7 +40,7 @@ const TokenSearch = ({ scale }: { scale: ThemeScales }) => {
         <Input
           type="text"
           // @ts-ignore
-          prefix={<Icon icon="search" size="size-icon-20" />}
+          prefix={<Icon icon="search" size="size-icon-30" />}
           placeholder="filter by name"
           onChange={debouncedSearchHandler}
         />
