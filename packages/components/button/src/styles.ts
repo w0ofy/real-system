@@ -36,7 +36,7 @@ const getSizeStyles = (
   variant: ButtonVariants
 ): { [key in ButtonSizes]: BoxStyleProps } => ({
   default: {
-    px: ifNotLink(variant, 9),
+    px: ifNotLink(variant, 8),
     py: ifNotLink(variant, 5),
     fontSize: 2,
   },
