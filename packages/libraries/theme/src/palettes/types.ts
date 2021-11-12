@@ -50,3 +50,5 @@ export type Palette<T = string> = {
   accent: { [key in PaletteAccents]: T };
   status: { [key in PaletteStatuses]: T };
 } & { [key in PaletteColors]: T };
+
+export type PaletteSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
