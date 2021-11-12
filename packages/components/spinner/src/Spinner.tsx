@@ -47,3 +47,4 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
 });
 
 export { Spinner };
+export type { SpinnerProps };

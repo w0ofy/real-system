@@ -78,12 +78,12 @@ const styles: { [key in SpinnerProps['size']]: BoxStyleProps } = {
   },
 };
 
-const spin = keyframes`
+const spinAnimation = keyframes`
   to { -webkit-transform: rotate(360deg); }
 `;
 
 const Wheel = styled(Box)`
-  animation: 1s linear infinite ${spin};
+  animation: 1s linear infinite ${spinAnimation};
 `;
 
 export { styles, Wheel };
