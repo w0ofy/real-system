@@ -11,6 +11,7 @@
   - .storybook/**/*
   - .vscode/**/*
   - tools/**/*
+  - package.json
 
 # components
 'area: components':
