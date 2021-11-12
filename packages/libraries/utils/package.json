@@ -37,7 +37,7 @@
     "deepmerge": "^4.2.2",
     "lodash.get": "^4.4.2",
     "react-uid": "^2.3.1",
-    "type-fest": "^2.5.2"
+    "type-fest": "^2.5.3"
   },
   "devDependencies": {
     "react": "^17.0.2",
