@@ -1,5 +1,3 @@
-import { polished } from '@real-system/styling';
-
 import { Palette } from './types';
 
 export type DefaultPaletteColors =
