@@ -42,26 +42,40 @@ export type OrdinalTokens =
   | 18
   | 19;
 
-export type ColorTokens =
-  | keyof ReturnType<typeof colors>
-  | keyof ReturnType<typeof backgroundColors>
-  | keyof ReturnType<typeof textColors>
-  | keyof ReturnType<typeof borderColors>;
+export type ColorTokens = keyof ReturnType<typeof colors>;
+export type BackgroundColorTokens = keyof ReturnType<typeof backgroundColors>;
+export type TextColorTokens = keyof ReturnType<typeof textColors>;
+export type BorderColorTokens = keyof ReturnType<typeof borderColors>;
+export type BorderTokens = keyof ReturnType<typeof borders>;
+export type BorderWidthTokens = keyof typeof borderWidths;
+export type ShadowTokens = keyof ReturnType<typeof shadows>;
+export type FontTokens = keyof typeof fonts;
+export type FontSizeTokens = keyof typeof fontSizes;
+export type FontWeightTokens = keyof typeof fontWeights;
+export type LetterSpacingTokens = keyof typeof letterSpacings;
+export type LineHeightTokens = keyof typeof lineHeights;
+export type RadiiTokens = keyof typeof radii;
+export type SpaceTokens = keyof typeof space;
+export type SizeTokens = keyof typeof sizes;
+export type ZIndexTokens = keyof typeof zIndices;
 
 export type ThemeTokens =
-  | keyof typeof borderWidths
-  | keyof typeof fonts
-  | keyof typeof fontSizes
-  | keyof typeof fontWeights
-  | keyof typeof letterSpacings
-  | keyof typeof lineHeights
-  | keyof typeof radii
-  | keyof typeof space
-  | keyof typeof sizes
-  | keyof typeof zIndices
+  | BorderWidthTokens
+  | FontTokens
+  | FontSizeTokens
+  | FontWeightTokens
+  | LetterSpacingTokens
+  | LineHeightTokens
+  | RadiiTokens
+  | SpaceTokens
+  | SizeTokens
+  | ZIndexTokens
   | ColorTokens
-  | keyof ReturnType<typeof borders>
-  | keyof ReturnType<typeof shadows>
+  | BackgroundColorTokens
+  | TextColorTokens
+  | BorderColorTokens
+  | BorderTokens
+  | ShadowTokens
   | OrdinalTokens;
 
 export type ThemeScales = keyof DefaultTheme;
