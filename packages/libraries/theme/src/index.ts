@@ -10,7 +10,6 @@ export * from './tokens/makeColorRange';
 /*
  * Token utilities
  */
-export type { ThemeScales, ThemeTokens } from './getToken';
-export { getToken } from './getToken';
+export * from './getToken';
 export { useToken } from './useToken';
 export type { DefaultTheme } from '@real-system/styling';

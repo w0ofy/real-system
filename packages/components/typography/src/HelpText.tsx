@@ -49,7 +49,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
               icon="alert-triangle"
               intent={ICON_INTENT_MAP[variant]}
               mr={2}
-              size="size-icon-20"
+              size="size-icon-30"
             />
           )}
         </Box>
