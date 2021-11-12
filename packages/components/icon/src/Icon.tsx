@@ -29,7 +29,7 @@ const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
  * @todo add a11y props and functionnality
  */
 const Icon = forwardRef<HTMLOrSVGElement, IconProps>(
-  ({ size = 'size-icon-20', icon, intent, ...restProps }, ref) => {
+  ({ size = 'size-icon-30', icon, intent, ...restProps }, ref) => {
     const theme = useTheme();
     const token = useCallback(
       (token: ThemeTokens, scale?: ThemeScales) =>

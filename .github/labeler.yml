@@ -15,14 +15,6 @@
 # components
 'area: components':
   - packages/components/**/*
-'area: button':
-  - packages/components/button/**/*
-'area: icon':
-  - packages/components/icon/core-bundle/**/*
-'area: theme':
-  - packages/components/theme/**/*
-'area: typography':
-  - packages/components/typography/**/*
 
 # core bundle
 'area: core':
@@ -31,16 +23,10 @@
 # libraries
 'area: libraries':
   - packages/libraries/**/*
-'area: styling':
-  - packages/libraries/styling/**/*
-'area: utils':
-  - packages/utils/**/*
 
 # primitives
 'area: primitives':
   - packages/primitives/**/*
-'area: box':
-  - packages/primitives/box/**/*
 
 # docs
 'type: storybook':
