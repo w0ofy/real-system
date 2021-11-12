@@ -3,7 +3,7 @@ const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 module.exports = {
   title: 'Real System Sandbox',
   components: './packages/core/src/index.ts',
-  outputPath: './.storybook/build/playroom',
+  outputPath: './storybook/playroom',
   openBrowser: false,
   iframeSandbox: 'allow-scripts allow-popups allow-same-origin',
   scope: './.storybook/playroom/useScope.ts',
