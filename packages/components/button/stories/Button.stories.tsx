@@ -55,14 +55,16 @@ const ShowcaseTemplate = (args) => (
         <Icon icon="download" />
       </Button>
     </Row>
-    <Row>
-      <Button {...args} disabled />
-      <Button {...args} disabled trailingIcon={<Icon icon="download" />} />
-      <Button {...args} disabled leadingIcon={<Icon icon="download" />} />
-      <Button {...args} disabled>
-        <Icon icon="download" />
-      </Button>
-    </Row>
+    {args.variant !== 'link' && (
+      <Row>
+        <Button {...args} disabled />
+        <Button {...args} disabled trailingIcon={<Icon icon="download" />} />
+        <Button {...args} disabled leadingIcon={<Icon icon="download" />} />
+        <Button {...args} disabled>
+          <Icon icon="download" />
+        </Button>
+      </Row>
+    )}
     <Row>
       <Button {...args} intent="neutral" />
       <Button
@@ -79,24 +81,26 @@ const ShowcaseTemplate = (args) => (
         <Icon icon="settings" />
       </Button>
     </Row>
-    <Row>
-      <Button {...args} intent="neutral" disabled />
-      <Button
-        {...args}
-        disabled
-        intent="neutral"
-        trailingIcon={<Icon icon="settings" />}
-      />
-      <Button
-        {...args}
-        disabled
-        intent="neutral"
-        leadingIcon={<Icon icon="settings" />}
-      />
-      <Button {...args} intent="neutral" disabled>
-        <Icon icon="settings" />
-      </Button>
-    </Row>
+    {args.variant !== 'link' && (
+      <Row>
+        <Button {...args} intent="neutral" disabled />
+        <Button
+          {...args}
+          disabled
+          intent="neutral"
+          trailingIcon={<Icon icon="settings" />}
+        />
+        <Button
+          {...args}
+          disabled
+          intent="neutral"
+          leadingIcon={<Icon icon="settings" />}
+        />
+        <Button {...args} intent="neutral" disabled>
+          <Icon icon="settings" />
+        </Button>
+      </Row>
+    )}
     <Row>
       <Button {...args} intent="danger" />
       <Button {...args} intent="danger" trailingIcon={<Icon icon="trash2" />} />
@@ -105,24 +109,26 @@ const ShowcaseTemplate = (args) => (
         <Icon icon="trash2" />
       </Button>
     </Row>
-    <Row>
-      <Button {...args} intent="danger" disabled />
-      <Button
-        {...args}
-        intent="danger"
-        trailingIcon={<Icon icon="trash2" />}
-        disabled
-      />
-      <Button
-        {...args}
-        intent="danger"
-        leadingIcon={<Icon icon="trash2" />}
-        disabled
-      />
-      <Button {...args} intent="danger" disabled>
-        <Icon icon="trash2" />
-      </Button>
-    </Row>
+    {args.variant !== 'link' && (
+      <Row>
+        <Button {...args} intent="danger" disabled />
+        <Button
+          {...args}
+          intent="danger"
+          trailingIcon={<Icon icon="trash2" />}
+          disabled
+        />
+        <Button
+          {...args}
+          intent="danger"
+          leadingIcon={<Icon icon="trash2" />}
+          disabled
+        />
+        <Button {...args} intent="danger" disabled>
+          <Icon icon="trash2" />
+        </Button>
+      </Row>
+    )}
   </Box>
 );
 
@@ -131,11 +137,12 @@ ShowcaseTemplate.defaultProps = {
   mr: 10,
 };
 
-export const Showcase = (args) => (
-  <Container flexDirection="row" flexWrap="wrap">
+export const Showcase = () => (
+  <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
     <ShowcaseTemplate variant="primary" />
     <ShowcaseTemplate variant="secondary" />
     <ShowcaseTemplate variant="ghost" />
+    <ShowcaseTemplate variant="link" />
     <ShowcaseTemplate variant="primary" size="small" />
     <ShowcaseTemplate variant="secondary" size="small" />
     <ShowcaseTemplate variant="ghost" size="small" />
@@ -211,6 +218,16 @@ export const IconButton = ({ icon, ...args }) => (
     <Row>
       <Button {...args}>
         <Icon icon={icon || 'settings'} />
+      </Button>
+    </Row>
+  </Container>
+);
+
+export const LinkButton = ({ icon, ...args }) => (
+  <Container>
+    <Row>
+      <Button {...args} variant="link">
+        Link
       </Button>
     </Row>
   </Container>

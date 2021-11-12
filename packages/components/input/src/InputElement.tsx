@@ -36,11 +36,11 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         _placeholder={{
           fontStyle: 'italic',
-          color: 'color-text-neutral-weaker',
+          color: 'color-text-neutral-weak-6',
         }}
         _focus_placeholder={{
           fontStyle: 'italic',
-          color: 'color-text-neutral-weaker',
+          color: 'color-text-neutral-weak-6',
         }}
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'not-allowed' }}

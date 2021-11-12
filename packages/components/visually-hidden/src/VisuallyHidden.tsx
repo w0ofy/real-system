@@ -7,7 +7,7 @@ export type VisuallyHiddenProps = Pick<BoxProps, 'as'> & {
 };
 
 const VisuallyHidden = React.forwardRef<HTMLElement, VisuallyHiddenProps>(
-  ({ as = 'span', children, ...restProps }, ref) => {
+  function VisuallyHidden({ as = 'span', children, ...restProps }, ref) {
     return (
       <Box
         {...restProps}
@@ -28,7 +28,5 @@ const VisuallyHidden = React.forwardRef<HTMLElement, VisuallyHiddenProps>(
     );
   }
 );
-
-VisuallyHidden.displayName = 'VisuallyHidden';
 
 export { VisuallyHidden };

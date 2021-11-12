@@ -15,7 +15,7 @@ export type HelpTextProps = {
 
 const LABEL_INTENT_MAP: { [key in HelpTextIntents]: string } = {
   danger: 'danger',
-  default: 'neutral-weak',
+  default: 'neutral-weak-3',
 };
 const ICON_INTENT_MAP: {
   [key in HelpTextIntents]: IconProps['intent'];

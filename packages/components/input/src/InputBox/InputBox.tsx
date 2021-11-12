@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box';
 import { merge } from '@real-system/utils';

@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import type { SpaceProps } from '@real-system/styling';
 
 import { InputBoxProps, InputBoxTypes } from './InputBox';

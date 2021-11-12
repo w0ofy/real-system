@@ -1,7 +1,7 @@
-import { makeTheme } from './tokens';
+import { tokenizePalette } from './tokens';
 
 const themes = {
-  realsystem: makeTheme,
+  realsystem: tokenizePalette(),
 };
 
-export { themes };
+export { themes, tokenizePalette };

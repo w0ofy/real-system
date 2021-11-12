@@ -2,6 +2,7 @@ import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
 import { Box } from '@real-system/box';
+import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { Input } from '@real-system/input';
 import { HelpText, Label } from '@real-system/typography';
@@ -38,7 +39,7 @@ const Template = (args) => {
           id="input-1"
           name="email-address"
           placeholder="personal@realsystem.com"
-          prefix={<Icon icon="at-sign" size="size-icon-10" />}
+          prefix={<Icon icon="at-sign" />}
           {...args}
         />
       </Container>
@@ -51,7 +52,11 @@ const Template = (args) => {
           id="input-2"
           name="email-address"
           placeholder="personal@realsystem.com"
-          suffix={<Icon icon="info" intent="info" size="size-icon-20" />}
+          suffix={
+            <Button size="small" variant="link">
+              <Icon icon="info" />
+            </Button>
+          }
           {...args}
         />
       </Container>

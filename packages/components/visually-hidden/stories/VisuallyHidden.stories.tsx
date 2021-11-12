@@ -7,18 +7,14 @@ import { VisuallyHidden } from '@real-system/visually-hidden';
 export default {
   title: 'Components/VisuallyHidden',
   component: VisuallyHidden,
-  args: {
-    children: 'The quick brown fox jumps over the lazy dog',
-    variant: 'primary',
-  },
 } as Meta;
 
 const Template = (args) => {
   return (
-    <Typography>
+    <Typography.Label required>
       First Name
       <VisuallyHidden {...args}>Required: </VisuallyHidden>
-    </Typography>
+    </Typography.Label>
   );
 };
 

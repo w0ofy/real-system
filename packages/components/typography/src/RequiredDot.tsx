@@ -28,7 +28,7 @@ const RequiredDot = ({
         display="block"
         height="4px"
         width="4px"
-        bg={disabled ? 'color-text-danger-weaker' : 'color-text-danger-weak'}>
+        bg={disabled ? 'color-text-danger-weak-6' : 'color-text-danger-weak-3'}>
         <VisuallyHidden>Required: </VisuallyHidden>
       </Box>
     </Box>

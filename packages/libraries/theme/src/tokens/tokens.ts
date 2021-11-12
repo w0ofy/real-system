@@ -24,13 +24,11 @@ import {
   zIndices,
 } from './staticScales';
 
-const palette = defaultPalette;
-
 /**
  *
- * @description generates a theme with the given Palette. Uses the realsystem palette by default
+ * @description generates a tokenized theme with the given Palette. Uses the realsystem palette by default
  */
-const makeTheme = (palette: Palette = defaultPalette): DefaultTheme => ({
+const tokenizePalette = (palette: Palette = defaultPalette): DefaultTheme => ({
   palette: palette,
   // scales that inherit the palette
   colors: {
@@ -54,6 +52,8 @@ const makeTheme = (palette: Palette = defaultPalette): DefaultTheme => ({
   space: makeTokenScale(space),
 });
 
+const palette = defaultPalette;
+
 export {
   backgroundColors,
   borderColors,
@@ -65,12 +65,12 @@ export {
   fontWeights,
   letterSpacings,
   lineHeights,
-  makeTheme,
   palette,
   radii,
   shadows,
   sizes,
   space,
   textColors,
+  tokenizePalette,
   zIndices,
 };

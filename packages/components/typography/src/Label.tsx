@@ -20,7 +20,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
   ): React.ReactElement => {
     const dynamicStyles = useMemo(
       () => ({
-        color: disabled ? 'color-text-disabled-strong' : 'color-text',
+        color: disabled ? 'color-text-disabled-strong-3' : 'color-text',
         cursor: disabled ? 'not-allowed' : 'pointer',
       }),
       [disabled]
