@@ -104,7 +104,7 @@ dist
 
 # real-system
 **/lib
-.storybook/build
+storybook
 .jest/coverage
 !.jest/.cache
 .jest/.cache/packages.json

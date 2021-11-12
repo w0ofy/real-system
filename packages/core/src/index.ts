@@ -2,6 +2,7 @@ export * from '@real-system/box';
 export * from '@real-system/button';
 export * from '@real-system/icon';
 export * from '@real-system/input';
+export * from '@real-system/spinner';
 export * from '@real-system/styling';
 export * from '@real-system/theme';
 export * from '@real-system/typography';

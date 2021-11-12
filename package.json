@@ -68,7 +68,7 @@
     "build:pkg:spinner": "yarn workspace @real-system/spinner build",
     "build:core": "yarn workspace @real-system/core build",
     "prebuild:storybook": "yarn build:packages",
-    "build:storybook": "build-storybook -o .storybook/build && yarn build:playroom",
+    "build:storybook": "build-storybook -o ./storybook && yarn build:playroom",
     "build:playroom": "playroom build",
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
