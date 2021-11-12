@@ -1,0 +1,135 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import { makeMdxParameters } from '/.storybook/utils';
+
+<Meta title="Real System/Theming/Overview" parameters={makeMdxParameters()} />
+
+# Theming
+
+Real System was built with the purpose to easily theme and extend UI components for responsive web applications.
+This concept leads to this series of documents which provide instructions on how to use and customize [Real System](https://github.com/bigwoof91/real-system)'s look and feel.
+
+## ThemeProvider
+
+The `ThemeProvider` provides all components with their styles - Without `ThemeProvider` [Real System](https://github.com/bigwoof91/real-system) is broken.
+By default, `ThemeProvider` will use the real system default theme if a custom theme isn't provided.
+
+```jsx
+import { ThemeProvider } from '@real-system/core/theme';
+
+const MyComponent = () => {
+  return <ThemeProvider>...</ThemeProvider>;
+};
+```
+
+## Palettes
+
+The primary driver of a `theme` is a `palette`. A `palette` consists of `13` core colors of your choosing.
+The `palette` is fed into a color-scheme mechanism ([tokenizePalette](#customizing-a-palette)) which [shades](https://polished.js.org/docs/#shade) and [tints](https://polished.js.org/docs/#tint) colors. In turn, this creates an extensive
+design [token system](/docs/real-system-theming-token-system--page).
+
+```typescript
+// real system default palette
+type Palette = {
+  brand: string;
+  status: {
+    success: string;
+    warning: string;
+    danger: string;
+    info: string;
+    disabled: string;
+  };
+  accent: {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    quaternary: string;
+  };
+  neutral: string;
+  dark: string;
+  light: string;
+};
+```
+
+## Customizing a Palette
+
+Easily customize a theme by providing your own color [palette](#palette).
+
+```jsx
+import { tokenizePalette, ThemeProvider } from '@real-system/core/theme';
+
+const customTheme = tokenizePalette({
+  brand: '#7d4cdb',
+  status: {
+    success: '#198038',
+    warning: '#f1c21b',
+    danger: '#da1e28',
+    info: '#0043ce',
+    disabled: '#e7e7e9',
+  },
+  accent: {
+    primary: '#6FFFB0',
+    secondary: '#FD6FFF',
+    tertiary: '#81FCED',
+    quaternary: '#FFCA58',
+  },
+  neutral: '#332f3c',
+  dark: '#120c1d',
+  light: '#ffffff',
+});
+
+const MyComponent = () => {
+  return <ThemeProvider theme={customTheme}>...</ThemeProvider>;
+};
+```
+
+## Tokens
+
+Any `token` can be used with its associated `scale` by using a style prop.
+If you want to use a `token` outside of style props, you can use the `getToken` style function to make this easy.
+
+```jsx
+// style prop usage
+<Box p={5} m={2} backgroundColor="color-background"></Box>;
+
+// `getToken` usage
+import { getToken, useTheme } from '@real-system/theme';
+
+const StyledBox = styled(Box)`
+  margin: ${getToken(2, 'space')};
+  background-color: ${getToken('color-background')};
+`;
+
+// or
+const MyComponent = () => {
+  const theme = useTheme();
+  const bg = getToken('color-background');
+  const space = getToken(5, 'space');
+  const styles = {
+    backgroundColor: bg,
+    margin: space,
+  };
+  return <div styles={styles}>...</div>;
+};
+```
+
+### `getToken`
+
+`getToken` uses lodash's `get` and exposes type-checked `token`, `scale` and `fallback` arguments.
+
+```typescript
+type Props = { theme: DefaultTheme };
+export type GetTokenReturnValue = string | number | undefined;
+/**
+ * A styleFn to get theme tokens
+ */
+const getToken = (
+  token: ThemeTokens,
+  scale: ThemeScales = 'colors',
+  fallback: GetTokenReturnValue = undefined
+) => {
+  return function <T = GetTokenReturnValue>(props: Props): T {
+    return get(props.theme, `${scale}.${token}`, fallback);
+  };
+};
+```

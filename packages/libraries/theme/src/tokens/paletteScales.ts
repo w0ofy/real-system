@@ -93,12 +93,18 @@ const borders = (palette: Palette) => ({
 const shadow = makeColorRange<'shadow'>('shadow');
 const shadowBorder = makeColorRange<'shadow-border'>('shadow-border');
 const shadows = (palette: Palette) => {
+  const shadowBorderBrand = shadowBorder<'brand'>('brand', palette, {
+    prefix: '0 0 0 4px',
+  });
+
   return {
+    'shadow-focus': shadowBorderBrand['shadow-border-brand-weak-3'],
+    ...shadowBorderBrand,
+    ...shadowBorder<'primary'>('primary', palette, {
+      prefix: '0 0 0 4px',
+    }),
     ...shadow<'neutral'>('neutral', palette, {
       prefix: '0 0 0 1px',
-    }),
-    ...shadowBorder<'brand'>('brand', palette, {
-      prefix: '0 0 0 4px',
     }),
   };
 };

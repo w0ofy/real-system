@@ -1,7 +1,12 @@
 import { BoxAs, BoxStyleProps } from '@real-system/box';
 import { merge } from '@real-system/utils';
 
-import { ButtonSizes, ButtonStates, InternalButtonProps } from './types';
+import {
+  ButtonSizes,
+  ButtonStates,
+  ButtonVariants,
+  InternalButtonProps,
+} from './types';
 
 const resetStyles: BoxStyleProps = {
   appearance: 'none',
@@ -19,25 +24,28 @@ const resetStyles: BoxStyleProps = {
   fontWeight: 1,
   textDecoration: 'none',
   position: 'relative',
-  px: 9,
-  py: 6,
-  margin: 'space-0',
-  _focus: { boxShadow: 'shadow-border-brand-weak', outline: 'none' },
+  margin: 0,
+  _hover: {},
+  _focus: { boxShadow: 'shadow-focus', outline: 'none' },
   _active: { boxShadow: 'none' },
 };
 
-const sizeStyles: { [key in ButtonSizes]: BoxStyleProps } = {
+const ifNotLink = (variant: ButtonVariants, value: number) =>
+  variant === 'link' ? 0 : value;
+const getSizeStyles = (
+  variant: ButtonVariants
+): { [key in ButtonSizes]: BoxStyleProps } => ({
   default: {
-    px: 9,
-    py: 6,
+    px: ifNotLink(variant, 9),
+    py: ifNotLink(variant, 5),
     fontSize: 2,
   },
   small: {
-    px: 7,
-    py: 4,
+    px: ifNotLink(variant, 7),
+    py: ifNotLink(variant, 4),
     fontSize: 1,
   },
-};
+});
 
 const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   default: merge(resetStyles, {
@@ -58,4 +66,4 @@ const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
 export type BoxAsButtonProps = Omit<InternalButtonProps, 'buttonState'>;
 const BoxAsButton = BoxAs<BoxAsButtonProps>('button');
 
-export { baseStyles, BoxAsButton, resetStyles, sizeStyles };
+export { baseStyles, BoxAsButton, getSizeStyles, resetStyles };

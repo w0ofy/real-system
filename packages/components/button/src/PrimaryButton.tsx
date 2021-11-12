@@ -13,19 +13,19 @@ const defaultStyles: ButtonStyles = {
     color: 'color-background-brand-inverse',
     backgroundColor: 'color-background-brand',
     _hover: {
-      backgroundColor: 'color-background-brand-strong',
+      backgroundColor: 'color-background-brand-strong-3',
     },
     _active: {
-      backgroundColor: 'color-background-brand-stronger',
+      backgroundColor: 'color-background-brand-strong-6',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
+    color: 'color-text-brand-weak-6',
+    backgroundColor: 'color-background-brand-weak-9',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
+    color: 'color-text-brand-weak-6',
+    backgroundColor: 'color-background-brand-weak-9',
   }),
 };
 
@@ -34,19 +34,19 @@ const dangerStyles: ButtonStyles = {
     backgroundColor: 'color-background-danger',
     color: 'color-background-danger-inverse',
     _hover: {
-      backgroundColor: 'color-background-danger-strong',
+      backgroundColor: 'color-background-danger-strong-3',
     },
     _active: {
-      backgroundColor: 'color-background-danger-stronger',
+      backgroundColor: 'color-background-danger-strong-6',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-danger-weaker',
-    backgroundColor: 'color-background-danger-weakest',
+    color: 'color-text-danger-weak-6',
+    backgroundColor: 'color-background-danger-weak-9',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-danger-weaker',
-    backgroundColor: 'color-background-danger-weakest',
+    color: 'color-text-danger-weak-6',
+    backgroundColor: 'color-background-danger-weak-9',
   }),
 };
 
@@ -55,19 +55,19 @@ const neutralStyles: ButtonStyles = {
     backgroundColor: 'color-background-neutral',
     color: 'color-background-neutral-inverse',
     _hover: {
-      backgroundColor: 'color-background-neutral-strong',
+      backgroundColor: 'color-background-neutral-strong-3',
     },
     _active: {
-      backgroundColor: 'color-background-neutral-stronger',
+      backgroundColor: 'color-background-neutral-strong-9',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-neutral-weaker',
-    backgroundColor: 'color-background-neutral-weakest',
+    color: 'color-text-neutral-weak-6',
+    backgroundColor: 'color-background-neutral-weak-9',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-neutral-weaker',
-    backgroundColor: 'color-background-neutral-weakest',
+    color: 'color-text-neutral-weak-6',
+    backgroundColor: 'color-background-neutral-weak-9',
   }),
 };
 

@@ -1,11 +1,12 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box';
 
 import { GhostButton } from './GhostButton';
+import { LinkButton } from './LinkButton';
 import { PrimaryButton } from './PrimaryButton';
 import { SecondaryButton } from './SecondaryButton';
-import { sizeStyles } from './styles';
+import { getSizeStyles } from './styles';
 import { ButtonProps, ButtonStates, ButtonVariants } from './types';
 import { InternalButtonProps } from './types';
 
@@ -28,6 +29,7 @@ const BUTTON_VARIANTS: {
   primary: PrimaryButton,
   secondary: SecondaryButton,
   ghost: GhostButton,
+  link: LinkButton,
 };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -44,23 +46,29 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): React.ReactElement => {
-    const buttonState = getButtonState(disabled, loading);
+    const buttonState = useMemo(
+      () => getButtonState(disabled, loading),
+      [disabled, loading]
+    );
+    const sizeStyles = useMemo(
+      () => getSizeStyles(variant)[size],
+      [variant, size]
+    );
     // const showLoading = buttonState === 'loading';
     const showDisabled = buttonState !== 'default';
     const Button = BUTTON_VARIANTS[variant];
-
     return (
       <Button
         role="button"
         {...restProps}
-        {...sizeStyles[size]}
+        {...sizeStyles}
         buttonState={buttonState}
         disabled={showDisabled}
         ref={ref}>
         {leadingIcon ? leadingIcon : null}
         <Box
           as="span"
-          lineHeight={4}
+          lineHeight={3}
           ml={leadingIcon ? 5 : 0}
           mr={trailingIcon ? 5 : 0}>
           {children}
@@ -74,3 +82,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button };
+export type { ButtonProps };

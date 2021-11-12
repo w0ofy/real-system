@@ -19,10 +19,11 @@ export type ThemeProviderProps = {
 
 const ThemeProvider = ({
   children,
+  theme,
   ...restProps
 }: ThemeProviderProps): React.ReactElement => {
   return (
-    <PrimitiveThemeProvider theme={themes.realsystem()} {...restProps}>
+    <PrimitiveThemeProvider theme={theme || themes.realsystem} {...restProps}>
       <>
         <GlobalStyles />
         {children}

@@ -1,7 +1,7 @@
 import { create, themes } from '@storybook/theming/create';
 import { addons } from '@storybook/addons';
-import pkg from '../packages/core/package.json';
-import { defaultPalette } from '../packages/libraries/theme/src/palettes';
+import corePkgJson from '@real-system/core/package.json';
+import { defaultPalette } from '@real-system/theme';
 
 export const managerConfig = {
   showAddonsPanel: true,
@@ -18,7 +18,7 @@ export const managerConfig = {
     barSelectedColor: defaultPalette.brand,
     colorPrimary: defaultPalette.neutral,
     colorSecondary: defaultPalette.brand,
-    brandTitle: `Real System v${pkg.version}`,
+    brandTitle: `Real System v${corePkgJson.version}`,
     brandUrl: 'https://github.com/bigwoof91/real-system',
     gridCellSize: 12,
   }),

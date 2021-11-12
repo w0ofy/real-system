@@ -58,7 +58,7 @@ const Typography: TypographyComponent = forwardRef<
         color="color-text"
         {...restProps}
         as={as || TYPOGRAPHY_VARIANT_MAP[variant]}
-        mb={mb || 4}
+        mb={mb ?? 4}
         ref={ref}>
         {children}
       </P>

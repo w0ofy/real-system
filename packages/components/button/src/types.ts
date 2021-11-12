@@ -5,7 +5,7 @@ import { SpaceProps } from '@real-system/styling';
 import { PaletteIntents } from '@real-system/theme';
 
 export type ButtonSizes = 'small' | 'default';
-export type ButtonVariants = 'primary' | 'secondary' | 'ghost';
+export type ButtonVariants = 'primary' | 'secondary' | 'ghost' | 'link';
 export type ButtonIntents =
   | 'default'
   | Extract<PaletteIntents, 'danger' | 'neutral'>;

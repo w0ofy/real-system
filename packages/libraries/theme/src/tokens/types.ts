@@ -1,12 +1,30 @@
 export type ColorSuffixes =
   | 'highlight'
   | 'inverse'
+  | 'weak-1'
+  | 'weak-2'
+  | 'weak-3'
+  | 'weak-4'
+  | 'weak-5'
+  | 'weak-6'
+  | 'weak-7'
+  | 'weak-8'
+  | 'weak-9'
   | 'weak'
   | 'weaker'
   | 'weakest'
   | 'strong'
   | 'stronger'
-  | 'strongest';
+  | 'strongest'
+  | 'strong-1'
+  | 'strong-2'
+  | 'strong-3'
+  | 'strong-4'
+  | 'strong-5'
+  | 'strong-6'
+  | 'strong-7'
+  | 'strong-8'
+  | 'strong-9';
 
 export type ColorPrefixes =
   | 'color'

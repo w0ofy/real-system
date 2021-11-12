@@ -1,11 +1,13 @@
+import * as React from 'react';
+
 import type { SpaceProps } from '@real-system/styling';
 
 import { InputBoxProps, InputBoxTypes } from './InputBox';
 
 export type InputProps = Omit<InputBoxProps, 'children' | 'type'> & {
   id?: string;
-  insertAfter?: React.ReactNode;
-  insertBefore?: React.ReactNode;
+  suffix?: React.ReactNode;
+  prefix?: React.ReactNode;
   name?: string;
   placeholder?: string;
   required?: boolean;

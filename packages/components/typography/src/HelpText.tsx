@@ -15,7 +15,7 @@ export type HelpTextProps = {
 
 const LABEL_INTENT_MAP: { [key in HelpTextIntents]: string } = {
   danger: 'danger',
-  default: 'neutral-weak',
+  default: 'neutral-weak-3',
 };
 const ICON_INTENT_MAP: {
   [key in HelpTextIntents]: IconProps['intent'];
@@ -36,7 +36,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
         alignItems="center"
         p={0}
         m={0}
-        mt={4}
+        mt={5}
         fontSize={2}
         fontWeight={0}
         lineHeight={2}

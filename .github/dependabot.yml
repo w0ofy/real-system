@@ -17,7 +17,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/box
+    directory: /packages/primitives/box
     schedule:
       interval: weekly
     labels:
@@ -25,7 +25,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/button
+    directory: /packages/components/button
     schedule:
       interval: weekly
     labels:
@@ -41,7 +41,15 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/icon
+    directory: /packages/components/icon
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/components/input
     schedule:
       interval: weekly
     labels:
@@ -57,7 +65,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/theme
+    directory: /packages/libraries/theme
     schedule:
       interval: weekly
     labels:
@@ -65,7 +73,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/typography
+    directory: /packages/components/typography
     schedule:
       interval: weekly
     labels:
@@ -73,7 +81,15 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/utils
+    directory: /packages/libraries/utils
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/components/visually-hidden
     schedule:
       interval: weekly
     labels:

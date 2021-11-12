@@ -23,7 +23,7 @@ export const decorators = [
   (Story, context) => {
     const theme = themes[context.globals.theme || 'realsystem'];
     return (
-      <ThemeProvider theme={theme()}>
+      <ThemeProvider theme={theme}>
         <Story />
       </ThemeProvider>
     );
@@ -38,7 +38,11 @@ export const parameters = {
       method: 'alphabetical',
       order: [
         'Real System',
-        ['Getting Started', 'Theming'],
+        [
+          'Getting Started',
+          'Theming',
+          ['Overview', 'Token System', 'Tokens', 'Advanced'],
+        ],
         'Sandbox',
         'Primitives',
         'Components',

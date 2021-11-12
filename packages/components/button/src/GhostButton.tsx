@@ -13,21 +13,21 @@ const defaultStyles: ButtonStyles = {
     color: 'color-text-brand',
     backgroundColor: 'color-background',
     _hover: {
-      color: 'color-text-brand-strong',
-      backgroundColor: 'color-background-brand-weakest',
+      color: 'color-text-brand-strong-3',
+      backgroundColor: 'color-background-brand-weak-9',
     },
     _active: {
-      color: 'color-text-brand-stronger',
-      backgroundColor: 'color-background-brand-weaker',
+      color: 'color-text-brand-strong-6',
+      backgroundColor: 'color-background-brand-weak-6',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
+    color: 'color-text-brand-weak-6',
+    backgroundColor: 'color-background-brand-weak-9',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-brand-weaker',
-    backgroundColor: 'color-background-brand-weakest',
+    color: 'color-text-brand-weak-6',
+    backgroundColor: 'color-background-brand-weak-9',
   }),
 };
 
@@ -36,21 +36,21 @@ const dangerStyles: ButtonStyles = {
     color: 'color-text-danger',
     backgroundColor: 'color-background',
     _hover: {
-      color: 'color-text-danger-strong',
-      backgroundColor: 'color-background-danger-weakest',
+      color: 'color-text-danger-strong-3',
+      backgroundColor: 'color-background-danger-weak-9',
     },
     _active: {
-      color: 'color-text-danger-stronger',
-      backgroundColor: 'color-background-danger-weaker',
+      color: 'color-text-danger-strong-6',
+      backgroundColor: 'color-background-danger-weak-6',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-danger-weaker',
-    backgroundColor: 'color-background-danger-weakest',
+    color: 'color-text-danger-weak-6',
+    backgroundColor: 'color-background-danger-weak-9',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-danger-weaker',
-    backgroundColor: 'color-background-danger-weakest',
+    color: 'color-text-danger-weak-6',
+    backgroundColor: 'color-background-danger-weak-9',
   }),
 };
 
@@ -59,21 +59,21 @@ const neutralStyles: ButtonStyles = {
     color: 'color-text-neutral',
     backgroundColor: 'color-background',
     _hover: {
-      color: 'color-text-neutral-strong',
-      backgroundColor: 'color-background-neutral-weakest',
+      color: 'color-text-neutral-strong-3',
+      backgroundColor: 'color-background-neutral-weak-9',
     },
     _active: {
-      color: 'color-text-neutral-stronger',
-      backgroundColor: 'color-background-neutral-weaker',
+      color: 'color-text-neutral-strong-6',
+      backgroundColor: 'color-background-neutral-weak-6',
     },
   }),
   loading: merge(baseStyles.loading, {
-    color: 'color-text-neutral-weaker',
-    backgroundColor: 'color-background-neutral-weakest',
+    color: 'color-text-neutral-weak-6',
+    backgroundColor: 'color-background-neutral-weak-9',
   }),
   disabled: merge(baseStyles.disabled, {
-    color: 'color-text-neutral-weaker',
-    backgroundColor: 'color-background-neutral-weakest',
+    color: 'color-text-neutral-weak-6',
+    backgroundColor: 'color-background-neutral-weak-9',
   }),
 };
 

@@ -3,8 +3,9 @@ import React, { forwardRef } from 'react';
 import { InputBox, InputBoxTypes } from './InputBox';
 import { InputElement } from './InputElement';
 import { InputProps } from './types';
+import { safelySpreadInputProps } from './utils';
 
-export type TypeProps = {
+type TypeProps = {
   type: InputBoxTypes;
   inputmode?: string | undefined;
   pattern?: string | undefined;
@@ -16,8 +17,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     readOnly,
     disabled,
     error,
-    insertAfter,
-    insertBefore,
+    suffix,
+    prefix,
     placeholder,
     id,
     value,
@@ -39,8 +40,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     <InputBox
       disabled={disabled}
       error={error}
-      insertAfter={insertAfter}
-      insertBefore={insertBefore}
+      suffix={suffix}
+      prefix={prefix}
       readOnly={readOnly}
       type={type}>
       <InputElement
@@ -54,7 +55,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         required={required}
         value={value}
         ref={ref}
-        {...restProps}
+        {...safelySpreadInputProps(restProps)}
         {...typeProps}
       />
     </InputBox>
@@ -62,3 +63,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
 });
 
 export { Input };
+export type { InputProps };
