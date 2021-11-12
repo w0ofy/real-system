@@ -68,7 +68,7 @@
     "build:pkg:spinner": "yarn workspace @real-system/spinner build",
     "build:core": "yarn workspace @real-system/core build",
     "prebuild:storybook": "yarn build:packages",
-    "build:storybook": "NODE_ENV=production build-storybook -o ./storybook -c .storybook",
+    "build:storybook": "build-storybook -o ./storybook -c .storybook",
     "build:playroom": "playroom build",
     "build:storybook-site": "run-s build:storybook build:playroom",
     "___________DEVELOPMENT___________": "dev scripts",
