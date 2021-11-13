@@ -1,3 +1,2 @@
-export * from './defaultPalette';
-export * from './paletteUtils';
+export * from './config';
 export * from './types';
