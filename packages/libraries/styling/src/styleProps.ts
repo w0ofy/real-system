@@ -38,6 +38,22 @@ const cursor = system({
 
 const transition = system({
   transition: true,
+  transitionDelay: true,
+  transitionDuration: true,
+  transitionProperty: true,
+  transitionTimingFunction: true,
+});
+
+const animation = system({
+  animation: true,
+  animationDelay: true,
+  animationDirection: true,
+  animationDuration: true,
+  animationFillMode: true,
+  animationIterationCount: true,
+  animationName: true,
+  animationPlayState: true,
+  animationTimingFunction: true,
 });
 
 const outline = system({
@@ -62,6 +78,23 @@ const clip = system({
   clip: true,
 });
 
+const svg = system({
+  stroke: true,
+  strokeDasharray: true,
+  strokeDashoffset: true,
+  strokeLinecap: true,
+  strokeLinejoin: true,
+  strokeMiterlimit: true,
+  strokeOpacity: true,
+  strokeWidth: {
+    property: 'strokeWidth',
+    scale: 'borderWidths',
+  },
+  fill: true,
+  fillOpacity: true,
+  fillRule: true,
+});
+
 const composeStyleProps = (): ReturnType<typeof compose> =>
   compose(
     background,
@@ -81,7 +114,9 @@ const composeStyleProps = (): ReturnType<typeof compose> =>
     grid,
     placement,
     clip,
-    opacity
+    opacity,
+    animation,
+    svg
   );
 
 export type TextWrapProps = {
@@ -98,6 +133,36 @@ export type CursorProps = {
 
 export type TransitionProps = {
   transition?: Property.Transition;
+  transitionDelay?: Property.TransitionDelay;
+  transitionDuration?: Property.TransitionDuration;
+  transitionProperty?: Property.TransitionProperty;
+  transitionTimingFunction?: Property.TransitionTimingFunction;
+};
+
+export type AnimationProps = {
+  animation?: Property.Animation;
+  animationDelay?: Property.AnimationDelay;
+  animationDirection?: Property.AnimationDirection;
+  animationDuration?: Property.AnimationDuration;
+  animationFillMode?: Property.AnimationFillMode;
+  animationIterationCount?: Property.AnimationIterationCount;
+  animationName?: Property.AnimationName;
+  animationPlayState?: Property.AnimationPlayState;
+  animationTimingFunction?: Property.AnimationTimingFunction;
+};
+
+export type SVGProps = {
+  stroke?: Property.Stroke;
+  strokeDasharray?: Property.StrokeDasharray;
+  strokeDashoffset?: Property.StrokeDashoffset;
+  strokeLinecap?: Property.StrokeLinecap;
+  strokeLinejoin?: Property.StrokeLinejoin;
+  strokeMiterlimit?: Property.StrokeMiterlimit;
+  strokeOpacity?: Property.StrokeOpacity;
+  strokeWidth?: Property.StrokeWidth;
+  fill?: Property.Fill;
+  fillOpacity?: Property.FillOpacity;
+  fillRule?: Property.FillRule;
 };
 
 export type OutlineProps = {
@@ -135,7 +200,9 @@ export type StyleProps = Partial<
     GridProps &
     PlacementProps &
     ClipProps &
-    OpacityProps
+    OpacityProps &
+    AnimationProps &
+    SVGProps
 >;
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion

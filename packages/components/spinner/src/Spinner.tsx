@@ -1,10 +1,12 @@
 import * as React from 'react';
 
 import { Box } from '@real-system/box';
+import { useUID } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
+import { circleGeometry } from './constants';
 import { useDelay } from './hooks';
-import { styles, Wheel } from './styles';
+import { sizes, SpinnerSvg, SvgGroup, Track, TrailingWheel } from './styles';
 import { SpinnerProps } from './types';
 
 /**
@@ -22,25 +24,29 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
   },
   ref
 ) {
-  const sizeStyles = styles[size];
+  const sizeStyles = sizes[size];
+  const titleId = useUID();
   const visible = useDelay(delay);
   return (
     <Box
       as={as}
+      position="relative"
       display={display}
       size={sizeStyles.size}
       ref={ref}
+      color={color}
       {...restProps}>
-      <Wheel
-        display="block"
-        borderStyle="solid"
-        borderColor="color-border-neutral-weak-8"
-        borderRadius="border-radius-circle"
-        borderTopColor={color}
-        size={sizeStyles.size}
-        borderWidth={sizeStyles.borderWidth}
-        opacity={visible ? 1 : 0}
-      />
+      <SpinnerSvg
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby={titleId}>
+        {title ? <title id={titleId}>{title}</title> : null}
+        <SvgGroup strokeWidth={sizeStyles.borderWidth as string}>
+          <Track {...circleGeometry} />
+          <TrailingWheel visible={visible} {...circleGeometry} />
+        </SvgGroup>
+      </SpinnerSvg>
+
       <VisuallyHidden>{title}</VisuallyHidden>
     </Box>
   );
