@@ -12,7 +12,7 @@ export default {
 export const Showcase = (args) => {
   return (
     <Box display="flex" alignItems="center" justifyContent="flex-start">
-      <Spinner {...args} size="size-icon-10" mr={5} />
+      <Spinner {...args} size="size-icon-10" mr={5} delay="3000" />
       <Spinner {...args} size="size-icon-20" mr={5} />
       <Spinner {...args} size="size-icon-30" mr={5} />
       <Spinner {...args} size="size-icon-40" mr={5} />

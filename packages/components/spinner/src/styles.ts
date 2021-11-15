@@ -5,18 +5,16 @@ import { circleCircumference } from './constants';
 import { circleKeyframes, svgKeyframes } from './keyframes';
 import { SpinnerProps } from './types';
 
-const Track = styled.circle({
+const TrackCircle = styled(BoxAs('circle'))({
   transformOrigin: 'center',
-  opacity: 0.25,
 });
 
-const TrailingWheel = styled.circle<{ visible: boolean }>(({ visible }) => ({
+const WheelCircle = styled(BoxAs('circle'))({
   animation:
     cssLiteral`1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
   transformOrigin: 'center',
   strokeDasharray: circleCircumference,
-  opacity: visible ? 1 : 0,
-}));
+});
 
 const SvgGroup = styled(BoxAs('g'))<BoxProps>({
   stroke: 'currentColor',
@@ -107,4 +105,4 @@ const sizes: { [key in SpinnerProps['size']]: BoxStyleProps } = {
   },
 };
 
-export { sizes, SpinnerSvg, SvgGroup, Track, TrailingWheel };
+export { sizes, SpinnerSvg, SvgGroup, TrackCircle, WheelCircle };
