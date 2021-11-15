@@ -1,3 +1,7 @@
+/**
+ ** Scales that don't require palette
+ **/
+
 const space = {
   'space-0': '0',
   'space-10': '0.125rem',

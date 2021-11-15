@@ -44,6 +44,7 @@ export type {
 } from 'styled-components';
 export {
   createGlobalStyle,
+  css as cssLiteral,
   isStyledComponent,
   keyframes,
   ThemeConsumer as PrimitiveThemeConsumer,

@@ -5,18 +5,12 @@ import type { StyleProps } from '@real-system/styling';
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 
 export type BoxBaseStyleProps = StyleProps & {
-  animation?: Property.Animation;
   appearance?: Property.Appearance;
-  borderCollapse?: Property.BorderCollapse;
   borderSpacing?: Property.BorderSpacing<string>;
   boxSizing?: Property.BoxSizing;
   clip?: Property.Clip;
   content?: string;
   float?: Property.Float;
-  fontVariantNumeric?: Property.FontVariantNumeric;
-  listStyleImage?: Property.ListStyleImage;
-  listStylePosition?: Property.ListStylePosition;
-  listStyleType?: Property.ListStyleType;
   objectFit?: Property.ObjectFit;
   objectPosition?: Property.ObjectPosition<string>;
   outline?: Property.Outline<string>;
@@ -27,7 +21,6 @@ export type BoxBaseStyleProps = StyleProps & {
   textDecoration?: Property.TextDecoration;
   transform?: Property.Transform;
   transformOrigin?: Property.TransformOrigin<string>;
-  transition?: Property.Transition;
   userSelect?: Property.UserSelect;
   visibility?: Property.Visibility;
   willChange?: Property.WillChange;

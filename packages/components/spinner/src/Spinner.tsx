@@ -1,14 +1,21 @@
 import * as React from 'react';
 
 import { Box } from '@real-system/box';
-import { VisuallyHidden } from '@real-system/visually-hidden';
+import { useUID } from '@real-system/utils';
 
+import { circleGeometry } from './constants';
 import { useDelay } from './hooks';
-import { styles, Wheel } from './styles';
+import {
+  sizes,
+  SpinnerSvg,
+  SvgGroup,
+  TrackCircle,
+  WheelCircle,
+} from './styles';
 import { SpinnerProps } from './types';
 
 /**
- * @todo refactor to use an icon wrapper w/ a11y in mind
+ * @todo refactor to use an icon wrapper w/ a11y in mind i.e. decorative + aria-hidden
  */
 const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
   {
@@ -22,26 +29,28 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
   },
   ref
 ) {
-  const sizeStyles = styles[size];
-  const visible = useDelay(delay);
+  const sizeStyles = sizes[size];
+  const titleId = useUID();
+  const isVisible = useDelay(delay);
   return (
     <Box
       as={as}
       display={display}
+      {...restProps}
+      position="relative"
       size={sizeStyles.size}
       ref={ref}
-      {...restProps}>
-      <Wheel
-        display="block"
-        borderStyle="solid"
-        borderColor="color-border-neutral-weak-8"
-        borderRadius="border-radius-circle"
-        borderTopColor={color}
-        size={sizeStyles.size}
-        borderWidth={sizeStyles.borderWidth}
-        opacity={visible ? 1 : 0}
-      />
-      <VisuallyHidden>{title}</VisuallyHidden>
+      color={color}>
+      <SpinnerSvg
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby={titleId}>
+        {title ? <title id={titleId}>{title}</title> : null}
+        <SvgGroup strokeWidth={sizeStyles.borderWidth as string}>
+          <TrackCircle {...circleGeometry} opacity={isVisible ? 0.25 : 0} />
+          <WheelCircle opacity={isVisible ? 1 : 0} {...circleGeometry} />
+        </SvgGroup>
+      </SpinnerSvg>
     </Box>
   );
 });

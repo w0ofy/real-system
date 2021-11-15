@@ -42,6 +42,7 @@ export type OrdinalTokens =
   | 18
   | 19;
 
+// categorized token typings
 export type ColorTokens = keyof ReturnType<typeof colors>;
 export type BackgroundColorTokens = keyof ReturnType<typeof backgroundColors>;
 export type TextColorTokens = keyof ReturnType<typeof textColors>;
@@ -59,6 +60,7 @@ export type SpaceTokens = keyof typeof space;
 export type SizeTokens = keyof typeof sizes;
 export type ZIndexTokens = keyof typeof zIndices;
 
+// all token typings
 export type ThemeTokens =
   | BorderWidthTokens
   | FontTokens

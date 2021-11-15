@@ -1,4 +1,4 @@
-export type ColorSuffixes =
+export type TokenSuffixes =
   | 'highlight'
   | 'inverse'
   | 'weak-1'
@@ -26,7 +26,7 @@ export type ColorSuffixes =
   | 'strong-8'
   | 'strong-9';
 
-export type ColorPrefixes =
+export type TokenPrefixes =
   | 'color'
   | 'color-background'
   | 'color-text'

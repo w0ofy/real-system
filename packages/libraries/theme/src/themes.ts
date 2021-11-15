@@ -1,6 +1,7 @@
-import { tokenizePalette } from './tokens';
+import { tokenizePalette } from './tokenizePalette';
 
 const themes = {
+  // default theme
   realsystem: tokenizePalette(),
 };
 
