@@ -1,50 +1,65 @@
 import { Property } from 'csstype';
-import {
-  background,
+import type {
   BackgroundProps,
-  border,
   BorderProps,
-  color,
   ColorProps as SSColorProps,
-  compose,
-  flexbox,
   FlexboxProps,
-  grid,
   GridProps,
-  layout,
   LayoutProps,
-  letterSpacing,
   LetterSpacingProps,
-  opacity,
   OpacityProps,
-  position,
   PositionProps,
-  shadow,
   ShadowProps,
-  space,
   SpaceProps,
-  system,
-  typography,
   TypographyProps,
 } from 'styled-system';
+import {
+  background,
+  border,
+  color,
+  compose,
+  flexbox,
+  grid,
+  layout,
+  letterSpacing,
+  opacity,
+  position,
+  shadow,
+  space,
+  system,
+  typography,
+} from 'styled-system';
 
-const textWrap = system({
+const realSystemProps = system({
   whiteSpace: true,
-});
-
-const cursor = system({
+  textOverflow: true,
+  wordBreak: true,
+  wordWrap: true,
+  overflowWrap: true,
+  textTransform: true,
+  textDecoration: true,
+  // outline / focus props
+  outline: true,
+  outlineColor: {
+    property: 'outlineColor',
+    scale: 'colors',
+  },
+  outlineWidth: {
+    property: 'outlineWidth',
+    scale: 'borderWidths',
+  },
+  outlineOffset: true,
+  outlineStyle: true,
+  // cursor props
   cursor: true,
-});
-
-const transition = system({
+  pointerEvents: true,
+  // transition props
   transition: true,
   transitionDelay: true,
   transitionDuration: true,
   transitionProperty: true,
   transitionTimingFunction: true,
-});
-
-const animation = system({
+  // animation props
   animation: true,
   animationDelay: true,
   animationDirection: true,
@@ -54,31 +69,7 @@ const animation = system({
   animationName: true,
   animationPlayState: true,
   animationTimingFunction: true,
-});
-
-const outline = system({
-  outlineColor: {
-    property: 'outlineColor',
-    scale: 'colors',
-  },
-  outlineWidth: {
-    property: 'outlineWidth',
-    scale: 'sizes',
-  },
-  outlineStyle: true,
-  outlineOffset: true,
-});
-
-const placement = system({
-  placeItems: true,
-  placeContent: true,
-});
-
-const clip = system({
-  clip: true,
-});
-
-const svg = system({
+  // svg props
   stroke: true,
   strokeDasharray: true,
   strokeDashoffset: true,
@@ -93,10 +84,29 @@ const svg = system({
   fill: true,
   fillOpacity: true,
   fillRule: true,
+  clip: true,
+  // list
+  listStyle: true,
+  listStyleType: true,
+  listStylePosition: true,
+  listStyleImage: true,
+  // misc
+  appearance: true,
+  borderSpacing: true,
+  boxSizing: true,
+  content: true,
+  float: true,
+  userSelect: true,
+  willChange: true,
+  resize: true,
+  transform: true,
+  transformOrigin: true,
+  visibility: true,
 });
 
 const composeStyleProps = (): ReturnType<typeof compose> =>
   compose(
+    // styled-system props
     background,
     space,
     flexbox,
@@ -106,40 +116,39 @@ const composeStyleProps = (): ReturnType<typeof compose> =>
     shadow,
     position,
     typography,
-    textWrap,
-    cursor,
-    transition,
-    outline,
     letterSpacing,
     grid,
-    placement,
-    clip,
     opacity,
-    animation,
-    svg
+    // real system props
+    realSystemProps
   );
 
-export type TextWrapProps = {
+type RealSystemProps = {
   whiteSpace?: Property.WhiteSpace;
-};
+  textOverflow?: Property.TextOverflow;
+  wordBreak?: Property.WordBreak;
+  wordWrap?: Property.WordWrap;
+  overflowWrap?: Property.OverflowWrap;
+  textTransform?: Property.TextTransform;
+  textDecoration?: Property.TextDecoration;
 
-export type ClipProps = {
-  clip?: Property.Clip;
-};
+  // outline props
+  outline?: Property.Outline<string>;
+  outlineOffset?: Property.OutlineOffset;
+  outlineStyle?: Property.OutlineStyle;
+  outlineColor?: Property.OutlineColor;
+  outlineWidth?: Property.OutlineWidth;
 
-export type CursorProps = {
+  // cursor props
   cursor?: Property.Cursor;
-};
-
-export type TransitionProps = {
+  pointerEvents?: Property.PointerEvents;
+  // transition props
   transition?: Property.Transition;
   transitionDelay?: Property.TransitionDelay;
   transitionDuration?: Property.TransitionDuration;
   transitionProperty?: Property.TransitionProperty;
   transitionTimingFunction?: Property.TransitionTimingFunction;
-};
-
-export type AnimationProps = {
+  // animation props
   animation?: Property.Animation;
   animationDelay?: Property.AnimationDelay;
   animationDirection?: Property.AnimationDirection;
@@ -149,9 +158,7 @@ export type AnimationProps = {
   animationName?: Property.AnimationName;
   animationPlayState?: Property.AnimationPlayState;
   animationTimingFunction?: Property.AnimationTimingFunction;
-};
-
-export type SVGProps = {
+  // svg props
   stroke?: Property.Stroke;
   strokeDasharray?: Property.StrokeDasharray;
   strokeDashoffset?: Property.StrokeDashoffset;
@@ -163,26 +170,34 @@ export type SVGProps = {
   fill?: Property.Fill;
   fillOpacity?: Property.FillOpacity;
   fillRule?: Property.FillRule;
+  clip?: Property.Clip;
+  objectFit?: Property.ObjectFit;
+  objectPosition?: Property.ObjectPosition<string>;
+
+  listStyle?: Property.ListStyle;
+  listStyleType?: Property.ListStyleType;
+  listStylePosition?: Property.ListStylePosition;
+  listStyleImage?: Property.ListStyleImage;
+
+  appearance?: Property.Appearance;
+  borderSpacing?: Property.BorderSpacing<string>;
+  boxSizing?: Property.BoxSizing;
+  content?: string;
+  float?: Property.Float;
+  userSelect?: Property.UserSelect;
+  willChange?: Property.WillChange;
+  resize?: Property.Resize;
+  transform?: Property.Transform;
+  transformOrigin?: Property.TransformOrigin<string>;
 };
 
-export type OutlineProps = {
-  outlineOffset?: Property.OutlineOffset;
-  outlineStyle?: Property.OutlineStyle;
-  outlineColor?: Property.OutlineColor;
-  outlineWidth?: Property.OutlineWidth;
-};
-
-export type PlacementProps = {
-  placeItems?: Property.PlaceItems;
-  placeContent?: Property.PlaceContent;
-};
 /** Workaround for color prop typing issue.
  * More info: https://spectrum.chat/styled-system/general/types-of-property-color-are-incompatible~9227ce42-00f2-473a-8924-f476f0ce6ae1
  * */
-export type SafeColorProps = Omit<SSColorProps, 'color'> & {
+type SafeColorProps = Omit<SSColorProps, 'color'> & {
   color?: Property.Color | string;
 };
-export type StyleProps = Partial<
+type StyleProps = Partial<
   SpaceProps &
     FlexboxProps &
     BackgroundProps &
@@ -192,32 +207,33 @@ export type StyleProps = Partial<
     SafeColorProps &
     PositionProps &
     TypographyProps &
-    TextWrapProps &
-    CursorProps &
-    TransitionProps &
-    OutlineProps &
     LetterSpacingProps &
     GridProps &
-    PlacementProps &
-    ClipProps &
     OpacityProps &
-    AnimationProps &
-    SVGProps
+    RealSystemProps
 >;
+
+type MarginProps = Pick<
+  SpaceProps,
+  | 'mx'
+  | 'my'
+  | 'mt'
+  | 'mr'
+  | 'mb'
+  | 'ml'
+  | 'm'
+  | 'margin'
+  | 'marginTop'
+  | 'marginRight'
+  | 'marginBottom'
+  | 'marginLeft'
+  | 'marginX'
+  | 'marginY'
+>;
+type TextProps = TypographyProps;
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const STYLE_PROPS = composeStyleProps().propNames!;
 
-export { composeStyleProps, STYLE_PROPS, textWrap };
-/** styled-system props */
-export type {
-  BackgroundProps,
-  BorderProps,
-  FlexboxProps,
-  LayoutProps,
-  LetterSpacingProps,
-  PositionProps,
-  ShadowProps,
-  SpaceProps,
-  TypographyProps,
-};
+export { composeStyleProps, realSystemProps, STYLE_PROPS };
+export type { MarginProps, RealSystemProps, StyleProps, TextProps };
