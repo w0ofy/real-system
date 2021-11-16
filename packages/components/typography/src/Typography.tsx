@@ -23,10 +23,6 @@ const TYPOGRAPHY_VARIANT_MAP: TypographyVariantMap = {
   inline: 'span',
 };
 
-/**
- * Named `TypographyProps` instead of `TypographyProps` because:
- * Module '@real-system/styling' has already exported a member named 'TypographyProps'
- */
 export type TypographyProps = {
   children?: React.ReactNode;
   variant?: keyof typeof TYPOGRAPHY_VARIANT_MAP;

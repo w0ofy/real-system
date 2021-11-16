@@ -11,7 +11,14 @@ import type {
   PositionProps,
   ShadowProps,
   SpaceProps,
-  TypographyProps,
+  /**
+   * Renamed TypographyProps from styled-system
+   *
+   * Named `TextProps` instead of `TypographyProps` because:
+   * Module '@real-system/typography' has exported a type declaration
+   * named 'TypographyProps' for the `Typography` component
+   */
+  TypographyProps as TextProps,
 } from 'styled-system';
 import {
   background,
@@ -194,7 +201,7 @@ type RealSystemProps = {
 /** Workaround for color prop typing issue.
  * More info: https://spectrum.chat/styled-system/general/types-of-property-color-are-incompatible~9227ce42-00f2-473a-8924-f476f0ce6ae1
  * */
-type SafeColorProps = Omit<SSColorProps, 'color'> & {
+type ColorProps = Omit<SSColorProps, 'color'> & {
   color?: Property.Color | string;
 };
 type StyleProps = Partial<
@@ -204,36 +211,32 @@ type StyleProps = Partial<
     BorderProps &
     LayoutProps &
     ShadowProps &
-    SafeColorProps &
+    ColorProps &
     PositionProps &
-    TypographyProps &
+    TextProps &
     LetterSpacingProps &
     GridProps &
     OpacityProps &
     RealSystemProps
 >;
 
-type MarginProps = Pick<
-  SpaceProps,
-  | 'mx'
-  | 'my'
-  | 'mt'
-  | 'mr'
-  | 'mb'
-  | 'ml'
-  | 'm'
-  | 'margin'
-  | 'marginTop'
-  | 'marginRight'
-  | 'marginBottom'
-  | 'marginLeft'
-  | 'marginX'
-  | 'marginY'
->;
-type TextProps = TypographyProps;
-
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const STYLE_PROPS = composeStyleProps().propNames!;
 
 export { composeStyleProps, realSystemProps, STYLE_PROPS };
-export type { MarginProps, RealSystemProps, StyleProps, TextProps };
+export type {
+  BackgroundProps,
+  BorderProps,
+  ColorProps,
+  FlexboxProps,
+  GridProps,
+  LayoutProps,
+  LetterSpacingProps,
+  OpacityProps,
+  PositionProps,
+  RealSystemProps,
+  ShadowProps,
+  SpaceProps,
+  StyleProps,
+  TextProps,
+};

@@ -22,7 +22,7 @@ const Box = styled.div.attrs(boxAttrs)<BoxProps>(
 type ElementTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
 function BoxAs<T>(elementTag: ElementTag) {
-  return function BoxAsInnerComponent(props: BoxProps & T): React.ReactElement {
+  return function BoxAsComponent(props: BoxProps & T): React.ReactElement {
     return (
       <Box as={elementTag} data-testid={makeTestId('box-as')} {...props} />
     );

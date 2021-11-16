@@ -1,6 +1,6 @@
 import * as Feather from 'react-feather';
 
-import { BoxProps } from '@real-system/box';
+import type { BoxProps } from '@real-system/box';
 import type { MarginProps } from '@real-system/styling';
 import { PaletteIntents, ThemeTokens } from '@real-system/theme';
 import { KebabCase } from '@real-system/utils';
