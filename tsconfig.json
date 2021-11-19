@@ -28,5 +28,20 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "esModuleInterop": true
+  },
+  "watchOptions": {
+    "excludeDirectories": [
+      "**/node_modules",
+      "**/lib",
+      "tools",
+      "**/.cache",
+      ".jest",
+      ".husky",
+      ".github",
+      ".storybook",
+      "storybook",
+      ".vscode",
+      "packages/core"
+    ]
   }
 }

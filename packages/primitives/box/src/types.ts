@@ -1,31 +1,8 @@
-import type { Property } from 'csstype';
-
 import type { StyleProps } from '@real-system/styling';
 
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 
-export type BoxBaseStyleProps = StyleProps & {
-  appearance?: Property.Appearance;
-  borderSpacing?: Property.BorderSpacing<string>;
-  boxSizing?: Property.BoxSizing;
-  clip?: Property.Clip;
-  content?: string;
-  float?: Property.Float;
-  objectFit?: Property.ObjectFit;
-  objectPosition?: Property.ObjectPosition<string>;
-  outline?: Property.Outline<string>;
-  pointerEvents?: Property.PointerEvents;
-  resize?: Property.Resize;
-  tableLayout?: Property.TableLayout;
-  textTransform?: Property.TextTransform;
-  textDecoration?: Property.TextDecoration;
-  transform?: Property.Transform;
-  transformOrigin?: Property.TransformOrigin<string>;
-  userSelect?: Property.UserSelect;
-  visibility?: Property.Visibility;
-  willChange?: Property.WillChange;
-};
-
+export type BoxBaseStyleProps = StyleProps;
 export type BoxPseudoStyleProps = {
   [key in keyof typeof PSEUDO_PROP_STYLES]?: BoxBaseStyleProps;
 };

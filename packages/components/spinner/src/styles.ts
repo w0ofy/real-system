@@ -1,33 +1,48 @@
-import { BoxAs, BoxProps, BoxStyleProps } from '@real-system/box';
-import styled, { cssLiteral } from '@real-system/styling';
+import { BoxAs, BoxStyleProps } from '@real-system/box';
+import styled, { cssLiteral, keyframes } from '@real-system/styling';
 
 import { circleCircumference } from './constants';
-import { circleKeyframes, svgKeyframes } from './keyframes';
 import { SpinnerProps } from './types';
 
-const TrackCircle = styled(BoxAs('circle'))({
-  transformOrigin: 'center',
-});
+const svgKeyframes = keyframes`
+  0%,
+  15% {
+    stroke-dashoffset: ${circleCircumference * 0.9999};
+    transform: rotate(0);
+  }
+  50%,
+  75% {
+    stroke-dashoffset: ${circleCircumference * 0.2};
+    transform: rotate(45deg);
+  }
+  100% {
+    stroke-dashoffset: ${circleCircumference * 0.9999};
+    transform: rotate(360deg);
+  }
+`;
 
-const WheelCircle = styled(BoxAs('circle'))({
-  animation:
-    cssLiteral`1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
-  transformOrigin: 'center',
-  strokeDasharray: circleCircumference,
-});
+const circleKeyframes = keyframes`
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+`;
 
-const SvgGroup = styled(BoxAs('g'))<BoxProps>({
-  stroke: 'currentColor',
-  strokeLinecap: 'round',
-  fill: 'transparent',
-});
+type SVGElementProps = React.SVGAttributes<SVGSVGElement>;
+type SVGCircleElementProps = React.SVGAttributes<SVGCircleElement>;
+type SVGGelementProps = React.SVGAttributes<SVGGElement>;
 
-const SpinnerSvg = styled.svg({
+const SpinnerSvg = styled(BoxAs<SVGElementProps>('svg'))({
   animation:
     cssLiteral`4.25s linear infinite both ${svgKeyframes}` as unknown as string,
-  height: '100%',
-  width: '100%',
-  display: 'block',
+});
+const SvgGroup = BoxAs<SVGGelementProps>('g');
+const TrackCircle = BoxAs<SVGCircleElementProps>('circle');
+const WheelCircle = styled(BoxAs<SVGCircleElementProps>('circle'))({
+  animation:
+    cssLiteral`1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
 });
 
 const sizes: { [key in SpinnerProps['size']]: BoxStyleProps } = {

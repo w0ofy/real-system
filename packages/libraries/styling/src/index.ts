@@ -58,4 +58,5 @@ export {
  */
 export * from './colorUtils';
 export * from './styleProps';
+export * from './stylePropSubGroups';
 export default styled;

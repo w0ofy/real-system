@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { BoxStyleProps } from '@real-system/box';
-import { SpaceProps } from '@real-system/styling';
+import type { MarginProps } from '@real-system/styling';
 import { PaletteIntents } from '@real-system/theme';
 
 export type ButtonSizes = 'small' | 'default';
@@ -14,7 +14,7 @@ export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  SpaceProps & {
+  MarginProps & {
     size?: ButtonSizes;
     children: React.ReactNode;
     /** @todo add fullwidth feature */

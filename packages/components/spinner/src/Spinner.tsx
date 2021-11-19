@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Box } from '@real-system/box';
 import { useUID } from '@real-system/utils';
 
-import { circleGeometry } from './constants';
+import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';
 import {
   sizes,
@@ -42,13 +42,29 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
       ref={ref}
       color={color}>
       <SpinnerSvg
+        display="block"
+        height="100%"
+        width="100%"
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
         aria-labelledby={titleId}>
         {title ? <title id={titleId}>{title}</title> : null}
-        <SvgGroup strokeWidth={sizeStyles.borderWidth as string}>
-          <TrackCircle {...circleGeometry} opacity={isVisible ? 0.25 : 0} />
-          <WheelCircle opacity={isVisible ? 1 : 0} {...circleGeometry} />
+        <SvgGroup
+          stroke="currentColor"
+          strokeLinecap="round"
+          fill="transparent"
+          strokeWidth={sizeStyles.borderWidth as string}>
+          <TrackCircle
+            transformOrigin="center"
+            {...circleGeometry}
+            opacity={isVisible ? 0.25 : 0}
+          />
+          <WheelCircle
+            transformOrigin="center"
+            strokeDasharray={circleCircumference}
+            opacity={isVisible ? 1 : 0}
+            {...circleGeometry}
+          />
         </SvgGroup>
       </SpinnerSvg>
     </Box>
