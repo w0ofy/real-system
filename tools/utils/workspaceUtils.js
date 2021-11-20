@@ -7,14 +7,23 @@ const getPkgJsonFromWorkspace = (workspace) =>
 
 const getPurePkgName = (pkgName) => pkgName.replace('@real-system/', '');
 
+const parseJsonList = (data) =>
+  data
+    .toString()
+    .split(require('os').EOL)
+    .filter(Boolean)
+    .map((x) => JSON.parse(x))
+    .filter((x) => x.name !== 'real-system')
+    .reduce((a, b) => ({ ...a, [b.name]: b }), {});
+
 const DEFAULT_CONFIG = { withCore: false };
 
 const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
-  let data = await command('yarn workspaces info --json');
+  let data = await command('yarn workspaces list --json');
 
   return new Promise((resolve, reject) => {
     try {
-      data = JSON.parse(data.stdout);
+      data = parseJsonList(data.stdout);
     } catch (err) {
       reject(err);
     }

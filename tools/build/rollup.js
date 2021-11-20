@@ -6,7 +6,7 @@ const del = require('rollup-plugin-delete');
 const esbuild = require('rollup-plugin-esbuild');
 const filesize = require('rollup-plugin-filesize');
 const peerDepsExternal = require('rollup-plugin-peer-deps-external');
-const { ENV } = require('./utils');
+const { ENV } = require('../utils');
 
 const plugins = [
   esbuild({
