@@ -1,7 +1,5 @@
 <p align="center">
-
-![Real System](assets/dark-animated-logo.gif)
-
+<img src="assets/dark-animated-logo.gif"  />
 </p>
 <p align="center">An easily themeable, extendable "Real" component "System" for responsive web applications.</p>
 <p align="center">
