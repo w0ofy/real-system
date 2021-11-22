@@ -14,19 +14,19 @@ jobs:
         id: env_setup
         uses: bigwoof91/real-system/.github/actions/setup-env@main
 
-      - name: Release Packages
+      - name: Version next packages and create pull request
         uses: changesets/action@master
-        if: "!contains(github.event.head_commit.message, 'chore(prerelease): version packages')"
+        if: "!contains(github.event.head_commit.message, 'chore(release:next): version packages')"
         with:
           version: yarn version:next
-          commit: "chore(prerelease): version packages"
-          title: "chore(prerelease): version packages"
+          commit: "chore(release:next): version packages"
+          title: "chore(release:next): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-next:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'chore(prerelease): version packages')"
+    if: "contains(github.event.head_commit.message, 'chore(release:next): version packages')"
     steps:
       - name: Setup environment
         id: env_setup
@@ -40,8 +40,8 @@ jobs:
         uses: changesets/action@master
         with:
           publish: yarn release:next
-          commit: "chore(prerelease): publish packages"
-          title: "chore(prerelease): publish packages"
+          commit: "chore(release:next): publish packages"
+          title: "chore(release:next): publish packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
