@@ -1,4 +1,8 @@
-<h1 align="center">Real System</h1>
+<p align="center">
+
+![Real System](assets/dark-animated-logo.gif)
+
+</p>
 <p align="center">An easily themeable, extendable "Real" component "System" for responsive web applications.</p>
 <p align="center">
 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
