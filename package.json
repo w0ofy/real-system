@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.1.0",
   "private": true,
   "version": "0.0.0",
-  "description": "An easily themeable, extendable 'Real' component 'System' for responsive web applications.",
+  "description": "A real react component system that is easily themeable and extendable.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bigwoof91/real-system.git"
