@@ -11,7 +11,7 @@
   "sideEffects": false,
   "scripts": {
     "prebuild": "yarn clean && yarn update-dependencies && yarn generate-bundle",
-    "build": "yarn compile && yarn build:types",
+    "build": "yarn clean && yarn update-dependencies && yarn generate-bundle && yarn compile && yarn build:types",
     "build:types": "./tools/build-types.sh",
     "clean": "./tools/clean-packages.sh",
     "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && node ./tools/minify",

@@ -1,3 +1,3 @@
-const build = require('../../../../tools/rollup');
+const build = require('../../../../tools/build/rollup');
 
 build(require('../package.json'));

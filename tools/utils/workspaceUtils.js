@@ -6,15 +6,25 @@ const getPkgJsonFromWorkspace = (workspace) =>
   require(`${__dirname}/../../${workspace.location}/package.json`);
 
 const getPurePkgName = (pkgName) => pkgName.replace('@real-system/', '');
+const getFullPkgName = (pkgName) => `@real-system/${pkgName}`;
+
+const parseJsonList = (data) =>
+  data
+    .toString()
+    .split(require('os').EOL)
+    .filter(Boolean)
+    .map((x) => JSON.parse(x))
+    .filter((x) => x.name !== 'real-system')
+    .reduce((a, b) => ({ ...a, [b.name]: b }), {});
 
 const DEFAULT_CONFIG = { withCore: false };
 
 const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
-  let data = await command('yarn workspaces info --json');
+  let data = await command('yarn workspaces list --json');
 
   return new Promise((resolve, reject) => {
     try {
-      data = JSON.parse(data.stdout);
+      data = parseJsonList(data.stdout);
     } catch (err) {
       reject(err);
     }
@@ -72,6 +82,7 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
 };
 
 module.exports = {
+  getFullPkgName,
   getPurePkgName,
   getWorkspacesInfo,
 };
