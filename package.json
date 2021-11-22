@@ -43,7 +43,7 @@
     "update-dependabot-config": "node ./tools/update-dependabot-config.js",
     "___________TESTING___________": "test scripts",
     "pretest": "yarn workspace @real-system/core clean && node ./.jest/preTest.js",
-    "test": "jest ./packages/",
+    "test": "yarn pretest && jest ./packages/",
     "test:coverage": "jest ./packages/ --runInBand --coverage",
     "___________RELEASE___________": "",
     "changeset": "changeset",

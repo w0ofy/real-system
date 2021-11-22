@@ -84,7 +84,7 @@ const getAdditionalScripts = (args) => {
   const additionalScripts = getAdditionalScripts(args);
   const allScripts = workspaceDevScripts.concat(additionalScripts);
 
-  logger.info('RUNNING');
+  logger.info('--------- WORKSPACE DEV MODE ---------');
   logger.gray(allScripts.join('\n'));
 
   concurrently(allScripts, {
