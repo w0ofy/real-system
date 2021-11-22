@@ -1,3 +1,3 @@
-const dev = require('../../../../tools/dev/dev');
+const dev = require('../../../../tools/dev/esbuild');
 
 dev(require('../package.json'));

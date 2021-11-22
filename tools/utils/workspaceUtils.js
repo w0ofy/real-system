@@ -6,6 +6,7 @@ const getPkgJsonFromWorkspace = (workspace) =>
   require(`${__dirname}/../../${workspace.location}/package.json`);
 
 const getPurePkgName = (pkgName) => pkgName.replace('@real-system/', '');
+const getFullPkgName = (pkgName) => `@real-system/${pkgName}`;
 
 const parseJsonList = (data) =>
   data
@@ -81,6 +82,7 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
 };
 
 module.exports = {
+  getFullPkgName,
   getPurePkgName,
   getWorkspacesInfo,
 };
