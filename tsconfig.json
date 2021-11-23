@@ -4,7 +4,7 @@
     ".jest/setupFilesAfterEnv.ts",
     ".jest/globals/testTheme.d.ts"
   ],
-  "exclude": ["node_modules", "lib"],
+  "exclude": ["node_modules", "lib", "tools/generate-workspace/template"],
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "es2017",
