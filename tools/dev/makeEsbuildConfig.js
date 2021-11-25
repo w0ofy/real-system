@@ -1,6 +1,4 @@
-const { getExternalDeps } = require('./getExternalDeps');
-const { ENV, isProduction } = require('./env');
-const { logger } = require('./logger');
+const { logger, getExternalDeps, ENV, isProduction } = require('../utils');
 
 // ESbuild config
 const baseEsbuildConfig = {

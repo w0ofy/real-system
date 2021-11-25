@@ -1,5 +1,6 @@
 const esbuild = require('esbuild');
-const { logger, makeEsbuildConfig } = require('../utils');
+const { logger } = require('../utils');
+const { makeEsbuildConfig } = require('./makeEsbuildConfig');
 
 /**
  * @function dev bundle package for cjs and esm output
