@@ -37,7 +37,7 @@ async function build(packageJson) {
 
 module.exports = build;
 /**
- * so things can be imported like `const build = require('.../build')` used like `build.plugins` or `build.globals`
+ * so things can be imported like `const build = require('.../build/rollup')` used like `build.plugins` or `build.globals`
  */
 exports = module.exports;
 exports.plugins = plugins;

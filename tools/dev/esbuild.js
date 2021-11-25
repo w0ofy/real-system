@@ -33,3 +33,8 @@ async function dev(packageJson) {
 }
 
 module.exports = dev;
+/**
+ * so things can be imported like `const build = require('.../dev/esbuild')` used like `build.plugins` or `build.globals`
+ */
+exports = module.exports;
+exports.makeEsbuildConfig = makeEsbuildConfig;
