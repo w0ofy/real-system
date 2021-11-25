@@ -8,7 +8,6 @@ const {
 } = require('./env');
 const { getExternalDeps } = require('./getExternalDeps');
 const { writeToFile } = require('./writeToFile');
-const { makeEsbuildConfig } = require('./makeEsbuildConfig');
 const { getWorkspacesInfo } = require('./workspaceUtils');
 const { updatePackageCache } = require('./updatePackageCache');
 
@@ -19,7 +18,6 @@ module.exports = {
   ENV,
   isProduction,
   getExternalDeps,
-  makeEsbuildConfig,
   BUNDLE_OUTPUT_DIR,
   getWorkspacesInfo,
   updatePackageCache,
