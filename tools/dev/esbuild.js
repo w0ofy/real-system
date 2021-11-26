@@ -32,4 +32,6 @@ async function dev(packageJson) {
   return;
 }
 
-module.exports = dev;
+module.exports = {
+  dev,
+};
