@@ -48,7 +48,7 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
         coreDependencies[name] = `^${pkgJson.version}`;
       }
 
-      const list = {
+      const pkg = {
         name,
         pureName,
         relativeLocationFromCore: path.resolve(
@@ -67,7 +67,7 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
         location: path.resolve(__dirname, '../..', workspaceInfo.location),
       });
 
-      return list;
+      return pkg;
     });
 
     resolve({
