@@ -59,9 +59,7 @@
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
     "generate-pkg": "node ./tools/generate-package",
-    "dev": "node ./tools/run-workspace-dev",
-    "___________SANDBOX___________": "local sandbox & website scripts",
-    "website": "cd website && yarn start",
+    "dev": "node ./tools/run-workspace-dev --with=yarn:storybook,yarn:playroom",
     "storybook": "start-storybook -p 6006",
     "playroom": "playroom start"
   },

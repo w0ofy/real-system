@@ -8,7 +8,11 @@ const {
 } = require('./env');
 const { getExternalDeps } = require('./getExternalDeps');
 const { writeToFile } = require('./writeToFile');
-const { getWorkspacesInfo } = require('./workspaceUtils');
+const {
+  getWorkspacesInfo,
+  getFullPkgName,
+  getPurePkgName,
+} = require('./workspaceUtils');
 const { updatePackageCache } = require('./updatePackageCache');
 
 module.exports = {
@@ -20,6 +24,8 @@ module.exports = {
   getExternalDeps,
   BUNDLE_OUTPUT_DIR,
   getWorkspacesInfo,
+  getFullPkgName,
+  getPurePkgName,
   updatePackageCache,
   CORE_PATH,
   ROOT_PATH,
