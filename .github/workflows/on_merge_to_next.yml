@@ -23,6 +23,7 @@ jobs:
           title: "chore(release:next): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
   publish-next:
     runs-on: ubuntu-latest

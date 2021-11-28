@@ -1,6 +1,5 @@
 {
   "name": "real-system",
-  "packageManager": "yarn@3.1.0",
   "private": true,
   "version": "0.0.0",
   "description": "A real react component system that is easily themeable and extendable.",
@@ -47,7 +46,7 @@
     "test:coverage": "jest ./packages/ --runInBand --coverage",
     "___________RELEASE___________": "",
     "changeset": "changeset",
-    "version:stable": "yarn changeset version",
+    "version:stable": "yarn changeset version && yarn install --mode=update-lockfile",
     "version:next": "yarn changeset pre enter rc && yarn version:stable",
     "release": "yarn build && yarn lint && yarn test --runInBand && yarn changeset publish",
     "release:next": "yarn build && yarn lint && yarn test --runInBand && yarn changeset publish",
@@ -59,7 +58,7 @@
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
     "generate-pkg": "node ./tools/generate-package",
-    "dev": "node ./tools/run-workspace-dev --with=yarn:storybook,yarn:playroom",
+    "dev": "node ./tools/run-workspace-dev --select=true --with=yarn:storybook,yarn:playroom",
     "storybook": "start-storybook -p 6006",
     "playroom": "playroom start"
   },
@@ -157,13 +156,11 @@
     "terser": "^5.9.0",
     "ts-jest": "^27.0.7",
     "type-fest": "^2.5.3",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "resolutions": {
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
-  "installConfig": {
-    "hoistingLimits": "none"
-  }
+  "packageManager": "yarn@3.1.0"
 }
