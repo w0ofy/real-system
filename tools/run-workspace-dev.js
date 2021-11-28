@@ -1,37 +1,57 @@
 const { getWorkspacesInfo, logger } = require('./utils');
-const parseArgs = require('minimist');
+const argv = require('minimist')(process.argv, {
+  default: {
+    with: false,
+    filter: false,
+    only: false,
+    select: false,
+  },
+});
+const inquirer = require('inquirer');
 const concurrently = require('concurrently').concurrently;
-const { getFullPkgName } = require('./utils/workspaceUtils');
+const { getFullPkgName } = require('./utils');
 
 /**
  * Helpers
  */
-const formatArgToArray = (args, argName) => args[argName].split(',');
+const formatArgToArray = (arg) => (argv[arg] ? argv[arg].split(',') : []);
+
 const getFullPkgNames = (pureNames) =>
   pureNames.map((pkgName) => getFullPkgName(pkgName));
 
-const getPackagesToWatch = async (args) => {
+const getPackagesToWatch = async () => {
   const { pkgNames } = await getWorkspacesInfo();
   let packagesToWatch = [...pkgNames];
 
-  if (args.only?.length > 0) {
-    return getFullPkgNames(formatArgToArray(args, 'only'));
+  if (argv['select'] !== false) {
+    return await inquirer
+      .prompt([
+        {
+          type: 'checkbox',
+          name: 'packagesToWatch',
+          message: 'Select packages to run in dev mode.',
+          choices: pkgNames,
+        },
+      ])
+      .then((answers) => {
+        return answers.packagesToWatch;
+      });
+  }
+
+  if (argv.only?.length > 0) {
+    return getFullPkgNames(formatArgToArray('only'));
   }
   // filter packages
-  if (args.filter?.length > 0) {
-    const packagesToBlock = getFullPkgNames(formatArgToArray(args, 'filter'));
+  if (argv.filter?.length > 0) {
+    const packagesToBlock = getFullPkgNames(formatArgToArray('filter'));
     return pkgNames.filter((pkgName) => !packagesToBlock.includes(pkgName));
   }
 
   return packagesToWatch;
 };
-/**
- *
- * @param {*} args
- * @returns
- */
-const getAdditionalScripts = (args) => {
-  return formatArgToArray(args, 'with');
+
+const getAdditionalScripts = () => {
+  return formatArgToArray('with');
 };
 
 /**
@@ -63,25 +83,26 @@ const getAdditionalScripts = (args) => {
  *    yarn:storybook
  *    yarn:playroom
  * ```
+ * * SELECT certain packages to run
+ * ```
+ * "dev": "node ./tools/run-workspace-dev" // this is the package.json script
+ * $ yarn dev --select
+ * output: opens a cli to select workspaces
+ * ```
  */
 (async function runWorkspaceDev() {
   process.env.NODE_OPTIONS = '--openssl-legacy-provider';
-  const args = parseArgs(process.argv, {
-    default: {
-      with: 'yarn:storybook,yarn:playroom',
-      filter: undefined,
-      only: undefined,
-    },
-  });
 
   /** get list of packages to watch/run dev */
-  const packagesToWatch = await getPackagesToWatch(args);
+  const packagesToWatch = await getPackagesToWatch();
 
-  /** make scripts */
+  /** make workspace scripts */
   const workspaceDevScripts = packagesToWatch.map(
     (name) => `yarn workspace ${name} dev`
   );
-  const additionalScripts = getAdditionalScripts(args);
+  /** get any additional scripts to run */
+  const additionalScripts = getAdditionalScripts();
+  /** concat workspace scripts and additional scripts */
   const allScripts = workspaceDevScripts.concat(additionalScripts);
 
   logger.info('--------- WORKSPACE DEV MODE ---------');
