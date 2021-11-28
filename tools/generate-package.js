@@ -121,7 +121,11 @@ const makePaths = (pkgLocation) => {
             errorMessage: 'Failed to insert peer dependencies.',
           });
           logger.job('Updating yarn lock file.');
-          command('yarn install').stdout.pipe(process.stdout);
+          await command('yarn install').stdout.pipe(process.stdout);
+          logger.job('Building package.');
+          await command('yarn build', { cwd: output.path }).stdout.pipe(
+            process.stdout
+          );
         },
       };
     };

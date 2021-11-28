@@ -4,10 +4,12 @@ import { Meta } from '@storybook/react/types-6-0';
 import { Text } from '@real-system/text';
 
 export default {
-  title: 'Primitive/Text',
+  title: 'Primitives/Text',
   component: Text,
 } as Meta;
 
-const Template = (args) => <Text {...args} />;
+const Template = (args) => (
+  <Text {...args}>The quick brown fox jumped over the lazy dog.</Text>
+);
 
 export const Default = Template.bind({});
