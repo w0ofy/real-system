@@ -2892,6 +2892,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/core@workspace:packages/core"
   dependencies:
+    "@babel/cli": ^7.16.0
     "@real-system/box": ^0.0.1
     "@real-system/button": ^0.0.2
     "@real-system/icon": ^0.0.1

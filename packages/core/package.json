@@ -14,7 +14,7 @@
     "build": "yarn clean && yarn update-dependencies && yarn generate-bundle && yarn compile && yarn build:types",
     "build:types": "./tools/build-types.sh",
     "clean": "./tools/clean-packages.sh",
-    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && node ./tools/minify",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && yarn minify-bundle",
     "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'",
     "update-dependencies": "node ./tools/updateDependencies.js",
     "generate-bundle": "node ./tools/generate.js",
@@ -35,6 +35,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.5.2"
