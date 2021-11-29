@@ -6,7 +6,7 @@ const {
 } = require('../../../../tools/utils');
 
 const generateGitIgnore = async () => {
-  const { purePkgNames } = await getWorkspacesInfo();
+  const { purePkgNames } = await getWorkspacesInfo({ hasProdStatus: true });
   const ignoreList = purePkgNames.map((name) => `/${name}`);
 
   const content = `# Automatically generated from "yarn generate-packages"

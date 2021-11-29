@@ -35,7 +35,7 @@ const writePkgJson = async (pkg) => {
  * @function generatePkgJson bundle esm & cjs package for unbarreled exports
  */
 const generatePkgJson = async () => {
-  const { pkgList } = await getWorkspacesInfo();
+  const { pkgList } = await getWorkspacesInfo({ hasProdStatus: true });
 
   logger.gray("\nGenerating package.json's for unbarreled exports");
   return pkgList.forEach(async (pkg, i) => {

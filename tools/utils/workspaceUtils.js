@@ -17,7 +17,12 @@ const parseJsonList = (data) =>
     .filter((x) => x.name !== 'real-system')
     .reduce((a, b) => ({ ...a, [b.name]: b }), {});
 
-const DEFAULT_CONFIG = { withCore: false };
+const getWorkspaceData = (data) => ({
+  workspaceInfo: data,
+  pkgJson: getPkgJsonFromWorkspace(data),
+});
+
+const DEFAULT_CONFIG = { withCore: false, hasProdStatus: false };
 
 const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
   let data = await command('yarn workspaces list --json');
@@ -34,11 +39,17 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
     const pkgCache = [];
     const workspaceNames = Object.keys(data)
       .filter((name) => (config.withCore ? true : !name.includes('core')))
+      .filter((name) => {
+        const { pkgJson } = getWorkspaceData(data[name]);
+        if (config.hasProdStatus) {
+          return PACKAGE_STATUS[pkgJson.status];
+        }
+        return true;
+      })
       .sort();
 
     const pkgList = workspaceNames.map((name) => {
-      const workspaceInfo = data[name];
-      const pkgJson = getPkgJsonFromWorkspace(workspaceInfo);
+      const { workspaceInfo, pkgJson } = getWorkspaceData(data[name]);
 
       // push pure name
       const pureName = getPurePkgName(name);

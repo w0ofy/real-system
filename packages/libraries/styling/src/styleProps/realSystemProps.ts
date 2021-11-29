@@ -1,41 +1,6 @@
 import { Property } from 'csstype';
-import type {
-  BackgroundProps,
-  BorderProps,
-  ColorProps as SSColorProps,
-  FlexboxProps,
-  GridProps,
-  LayoutProps,
-  LetterSpacingProps,
-  OpacityProps,
-  PositionProps,
-  ShadowProps,
-  SpaceProps,
-  /**
-   * Renamed TypographyProps from styled-system
-   *
-   * Named `TextProps` instead of `TypographyProps` because:
-   * Module '@real-system/typography' has exported a type declaration
-   * named 'TypographyProps' for the `Typography` component
-   */
-  TypographyProps as TextProps,
-} from 'styled-system';
-import {
-  background,
-  border,
-  color,
-  compose,
-  flexbox,
-  grid,
-  layout,
-  letterSpacing,
-  opacity,
-  position,
-  shadow,
-  space,
-  system,
-  typography,
-} from 'styled-system';
+
+import { system } from '../internalExports/styledSystem';
 
 const realSystemProps = system({
   whiteSpace: true,
@@ -111,25 +76,6 @@ const realSystemProps = system({
   visibility: true,
 });
 
-const composeStyleProps = (): ReturnType<typeof compose> =>
-  compose(
-    // styled-system props
-    background,
-    space,
-    flexbox,
-    border,
-    layout,
-    color,
-    shadow,
-    position,
-    typography,
-    letterSpacing,
-    grid,
-    opacity,
-    // real system props
-    realSystemProps
-  );
-
 type RealSystemProps = {
   whiteSpace?: Property.WhiteSpace;
   textOverflow?: Property.TextOverflow;
@@ -198,45 +144,5 @@ type RealSystemProps = {
   transformOrigin?: Property.TransformOrigin<string>;
 };
 
-/** Workaround for color prop typing issue.
- * More info: https://spectrum.chat/styled-system/general/types-of-property-color-are-incompatible~9227ce42-00f2-473a-8924-f476f0ce6ae1
- * */
-type ColorProps = Omit<SSColorProps, 'color'> & {
-  color?: Property.Color | string;
-};
-type StyleProps = Partial<
-  SpaceProps &
-    FlexboxProps &
-    BackgroundProps &
-    BorderProps &
-    LayoutProps &
-    ShadowProps &
-    ColorProps &
-    PositionProps &
-    TextProps &
-    LetterSpacingProps &
-    GridProps &
-    OpacityProps &
-    RealSystemProps
->;
-
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const STYLE_PROPS = composeStyleProps().propNames!;
-
-export { composeStyleProps, realSystemProps, STYLE_PROPS };
-export type {
-  BackgroundProps,
-  BorderProps,
-  ColorProps,
-  FlexboxProps,
-  GridProps,
-  LayoutProps,
-  LetterSpacingProps,
-  OpacityProps,
-  PositionProps,
-  RealSystemProps,
-  ShadowProps,
-  SpaceProps,
-  StyleProps,
-  TextProps,
-};
+export { realSystemProps };
+export type { RealSystemProps };

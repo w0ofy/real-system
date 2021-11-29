@@ -7,7 +7,7 @@ const { CORE_PACKAGE_JSON_PATH } = require('./utils/constants');
 
 // Given a list of packages, output the index.tsx exports string
 const getPackageJsonOutput = async () => {
-  const { coreDependencies } = await getWorkspacesInfo();
+  const { coreDependencies } = await getWorkspacesInfo({ hasProdStatus: true });
   const pkgJson = require(CORE_PACKAGE_JSON_PATH);
   pkgJson.dependencies = coreDependencies;
   return pkgJson;
