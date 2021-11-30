@@ -70,13 +70,13 @@ const MyComponent = () => {
 Some notes before you begin.
 
 - [Github Issues/Projects](https://github.com/bigwoof91/real-system/issues) are used to track work to be completed.
-- [Yarn Workspaces](https://yarnpkg.com/features/workspaces) is used to manage the monorepo
-- Commit messages are linted and uses [commitlint](https://commitlint.js.org/#/) with [commitizen](https://commitizen-tools.github.io/commitizen/) to assist with this effort.
+- [Yarn Workspaces](https://yarnpkg.com/features/workspaces) is used to manage the monorepo.
+- Commit messages are linted with [commitlint](https://commitlint.js.org/#/) + [commitizen](https://commitizen-tools.github.io/commitizen/).
 
 ## Setup
 
 ```bash
-# bootstrap project dependencies
+# bootstrap project dependencies and husky
 $ yarn bootstrap
 
 # develop components locally with storybook
@@ -105,7 +105,9 @@ $ git push origin <branch_name>
 
 # Tools, Dependencies, Resources
 
-## Primitives (under the hood)
+## Under the hood
+
+Real System uses the following projects which compose the majority of component patterns.
 
 - [styled system](https://styled-system.com/)
 - [styled components](https://styled-components.com/)
@@ -117,5 +119,4 @@ $ git push origin <branch_name>
 - [rollupjs](https://rollupjs.org/guide/en/)
 - [babel](https://babeljs.io/)
 - [storybook](https://storybook.js.org/)
-- (coming soon) [playroom](https://github.com/seek-oss/playroom)
-- (coming soon) [docusaurus](https://docusaurus.io/)
+- [playroom](https://github.com/seek-oss/playroom)

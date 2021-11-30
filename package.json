@@ -1,6 +1,5 @@
 {
   "name": "real-system",
-  "packageManager": "yarn@3.1.0",
   "private": true,
   "version": "0.0.0",
   "description": "A real react component system that is easily themeable and extendable.",
@@ -47,19 +46,19 @@
     "test:coverage": "jest ./packages/ --runInBand --coverage",
     "___________RELEASE___________": "",
     "changeset": "changeset",
-    "version:stable": "yarn changeset version",
+    "version:stable": "yarn changeset version && yarn install --mode=update-lockfile",
     "version:next": "yarn changeset pre enter rc && yarn version:stable",
     "release": "yarn build && yarn lint && yarn test --runInBand && yarn changeset publish",
     "release:next": "yarn build && yarn lint && yarn test --runInBand && yarn changeset publish",
     "___________BUILD___________": "build scripts",
     "build": "yarn workspaces foreach --topological-dev run build",
-    "build:storybook": "yarn build:packages && build-storybook -o ./storybook -c .storybook",
+    "build:pkg": "node tools/build-package.js",
+    "build:storybook": "yarn build && build-storybook -o ./storybook -c .storybook",
     "build:playroom": "playroom build",
-    "build:storybook-site": "run-s build:storybook build:playroom",
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
     "generate-pkg": "node ./tools/generate-package",
-    "dev": "node ./tools/run-workspace-dev --with=yarn:storybook,yarn:playroom",
+    "dev": "node ./tools/run-workspace-dev --select=true --with=yarn:storybook,yarn:playroom",
     "storybook": "start-storybook -p 6006",
     "playroom": "playroom start"
   },
@@ -81,7 +80,7 @@
     "@babel/preset-typescript": "^7.16.0",
     "@babel/register": "^7.16.0",
     "@changesets/changelog-github": "^0.4.2",
-    "@changesets/cli": "^2.18.0",
+    "@changesets/cli": "^2.18.1",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@commitlint/cz-commitlint": "^15.0.0",
@@ -157,13 +156,11 @@
     "terser": "^5.9.0",
     "ts-jest": "^27.0.7",
     "type-fest": "^2.5.3",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "resolutions": {
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
-  "installConfig": {
-    "hoistingLimits": "none"
-  }
+  "packageManager": "yarn@3.1.0"
 }

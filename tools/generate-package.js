@@ -1,20 +1,29 @@
 const { prompt } = require('inquirer');
 const { relative } = require('path');
 const { generateTemplateFiles } = require('generate-template-files');
-const { getWorkspacesInfo, ROOT_PATH, writeToFile } = require('./utils');
+const {
+  getWorkspacesInfo,
+  ROOT_PATH,
+  writeToFile,
+  logger,
+} = require('./utils');
+const { command } = require('execa');
 
 const PATH_TO_TOOLS = `${ROOT_PATH}/tools`;
-const makePaths = (pkgLocation) => ({
-  PATH_TO_BUILD_SCRIPT: relative(
-    `${pkgLocation}/tools`,
-    `${PATH_TO_TOOLS}/build/rollup.js`
-  ),
-  PATH_TO_DEV_SCRIPT: relative(
-    `${pkgLocation}/tools`,
-    `${PATH_TO_TOOLS}/build/esbuild.js`
-  ),
-  PATH_TO_TSCONFIG: relative(`${pkgLocation}`, `${ROOT_PATH}/tsconfig.json`),
-});
+const makePaths = (pkgLocation) => {
+  const PATH_TO_WORKSPACE_TOOLS = `${pkgLocation}/tools`;
+  return {
+    PATH_TO_BUILD_SCRIPT: relative(
+      PATH_TO_WORKSPACE_TOOLS,
+      `${PATH_TO_TOOLS}/build`
+    ),
+    PATH_TO_DEV_SCRIPT: relative(
+      PATH_TO_WORKSPACE_TOOLS,
+      `${PATH_TO_TOOLS}/dev`
+    ),
+    PATH_TO_TSCONFIG: relative(`${pkgLocation}`, `${ROOT_PATH}/tsconfig.json`),
+  };
+};
 
 (async function generatePackage() {
   const { coreDependencies } = await getWorkspacesInfo();
@@ -42,7 +51,7 @@ const makePaths = (pkgLocation) => ({
       {}
     );
 
-    const makeOptions = ({ option, outputPath }) => {
+    const makeOptions = ({ option, outputPath, type }) => {
       const { PATH_TO_BUILD_SCRIPT, PATH_TO_DEV_SCRIPT, PATH_TO_TSCONFIG } =
         makePaths(outputPath);
 
@@ -71,6 +80,10 @@ const makePaths = (pkgLocation) => ({
         ],
         dynamicReplacers: [
           {
+            slot: '__pkg_type__',
+            slotValue: type,
+          },
+          {
             slot: '__peer_deps_list__',
             slotValue: Object.keys(peerDeps).join(' '),
           },
@@ -90,7 +103,7 @@ const makePaths = (pkgLocation) => ({
         output: {
           path: outputPath,
         },
-        onComplete: ({ output }) => {
+        onComplete: async ({ output }) => {
           // update package json with selected peer dependencies from initial inquirer prompt
           const PATH_TO_PACKAGE_JSON = `${output.path}/package.json`;
           const packageJson = require(PATH_TO_PACKAGE_JSON);
@@ -102,10 +115,17 @@ const makePaths = (pkgLocation) => ({
             ...peerDeps,
             ...packageJson.devDependencies,
           };
-          writeToFile(PATH_TO_PACKAGE_JSON, packageJson, {
+          await writeToFile(PATH_TO_PACKAGE_JSON, packageJson, {
             formatJson: true,
             successMessage: 'Inserted peer dependencies.',
+            errorMessage: 'Failed to insert peer dependencies.',
           });
+          logger.job('Updating yarn lock file.');
+          await command('yarn install').stdout.pipe(process.stdout);
+          logger.job('Building package.');
+          await command('yarn build', { cwd: output.path }).stdout.pipe(
+            process.stdout
+          );
         },
       };
     };
@@ -114,14 +134,17 @@ const makePaths = (pkgLocation) => ({
       makeOptions({
         option: 'Component Package',
         outputPath: `${ROOT_PATH}/packages/components/__pkg__(kebabCase)`,
+        type: 'Component',
       }),
       makeOptions({
         option: 'Library Package',
         outputPath: `${ROOT_PATH}/packages/libraries/__pkg__(kebabCase)`,
+        type: 'Library',
       }),
       makeOptions({
         option: 'Primitive Package',
         outputPath: `${ROOT_PATH}/packages/primitives/__pkg__(kebabCase)`,
+        type: 'Primitive',
       }),
     ]);
   });

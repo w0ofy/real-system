@@ -1,11 +1,12 @@
 const { getWorkspacesInfo, logger } = require('./utils');
 const argv = require('minimist')(process.argv, {
   default: {
-    with: false,
-    filter: false,
-    only: false,
+    with: undefined,
+    filter: undefined,
+    only: undefined,
     select: false,
   },
+  boolean: ['select'],
 });
 const inquirer = require('inquirer');
 const concurrently = require('concurrently').concurrently;
@@ -23,7 +24,7 @@ const getPackagesToWatch = async () => {
   const { pkgNames } = await getWorkspacesInfo();
   let packagesToWatch = [...pkgNames];
 
-  if (argv['select'] !== false) {
+  if (argv['select'] === true) {
     return await inquirer
       .prompt([
         {

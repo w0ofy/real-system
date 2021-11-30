@@ -7,7 +7,7 @@ const { CORE_INDEX_PATH } = require('./constants');
 
 // Given a list of packages, output the index.tsx exports string
 const getIndexOutput = async () => {
-  const { pkgNames } = await getWorkspacesInfo();
+  const { pkgNames } = await getWorkspacesInfo({ hasProdStatus: true });
   let output = '';
   pkgNames.forEach((pkg) => {
     output = `${output}export * from '${pkg}';\n`;

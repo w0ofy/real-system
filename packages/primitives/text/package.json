@@ -1,8 +1,8 @@
 {
-  "name": "@real-system/utils",
+  "name": "@real-system/text",
   "version": "0.0.0",
-  "description": "utilities for real system",
-  "status": "production",
+  "description": "Text primitive for real system.",
+  "status": "development",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -20,8 +20,7 @@
   },
   "keywords": [
     "real-system",
-    "utils",
-    "utilities"
+    "text"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -30,16 +29,18 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
+    "@real-system/box": "^0.0.1",
+    "@real-system/styling": "^0.0.0",
+    "@real-system/theme": "^0.0.0",
+    "@real-system/utils": "^0.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {
-    "deepmerge": "^4.2.2",
-    "lodash.get": "^4.4.2",
-    "react-uid": "^2.3.1",
-    "type-fest": "^2.5.3"
-  },
   "devDependencies": {
+    "@real-system/box": "^0.0.1",
+    "@real-system/styling": "^0.0.0",
+    "@real-system/theme": "^0.0.0",
+    "@real-system/utils": "^0.0.0",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
