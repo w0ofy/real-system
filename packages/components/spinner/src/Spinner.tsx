@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 
 import { Box } from '@real-system/box';
-import { useUID } from '@real-system/utils';
+import { hooks } from '@real-system/utils';
 
 import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';
@@ -14,6 +14,7 @@ import {
 } from './styles';
 import { SpinnerProps } from './types';
 
+const { useUID } = hooks;
 /**
  * @todo refactor to use an icon wrapper w/ a11y in mind i.e. decorative + aria-hidden
  */

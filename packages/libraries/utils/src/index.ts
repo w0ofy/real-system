@@ -1,8 +1,28 @@
-export * from './captialize';
-export * from './get';
+import { uid, useUID, useUIDSeed } from 'react-uid';
+
+import { capitalize } from './captialize';
+import { get, getOneOf } from './get';
+import { merge } from './merge';
+import { makeTestId } from './testId';
+
+const fns = {
+  capitalize,
+  get,
+  getOneOf,
+  makeTestId,
+  merge,
+  uid,
+};
+
+const hooks = {
+  useUID,
+  useUIDSeed,
+};
+
+/** fn utils */
+export { fns, hooks };
+
+/** type utils */
 export * from './kebabCase';
-export * from './merge';
-export * from './testId';
 export * from './typeUtils';
-export { uid, useUID, useUIDSeed } from 'react-uid';
 export type { Get, KebabCase, KebabCasedProperties } from 'type-fest';

@@ -1,4 +1,5 @@
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+const { resolve } = require('path');
 
 module.exports = {
   stories: ['../packages/**/*.stories.@(mdx|tsx)'],
@@ -6,7 +7,6 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    'addon-screen-reader',
     'storybook-addon-performance',
     '@storybook/addon-actions',
     '@storybook/addon-viewport',
@@ -52,6 +52,13 @@ module.exports = {
     ];
 
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@emotion/core': resolve('packages/libraries/styling'),
+      '@emotion/styled': resolve('packages/libraries/styling'),
+      'emotion-theming': resolve('packages/libraries/theme'),
+    };
+
     return config;
   },
 };

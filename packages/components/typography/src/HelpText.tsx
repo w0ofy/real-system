@@ -2,12 +2,14 @@ import React, { forwardRef } from 'react';
 
 import { Box } from '@real-system/box';
 import { Icon, IconProps } from '@real-system/icon';
+import { Text } from '@real-system/text';
 import { PaletteIntents } from '@real-system/theme';
 
 import { InternalTypographyProps } from './types';
 
 type HelpTextIntents = Extract<PaletteIntents, 'danger'> | 'default';
 export type HelpTextProps = {
+  as?: 'span' | 'div';
   children?: React.ReactNode;
   id?: string;
   variant?: HelpTextIntents;
@@ -26,12 +28,12 @@ const ICON_INTENT_MAP: {
 
 const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
   (
-    { children, variant = 'default', ...restProps },
+    { children, variant = 'default', as = 'span', ...restProps },
     ref
   ): React.ReactElement => {
     return (
-      <Box
-        as="span"
+      <Text
+        as={as}
         display="flex"
         alignItems="center"
         p={0}
@@ -54,7 +56,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
           )}
         </Box>
         <Box as="span">{children}</Box>
-      </Box>
+      </Text>
     );
   }
 );

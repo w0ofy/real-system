@@ -1,6 +1,6 @@
-import { DefaultTheme } from '@real-system/styling';
-import { get } from '@real-system/utils';
+import { fns } from '@real-system/utils';
 
+import { ThemeShape } from './themes';
 import {
   backgroundColors,
   borderColors,
@@ -80,9 +80,8 @@ export type ThemeTokens =
   | ShadowTokens
   | OrdinalTokens;
 
-export type ThemeScales = keyof DefaultTheme;
+export type ThemeScales = keyof ThemeShape;
 
-type Props = { theme: DefaultTheme };
 export type GetTokenReturnValue = string | number | undefined;
 /**
  * A styleFn to get theme tokens
@@ -92,8 +91,8 @@ const getToken = (
   scale: ThemeScales = 'colors',
   fallback: GetTokenReturnValue = undefined
 ) => {
-  return function <T = GetTokenReturnValue>(props: Props): T {
-    return get(props.theme, `${scale}.${token}`, fallback);
+  return function <T = GetTokenReturnValue>(props): T {
+    return fns.get(props.theme, `${scale}.${token}`, fallback);
   };
 };
 

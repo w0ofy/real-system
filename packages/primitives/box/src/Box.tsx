@@ -1,31 +1,49 @@
 import React from 'react';
 
-import styled, { composeStyleProps } from '@real-system/styling';
-import { makeTestId } from '@real-system/utils';
+import type { StyledComponent } from '@real-system/styling';
+import styled from '@real-system/styling';
+import { fns } from '@real-system/utils';
 
 import { getPseudoStyles } from './styleFunctions';
+import { composeBoxStyleProps } from './styleProps';
 import type { BoxProps } from './types';
 
-const boxAttrs = (props: any) => ({
-  'data-testid': props['data-testid'] || makeTestId('box'),
-});
+console.log(styled);
 
 /**
  * `Box` primitive component. Used to create all block-level styles and elements in Real System.
  */
-const Box = styled.div.attrs(boxAttrs)<BoxProps>(
+const StyledBox = styled.div<BoxProps>(
   { boxSizing: 'border-box' },
-  composeStyleProps(),
+  composeBoxStyleProps(),
   getPseudoStyles
-);
+) as StyledComponent<
+  Omit<
+    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+    'color'
+  >,
+  BoxProps,
+  Record<string, unknown>
+>;
 
-type ElementTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
+const Box = React.forwardRef<HTMLElement, BoxProps>(function Box(
+  { children, element = 'BOX', ...props },
+  ref
+) {
+  return (
+    <StyledBox data-paste-element={element} ref={ref} {...props}>
+      {children}
+    </StyledBox>
+  );
+});
 
-function BoxAs<T>(elementTag: ElementTag) {
+Box.defaultProps = { 'data-testid': fns.makeTestId('box') };
+
+type ElTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
+
+function BoxAs<T>(elTag: ElTag) {
   return function BoxAsComponent(props: BoxProps & T): React.ReactElement {
-    return (
-      <Box as={elementTag} data-testid={makeTestId('box-as')} {...props} />
-    );
+    return <Box as={elTag} data-testid={fns.makeTestId('box-as')} {...props} />;
   };
 }
 

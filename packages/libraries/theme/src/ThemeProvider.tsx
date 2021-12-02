@@ -1,8 +1,6 @@
 import React from 'react';
 
 import {
-  DefaultTheme,
-  PrimitiveThemeConsumer as ThemeConsumer,
   PrimitiveThemeContext as ThemeContext,
   PrimitiveThemeProvider,
   PrimitiveThemeProviderProps,
@@ -12,10 +10,11 @@ import {
 
 import { GlobalStyles } from './GlobalStyles';
 import { themes } from './themes';
+import { ThemeShape } from './themes';
 
 export type ThemeProviderProps = {
-  theme?: DefaultTheme;
-} & Pick<PrimitiveThemeProviderProps<ThemeProviderProps>, 'children'>;
+  theme?: ThemeShape;
+} & Pick<PrimitiveThemeProviderProps, 'children'>;
 
 const ThemeProvider = ({
   children,
@@ -32,4 +31,7 @@ const ThemeProvider = ({
   );
 };
 
-export { ThemeConsumer, ThemeContext, ThemeProvider, useTheme, withTheme };
+/**
+ * @todo create ThemeConsumer
+ */
+export { ThemeContext, ThemeProvider, useTheme, withTheme };

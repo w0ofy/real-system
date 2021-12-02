@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef } from 'react';
 
 import { Box, BoxProps } from '@real-system/box';
 
@@ -6,7 +6,7 @@ export type VisuallyHiddenProps = Pick<BoxProps, 'as'> & {
   children: NonNullable<React.ReactNode>;
 };
 
-const VisuallyHidden = React.forwardRef<HTMLElement, VisuallyHiddenProps>(
+const VisuallyHidden = forwardRef<HTMLElement, VisuallyHiddenProps>(
   function VisuallyHidden({ as = 'span', children, ...restProps }, ref) {
     return (
       <Box

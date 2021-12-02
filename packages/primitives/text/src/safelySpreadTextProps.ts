@@ -1,11 +1,10 @@
+import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 import {
   OVERFLOW_PROPS,
   SHADOW_PROPS,
   SPACE_PROPS,
   TEXT_PROPS,
-} from '@real-system/styling';
-
-import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
+} from './styleProps';
 
 export const TEXT_PROPS_TO_BLOCK = [
   ...OVERFLOW_PROPS,

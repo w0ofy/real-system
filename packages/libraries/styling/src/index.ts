@@ -1,61 +1,43 @@
-import styled from 'styled-components';
+// Base styling system (emotion)
+import styled from '@emotion/styled';
 
-/**
- * libs
- * styled-system (with css prop util) and styled-components
- */
-export * from './styled-components';
-export { default as css } from '@styled-system/css';
-export * as polished from 'polished';
 export type {
-  AnyStyledComponent,
-  BaseThemeProviderComponent,
-  BaseWithThemeFnInterface,
-  CSSKeyframes,
-  CSSObject,
-  CSSProp,
-  CSSProperties,
-  CSSPseudos,
-  DefaultTheme,
-  GlobalStyleComponent,
   ThemeProviderProps as PrimitiveThemeProviderProps,
-  StyledComponent,
-  StyledComponentBase,
-  StyledComponentInnerAttrs,
-  StyledComponentInnerComponent,
-  StyledComponentInnerOtherProps,
-  StyledComponentProps,
-  StyledComponentPropsWithRef,
-  StyledConfig,
-  StyledFunction,
-  StyledInterface,
-  StyledProps,
-  ThemedBaseStyledInterface,
-  ThemedCssFunction,
-  ThemedGlobalStyledClassProps,
-  ThemedStyledComponentsModule,
-  ThemedStyledFunction,
-  ThemedStyledFunctionBase,
-  ThemedStyledInterface,
-  ThemedStyledProps,
-  ThemeProps,
-  ThemeProviderComponent,
-  WithThemeFnInterface,
-} from 'styled-components';
+  SerializedStyles,
+  GlobalProps as StylingGlobalsProps,
+} from '@emotion/react';
 export {
-  createGlobalStyle,
-  css as cssLiteral,
-  isStyledComponent,
+  css as cssTemplateString,
   keyframes,
-  ThemeConsumer as PrimitiveThemeConsumer,
   ThemeContext as PrimitiveThemeContext,
   ThemeProvider as PrimitiveThemeProvider,
   useTheme as primitiveUseTheme,
   withTheme as primitiveWithTheme,
-} from 'styled-components';
+  Global as StylingGlobals,
+} from '@emotion/react';
+export type {
+  CreateStyled,
+  CreateStyledComponent,
+  StyledComponent,
+  StyledOptions,
+  StyledTags,
+} from '@emotion/styled';
+export type {
+  CSSObject,
+  CSSPseudoSelectorProps,
+  CSSSelectorObject,
+  EmotionLabel,
+  SystemCssProperties,
+  SystemStyleObject,
+  UseThemeFunction,
+  VariantProperty,
+} from '@styled-system/css';
+export { default as css } from '@styled-system/css';
+export * as polished from 'polished';
+export * from 'styled-system';
+
 /**
  * styled, css and token utilities
  */
 export * from './colorUtils';
-export * from './styleProps';
 export default styled;

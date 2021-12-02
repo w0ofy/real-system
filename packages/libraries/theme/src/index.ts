@@ -12,4 +12,3 @@ export * from './utils/makeColorRange';
  */
 export * from './getToken';
 export { useToken } from './useToken';
-export type { DefaultTheme } from '@real-system/styling';

@@ -1,6 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box';
+import { Text } from '@real-system/text';
 
 import { RequiredDot } from './RequiredDot';
 import { InternalTypographyProps } from './types';
@@ -27,7 +28,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
     );
 
     return (
-      <Box
+      <Text
         as={as}
         display="block"
         p={0}
@@ -48,7 +49,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
           {required ? <RequiredDot disabled={disabled} /> : null}
           <Box as="span">{children}</Box>
         </Box>
-      </Box>
+      </Text>
     );
   }
 );

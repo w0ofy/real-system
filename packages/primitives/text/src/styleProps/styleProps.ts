@@ -1,21 +1,13 @@
 import { Property } from 'csstype';
 
 import {
-  background,
-  BackgroundProps,
-  border,
-  BorderProps,
   color,
+  ColorProps as StyledSystemColorProps,
   compose,
   flexbox,
   FlexboxProps,
-  grid,
-  GridProps,
   layout,
   LayoutProps,
-  MarginProps,
-  opacity,
-  OpacityProps,
   overflow,
   OverflowProps,
   position,
@@ -24,27 +16,24 @@ import {
   ShadowProps,
   space,
   SpaceProps,
-  StyledSystemColorProps,
-  TextProps,
   typography,
-} from '../internalExports/styledSystem';
+  TypographyProps,
+} from '@real-system/styling';
 
-import { RealSystemProps, realSystemProps } from './realSystemProps';
+import { realSystemProps } from './realSystemProps';
+import { RealSystemProps } from '.';
 
-const composeStyleProps = (): ReturnType<typeof compose> =>
+const composeTextStyleProps = (): ReturnType<typeof compose> =>
   compose(
     // styled-system props
-    background,
     space,
     flexbox,
-    border,
     layout,
     color,
     shadow,
     position,
     typography,
-    grid,
-    opacity,
+
     overflow,
     // real system props
     realSystemProps
@@ -56,37 +45,38 @@ const composeStyleProps = (): ReturnType<typeof compose> =>
 type ColorProps = Omit<StyledSystemColorProps, 'color'> & {
   color?: Property.Color | string;
 };
-type StyleProps = Partial<
-  SpaceProps &
-    FlexboxProps &
-    BackgroundProps &
-    BorderProps &
-    LayoutProps &
-    ShadowProps &
-    ColorProps &
+type TextBaseStyleProps = Partial<
+  OverflowProps &
     PositionProps &
-    TextProps &
-    GridProps &
-    OpacityProps &
-    OverflowProps &
+    ShadowProps &
+    SpaceProps &
+    TypographyProps &
+    LayoutProps &
+    ColorProps &
+    FlexboxProps &
     RealSystemProps
 >;
 
-export { composeStyleProps };
+export {
+  color,
+  composeTextStyleProps,
+  flexbox,
+  layout,
+  overflow,
+  position,
+  // real system props
+  shadow,
+  space,
+  typography,
+};
 export type {
-  BackgroundProps,
-  BorderProps,
   ColorProps,
   FlexboxProps,
-  GridProps,
   LayoutProps,
-  MarginProps,
-  OpacityProps,
   OverflowProps,
   PositionProps,
-  RealSystemProps,
   ShadowProps,
   SpaceProps,
-  StyleProps,
-  TextProps,
+  TextBaseStyleProps,
+  TypographyProps,
 };

@@ -1,7 +1,7 @@
 import { css } from '@real-system/styling';
 
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import type { BoxProps } from './types';
+import type { TextProps } from './types';
 
 /**
  * Take _ prefixed style props and convert them to custom style props for CSS pseudo selectors
@@ -10,7 +10,7 @@ import type { BoxProps } from './types';
  * @return {*}  {(((props?: Record<string, unknown> | undefined) => CSSObject) | Record<string, never>)}
  */
 const getPseudoStyles = (
-  props: BoxProps
+  props: TextProps
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
