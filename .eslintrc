@@ -57,9 +57,6 @@
       }
     },
     {
-      "env": {
-        "jest/globals": true
-      },
       "files": ["*.test.ts", "*.test.tsx"],
       "extends": [
         "plugin:testing-library/react",

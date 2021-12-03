@@ -1,13 +1,13 @@
-import _get from 'lodash.get';
+import lodashGet from 'lodash.get';
 
 type Get<T = any> = {
   (obj: Record<any, any>, path: string[] | string, fallback?: T): T;
-  oneOf: typeof getOneOf;
+  oneOf: typeof _getOneOf;
 };
 
-const get: Get = _get;
+const _get: Get = lodashGet;
 
-const getOneOf = <S = Record<string, any>, F = any>(
+const _getOneOf = <S = Record<string, any>, F = any>(
   obj: S,
   accessors: string[],
   fallback?: F
@@ -15,7 +15,7 @@ const getOneOf = <S = Record<string, any>, F = any>(
   let value = fallback;
 
   for (let i = 0; i < accessors.length; i++) {
-    const possibleValue = get(obj, accessors[i], undefined);
+    const possibleValue = _get(obj, accessors[i], undefined);
     if (possibleValue) {
       value = possibleValue;
       break;
@@ -25,6 +25,6 @@ const getOneOf = <S = Record<string, any>, F = any>(
   return value as F;
 };
 
-get.oneOf = getOneOf;
+_get.oneOf = _getOneOf;
 
-export { get, getOneOf };
+export { _get, _getOneOf };

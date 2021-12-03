@@ -1,6 +1,6 @@
-import { STYLE_PROPS } from '@real-system/styling';
+import { BOX_STYLE_PROPS } from './styleProps';
 
-const PROPS_TO_BLOCK = [...STYLE_PROPS, 'className', 'style'];
+const PROPS_TO_BLOCK = [...BOX_STYLE_PROPS, 'className', 'style'];
 
 type Props = { [key: string]: any };
 

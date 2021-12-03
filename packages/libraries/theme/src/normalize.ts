@@ -1,6 +1,9 @@
 import { css } from '@real-system/styling';
 
-const normalize = css`
+/**
+ * https://github.com/necolas/normalize.css/blob/master/normalize.css (v8.0.1, commit fc091cc, Nov 4, 2018)
+ */
+const normalizeStyles = css`
   html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -181,4 +184,4 @@ const normalize = css`
   }
 `;
 
-export { normalize };
+export { normalizeStyles };

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ColorItem, ColorPalette } from '@storybook/addon-docs/blocks';
+import { ColorItem, ColorPalette } from '@storybook/addon-docs';
 import debounce from 'lodash.debounce';
 
 import { Box } from '@real-system/box';

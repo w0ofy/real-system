@@ -5,4 +5,4 @@ const themes = {
   realsystem: tokenizePalette(),
 };
 
-export { themes, tokenizePalette };
+export { themes };

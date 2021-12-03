@@ -1,10 +1,24 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxProps } from '@real-system/box';
+import styled, { StyledComponent } from '@real-system/styling';
 
-type TextPrimitiveProps = BoxProps;
+import { getPseudoStyles } from './styleFunction';
+import { composeTextStyleProps } from './styleProps';
+import type { TextProps } from './types';
 
-const Text = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(
+const StyledText = styled.div(
+  composeTextStyleProps(),
+  getPseudoStyles
+) as StyledComponent<
+  Omit<
+    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+    'color'
+  >,
+  TextProps,
+  Record<string, unknown>
+>;
+
+const Text = forwardRef<HTMLElement, TextProps>(function Text(
   {
     children,
     color = 'color-text',
@@ -17,7 +31,7 @@ const Text = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(
   ref
 ) {
   return (
-    <Box
+    <StyledText
       ref={ref}
       fontSize={fontSize}
       fontWeight={fontWeight}
@@ -26,9 +40,8 @@ const Text = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(
       m={m}
       {...restProps}>
       {children}
-    </Box>
+    </StyledText>
   );
 });
 
 export { Text };
-export type { TextPrimitiveProps };

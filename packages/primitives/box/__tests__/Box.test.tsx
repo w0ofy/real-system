@@ -28,32 +28,32 @@ describe('Box', () => {
     render(<BoxComponent {...props} />);
     expect(queryCustomTestId(props['data-testid'])).toBeTruthy();
   });
-  it('renders style props and ouputs token values for given style props', () => {
+  it('renders style props and outputs token values for given style props', () => {
     render(<BoxComponent {...styleProps} />);
     expect(queryBoxComponent()).toHaveStyle(expectedStyled);
   });
 });
 
-const BoxAsInput = BoxAs('input');
-const BoxAsComponent = (props: BoxProps = {}) => (
+const Anchor = BoxAs('a');
+const BoxAsAnchor = (props: BoxProps = {}) => (
   <ThemeProvider theme={TEST_THEME}>
-    <BoxAsInput {...props} />
+    <Anchor {...props} />
   </ThemeProvider>
 );
-const queryBoxAsComponent = () => screen.queryByTestId('real-system-box-as');
+const queryBoxAsAnchor = () => screen.queryByTestId('real-system-box-as');
 
 describe('BoxAs', () => {
   it('renders', () => {
-    render(<BoxAsComponent />);
-    expect(queryBoxAsComponent()).toBeTruthy();
+    render(<BoxAsAnchor />);
+    expect(queryBoxAsAnchor()).toBeTruthy();
   });
   it('renders with a given "data-testid"', () => {
     const props = { 'data-testid': 'custom-box-as' };
-    render(<BoxAsComponent {...props} />);
+    render(<BoxAsAnchor {...props} />);
     expect(queryCustomTestId(props['data-testid'])).toBeTruthy();
   });
-  it('renders style props and ouputs token values for given style props', () => {
-    render(<BoxAsComponent {...styleProps} />);
-    expect(queryBoxAsComponent()).toHaveStyle(expectedStyled);
+  it('renders style props and outputs token values for given style props', () => {
+    render(<BoxAsAnchor {...styleProps} />);
+    expect(queryBoxAsAnchor()).toHaveStyle(expectedStyled);
   });
 });

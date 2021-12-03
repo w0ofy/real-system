@@ -6,7 +6,6 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    'addon-screen-reader',
     'storybook-addon-performance',
     '@storybook/addon-actions',
     '@storybook/addon-viewport',
@@ -52,6 +51,15 @@ module.exports = {
     ];
 
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@emotion/core': '@emotion/react',
+      '@emotion/styled': '@emotion/styled',
+      'emotion-theming': '@emotion/react',
+    };
+
+    console.table(config.resolve.alias);
+
     return config;
   },
 };

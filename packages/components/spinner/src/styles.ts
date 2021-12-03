@@ -1,5 +1,5 @@
 import { BoxAs, BoxStyleProps } from '@real-system/box';
-import styled, { cssLiteral, keyframes } from '@real-system/styling';
+import styled, { keyframes } from '@real-system/styling';
 
 import { circleCircumference } from './constants';
 import { SpinnerProps } from './types';
@@ -35,14 +35,13 @@ type SVGCircleElementProps = React.SVGAttributes<SVGCircleElement>;
 type SVGGelementProps = React.SVGAttributes<SVGGElement>;
 
 const SpinnerSvg = styled(BoxAs<SVGElementProps>('svg'))({
-  animation:
-    cssLiteral`4.25s linear infinite both ${svgKeyframes}` as unknown as string,
+  animation: `4.25s linear infinite both ${svgKeyframes}` as unknown as string,
 });
 const SvgGroup = BoxAs<SVGGelementProps>('g');
 const TrackCircle = BoxAs<SVGCircleElementProps>('circle');
 const WheelCircle = styled(BoxAs<SVGCircleElementProps>('circle'))({
   animation:
-    cssLiteral`1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
+    `1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
 });
 
 const sizes: { [key in SpinnerProps['size']]: BoxStyleProps } = {

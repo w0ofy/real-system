@@ -1,8 +1,8 @@
-export * from './captialize';
-export * from './get';
-export * from './kebabCase';
-export * from './merge';
-export * from './testId';
-export * from './typeUtils';
-export { uid, useUID, useUIDSeed } from 'react-uid';
-export type { Get, KebabCase, KebabCasedProperties } from 'type-fest';
+/** helpers */
+export * from './helpers';
+/** private helpers (each helper is prefixed with '_' to represent they are private) */
+export * from './private';
+/** hooks */
+export { useUID, useUIDSeed } from 'react-uid';
+/** type utils */
+export * from './typeHelpers';

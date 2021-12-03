@@ -1,7 +1,4 @@
-import { DefaultTheme } from 'styled-components';
-
-import { makeTokenScale } from './utils/makeTokenScale';
-import { Palette, palettes } from './palettes';
+import { Palette, palettes } from '../palettes';
 import {
   backgroundColors,
   borderColors,
@@ -19,22 +16,22 @@ import {
   space,
   textColors,
   zIndices,
-} from './tokens';
+} from '../tokens';
+import { makeTokenScale } from '../utils/makeTokenScale';
 
 /**
  *
  * @description generates a tokenized theme with the given Palette. Uses the realsystem palette by default
  */
-const tokenizePalette = (
-  palette: Palette = palettes.default
-): DefaultTheme => ({
+const tokenizePalette = (palette: Palette = palettes.default) => ({
   palette: palette,
   // scales that inherit the palette
   colors: {
+    // @todo remove `colors` tokens
     ...colors(palette),
     ...backgroundColors(palette),
-    ...textColors(palette),
     ...borderColors(palette),
+    ...textColors(palette),
   },
   borders: makeTokenScale(borders(palette)),
   shadows: makeTokenScale(shadows(palette)),
@@ -51,4 +48,7 @@ const tokenizePalette = (
   space: makeTokenScale(space),
 });
 
+type ThemeShape = ReturnType<typeof tokenizePalette>;
+
+export type { ThemeShape };
 export { tokenizePalette };

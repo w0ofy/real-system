@@ -1,6 +1,6 @@
 import { Property } from 'csstype';
 
-import { system } from '../internalExports/styledSystem';
+import { system } from '@real-system/styling';
 
 const realSystemProps = system({
   whiteSpace: true,

@@ -5,6 +5,7 @@ const presets = [
 ];
 
 const plugins = [
+  '@emotion',
   '@babel/proposal-class-properties',
   '@babel/proposal-object-rest-spread',
   '@babel/plugin-transform-runtime',

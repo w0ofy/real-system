@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box';
+import { Text, TextStyleProps } from '@real-system/text';
 
 import {
   HeadingAsTags,
@@ -11,8 +11,8 @@ import {
 
 const styles: {
   [key in HeadingVariants]: Pick<
-    BoxStyleProps,
-    'fontSize' | 'lineHeight' | 'mb' | 'fontWeight' | 'color'
+    TextStyleProps,
+    'fontSize' | 'lineHeight' | 'mb' | 'fontWeight'
   >;
 } = {
   heading1: {
@@ -35,16 +35,19 @@ const styles: {
   },
   heading4: {
     fontSize: 3,
+    lineHeight: 8,
     fontWeight: 3,
     mb: 5,
   },
   heading5: {
     fontSize: 2,
+    lineHeight: 7,
     fontWeight: 3,
     mb: 4,
   },
   heading6: {
     fontSize: 1,
+    lineHeight: 6,
     fontWeight: 3,
     mb: 2,
   },
@@ -62,7 +65,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
     ref
   ): React.ReactElement => {
     return (
-      <Box
+      <Text
         as={as}
         m={0}
         color="color-text"
@@ -70,7 +73,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
         ref={ref}
         mb={mb || styles[variant].mb}>
         {children}
-      </Box>
+      </Text>
     );
   }
 );

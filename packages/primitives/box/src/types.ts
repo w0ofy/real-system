@@ -1,8 +1,6 @@
-import type { StyleProps } from '@real-system/styling';
-
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
+import type { BoxBaseStyleProps } from './styleProps';
 
-export type BoxBaseStyleProps = StyleProps;
 export type BoxPseudoStyleProps = {
   [key in keyof typeof PSEUDO_PROP_STYLES]?: BoxBaseStyleProps;
 };

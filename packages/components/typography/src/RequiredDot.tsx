@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import type { BoxProps } from '@real-system/box';
 import { Box } from '@real-system/box';

@@ -12,7 +12,7 @@ import {
   TypographyVariants,
 } from './types';
 
-const P = BoxAs<TypographyProps>('p');
+const P = BoxAs<TypographyComponentProps>('p');
 
 type TypographyVariantMap = {
   [key in TypographyVariants]: Extract<TypographyAsTags, 'p' | 'span'>;
@@ -23,14 +23,14 @@ const TYPOGRAPHY_VARIANT_MAP: TypographyVariantMap = {
   inline: 'span',
 };
 
-export type TypographyProps = {
+export type TypographyComponentProps = {
   children?: React.ReactNode;
   variant?: keyof typeof TYPOGRAPHY_VARIANT_MAP;
   as?: TypographyAsTags;
 } & Pick<InternalTypographyProps, 'mb' | 'marginBottom'>;
 
 export interface TypographyComponent
-  extends ForwardRefExoticComponent<TypographyProps> {
+  extends ForwardRefExoticComponent<TypographyComponentProps> {
   Heading: typeof Heading;
   Label: typeof Label;
   HelpText: typeof HelpText;
@@ -39,30 +39,27 @@ export interface TypographyComponent
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
 const Typography: TypographyComponent = forwardRef<
   TypographyElement,
-  TypographyProps
->(
-  (
-    { children, variant = 'paragraph', mb, marginBottom, as, ...restProps },
-    ref
-  ): React.ReactElement => {
-    return (
-      <P
-        fontSize={2}
-        fontWeight={0}
-        lineHeight={4}
-        m={0}
-        color="color-text"
-        {...restProps}
-        as={as || TYPOGRAPHY_VARIANT_MAP[variant]}
-        mb={(marginBottom || mb) ?? 4}
-        ref={ref}>
-        {children}
-      </P>
-    );
-  }
-);
+  TypographyComponentProps
+>(function Typography(
+  { children, variant = 'paragraph', mb, marginBottom, as, ...restProps },
+  ref
+): React.ReactElement {
+  return (
+    <P
+      fontSize={2}
+      fontWeight={0}
+      lineHeight={4}
+      m={0}
+      color="color-text"
+      {...restProps}
+      as={as || TYPOGRAPHY_VARIANT_MAP[variant]}
+      mb={(marginBottom || mb) ?? 4}
+      ref={ref}>
+      {children}
+    </P>
+  );
+});
 
-Typography.displayName = 'Typography';
 Typography.Heading = Heading;
 Typography.Label = Label;
 Typography.HelpText = HelpText;
