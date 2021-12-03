@@ -102,9 +102,9 @@ const getAdditionalScripts = () => {
     (name) => `yarn workspace ${name} dev`
   );
   /** get any additional scripts to run */
-  const additionalScripts = getAdditionalScripts();
+  const withScripts = getAdditionalScripts();
   /** concat workspace scripts and additional scripts */
-  const allScripts = workspaceDevScripts.concat(additionalScripts);
+  const allScripts = workspaceDevScripts.concat(withScripts);
 
   logger.info('--------- WORKSPACE DEV MODE ---------');
   logger.gray(allScripts.join('\n'));

@@ -3140,6 +3140,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/toolbar@workspace:packages/components/toolbar":
+  version: 0.0.0-use.local
+  resolution: "@real-system/toolbar@workspace:packages/components/toolbar"
+  dependencies:
+    "@real-system/box": ^0.0.1
+    "@real-system/styling": ^0.0.0
+    "@real-system/theme": ^0.0.0
+    concurrently: ^6.4.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.2
+  peerDependencies:
+    "@real-system/box": ^0.0.1
+    "@real-system/styling": ^0.0.0
+    "@real-system/theme": ^0.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/typography@^0.0.1, @real-system/typography@workspace:packages/components/typography":
   version: 0.0.0-use.local
   resolution: "@real-system/typography@workspace:packages/components/typography"

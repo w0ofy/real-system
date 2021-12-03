@@ -2,7 +2,7 @@ const { getWorkspacesInfo, logger } = require('./utils');
 const inquirer = require('inquirer');
 const { command } = require('execa');
 
-(async function runWorkspaceDev() {
+(async function runBuildPackage() {
   /** get list of packages to watch/run dev */
   const { pkgNames } = await getWorkspacesInfo();
 
