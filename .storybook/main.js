@@ -1,5 +1,4 @@
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
-const { resolve } = require('path');
 
 module.exports = {
   stories: ['../packages/**/*.stories.@(mdx|tsx)'],
@@ -54,10 +53,12 @@ module.exports = {
     config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@emotion/core': resolve('packages/libraries/styling'),
-      '@emotion/styled': resolve('packages/libraries/styling'),
-      'emotion-theming': resolve('packages/libraries/theme'),
+      '@emotion/core': '@emotion/react',
+      '@emotion/styled': '@emotion/styled',
+      'emotion-theming': '@emotion/react',
     };
+
+    console.table(config.resolve.alias);
 
     return config;
   },
