@@ -4905,16 +4905,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hoist-non-react-statics@npm:*":
-  version: 3.3.1
-  resolution: "@types/hoist-non-react-statics@npm:3.3.1"
-  dependencies:
-    "@types/react": "*"
-    hoist-non-react-statics: ^3.3.0
-  checksum: 2c0778570d9a01d05afabc781b32163f28409bb98f7245c38d5eaf082416fdb73034003f5825eb5e21313044e8d2d9e1f3fe2831e345d3d1b1d20bcd12270719
-  languageName: node
-  linkType: hard
-
 "@types/html-minifier-terser@npm:^5.0.0":
   version: 5.1.2
   resolution: "@types/html-minifier-terser@npm:5.1.2"
@@ -5250,17 +5240,6 @@ __metadata:
   version: 2.0.1
   resolution: "@types/stack-utils@npm:2.0.1"
   checksum: 205fdbe3326b7046d7eaf5e494d8084f2659086a266f3f9cf00bccc549c8e36e407f88168ad4383c8b07099957ad669f75f2532ed4bc70be2b037330f7bae019
-  languageName: node
-  linkType: hard
-
-"@types/styled-components@npm:^5.1.15":
-  version: 5.1.16
-  resolution: "@types/styled-components@npm:5.1.16"
-  dependencies:
-    "@types/hoist-non-react-statics": "*"
-    "@types/react": "*"
-    csstype: ^3.0.2
-  checksum: 573a55f4bd2f054e7b0239eae1b9ab3e541bb7c607f23c01bd5035639c1fbe84431a616fc53513416427005e85a7b0fe360391ea51bf11c0ac09b543d825865d
   languageName: node
   linkType: hard
 
@@ -18532,7 +18511,6 @@ __metadata:
     "@types/react": ^17.0.34
     "@types/react-dom": ^17.0.11
     "@types/react-test-renderer": ^17.0.1
-    "@types/styled-components": ^5.1.15
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/core": ^3.2.0-rc.5
@@ -18580,7 +18558,6 @@ __metadata:
     rollup-plugin-peer-deps-external: ^2.2.4
     storybook-addon-performance: ^0.16.1
     storybook-addon-playroom: ^2.1.4
-    styled-components: ^5.3.3
     terser: ^5.9.0
     ts-jest: ^27.0.7
     type-fest: ^2.5.3
@@ -20611,7 +20588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^5.1.1, styled-components@npm:^5.2.1, styled-components@npm:^5.3.3":
+"styled-components@npm:^5.1.1, styled-components@npm:^5.2.1":
   version: 5.3.3
   resolution: "styled-components@npm:5.3.3"
   dependencies:

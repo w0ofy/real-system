@@ -110,7 +110,8 @@ $ git push origin <branch_name>
 Real System uses the following projects which compose the majority of component patterns.
 
 - [styled system](https://styled-system.com/)
-- [styled components](https://styled-components.com/)
+- [@emotion/react](https://emotion.sh/docs/@emotion/react)
+- [@emotion/styled](https://emotion.sh/docs/@emotion/styled)
 
 ## Development and Tools
 
