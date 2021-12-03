@@ -1,12 +1,10 @@
 import React, { forwardRef } from 'react';
 
 import { BoxStyleProps } from '@real-system/box';
-import { fns } from '@real-system/utils';
+import { merge } from '@real-system/utils';
 
 import { baseStyles, BoxAsButton } from './styles';
 import { InternalButtonProps } from './types';
-
-const { merge } = fns;
 
 const defaultStyles: BoxStyleProps = merge(baseStyles.default, {
   color: 'color-text-info-weak-1',

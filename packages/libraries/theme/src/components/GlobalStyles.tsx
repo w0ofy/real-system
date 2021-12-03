@@ -2,11 +2,7 @@ import React from 'react';
 
 import { css, StylingGlobals } from '@real-system/styling';
 
-import { normalize } from './normalize';
-
-const normalizeStyles = css`
-  ${normalize}
-`;
+import { normalizeStyles } from '../normalize';
 
 const realSystemStyles = css({
   html: {

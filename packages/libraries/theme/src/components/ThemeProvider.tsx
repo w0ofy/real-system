@@ -8,9 +8,9 @@ import {
   primitiveWithTheme as withTheme,
 } from '@real-system/styling';
 
+import { themes, ThemeShape } from '../themes';
+
 import { GlobalStyles } from './GlobalStyles';
-import { themes } from './themes';
-import { ThemeShape } from './themes';
 
 export type ThemeProviderProps = {
   theme?: ThemeShape;

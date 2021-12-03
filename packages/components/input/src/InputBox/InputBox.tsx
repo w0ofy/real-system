@@ -1,11 +1,9 @@
 import React from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box';
-import { fns } from '@real-system/utils';
+import { merge } from '@real-system/utils';
 
 import { Addon } from './Addon';
-
-const { merge } = fns;
 
 export type InputBoxTypes =
   | 'text'

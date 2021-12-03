@@ -1,6 +1,6 @@
-import { fns } from '@real-system/utils';
+import { _get } from '@real-system/utils';
 
-import { ThemeShape } from './themes';
+import { ThemeShape } from '../themes/tokenizePalette';
 import {
   backgroundColors,
   borderColors,
@@ -18,7 +18,7 @@ import {
   space,
   textColors,
   zIndices,
-} from './tokens';
+} from '../tokens';
 
 export type OrdinalTokens =
   | 0
@@ -92,7 +92,7 @@ const getToken = (
   fallback: GetTokenReturnValue = undefined
 ) => {
   return function <T = GetTokenReturnValue>(props): T {
-    return fns.get(props.theme, `${scale}.${token}`, fallback);
+    return _get(props.theme, `${scale}.${token}`, fallback);
   };
 };
 

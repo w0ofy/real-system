@@ -21,8 +21,9 @@
   "keywords": [
     "real-system",
     "typography",
-    "text",
-    "heading"
+    "heading",
+    "label",
+    "helptext"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -33,6 +34,7 @@
   "peerDependencies": {
     "@real-system/box": "^0.0.1",
     "@real-system/styling": "^0.0.0",
+    "@real-system/text": "0.0.0",
     "@real-system/utils": "^0.0.0",
     "@real-system/visually-hidden": "^0.0.0",
     "react": "^17.0.2",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@real-system/box": "^0.0.1",
     "@real-system/styling": "^0.0.0",
+    "@real-system/text": "0.0.0",
     "@real-system/utils": "^0.0.0",
     "@real-system/visually-hidden": "^0.0.0",
     "concurrently": "^6.4.0",

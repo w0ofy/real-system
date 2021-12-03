@@ -2,13 +2,11 @@ import React from 'react';
 
 import type { StyledComponent } from '@real-system/styling';
 import styled from '@real-system/styling';
-import { fns } from '@real-system/utils';
+import { makeTestId } from '@real-system/utils';
 
 import { getPseudoStyles } from './styleFunctions';
 import { composeBoxStyleProps } from './styleProps';
 import type { BoxProps } from './types';
-
-console.log(styled);
 
 /**
  * `Box` primitive component. Used to create all block-level styles and elements in Real System.
@@ -37,13 +35,13 @@ const Box = React.forwardRef<HTMLElement, BoxProps>(function Box(
   );
 });
 
-Box.defaultProps = { 'data-testid': fns.makeTestId('box') };
+Box.defaultProps = { 'data-testid': makeTestId('box') };
 
 type ElTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
 function BoxAs<T>(elTag: ElTag) {
   return function BoxAsComponent(props: BoxProps & T): React.ReactElement {
-    return <Box as={elTag} data-testid={fns.makeTestId('box-as')} {...props} />;
+    return <Box as={elTag} data-testid={makeTestId('box-as')} {...props} />;
   };
 }
 

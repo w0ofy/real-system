@@ -1,28 +1,8 @@
-import { uid, useUID, useUIDSeed } from 'react-uid';
-
-import { capitalize } from './captialize';
-import { get, getOneOf } from './get';
-import { merge } from './merge';
-import { makeTestId } from './testId';
-
-const fns = {
-  capitalize,
-  get,
-  getOneOf,
-  makeTestId,
-  merge,
-  uid,
-};
-
-const hooks = {
-  useUID,
-  useUIDSeed,
-};
-
-/** fn utils */
-export { fns, hooks };
-
+/** helpers */
+export * from './helpers';
+/** private helpers (each helper is prefixed with '_' to represent they are private) */
+export * from './private';
+/** hooks */
+export * from './hooks';
 /** type utils */
-export * from './kebabCase';
-export * from './typeUtils';
-export type { Get, KebabCase, KebabCasedProperties } from 'type-fest';
+export * from './typeHelpers';

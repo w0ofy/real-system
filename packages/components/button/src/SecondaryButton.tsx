@@ -1,14 +1,12 @@
 import React, { forwardRef } from 'react';
 
 import { BoxProps, BoxStyleProps } from '@real-system/box';
-import { fns } from '@real-system/utils';
+import { merge } from '@real-system/utils';
 
 import { baseStyles, BoxAsButton } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
-
-const { merge } = fns;
 
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {

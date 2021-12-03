@@ -1,4 +1,5 @@
 const rollup = require('rollup');
+const { logger } = require('../utils');
 const { plugins } = require('./plugins');
 
 const globals = {
@@ -16,7 +17,8 @@ async function build(packageJson) {
     input: packageEntryPoint,
     plugins,
   });
-
+  logger.info('-------------------------');
+  logger.job(packageName);
   await bundle.write({
     name: packageName,
     format: 'es',
@@ -30,6 +32,7 @@ async function build(packageJson) {
     globals,
     file: cjsOuputFile,
   });
+  logger.info('-------------------------\n');
 
   // closes the bundle
   await bundle.close();

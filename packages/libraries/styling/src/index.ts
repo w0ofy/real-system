@@ -7,7 +7,7 @@ export type {
   GlobalProps as StylingGlobalsProps,
 } from '@emotion/react';
 export {
-  css as cssTemplateString,
+  css as emotionCSS,
   keyframes,
   ThemeContext as PrimitiveThemeContext,
   ThemeProvider as PrimitiveThemeProvider,

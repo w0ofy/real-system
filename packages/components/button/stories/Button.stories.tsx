@@ -5,9 +5,7 @@ import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
 import { Icon, ICON_NAMES } from '@real-system/icon';
 import { Heading } from '@real-system/typography';
-import { fns } from '@real-system/utils';
-
-const { capitalize } = fns;
+import { capitalize } from '@real-system/utils';
 
 export default {
   title: 'Components/Button',

@@ -1,5 +1,5 @@
 import { BoxAs, BoxStyleProps } from '@real-system/box';
-import { fns } from '@real-system/utils';
+import { merge } from '@real-system/utils';
 
 import {
   ButtonSizes,
@@ -7,8 +7,6 @@ import {
   ButtonVariants,
   InternalButtonProps,
 } from './types';
-
-const { merge } = fns;
 
 const resetStyles: BoxStyleProps = {
   appearance: 'none',

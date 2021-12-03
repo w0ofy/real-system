@@ -1,5 +1,4 @@
-import { makeTokenScale } from './utils/makeTokenScale';
-import { Palette, palettes } from './palettes';
+import { Palette, palettes } from '../palettes';
 import {
   backgroundColors,
   borderColors,
@@ -17,7 +16,8 @@ import {
   space,
   textColors,
   zIndices,
-} from './tokens';
+} from '../tokens';
+import { makeTokenScale } from '../utils/makeTokenScale';
 
 /**
  *
@@ -50,10 +50,5 @@ const tokenizePalette = (palette: Palette = palettes.default) => ({
 
 type ThemeShape = ReturnType<typeof tokenizePalette>;
 
-const themes = {
-  // default theme
-  realsystem: tokenizePalette(),
-};
-
 export type { ThemeShape };
-export { themes, tokenizePalette };
+export { tokenizePalette };
