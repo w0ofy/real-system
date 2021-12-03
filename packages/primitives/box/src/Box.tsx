@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import type { StyledComponent } from '@real-system/styling';
 import styled from '@real-system/styling';
@@ -24,12 +24,12 @@ const StyledBox = styled.div<BoxProps>(
   Record<string, unknown>
 >;
 
-const Box = React.forwardRef<HTMLElement, BoxProps>(function Box(
-  { children, element = 'BOX', ...props },
+const Box = forwardRef<HTMLElement, BoxProps>(function Box(
+  { children, ...props },
   ref
 ) {
   return (
-    <StyledBox data-paste-element={element} ref={ref} {...props}>
+    <StyledBox ref={ref} {...props}>
       {children}
     </StyledBox>
   );
@@ -39,10 +39,15 @@ Box.defaultProps = { 'data-testid': makeTestId('box') };
 
 type ElTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
-function BoxAs<T>(elTag: ElTag) {
-  return function BoxAsComponent(props: BoxProps & T): React.ReactElement {
-    return <Box as={elTag} data-testid={makeTestId('box-as')} {...props} />;
-  };
+function BoxAs<T = Record<string | number, any>>(elTag: ElTag) {
+  return forwardRef<HTMLElement, BoxProps & T>(function BoxAsComponent(
+    props,
+    ref
+  ): React.ReactElement {
+    return (
+      <Box as={elTag} data-testid={makeTestId('box-as')} ref={ref} {...props} />
+    );
+  });
 }
 
 export { Box, BoxAs };

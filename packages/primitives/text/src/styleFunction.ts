@@ -6,7 +6,7 @@ import type { TextProps } from './types';
 /**
  * Take _ prefixed style props and convert them to custom style props for CSS pseudo selectors
  *
- * @param {BoxProps} props any prop that Box can take
+ * @param {TextProps} props any prop that Text can take
  * @return {*}  {(((props?: Record<string, unknown> | undefined) => CSSObject) | Record<string, never>)}
  */
 const getPseudoStyles = (
