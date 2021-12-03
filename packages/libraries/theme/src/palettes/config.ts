@@ -17,7 +17,7 @@ export type DefaultPaletteColors =
 
 export type PaletteConfig = {
   default: Palette<DefaultPaletteColors>;
-};
+} & Record<string, Palette<DefaultPaletteColors>>;
 
 const palettes: PaletteConfig = {
   default: {
