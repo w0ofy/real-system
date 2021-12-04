@@ -1,9 +1,20 @@
 # @real-system/input
 
-## 0.0.1
+## 0.0.2
+
 ### Patch Changes
 
+- [#105](https://github.com/bigwoof91/real-system/pull/105) [`45d899d`](https://github.com/bigwoof91/real-system/commit/45d899def783f90b1e819dc667ccee4e2651031c) Thanks [@bigwoof91](https://github.com/bigwoof91)! - moving libraries out of core's index exports
 
+- Updated dependencies [[`45d899d`](https://github.com/bigwoof91/real-system/commit/45d899def783f90b1e819dc667ccee4e2651031c)]:
+  - @real-system/typography@0.0.3
+  - @real-system/visually-hidden@0.0.2
+  - @real-system/styling@0.0.2
+  - @real-system/box@0.0.3
+
+## 0.0.1
+
+### Patch Changes
 
 - [#104](https://github.com/bigwoof91/real-system/pull/104) [`984bb10`](https://github.com/bigwoof91/real-system/commit/984bb101dba65ba00568f1bae218b58fb6e0cfe0) Thanks [@bigwoof91](https://github.com/bigwoof91)! - using emotion and refactored all components to use new style props + typography uses text primitive
 

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/visually-hidden",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "screen-reader-only component for real system",
   "status": "production",
   "main": "lib/index.js",
@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box": "0.0.2",
-    "@real-system/styling": "0.0.1",
+    "@real-system/box": "0.0.3",
+    "@real-system/styling": "0.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -41,8 +41,8 @@
     "csstype": "^3.0.9"
   },
   "devDependencies": {
-    "@real-system/box": "0.0.2",
-    "@real-system/styling": "0.0.1",
+    "@real-system/box": "0.0.3",
+    "@real-system/styling": "0.0.2",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
