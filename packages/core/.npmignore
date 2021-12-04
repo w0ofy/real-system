@@ -1,5 +1,6 @@
 tools
 src
+stories
 tsconfig.json
 babel.config.js
 __tests__
