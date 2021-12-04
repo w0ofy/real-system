@@ -17,14 +17,17 @@ const StyledBox = styled.div<BoxProps>(
   getPseudoStyles
 ) as StyledComponent<
   Omit<
-    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLOrSVGElement>,
+      HTMLOrSVGElement
+    >,
     'color'
   >,
   BoxProps,
   Record<string, unknown>
 >;
 
-const Box = forwardRef<HTMLElement, BoxProps>(function Box(
+const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(
   { children, ...props },
   ref
 ) {
@@ -40,7 +43,7 @@ Box.defaultProps = { 'data-testid': makeTestId('box') };
 type ElTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
 
 function BoxAs<T = Record<string | number, any>>(elTag: ElTag) {
-  return forwardRef<HTMLElement, BoxProps & T>(function BoxAsComponent(
+  return forwardRef<HTMLOrSVGElement, BoxProps & T>(function BoxAsComponent(
     props,
     ref
   ): React.ReactElement {
