@@ -2,7 +2,7 @@
   "name": "@real-system/__pkg__(kebabCase)",
   "version": "0.0.0",
   "description": "__description__(sentenceCase).",
-  "status": "development",
+  "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
