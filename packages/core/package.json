@@ -11,10 +11,10 @@
   "sideEffects": false,
   "scripts": {
     "prebuild": "yarn clean && yarn update-dependencies && yarn generate-bundle",
-    "build": "yarn compile && yarn build:types",
+    "build": "yarn clean && yarn update-dependencies && yarn generate-bundle && yarn compile && yarn build:types",
     "build:types": "./tools/build-types.sh",
     "clean": "./tools/clean-packages.sh",
-    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && node ./tools/minify",
+    "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && yarn minify-bundle",
     "compile:dev": "babel ./src/*.ts --out-dir ./lib --extensions '.ts'",
     "update-dependencies": "node ./tools/updateDependencies.js",
     "generate-bundle": "node ./tools/generate.js",
@@ -27,14 +27,17 @@
     "@real-system/styling": "^0.0.0",
     "@real-system/theme": "^0.0.0",
     "@real-system/typography": "^0.0.1",
-    "@real-system/utils": "^0.0.0"
+    "@real-system/utils": "^0.0.0",
+    "@real-system/visually-hidden": "^0.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.2"
   }
 }

@@ -1,0 +1,48 @@
+{
+  "name": "@real-system/utils",
+  "version": "0.0.0",
+  "description": "utilities for real system",
+  "status": "production",
+  "main": "lib/index.js",
+  "main:dev": "src/index.ts",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
+    "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
+    "types:watch": "tsc --watch",
+    "types": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigwoof91/real-system.git"
+  },
+  "keywords": [
+    "real-system",
+    "utils",
+    "utilities"
+  ],
+  "author": "Mike Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigwoof91/real-system/issues"
+  },
+  "homepage": "https://github.com/bigwoof91/real-system#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "lodash.get": "^4.4.2",
+    "react-uid": "^2.3.1",
+    "type-fest": "^2.5.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.2"
+  }
+}

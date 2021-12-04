@@ -5,3 +5,4 @@ export * from '@real-system/styling';
 export * from '@real-system/theme';
 export * from '@real-system/typography';
 export * from '@real-system/utils';
+export * from '@real-system/visually-hidden';

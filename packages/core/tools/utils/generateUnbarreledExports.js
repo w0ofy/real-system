@@ -6,11 +6,13 @@ const {
 const { getUnbarreledFileFullPath } = require('./subPackageUtils');
 
 const generateUnbarreledExports = async () => {
-  const { pkgNames, purePkgNames } = await getWorkspacesInfo();
+  const { pkgNames, purePkgNames } = await getWorkspacesInfo({
+    hasProdStatus: true,
+  });
 
-  logger.gray('Generating unbarreled exports');
-  return pkgNames.forEach((pkg, i) => {
-    writeToFile(
+  logger.gray('\nGenerating unbarreled exports');
+  return pkgNames.forEach(async (pkg, i) => {
+    await writeToFile(
       getUnbarreledFileFullPath(purePkgNames[i]),
       `export * from '${pkg}';\n`,
       {

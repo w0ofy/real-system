@@ -1,5 +1,7 @@
-<h1 align="center">Real System</h1>
-<p align="center">An easily themeable, extendable "Real" component "System" for responsive web applications.</p>
+<p align="center">
+<img src="assets/animated-logo.gif" width="350px"  />
+</p>
+<p align="center">A react component system that is easily themeable and extendable.</p>
 <p align="center">
 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=@realsystem/core&color=blue" alt="npm version" height="18"/></a>
@@ -14,6 +16,20 @@
 
 - This supports a superior DX. Imagine an engineering team simply wants to use the Real System `Box`; we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
 
+| Packages   |                                                                     |
+| :--------- | :------------------------------------------------------------------ |
+| core       | [@real-system/core](packages/core)                                  |
+| components | [@real-system/button](packages/components/button)                   |
+|            | [@real-system/icon](packages/components/icon)                       |
+|            | [@real-system/input](packages/components/input)                     |
+|            | [@real-system/spinner](packages/components/spinner)                 |
+|            | [@real-system/typography](packages/components/typography)           |
+|            | [@real-system/visually-hidden](packages/components/visually-hidden) |
+| libraries  | [@real-system/styling](packages/libraries/styling)                  |
+|            | [@real-system/theme](packages/libraries/theme)                      |
+|            | [@real-system/utils](packages/libraries/utils)                      |
+| primitives | [@real-system/box](packages/primitives/box)                         |
+|            | [@real-system/text](packages/primitives/text)                       |
 
 <hr />
 
@@ -49,13 +65,14 @@ import { ThemeProvider } from '@real-system/core/theme';
 import { Box } from '@real-system/core/box';
 import { Button } from '@real-system/core/button';
 
-
 const MyComponent = () => {
   return (
     <ThemeProvider>
       <Box display="flex" flexDirection="column">
         <Button mb={8}>Primary Button</Button>
-        <Button mb={8} variant="secondary">Secondary Button</Button>
+        <Button mb={8} variant="secondary">
+          Secondary Button
+        </Button>
         <Button variant="ghost">Ghost Button</Button>
       </Box>
     </ThemeProvider>
@@ -68,13 +85,13 @@ const MyComponent = () => {
 Some notes before you begin.
 
 - [Github Issues/Projects](https://github.com/bigwoof91/real-system/issues) are used to track work to be completed.
-- [Yarn Workspaces](https://yarnpkg.com/features/workspaces) is used to manage the monorepo
-- Commit messages are linted and uses [commitlint](https://commitlint.js.org/#/) with [commitizen](https://commitizen-tools.github.io/commitizen/) to assist with this effort.
+- [Yarn Workspaces](https://yarnpkg.com/features/workspaces) is used to manage the monorepo.
+- Commit messages are linted with [commitlint](https://commitlint.js.org/#/) + [commitizen](https://commitizen-tools.github.io/commitizen/).
 
 ## Setup
 
 ```bash
-# bootstrap project dependencies
+# bootstrap project dependencies and husky
 $ yarn bootstrap
 
 # develop components locally with storybook
@@ -103,10 +120,13 @@ $ git push origin <branch_name>
 
 # Tools, Dependencies, Resources
 
-## Primitives (under the hood)
+## Under the hood
+
+Real System uses the following projects which compose the majority of component patterns.
 
 - [styled system](https://styled-system.com/)
-- [styled components](https://styled-components.com/)
+- [@emotion/react](https://emotion.sh/docs/@emotion/react)
+- [@emotion/styled](https://emotion.sh/docs/@emotion/styled)
 
 ## Development and Tools
 
@@ -115,5 +135,4 @@ $ git push origin <branch_name>
 - [rollupjs](https://rollupjs.org/guide/en/)
 - [babel](https://babeljs.io/)
 - [storybook](https://storybook.js.org/)
-- (coming soon) [playroom](https://github.com/seek-oss/playroom)
-- (coming soon) [docusaurus](https://docusaurus.io/)
+- [playroom](https://github.com/seek-oss/playroom)

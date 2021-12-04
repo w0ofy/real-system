@@ -6,8 +6,7 @@ on:
       - next
 
 jobs:
-  # todo: add publish job
-  version-next-packages:
+  version-next:
     name: Version Next Packages
     runs-on: ubuntu-latest
     steps:
@@ -15,13 +14,35 @@ jobs:
         id: env_setup
         uses: bigwoof91/real-system/.github/actions/setup-env@main
 
-      - name: Publish packages and create pull request
+      - name: Version next packages and create pull request
         uses: changesets/action@master
+        if: "!contains(github.event.head_commit.message, 'chore(release:next): version packages')"
         with:
           version: yarn version:next
-          commit: "chore(version): prerelease packages"
-          title: "chore(version): prerelease packages"
+          commit: "chore(release:next): version packages"
+          title: "chore(release:next): version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+  publish-next:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, 'chore(release:next): version packages')"
+    steps:
+      - name: Setup environment
+        id: env_setup
+        uses: bigwoof91/real-system/.github/actions/setup-env@main
+
+      - name: Yarn install
+        if: steps.env_setup.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+        
+      - name: Test and Publish Packages
+        uses: changesets/action@master
+        with:
+          publish: yarn release:next
+          commit: "chore(release:next): publish packages"
+          title: "chore(release:next): publish packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false

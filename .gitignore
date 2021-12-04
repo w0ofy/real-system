@@ -104,8 +104,17 @@ dist
 
 # real-system
 **/lib
-.storybook/build
+storybook
 .jest/coverage
 !.jest/.cache
 .jest/.cache/packages.json
 !.jest/.cache/README.md
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

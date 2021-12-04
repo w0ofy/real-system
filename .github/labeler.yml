@@ -11,36 +11,29 @@
   - .storybook/**/*
   - .vscode/**/*
   - tools/**/*
+  - package.json
 
+# components
+'area: components':
+  - packages/components/**/*
+
+# core bundle
 'area: core':
   - packages/core/**/*
 
-'area: box':
-  - packages/box/**/*
-
-'area: button':
-  - packages/button/**/*
-
-'area: icon':
-  - packages/icon/core-bundle/**/*
-
+# libraries
 'area: libraries':
   - packages/libraries/**/*
 
-'area: styling':
-  - packages/libraries/styling/**/*
+# primitives
+'area: primitives':
+  - packages/primitives/**/*
 
-'area: theme':
-  - packages/theme/**/*
-
-'area: typography':
-  - packages/typography/**/*
-
-'area: utils':
-  - packages/utils/**/*
-
+# docs
 'type: storybook':
   - packages/**/stories/**/*
+  - .storybook/**/*
 
+# tests
 'type: test':
   - '**/__tests__/**/*'

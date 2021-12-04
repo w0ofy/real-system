@@ -1,4 +1,4 @@
-const { logger } = require('./logger');
+const { logger, makeNewLine } = require('./logger');
 const {
   ENV,
   isProduction,
@@ -8,19 +8,24 @@ const {
 } = require('./env');
 const { getExternalDeps } = require('./getExternalDeps');
 const { writeToFile } = require('./writeToFile');
-const { makeEsbuildConfig } = require('./makeEsbuildConfig');
-const { getWorkspacesInfo } = require('./workspaceUtils');
+const {
+  getWorkspacesInfo,
+  getFullPkgName,
+  getPurePkgName,
+} = require('./workspaceUtils');
 const { updatePackageCache } = require('./updatePackageCache');
 
 module.exports = {
   writeToFile,
   logger,
+  makeNewLine,
   ENV,
   isProduction,
   getExternalDeps,
-  makeEsbuildConfig,
   BUNDLE_OUTPUT_DIR,
   getWorkspacesInfo,
+  getFullPkgName,
+  getPurePkgName,
   updatePackageCache,
   CORE_PATH,
   ROOT_PATH,

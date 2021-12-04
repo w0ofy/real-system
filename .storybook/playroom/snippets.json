@@ -2,7 +2,7 @@
   {
     "group": "Box",
     "name": "Default",
-    "code": "<Box> </Box>"
+    "code": "<Box></Box>"
   },
   {
     "group": "Button",
@@ -43,6 +43,11 @@
     "group": "Icon",
     "name": "Default",
     "code": "<Icon icon=\"download\" />"
+  },
+  {
+    "group": "Input",
+    "name": "Default",
+    "code": "<Input />"
   },
   {
     "group": "Typography",

@@ -2,6 +2,14 @@
 const { blue, yellow, green, red, gray, magenta } = require('chalk');
 
 /**
+ *
+ * @param {boolean} condition
+ * @returns {boolean}
+ */
+const makeNewLine = (condition = false) => (condition ? '\n' : '');
+makeNewLine.ifLast = (list = [], index = list.length - 1) =>
+  index + 1 === list.length ? makeNewLine(true) : makeNewLine(false);
+/**
  * @const logger a light wrapper around console.log with chalk
  * @method error
  * @method warn
@@ -31,4 +39,5 @@ logger.table = (...args) => console.table(gray(...args));
 
 module.exports = {
   logger,
+  makeNewLine,
 };

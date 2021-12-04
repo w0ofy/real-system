@@ -2,7 +2,7 @@ name: PR Checks
 
 on:
   pull_request:
-    types: [opened, labeled, unlabeled, synchronize, ready_for_review]
+    types: [opened, labeled, unlabeled, synchronize, ready_for_review, reopened]
 
 jobs:
   pr-categorizer:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v3
-        if: ${{ github.event.action != 'labeled' && github.event.action != 'unlabeled' }}
+        if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           configuration-path: .github/opened-pr-labeler.yml
@@ -22,6 +22,7 @@ jobs:
   require-pr-label:
     name: Require PR Label
     runs-on: ubuntu-latest
+    needs: pr-categorizer
     steps:
       - uses: mheap/github-action-required-labels@v1
         with:

@@ -1,0 +1,72 @@
+import { Meta } from '@storybook/addon-docs';
+
+import { makeMdxParameters } from '/.storybook/utils';
+
+<Meta
+  title="Real System/Theming/Token System"
+  parameters={makeMdxParameters()}
+/>
+
+# Tokens
+
+> **Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.<br/> _— Salesforce UX, Lightning Design System_**
+
+## Usage
+
+<br />
+
+### Style Props
+
+Any `token` can be used with its associated `scale` by using a style prop. Style props are component props which names correlate to CSS properties.
+Some style props can be used with shorthand syntax and all props follow longhand syntax.
+
+```jsx
+// style prop usage
+<Box p={5} m={2} backgroundColor="color-background"></Box>
+```
+
+### Getter
+
+If you want to use a `token` outside of style props, you can use the `getToken` style function to make this easy.
+The [getToken](#gettoken) style function was built so tokens can be grabbed from components without requiring the use of style props.
+
+```jsx
+import { getToken, useTheme } from '@real-system/theme';
+
+const StyledBox = styled(Box)`
+  margin: ${getToken(2, 'space')};
+  background-color: ${getToken('color-background')};
+`;
+
+// or
+const MyComponent = () => {
+  const theme = useTheme();
+  const bg = getToken('color-background')({ theme });
+  const space = getToken(5, 'space')({ theme });
+  const styles = {
+    backgroundColor: bg,
+    margin: space,
+  };
+  return <div styles={styles}>...</div>;
+};
+```
+
+#### `getToken` signature
+
+`getToken` uses lodash's `get` and exposes type-checked `token`, `scale` and `fallback` arguments.
+
+```typescript
+type ReturnType = string | number | undefined;
+/**
+ * A styleFn to get theme tokens
+ */
+const getToken = (
+  token: ThemeTokens,
+  scale: ThemeScales = 'colors',
+  fallback: ReturnType = undefined
+) => {
+  return function <T = ReturnType>(props: { theme: DefaultTheme }): T {
+    return get(props.theme, `${scale}.${token}`, fallback);
+  };
+};
+```
