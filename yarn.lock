@@ -3004,6 +3004,7 @@ __metadata:
   resolution: "@real-system/core@workspace:packages/core"
   dependencies:
     "@babel/cli": ^7.16.0
+    "@babel/core": ^7.16.0
     "@real-system/box": ^0.0.3
     "@real-system/button": ^0.0.4
     "@real-system/icon": ^0.0.3
