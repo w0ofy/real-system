@@ -6,28 +6,8 @@ on:
       - next
 
 jobs:
-  version-next:
-    name: Version Next Packages
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'chore(release:next): version packages')"
-    steps:
-      - name: Setup environment
-        id: env_setup
-        uses: bigwoof91/real-system/.github/actions/setup-env@main
-
-      - name: Version next packages and create pull request
-        uses: changesets/action@master
-        with:
-          version: yarn version:next
-          commit: "chore(release:next): version packages"
-          title: "chore(release:next): version packages"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
-
   publish-next:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'chore(release:next): version packages')"
     steps:
       - name: Setup environment
         id: env_setup
@@ -37,9 +17,10 @@ jobs:
         if: steps.env_setup.outputs.cache-hit != 'true'
         run: yarn install --immutable
         
-      - name: Test and Publish Packages
+      - name: Create PR or Publish Release Candidate
         uses: changesets/action@master
         with:
+          version: yarn version:next
           publish: yarn release:next
           commit: "chore(release:next): publish packages"
           title: "chore(release:next): publish packages"
