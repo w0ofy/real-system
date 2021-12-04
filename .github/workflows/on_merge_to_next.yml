@@ -1,4 +1,4 @@
-name: Publish Next Packages
+name: Merge to next
 
 on:
   push:
