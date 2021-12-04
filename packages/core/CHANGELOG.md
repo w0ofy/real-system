@@ -1,5 +1,11 @@
 # @real-system/core
 
+## 0.0.5
+
+### Patch Changes
+
+- [#107](https://github.com/bigwoof91/real-system/pull/107) [`21cd2c9`](https://github.com/bigwoof91/real-system/commit/21cd2c9b7d1ca621787c28c3c725e68faafdcc4b) Thanks [@bigwoof91](https://github.com/bigwoof91)! - trying to fix core pkg
+
 ## 0.0.4
 
 ### Patch Changes

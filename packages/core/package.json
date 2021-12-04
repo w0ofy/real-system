@@ -1,6 +1,6 @@
 {
   "name": "@real-system/core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
