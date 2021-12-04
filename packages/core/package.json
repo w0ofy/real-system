@@ -1,6 +1,6 @@
 {
   "name": "@real-system/core",
-  "version": "0.0.2",
+  "version": "0.0.3-rc.0",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -21,14 +21,14 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
-    "@real-system/box": "^0.0.1",
-    "@real-system/button": "^0.0.2",
-    "@real-system/icon": "^0.0.1",
-    "@real-system/styling": "^0.0.0",
-    "@real-system/theme": "^0.0.0",
-    "@real-system/typography": "^0.0.1",
-    "@real-system/utils": "^0.0.0",
-    "@real-system/visually-hidden": "^0.0.0"
+    "@real-system/box": "^0.0.2-rc.0",
+    "@real-system/button": "^0.0.3-rc.0",
+    "@real-system/icon": "^0.0.2-rc.0",
+    "@real-system/styling": "^0.0.1-rc.0",
+    "@real-system/theme": "^0.0.1-rc.0",
+    "@real-system/typography": "^0.0.2-rc.0",
+    "@real-system/utils": "^0.0.1-rc.0",
+    "@real-system/visually-hidden": "^0.0.1-rc.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
