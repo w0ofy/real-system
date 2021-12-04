@@ -1,0 +1,26 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "@real-system/button": "0.0.2",
+    "@real-system/icon": "0.0.1",
+    "@real-system/input": "0.0.0",
+    "@real-system/spinner": "0.0.0",
+    "@real-system/typography": "0.0.1",
+    "@real-system/visually-hidden": "0.0.0",
+    "@real-system/core": "0.0.2",
+    "@real-system/styling": "0.0.0",
+    "@real-system/theme": "0.0.0",
+    "@real-system/utils": "0.0.0",
+    "@real-system/box": "0.0.1",
+    "@real-system/text": "0.0.0"
+  },
+  "changesets": [
+    "beige-ants-reply",
+    "great-dolls-fly",
+    "lemon-rabbits-vanish",
+    "metal-feet-lay",
+    "rare-coats-happen",
+    "yellow-lobsters-prove"
+  ]
+}
