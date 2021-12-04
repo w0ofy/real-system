@@ -1,5 +1,16 @@
 # @real-system/icon
 
+## 0.0.3
+
+### Patch Changes
+
+- [#105](https://github.com/bigwoof91/real-system/pull/105) [`45d899d`](https://github.com/bigwoof91/real-system/commit/45d899def783f90b1e819dc667ccee4e2651031c) Thanks [@bigwoof91](https://github.com/bigwoof91)! - moving libraries out of core's index exports
+
+- Updated dependencies [[`45d899d`](https://github.com/bigwoof91/real-system/commit/45d899def783f90b1e819dc667ccee4e2651031c)]:
+  - @real-system/styling@0.0.2
+  - @real-system/theme@0.0.2
+  - @real-system/box@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
