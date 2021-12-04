@@ -9,6 +9,7 @@ jobs:
   version-next:
     name: Version Next Packages
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore(release:next): version packages')"
     steps:
       - name: Setup environment
         id: env_setup
@@ -16,7 +17,6 @@ jobs:
 
       - name: Version next packages and create pull request
         uses: changesets/action@master
-        if: "!contains(github.event.head_commit.message, 'chore(release:next): version packages')"
         with:
           version: yarn version:next
           commit: "chore(release:next): version packages"

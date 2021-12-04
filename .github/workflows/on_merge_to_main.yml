@@ -2,9 +2,6 @@ name: Merge to main
 
 on:
   push:
-    paths:
-      - "packages/**"
-      - ".changeset/*"
     branches:
       - main
 
@@ -12,6 +9,7 @@ jobs:
   version-packages:
     name: Version packages
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore(release): version packages')"
     steps:
       - name: Setup environment
         id: env_setup
@@ -33,7 +31,7 @@ jobs:
 
   publish-packages:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'chore(release)')"
+    if: "contains(github.event.head_commit.message, 'chore(release): version packages')"
     steps:
       - name: Setup environment
         id: env_setup
