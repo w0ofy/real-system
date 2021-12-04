@@ -46,7 +46,7 @@ jobs:
       - name: Test and Publish Packages
         uses: changesets/action@master
         with:
-          publish: yarn release:stable
+          publish: yarn release
           commit: "chore(release): publish packages"
           title: "chore(release): publish packages"
         env:
