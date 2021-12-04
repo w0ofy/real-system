@@ -42,15 +42,12 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
       .filter((name) => {
         const { pkgJson } = getWorkspaceData(data[name]);
         const pkgStatus = PACKAGE_STATUS[pkgJson.status];
-        if (config.hasProdStatus === undefined) {
-          return true;
-        } else if (config.hasProdStatus === false) {
+        if (config.hasProdStatus === false) {
           return !pkgStatus;
         } else if (config.hasProdStatus) {
           return pkgStatus;
-        } else {
-          return true;
         }
+        return true;
       })
       .sort();
 

@@ -10,8 +10,8 @@
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn update-dependencies && yarn generate-bundle && yarn compile && yarn build:types",
-    "build:js": "yarn clean && yarn update-dependencies && yarn generate-packages && yarn compile",
+    "build": "yarn build:js && yarn build:types",
+    "build:js": "yarn clean && yarn update-dependencies && yarn generate-bundle && yarn compile",
     "build:types": "./tools/build-types.sh",
     "clean": "./tools/clean-packages.sh",
     "compile": "babel ./src/*.ts --out-dir ./lib --extensions '.ts' --config-file './babel.config.js' && yarn minify-bundle",
