@@ -9,7 +9,7 @@ jobs:
   version-packages:
     name: Version packages
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'chore(release): version packages')"
+    if: "contains(github.event.head_commit.message, 'chore(release): version packages')"
     steps:
       - name: Setup environment
         id: env_setup
@@ -44,7 +44,7 @@ jobs:
       - name: Test and Publish Packages
         uses: changesets/action@master
         with:
-          publish: yarn release
+          publish: yarn release:stable
           commit: "chore(release): publish packages"
           title: "chore(release): publish packages"
         env:

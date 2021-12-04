@@ -22,7 +22,7 @@ const getWorkspaceData = (data) => ({
   pkgJson: getPkgJsonFromWorkspace(data),
 });
 
-const DEFAULT_CONFIG = { withCore: false, hasProdStatus: false };
+const DEFAULT_CONFIG = { withCore: false, hasProdStatus: undefined };
 
 const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
   let data = await command('yarn workspaces list --json');
@@ -41,10 +41,16 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
       .filter((name) => (config.withCore ? true : !name.includes('core')))
       .filter((name) => {
         const { pkgJson } = getWorkspaceData(data[name]);
-        if (config.hasProdStatus) {
-          return PACKAGE_STATUS[pkgJson.status];
+        const pkgStatus = PACKAGE_STATUS[pkgJson.status];
+        if (config.hasProdStatus === undefined) {
+          return true;
+        } else if (config.hasProdStatus === false) {
+          return !pkgStatus;
+        } else if (config.hasProdStatus) {
+          return pkgStatus;
+        } else {
+          return true;
         }
-        return true;
       })
       .sort();
 

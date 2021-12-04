@@ -3007,7 +3007,10 @@ __metadata:
     "@real-system/box": ^0.0.2
     "@real-system/button": ^0.0.3
     "@real-system/icon": ^0.0.2
+    "@real-system/input": ^0.0.1
+    "@real-system/spinner": ^0.0.1
     "@real-system/styling": ^0.0.1
+    "@real-system/text": ^0.0.1
     "@real-system/theme": ^0.0.1
     "@real-system/typography": ^0.0.2
     "@real-system/utils": ^0.0.1
@@ -3042,7 +3045,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/input@workspace:packages/components/input":
+"@real-system/input@^0.0.1, @real-system/input@workspace:packages/components/input":
   version: 0.0.0-use.local
   resolution: "@real-system/input@workspace:packages/components/input"
   dependencies:
@@ -3064,7 +3067,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/spinner@workspace:packages/components/spinner":
+"@real-system/spinner@^0.0.1, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@real-system/spinner@workspace:packages/components/spinner"
   dependencies:
@@ -3105,7 +3108,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/text@0.0.1, @real-system/text@workspace:packages/primitives/text":
+"@real-system/text@0.0.1, @real-system/text@^0.0.1, @real-system/text@workspace:packages/primitives/text":
   version: 0.0.0-use.local
   resolution: "@real-system/text@workspace:packages/primitives/text"
   dependencies:
