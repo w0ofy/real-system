@@ -25,9 +25,13 @@ $ yarn add @real-system/text
 
 ### Code Example
 
-```javascript
-import { Text } from '@real-system/text';
+```typescript
+import { Text, TextProps, safelySpreadTextProps } from '@real-system/text';
 
-...
+const H1 = (props: TextProps) => (
+  <Text as="h1" fontSize={10} {...safelySpreadTextProps(props)}>
+    The quick brown fox jumped over the lazy dog.
+  </Text>
+);
 
 ```
