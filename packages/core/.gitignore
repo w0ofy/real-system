@@ -3,7 +3,10 @@
 /box
 /button
 /icon
+/input
+/spinner
 /styling
+/text
 /theme
 /typography
 /utils

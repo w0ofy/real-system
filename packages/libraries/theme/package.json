@@ -9,7 +9,8 @@
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
+    "build": "yarn build:js && yarn types",
+    "build:js": "NODE_ENV=production node ./tools/build.js",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
     "types": "tsc"

@@ -6,7 +6,7 @@ async function writeToFile(
   content,
   { successMessage = undefined, errorMessage = undefined, formatJson = false }
 ) {
-  const output = formatJson ? JSON.stringify(content, null, 2) : content;
+  const output = formatJson ? JSON.stringify(content, undefined, 2) : content;
 
   return new Promise((resolve, reject) => {
     writeFile(filePath, output, 'utf8', (error) => {

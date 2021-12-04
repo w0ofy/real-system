@@ -8,7 +8,7 @@ const argv = require('minimist')(process.argv, {
   },
   boolean: ['select'],
 });
-const inquirer = require('inquirer');
+const { prompt } = require('inquirer');
 const concurrently = require('concurrently').concurrently;
 const { getFullPkgName } = require('./utils');
 
@@ -25,18 +25,16 @@ const getPackagesToWatch = async () => {
   let packagesToWatch = [...pkgNames];
 
   if (argv['select'] === true) {
-    return await inquirer
-      .prompt([
-        {
-          type: 'checkbox',
-          name: 'packagesToWatch',
-          message: 'Select packages to run in dev mode.',
-          choices: pkgNames,
-        },
-      ])
-      .then((answers) => {
-        return answers.packagesToWatch;
-      });
+    return await prompt([
+      {
+        type: 'checkbox',
+        name: 'packagesToWatch',
+        message: 'Select packages to run in dev mode.',
+        choices: pkgNames,
+      },
+    ]).then((answers) => {
+      return answers.packagesToWatch;
+    });
   }
 
   if (argv.only?.length > 0) {

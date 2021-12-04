@@ -12,7 +12,7 @@ import {
   TypographyVariants,
 } from './types';
 
-const P = BoxAs<TypographyComponentProps>('p');
+const P = BoxAs<TypographyProps>('p');
 
 type TypographyVariantMap = {
   [key in TypographyVariants]: Extract<TypographyAsTags, 'p' | 'span'>;
@@ -23,14 +23,14 @@ const TYPOGRAPHY_VARIANT_MAP: TypographyVariantMap = {
   inline: 'span',
 };
 
-export type TypographyComponentProps = {
+export type TypographyProps = {
   children?: React.ReactNode;
   variant?: keyof typeof TYPOGRAPHY_VARIANT_MAP;
   as?: TypographyAsTags;
 } & Pick<InternalTypographyProps, 'mb' | 'marginBottom'>;
 
 export interface TypographyComponent
-  extends ForwardRefExoticComponent<TypographyComponentProps> {
+  extends ForwardRefExoticComponent<TypographyProps> {
   Heading: typeof Heading;
   Label: typeof Label;
   HelpText: typeof HelpText;
@@ -39,7 +39,7 @@ export interface TypographyComponent
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
 const Typography: TypographyComponent = forwardRef<
   TypographyElement,
-  TypographyComponentProps
+  TypographyProps
 >(function Typography(
   { children, variant = 'paragraph', mb, marginBottom, as, ...restProps },
   ref

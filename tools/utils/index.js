@@ -5,6 +5,10 @@ const {
   BUNDLE_OUTPUT_DIR,
   CORE_PATH,
   ROOT_PATH,
+  PACKAGE_STATUS,
+  PRODUCTION,
+  DEVELOPMENT,
+  EXPERIMENTAL,
 } = require('./env');
 const { getExternalDeps } = require('./getExternalDeps');
 const { writeToFile } = require('./writeToFile');
@@ -29,4 +33,8 @@ module.exports = {
   updatePackageCache,
   CORE_PATH,
   ROOT_PATH,
+  PACKAGE_STATUS,
+  PRODUCTION,
+  DEVELOPMENT,
+  EXPERIMENTAL,
 };
