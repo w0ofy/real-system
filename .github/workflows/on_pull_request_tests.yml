@@ -1,11 +1,6 @@
-name: Unit Tests
+name: Tests
 
 on:
-  push:
-    paths:
-      - "packages/**"
-    branches:
-      - main 
   pull_request:
     paths:
         - "packages/**"
@@ -23,6 +18,9 @@ jobs:
       - name: Yarn install
         if: steps.env_setup.outputs.cache-hit != 'true'
         run: yarn install --immutable
+
+      - name: Run lint
+        run: yarn lint
 
       - name: Run tests
         run: yarn test

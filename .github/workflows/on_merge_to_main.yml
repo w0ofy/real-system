@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  version-or-publish-packages:
+  prerelease-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Setup environment
@@ -16,7 +16,22 @@ jobs:
       - name: Yarn install
         if: steps.env_setup.outputs.cache-hit != 'true'
         run: yarn install --immutable
-        
+
+      - name: Run prerelease tests
+        run: yarn prerelease
+
+  version-or-publish-packages:
+    runs-on: ubuntu-latest
+    needs: prerelease-tests
+    steps:
+      - name: Setup environment
+        id: env_setup
+        uses: bigwoof91/real-system/.github/actions/setup-env@main
+
+      - name: Yarn install
+        if: steps.env_setup.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+
       - name: Create PR or Publish Package
         uses: changesets/action@master
         with:
