@@ -153,6 +153,7 @@
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "semver": "^7.3.5",
     "storybook-addon-performance": "^0.16.1",
     "storybook-addon-playroom": "^2.1.4",
     "terser": "^5.9.0",

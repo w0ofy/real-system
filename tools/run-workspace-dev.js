@@ -11,6 +11,7 @@ const argv = require('minimist')(process.argv, {
 const { prompt } = require('inquirer');
 const concurrently = require('concurrently').concurrently;
 const { getFullPkgName } = require('./utils');
+const semverGtr = require('semver/ranges/gtr');
 
 /**
  * Helpers
@@ -90,7 +91,10 @@ const getAdditionalScripts = () => {
  * ```
  */
 (async function runWorkspaceDev() {
-  process.env.NODE_OPTIONS = '--openssl-legacy-provider';
+  if (semverGtr(process.version, '16')) {
+    // only required in node17 to resolve a bug
+    process.env.NODE_OPTIONS = '--openssl-legacy-provider';
+  }
 
   /** get list of packages to watch/run dev */
   const packagesToWatch = await getPackagesToWatch();
