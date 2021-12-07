@@ -2939,38 +2939,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@real-system/box@0.0.3, @real-system/box@^0.0.3, @real-system/box@workspace:packages/primitives/box":
+"@real-system/box@0.0.4, @real-system/box@^0.0.4, @real-system/box@workspace:packages/primitives/box":
   version: 0.0.0-use.local
   resolution: "@real-system/box@workspace:packages/primitives/box"
   dependencies:
-    "@real-system/styling": ^0.0.2
+    "@real-system/styling": ^0.0.3
     concurrently: ^6.4.0
     deepmerge: ^4.2.2
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/styling": ^0.0.2
+    "@real-system/styling": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/button@^0.0.4, @real-system/button@workspace:packages/components/button":
+"@real-system/button@^0.0.5, @real-system/button@workspace:packages/components/button":
   version: 0.0.0-use.local
   resolution: "@real-system/button@workspace:packages/components/button"
   dependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/utils": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/utils": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/utils": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/utils": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -2982,17 +2982,17 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.16.0
     "@babel/core": ^7.16.0
-    "@real-system/box": ^0.0.3
-    "@real-system/button": ^0.0.4
-    "@real-system/icon": ^0.0.3
-    "@real-system/input": ^0.0.2
-    "@real-system/spinner": ^0.0.2
-    "@real-system/styling": ^0.0.2
-    "@real-system/text": ^0.0.2
-    "@real-system/theme": ^0.0.2
-    "@real-system/typography": ^0.0.3
-    "@real-system/utils": ^0.0.2
-    "@real-system/visually-hidden": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/button": ^0.0.5
+    "@real-system/icon": ^0.0.4
+    "@real-system/input": ^0.0.3
+    "@real-system/spinner": ^0.0.3
+    "@real-system/styling": ^0.0.3
+    "@real-system/text": ^0.0.3
+    "@real-system/theme": ^0.0.3
+    "@real-system/typography": ^0.0.4
+    "@real-system/utils": ^0.0.3
+    "@real-system/visually-hidden": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
@@ -3002,70 +3002,70 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/icon@^0.0.3, @real-system/icon@workspace:packages/components/icon":
+"@real-system/icon@^0.0.4, @real-system/icon@workspace:packages/components/icon":
   version: 0.0.0-use.local
   resolution: "@real-system/icon@workspace:packages/components/icon"
   dependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/theme": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/theme": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     react-feather: ^2.0.9
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/theme": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/theme": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/input@^0.0.2, @real-system/input@workspace:packages/components/input":
+"@real-system/input@^0.0.3, @real-system/input@workspace:packages/components/input":
   version: 0.0.0-use.local
   resolution: "@real-system/input@workspace:packages/components/input"
   dependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/typography": ^0.0.3
-    "@real-system/visually-hidden": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/typography": ^0.0.4
+    "@real-system/visually-hidden": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/typography": ^0.0.3
-    "@real-system/visually-hidden": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/typography": ^0.0.4
+    "@real-system/visually-hidden": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/spinner@^0.0.2, @real-system/spinner@workspace:packages/components/spinner":
+"@real-system/spinner@^0.0.3, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@real-system/spinner@workspace:packages/components/spinner"
   dependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/utils": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/utils": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/utils": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/utils": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/styling@0.0.2, @real-system/styling@^0.0.2, @real-system/styling@workspace:packages/libraries/styling":
+"@real-system/styling@0.0.3, @real-system/styling@^0.0.3, @real-system/styling@workspace:packages/libraries/styling":
   version: 0.0.0-use.local
   resolution: "@real-system/styling@workspace:packages/libraries/styling"
   dependencies:
@@ -3086,66 +3086,66 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/text@0.0.2, @real-system/text@^0.0.2, @real-system/text@workspace:packages/primitives/text":
+"@real-system/text@0.0.3, @real-system/text@^0.0.3, @real-system/text@workspace:packages/primitives/text":
   version: 0.0.0-use.local
   resolution: "@real-system/text@workspace:packages/primitives/text"
   dependencies:
-    "@real-system/styling": ^0.0.2
+    "@real-system/styling": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/styling": ^0.0.2
+    "@real-system/styling": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/theme@^0.0.2, @real-system/theme@workspace:packages/libraries/theme":
+"@real-system/theme@^0.0.3, @real-system/theme@workspace:packages/libraries/theme":
   version: 0.0.0-use.local
   resolution: "@real-system/theme@workspace:packages/libraries/theme"
   dependencies:
-    "@real-system/styling": 0.0.2
-    "@real-system/utils": 0.0.2
+    "@real-system/styling": 0.0.3
+    "@real-system/utils": 0.0.3
     concurrently: ^6.4.0
     csstype: ^3.0.9
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/styling": 0.0.2
-    "@real-system/utils": 0.0.2
+    "@real-system/styling": 0.0.3
+    "@real-system/utils": 0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/typography@^0.0.3, @real-system/typography@workspace:packages/components/typography":
+"@real-system/typography@^0.0.4, @real-system/typography@workspace:packages/components/typography":
   version: 0.0.0-use.local
   resolution: "@real-system/typography@workspace:packages/components/typography"
   dependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/text": 0.0.2
-    "@real-system/utils": ^0.0.2
-    "@real-system/visually-hidden": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/text": 0.0.3
+    "@real-system/utils": ^0.0.3
+    "@real-system/visually-hidden": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.3
-    "@real-system/styling": ^0.0.2
-    "@real-system/text": 0.0.2
-    "@real-system/utils": ^0.0.2
-    "@real-system/visually-hidden": ^0.0.2
+    "@real-system/box": ^0.0.4
+    "@real-system/styling": ^0.0.3
+    "@real-system/text": 0.0.3
+    "@real-system/utils": ^0.0.3
+    "@real-system/visually-hidden": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/utils@0.0.2, @real-system/utils@^0.0.2, @real-system/utils@workspace:packages/libraries/utils":
+"@real-system/utils@0.0.3, @real-system/utils@^0.0.3, @real-system/utils@workspace:packages/libraries/utils":
   version: 0.0.0-use.local
   resolution: "@real-system/utils@workspace:packages/libraries/utils"
   dependencies:
@@ -3163,20 +3163,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/visually-hidden@^0.0.2, @real-system/visually-hidden@workspace:packages/components/visually-hidden":
+"@real-system/visually-hidden@^0.0.3, @real-system/visually-hidden@workspace:packages/components/visually-hidden":
   version: 0.0.0-use.local
   resolution: "@real-system/visually-hidden@workspace:packages/components/visually-hidden"
   dependencies:
-    "@real-system/box": 0.0.3
-    "@real-system/styling": 0.0.2
+    "@real-system/box": 0.0.4
+    "@real-system/styling": 0.0.3
     concurrently: ^6.4.0
     csstype: ^3.0.9
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": 0.0.3
-    "@real-system/styling": 0.0.2
+    "@real-system/box": 0.0.4
+    "@real-system/styling": 0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown

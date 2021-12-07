@@ -1,11 +1,29 @@
 # @real-system/core
 
+## 0.0.7
+
+### Patch Changes
+
+- [#111](https://github.com/bigwoof91/real-system/pull/111) [`1d5d2fb`](https://github.com/bigwoof91/real-system/commit/1d5d2fbd3457691d023bd5d5a992ddc5c2675c75) Thanks [@bigwoof91](https://github.com/bigwoof91)! - empty publish
+
+- Updated dependencies [[`1d5d2fb`](https://github.com/bigwoof91/real-system/commit/1d5d2fbd3457691d023bd5d5a992ddc5c2675c75)]:
+  - @real-system/button@0.0.5
+  - @real-system/icon@0.0.4
+  - @real-system/input@0.0.3
+  - @real-system/spinner@0.0.3
+  - @real-system/typography@0.0.4
+  - @real-system/visually-hidden@0.0.3
+  - @real-system/styling@0.0.3
+  - @real-system/theme@0.0.3
+  - @real-system/utils@0.0.3
+  - @real-system/box@0.0.4
+  - @real-system/text@0.0.3
+
 ## 0.0.6
 
 ### Patch Changes
 
 - [#107](https://github.com/bigwoof91/real-system/pull/107) [`21cd2c9`](https://github.com/bigwoof91/real-system/commit/21cd2c9b7d1ca621787c28c3c725e68faafdcc4b) Thanks [@bigwoof91](https://github.com/bigwoof91)! - trying to fix core pkg
-
 
 ## 0.0.5 (broken)
 

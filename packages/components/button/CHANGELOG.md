@@ -1,5 +1,16 @@
 # @real-system/button
 
+## 0.0.5
+
+### Patch Changes
+
+- [#111](https://github.com/bigwoof91/real-system/pull/111) [`1d5d2fb`](https://github.com/bigwoof91/real-system/commit/1d5d2fbd3457691d023bd5d5a992ddc5c2675c75) Thanks [@bigwoof91](https://github.com/bigwoof91)! - empty publish
+
+- Updated dependencies [[`1d5d2fb`](https://github.com/bigwoof91/real-system/commit/1d5d2fbd3457691d023bd5d5a992ddc5c2675c75)]:
+  - @real-system/styling@0.0.3
+  - @real-system/utils@0.0.3
+  - @real-system/box@0.0.4
+
 ## 0.0.4
 
 ### Patch Changes
