@@ -1,4 +1,4 @@
-import { BOX_STYLE_PROPS } from './styleProps';
+import { BOX_STYLE_PROPS } from './styleProps/index';
 
 const PROPS_TO_BLOCK = [...BOX_STYLE_PROPS, 'className', 'style'];
 

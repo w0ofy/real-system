@@ -14,7 +14,7 @@ import {
 } from './styleProps';
 import { composeTextStyleProps } from './styleProps';
 const COLOR_PROPS = compose(color).propNames!;
-const FLEXTEXT_PROPS = compose(flexbox).propNames!;
+const FLEXBOX_PROPS = compose(flexbox).propNames!;
 const LAYOUT_PROPS = compose(layout).propNames!;
 const OVERFLOW_PROPS = compose(overflow).propNames!;
 const POSITION_PROPS = compose(position).propNames!;
@@ -27,7 +27,7 @@ const TEXT_STYLE_PROPS = composeTextStyleProps().propNames!;
 
 export {
   COLOR_PROPS,
-  FLEXTEXT_PROPS,
+  FLEXBOX_PROPS,
   LAYOUT_PROPS,
   OVERFLOW_PROPS,
   POSITION_PROPS,

@@ -1,16 +1,8 @@
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import {
-  OVERFLOW_PROPS,
-  SHADOW_PROPS,
-  SPACE_PROPS,
-  TEXT_PROPS,
-} from './styleProps';
+import { TEXT_STYLE_PROPS } from './styleProps';
 
 export const TEXT_PROPS_TO_BLOCK = [
-  ...OVERFLOW_PROPS,
-  ...SHADOW_PROPS,
-  ...SPACE_PROPS,
-  ...TEXT_PROPS,
+  ...TEXT_STYLE_PROPS,
   ...Object.keys(PSEUDO_PROP_STYLES),
   'display',
   'verticalAlign',
