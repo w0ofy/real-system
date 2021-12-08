@@ -1,6 +1,6 @@
 {
   "name": "@real-system/input",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Real System input component",
   "status": "production",
   "main": "lib/index.js",
@@ -32,18 +32,18 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box": "^0.0.4",
+    "@real-system/box": "^0.0.5",
     "@real-system/styling": "^0.0.3",
-    "@real-system/typography": "^0.0.4",
-    "@real-system/visually-hidden": "^0.0.3",
+    "@real-system/typography": "^0.0.5",
+    "@real-system/visually-hidden": "^0.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/box": "^0.0.4",
+    "@real-system/box": "^0.0.5",
     "@real-system/styling": "^0.0.3",
-    "@real-system/typography": "^0.0.4",
-    "@real-system/visually-hidden": "^0.0.3",
+    "@real-system/typography": "^0.0.5",
+    "@real-system/visually-hidden": "^0.0.4",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

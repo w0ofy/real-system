@@ -1,5 +1,11 @@
 # @real-system/box
 
+## 0.0.5
+
+### Patch Changes
+
+- [`d795ab6`](https://github.com/bigwoof91/real-system/commit/d795ab6e0daa8e64bb0d2a80bdac5e6be36e759a) - patching broken icon bundle (loader error)
+
 ## 0.0.4
 
 ### Patch Changes

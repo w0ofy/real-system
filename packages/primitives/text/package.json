@@ -1,6 +1,6 @@
 {
   "name": "@real-system/text",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Text primitive for real system.",
   "status": "production",
   "main": "lib/index.js",

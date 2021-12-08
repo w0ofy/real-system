@@ -1,5 +1,21 @@
 # @real-system/core
 
+## 0.0.8
+
+### Patch Changes
+
+- [`d795ab6`](https://github.com/bigwoof91/real-system/commit/d795ab6e0daa8e64bb0d2a80bdac5e6be36e759a) - patching broken icon bundle (loader error)
+
+- Updated dependencies [[`d795ab6`](https://github.com/bigwoof91/real-system/commit/d795ab6e0daa8e64bb0d2a80bdac5e6be36e759a)]:
+  - @real-system/icon@0.0.5
+  - @real-system/box@0.0.5
+  - @real-system/text@0.0.4
+  - @real-system/button@0.0.6
+  - @real-system/input@0.0.4
+  - @real-system/spinner@0.0.4
+  - @real-system/typography@0.0.5
+  - @real-system/visually-hidden@0.0.4
+
 ## 0.0.7
 
 ### Patch Changes

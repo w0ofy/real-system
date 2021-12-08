@@ -1,5 +1,12 @@
 # @real-system/visually-hidden
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [[`d795ab6`](https://github.com/bigwoof91/real-system/commit/d795ab6e0daa8e64bb0d2a80bdac5e6be36e759a)]:
+  - @real-system/box@0.0.5
+
 ## 0.0.3
 
 ### Patch Changes

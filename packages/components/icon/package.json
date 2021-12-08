@@ -1,6 +1,6 @@
 {
   "name": "@real-system/icon",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "icon component for real system",
   "status": "production",
   "main": "lib/index.js",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box": "^0.0.4",
+    "@real-system/box": "^0.0.5",
     "@real-system/styling": "^0.0.3",
     "@real-system/theme": "^0.0.3",
     "@real-system/utils": "^0.0.3",
@@ -42,7 +42,7 @@
     "react-feather": "^2.0.9"
   },
   "devDependencies": {
-    "@real-system/box": "^0.0.4",
+    "@real-system/box": "^0.0.5",
     "@real-system/styling": "^0.0.3",
     "@real-system/theme": "^0.0.3",
     "@real-system/utils": "^0.0.3",
