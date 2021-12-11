@@ -1,5 +1,16 @@
 # @real-system/typography
 
+## 0.0.5
+
+### Patch Changes
+
+- [`341e89a`](https://github.com/bigwoof91/real-system/commit/341e89ad73d0621b1d36baa2b39444b0e231c985) - using hero icons for icon component
+
+- Updated dependencies [[`341e89a`](https://github.com/bigwoof91/real-system/commit/341e89ad73d0621b1d36baa2b39444b0e231c985)]:
+  - @real-system/styling@0.0.4
+  - @real-system/utils@0.0.4
+  - @real-system/box@0.0.6
+
 ## 0.0.4
 
 ### Patch Changes
