@@ -1,21 +1,19 @@
-import * as Feather from 'react-feather';
+import * as Icons from '@heroicons/react/solid';
 
-import type { BoxProps } from '@real-system/box';
 import type { MarginProps } from '@real-system/styling';
-import { PaletteIntents, ThemeTokens } from '@real-system/theme';
-import { KebabCase } from '@real-system/utils';
+import type { PaletteIntents, ThemeTokens } from '@real-system/theme';
+import type { KebabCase } from '@real-system/utils';
 
-export type FeatherIconKeys = keyof typeof Feather;
-export type FeatherIconValues = typeof Feather[FeatherIconKeys];
-export type InternalIconProps = Omit<IconProps, 'size'> & Feather.IconProps;
-export type Icons = KebabCase<FeatherIconKeys>;
-export type IconIntent =
+type IconKeys = keyof typeof Icons;
+type IconValues = typeof Icons[IconKeys];
+type Icons = KebabCase<IconKeys>;
+type IconIntent =
   | Extract<
       PaletteIntents,
       'primary' | 'success' | 'danger' | 'warning' | 'info'
     >
   | 'default';
-export type IconProps = {
+type IconProps = {
   icon: Icons;
   size?:
     | Extract<
@@ -35,5 +33,7 @@ export type IconProps = {
     | 'size-icon-button'
     | 'size-icon-button-small';
   intent?: IconIntent;
-} & MarginProps &
-  Pick<BoxProps, 'tabIndex'>;
+  solid?: boolean;
+} & MarginProps;
+
+export type { IconIntent, IconKeys, IconProps, Icons, IconValues };

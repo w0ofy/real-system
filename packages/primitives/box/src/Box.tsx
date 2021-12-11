@@ -40,15 +40,15 @@ const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(
 
 Box.defaultProps = { 'data-testid': makeTestId('box') };
 
-type ElTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
+type As = BoxProps['as'];
 
-function BoxAs<T = Record<string | number, any>>(elTag: ElTag) {
+function BoxAs<T = Record<string | number, any>>(as: As) {
   return forwardRef<HTMLOrSVGElement, BoxProps & T>(function BoxAsComponent(
     props,
     ref
   ): React.ReactElement {
     return (
-      <Box as={elTag} data-testid={makeTestId('box-as')} ref={ref} {...props} />
+      <Box as={as} data-testid={makeTestId('box-as')} ref={ref} {...props} />
     );
   });
 }

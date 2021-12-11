@@ -39,7 +39,7 @@ const Template = (args) => {
           id="input-1"
           name="email-address"
           placeholder="personal@realsystem.com"
-          prefix={<Icon icon="at-sign" />}
+          prefix={<Icon icon="mail-icon" />}
           {...args}
         />
       </Container>
@@ -54,7 +54,7 @@ const Template = (args) => {
           placeholder="personal@realsystem.com"
           suffix={
             <Button size="small" variant="link">
-              <Icon icon="info" />
+              <Icon icon="information-circle-icon" />
             </Button>
           }
           {...args}

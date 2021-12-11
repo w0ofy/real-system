@@ -49,19 +49,27 @@ const ShowcaseTemplate = (args) => (
     </Heading>
     <Row>
       <Button {...args} />
-      <Button {...args} trailingIcon={<Icon icon="download" />} />
-      <Button {...args} leadingIcon={<Icon icon="download" />} />
+      <Button {...args} trailingIcon={<Icon icon="download-icon" />} />
+      <Button {...args} leadingIcon={<Icon icon="download-icon" />} />
       <Button {...args}>
-        <Icon icon="download" />
+        <Icon icon="download-icon" />
       </Button>
     </Row>
     {args.variant !== 'link' && (
       <Row>
         <Button {...args} disabled />
-        <Button {...args} disabled trailingIcon={<Icon icon="download" />} />
-        <Button {...args} disabled leadingIcon={<Icon icon="download" />} />
+        <Button
+          {...args}
+          disabled
+          trailingIcon={<Icon icon="download-icon" />}
+        />
+        <Button
+          {...args}
+          disabled
+          leadingIcon={<Icon icon="download-icon" />}
+        />
         <Button {...args} disabled>
-          <Icon icon="download" />
+          <Icon icon="download-icon" />
         </Button>
       </Row>
     )}
@@ -70,15 +78,15 @@ const ShowcaseTemplate = (args) => (
       <Button
         {...args}
         intent="neutral"
-        trailingIcon={<Icon icon="settings" />}
+        trailingIcon={<Icon icon="cog-icon" />}
       />
       <Button
         {...args}
         intent="neutral"
-        leadingIcon={<Icon icon="settings" />}
+        leadingIcon={<Icon icon="cog-icon" />}
       />
       <Button {...args} intent="neutral">
-        <Icon icon="settings" />
+        <Icon icon="cog-icon" />
       </Button>
     </Row>
     {args.variant !== 'link' && (
@@ -88,25 +96,33 @@ const ShowcaseTemplate = (args) => (
           {...args}
           disabled
           intent="neutral"
-          trailingIcon={<Icon icon="settings" />}
+          trailingIcon={<Icon icon="cog-icon" />}
         />
         <Button
           {...args}
           disabled
           intent="neutral"
-          leadingIcon={<Icon icon="settings" />}
+          leadingIcon={<Icon icon="cog-icon" />}
         />
         <Button {...args} intent="neutral" disabled>
-          <Icon icon="settings" />
+          <Icon icon="cog-icon" />
         </Button>
       </Row>
     )}
     <Row>
       <Button {...args} intent="danger" />
-      <Button {...args} intent="danger" trailingIcon={<Icon icon="trash2" />} />
-      <Button {...args} intent="danger" leadingIcon={<Icon icon="trash2" />} />
+      <Button
+        {...args}
+        intent="danger"
+        trailingIcon={<Icon icon="trash-icon" />}
+      />
+      <Button
+        {...args}
+        intent="danger"
+        leadingIcon={<Icon icon="trash-icon" />}
+      />
       <Button {...args} intent="danger">
-        <Icon icon="trash2" />
+        <Icon icon="trash-icon" />
       </Button>
     </Row>
     {args.variant !== 'link' && (
@@ -115,17 +131,17 @@ const ShowcaseTemplate = (args) => (
         <Button
           {...args}
           intent="danger"
-          trailingIcon={<Icon icon="trash2" />}
+          trailingIcon={<Icon icon="trash-icon" />}
           disabled
         />
         <Button
           {...args}
           intent="danger"
-          leadingIcon={<Icon icon="trash2" />}
+          leadingIcon={<Icon icon="trash-icon" />}
           disabled
         />
         <Button {...args} intent="danger" disabled>
-          <Icon icon="trash2" />
+          <Icon icon="trash-icon" />
         </Button>
       </Row>
     )}

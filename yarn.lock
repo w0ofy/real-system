@@ -796,7 +796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-jsx@npm:^7.12.13, @babel/plugin-syntax-jsx@npm:^7.16.0":
+"@babel/plugin-syntax-jsx@npm:^7.12.13, @babel/plugin-syntax-jsx@npm:^7.16.0, @babel/plugin-syntax-jsx@npm:^7.2.0":
   version: 7.16.0
   resolution: "@babel/plugin-syntax-jsx@npm:7.16.0"
   dependencies:
@@ -1215,7 +1215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-jsx@npm:^7.12.12, @babel/plugin-transform-react-jsx@npm:^7.16.0":
+"@babel/plugin-transform-react-jsx@npm:^7.12.1, @babel/plugin-transform-react-jsx@npm:^7.12.12, @babel/plugin-transform-react-jsx@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-transform-react-jsx@npm:7.16.0"
   dependencies:
@@ -1264,7 +1264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:^7.16.0":
+"@babel/plugin-transform-runtime@npm:^7.16.4":
   version: 7.16.4
   resolution: "@babel/plugin-transform-runtime@npm:7.16.4"
   dependencies:
@@ -1372,7 +1372,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.12.11, @babel/preset-env@npm:^7.13.10, @babel/preset-env@npm:^7.13.8, @babel/preset-env@npm:^7.16.0":
+"@babel/preset-env@npm:^7.12.11, @babel/preset-env@npm:^7.13.10, @babel/preset-env@npm:^7.13.8, @babel/preset-env@npm:^7.16.4":
   version: 7.16.4
   resolution: "@babel/preset-env@npm:7.16.4"
   dependencies:
@@ -2087,7 +2087,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin-jsx-pragmatic@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "@emotion/babel-plugin-jsx-pragmatic@npm:0.1.5"
+  dependencies:
+    "@babel/plugin-syntax-jsx": ^7.2.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: b92aafafd35eca0cf9690a4b21899827ef24e0ce7bfe97381ef3258113deaa21eb047b492f4eadfac5ba57b301c0bdcab934d776774d91e867f1a8bdb7ab9870
+  languageName: node
+  linkType: hard
+
+"@emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/babel-plugin@npm:11.3.0"
   dependencies:
@@ -2106,6 +2117,20 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 8ff91de4a26c32f8342b28b96630527d347879b6669a9bf6f78945ef6588af34be800e0feca0434e8900f082350c351a4b6941e48127aad916a581821620c919
+  languageName: node
+  linkType: hard
+
+"@emotion/babel-preset-css-prop@npm:^11.2.0":
+  version: 11.2.0
+  resolution: "@emotion/babel-preset-css-prop@npm:11.2.0"
+  dependencies:
+    "@babel/plugin-transform-react-jsx": ^7.12.1
+    "@babel/runtime": ^7.7.2
+    "@emotion/babel-plugin": ^11.2.0
+    "@emotion/babel-plugin-jsx-pragmatic": ^0.1.5
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 211fb98cb5fb958ddaaeeb326595c4681f0d6a8ac626dec4499cbd1771909f9c6d9af174e6288ef444ad256c0cd96238ab1575a460aeb9be93277b521f891eb3
   languageName: node
   linkType: hard
 
@@ -2383,6 +2408,15 @@ __metadata:
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
   checksum: d05081e0887a49c178b75ee3067bd6ee086f73c154d121b854fb2e044e8a89cb1cbb6de3a0dd93a519b80f0531fda68b099dd7256205f7fbb3490324342f2217
+  languageName: node
+  linkType: hard
+
+"@heroicons/react@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@heroicons/react@npm:1.0.5"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 12114af19c17f69140cc7338e4cd12fe38098ad3ed79f02762106160655cde3ebdba58a2b26f1067f720786187364fd9465bc72f02aad85b0ead8172d76aa51d
   languageName: node
   linkType: hard
 
@@ -2939,7 +2973,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@real-system/box@0.0.4, @real-system/box@^0.0.4, @real-system/box@workspace:packages/primitives/box":
+"@real-system/box@0.0.5, @real-system/box@^0.0.5, @real-system/box@workspace:packages/primitives/box":
   version: 0.0.0-use.local
   resolution: "@real-system/box@workspace:packages/primitives/box"
   dependencies:
@@ -2956,11 +2990,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/button@^0.0.5, @real-system/button@workspace:packages/components/button":
+"@real-system/button@^0.0.6, @real-system/button@workspace:packages/components/button":
   version: 0.0.0-use.local
   resolution: "@real-system/button@workspace:packages/components/button"
   dependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
     "@real-system/utils": ^0.0.3
     concurrently: ^6.4.0
@@ -2968,7 +3002,7 @@ __metadata:
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
     "@real-system/utils": ^0.0.3
     react: ^17.0.2
@@ -2982,17 +3016,17 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.16.0
     "@babel/core": ^7.16.0
-    "@real-system/box": ^0.0.4
-    "@real-system/button": ^0.0.5
-    "@real-system/icon": ^0.0.4
-    "@real-system/input": ^0.0.3
-    "@real-system/spinner": ^0.0.3
+    "@real-system/box": ^0.0.5
+    "@real-system/button": ^0.0.6
+    "@real-system/icon": ^0.0.5
+    "@real-system/input": ^0.0.4
+    "@real-system/spinner": ^0.0.4
     "@real-system/styling": ^0.0.3
-    "@real-system/text": ^0.0.3
+    "@real-system/text": ^0.0.4
     "@real-system/theme": ^0.0.3
-    "@real-system/typography": ^0.0.4
+    "@real-system/typography": ^0.0.5
     "@real-system/utils": ^0.0.3
-    "@real-system/visually-hidden": ^0.0.3
+    "@real-system/visually-hidden": ^0.0.4
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
@@ -3002,54 +3036,56 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/icon@^0.0.4, @real-system/icon@workspace:packages/components/icon":
+"@real-system/icon@^0.0.5, @real-system/icon@workspace:packages/components/icon":
   version: 0.0.0-use.local
   resolution: "@real-system/icon@workspace:packages/components/icon"
   dependencies:
-    "@real-system/box": ^0.0.4
+    "@heroicons/react": ^1.0.5
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
     "@real-system/theme": ^0.0.3
+    "@real-system/utils": ^0.0.3
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-feather: ^2.0.9
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
     "@real-system/theme": ^0.0.3
+    "@real-system/utils": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/input@^0.0.3, @real-system/input@workspace:packages/components/input":
+"@real-system/input@^0.0.4, @real-system/input@workspace:packages/components/input":
   version: 0.0.0-use.local
   resolution: "@real-system/input@workspace:packages/components/input"
   dependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
-    "@real-system/typography": ^0.0.4
-    "@real-system/visually-hidden": ^0.0.3
+    "@real-system/typography": ^0.0.5
+    "@real-system/visually-hidden": ^0.0.4
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
-    "@real-system/typography": ^0.0.4
-    "@real-system/visually-hidden": ^0.0.3
+    "@real-system/typography": ^0.0.5
+    "@real-system/visually-hidden": ^0.0.4
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
-"@real-system/spinner@^0.0.3, @real-system/spinner@workspace:packages/components/spinner":
+"@real-system/spinner@^0.0.4, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@real-system/spinner@workspace:packages/components/spinner"
   dependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
     "@real-system/utils": ^0.0.3
     concurrently: ^6.4.0
@@ -3057,7 +3093,7 @@ __metadata:
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
     "@real-system/utils": ^0.0.3
     react: ^17.0.2
@@ -3086,7 +3122,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/text@0.0.3, @real-system/text@^0.0.3, @real-system/text@workspace:packages/primitives/text":
+"@real-system/text@0.0.4, @real-system/text@^0.0.4, @real-system/text@workspace:packages/primitives/text":
   version: 0.0.0-use.local
   resolution: "@real-system/text@workspace:packages/primitives/text"
   dependencies:
@@ -3121,25 +3157,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/typography@^0.0.4, @real-system/typography@workspace:packages/components/typography":
+"@real-system/typography@^0.0.5, @real-system/typography@workspace:packages/components/typography":
   version: 0.0.0-use.local
   resolution: "@real-system/typography@workspace:packages/components/typography"
   dependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
-    "@real-system/text": 0.0.3
+    "@real-system/text": 0.0.4
     "@real-system/utils": ^0.0.3
-    "@real-system/visually-hidden": ^0.0.3
+    "@real-system/visually-hidden": ^0.0.4
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": ^0.0.4
+    "@real-system/box": ^0.0.5
     "@real-system/styling": ^0.0.3
-    "@real-system/text": 0.0.3
+    "@real-system/text": 0.0.4
     "@real-system/utils": ^0.0.3
-    "@real-system/visually-hidden": ^0.0.3
+    "@real-system/visually-hidden": ^0.0.4
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -3163,11 +3199,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/visually-hidden@^0.0.3, @real-system/visually-hidden@workspace:packages/components/visually-hidden":
+"@real-system/visually-hidden@^0.0.4, @real-system/visually-hidden@workspace:packages/components/visually-hidden":
   version: 0.0.0-use.local
   resolution: "@real-system/visually-hidden@workspace:packages/components/visually-hidden"
   dependencies:
-    "@real-system/box": 0.0.4
+    "@real-system/box": 0.0.5
     "@real-system/styling": 0.0.3
     concurrently: ^6.4.0
     csstype: ^3.0.9
@@ -3175,7 +3211,7 @@ __metadata:
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": 0.0.4
+    "@real-system/box": 0.0.5
     "@real-system/styling": 0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -17644,17 +17680,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-feather@npm:^2.0.9":
-  version: 2.0.9
-  resolution: "react-feather@npm:2.0.9"
-  dependencies:
-    prop-types: ^15.7.2
-  peerDependencies:
-    react: ^16.8.6 || ^17
-  checksum: 8535541c1041ba9ce02e1b6fe4425dc6857030ae2223d89fa2aa1faf82b04e542c863b267ee7ba5961d22fe3216f43241200a5807d8a8df48a96485ac8b68bf7
-  languageName: node
-  linkType: hard
-
 "react-helmet-async@npm:^1.0.7":
   version: 1.2.0
   resolution: "react-helmet-async@npm:1.2.0"
@@ -18029,10 +18054,8 @@ __metadata:
     "@babel/core": ^7.16.0
     "@babel/plugin-proposal-class-properties": ^7.16.0
     "@babel/plugin-proposal-object-rest-spread": ^7.16.0
-    "@babel/plugin-proposal-private-methods": ^7.16.0
-    "@babel/plugin-proposal-private-property-in-object": ^7.16.0
-    "@babel/plugin-transform-runtime": ^7.16.0
-    "@babel/preset-env": ^7.16.0
+    "@babel/plugin-transform-runtime": ^7.16.4
+    "@babel/preset-env": ^7.16.4
     "@babel/preset-react": ^7.16.0
     "@babel/preset-typescript": ^7.16.0
     "@babel/register": ^7.16.0
@@ -18043,6 +18066,7 @@ __metadata:
     "@commitlint/cz-commitlint": ^15.0.0
     "@commitlint/prompt-cli": ^15.0.0
     "@emotion/babel-plugin": ^11.3.0
+    "@emotion/babel-preset-css-prop": ^11.2.0
     "@manypkg/cli": ^0.19.1
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^21.0.1
