@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
-import { Icon, ICON_NAMES } from '@real-system/icon';
+import { Icon, ICONS_LIST } from '@real-system/icon';
 import { Heading } from '@real-system/typography';
 import { capitalize } from '@real-system/utils';
 
@@ -11,8 +11,8 @@ export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    trailingIcon: { control: { type: 'select', options: ICON_NAMES } },
-    leadingIcon: { control: { type: 'select', options: ICON_NAMES } },
+    trailingIcon: { control: { type: 'select', options: ICONS_LIST } },
+    leadingIcon: { control: { type: 'select', options: ICONS_LIST } },
   },
   args: {
     children: 'Button',
@@ -49,44 +49,28 @@ const ShowcaseTemplate = (args) => (
     </Heading>
     <Row>
       <Button {...args} />
-      <Button {...args} trailingIcon={<Icon icon="download-icon" />} />
-      <Button {...args} leadingIcon={<Icon icon="download-icon" />} />
+      <Button {...args} trailingIcon={<Icon icon="download" />} />
+      <Button {...args} leadingIcon={<Icon icon="download" />} />
       <Button {...args}>
-        <Icon icon="download-icon" />
+        <Icon icon="download" />
       </Button>
     </Row>
     {args.variant !== 'link' && (
       <Row>
         <Button {...args} disabled />
-        <Button
-          {...args}
-          disabled
-          trailingIcon={<Icon icon="download-icon" />}
-        />
-        <Button
-          {...args}
-          disabled
-          leadingIcon={<Icon icon="download-icon" />}
-        />
+        <Button {...args} disabled trailingIcon={<Icon icon="download" />} />
+        <Button {...args} disabled leadingIcon={<Icon icon="download" />} />
         <Button {...args} disabled>
-          <Icon icon="download-icon" />
+          <Icon icon="download" />
         </Button>
       </Row>
     )}
     <Row>
       <Button {...args} intent="neutral" />
-      <Button
-        {...args}
-        intent="neutral"
-        trailingIcon={<Icon icon="cog-icon" />}
-      />
-      <Button
-        {...args}
-        intent="neutral"
-        leadingIcon={<Icon icon="cog-icon" />}
-      />
+      <Button {...args} intent="neutral" trailingIcon={<Icon icon="cog" />} />
+      <Button {...args} intent="neutral" leadingIcon={<Icon icon="cog" />} />
       <Button {...args} intent="neutral">
-        <Icon icon="cog-icon" />
+        <Icon icon="cog" />
       </Button>
     </Row>
     {args.variant !== 'link' && (
@@ -96,33 +80,25 @@ const ShowcaseTemplate = (args) => (
           {...args}
           disabled
           intent="neutral"
-          trailingIcon={<Icon icon="cog-icon" />}
+          trailingIcon={<Icon icon="cog" />}
         />
         <Button
           {...args}
           disabled
           intent="neutral"
-          leadingIcon={<Icon icon="cog-icon" />}
+          leadingIcon={<Icon icon="cog" />}
         />
         <Button {...args} intent="neutral" disabled>
-          <Icon icon="cog-icon" />
+          <Icon icon="cog" />
         </Button>
       </Row>
     )}
     <Row>
       <Button {...args} intent="danger" />
-      <Button
-        {...args}
-        intent="danger"
-        trailingIcon={<Icon icon="trash-icon" />}
-      />
-      <Button
-        {...args}
-        intent="danger"
-        leadingIcon={<Icon icon="trash-icon" />}
-      />
+      <Button {...args} intent="danger" trailingIcon={<Icon icon="trash" />} />
+      <Button {...args} intent="danger" leadingIcon={<Icon icon="trash" />} />
       <Button {...args} intent="danger">
-        <Icon icon="trash-icon" />
+        <Icon icon="trash" />
       </Button>
     </Row>
     {args.variant !== 'link' && (
@@ -131,17 +107,17 @@ const ShowcaseTemplate = (args) => (
         <Button
           {...args}
           intent="danger"
-          trailingIcon={<Icon icon="trash-icon" />}
+          trailingIcon={<Icon icon="trash" />}
           disabled
         />
         <Button
           {...args}
           intent="danger"
-          leadingIcon={<Icon icon="trash-icon" />}
+          leadingIcon={<Icon icon="trash" />}
           disabled
         />
         <Button {...args} intent="danger" disabled>
-          <Icon icon="trash-icon" />
+          <Icon icon="trash" />
         </Button>
       </Row>
     )}
@@ -250,5 +226,5 @@ export const LinkButton = ({ icon, ...args }) => (
 );
 
 IconButton.argTypes = {
-  icon: { control: { type: 'select', options: ICON_NAMES } },
+  icon: { control: { type: 'select', options: ICONS_LIST } },
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 
 import { Typography } from '@real-system/typography';
 import { VisuallyHidden } from '@real-system/visually-hidden';
@@ -9,7 +9,7 @@ export default {
   component: VisuallyHidden,
 } as Meta;
 
-const Template = (args) => {
+export const Default = (args) => {
   return (
     <Typography.Label required>
       First Name
@@ -17,7 +17,3 @@ const Template = (args) => {
     </Typography.Label>
   );
 };
-
-Template.storyName = 'VisuallyHidden';
-
-export const Default = Template.bind({});

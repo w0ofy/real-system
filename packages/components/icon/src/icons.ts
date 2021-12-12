@@ -1,38 +1,18 @@
-import * as OutlineIcons from '@heroicons/react/outline';
-import * as SolidIcons from '@heroicons/react/solid';
+import * as OIcons from '@heroicons/react/outline';
+import * as SIcons from '@heroicons/react/solid';
 
-import { kebabCase } from '@real-system/utils';
+import type { Icons } from './types';
+import { getIcons } from './utils';
 
-import { IconKeys, Icons, IconValues } from './types';
+const SolidIcons = getIcons(SIcons);
+const OutlineIcons = getIcons(OIcons);
+const ICONS_LIST = Object.keys(OutlineIcons) as Icons[];
 
-type IconKinds = 'SOLID' | 'OUTLINE';
+type IconsMap = { [key in Icons]: Icons };
 
-const ICON_KINDS: Record<IconKinds, typeof SolidIcons | typeof OutlineIcons> = {
-  SOLID: SolidIcons,
-  OUTLINE: OutlineIcons,
-};
-
-type IconsMap = { [key in Icons]: IconValues };
-
-const getIcons = (kind: 'OUTLINE' | 'SOLID'): IconsMap => {
-  const IconSet = ICON_KINDS[kind];
-  const heroIcons = Object.keys(IconSet) as IconKeys[];
-  const icons = heroIcons.reduce((o, rawKey) => {
-    const key = kebabCase<typeof rawKey>(rawKey);
-    return { ...o, [key]: IconSet[rawKey] };
-  }, {} as IconsMap);
-
-  return icons as IconsMap;
-};
-
-const OUTLINE_ICONS = getIcons('OUTLINE');
-const SOLID_ICONS = getIcons('SOLID');
-
-type IconNamesMap = { [key in Icons]: Icons };
-
-const ICON_NAMES = Object.keys(OUTLINE_ICONS).reduce(
+const ICONS_MAP = ICONS_LIST.reduce(
   (o, key) => ({ ...o, [key]: key }),
-  {} as IconNamesMap
+  {} as IconsMap
 );
 
-export { ICON_NAMES, OUTLINE_ICONS, SOLID_ICONS };
+export { ICONS_LIST, ICONS_MAP, OutlineIcons, SolidIcons };

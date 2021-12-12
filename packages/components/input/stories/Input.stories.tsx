@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
@@ -39,7 +39,7 @@ const Template = (args) => {
           id="input-1"
           name="email-address"
           placeholder="personal@realsystem.com"
-          prefix={<Icon icon="mail-icon" />}
+          prefix={<Icon icon="mail" />}
           {...args}
         />
       </Container>
@@ -54,7 +54,7 @@ const Template = (args) => {
           placeholder="personal@realsystem.com"
           suffix={
             <Button size="small" variant="link">
-              <Icon icon="information-circle-icon" />
+              <Icon icon="information-circle" />
             </Button>
           }
           {...args}

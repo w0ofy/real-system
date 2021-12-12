@@ -10,8 +10,8 @@ const realSystemStyles = css({
     outlineColor: 'color-border-brand-weak-3',
   },
   body: {
-    '-webkit-font-smoothing': 'subpixel-antialiased',
-    '-moz-osx-font-smoothing': 'auto',
+    WebkitFontSmoothing: 'subpixel-antialiased',
+    MozOsxFontSmoothing: 'auto',
     fontFamily: 'font-family-text',
     fontWeight: 0,
     letterSpacing: '0.2px',

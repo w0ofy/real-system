@@ -1,3 +1,8 @@
+export type RemoveSuffix<
+  T extends string,
+  S extends string
+> = T extends `${infer Prefix}${S}` ? Prefix : never;
+
 /**
  * @description get the typeof value of an object
  */
@@ -10,7 +15,7 @@ export type AddPrefix<TKey, TPrefix extends string> = TKey extends string
   ? `${TPrefix}${TKey}`
   : never;
 /**
- * @description add a prefix to a string type
+ * @description remove a prefix to a string type
  */
 export type RemovePrefix<
   TPrefixedKey,
