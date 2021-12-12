@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 
 import { __primary_export__ } from '@real-system/__pkg__';
 
