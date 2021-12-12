@@ -1,20 +1,20 @@
 import { kebabCase } from '@real-system/utils';
 
-import { HeroIconKeys, HeroIconValues, Icons, RawIcons } from './types';
+import { HeroIconNames, HeroIconSet, Icons, IconValue } from './types';
 
-type IconsMap = { [key in Icons]: HeroIconValues };
+const formatIconName = (heroIconName: HeroIconNames): Icons =>
+  kebabCase<typeof heroIconName>(heroIconName).split('-icon').shift() as Icons;
 
-const getIcons = (IconSet): IconsMap => {
-  const heroIcons = Object.keys(IconSet) as HeroIconKeys[];
-  const icons = heroIcons.reduce((o, rawKey) => {
-    const key = formatIconName(kebabCase<typeof rawKey>(rawKey));
-    return { ...o, [key]: IconSet[rawKey] };
+type IconsMap = { [key in Icons]: IconValue };
+
+const getIcons = (IconSet: HeroIconSet): IconsMap => {
+  const heroIcons = Object.keys(IconSet) as HeroIconNames[];
+  const icons = heroIcons.reduce((o, heroIconName) => {
+    const key = formatIconName(heroIconName);
+    return { ...o, [key]: IconSet[heroIconName] };
   }, {} as IconsMap);
 
   return icons as IconsMap;
 };
-
-const formatIconName = (icon: RawIcons): Icons =>
-  icon.split('-icon').shift() as Icons;
 
 export { getIcons };

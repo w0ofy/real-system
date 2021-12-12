@@ -1,20 +1,32 @@
-import * as Icons from '@heroicons/react/solid';
+import * as Icons from '@heroicons/react/outline';
 
 import type { MarginProps } from '@real-system/styling';
 import type { PaletteIntents, ThemeTokens } from '@real-system/theme';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils';
 
-type HeroIconKeys = keyof typeof Icons;
-type HeroIconValues = typeof Icons['AcademicCapIcon'];
-type RawIcons = KebabCase<HeroIconKeys>;
+/** Hero Icon types */
+type HeroIconSet = typeof Icons;
+type HeroIconNames = keyof HeroIconSet;
+
+/** Raw/unformatted icons */
+type RawIcons = KebabCase<HeroIconNames>;
+
+/** real system formatted icons -- removes "-icon" suffix so to make icon names more clean. Refer to  */
 type Icons = RemoveSuffix<RawIcons, '-icon'>;
+
+/** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
+type IconValue = typeof Icons['AcademicCapIcon'];
 type IconIntent =
   | Extract<
       PaletteIntents,
       'primary' | 'success' | 'danger' | 'warning' | 'info'
     >
   | 'default';
+
 type IconProps = {
+  /**
+   * Sets the icon that renders
+   */
   icon: Icons;
   /**
    * Controls the size of the icon
@@ -50,18 +62,19 @@ type IconProps = {
   title?: string;
 } & MarginProps;
 
+/** private icon props, used for StyledIcon component */
 type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {
-  Icon: HeroIconValues;
+  Icon: IconValue;
   size: any;
   intent: any;
 };
 
 export type {
-  HeroIconKeys,
-  HeroIconValues,
+  HeroIconNames,
+  HeroIconSet,
   IconIntent,
   IconProps,
   Icons,
+  IconValue,
   InternalIconProps,
-  RawIcons,
 };
