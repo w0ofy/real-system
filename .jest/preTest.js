@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { getWorkspacesInfo, writeToFile, logger } = require('../tools/utils');
 const { CACHE_FILE_PATH } = require('./constants');
 
@@ -7,9 +8,11 @@ const updatePackageCache = async () => {
 
   return writeToFile(CACHE_FILE_PATH, pkgCache, {
     formatJson: true,
-    successMessage: `[Monorepo cache] Cache was successfully saved to: ${CACHE_FILE_PATH}`,
+    successMessage: `[Jest Package Cache] Cache was successfully saved to: ${CACHE_FILE_PATH}`,
   });
 };
+
+const cacheExists = fs.statSync(`${__dirname}/.cache/packages.json`).isFile();
 
 /* 
  * Returned Shape
@@ -22,5 +25,11 @@ const updatePackageCache = async () => {
  * writes to ./.cache/packages.json. This file is a cache for jest to refer for resolving modules
  */
 (async function preTest() {
+  if (cacheExists) {
+    logger.info(
+      '[Jest Package Cache]: Skipping create package cache because is already exists.'
+    );
+    return;
+  }
   return updatePackageCache();
 })();
