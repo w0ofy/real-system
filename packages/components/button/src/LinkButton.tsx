@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react';
 
 import { BoxStyleProps } from '@real-system/box';
+import { ButtonPrimitive } from '@real-system/button-primitive';
 import { merge } from '@real-system/utils';
 
-import { baseStyles, BoxAsButton } from './styles';
+import { baseStyles } from './styles';
 import { InternalButtonProps } from './types';
 
 const defaultStyles: BoxStyleProps = merge(baseStyles.default, {
@@ -20,9 +21,9 @@ const defaultStyles: BoxStyleProps = merge(baseStyles.default, {
 const LinkButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
   function LinkButton({ children, ...restProps }, ref): React.ReactElement {
     return (
-      <BoxAsButton {...defaultStyles} {...restProps} ref={ref}>
+      <ButtonPrimitive {...defaultStyles} {...restProps} ref={ref}>
         {children}
-      </BoxAsButton>
+      </ButtonPrimitive>
     );
   }
 );

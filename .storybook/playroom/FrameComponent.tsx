@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { ThemeProvider } from '@real-system/theme';
-import { Box } from '@real-system/box';
+import React from 'react';
+import { ThemeProvider } from '../../packages/libraries/theme/src/index';
+import { Box } from '../../packages/primitives/box/src/index';
 
 export default ({ children }) => {
   return (

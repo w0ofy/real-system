@@ -1,5 +1,5 @@
+import { TEXT_STYLE_PROPS } from './styleProps/index';
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import { TEXT_STYLE_PROPS } from './styleProps';
 
 export const TEXT_PROPS_TO_BLOCK = [
   ...TEXT_STYLE_PROPS,

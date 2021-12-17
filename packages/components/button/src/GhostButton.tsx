@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react';
 
 import { BoxStyleProps } from '@real-system/box';
+import { ButtonPrimitive } from '@real-system/button-primitive';
 import { merge } from '@real-system/utils';
 
-import { baseStyles, BoxAsButton } from './styles';
+import { baseStyles } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
@@ -91,9 +92,12 @@ const GhostButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
     ref
   ): React.ReactElement => {
     return (
-      <BoxAsButton {...STYLE_MAP[intent][buttonState]} {...restProps} ref={ref}>
+      <ButtonPrimitive
+        {...STYLE_MAP[intent][buttonState]}
+        {...restProps}
+        ref={ref}>
         {children}
-      </BoxAsButton>
+      </ButtonPrimitive>
     );
   }
 );

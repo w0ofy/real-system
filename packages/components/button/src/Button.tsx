@@ -59,7 +59,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const Button = BUTTON_VARIANTS[variant];
     return (
       <Button
-        role="button"
         {...restProps}
         {...sizeStyles}
         buttonState={buttonState}

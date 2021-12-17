@@ -7,7 +7,7 @@ const {
   writeToFile,
   logger,
 } = require('./utils');
-const { command } = require('execa');
+const { commandSync } = require('execa');
 
 const PATH_TO_TOOLS = `${ROOT_PATH}/tools`;
 const makePaths = (pkgLocation) => {
@@ -121,11 +121,12 @@ const makePaths = (pkgLocation) => {
             errorMessage: 'Failed to insert peer dependencies.',
           });
           logger.job('Updating yarn lock file.');
-          await command('yarn install').stdout.pipe(process.stdout);
+          commandSync('yarn install', { stdout: process.stdout });
           logger.job('Building package.');
-          await command('yarn build', { cwd: output.path }).stdout.pipe(
-            process.stdout
-          );
+          commandSync('yarn build', {
+            cwd: output.path,
+            stdout: process.stdout,
+          });
         },
       };
     };

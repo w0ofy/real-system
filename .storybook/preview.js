@@ -1,7 +1,7 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
-import { themes, ThemeProvider } from '@real-system/theme';
+import { themes, ThemeProvider } from '../packages/libraries/theme/src/index';
 import { isProduction } from '../tools/utils/env';
 
 export const globalTypes = {

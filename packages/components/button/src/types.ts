@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { BoxStyleProps } from '@real-system/box';
+import { ButtonAriaProps } from '@real-system/button-primitive';
 import type { MarginProps } from '@real-system/styling';
 import { PaletteIntents } from '@real-system/theme';
 
@@ -13,7 +14,7 @@ export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonProps = ButtonAriaProps &
   MarginProps & {
     size?: ButtonSizes;
     children: React.ReactNode;

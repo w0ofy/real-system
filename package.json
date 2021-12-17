@@ -62,7 +62,7 @@
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
     "dev": "node ./tools/run-workspace-dev --select=true --with=yarn:storybook,yarn:playroom",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "playroom": "playroom start",
     "generate:pkg": "node ./tools/generate-package"
   },

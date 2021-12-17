@@ -1,16 +1,16 @@
 {
-  "name": "@real-system/button",
-  "version": "0.0.7",
-  "description": "Real System Button component",
+  "name": "@real-system/button-primitive",
+  "version": "0.0.0",
+  "description": "Button primitive component for real system.",
   "status": "production",
+  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn build:js && yarn types",
-    "build:js": "NODE_ENV=production node ./tools/build.js",
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
     "types": "tsc"
@@ -21,7 +21,7 @@
   },
   "keywords": [
     "real-system",
-    "button"
+    "button-primitive"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -30,18 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box": "^0.0.6",
-    "@real-system/button-primitive": "^0.0.0",
-    "@real-system/styling": "^0.0.4",
-    "@real-system/utils": "^0.0.4",
+    "@real-system/aria-button": "^0.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/box": "^0.0.6",
-    "@real-system/button-primitive": "^0.0.0",
-    "@real-system/styling": "^0.0.4",
-    "@real-system/utils": "^0.0.4",
+    "@real-system/aria-button": "^0.0.0",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

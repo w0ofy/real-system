@@ -1,12 +1,7 @@
-import { BoxAs, BoxStyleProps } from '@real-system/box';
+import { BoxStyleProps } from '@real-system/box';
 import { merge } from '@real-system/utils';
 
-import {
-  ButtonSizes,
-  ButtonStates,
-  ButtonVariants,
-  InternalButtonProps,
-} from './types';
+import { ButtonSizes, ButtonStates, ButtonVariants } from './types';
 
 const resetStyles: BoxStyleProps = {
   appearance: 'none',
@@ -63,7 +58,4 @@ const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
   }),
 };
 
-export type BoxAsButtonProps = Omit<InternalButtonProps, 'buttonState'>;
-const BoxAsButton = BoxAs<BoxAsButtonProps>('button');
-
-export { baseStyles, BoxAsButton, getSizeStyles, resetStyles };
+export { baseStyles, getSizeStyles, resetStyles };
