@@ -53,7 +53,7 @@ const Template = (args) => {
           name="email-address"
           placeholder="personal@realsystem.com"
           suffix={
-            <Button size="small" variant="link">
+            <Button size="small" variant="floating">
               <Icon icon="information-circle" />
             </Button>
           }
@@ -70,6 +70,11 @@ const Template = (args) => {
           id="input-3"
           name="email-address"
           value="personal@realsystem.com"
+          suffix={
+            <Button size="small" variant="floating" intent="default">
+              <Icon icon="clipboard-copy" />
+            </Button>
+          }
           {...args}
         />
       </Container>

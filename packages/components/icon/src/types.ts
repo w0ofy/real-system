@@ -1,7 +1,7 @@
 import * as Icons from '@heroicons/react/outline';
 
 import type { MarginProps } from '@real-system/styling';
-import type { PaletteIntents, ThemeTokens } from '@real-system/theme';
+import type { PaletteIntents, PaletteSizes } from '@real-system/theme';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils';
 
 /** Hero Icon types */
@@ -31,23 +31,7 @@ type IconProps = {
   /**
    * Controls the size of the icon
    */
-  size?:
-    | Extract<
-        ThemeTokens,
-        | 'size-icon-10'
-        | 'size-icon-20'
-        | 'size-icon-30'
-        | 'size-icon-40'
-        | 'size-icon-50'
-        | 'size-icon-60'
-        | 'size-icon-70'
-        | 'size-icon-80'
-        | 'size-icon-90'
-        | 'size-icon-100'
-        | 'size-icon-110'
-      >
-    | 'size-icon-button'
-    | 'size-icon-button-small';
+  size?: PaletteSizes;
   /**
    * Controls the color of the icon. If an `intent` is not provided the color defaults to `currentColor`
    */

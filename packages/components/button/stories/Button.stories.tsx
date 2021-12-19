@@ -13,10 +13,11 @@ export default {
   argTypes: {
     trailingIcon: { control: { type: 'select', options: ICONS_LIST } },
     leadingIcon: { control: { type: 'select', options: ICONS_LIST } },
+    loading: { control: 'boolean' },
   },
   args: {
     children: 'Button',
-    variant: 'primary',
+    variant: 'default',
   },
 } as Meta;
 
@@ -55,7 +56,7 @@ const ShowcaseTemplate = (args) => (
         <Icon icon="download" />
       </Button>
     </Row>
-    {args.variant !== 'link' && (
+    {args.variant !== 'text' && (
       <Row>
         <Button {...args} disabled />
         <Button {...args} disabled trailingIcon={<Icon icon="download" />} />
@@ -66,29 +67,29 @@ const ShowcaseTemplate = (args) => (
       </Row>
     )}
     <Row>
-      <Button {...args} intent="neutral" />
-      <Button {...args} intent="neutral" trailingIcon={<Icon icon="cog" />} />
-      <Button {...args} intent="neutral" leadingIcon={<Icon icon="cog" />} />
-      <Button {...args} intent="neutral">
+      <Button {...args} intent="primary" />
+      <Button {...args} intent="primary" trailingIcon={<Icon icon="cog" />} />
+      <Button {...args} intent="primary" leadingIcon={<Icon icon="cog" />} />
+      <Button {...args} intent="primary">
         <Icon icon="cog" />
       </Button>
     </Row>
-    {args.variant !== 'link' && (
+    {args.variant !== 'text' && (
       <Row>
-        <Button {...args} intent="neutral" disabled />
+        <Button {...args} intent="primary" disabled />
         <Button
           {...args}
           disabled
-          intent="neutral"
+          intent="primary"
           trailingIcon={<Icon icon="cog" />}
         />
         <Button
           {...args}
           disabled
-          intent="neutral"
+          intent="primary"
           leadingIcon={<Icon icon="cog" />}
         />
-        <Button {...args} intent="neutral" disabled>
+        <Button {...args} intent="primary" disabled>
           <Icon icon="cog" />
         </Button>
       </Row>
@@ -101,7 +102,7 @@ const ShowcaseTemplate = (args) => (
         <Icon icon="trash" />
       </Button>
     </Row>
-    {args.variant !== 'link' && (
+    {args.variant !== 'text' && (
       <Row>
         <Button {...args} intent="danger" disabled />
         <Button
@@ -129,97 +130,37 @@ ShowcaseTemplate.defaultProps = {
   mr: 10,
 };
 
-export const Showcase = () => (
+export const DefaultButton = (args) => (
   <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
-    <ShowcaseTemplate variant="primary" />
-    <ShowcaseTemplate variant="secondary" />
-    <ShowcaseTemplate variant="ghost" />
-    <ShowcaseTemplate variant="link" />
-    <ShowcaseTemplate variant="primary" size="small" />
-    <ShowcaseTemplate variant="secondary" size="small" />
-    <ShowcaseTemplate variant="ghost" size="small" />
+    <ShowcaseTemplate {...args} />
   </Container>
 );
 
-export const Primary = (args) => (
-  <Container>
-    <Row>
-      <Button {...args} mr={10}>
-        {args.intent ? capitalize(args.intent) : 'Primary'} Button
-      </Button>
-    </Row>
+export const PrimaryButton = (args) => (
+  <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
+    <ShowcaseTemplate {...args} variant="primary" />
   </Container>
 );
 
-export const PrimarySmall = (args) => (
-  <Container>
-    <Row>
-      <Button {...args} size="small">
-        {args.intent ? capitalize(args.intent) : 'Small'} Button
-      </Button>
-    </Row>
-  </Container>
-);
-
-export const Secondary = (args) => (
-  <Container>
-    <Row>
-      <Button variant="secondary">
-        {args.intent ? capitalize(args.intent) : 'Secondary'} Button
-      </Button>
-    </Row>
-  </Container>
-);
-
-export const SecondarySmall = (args) => (
-  <Container>
-    <Row>
-      <Button {...args} variant="secondary" size="small">
-        {args.intent ? capitalize(args.intent) : 'Small'} Button
-      </Button>
-    </Row>
-  </Container>
-);
-
-export const Ghost = (args) => {
+export const MinimalButton = (args) => {
   return (
-    <Container>
-      <Row>
-        <Button {...args} variant="ghost">
-          {args.intent ? capitalize(args.intent) : 'Ghost'} Button
-        </Button>
-      </Row>
+    <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
+      <ShowcaseTemplate {...args} variant="minimal" />
     </Container>
   );
 };
 
-export const GhostSmall = (args) => {
-  return (
-    <Container>
-      <Row>
-        <Button {...args} variant="ghost" size="small">
-          {args.intent ? capitalize(args.intent) : 'Small'} Button
-        </Button>
-      </Row>
-    </Container>
-  );
-};
+export const FloatingButton = ({ icon, ...args }) => (
+  <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
+    <ShowcaseTemplate {...args} variant="floating" />
+  </Container>
+);
 
 export const IconButton = ({ icon, ...args }) => (
   <Container>
     <Row>
       <Button {...args}>
-        <Icon icon={icon || 'settings'} />
-      </Button>
-    </Row>
-  </Container>
-);
-
-export const LinkButton = ({ icon, ...args }) => (
-  <Container>
-    <Row>
-      <Button {...args} variant="link">
-        Link
+        <Icon icon={icon || 'cog'} />
       </Button>
     </Row>
   </Container>

@@ -51,7 +51,6 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
               icon="exclamation-circle"
               intent={ICON_INTENT_MAP[variant]}
               mr={2}
-              size="size-icon-30"
             />
           )}
         </Box>

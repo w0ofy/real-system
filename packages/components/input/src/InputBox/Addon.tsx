@@ -50,7 +50,6 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
       alignItems="center"
       justifyContent="center"
       lineHeight={3}
-      py={5}
       px={4}
       {...positionalStyles}
       {...colorStyles}

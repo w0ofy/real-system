@@ -5,7 +5,7 @@ type CircleGeometryProps = Pick<
   'cx' | 'cy' | 'r'
 >;
 
-const circleRadius = 45;
+const circleRadius = 35;
 const circleGeometry: CircleGeometryProps = {
   cx: 50,
   cy: 50,

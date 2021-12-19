@@ -5,20 +5,22 @@ import {
   backgroundColors,
   borderColors,
   borders,
-  borderWidths,
   colors,
+  shadows,
+  textColors,
+} from '../tokens/paletteScales';
+import {
+  borderWidths,
   fonts,
   fontSizes,
   fontWeights,
   letterSpacings,
   lineHeights,
   radii,
-  shadows,
   sizes,
   space,
-  textColors,
   zIndices,
-} from '../tokens';
+} from '../tokens/staticScales';
 
 export type OrdinalTokens =
   | 0

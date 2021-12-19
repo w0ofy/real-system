@@ -9,15 +9,15 @@ import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
 
-const defaultStyles: ButtonStyles = {
+const primaryStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-background-brand-inverse',
+    color: 'color-text-brand-inverse',
     backgroundColor: 'color-background-brand',
     _hover: {
-      backgroundColor: 'color-background-brand-strong-3',
+      backgroundColor: 'color-background-brand-strong-1',
     },
     _active: {
-      backgroundColor: 'color-background-brand-strong-6',
+      backgroundColor: 'color-background-brand-strong-3',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -32,13 +32,13 @@ const defaultStyles: ButtonStyles = {
 
 const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
+    color: 'color-text-danger-inverse',
     backgroundColor: 'color-background-danger',
-    color: 'color-background-danger-inverse',
     _hover: {
-      backgroundColor: 'color-background-danger-strong-3',
+      backgroundColor: 'color-background-danger-strong-1',
     },
     _active: {
-      backgroundColor: 'color-background-danger-strong-6',
+      backgroundColor: 'color-background-danger-strong-3',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -51,15 +51,15 @@ const dangerStyles: ButtonStyles = {
   }),
 };
 
-const neutralStyles: ButtonStyles = {
+const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
+    color: 'color-text-neutral-inverse',
     backgroundColor: 'color-background-neutral',
-    color: 'color-background-neutral-inverse',
     _hover: {
-      backgroundColor: 'color-background-neutral-strong-3',
+      backgroundColor: 'color-background-neutral-strong-1',
     },
     _active: {
-      backgroundColor: 'color-background-neutral-strong-9',
+      backgroundColor: 'color-background-neutral-strong-3',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -76,8 +76,8 @@ const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
   default: defaultStyles,
+  primary: primaryStyles,
   danger: dangerStyles,
-  neutral: neutralStyles,
 };
 
 const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
