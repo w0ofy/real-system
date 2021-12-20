@@ -42,7 +42,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     disabled,
     loading,
     variant = 'default',
-    size = 'medium',
+    size = 'md',
     leadingIcon,
     trailingIcon,
     ...restProps

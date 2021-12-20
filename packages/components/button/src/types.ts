@@ -2,9 +2,9 @@ import React from 'react';
 
 import type { BoxStyleProps } from '@real-system/box';
 import type { ButtonAriaProps } from '@real-system/button-primitive';
-import type { PaletteIntents } from '@real-system/theme';
+import type { PaletteIntents, PaletteSizes } from '@real-system/theme';
 
-export type ButtonSizes = 'small' | 'medium' | 'large';
+export type ButtonSizes = Extract<PaletteSizes, 'sm' | 'md' | 'lg'>;
 export type ButtonVariants = 'default' | 'primary' | 'minimal' | 'floating';
 export type ButtonIntents =
   | 'default'

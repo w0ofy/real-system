@@ -69,11 +69,12 @@ const MyComponent = () => {
   return (
     <ThemeProvider>
       <Box display="flex" flexDirection="column">
-        <Button mb={8}>Primary Button</Button>
-        <Button mb={8} variant="secondary">
-          Secondary Button
+        <Button mb={8}>Default Button</Button>
+        <Button mb={8} variant="primary">
+          Primary Button
         </Button>
-        <Button variant="ghost">Ghost Button</Button>
+        <Button variant="minimal">Minimal Button</Button>
+        <Button variant="floating">Floating Button</Button>
       </Box>
     </ThemeProvider>
   );

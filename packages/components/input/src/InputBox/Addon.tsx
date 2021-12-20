@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box';
+import { majorScale } from '@real-system/theme';
 
 const makePositionalStyles = (isSuffix = false) => {
   let styles: BoxStyleProps = {
@@ -39,8 +40,11 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
   { children, disabled, isSuffix = false },
   ref
 ) {
-  const colorStyles = makeColorStyles(disabled);
-  const positionalStyles = makePositionalStyles(isSuffix);
+  const colorStyles = useMemo(() => makeColorStyles(disabled), [disabled]);
+  const positionalStyles = useMemo(
+    () => makePositionalStyles(isSuffix),
+    [isSuffix]
+  );
 
   if (children == null) return null;
 
@@ -49,7 +53,8 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
       display="flex"
       alignItems="center"
       justifyContent="center"
-      lineHeight={3}
+      height={16}
+      lineHeight={majorScale(4)}
       px={4}
       {...positionalStyles}
       {...colorStyles}

@@ -14,21 +14,21 @@ const ifNotFloating = (
 const getSizeStyles = (
   variant: ButtonVariants
 ): { [key in ButtonSizes]: BoxStyleProps } => ({
-  large: {
+  lg: {
     px: ifNotFloating(variant, 7),
     py: ifNotFloating(variant, 4),
     height: ifNotFloating(variant, majorScale(5), 2),
     lineHeight: ifNotFloating(variant, majorScale(5), 2),
     fontSize: 2,
   },
-  medium: {
+  md: {
     px: ifNotFloating(variant, 6),
     py: ifNotFloating(variant, 3),
     height: ifNotFloating(variant, majorScale(4), 6),
     lineHeight: ifNotFloating(variant, majorScale(4), 6),
     fontSize: 1,
   },
-  small: {
+  sm: {
     px: ifNotFloating(variant, 5),
     py: ifNotFloating(variant, 3),
     height: ifNotFloating(variant, majorScale(3), 6),
