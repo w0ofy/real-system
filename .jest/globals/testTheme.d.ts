@@ -1,3 +1,1 @@
-const DefaultTheme = require('@real-system/styling').DefaultTheme;
-
-declare var TEST_THEME: DefaultTheme;
+declare const TEST_THEME = any;
