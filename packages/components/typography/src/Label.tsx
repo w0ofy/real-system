@@ -34,9 +34,9 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
         p={0}
         m={0}
         mb={4}
-        fontSize={2}
+        fontSize={1}
         fontWeight={3}
-        lineHeight={2}
+        lineHeight={1}
         color={dynamicStyles.color}
         cursor={dynamicStyles.cursor}
         {...restProps}

@@ -12,13 +12,13 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         appearance="none"
         display="block"
         width="100%"
-        py={5}
-        px={5}
+        height={16}
+        lineHeight={16}
+        px={6}
         m={0}
         fontFamily="inherit"
-        fontSize={2}
+        fontSize={1}
         fontWeight={1}
-        lineHeight={3}
         backgroundColor="transparent"
         border="none"
         borderRadius={1}
@@ -37,13 +37,19 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         _placeholder={{
           fontStyle: 'italic',
           color: 'color-text-neutral-weak-6',
+          transition: '150ms all ease-in',
+        }}
+        _hover_placeholder={{
+          fontStyle: 'italic',
+          color: 'color-text-neutral-weak-4',
         }}
         _focus_placeholder={{
           fontStyle: 'italic',
-          color: 'color-text-neutral-weak-6',
+          color: 'color-text-neutral-weak-4',
         }}
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'not-allowed' }}
+        transition="0.25s all ease-in-out"
         {...props}
       />
     );

@@ -4,6 +4,7 @@
  */
 const PSEUDO_PROP_STYLES = {
   _hover: '&:hover',
+  _hover_placeholder: '&:hover::placeholder',
   _active: '&:active, &[data-active=true]',
   _focus: '&:focus',
   _focus_placeholder: '&:focus::placeholder',

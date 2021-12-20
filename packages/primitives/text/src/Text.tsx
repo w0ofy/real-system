@@ -22,7 +22,7 @@ const Text = forwardRef<HTMLElement, TextProps>(function Text(
   {
     children,
     color = 'color-text',
-    fontSize = 2,
+    fontSize = 1,
     fontWeight = 0,
     lineHeight = 4,
     m = 0,

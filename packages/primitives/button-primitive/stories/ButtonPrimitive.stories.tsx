@@ -6,6 +6,9 @@ import { ButtonPrimitive } from '@real-system/button-primitive';
 export default {
   title: 'Primitives/Button Primitive',
   component: ButtonPrimitive,
+  args: {
+    children: 'Button Primitive',
+  },
 } as Meta;
 
 const Template = (args) => <ButtonPrimitive {...args} />;
