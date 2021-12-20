@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { existsSync } = require('fs');
 const { getWorkspacesInfo, writeToFile, logger } = require('../tools/utils');
 const { CACHE_FILE_PATH } = require('./constants');
 
@@ -12,7 +12,6 @@ const updatePackageCache = async () => {
   });
 };
 
-const cacheExists = fs.statSync(`${__dirname}/.cache/packages.json`).isFile();
 
 /* 
  * Returned Shape
@@ -25,11 +24,16 @@ const cacheExists = fs.statSync(`${__dirname}/.cache/packages.json`).isFile();
  * writes to ./.cache/packages.json. This file is a cache for jest to refer for resolving modules
  */
 (async function preTest() {
-  if (cacheExists) {
-    logger.info(
-      '[Jest Package Cache]: Skipping create package cache because is already exists.'
-    );
-    return;
+  try {
+    const cacheExists = existsSync(`${__dirname}/.cache/packages.json`);
+    if (cacheExists) {
+      return logger.info(
+        '[Jest Package Cache]: Skipping create package cache because is already exists.'
+      );
+    }
+  } catch (err) {
+    logger.warn(err);
   }
+
   return updatePackageCache();
 })();

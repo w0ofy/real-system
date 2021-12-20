@@ -11,7 +11,10 @@ type HeroIconNames = keyof HeroIconSet;
 /** Raw/unformatted icons */
 type RawIcons = KebabCase<HeroIconNames>;
 
-/** real system formatted icons -- removes "-icon" suffix so to make icon names more clean. Refer to  */
+/**
+ ** real system formatted icons
+ * This removes "-icon" suffix in order to make icon names more simple
+ * this is coupled with the `getIcon` util -- if this changes, so should `getIcon` */
 type Icons = RemoveSuffix<RawIcons, '-icon'>;
 
 /** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
@@ -50,7 +53,7 @@ type IconProps = {
 type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {
   Icon: IconValue;
   size: any;
-  intent: any;
+  color: any;
 };
 
 export type {

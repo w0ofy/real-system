@@ -13,7 +13,7 @@ const StyledIcon = styled(({ Icon, ...restProps }: InternalIconProps) => {
 })<InternalIconProps>`
   height: ${({ size }) => size};
   width: ${({ size }) => size};
-  color: ${({ intent }) => intent};
+  color: ${({ color }) => color};
 `;
 
 /**
@@ -28,9 +28,9 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     [icon, solid]
   );
   const iconSize = useToken(SIZE_MAP[size], 'sizes');
-  let iconIntent = useToken(INTENT_MAP[intent || 'default']);
+  let iconColor = useToken(INTENT_MAP[intent || 'default']);
   if (!intent) {
-    iconIntent = 'currentColor';
+    iconColor = 'currentColor';
   }
 
   return (
@@ -48,7 +48,7 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
         outlineColor: 'color-border-primary',
       }}
       {...restProps}>
-      <StyledIcon Icon={Icon} size={iconSize} intent={iconIntent} />
+      <StyledIcon Icon={Icon} size={iconSize} color={iconColor} />
     </Box>
   );
 });
