@@ -1665,7 +1665,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@changesets/cli@npm:^2.18.1":
+"@changesets/cli@npm:^2.19.0":
   version: 2.19.0
   resolution: "@changesets/cli@npm:2.19.0"
   dependencies:
@@ -2245,7 +2245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.7.0":
+"@emotion/react@npm:^11.7.1":
   version: 11.7.1
   resolution: "@emotion/react@npm:11.7.1"
   dependencies:
@@ -3288,12 +3288,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/styling@workspace:packages/libraries/styling"
   dependencies:
-    "@emotion/react": ^11.7.0
+    "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@styled-system/css": ^5.1.5
     "@types/styled-system": 5.1.13
     concurrently: ^6.4.0
-    csstype: ^3.0.9
+    csstype: ^3.0.10
     polished: ^4.1.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3328,7 +3328,7 @@ __metadata:
     "@real-system/styling": 0.0.4
     "@real-system/utils": 0.0.4
     concurrently: ^6.4.0
-    csstype: ^3.0.9
+    csstype: ^3.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
@@ -3390,7 +3390,6 @@ __metadata:
     "@real-system/box": 0.0.6
     "@real-system/styling": 0.0.4
     concurrently: ^6.4.0
-    csstype: ^3.0.9
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
@@ -3436,7 +3435,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^13.0.6":
+"@rollup/plugin-node-resolve@npm:^13.1.1":
   version: 13.1.1
   resolution: "@rollup/plugin-node-resolve@npm:13.1.1"
   dependencies:
@@ -5650,7 +5649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.7.0":
+"@typescript-eslint/parser@npm:^5.8.0":
   version: 5.8.0
   resolution: "@typescript-eslint/parser@npm:5.8.0"
   dependencies:
@@ -8998,7 +8997,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.10, csstype@npm:^3.0.2, csstype@npm:^3.0.6, csstype@npm:^3.0.9":
+"csstype@npm:^3.0.10, csstype@npm:^3.0.2, csstype@npm:^3.0.6":
   version: 3.0.10
   resolution: "csstype@npm:3.0.10"
   checksum: 20a8fa324f2b33ddf94aa7507d1b6ab3daa6f3cc308888dc50126585d7952f2471de69b2dbe0635d1fdc31223fef8e070842691877e725caf456e2378685a631
@@ -18284,7 +18283,7 @@ __metadata:
     "@babel/preset-typescript": ^7.16.5
     "@babel/register": ^7.16.5
     "@changesets/changelog-github": ^0.4.2
-    "@changesets/cli": ^2.18.1
+    "@changesets/cli": ^2.19.0
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
     "@commitlint/cz-commitlint": ^15.0.0
@@ -18293,7 +18292,7 @@ __metadata:
     "@manypkg/cli": ^0.19.1
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^21.0.1
-    "@rollup/plugin-node-resolve": ^13.0.6
+    "@rollup/plugin-node-resolve": ^13.1.1
     "@storybook/addon-a11y": ^6.4.9
     "@storybook/addon-actions": ^6.4.9
     "@storybook/addon-essentials": ^6.4.9
@@ -18310,7 +18309,7 @@ __metadata:
     "@types/react-dom": ^17.0.11
     "@types/react-test-renderer": ^17.0.1
     "@typescript-eslint/eslint-plugin": ^5.7.0
-    "@typescript-eslint/parser": ^5.7.0
+    "@typescript-eslint/parser": ^5.8.0
     addon-screen-reader: ^1.8.6
     babel-jest: ^27.4.5
     babel-loader: ^8.2.3
