@@ -1,5 +1,23 @@
 # @real-system/icon
 
+## 0.0.7
+
+### Patch Changes
+
+- [#131](https://github.com/bigwoof91/real-system/pull/131) [`5ab9504`](https://github.com/bigwoof91/real-system/commit/5ab950422bdac7e58be74c249744ae30c5b86776) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Updating tokens, sizing/scaling utilities and theme inheritance
+
+* [#125](https://github.com/bigwoof91/real-system/pull/125) [`370d15d`](https://github.com/bigwoof91/real-system/commit/370d15d16d99efe64250a41fa96b9a09c8dbb790) Thanks [@bigwoof91](https://github.com/bigwoof91)! - updating icon names and structure
+
+- [`4cee983`](https://github.com/bigwoof91/real-system/commit/4cee9836c39835a9c92155c6c27d002603e23bb3) - upgrading minor dependencies
+
+* [#138](https://github.com/bigwoof91/real-system/pull/138) [`9d3e057`](https://github.com/bigwoof91/real-system/commit/9d3e057f488a88ebb4146d83effdc9d3a8a0efec) Thanks [@bigwoof91](https://github.com/bigwoof91)! - updating docs
+
+* Updated dependencies [[`5ab9504`](https://github.com/bigwoof91/real-system/commit/5ab950422bdac7e58be74c249744ae30c5b86776), [`370d15d`](https://github.com/bigwoof91/real-system/commit/370d15d16d99efe64250a41fa96b9a09c8dbb790), [`4cee983`](https://github.com/bigwoof91/real-system/commit/4cee9836c39835a9c92155c6c27d002603e23bb3), [`9d3e057`](https://github.com/bigwoof91/real-system/commit/9d3e057f488a88ebb4146d83effdc9d3a8a0efec)]:
+  - @real-system/theme@0.0.5
+  - @real-system/utils@0.0.5
+  - @real-system/box@0.0.7
+  - @real-system/styling@0.0.5
+
 ## 0.0.6
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/aria-button",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Button accessibility hook for real system.",
   "status": "production",
   "main": "lib/index.js",

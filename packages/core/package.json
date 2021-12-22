@@ -1,6 +1,6 @@
 {
   "name": "@real-system/core",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "author": "Michael Wolf",
@@ -21,19 +21,19 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
-    "@real-system/aria-button": "^0.0.0",
-    "@real-system/box": "^0.0.6",
-    "@real-system/button": "^0.0.7",
-    "@real-system/button-primitive": "^0.0.0",
-    "@real-system/icon": "^0.0.6",
-    "@real-system/input": "^0.0.5",
-    "@real-system/spinner": "^0.0.5",
-    "@real-system/styling": "^0.0.4",
-    "@real-system/text": "^0.0.5",
-    "@real-system/theme": "^0.0.4",
-    "@real-system/typography": "^0.0.6",
-    "@real-system/utils": "^0.0.4",
-    "@real-system/visually-hidden": "^0.0.5"
+    "@real-system/aria-button": "^0.0.1",
+    "@real-system/box": "^0.0.7",
+    "@real-system/button": "^0.0.8",
+    "@real-system/button-primitive": "^0.0.1",
+    "@real-system/icon": "^0.0.7",
+    "@real-system/input": "^0.0.6",
+    "@real-system/spinner": "^0.0.6",
+    "@real-system/styling": "^0.0.5",
+    "@real-system/text": "^0.0.6",
+    "@real-system/theme": "^0.0.5",
+    "@real-system/typography": "^0.0.7",
+    "@real-system/utils": "^0.0.5",
+    "@real-system/visually-hidden": "^0.0.6"
   },
   "peerDependencies": {
     "react": "^17.0.2",
