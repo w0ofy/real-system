@@ -79,7 +79,7 @@
     "@babel/preset-typescript": "^7.16.5",
     "@babel/register": "^7.16.5",
     "@changesets/changelog-github": "^0.4.2",
-    "@changesets/cli": "^2.18.1",
+    "@changesets/cli": "^2.19.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@commitlint/cz-commitlint": "^15.0.0",
