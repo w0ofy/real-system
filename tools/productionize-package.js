@@ -24,7 +24,7 @@ const getPackagesToProductionize = async () => {
     {
       type: 'checkbox',
       name: 'packagesToUpdate',
-      message: 'Select packages to run in dev mode.',
+      message: 'Select packages to productionize.',
       choices,
     },
   ]).then((answers) => answers.packagesToUpdate);

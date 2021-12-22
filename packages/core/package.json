@@ -21,8 +21,10 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
+    "@real-system/aria-button": "^0.0.0",
     "@real-system/box": "^0.0.6",
     "@real-system/button": "^0.0.7",
+    "@real-system/button-primitive": "^0.0.0",
     "@real-system/icon": "^0.0.6",
     "@real-system/input": "^0.0.5",
     "@real-system/spinner": "^0.0.5",

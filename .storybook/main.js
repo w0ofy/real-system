@@ -24,19 +24,8 @@ module.exports = {
       skipPropsWithoutDoc: false,
       shouldExtractLiteralValuesFromEnum: true,
       // don't include node_module props as you'll cause the machine to run out of memory on our repo
-      propFilter: (prop) => {
-        if (prop.parent) {
-          // if props are not from node modules
-          if (!/node_modules/.test(prop.parent.fileName)) {
-            return true;;;
-          }
-          // document props from styled-system
-          return /real-system\/node_modules\/@types\/styled-system\/index.d.ts/.test(
-            prop.parent.fileName
-          );;
-        };
-        return true;;;
-      },
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
 

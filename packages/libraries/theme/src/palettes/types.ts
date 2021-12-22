@@ -51,4 +51,4 @@ export type Palette<T = string> = {
   status: { [key in PaletteStatuses]: T };
 } & { [key in PaletteColors]: T };
 
-export type PaletteSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type PaletteSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';

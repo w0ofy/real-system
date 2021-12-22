@@ -33,5 +33,6 @@ const ThemeProvider = ({
 
 /**
  * @todo create ThemeConsumer
+ * @todo create Theme[Component] model
  */
 export { ThemeContext, ThemeProvider, useTheme, withTheme };

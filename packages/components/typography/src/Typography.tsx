@@ -8,7 +8,6 @@ import { Label } from './Label';
 import {
   InternalTypographyProps,
   TypographyAsTags,
-  TypographyElement,
   TypographyVariants,
 } from './types';
 
@@ -38,7 +37,7 @@ export interface TypographyComponent
 
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
 const Typography: TypographyComponent = forwardRef<
-  TypographyElement,
+  HTMLParagraphElement | HTMLSpanElement,
   TypographyProps
 >(function Typography(
   { children, variant = 'paragraph', mb, marginBottom, as, ...restProps },
@@ -46,14 +45,14 @@ const Typography: TypographyComponent = forwardRef<
 ): React.ReactElement {
   return (
     <P
-      fontSize={2}
+      fontSize={1}
       fontWeight={0}
-      lineHeight={4}
+      lineHeight={2}
       m={0}
       color="color-text"
       {...restProps}
       as={as || TYPOGRAPHY_VARIANT_MAP[variant]}
-      mb={(marginBottom || mb) ?? 4}
+      mb={(marginBottom || mb) ?? 2}
       ref={ref}>
       {children}
     </P>

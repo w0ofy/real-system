@@ -18,7 +18,7 @@ const RequiredDot = ({
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="size-icon-20"
+      height="size-icon-2"
       mr={3}
       cursor={disabled ? 'not-allowed' : 'pointer'}>
       <Box

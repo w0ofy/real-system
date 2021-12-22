@@ -1,24 +1,22 @@
 import React from 'react';
 
-import { BoxStyleProps } from '@real-system/box';
-import type { MarginProps } from '@real-system/styling';
-import { PaletteIntents } from '@real-system/theme';
+import type { BoxStyleProps } from '@real-system/box';
+import type { ButtonAriaProps } from '@real-system/button-primitive';
+import type { PaletteIntents, PaletteSizes } from '@real-system/theme';
 
-export type ButtonSizes = 'small' | 'default';
-export type ButtonVariants = 'primary' | 'secondary' | 'ghost' | 'link';
+export type ButtonSizes = Extract<PaletteSizes, 'sm' | 'md' | 'lg'>;
+export type ButtonVariants = 'default' | 'primary' | 'minimal' | 'floating';
 export type ButtonIntents =
   | 'default'
-  | Extract<PaletteIntents, 'danger' | 'neutral'>;
+  | Extract<PaletteIntents, 'danger' | 'primary'>;
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  MarginProps & {
+export type ButtonProps = ButtonAriaProps &
+  Omit<BoxStyleProps, 'size'> & {
     size?: ButtonSizes;
     children: React.ReactNode;
-    /** @todo add fullwidth feature */
-    // fullWidth?: boolean;
     tabIndex?: ButtonTabIndexes;
     disabled?: boolean;
     type?: ButtonTypes;

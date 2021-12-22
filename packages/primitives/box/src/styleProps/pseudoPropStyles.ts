@@ -1,9 +1,14 @@
+import { css } from '@real-system/styling';
+
+import type { BoxProps } from '../types';
+
 /**
  * The selectors are based on [WAI-ARIA state properties](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties) and common CSS Selectors
  * Based on the excellent work done in https://github.com/chakra-ui/chakra-ui
  */
 const PSEUDO_PROP_STYLES = {
   _hover: '&:hover',
+  _hover_placeholder: '&:hover::placeholder',
   _active: '&:active, &[data-active=true]',
   _focus: '&:focus',
   _focus_placeholder: '&:focus::placeholder',
@@ -39,4 +44,31 @@ const PSEUDO_PROP_STYLES = {
     '&::-webkit-calendar-picker-indicator:hover',
 };
 
-export { PSEUDO_PROP_STYLES };
+/**
+ * Take _ prefixed style props and convert them to custom style props for CSS pseudo selectors
+ *
+ * @param {BoxProps} props any prop that Box can take
+ * @return {*}  {(((props?: Record<string, unknown> | undefined) => CSSObject) | Record<string, never>)}
+ */
+const getPseudoStyles = (
+  props: BoxProps
+): ReturnType<typeof css> | Record<string, any> => {
+  const pseudoProps = Object.keys(props).filter((propName) =>
+    propName.startsWith('_')
+  ) as Array<keyof typeof PSEUDO_PROP_STYLES>;
+
+  if (pseudoProps.length === 0) {
+    return {};
+  }
+
+  const pseudoStyles: { [key: string]: any } = {};
+  pseudoProps.forEach((pseudoProp) => {
+    if (PSEUDO_PROP_STYLES[pseudoProp] != null) {
+      pseudoStyles[PSEUDO_PROP_STYLES[pseudoProp]] = props[pseudoProp];
+    }
+  });
+
+  return css(pseudoStyles);
+};
+
+export { getPseudoStyles, PSEUDO_PROP_STYLES };

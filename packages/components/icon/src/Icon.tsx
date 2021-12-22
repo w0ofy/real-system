@@ -2,50 +2,35 @@ import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box';
 import styled from '@real-system/styling';
-import { ThemeTokens, useToken } from '@real-system/theme';
+import { useToken } from '@real-system/theme';
 
+import { INTENT_MAP, SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';
-import { IconIntent, IconProps, Icons, InternalIconProps } from './types';
-
-const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
-  default: 'color-text',
-  primary: 'color-text-brand',
-  success: 'color-text-success',
-  danger: 'color-text-danger',
-  warning: 'color-text-warning',
-  info: 'color-text-info',
-};
+import { IconProps, Icons, InternalIconProps } from './types';
 
 const StyledIcon = styled(({ Icon, ...restProps }: InternalIconProps) => {
   return <Icon {...(restProps as any)} />;
 })<InternalIconProps>`
   height: ${({ size }) => size};
   width: ${({ size }) => size};
-  color: ${({ intent }) => intent};
+  color: ${({ color }) => color};
 `;
 
 /**
  * @todo add a11y props and functionnality
  */
 const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
-  {
-    size = 'size-icon-30',
-    icon,
-    intent,
-    solid = false,
-    title = icon,
-    ...restProps
-  },
+  { size = 'sm', icon, intent, solid = false, title = icon, ...restProps },
   ref
 ) {
   const Icon = useMemo(
     () => (solid ? SolidIcons[icon] : OutlineIcons[icon]),
     [icon, solid]
   );
-  const iconSize = useToken(size, 'sizes');
-  let iconIntent = useToken(INTENT_MAP[intent || 'default']);
+  const iconSize = useToken(SIZE_MAP[size], 'sizes');
+  let iconColor = useToken(INTENT_MAP[intent || 'default']);
   if (!intent) {
-    iconIntent = 'currentColor';
+    iconColor = 'currentColor';
   }
 
   return (
@@ -63,7 +48,7 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
         outlineColor: 'color-border-primary',
       }}
       {...restProps}>
-      <StyledIcon Icon={Icon} size={iconSize} intent={iconIntent} />
+      <StyledIcon Icon={Icon} size={iconSize} color={iconColor} />
     </Box>
   );
 });
