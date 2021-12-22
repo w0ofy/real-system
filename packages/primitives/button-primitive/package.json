@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Button primitive component for real system.",
   "status": "production",
-  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -31,13 +30,13 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/aria-button": "^0.0.0",
-    "@real-system/box": "^0.0.6",
+    "@real-system/styling": "^0.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@real-system/aria-button": "^0.0.0",
-    "@real-system/box": "^0.0.6",
+    "@real-system/styling": "^0.0.4",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

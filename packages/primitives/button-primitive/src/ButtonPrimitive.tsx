@@ -1,19 +1,26 @@
 import React, { forwardRef } from 'react';
 
 import { useButton } from '@real-system/aria-button';
-import { Box, BoxProps, BoxStyleProps } from '@real-system/box';
+import styled, { StyledComponent } from '@real-system/styling';
+import { makeTestId } from '@real-system/utils';
 
-type UseButtonParams = Parameters<typeof useButton>;
-type ButtonAriaProps = UseButtonParams[0];
-type ButtonBoxProps = Omit<BoxProps, keyof ButtonAriaProps | 'as'>;
+import { composeButtonPrimitiveStyleProps } from './styleProps/props';
+import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
+import type { ButtonPrimitiveProps, ButtonPrimitiveStyleProps } from './types';
 
-type ButtonPrimitveProps = {
-  as?: Extract<keyof JSX.IntrinsicElements, 'span' | 'a' | 'button'>;
-  disabled?: boolean;
-} & ButtonBoxProps &
-  ButtonAriaProps;
+const StyledButtonPrimitive = styled.button<ButtonPrimitiveProps>(
+  composeButtonPrimitiveStyleProps(),
+  getPseudoButtonStyles
+) as StyledComponent<
+  Omit<
+    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+    'color'
+  >,
+  ButtonPrimitiveProps,
+  Record<string, unknown>
+>;
 
-const buttonPrimitiveStyles: BoxStyleProps = {
+const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
   appearance: 'none',
   color: 'color-text',
   background: 'none',
@@ -31,23 +38,28 @@ const buttonPrimitiveStyles: BoxStyleProps = {
   textDecoration: 'none',
   position: 'relative',
   margin: 0,
+  _hover: {},
   _focus: { boxShadow: 'shadow-focus', outline: 'none' },
   _active: { boxShadow: 'none' },
   _disabled: { cursor: 'not-allowed' },
 };
 
-const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitveProps>(
+const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
   function ButtonPrimitive<T = unknown>(
-    { as = 'button', ...props }: ButtonPrimitveProps & T,
+    { as = 'button', ...props }: ButtonPrimitiveProps & T,
     ref
   ) {
     const { buttonProps } = useButton(
-      { ...props, elementType: as, isDisabled: props.disabled },
+      {
+        ...props,
+        elementType: as,
+        isDisabled: props.disabled || props.isDisabled,
+      },
       ref as React.RefObject<HTMLElement>
     );
 
     return (
-      <Box
+      <StyledButtonPrimitive
         as={as}
         {...buttonPrimitiveStyles}
         {...props}
@@ -58,5 +70,8 @@ const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitveProps>(
   }
 );
 
-export type { ButtonAriaProps, ButtonPrimitveProps };
+ButtonPrimitive.defaultProps = {
+  'data-testid': makeTestId<'button-primitive'>('button-primitive'),
+};
+
 export { ButtonPrimitive, buttonPrimitiveStyles };

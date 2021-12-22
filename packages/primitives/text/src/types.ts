@@ -1,5 +1,5 @@
-import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import type { TextBaseStyleProps } from './styleProps';
+import type { TextBaseStyleProps } from './styleProps/props';
+import { PSEUDO_PROP_STYLES } from './styleProps/pseudoPropStyles';
 
 export type TextPseudoStyleProps = {
   [key in keyof typeof PSEUDO_PROP_STYLES]?: TextBaseStyleProps;

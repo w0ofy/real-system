@@ -1,7 +1,9 @@
 const prefix = 'real-system-';
 
-const makeTestId = (componentName: string): string => {
-  return prefix + componentName;
+const makeTestId = <T extends string>(
+  componentName: T
+): `${typeof prefix}${T}` => {
+  return (prefix + componentName) as `${typeof prefix}${T}`;
 };
 
 export { makeTestId };

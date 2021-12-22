@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Button accessibility hook for real system.",
   "status": "production",
-  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",

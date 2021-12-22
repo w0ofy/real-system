@@ -1,13 +1,21 @@
 import { Property } from 'csstype';
 
 import {
+  background,
+  BackgroundProps,
+  border,
+  BorderProps,
   color,
   ColorProps as StyledSystemColorProps,
   compose,
   flexbox,
   FlexboxProps,
+  grid,
+  GridProps,
   layout,
   LayoutProps,
+  opacity,
+  OpacityProps,
   overflow,
   OverflowProps,
   position,
@@ -20,20 +28,22 @@ import {
   TypographyProps,
 } from '@real-system/styling';
 
-import { realSystemProps } from './realSystemProps';
-import { RealSystemProps } from '.';
+import { RealSystemProps, realSystemProps } from './realSystemProps';
 
-const composeTextStyleProps = (): ReturnType<typeof compose> =>
+const composeBoxStyleProps = (): ReturnType<typeof compose> =>
   compose(
     // styled-system props
+    background,
     space,
     flexbox,
+    border,
     layout,
     color,
     shadow,
     position,
     typography,
-
+    grid,
+    opacity,
     overflow,
     // real system props
     realSystemProps
@@ -45,38 +55,49 @@ const composeTextStyleProps = (): ReturnType<typeof compose> =>
 type ColorProps = Omit<StyledSystemColorProps, 'color'> & {
   color?: Property.Color | string;
 };
-type TextBaseStyleProps = Partial<
-  OverflowProps &
-    PositionProps &
-    ShadowProps &
-    SpaceProps &
-    TypographyProps &
-    LayoutProps &
-    ColorProps &
+type BoxBaseStyleProps = Partial<
+  SpaceProps &
     FlexboxProps &
+    BackgroundProps &
+    BorderProps &
+    LayoutProps &
+    ShadowProps &
+    ColorProps &
+    PositionProps &
+    TypographyProps &
+    GridProps &
+    OpacityProps &
+    OverflowProps &
     RealSystemProps
 >;
 
 export {
+  background,
+  border,
   color,
-  composeTextStyleProps,
+  composeBoxStyleProps,
   flexbox,
+  grid,
   layout,
+  opacity,
   overflow,
   position,
-  // real system props
   shadow,
   space,
   typography,
 };
 export type {
+  BackgroundProps,
+  BorderProps,
+  BoxBaseStyleProps,
   ColorProps,
   FlexboxProps,
+  GridProps,
   LayoutProps,
+  OpacityProps,
   OverflowProps,
   PositionProps,
   ShadowProps,
   SpaceProps,
-  TextBaseStyleProps,
   TypographyProps,
 };

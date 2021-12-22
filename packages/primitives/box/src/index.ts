@@ -1,3 +1,3 @@
 export * from './Box';
-export * from './safelySpreadBoxProps';
+export * from './styleProps/safelySpreadBoxProps';
 export * from './types';

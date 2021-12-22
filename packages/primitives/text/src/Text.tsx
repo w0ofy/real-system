@@ -2,8 +2,8 @@ import React, { forwardRef } from 'react';
 
 import styled, { StyledComponent } from '@real-system/styling';
 
-import { getPseudoStyles } from './styleFunction';
-import { composeTextStyleProps } from './styleProps';
+import { composeTextStyleProps } from './styleProps/props';
+import { getPseudoStyles } from './styleProps/pseudoPropStyles';
 import type { TextProps } from './types';
 
 const StyledText = styled.div(

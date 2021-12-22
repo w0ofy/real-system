@@ -1,4 +1,4 @@
-import { TEXT_STYLE_PROPS } from './styleProps/index';
+import { TEXT_STYLE_PROPS } from './constants';
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 
 export const TEXT_PROPS_TO_BLOCK = [

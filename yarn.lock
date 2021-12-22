@@ -3088,6 +3088,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/css-prettifier@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@emotion/css-prettifier@npm:1.0.1"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+    stylis: 4.0.13
+  checksum: 3c75e59b072fc4c6d1e555696ac01e41a02d29324c2e95795b6c1b2caae765f1967f561b64cf19522a06ec0d7bf89948ccf9ba8c000335a6693b6a4b43b74b92
+  languageName: node
+  linkType: hard
+
 "@emotion/css@npm:^10.0.27":
   version: 10.0.27
   resolution: "@emotion/css@npm:10.0.27"
@@ -3121,6 +3131,27 @@ __metadata:
   dependencies:
     "@emotion/memoize": ^0.7.4
   checksum: 5816696dae6ac79537a31fe95256e0c1f55651507204676dd9903542b102f727c16a68924e6634a89b0972f0d15b0803bb9d4e14bd0fb8a49da8a2e3956e6639
+  languageName: node
+  linkType: hard
+
+"@emotion/jest@npm:^11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/jest@npm:11.7.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/css-prettifier": ^1.0.1
+    chalk: ^4.1.0
+    specificity: ^0.4.1
+    stylis: 4.0.13
+  peerDependencies:
+    "@types/jest": ^26.0.14 || ^27.0.0
+    enzyme-to-json: ^3.2.1
+  peerDependenciesMeta:
+    "@types/jest":
+      optional: true
+    enzyme-to-json:
+      optional: true
+  checksum: 27137da08156e0157402f86392bb924dcf6a366cfd7e94b9d8a5903bdbfe0e86a9c8832d6d933b8d2bda9933f469121cad7c4110f0a19085eb4b23bc2f407406
   languageName: node
   linkType: hard
 
@@ -4049,14 +4080,14 @@ __metadata:
   resolution: "@real-system/button-primitive@workspace:packages/primitives/button-primitive"
   dependencies:
     "@real-system/aria-button": ^0.0.0
-    "@real-system/box": ^0.0.6
+    "@real-system/styling": ^0.0.4
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
     "@real-system/aria-button": ^0.0.0
-    "@real-system/box": ^0.0.6
+    "@real-system/styling": ^0.0.4
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -19968,6 +19999,7 @@ __metadata:
     "@commitlint/config-conventional": ^15.0.0
     "@commitlint/cz-commitlint": ^15.0.0
     "@commitlint/prompt-cli": ^15.0.0
+    "@emotion/jest": ^11.7.1
     "@manypkg/cli": ^0.19.1
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^21.0.1
@@ -21469,6 +21501,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"specificity@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "specificity@npm:0.4.1"
+  bin:
+    specificity: ./bin/specificity
+  checksum: e558f1098f85aa54a8e90277309ac0d1913c84812c0bd349aa449076aa700964f71ab69f04f5fda9b7898bef9b7da3faa1cad9caedfd3f1a1ebfebedc18604ab
+  languageName: node
+  linkType: hard
+
 "split-on-first@npm:^1.0.0":
   version: 1.1.0
   resolution: "split-on-first@npm:1.1.0"
@@ -22044,6 +22085,13 @@ __metadata:
     "@styled-system/variant": ^5.1.5
     object-assign: ^4.1.1
   checksum: e1345f88e0962ad785a500b656c9b7120d87e12ab16b7c107cf745d676190918b169a849eacdf3b09b2f765d9e22838c00211200f6ebbb3cde8eaddce3535054
+  languageName: node
+  linkType: hard
+
+"stylis@npm:4.0.13":
+  version: 4.0.13
+  resolution: "stylis@npm:4.0.13"
+  checksum: 8ea7a87028b6383c6a982231c4b5b6150031ce028e0fdaf7b2ace82253d28a8af50cc5a9da8a421d3c7c4441592f393086e332795add672aa4a825f0fe3713a3
   languageName: node
   linkType: hard
 

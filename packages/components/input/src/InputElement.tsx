@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 import { Box } from '@real-system/box';
-import { majorScale } from '@real-system/theme';
 
 import { InputProps } from './types';
 
@@ -14,12 +13,12 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         display="block"
         width="100%"
         height={16}
-        lineHeight={majorScale(4)}
         px={6}
         m={0}
         fontFamily="inherit"
         fontSize={1}
         fontWeight={1}
+        lineHeight={1}
         backgroundColor="transparent"
         border="none"
         borderRadius={1}

@@ -1,5 +1,5 @@
-import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import type { BoxBaseStyleProps } from './styleProps';
+import type { BoxBaseStyleProps } from './styleProps/props';
+import { PSEUDO_PROP_STYLES } from './styleProps/pseudoPropStyles';
 
 export type BoxPseudoStyleProps = {
   [key in keyof typeof PSEUDO_PROP_STYLES]?: BoxBaseStyleProps;

@@ -1,7 +1,8 @@
 import { css } from '@real-system/styling';
 
+import type { BoxProps } from '../types';
+
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import type { BoxProps } from './types';
 
 /**
  * Take _ prefixed style props and convert them to custom style props for CSS pseudo selectors
