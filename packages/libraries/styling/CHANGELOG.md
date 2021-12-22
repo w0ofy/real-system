@@ -1,5 +1,13 @@
 # @real-system/styling
 
+## 0.0.5
+
+### Patch Changes
+
+- [`4cee983`](https://github.com/bigwoof91/real-system/commit/4cee9836c39835a9c92155c6c27d002603e23bb3) - upgrading minor dependencies
+
+* [#138](https://github.com/bigwoof91/real-system/pull/138) [`9d3e057`](https://github.com/bigwoof91/real-system/commit/9d3e057f488a88ebb4146d83effdc9d3a8a0efec) Thanks [@bigwoof91](https://github.com/bigwoof91)! - updating docs
+
 ## 0.0.4
 
 ### Patch Changes
