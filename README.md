@@ -1,7 +1,7 @@
 <p align="center">
 <img src="assets/animated-logo.gif" width="350px"  />
 </p>
-<p align="center">A react component system that is easily themeable and extendable.</p>
+<p align="center">A react component system that is easily extendable and ready-to-theme.</p>
 <p align="center">
 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=@realsystem/core&color=blue" alt="npm version" height="18"/></a>
