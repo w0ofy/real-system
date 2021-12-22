@@ -1,7 +1,9 @@
 # Automatically generated from "yarn generate-packages"
 /lib
+/aria-button
 /box
 /button
+/button-primitive
 /icon
 /input
 /spinner

@@ -12,20 +12,21 @@ export default {
     solid: { control: 'boolean' },
   },
   args: {
-    size: 'size-icon-80',
-    icon: 'bell',
+    size: 'md',
+    icon: 'external-link',
   },
 } as Meta;
 
 export const Showcase = (args) => {
   return (
     <Box display="flex">
-      <Icon {...args} mr={8} intent="default" />
-      <Icon {...args} mr={8} intent="primary" />
-      <Icon {...args} mr={8} intent="success" />
-      <Icon {...args} mr={8} intent="info" />
-      <Icon {...args} mr={8} intent="warning" />
-      <Icon {...args} mr={8} intent="danger" />
+      <Icon {...args} mr={8} size="xxs" />
+      <Icon {...args} mr={8} size="xs" />
+      <Icon {...args} mr={8} size="sm" />
+      <Icon {...args} mr={8} size="md" />
+      <Icon {...args} mr={8} size="lg" />
+      <Icon {...args} mr={8} size="xl" />
+      <Icon {...args} mr={8} size="xxl" />
     </Box>
   );
 };

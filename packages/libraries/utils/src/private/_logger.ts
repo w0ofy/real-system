@@ -6,12 +6,17 @@ _makeNewLine.ifLast = (list = [], index = list.length - 1) =>
   index + 1 === list.length ? _makeNewLine(true) : _makeNewLine(false);
 
 type _Logger = {
-  (origin, any): ReturnType<typeof console.log>;
-  error: (origin, any) => ReturnType<typeof console.error>;
-  warn: (origin, any) => ReturnType<typeof console.warn>;
-  info: (origin, any) => ReturnType<typeof console.info>;
-  table: (origin, any) => ReturnType<typeof console.table>;
-  debug: (origin, any) => ReturnType<typeof console.debug>;
+  (origin: string, ...any: any[]): ReturnType<typeof console.log>;
+  error: (origin: string, ...any: any[]) => ReturnType<typeof console.error>;
+  warn: (origin: string, ...any: any[]) => ReturnType<typeof console.warn>;
+  info: (origin: string, ...any: any[]) => ReturnType<typeof console.info>;
+  table: (origin: string, ...any: any[]) => ReturnType<typeof console.table>;
+  debug: (origin: string, ...any: any[]) => ReturnType<typeof console.debug>;
+  throw: {
+    type: (origin: string, ...any: any[]) => ReturnType<typeof TypeError>;
+    error: (origin: string, ...any: any[]) => ReturnType<typeof Error>;
+    syntax: (origin: string, ...any: any[]) => ReturnType<typeof SyntaxError>;
+  };
   br: typeof _makeNewLine;
 } & {
   [key in keyof typeof chalk]?: any;
@@ -26,17 +31,29 @@ const _logger: _Logger = (origin, ...args) =>
 
 Object.assign(_logger, {
   ...chalk,
-  table: (origin, ...args) =>
+  table: (origin: string, ...args: any[]) =>
     console.table(chalk.gray(`real-system[${origin}]`, ...args)),
-  info: (origin, ...args) =>
+  info: (origin: string, ...args: any[]) =>
     console.info(chalk.blue(`real-system[${origin}]`, ...args)),
-  warn: (origin, ...args) =>
+  warn: (origin: string, ...args: any[]) =>
     console.warn(chalk.yellow(`real-system[${origin}]`, ...args)),
-  error: (origin, ...args) =>
+  error: (origin: string, ...args: any[]) =>
     console.error(chalk.red.bold.underline(`real-system[${origin}]`, ...args)),
-  debug: (origin, ...args) =>
+  debug: (origin: string, ...args: any[]) =>
     console.debug(chalk.gray(`real-system[${origin}]`, ...args)),
   br: _makeNewLine,
+  throw: {
+    error: (origin: string, message: string) => {
+      if (origin) {
+        throw new Error(`real-system[${origin}] ${message}`);
+      }
+    },
+    type: (origin: string, message: string) => {
+      if (origin) {
+        throw new TypeError(`real-system[${origin}] ${message}`);
+      }
+    },
+  },
 });
 
 export type { _Logger };

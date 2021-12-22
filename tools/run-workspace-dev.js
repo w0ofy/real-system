@@ -30,7 +30,7 @@ const getPackagesToWatch = async () => {
       {
         type: 'checkbox',
         name: 'packagesToWatch',
-        message: 'Select packages to run in dev mode.',
+        message: 'Select packages to run in watch mode.',
         choices: pkgNames,
       },
     ]).then((answers) => {

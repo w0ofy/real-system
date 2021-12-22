@@ -1,5 +1,6 @@
 export * from '@real-system/box';
 export * from '@real-system/button';
+export * from '@real-system/button-primitive';
 export * from '@real-system/icon';
 export * from '@real-system/input';
 export * from '@real-system/spinner';

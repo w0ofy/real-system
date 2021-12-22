@@ -31,6 +31,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/box": "^0.0.6",
+    "@real-system/button-primitive": "^0.0.0",
     "@real-system/styling": "^0.0.4",
     "@real-system/utils": "^0.0.4",
     "react": "^17.0.2",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@real-system/box": "^0.0.6",
+    "@real-system/button-primitive": "^0.0.0",
     "@real-system/styling": "^0.0.4",
     "@real-system/utils": "^0.0.4",
     "concurrently": "^6.4.0",

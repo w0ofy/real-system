@@ -39,22 +39,21 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
         p={0}
         m={0}
         mt={5}
-        fontSize={2}
+        fontSize={1}
         fontWeight={0}
-        lineHeight={2}
+        lineHeight={1}
         color={`color-text-${LABEL_INTENT_MAP[variant]}`}
         {...restProps}
         ref={ref}>
-        <Box>
-          {variant === 'danger' && (
+        {variant === 'danger' && (
+          <Box>
             <Icon
               icon="exclamation-circle"
               intent={ICON_INTENT_MAP[variant]}
               mr={2}
-              size="size-icon-30"
             />
-          )}
-        </Box>
+          </Box>
+        )}
         <Box as="span">{children}</Box>
       </Text>
     );

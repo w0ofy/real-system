@@ -1,4 +1,5 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** */
 const TEST_THEME = require('./.jest/globals/testTheme');
 
 module.exports = {

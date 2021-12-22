@@ -7,17 +7,17 @@
   {
     "group": "Button",
     "name": "Primary",
-    "code": "<Button>Primary</Button>"
+    "code": "<Button>Default</Button>"
   },
   {
     "group": "Button",
     "name": "Secondary",
-    "code": "<Button variant=\"secondary\">Secondary</Button>"
+    "code": "<Button variant=\"primary\">Primary</Button>"
   },
   {
     "group": "Button",
     "name": "Ghost",
-    "code": "<Button variant=\"ghost\">Ghost</Button>"
+    "code": "<Button variant=\"minimal\">Minimal</Button>"
   },
   {
     "group": "Button",
@@ -32,7 +32,12 @@
   {
     "group": "Button",
     "name": "Small",
-    "code": "<Button size=\"small\">Small</Button>"
+    "code": "<Button size=\"sm\">Small</Button>"
+  },
+  {
+    "group": "Button",
+    "name": "Large",
+    "code": "<Button size=\"lg\">Large</Button>"
   },
   {
     "group": "Icon Button",
