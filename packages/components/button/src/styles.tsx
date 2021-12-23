@@ -1,5 +1,7 @@
-import { BoxStyleProps } from '@real-system/box';
-import { buttonPrimitiveStyles } from '@real-system/button-primitive';
+import {
+  ButtonPrimitiveStyleProps,
+  buttonPrimitiveStyles,
+} from '@real-system/button-primitive';
 import { majorScale } from '@real-system/theme';
 import { merge } from '@real-system/utils';
 
@@ -13,7 +15,7 @@ const ifNotFloating = (
 
 const getSizeStyles = (
   variant: ButtonVariants
-): { [key in ButtonSizes]: BoxStyleProps } => ({
+): { [key in ButtonSizes]: ButtonPrimitiveStyleProps } => ({
   lg: {
     px: ifNotFloating(variant, 7),
     py: ifNotFloating(variant, 4),
@@ -37,7 +39,7 @@ const getSizeStyles = (
   },
 });
 
-const baseStyles: { [key in ButtonStates]: BoxStyleProps } = {
+const baseStyles: { [key in ButtonStates]: ButtonPrimitiveStyleProps } = {
   default: merge(buttonPrimitiveStyles, {
     cursor: 'pointer',
   }),

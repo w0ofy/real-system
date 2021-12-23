@@ -20,8 +20,8 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))<BoxStyleProps>`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${getToken('color-background-neutral-strong-1')};
-  opacity: 0.25;
+  background-color: ${getToken('color-background-neutral')};
+  opacity: 0.2;
   z-index: ${getToken(3, 'zIndices')};
   ${composeBoxStyleProps()}
 `;
