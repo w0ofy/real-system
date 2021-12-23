@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useButton } from '@real-system/aria-button';
 
 type UseButtonParams = Parameters<typeof useButton>;
@@ -24,6 +26,7 @@ type ButtonPrimitiveElementProps = Omit<
   'data-testid'?: string;
   /** controls whether the button is disabled */
   disabled?: ButtonAriaProps['isDisabled'];
+  onClick?: React.MouseEventHandler<any>;
 };
 
 type ButtonPrimitiveProps = ButtonPrimitiveElementProps &

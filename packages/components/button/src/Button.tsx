@@ -57,7 +57,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     () => getSizeStyles(variant)[size],
     [variant, size]
   );
-  const showLoading = buttonState === 'loading' && variant !== 'floating';
+  const showLoading = useMemo(
+    () => buttonState === 'loading' && variant !== 'floating',
+    [buttonState, variant]
+  );
   const showDisabled = buttonState !== 'default';
   const ButtonVariant = BUTTON_VARIANTS[variant];
   return (

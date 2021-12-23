@@ -101,7 +101,7 @@ const STYLE_MAP: {
   danger: dangerStyles,
 };
 
-export type ButtonProps = Partial<BoxProps> & {
+export type ButtonProps = Partial<Button> & {
   children: React.ReactNode;
   disabled?: boolean;
   loading?: boolean;
