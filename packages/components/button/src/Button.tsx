@@ -44,6 +44,8 @@ const Label = styled.span<LabelProps>((props) => ({
   marginRight: props.mr,
 }));
 
+const getIconMarginX = (iconExists: any) => (iconExists ? organScale(5) : 0);
+
 /**
  * @todo update sizes API with more variations
  */
@@ -83,9 +85,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       disabled={isDisabled}
       ref={ref}>
       {leadingIcon ? leadingIcon : null}
-      <Label
-        ml={leadingIcon ? organScale(5) : 0}
-        mr={trailingIcon ? organScale(5) : 0}>
+      <Label ml={getIconMarginX(leadingIcon)} mr={getIconMarginX(trailingIcon)}>
         {isLoading ? (
           <Spinner size="sm" color="color-text-neutral-weak-3" />
         ) : (

@@ -1,12 +1,15 @@
 # Automatically generated from "yarn generate-packages"
 /lib
+/animation
 /aria-button
 /box
 /button
 /button-primitive
+/dialog-primitive
 /icon
 /input
 /spinner
+/state
 /styling
 /text
 /theme

@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import { useButton } from '@real-system/aria-button';
 import styled, { StyledComponent } from '@real-system/styling';
-import { makeTestId } from '@real-system/utils';
+import { _logger, makeTestId } from '@real-system/utils';
 
 import { composeButtonPrimitiveStyleProps } from './styleProps/props';
 import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
@@ -57,6 +57,13 @@ const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
       },
       ref as React.RefObject<HTMLElement>
     );
+
+    if (props.onClick) {
+      _logger.warn(
+        'button-primitive',
+        '`onClick` is deprecated. You can use this but we recommend using `onPress`'
+      );
+    }
 
     return (
       <StyledButtonPrimitive

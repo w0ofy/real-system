@@ -11,7 +11,7 @@ export type DefaultPaletteColors =
   | '#FD6FFF'
   | '#81FCED'
   | '#FFCA58'
-  | '#435a6f'
+  | '#474d66'
   | '#092744'
   | '#ffffff';
 
@@ -35,7 +35,7 @@ const palettes: PaletteConfig = {
       tertiary: '#81FCED',
       quaternary: '#FFCA58',
     },
-    neutral: '#435a6f',
+    neutral: '#474d66',
     dark: '#092744',
     light: '#ffffff',
   },

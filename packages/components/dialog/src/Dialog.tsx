@@ -1,17 +1,16 @@
 import React, { forwardRef } from 'react';
 
 import { useTransition } from '@real-system/animation';
+import { BoxStyleProps } from '@real-system/box';
 import { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
 import { makeTestId } from '@real-system/utils';
-
-import { BoxStyleProps } from '../../../primitives/box/src/types';
 
 import { DialogContent, DialogOverlay } from './components';
 import { DialogContext, DialogContextProvider } from './DialogContext';
 
 const useTransitionProps = {
   from: { opacity: 0, transform: 'translate3d(0, 10px, 0)' },
-  enter: { opacity: 0.7, transform: 'translate3d(0, 0, 0)' },
+  enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
   leave: { opacity: 0, transform: 'translate3d(0, 10px, 0)' },
   config: { duration: 250, mass: 0.5, tension: 370, friction: 26 },
 };

@@ -19,6 +19,9 @@ type MakeColorRangeReturnValue<
   O extends PaletteKeys
 > = Record<`${T}-${O}-${TokenSuffixes}` | `${T}-${O}`, Property.Color>;
 
+const formatFix = (str: string | undefined, isPrefix = false) =>
+  str ? (isPrefix ? `${str} ` : ` ${str}`) : '';
+
 const defaultMods: Modifications = {
   prefix: '',
   suffix: '',
@@ -27,8 +30,8 @@ const defaultMods: Modifications = {
 const applyValueModifications =
   (mods = defaultMods) =>
   (val: string) => {
-    const { prefix, suffix } = mods;
-    return `${prefix || ''} ${val} ${suffix || ''}`;
+    const { prefix = '', suffix = '' } = mods;
+    return `${formatFix(prefix, true)}${val}${formatFix(suffix)}`;
   };
 
 /**

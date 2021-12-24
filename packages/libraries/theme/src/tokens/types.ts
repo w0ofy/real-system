@@ -32,4 +32,6 @@ export type TokenPrefixes =
   | 'color-text'
   | 'color-border'
   | 'shadow'
-  | 'shadow-border';
+  | 'shadow-border'
+  | 'drop-shadow'
+  | 'overlay-shadow';

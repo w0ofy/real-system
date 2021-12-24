@@ -16,16 +16,17 @@ export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';
 
 export type ButtonProps = ButtonPrimitiveProps & {
-  size?: ButtonSizes;
   children: React.ReactNode;
-  tabIndex?: ButtonTabIndexes;
   disabled?: boolean;
-  type?: ButtonTypes;
-  variant?: ButtonVariants;
-  intent?: ButtonIntents;
   loading?: boolean;
   leadingIcon?: React.ReactElement;
   trailingIcon?: React.ReactElement;
+  onPress?: ButtonPrimitiveProps['onPress'];
+  tabIndex?: ButtonTabIndexes;
+  type?: ButtonTypes;
+  variant?: ButtonVariants;
+  intent?: ButtonIntents;
+  size?: ButtonSizes;
 };
 
 export type InternalButtonProps = Omit<ButtonProps, 'variant' | 'size'> & {

@@ -3,4 +3,4 @@ export * from './makeColorRange';
 export * from './makeTokenScale';
 export * from './paletteUtils';
 export * from './sizeUtils';
-export * from './useToken';
+export * from './types';
