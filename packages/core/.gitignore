@@ -5,7 +5,9 @@
 /box
 /button
 /button-primitive
+/dialog
 /dialog-primitive
+/flex
 /icon
 /input
 /spinner

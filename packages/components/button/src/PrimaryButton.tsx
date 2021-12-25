@@ -84,7 +84,7 @@ const STYLE_MAP: {
 
 const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
   (
-    { children, buttonState, intent = 'default', ...restProps },
+    { children, buttonState, intent = 'primary', ...restProps },
     ref
   ): React.ReactElement => {
     return (

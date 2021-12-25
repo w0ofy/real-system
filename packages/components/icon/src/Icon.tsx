@@ -33,8 +33,6 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     iconColor = 'currentColor';
   }
 
-  console.log(iconSize, iconColor);
-
   return (
     <Box
       ref={ref}

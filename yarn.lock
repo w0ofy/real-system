@@ -3386,13 +3386,18 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.16.0
     "@babel/core": ^7.16.0
+    "@real-system/animation": ^0.0.0
     "@real-system/aria-button": ^0.0.1
     "@real-system/box": ^0.0.7
     "@real-system/button": ^0.0.8
     "@real-system/button-primitive": ^0.0.1
+    "@real-system/dialog": ^0.0.0
+    "@real-system/dialog-primitive": ^0.0.0
+    "@real-system/flex": ^0.0.0
     "@real-system/icon": ^0.0.7
     "@real-system/input": ^0.0.6
     "@real-system/spinner": ^0.0.6
+    "@real-system/state": ^0.0.0
     "@real-system/styling": ^0.0.5
     "@real-system/text": ^0.0.6
     "@real-system/theme": ^0.0.5
@@ -3423,7 +3428,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/dialog@workspace:packages/components/dialog":
+"@real-system/dialog@^0.0.0, @real-system/dialog@workspace:packages/components/dialog":
   version: 0.0.0-use.local
   resolution: "@real-system/dialog@workspace:packages/components/dialog"
   dependencies:
@@ -3431,8 +3436,12 @@ __metadata:
     "@real-system/box": ^0.0.7
     "@real-system/button": ^0.0.8
     "@real-system/dialog-primitive": ^0.0.0
+    "@real-system/flex": ^0.0.0
+    "@real-system/state": ^0.0.0
     "@real-system/styling": ^0.0.5
     "@real-system/theme": ^0.0.5
+    "@real-system/typography": ^0.0.7
+    "@real-system/utils": ^0.0.5
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3442,8 +3451,34 @@ __metadata:
     "@real-system/box": ^0.0.7
     "@real-system/button": ^0.0.8
     "@real-system/dialog-primitive": ^0.0.0
+    "@real-system/flex": ^0.0.0
+    "@real-system/state": ^0.0.0
     "@real-system/styling": ^0.0.5
     "@real-system/theme": ^0.0.5
+    "@real-system/typography": ^0.0.7
+    "@real-system/utils": ^0.0.5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@real-system/flex@^0.0.0, @real-system/flex@workspace:packages/components/flex":
+  version: 0.0.0-use.local
+  resolution: "@real-system/flex@workspace:packages/components/flex"
+  dependencies:
+    "@real-system/box": ^0.0.7
+    "@real-system/styling": ^0.0.5
+    "@real-system/theme": ^0.0.5
+    "@real-system/utils": ^0.0.5
+    concurrently: ^6.4.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.2
+  peerDependencies:
+    "@real-system/box": ^0.0.7
+    "@real-system/styling": ^0.0.5
+    "@real-system/theme": ^0.0.5
+    "@real-system/utils": ^0.0.5
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -3514,7 +3549,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/state@workspace:packages/libraries/state":
+"@real-system/state@^0.0.0, @real-system/state@workspace:packages/libraries/state":
   version: 0.0.0-use.local
   resolution: "@real-system/state@workspace:packages/libraries/state"
   dependencies:

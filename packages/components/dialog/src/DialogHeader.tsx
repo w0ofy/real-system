@@ -2,12 +2,11 @@ import React, { forwardRef, useCallback } from 'react';
 
 import { Box, BoxProps } from '@real-system/box';
 import { Button } from '@real-system/button';
+import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
 import { makeTestId } from '@real-system/utils';
 
 import { useDialogContext } from './DialogContext';
-
-const Flex = (props: BoxProps) => <Box display="flex" {...props} />;
 
 type DialogHeaderProps = BoxProps & {
   showCloseButton?: boolean;
@@ -29,16 +28,16 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
         margin={0}
         flexShrink={0}
         py={7}
+        px={8}
         ref={ref}
         data-testid={makeTestId('dialog-header')}
         {...props}>
-        <Flex justifyContent="space-between">
-          <Flex alignItems="center" flexGrow={1} pl={7} mr={12}>
+        <Flex yAlignContent="center" xAlignContent="between">
+          <Flex grow={1} mr={12}>
             {children}
           </Flex>
           <Button
             variant="minimal"
-            mr={7}
             onPress={handleOnClose}
             data-testid={makeTestId('dialog-close-button')}>
             <Icon icon="x" title="close" />

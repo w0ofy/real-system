@@ -1,20 +1,19 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxProps } from '@real-system/box';
+import { Flex, FlexProps } from '@real-system/flex';
 import { makeTestId } from '@real-system/utils';
 
-type DialogFooterProps = BoxProps;
+type DialogFooterProps = FlexProps;
 
 const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
   function DialogFooter({ children, ...props }, ref) {
     return (
-      <Box
+      <Flex
         as="footer"
-        display="flex"
-        alignItems="center"
-        flexShrink={0}
+        yAlignContent="center"
+        shrink={0}
         py={7}
-        px={7}
+        px={8}
         borderTopStyle="solid"
         borderTopWidth="1px"
         borderTopColor="color-border-neutral-weak-8"
@@ -22,7 +21,7 @@ const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
         data-testid={makeTestId('dialog-footer')}
         {...props}>
         {children}
-      </Box>
+      </Flex>
     );
   }
 );

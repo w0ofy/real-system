@@ -12,7 +12,7 @@ const DialogBody = forwardRef<HTMLDivElement, DialogBodyProps>(
     return (
       <Box
         py={7}
-        px={7}
+        px={8}
         ref={ref}
         data-testid={makeTestId('modal-body')}
         {...props}>

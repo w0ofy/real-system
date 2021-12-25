@@ -1,7 +1,7 @@
 {
-  "name": "@real-system/dialog",
+  "name": "@real-system/flex",
   "version": "0.0.0",
-  "description": "Dialog component for real system.",
+  "description": "Flex layout component for real system.",
   "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -20,7 +20,7 @@
   },
   "keywords": [
     "real-system",
-    "dialog"
+    "flex"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -29,29 +29,17 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/animation": "^0.0.0",
     "@real-system/box": "^0.0.7",
-    "@real-system/button": "^0.0.8",
-    "@real-system/dialog-primitive": "^0.0.0",
-    "@real-system/flex": "^0.0.0",
-    "@real-system/state": "^0.0.0",
     "@real-system/styling": "^0.0.5",
     "@real-system/theme": "^0.0.5",
-    "@real-system/typography": "^0.0.7",
     "@real-system/utils": "^0.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/animation": "^0.0.0",
     "@real-system/box": "^0.0.7",
-    "@real-system/button": "^0.0.8",
-    "@real-system/dialog-primitive": "^0.0.0",
-    "@real-system/flex": "^0.0.0",
-    "@real-system/state": "^0.0.0",
     "@real-system/styling": "^0.0.5",
     "@real-system/theme": "^0.0.5",
-    "@real-system/typography": "^0.0.7",
     "@real-system/utils": "^0.0.5",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
