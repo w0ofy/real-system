@@ -21,13 +21,18 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
+    "@real-system/animation": "^0.0.0",
     "@real-system/aria-button": "^0.0.1",
     "@real-system/box": "^0.0.7",
     "@real-system/button": "^0.0.8",
     "@real-system/button-primitive": "^0.0.1",
+    "@real-system/dialog": "^0.0.0",
+    "@real-system/dialog-primitive": "^0.0.0",
+    "@real-system/flex": "^0.0.0",
     "@real-system/icon": "^0.0.7",
     "@real-system/input": "^0.0.6",
     "@real-system/spinner": "^0.0.6",
+    "@real-system/state": "^0.0.0",
     "@real-system/styling": "^0.0.5",
     "@real-system/text": "^0.0.6",
     "@real-system/theme": "^0.0.5",

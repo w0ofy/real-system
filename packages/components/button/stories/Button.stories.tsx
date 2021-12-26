@@ -49,14 +49,22 @@ const ShowcaseTemplate = (args) => (
       {capitalize(args.variant)} {args.size ? capitalize(args.size) : ''}
     </Heading>
     <Row>
-      <Button {...args} />
-      <Button {...args} trailingIcon={<Icon icon="download" />} />
-      <Button {...args} leadingIcon={<Icon icon="download" />} />
-      <Button {...args}>
+      <Button {...args} intent="default" />
+      <Button
+        {...args}
+        intent="default"
+        trailingIcon={<Icon icon="download" />}
+      />
+      <Button
+        {...args}
+        intent="default"
+        leadingIcon={<Icon icon="download" />}
+      />
+      <Button {...args} intent="default">
         <Icon icon="download" />
       </Button>
     </Row>
-    {args.variant !== 'text' && (
+    {args.variant !== 'floating' && (
       <Row>
         <Button {...args} disabled />
         <Button {...args} disabled trailingIcon={<Icon icon="download" />} />

@@ -1,11 +1,9 @@
 import React from 'react';
 
 import {
-  PrimitiveThemeContext as ThemeContext,
+  PrimitiveThemeContext,
   PrimitiveThemeProvider,
   PrimitiveThemeProviderProps,
-  primitiveUseTheme as useTheme,
-  primitiveWithTheme as withTheme,
 } from '@real-system/styling';
 
 import { themes, ThemeShape } from '../themes';
@@ -35,4 +33,7 @@ const ThemeProvider = ({
  * @todo create ThemeConsumer
  * @todo create Theme[Component] model
  */
-export { ThemeContext, ThemeProvider, useTheme, withTheme };
+
+const ThemeContext = PrimitiveThemeContext;
+
+export { ThemeContext, ThemeProvider };

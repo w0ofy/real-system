@@ -30,15 +30,15 @@ $ yarn add @real-system/styling
 ```jsx
 import styled from '@real-system/styling';
 
-const Flex = styled.div`
-  display: flex;
+const Block = styled.div`
+  display: block;
 `;
 
 const MyComponent = () => {
   return (
-    <Flex>
+    <Block>
       ...
-    </Flex>
+    </Block>
   );
 };
 

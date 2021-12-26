@@ -16,28 +16,28 @@ const styles: {
   >;
 } = {
   heading1: {
-    fontSize: 9,
-    fontWeight: 3,
-    lineHeight: 9,
-    mb: 7,
-  },
-  heading2: {
     fontSize: 7,
     lineHeight: 7,
     fontWeight: 3,
-    mb: 6,
+    mb: 5,
   },
-  heading3: {
+  heading2: {
     fontSize: 5,
     lineHeight: 5,
     fontWeight: 3,
-    mb: 5,
+    mb: 4,
+  },
+  heading3: {
+    fontSize: 4,
+    lineHeight: 4,
+    fontWeight: 3,
+    mb: 3,
   },
   heading4: {
     fontSize: 3,
     lineHeight: 3,
     fontWeight: 3,
-    mb: 4,
+    mb: 3,
   },
   heading5: {
     fontSize: 2,
@@ -71,7 +71,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
         color="color-text"
         {...styles[variant]}
         ref={ref}
-        mb={mb || styles[variant].mb}>
+        mb={mb ?? styles[variant].mb}>
         {children}
       </Text>
     );

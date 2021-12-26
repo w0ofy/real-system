@@ -1,29 +1,36 @@
 import { Property } from 'csstype';
 
 import {
+  // PROPS: background
   background,
   BackgroundProps,
+  // PROPS: border
   border,
   BorderProps,
+  // PROPS: color (includes opacity)
   color,
   ColorProps as StyledSystemColorProps,
+  // FUNCTION: compose
   compose,
+  // PROPS: flexbox
   flexbox,
   FlexboxProps,
+  // PROPS: grid
   grid,
   GridProps,
+  // PROPS: layout (includes overflow)
   layout,
   LayoutProps,
-  opacity,
-  OpacityProps,
-  overflow,
-  OverflowProps,
+  // PROPS: position
   position,
   PositionProps,
+  // PROPS: shadow
   shadow,
   ShadowProps,
+  // PROPS: space
   space,
   SpaceProps,
+  // PROPS: typography
   typography,
   TypographyProps,
 } from '@real-system/styling';
@@ -43,8 +50,6 @@ const composeBoxStyleProps = (): ReturnType<typeof compose> =>
     position,
     typography,
     grid,
-    opacity,
-    overflow,
     // real system props
     realSystemProps
   );
@@ -66,8 +71,6 @@ type BoxBaseStyleProps = Partial<
     PositionProps &
     TypographyProps &
     GridProps &
-    OpacityProps &
-    OverflowProps &
     RealSystemProps
 >;
 
@@ -79,8 +82,6 @@ export {
   flexbox,
   grid,
   layout,
-  opacity,
-  overflow,
   position,
   shadow,
   space,
@@ -94,8 +95,6 @@ export type {
   FlexboxProps,
   GridProps,
   LayoutProps,
-  OpacityProps,
-  OverflowProps,
   PositionProps,
   ShadowProps,
   SpaceProps,

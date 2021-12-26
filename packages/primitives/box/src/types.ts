@@ -28,8 +28,6 @@ export type BoxElementProps = Omit<
   // optgroup props
   label?: string;
   datetime?: string;
-  /** element identifier for customization */
-  element?: string;
   /** variant for variant styling */
   variant?: string;
   /** testid for unit testing libraries like @testing-library/react */

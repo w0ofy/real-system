@@ -1,7 +1,8 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
 import { Spinner } from '@real-system/spinner';
+import styled from '@real-system/styling';
+import { organScale } from '@real-system/theme';
 
 import { DefaultButton } from './DefaultButton';
 import { FloatingButton } from './FloatingButton';
@@ -33,6 +34,18 @@ const BUTTON_VARIANTS: {
   floating: FloatingButton,
 };
 
+type LabelProps = {
+  ml: number | string;
+  mr: number | string;
+};
+
+const Label = styled.span<LabelProps>((props) => ({
+  marginLeft: props.ml,
+  marginRight: props.mr,
+}));
+
+const getIconMarginX = (iconExists: any) => (iconExists ? organScale(5) : 0);
+
 /**
  * @todo update sizes API with more variations
  */
@@ -57,25 +70,28 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     () => getSizeStyles(variant)[size],
     [variant, size]
   );
-  const showLoading = buttonState === 'loading' && variant !== 'floating';
-  const showDisabled = buttonState !== 'default';
+  const isLoading = useMemo(
+    () => buttonState === 'loading' && variant !== 'floating',
+    [buttonState, variant]
+  );
+  const isDisabled = buttonState !== 'default';
   const ButtonVariant = BUTTON_VARIANTS[variant];
   return (
     <ButtonVariant
       {...restProps}
       {...sizeStyles}
-      loading={showLoading}
+      loading={isLoading}
       buttonState={buttonState}
-      disabled={showDisabled}
+      disabled={isDisabled}
       ref={ref}>
       {leadingIcon ? leadingIcon : null}
-      <Box as="span" ml={leadingIcon ? 5 : 0} mr={trailingIcon ? 5 : 0}>
-        {showLoading ? (
+      <Label ml={getIconMarginX(leadingIcon)} mr={getIconMarginX(trailingIcon)}>
+        {isLoading ? (
           <Spinner size="sm" color="color-text-neutral-weak-3" />
         ) : (
           children
         )}
-      </Box>
+      </Label>
       {trailingIcon ? trailingIcon : null}
     </ButtonVariant>
   );

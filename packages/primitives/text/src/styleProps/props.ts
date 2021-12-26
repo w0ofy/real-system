@@ -8,8 +8,6 @@ import {
   FlexboxProps,
   layout,
   LayoutProps,
-  overflow,
-  OverflowProps,
   position,
   PositionProps,
   shadow,
@@ -33,7 +31,6 @@ const composeTextStyleProps = (): ReturnType<typeof compose> =>
     position,
     typography,
 
-    overflow,
     // real system props
     realSystemProps
   );
@@ -45,8 +42,7 @@ type ColorProps = Omit<StyledSystemColorProps, 'color'> & {
   color?: Property.Color | string;
 };
 type TextBaseStyleProps = Partial<
-  OverflowProps &
-    PositionProps &
+  PositionProps &
     ShadowProps &
     SpaceProps &
     TypographyProps &
@@ -61,7 +57,6 @@ export {
   composeTextStyleProps,
   flexbox,
   layout,
-  overflow,
   position,
   // real system props
   shadow,
@@ -72,7 +67,6 @@ export type {
   ColorProps,
   FlexboxProps,
   LayoutProps,
-  OverflowProps,
   PositionProps,
   ShadowProps,
   SpaceProps,

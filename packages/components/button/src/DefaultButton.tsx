@@ -1,13 +1,15 @@
 import React, { forwardRef } from 'react';
 
-import { BoxProps, BoxStyleProps } from '@real-system/box';
-import { ButtonPrimitive } from '@real-system/button-primitive';
+import {
+  ButtonPrimitive,
+  ButtonPrimitiveStyleProps,
+} from '@real-system/button-primitive';
 import { merge } from '@real-system/utils';
 
 import { baseStyles } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
-type ButtonStyles = Record<ButtonStates, BoxStyleProps>;
+type ButtonStyles = Record<ButtonStates, ButtonPrimitiveStyleProps>;
 
 const primaryStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
@@ -99,13 +101,6 @@ const STYLE_MAP: {
   default: defaultStyles,
   primary: primaryStyles,
   danger: dangerStyles,
-};
-
-export type ButtonProps = Partial<BoxProps> & {
-  children: React.ReactNode;
-  disabled?: boolean;
-  loading?: boolean;
-  buttonState: ButtonStates;
 };
 
 const DefaultButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
