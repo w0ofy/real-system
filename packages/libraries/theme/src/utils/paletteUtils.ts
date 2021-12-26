@@ -1,10 +1,11 @@
 import { Property } from 'csstype';
 
-import { getColorContrast } from '@real-system/styling';
+import { polished } from '@real-system/styling';
 import { _get } from '@real-system/utils';
 
 import { Palette, PaletteKeys } from '../palettes/types';
 
+const { readableColor } = polished;
 const getPaletteColor = (palette: Palette, key: PaletteKeys): string =>
   _get.oneOf<Palette, string>(
     palette,
@@ -17,7 +18,7 @@ const getPaletteContrast = (
   hexColor: Property.Color
 ): Property.Color => {
   // Check contrast
-  const paletteKey = getColorContrast(hexColor) === 'black' ? 'dark' : 'light';
+  const paletteKey = readableColor(hexColor) === '#fff' ? 'light' : 'dark';
 
   return _get(palette, paletteKey);
 };

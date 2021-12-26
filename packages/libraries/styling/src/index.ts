@@ -39,5 +39,4 @@ export * from 'styled-system';
 /**
  * styled, css and token utilities
  */
-export * from './colorUtils';
 export default styled;
