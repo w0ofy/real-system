@@ -16,20 +16,27 @@
 
 - This supports a superior DX. Imagine an engineering team simply wants to use the Real System `Box`; we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
 
-| Packages   |                                                                     |
-| :--------- | :------------------------------------------------------------------ |
-| core       | [@real-system/core](packages/core)                                  |
-| components | [@real-system/button](packages/components/button)                   |
-|            | [@real-system/icon](packages/components/icon)                       |
-|            | [@real-system/input](packages/components/input)                     |
-|            | [@real-system/spinner](packages/components/spinner)                 |
-|            | [@real-system/typography](packages/components/typography)           |
-|            | [@real-system/visually-hidden](packages/components/visually-hidden) |
-| libraries  | [@real-system/styling](packages/libraries/styling)                  |
-|            | [@real-system/theme](packages/libraries/theme)                      |
-|            | [@real-system/utils](packages/libraries/utils)                      |
-| primitives | [@real-system/box](packages/primitives/box)                         |
-|            | [@real-system/text](packages/primitives/text)                       |
+| Packages   |                                                                       |
+| :--------- | :-------------------------------------------------------------------- |
+| core       | [@real-system/core](packages/core)                                    |
+| components | [@real-system/button](packages/components/button)                     |
+|            | [@real-system/dialog](packages/components/dialog)                     |
+|            | [@real-system/flex](packages/components/flex)                         |
+|            | [@real-system/icon](packages/components/icon)                         |
+|            | [@real-system/input](packages/components/input)                       |
+|            | [@real-system/spinner](packages/components/spinner)                   |
+|            | [@real-system/typography](packages/components/typography)             |
+|            | [@real-system/visually-hidden](packages/components/visually-hidden)   |
+| libraries  | [@real-system/animation](packages/libraries/animation)                |
+|            | [@real-system/aria-button](packages/libraries/aria-button)            |
+|            | [@real-system/state](packages/libraries/state)                        |
+|            | [@real-system/styling](packages/libraries/styling)                    |
+|            | [@real-system/theme](packages/libraries/theme)                        |
+|            | [@real-system/utils](packages/libraries/utils)                        |
+| primitives | [@real-system/box](packages/primitives/box)                           |
+|            | [@real-system/button-primitive](packages/primitives/button-primitive) |
+|            | [@real-system/dialog-primitive](packages/primitives/dialog-primitive) |
+|            | [@real-system/text](packages/primitives/text)                         |
 
 <hr />
 
