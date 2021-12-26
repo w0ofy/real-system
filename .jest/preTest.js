@@ -28,7 +28,7 @@ const updatePackageCache = async () => {
     const cacheExists = existsSync(`${__dirname}/.cache/packages.json`);
     if (cacheExists) {
       return logger.info(
-        '[Jest Package Cache]: Skipping create package cache because is already exists.'
+        '[Jest Package Cache]: Skipping create package cache because it already exists.'
       );
     }
   } catch (err) {
