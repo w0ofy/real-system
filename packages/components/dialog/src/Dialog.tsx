@@ -55,11 +55,11 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
               onDismiss={hide}
               allowPinchZoom={allowPinchZoom}
               initialFocusRef={initialFocusRef}
-              {...overlayProps}>
+              {...overlayProps}
+              ref={ref}>
               <DialogContent
                 style={styles}
                 aria-labelledby={ariaLabelledby}
-                ref={ref}
                 data-testid={makeTestId<'dialog'>('dialog')}
                 {...restProps}>
                 {children}

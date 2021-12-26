@@ -24,13 +24,11 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
       [onPress, hide]
     );
 
-    /** @todo handle interaction props in button component */
-
     return (
       <Button
         onPress={handleOnPress}
-        ref={combinedRef}
         data-testid={makeTestId('modal-action')}
+        ref={combinedRef}
         {...props}
       />
     );

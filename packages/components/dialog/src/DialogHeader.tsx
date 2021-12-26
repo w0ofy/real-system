@@ -13,7 +13,10 @@ type DialogHeaderProps = BoxProps & {
 };
 
 const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
-  function DialogHeader({ children, hideCloseButton = false, ...props }, ref) {
+  function DialogHeader(
+    { children, hideCloseButton = false, ...restProps },
+    ref
+  ) {
     const { hide } = useDialogContext();
     const handleOnClose = useCallback(
       () => (hide ? hide() : undefined),
@@ -31,7 +34,7 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
         px={8}
         ref={ref}
         data-testid={makeTestId('dialog-header')}
-        {...props}>
+        {...restProps}>
         <Flex yAlignContent="center" xAlignContent="between" wrap={false}>
           <Flex grow={1} mr={12}>
             {children}

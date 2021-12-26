@@ -6,7 +6,7 @@ import { makeTestId } from '@real-system/utils';
 type DialogFooterProps = FlexProps;
 
 const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
-  function DialogFooter({ children, ...props }, ref) {
+  function DialogFooter({ children, ...restProps }, ref) {
     return (
       <Flex
         as="footer"
@@ -17,9 +17,9 @@ const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
         borderTopStyle="solid"
         borderTopWidth="1px"
         borderTopColor="color-border-neutral-weak-8"
-        ref={ref}
         data-testid={makeTestId('dialog-footer')}
-        {...props}>
+        {...restProps}
+        ref={ref}>
         {children}
       </Flex>
     );
