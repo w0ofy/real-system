@@ -1,5 +1,11 @@
 # @real-system/styling
 
+## 0.0.7
+
+### Patch Changes
+
+- [#142](https://github.com/bigwoof91/real-system/pull/142) [`3d4485f`](https://github.com/bigwoof91/real-system/commit/3d4485fb9bcdb66f7c7e9f9b733973711f6157e6) Thanks [@bigwoof91](https://github.com/bigwoof91)! - using more builtins instead of home-brewed theming helpers
+
 ## 0.0.6
 
 ### Patch Changes

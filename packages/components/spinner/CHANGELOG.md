@@ -1,5 +1,13 @@
 # @real-system/typography
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [[`3d4485f`](https://github.com/bigwoof91/real-system/commit/3d4485fb9bcdb66f7c7e9f9b733973711f6157e6)]:
+  - @real-system/styling@0.0.7
+  - @real-system/box@0.0.9
+
 ## 0.0.7
 
 ### Patch Changes
