@@ -7,13 +7,12 @@ type Justify = 'start' | 'end';
 type DialogFooterActionsProps = {
   children: NonNullable<React.ReactNode>;
   justify?: Justify;
-  testId?: string;
 } & BoxProps;
 
 const DialogFooterActions = forwardRef<
   HTMLDivElement,
   DialogFooterActionsProps
->(function DialogFooterActions({ children, justify, testId, ...props }, ref) {
+>(function DialogFooterActions({ children, justify, ...restProps }, ref) {
   const count = React.Children.count(children);
   const ifLastAction = useCallback((idx: number) => count !== idx + 1, [count]);
   return (
@@ -26,7 +25,7 @@ const DialogFooterActions = forwardRef<
       alignItems="center"
       ref={ref}
       data-testid={makeTestId('modal-footer-actions')}
-      {...props}>
+      {...restProps}>
       {React.Children.map(children, (child, idx) => (
         <Box marginRight={ifLastAction(idx) ? 4 : null}>{child}</Box>
       ))}

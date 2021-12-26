@@ -12,8 +12,6 @@ import {
   FlexboxProps,
   layout,
   LayoutProps,
-  overflow,
-  OverflowProps,
   position,
   PositionProps,
   shadow,
@@ -38,7 +36,6 @@ const composeButtonPrimitiveStyleProps = (): ReturnType<typeof compose> =>
     shadow,
     position,
     typography,
-    overflow,
     // real system props
     realSystemProps
   );
@@ -59,7 +56,6 @@ type ButtonPrimitiveBaseStyleProps = Partial<
     ColorProps &
     PositionProps &
     TypographyProps &
-    OverflowProps &
     RealSystemProps
 >;
 
@@ -71,7 +67,6 @@ export type {
   ColorProps,
   FlexboxProps,
   LayoutProps,
-  OverflowProps,
   PositionProps,
   ShadowProps,
   SpaceProps,

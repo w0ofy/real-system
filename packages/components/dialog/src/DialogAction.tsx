@@ -8,7 +8,7 @@ import { useDialogContext } from './DialogContext';
 type DialogActionProps = ButtonProps;
 
 const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
-  function DialogAction({ onPress = undefined, ...props }, ref) {
+  function DialogAction({ onPress = undefined, ...restProps }, ref) {
     const { hide } = useDialogContext();
 
     const innerRef = useRef<HTMLButtonElement>(null);
@@ -29,7 +29,7 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
         onPress={handleOnPress}
         data-testid={makeTestId('modal-action')}
         ref={combinedRef}
-        {...props}
+        {...restProps}
       />
     );
   }
