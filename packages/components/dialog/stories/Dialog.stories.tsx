@@ -20,7 +20,7 @@ export default {
 
 const Template = (args) => {
   const [isOpen, setIsOpen] = useState(false);
-  const closeRef = useRef(null);
+  const confirmRef = useRef(null);
   const openDialog = () => setIsOpen(true);
   const closeDialog = () => setIsOpen(false);
 
@@ -28,7 +28,7 @@ const Template = (args) => {
     <>
       <Button onPress={openDialog}>Open Dialog</Button>
       <Dialog
-        initialFocusRef={closeRef}
+        initialFocusRef={confirmRef}
         ariaLabelledby="dialog"
         visible={isOpen}
         hide={closeDialog}>
@@ -40,13 +40,20 @@ const Template = (args) => {
             Minim aliquip aliquip elit aute. Nostrud minim qui duis cupidatat
             Lorem. Aliqua elit ad aute nulla commodo aliqua aliquip aliquip
             laboris ex sint aute non velit. Ad occaecat et minim dolor in
-            consectetur deserunt tempor nostrud.
+            consectetur deserunt tempor nostrud. Minim aliquip aliquip elit
+            aute. Nostrud minim qui duis cupidatat Lorem. Aliqua elit ad aute
+            nulla commodo aliqua aliquip aliquip laboris ex sint aute non velit.
+            Ad occaecat et minim dolor in consectetur deserunt tempor nostrud.
           </Typography>
         </DialogBody>
         <DialogFooter>
           <DialogFooterActions>
-            <DialogAction ref={closeRef} onPress={closeDialog}>
-              Close
+            <DialogAction onPress={closeDialog}>Close</DialogAction>
+            <DialogAction
+              variant="primary"
+              ref={confirmRef}
+              onPress={closeDialog}>
+              Confirm
             </DialogAction>
           </DialogFooterActions>
         </DialogFooter>

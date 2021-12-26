@@ -9,11 +9,11 @@ import { makeTestId } from '@real-system/utils';
 import { useDialogContext } from './DialogContext';
 
 type DialogHeaderProps = BoxProps & {
-  showCloseButton?: boolean;
+  hideCloseButton?: boolean;
 };
 
 const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
-  function DialogHeader({ children, showCloseButton = true, ...props }, ref) {
+  function DialogHeader({ children, hideCloseButton = false, ...props }, ref) {
     const { hide } = useDialogContext();
     const handleOnClose = useCallback(
       () => (hide ? hide() : undefined),
@@ -32,16 +32,18 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
         ref={ref}
         data-testid={makeTestId('dialog-header')}
         {...props}>
-        <Flex yAlignContent="center" xAlignContent="between">
+        <Flex yAlignContent="center" xAlignContent="between" wrap={false}>
           <Flex grow={1} mr={12}>
             {children}
           </Flex>
-          <Button
-            variant="minimal"
-            onPress={handleOnClose}
-            data-testid={makeTestId('dialog-close-button')}>
-            <Icon icon="x" title="close" />
-          </Button>
+          {hideCloseButton ? null : (
+            <Button
+              variant="minimal"
+              onPress={handleOnClose}
+              data-testid={makeTestId('dialog-close-button')}>
+              <Icon icon="x" title="close" />
+            </Button>
+          )}
         </Flex>
       </Box>
     );
