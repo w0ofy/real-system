@@ -1,6 +1,6 @@
 {
   "name": "@real-system/utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "utilities for real system",
   "status": "production",
   "main": "lib/index.js",
