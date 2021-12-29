@@ -1,5 +1,18 @@
 # @real-system/typography
 
+## 0.0.10
+
+### Patch Changes
+
+- [`e56e2ec`](https://github.com/bigwoof91/real-system/commit/e56e2ec0307eaee20d92269f7281c86a2c4d4ad5) - fixing bundles
+
+- Updated dependencies [[`e56e2ec`](https://github.com/bigwoof91/real-system/commit/e56e2ec0307eaee20d92269f7281c86a2c4d4ad5)]:
+  - @real-system/visually-hidden@0.0.9
+  - @real-system/styling@0.0.8
+  - @real-system/utils@0.0.7
+  - @real-system/box@0.0.10
+  - @real-system/text@0.0.9
+
 ## 0.0.9
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @real-system/utils
 
+## 0.0.7
+
+### Patch Changes
+
+- [`e56e2ec`](https://github.com/bigwoof91/real-system/commit/e56e2ec0307eaee20d92269f7281c86a2c4d4ad5) - fixing bundles
+
 ## 0.0.6
 
 ### Patch Changes
