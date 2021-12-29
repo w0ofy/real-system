@@ -1,10 +1,10 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   parserPreset: 'conventional-changelog-conventionalcommits',
-  // rules: {
-  //   ...
-  // },
+  // rules: {},
   prompt: {
+    enableMultipleScopes: true,
+    scopeEnumSeparator: ',',
     messages: {
       skip: ':skip',
       max: 'upper %d chars',
@@ -80,7 +80,7 @@ module.exports = {
       },
       scope: {
         description:
-          'What is the scope of this change (e.g. component or file name)',
+          'What is the scope of this change (e.g. module, component or file name)',
       },
       subject: {
         description:
