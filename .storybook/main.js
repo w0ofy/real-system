@@ -49,4 +49,7 @@ module.exports = {
 
     return config;
   },
+  features: {
+    babelModeV7: true,
+  },
 };
