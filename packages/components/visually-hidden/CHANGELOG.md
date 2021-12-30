@@ -1,5 +1,15 @@
 # @real-system/visually-hidden
 
+## 0.0.11
+
+### Patch Changes
+
+- [`08d4f33`](https://github.com/bigwoof91/real-system/commit/08d4f33a6c53f0df4a7b0e9842513f4f4e41e3fb) - patching bundle issues
+
+- Updated dependencies [[`08d4f33`](https://github.com/bigwoof91/real-system/commit/08d4f33a6c53f0df4a7b0e9842513f4f4e41e3fb)]:
+  - @real-system/styling@0.0.10
+  - @real-system/box@0.0.12
+
 ## 0.0.10
 
 ### Patch Changes
