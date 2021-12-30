@@ -9,11 +9,6 @@ export default {
   component: VisuallyHidden,
 } as Meta;
 
-export const Default = (args) => {
-  return (
-    <Typography.Label required>
-      First Name
-      <VisuallyHidden {...args}>Required: </VisuallyHidden>
-    </Typography.Label>
-  );
+export const Default = () => {
+  return <Typography.Label required>First Name</Typography.Label>;
 };
