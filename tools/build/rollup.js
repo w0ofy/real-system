@@ -15,6 +15,7 @@ async function build(packageJson) {
 
   const bundle = await rollup.rollup({
     input: packageEntryPoint,
+    output: { sourcemap: true, exports: 'named' },
     plugins,
   });
   logger.info('-------------------------');

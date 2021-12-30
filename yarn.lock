@@ -9546,7 +9546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3":
   version: 4.3.3
   resolution: "debug@npm:4.3.3"
   dependencies:
@@ -10425,7 +10425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^0.9.0":
+"es-module-lexer@npm:^0.9.0, es-module-lexer@npm:^0.9.3":
   version: 0.9.3
   resolution: "es-module-lexer@npm:0.9.3"
   checksum: 84bbab23c396281db2c906c766af58b1ae2a1a2599844a504df10b9e8dc77ec800b3211fdaa133ff700f5703d791198807bba25d9667392d27a5e9feda344da8
@@ -18884,7 +18884,7 @@ __metadata:
     rimraf: ^3.0.2
     rollup: ^2.62.0
     rollup-plugin-delete: ^2.0.0
-    rollup-plugin-esbuild: ^4.7.2
+    rollup-plugin-esbuild: ^4.8.2
     rollup-plugin-filesize: ^9.1.1
     rollup-plugin-local-resolve: ^1.0.7
     rollup-plugin-peer-deps-external: ^2.2.4
@@ -19482,17 +19482,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-esbuild@npm:^4.7.2":
-  version: 4.7.2
-  resolution: "rollup-plugin-esbuild@npm:4.7.2"
+"rollup-plugin-esbuild@npm:^4.8.2":
+  version: 4.8.2
+  resolution: "rollup-plugin-esbuild@npm:4.8.2"
   dependencies:
     "@rollup/pluginutils": ^4.1.1
+    debug: ^4.3.3
+    es-module-lexer: ^0.9.3
     joycon: ^3.0.1
     jsonc-parser: ^3.0.0
   peerDependencies:
     esbuild: ">=0.10.1"
     rollup: ^1.20.0 || ^2.0.0
-  checksum: 14d35699349ed573e533a416823885b730cdb27757e2d7f935749c8e6bb59aaa6f2bc60a20843c927d647cd561c4865fcaaddaaeea6e38677915037bb3930e41
+  checksum: 3be8dc0c2da7eb182719f793595614396136298def5a09c874c4be6e7428026f3c7a5052b02cf19801e87de6b2d0b320aad813ad01e7992de6deabb55ca9fa3a
   languageName: node
   linkType: hard
 
