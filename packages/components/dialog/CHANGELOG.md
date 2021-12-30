@@ -1,5 +1,23 @@
 # @real-system/dialog
 
+## 0.0.4
+
+### Patch Changes
+
+- [`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332) - resolving bundle issues
+
+- Updated dependencies [[`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332)]:
+  - @real-system/button@0.0.12
+  - @real-system/flex@0.0.4
+  - @real-system/typography@0.0.11
+  - @real-system/animation@0.0.3
+  - @real-system/state@0.0.3
+  - @real-system/styling@0.0.9
+  - @real-system/theme@0.0.9
+  - @real-system/utils@0.0.8
+  - @real-system/box@0.0.11
+  - @real-system/dialog-primitive@0.0.3
+
 ## 0.0.3
 
 ### Patch Changes

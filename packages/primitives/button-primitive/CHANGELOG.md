@@ -1,5 +1,15 @@
 # @real-system/button-primitive
 
+## 0.0.5
+
+### Patch Changes
+
+- [`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332) - resolving bundle issues
+
+- Updated dependencies [[`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332)]:
+  - @real-system/aria-button@0.0.3
+  - @real-system/styling@0.0.9
+
 ## 0.0.4
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @real-system/button
 
+## 0.0.12
+
+### Patch Changes
+
+- [`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332) - resolving bundle issues
+
+- Updated dependencies [[`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332)]:
+  - @real-system/styling@0.0.9
+  - @real-system/theme@0.0.9
+  - @real-system/utils@0.0.8
+  - @real-system/button-primitive@0.0.5
+
 ## 0.0.11
 
 ### Patch Changes

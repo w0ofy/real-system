@@ -1,5 +1,11 @@
 # @real-system/animation
 
+## 0.0.3
+
+### Patch Changes
+
+- [`3149453`](https://github.com/bigwoof91/real-system/commit/3149453e0b8313c88636c71c9e0184edd5020332) - resolving bundle issues
+
 ## 0.0.2
 
 ### Patch Changes
