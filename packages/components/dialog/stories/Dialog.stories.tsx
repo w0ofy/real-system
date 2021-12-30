@@ -31,7 +31,7 @@ const Template = (args) => {
         initialFocusRef={confirmRef}
         ariaLabelledby="dialog"
         visible={isOpen}
-        hide={closeDialog}>
+        dismiss={closeDialog}>
         <DialogHeader>
           <DialogHeading id="dialog">Dialog</DialogHeading>
         </DialogHeader>

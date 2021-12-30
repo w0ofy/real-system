@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
 import { useTransition } from '@real-system/animation';
-import { BoxStyleProps } from '@real-system/box';
-import { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
+import type { BoxStyleProps } from '@real-system/box';
+import type { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
 import { makeTestId } from '@real-system/utils';
 
 import { DialogContent, DialogOverlay } from './components';
@@ -19,11 +19,11 @@ type DialogProps = DialogContext &
   BoxStyleProps &
   Pick<DialogOverlayPrimitiveProps, 'allowPinchZoom' | 'initialFocusRef'> & {
     /**
-     * Label for the modal; This should be the `id` of the Dialog's header text
+     * (a11y) Label for the dialog i.e. `id` of the Dialog's heading (e.g. `DialogHeading` component)
      */
     ariaLabelledby: string;
     /**
-     * Children nodes rendered inside the modal
+     * Children passed to dialog
      */
     children: NonNullable<React.ReactNode>;
     testId?: string;
@@ -35,7 +35,7 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
     ariaLabelledby,
     allowPinchZoom = true,
     children,
-    hide,
+    dismiss,
     initialFocusRef,
     visible,
     overlayProps,
@@ -46,13 +46,13 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   const transition = useTransition(visible, useTransitionProps);
 
   return (
-    <DialogContextProvider hide={hide} visible={visible}>
+    <DialogContextProvider dismiss={dismiss} visible={visible}>
       {transition(
         (styles, isVisible) =>
           isVisible && (
             <DialogOverlay
               style={{ opacity: styles.opacity }}
-              onDismiss={hide}
+              onDismiss={dismiss}
               allowPinchZoom={allowPinchZoom}
               initialFocusRef={initialFocusRef}
               {...overlayProps}

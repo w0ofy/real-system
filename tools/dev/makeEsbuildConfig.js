@@ -6,7 +6,7 @@ const baseEsbuildConfig = {
   mainFields: ['module', 'main'],
   platform: 'node',
   bundle: true,
-  target: ['es2017', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
+  target: ['es2015', 'chrome60', 'firefox60', 'safari11', 'edge18', 'node12'],
   minify: isProduction,
   define: {
     'process.env.NODE_ENV': `"${ENV}"`,

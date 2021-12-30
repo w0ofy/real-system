@@ -10457,7 +10457,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.12.25":
+"esbuild@npm:^0.12.29":
   version: 0.12.29
   resolution: "esbuild@npm:0.12.29"
   bin:
@@ -18857,7 +18857,7 @@ __metadata:
     concurrently: ^6.5.1
     csstype: ^3.0.10
     directory-named-webpack-plugin: ^4.0.1
-    esbuild: ^0.12.25
+    esbuild: ^0.12.29
     eslint: ^8.5.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-jest: ^25.3.0

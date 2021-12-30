@@ -13,7 +13,7 @@
   ],
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es2017",
+    "target": "es2015",
     "lib": ["es2017", "DOM"],
     "module": "commonjs",
     "outDir": "lib",

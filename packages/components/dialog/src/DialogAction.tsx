@@ -9,7 +9,7 @@ type DialogActionProps = ButtonProps;
 
 const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
   function DialogAction({ onPress = undefined, ...restProps }, ref) {
-    const { hide } = useDialogContext();
+    const { dismiss } = useDialogContext();
 
     const innerRef = useRef<HTMLButtonElement>(null);
     const combinedRef = useMergedRefs<HTMLButtonElement>(innerRef, ref);
@@ -19,9 +19,9 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
         if (onPress) {
           return onPress(e);
         }
-        !!hide && hide();
+        !!dismiss && dismiss();
       },
-      [onPress, hide]
+      [onPress, dismiss]
     );
 
     return (
