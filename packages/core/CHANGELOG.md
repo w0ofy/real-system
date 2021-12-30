@@ -1,5 +1,31 @@
 # @real-system/core
 
+## 0.0.15
+
+### Patch Changes
+
+- [`08d4f33`](https://github.com/bigwoof91/real-system/commit/08d4f33a6c53f0df4a7b0e9842513f4f4e41e3fb) - patching bundle issues
+
+- Updated dependencies [[`08d4f33`](https://github.com/bigwoof91/real-system/commit/08d4f33a6c53f0df4a7b0e9842513f4f4e41e3fb)]:
+  - @real-system/button@0.0.13
+  - @real-system/dialog@0.0.5
+  - @real-system/flex@0.0.5
+  - @real-system/icon@0.0.12
+  - @real-system/input@0.0.11
+  - @real-system/spinner@0.0.11
+  - @real-system/typography@0.0.12
+  - @real-system/visually-hidden@0.0.11
+  - @real-system/animation@0.0.4
+  - @real-system/aria-button@0.0.4
+  - @real-system/state@0.0.4
+  - @real-system/styling@0.0.10
+  - @real-system/theme@0.0.10
+  - @real-system/utils@0.0.9
+  - @real-system/box@0.0.12
+  - @real-system/button-primitive@0.0.6
+  - @real-system/dialog-primitive@0.0.4
+  - @real-system/text@0.0.11
+
 ## 0.0.14
 
 ### Patch Changes
