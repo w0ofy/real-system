@@ -15,16 +15,38 @@ const presets = [
   '@babel/preset-typescript',
 ];
 
-const plugins = [
-  '@babel/proposal-class-properties',
+const makePlugins = (isDev) => [
+  [
+    '@babel/plugin-proposal-class-properties',
+    {
+      loose: isDev,
+    },
+  ],
   '@babel/proposal-object-rest-spread',
-  '@babel/proposal-private-methods',
-  '@babel/proposal-private-property-in-object',
+  [
+    '@babel/plugin-proposal-private-methods',
+    {
+      loose: isDev,
+    },
+  ],
+  [
+    '@babel/plugin-proposal-private-property-in-object',
+    {
+      loose: isDev,
+    },
+  ],
   '@babel/plugin-transform-runtime',
   '@babel/plugin-proposal-optional-chaining',
 ];
 
 module.exports = {
   presets,
-  plugins,
+  env: {
+    production: {
+      plugins: makePlugins(),
+    },
+    development: {
+      plugins: makePlugins(true),
+    },
+  },
 };
