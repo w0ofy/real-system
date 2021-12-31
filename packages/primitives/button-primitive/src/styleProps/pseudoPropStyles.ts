@@ -1,6 +1,6 @@
 import { css } from '@real-system/styling';
 
-import type { ButtonPrimitiveProps } from '../types';
+import type { ButtonPrimitiveBaseStyleProps } from './props';
 
 /**
  * The selectors are based on [WAI-ARIA state properties](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties) and common CSS Selectors
@@ -32,7 +32,7 @@ const PSEUDO_PROP_STYLES = {
  * @return {*}  {(((props?: Record<string, unknown> | undefined) => CSSObject) | Record<string, never>)}
  */
 const getPseudoButtonStyles = (
-  props: ButtonPrimitiveProps
+  props: ButtonPrimitiveBaseStyleProps
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
     propName.startsWith('_')

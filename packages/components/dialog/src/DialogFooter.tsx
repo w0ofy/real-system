@@ -12,11 +12,11 @@ const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
         as="footer"
         yAlignContent="center"
         shrink={0}
-        py={7}
+        py={8}
         px={8}
         borderTopStyle="solid"
         borderTopWidth="1px"
-        borderTopColor="color-border-neutral-weak-8"
+        borderTopColor="color-border-neutral-weak-9"
         data-testid={makeTestId('dialog-footer')}
         {...restProps}
         ref={ref}>

@@ -23,7 +23,7 @@ module.exports = {
     reactDocgenTypescriptOptions: {
       skipPropsWithoutDoc: false,
       shouldExtractLiteralValuesFromEnum: true,
-      // don't include node_module props as you'll cause the machine to run out of memory on our repo
+      // don't include node_module props as you can cause the machine to run out of memory
       propFilter: (prop) =>
         prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },

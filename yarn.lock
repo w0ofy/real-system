@@ -3387,6 +3387,7 @@ __metadata:
   resolution: "@real-system/aria-button@workspace:packages/libraries/aria-button"
   dependencies:
     "@react-aria/button": ^3.3.4
+    "@react-types/button": ^3.4.1
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3420,6 +3421,7 @@ __metadata:
   dependencies:
     "@real-system/aria-button": ^0.0.4
     "@real-system/styling": ^0.0.10
+    "@real-system/utils": ^0.0.9
     concurrently: ^6.4.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3427,6 +3429,7 @@ __metadata:
   peerDependencies:
     "@real-system/aria-button": ^0.0.4
     "@real-system/styling": ^0.0.10
+    "@real-system/utils": ^0.0.9
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
