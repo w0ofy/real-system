@@ -14,7 +14,7 @@ const DialogFooterActions = forwardRef<
   DialogFooterActionsProps
 >(function DialogFooterActions({ children, justify, ...restProps }, ref) {
   const count = React.Children.count(children);
-  const ifLastAction = useCallback((idx: number) => count !== idx + 1, [count]);
+  const isNotLast = useCallback((idx: number) => count !== idx + 1, [count]);
   return (
     <Box
       display="flex"
@@ -27,7 +27,7 @@ const DialogFooterActions = forwardRef<
       data-testid={makeTestId('modal-footer-actions')}
       {...restProps}>
       {React.Children.map(children, (child, idx) => (
-        <Box marginRight={ifLastAction(idx) ? 4 : null}>{child}</Box>
+        <Box marginRight={isNotLast(idx) ? 7 : null}>{child}</Box>
       ))}
     </Box>
   );

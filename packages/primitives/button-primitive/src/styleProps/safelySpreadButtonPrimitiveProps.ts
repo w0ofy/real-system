@@ -1,3 +1,5 @@
+import { ButtonPrimitiveElementProps, ButtonPrimitiveProps } from '../types';
+
 import { BUTTON_PRIMITIVE_STYLE_PROPS } from './constants';
 
 const BUTTON_PRIMITIVE_PROPS_TO_BLOCK = [
@@ -6,10 +8,15 @@ const BUTTON_PRIMITIVE_PROPS_TO_BLOCK = [
   'style',
 ];
 
-type Props = { [key: string]: any };
+type SafeProps = ButtonPrimitiveElementProps;
 
-const safelySpreadButtonPrimitiveProps = (props: Props): Props =>
-  Object.keys(props).reduce((newProps: Props, key: string): Props => {
+/**
+ * @description Utility function for filtering out style props and spreading the rest
+ */
+const safelySpreadButtonPrimitiveProps = (
+  props: ButtonPrimitiveProps
+): SafeProps =>
+  Object.keys(props).reduce((newProps: SafeProps, key) => {
     if (!BUTTON_PRIMITIVE_PROPS_TO_BLOCK.includes(key)) {
       newProps[key] = props[key];
     }

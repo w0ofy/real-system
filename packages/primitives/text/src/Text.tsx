@@ -1,22 +1,12 @@
 import React, { forwardRef } from 'react';
 
-import styled, { StyledComponent } from '@real-system/styling';
+import styled from '@real-system/styling';
 
 import { composeTextStyleProps } from './styleProps/props';
 import { getPseudoStyles } from './styleProps/pseudoPropStyles';
 import type { TextProps } from './types';
 
-const StyledText = styled.div(
-  composeTextStyleProps(),
-  getPseudoStyles
-) as StyledComponent<
-  Omit<
-    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
-    'color'
-  >,
-  TextProps,
-  Record<string, unknown>
->;
+const StyledText = styled.div(composeTextStyleProps(), getPseudoStyles);
 
 const Text = forwardRef<HTMLElement, TextProps>(function Text(
   {

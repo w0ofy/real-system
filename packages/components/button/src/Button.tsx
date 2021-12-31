@@ -3,6 +3,7 @@ import React, { forwardRef, useMemo } from 'react';
 import { Spinner } from '@real-system/spinner';
 import styled from '@real-system/styling';
 import { organScale } from '@real-system/theme';
+import { makeTestId } from '@real-system/utils';
 
 import { DefaultButton } from './DefaultButton';
 import { FloatingButton } from './FloatingButton';
@@ -44,7 +45,7 @@ const Label = styled.span<LabelProps>((props) => ({
   marginRight: props.mr,
 }));
 
-const getIconMarginX = (iconExists: any) => (iconExists ? organScale(5) : 0);
+const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? organScale(5) : 0);
 
 /**
  * @todo update sizes API with more variations
@@ -78,6 +79,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   const ButtonVariant = BUTTON_VARIANTS[variant];
   return (
     <ButtonVariant
+      data-testid={makeTestId('button')}
       {...restProps}
       {...sizeStyles}
       loading={isLoading}
@@ -85,7 +87,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       disabled={isDisabled}
       ref={ref}>
       {leadingIcon ? leadingIcon : null}
-      <Label ml={getIconMarginX(leadingIcon)} mr={getIconMarginX(trailingIcon)}>
+      <Label
+        ml={getLabelMarginX(leadingIcon)}
+        mr={getLabelMarginX(trailingIcon)}>
         {isLoading ? (
           <Spinner size="sm" color="color-text-neutral-weak-3" />
         ) : (
