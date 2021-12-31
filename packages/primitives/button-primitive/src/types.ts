@@ -1,7 +1,8 @@
 import { AriaButton_AriaButtonProps } from '@real-system/aria-button';
 
-type ButtonPrimitiveAriaProps = AriaButton_AriaButtonProps<
-  'a' | 'button' | 'span'
+type ButtonPrimitiveAriaProps = Omit<
+  AriaButton_AriaButtonProps<'a' | 'button' | 'span'>,
+  'isDisabled'
 >;
 
 import type { ButtonPrimitiveBaseStyleProps } from './styleProps/props';
@@ -21,7 +22,7 @@ type ButtonPrimitiveElementProps = ButtonPrimitiveAriaProps & {
   /** ID for unit testing libraries i.e. @testing-library/react */
   'data-testid'?: string;
   /** controls whether the button is disabled */
-  disabled?: ButtonPrimitiveAriaProps['isDisabled'];
+  disabled?: AriaButton_AriaButtonProps['isDisabled'];
   /** @deprecated `onClick` event handler for button - you can use this but it is recommended to use onPress to conform to cross-platform friendly events. */
   onClick?: React.MouseEventHandler<any>;
 };

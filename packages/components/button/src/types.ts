@@ -17,7 +17,6 @@ type ButtonTypes = 'submit' | 'button' | 'reset';
 
 export type ButtonProps = ButtonPrimitiveProps & {
   children: React.ReactNode;
-  disabled?: boolean;
   loading?: boolean;
   leadingIcon?: React.ReactElement;
   trailingIcon?: React.ReactElement;
