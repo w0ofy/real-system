@@ -3,7 +3,7 @@ import { MutableRefObject, RefCallback, useCallback } from 'react';
 type Ref<T> = MutableRefObject<T | null> | RefCallback<T | null> | null;
 type Refs<T> = Ref<T>[];
 
-const useMergedRefs = <T>(...refs: Refs<T>): Ref<T> => {
+const useMergedRef = <T>(...refs: Refs<T>): Ref<T> => {
   const filteredRefs = refs.filter(Boolean);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -29,4 +29,4 @@ const useMergedRefs = <T>(...refs: Refs<T>): Ref<T> => {
   return refCallback;
 };
 
-export { useMergedRefs };
+export { useMergedRef };

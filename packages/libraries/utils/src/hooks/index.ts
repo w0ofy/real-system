@@ -1,2 +1,2 @@
-export * from './useMergedRefs';
+export * from './useMergedRef';
 export { useUID, useUIDSeed } from 'react-uid';
