@@ -2,7 +2,7 @@ import React, { forwardRef, useRef } from 'react';
 
 import { useButton } from '@real-system/aria-button';
 import styled, { StyledComponent } from '@real-system/styling';
-import { _logger, makeTestId, useMergedRefs } from '@real-system/utils';
+import { _logger, makeTestId, useMergedRef } from '@real-system/utils';
 
 import { composeButtonPrimitiveStyleProps } from './styleProps/props';
 import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
@@ -51,7 +51,7 @@ const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
     ref
   ) {
     const internalRef = useRef<HTMLElement>(null);
-    const mergedRef = useMergedRefs<HTMLElement>(internalRef, ref);
+    const mergedRef = useMergedRef<HTMLElement>(internalRef, ref);
     const { buttonProps } = useButton(
       {
         ...restProps,

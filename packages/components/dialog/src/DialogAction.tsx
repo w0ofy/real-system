@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback, useRef } from 'react';
 
 import { Button, ButtonProps } from '@real-system/button';
-import { makeTestId, useMergedRefs } from '@real-system/utils';
+import { makeTestId, useMergedRef } from '@real-system/utils';
 
 import { useDialogContext } from './DialogContext';
 
@@ -12,7 +12,7 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
     const { dismiss } = useDialogContext();
 
     const innerRef = useRef<HTMLButtonElement>(null);
-    const combinedRef = useMergedRefs<HTMLButtonElement>(innerRef, ref);
+    const combinedRef = useMergedRef<HTMLButtonElement>(innerRef, ref);
 
     const handleOnPress = useCallback(
       (e) => {

@@ -12,7 +12,7 @@ export type DefaultPaletteColors =
   | '#81FCED'
   | '#FFCA58'
   | '#474d66'
-  | '#092744'
+  | '#101840'
   | '#ffffff';
 
 export type PaletteConfig = {
@@ -36,7 +36,7 @@ const palettes: PaletteConfig = {
       quaternary: '#FFCA58',
     },
     neutral: '#474d66',
-    dark: '#092744',
+    dark: '#101840',
     light: '#ffffff',
   },
 };
