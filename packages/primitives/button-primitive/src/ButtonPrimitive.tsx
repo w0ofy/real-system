@@ -46,19 +46,22 @@ const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
 };
 
 const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
-  function ButtonPrimitive({ as = 'button', children, ...props }, ref) {
+  function ButtonPrimitive(
+    { as = 'button', children, disabled, ...restProps },
+    ref
+  ) {
     const internalRef = useRef<HTMLElement>(null);
     const mergedRef = useMergedRefs<HTMLElement>(internalRef, ref);
     const { buttonProps } = useButton(
       {
-        ...props,
+        ...restProps,
         elementType: as,
-        isDisabled: props.disabled || props.isDisabled,
+        isDisabled: disabled,
       },
       mergedRef as React.MutableRefObject<HTMLElement>
     );
 
-    if (props.onClick) {
+    if (restProps.onClick) {
       _logger.warn(
         'button-primitive',
         '`onClick` prop is deprecated. You can use this but we recommend using `onPress` to conform to cross-platform friendly events.'
@@ -69,7 +72,7 @@ const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
       <StyledButtonPrimitive
         as={as}
         {...buttonPrimitiveStyles}
-        {...safelySpreadInternalProps(props)}
+        {...safelySpreadInternalProps(restProps)}
         {...buttonProps}
         ref={mergedRef}>
         {children}

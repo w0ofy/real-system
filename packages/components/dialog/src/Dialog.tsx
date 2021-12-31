@@ -27,7 +27,7 @@ type DialogProps = DialogContext &
      */
     children: NonNullable<React.ReactNode>;
     testId?: string;
-    overlayProps?: BoxStyleProps;
+    overlayProps?: BoxStyleProps & { className?: string };
   };
 
 const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
@@ -37,19 +37,19 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
     children,
     dismiss,
     initialFocusRef,
-    visible,
+    isVisible,
     overlayProps,
     ...restProps
   }: DialogProps,
   ref
 ) {
-  const transition = useTransition(visible, useTransitionProps);
+  const transition = useTransition(isVisible, useTransitionProps);
 
   return (
-    <DialogContextProvider dismiss={dismiss} visible={visible}>
+    <DialogContextProvider dismiss={dismiss} isVisible={isVisible}>
       {transition(
-        (styles, isVisible) =>
-          isVisible && (
+        (styles, visible) =>
+          visible && (
             <DialogOverlay
               style={{ opacity: styles.opacity }}
               onDismiss={dismiss}

@@ -1,7 +1,7 @@
 import { constate } from '@real-system/state';
 
 export type DialogContext = {
-  visible: boolean;
+  isVisible: boolean;
   dismiss: (event?: React.SyntheticEvent) => void;
 };
 
