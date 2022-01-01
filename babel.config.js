@@ -43,6 +43,9 @@ module.exports = {
   presets,
   env: {
     production: {
+      plugins: makePlugins(true),
+    },
+    release: {
       plugins: makePlugins(),
     },
     development: {

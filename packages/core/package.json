@@ -14,7 +14,7 @@
     "build:js": "yarn clean && yarn update-dependencies && yarn generate-bundle && yarn compile",
     "build:types": "./tools/build-types.sh",
     "clean": "./tools/clean-packages.sh",
-    "compile": "babel ./src/*.ts --out-dir ./lib --env-name 'production' --extensions '.ts' --config-file './babel.config.js' && yarn minify-bundle",
+    "compile": "babel ./src/*.ts --out-dir ./lib --env-name 'release' --extensions '.ts' --config-file './babel.config.js' && yarn minify-bundle",
     "update-dependencies": "node ./tools/updateDependencies.js",
     "generate-bundle": "node ./tools/generate.js",
     "minify-bundle": "node ./tools/minify"
