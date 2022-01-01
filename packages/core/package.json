@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@real-system/animation": "^0.0.4",
-    "@real-system/aria-button": "^0.0.4",
     "@real-system/box": "^0.0.12",
     "@real-system/button": "^0.0.13",
     "@real-system/button-primitive": "^0.0.6",
@@ -30,6 +29,7 @@
     "@real-system/flex": "^0.0.5",
     "@real-system/icon": "^0.0.12",
     "@real-system/input": "^0.0.11",
+    "@real-system/react-aria": "^0.0.0",
     "@real-system/spinner": "^0.0.11",
     "@real-system/state": "^0.0.4",
     "@real-system/styling": "^0.0.10",

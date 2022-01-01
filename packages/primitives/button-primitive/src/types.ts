@@ -1,7 +1,7 @@
-import { AriaButton_AriaButtonProps } from '@real-system/aria-button';
+import { AriaButton_AriaButtonProps } from '@real-system/react-aria';
 
 type ButtonPrimitiveAriaProps = Omit<
-  AriaButton_AriaButtonProps<'a' | 'button' | 'span'>,
+  AriaButton_AriaButtonProps<'button' | 'span'>,
   'isDisabled'
 >;
 
@@ -18,7 +18,7 @@ type ButtonPrimitiveStyleProps = ButtonPrimitiveBaseStyleProps &
 // Omits potential clashes from our style props with HTMLAttributes (i.e. color)
 type ButtonPrimitiveElementProps = ButtonPrimitiveAriaProps & {
   /** controls the html tag of the button */
-  as?: Extract<keyof JSX.IntrinsicElements, 'span' | 'a' | 'button'>;
+  as?: Extract<keyof JSX.IntrinsicElements, 'span' | 'button'>;
   /** ID for unit testing libraries i.e. @testing-library/react */
   'data-testid'?: string;
   /** controls whether the button is disabled */

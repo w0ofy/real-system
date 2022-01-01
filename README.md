@@ -28,7 +28,7 @@
 |            | [@real-system/typography](packages/components/typography)             |
 |            | [@real-system/visually-hidden](packages/components/visually-hidden)   |
 | libraries  | [@real-system/animation](packages/libraries/animation)                |
-|            | [@real-system/aria-button](packages/libraries/aria-button)            |
+|            | [@real-system/react-aria](packages/libraries/react-aria)            |
 |            | [@real-system/state](packages/libraries/state)                        |
 |            | [@real-system/styling](packages/libraries/styling)                    |
 |            | [@real-system/theme](packages/libraries/theme)                        |

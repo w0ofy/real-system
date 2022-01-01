@@ -9,7 +9,6 @@
 '@real-system/spinner': patch
 '@real-system/typography': patch
 '@real-system/animation': patch
-'@real-system/aria-button': patch
 '@real-system/state': patch
 '@real-system/styling': patch
 '@real-system/theme': patch
