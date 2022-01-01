@@ -31,23 +31,14 @@ describe('ButtonPrimitive', () => {
   });
 
   describe('As button', () => {
-    it('can be disabled with proper a11y rules', () => {
+    it('is disabled with proper a11y rules', () => {
       render(<ButtonPrimitiveComponent disabled />);
       expect(queryButtonPrimitive()?.getAttribute('disabled')).not.toBeNull();
     });
   });
 
-  describe('As anchor', () => {
-    it('can be disabled with proper a11y rules', () => {
-      render(<ButtonPrimitiveComponent as="a" disabled />);
-      expect(
-        queryButtonPrimitive()?.getAttribute('aria-disabled')
-      ).toBeTruthy();
-    });
-  });
-
   describe('As span', () => {
-    it('can be disabled with proper a11y rules', () => {
+    it('is disabled with proper a11y rules', () => {
       render(<ButtonPrimitiveComponent as="span" disabled />);
       expect(
         queryButtonPrimitive()?.getAttribute('aria-disabled')

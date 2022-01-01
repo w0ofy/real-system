@@ -42,12 +42,15 @@ const makePlugins = (isDev) => [
 module.exports = {
   presets,
   env: {
+    // used for bundling storybook
     production: {
       plugins: makePlugins(true),
     },
+    // used for compiling core
     release: {
       plugins: makePlugins(),
     },
+    // used for storybook / development
     development: {
       plugins: makePlugins(true),
     },
