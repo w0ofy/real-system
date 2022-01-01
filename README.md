@@ -93,7 +93,7 @@ $ yarn website
 $ git checkout -b <branch_name>
 $ git add .
 
-# the next step will throw an error if the commit message does follow these conventions: https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional
+# the next step will throw an error if the commit message doesn't follow conventional-changelog standards: https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional
 
 $ git commit -m "<your_commit_message>"
 
