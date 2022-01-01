@@ -1,4 +1,4 @@
-<h1 align="center">@realsystem/box</h1>
+<h1 align="center">@real-system/box</h1>
 <p align="center">Real System's primitive Box component.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/box"><img src="https://badgen.net/npm/v/@real-system/box?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>

@@ -25,13 +25,15 @@ Some style props can be used with shorthand syntax and all props follow longhand
 <Box p={5} m={2} backgroundColor="color-background"></Box>
 ```
 
-### Getter
+### Getters
 
-If you want to use a `token` outside of style props, you can use the `getToken` style function to make this easy.
+If you want to use a `token` outside of style props, you can use the `getToken` style function or `useToken` hook.
 The [getToken](#gettoken) style function was built so tokens can be grabbed from components without requiring the use of style props.
 
 ```jsx
-import { getToken, useTheme } from '@real-system/theme';
+import styled from '@real-system/styling';
+import { getToken, useToken } from '@real-system/theme';
+import { Box } from '@real-system/box';
 
 const StyledBox = styled(Box)`
   margin: ${getToken(2, 'space')};
@@ -40,9 +42,8 @@ const StyledBox = styled(Box)`
 
 // or
 const MyComponent = () => {
-  const theme = useTheme();
-  const bg = getToken('color-background')({ theme });
-  const space = getToken(5, 'space')({ theme });
+  const bg = useToken('color-background');
+  const space = useToken(5, 'space');
   const styles = {
     backgroundColor: bg,
     margin: space,
@@ -53,20 +54,32 @@ const MyComponent = () => {
 
 #### `getToken` signature
 
-`getToken` uses lodash's `get` and exposes type-checked `token`, `scale` and `fallback` arguments.
+`getToken` uses lodash's `get` and accepts type-checked `token`, `scale` and `fallback` arguments.
 
 ```typescript
 type ReturnType = string | number | undefined;
 /**
  * A styleFn to get theme tokens
  */
-const getToken = (
+function getToken(
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
   fallback: ReturnType = undefined
-) => {
-  return function <T = ReturnType>(props: { theme: DefaultTheme }): T {
-    return get(props.theme, `${scale}.${token}`, fallback);
-  };
-};
+): ReturnType;
+```
+
+#### `useToken` signature
+
+`useToken` uses `getToken` and `useTheme` under the hood and accepts type-checked `token`, `scale` and `fallback` arguments.
+
+```typescript
+type ReturnType = string | number | undefined;
+/**
+ * A styleFn to get theme tokens
+ */
+function getToken(
+  token: ThemeTokens,
+  scale: ThemeScales = 'colors',
+  fallback: ReturnType = undefined
+): ReturnType;
 ```

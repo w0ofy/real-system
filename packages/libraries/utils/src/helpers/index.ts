@@ -1,4 +1,7 @@
-export { capitalize } from './captialize';
-export { makeTestId } from './makeTestId';
-export { default as merge } from 'deepmerge';
+import merge from 'deepmerge';
+
+export * from './captialize';
+export * from './kebabCase';
+export * from './makeTestId';
 export { uid } from 'react-uid';
+export { merge };

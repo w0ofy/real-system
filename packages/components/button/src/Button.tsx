@@ -1,11 +1,14 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
+import { Spinner } from '@real-system/spinner';
+import styled from '@real-system/styling';
+import { organScale } from '@real-system/theme';
+import { makeTestId } from '@real-system/utils';
 
-import { GhostButton } from './GhostButton';
-import { LinkButton } from './LinkButton';
+import { DefaultButton } from './DefaultButton';
+import { FloatingButton } from './FloatingButton';
+import { MinimalButton } from './MinimalButton';
 import { PrimaryButton } from './PrimaryButton';
-import { SecondaryButton } from './SecondaryButton';
 import { getSizeStyles } from './styles';
 import { ButtonProps, ButtonStates, ButtonVariants } from './types';
 import { InternalButtonProps } from './types';
@@ -26,60 +29,77 @@ const getButtonState = (
 const BUTTON_VARIANTS: {
   [key in ButtonVariants]: React.FC<InternalButtonProps>;
 } = {
+  default: DefaultButton,
   primary: PrimaryButton,
-  secondary: SecondaryButton,
-  ghost: GhostButton,
-  link: LinkButton,
+  minimal: MinimalButton,
+  floating: FloatingButton,
 };
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      children,
-      disabled,
-      loading,
-      variant = 'primary',
-      size = 'default',
-      leadingIcon,
-      trailingIcon,
-      ...restProps
-    },
-    ref
-  ): React.ReactElement => {
-    const buttonState = useMemo(
-      () => getButtonState(disabled, loading),
-      [disabled, loading]
-    );
-    const sizeStyles = useMemo(
-      () => getSizeStyles(variant)[size],
-      [variant, size]
-    );
-    // const showLoading = buttonState === 'loading';
-    const showDisabled = buttonState !== 'default';
-    const Button = BUTTON_VARIANTS[variant];
-    return (
-      <Button
-        role="button"
-        {...restProps}
-        {...sizeStyles}
-        buttonState={buttonState}
-        disabled={showDisabled}
-        ref={ref}>
-        {leadingIcon ? leadingIcon : null}
-        <Box
-          as="span"
-          lineHeight={3}
-          ml={leadingIcon ? 5 : 0}
-          mr={trailingIcon ? 5 : 0}>
-          {children}
-        </Box>
-        {trailingIcon ? trailingIcon : null}
-      </Button>
-    );
-  }
-);
+type LabelProps = {
+  ml: number | string;
+  mr: number | string;
+};
 
-Button.displayName = 'Button';
+const Label = styled.span<LabelProps>((props) => ({
+  marginLeft: props.ml,
+  marginRight: props.mr,
+}));
+
+const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? organScale(5) : 0);
+
+/**
+ * @todo update sizes API with more variations
+ */
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  {
+    children,
+    disabled,
+    loading,
+    variant = 'default',
+    size = 'md',
+    leadingIcon,
+    trailingIcon,
+    ...restProps
+  },
+  ref
+): React.ReactElement {
+  const buttonState = useMemo(
+    () => getButtonState(disabled, loading),
+    [disabled, loading]
+  );
+  const sizeStyles = useMemo(
+    () => getSizeStyles(variant)[size],
+    [variant, size]
+  );
+  const isLoading = useMemo(
+    () => buttonState === 'loading' && variant !== 'floating',
+    [buttonState, variant]
+  );
+  const isDisabled = buttonState !== 'default';
+  const ButtonVariant = BUTTON_VARIANTS[variant];
+  return (
+    <ButtonVariant
+      data-testid={makeTestId('button')}
+      {...restProps}
+      {...sizeStyles}
+      loading={isLoading}
+      buttonState={buttonState}
+      disabled={isDisabled}
+      ref={ref}>
+      {leadingIcon ? leadingIcon : null}
+      <Label
+        ml={getLabelMarginX(leadingIcon)}
+        mr={getLabelMarginX(trailingIcon)}>
+        {isLoading ? (
+          <Spinner size="sm" color="color-text-neutral-weak-3" />
+        ) : (
+          children
+        )}
+      </Label>
+      {trailingIcon ? trailingIcon : null}
+    </ButtonVariant>
+  );
+});
 
 export { Button };
 export type { ButtonProps };

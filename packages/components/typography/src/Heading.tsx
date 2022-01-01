@@ -16,40 +16,40 @@ const styles: {
   >;
 } = {
   heading1: {
-    fontSize: 10,
-    fontWeight: 3,
-    lineHeight: 11,
-    mb: 9,
-  },
-  heading2: {
     fontSize: 7,
-    lineHeight: 10,
-    fontWeight: 3,
-    mb: 7,
-  },
-  heading3: {
-    fontSize: 5,
-    lineHeight: 9,
-    fontWeight: 3,
-    mb: 6,
-  },
-  heading4: {
-    fontSize: 3,
-    lineHeight: 8,
+    lineHeight: 7,
     fontWeight: 3,
     mb: 5,
   },
-  heading5: {
-    fontSize: 2,
-    lineHeight: 7,
+  heading2: {
+    fontSize: 5,
+    lineHeight: 5,
     fontWeight: 3,
     mb: 4,
   },
+  heading3: {
+    fontSize: 4,
+    lineHeight: 4,
+    fontWeight: 3,
+    mb: 3,
+  },
+  heading4: {
+    fontSize: 3,
+    lineHeight: 3,
+    fontWeight: 3,
+    mb: 3,
+  },
+  heading5: {
+    fontSize: 2,
+    lineHeight: 2,
+    fontWeight: 3,
+    mb: 3,
+  },
   heading6: {
     fontSize: 1,
-    lineHeight: 6,
+    lineHeight: 1,
     fontWeight: 3,
-    mb: 2,
+    mb: 1,
   },
 };
 
@@ -61,7 +61,7 @@ export type HeadingProps = {
 
 const Heading = forwardRef<HeadingElement, HeadingProps>(
   (
-    { variant = 'heading1', children, mb, as = 'div' },
+    { variant = 'heading2', children, mb, as = 'div' },
     ref
   ): React.ReactElement => {
     return (
@@ -71,7 +71,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
         color="color-text"
         {...styles[variant]}
         ref={ref}
-        mb={mb || styles[variant].mb}>
+        mb={mb ?? styles[variant].mb}>
         {children}
       </Text>
     );

@@ -16,7 +16,6 @@ const BoxComponent = (props: BoxProps = {}) => (
 const queryBoxComponent = () => screen.queryByTestId('real-system-box');
 const queryCustomTestId = (testId: string) => screen.queryByTestId(testId);
 const styleProps = { mb: 5, color: 'color-background' };
-const expectedStyled = 'margin-bottom: 1rem; color:rgb(255,255,255)';
 
 describe('Box', () => {
   it('renders', () => {
@@ -30,7 +29,8 @@ describe('Box', () => {
   });
   it('renders style props and outputs token values for given style props', () => {
     render(<BoxComponent {...styleProps} />);
-    expect(queryBoxComponent()).toHaveStyle(expectedStyled);
+    expect(queryBoxComponent()).toHaveStyleRule('margin-bottom', '1rem');
+    expect(queryBoxComponent()).toHaveStyleRule('color', '#ffffff');
   });
 });
 
@@ -54,6 +54,8 @@ describe('BoxAs', () => {
   });
   it('renders style props and outputs token values for given style props', () => {
     render(<BoxAsAnchor {...styleProps} />);
-    expect(queryBoxAsAnchor()).toHaveStyle(expectedStyled);
+
+    expect(queryBoxAsAnchor()).toHaveStyleRule('margin-bottom', '1rem');
+    expect(queryBoxAsAnchor()).toHaveStyleRule('color', '#ffffff');
   });
 });

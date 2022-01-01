@@ -1,4 +1,3 @@
-export * from './safelySpreadTextProps';
-export { composeTextStyleProps } from './styleProps';
+export * from './styleProps/safelySpreadTextProps';
 export * from './Text';
 export * from './types';

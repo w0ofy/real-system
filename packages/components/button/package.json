@@ -1,6 +1,6 @@
 {
   "name": "@real-system/button",
-  "version": "0.0.3-rc.0",
+  "version": "0.0.14",
   "description": "Real System Button component",
   "status": "production",
   "main": "lib/index.js",
@@ -9,7 +9,8 @@
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
+    "build": "yarn build:js && yarn types",
+    "build:js": "NODE_ENV=production node ./tools/build.js",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
     "types": "tsc"
@@ -29,16 +30,18 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box": "^0.0.2-rc.0",
-    "@real-system/styling": "^0.0.1-rc.0",
-    "@real-system/utils": "^0.0.1-rc.0",
+    "@real-system/button-primitive": "^0.0.7",
+    "@real-system/styling": "^0.0.11",
+    "@real-system/theme": "^0.0.11",
+    "@real-system/utils": "^0.0.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/box": "^0.0.2-rc.0",
-    "@real-system/styling": "^0.0.1-rc.0",
-    "@real-system/utils": "^0.0.1-rc.0",
+    "@real-system/button-primitive": "^0.0.7",
+    "@real-system/styling": "^0.0.11",
+    "@real-system/theme": "^0.0.11",
+    "@real-system/utils": "^0.0.10",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -4,8 +4,8 @@ import type { StyledComponent } from '@real-system/styling';
 import styled from '@real-system/styling';
 import { makeTestId } from '@real-system/utils';
 
-import { getPseudoStyles } from './styleFunctions';
-import { composeBoxStyleProps } from './styleProps';
+import { composeBoxStyleProps } from './styleProps/props';
+import { getPseudoStyles } from './styleProps/pseudoPropStyles';
 import type { BoxProps } from './types';
 
 /**
@@ -32,23 +32,28 @@ const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(
   ref
 ) {
   return (
-    <StyledBox ref={ref} {...props}>
+    <StyledBox {...props} ref={ref}>
       {children}
     </StyledBox>
   );
 });
 
-Box.defaultProps = { 'data-testid': makeTestId('box') };
+Box.defaultProps = { 'data-testid': makeTestId<'box'>('box') };
 
-type ElTag = keyof JSX.IntrinsicElements | React.ComponentType<any>;
+type As = BoxProps['as'];
 
-function BoxAs<T = Record<string | number, any>>(elTag: ElTag) {
+function BoxAs<T = Record<string | number, any>>(as: As) {
   return forwardRef<HTMLOrSVGElement, BoxProps & T>(function BoxAsComponent(
     props,
     ref
   ): React.ReactElement {
     return (
-      <Box as={elTag} data-testid={makeTestId('box-as')} ref={ref} {...props} />
+      <Box
+        as={as}
+        data-testid={makeTestId<'box-as'>('box-as')}
+        ref={ref}
+        {...props}
+      />
     );
   });
 }

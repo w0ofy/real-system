@@ -1,9 +1,19 @@
 # Automatically generated from "yarn generate-packages"
 /lib
+/animation
 /box
 /button
+/button-primitive
+/dialog
+/dialog-primitive
+/flex
 /icon
+/input
+/react-aria
+/spinner
+/state
 /styling
+/text
 /theme
 /typography
 /utils

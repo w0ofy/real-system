@@ -6,8 +6,8 @@ import { useUID } from '@real-system/utils';
 import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';
 import {
-  sizes,
   SpinnerSvg,
+  STYLES_BY_SIZE,
   SvgGroup,
   TrackCircle,
   WheelCircle,
@@ -29,7 +29,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
   },
   ref
 ) {
-  const sizeStyles = sizes[size];
+  const sizeStyles = STYLES_BY_SIZE[size];
   const titleId = useUID();
   const isVisible = useDelay(delay);
   return (

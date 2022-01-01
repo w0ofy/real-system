@@ -1,5 +1,5 @@
-import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
-import type { BoxBaseStyleProps } from './styleProps';
+import type { BoxBaseStyleProps } from './styleProps/props';
+import { PSEUDO_PROP_STYLES } from './styleProps/pseudoPropStyles';
 
 export type BoxPseudoStyleProps = {
   [key in keyof typeof PSEUDO_PROP_STYLES]?: BoxBaseStyleProps;
@@ -28,8 +28,6 @@ export type BoxElementProps = Omit<
   // optgroup props
   label?: string;
   datetime?: string;
-  /** element identifier for customization */
-  element?: string;
   /** variant for variant styling */
   variant?: string;
   /** testid for unit testing libraries like @testing-library/react */

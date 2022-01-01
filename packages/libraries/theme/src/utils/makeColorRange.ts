@@ -5,9 +5,9 @@ import { polished } from '@real-system/styling';
 import { Palette, PaletteKeys } from '../palettes';
 import { TokenPrefixes, TokenSuffixes } from '../tokens';
 
-import { getPaletteColor, getPaletteContrast } from './paletteUtils';
+import { getPaletteColor } from './getPaletteColor';
 
-const { tint, shade, invert } = polished;
+const { tint, shade, invert, readableColor } = polished;
 
 type Modifications = {
   prefix?: string;
@@ -19,6 +19,9 @@ type MakeColorRangeReturnValue<
   O extends PaletteKeys
 > = Record<`${T}-${O}-${TokenSuffixes}` | `${T}-${O}`, Property.Color>;
 
+const formatFix = (str: string | undefined, isPrefix = false) =>
+  str ? (isPrefix ? `${str} ` : ` ${str}`) : '';
+
 const defaultMods: Modifications = {
   prefix: '',
   suffix: '',
@@ -27,8 +30,8 @@ const defaultMods: Modifications = {
 const applyValueModifications =
   (mods = defaultMods) =>
   (val: string) => {
-    const { prefix, suffix } = mods;
-    return `${prefix || ''} ${val} ${suffix || ''}`;
+    const { prefix = '', suffix = '' } = mods;
+    return `${formatFix(prefix, true)}${val}${formatFix(suffix)}`;
   };
 
 /**
@@ -71,7 +74,7 @@ const makeColorRange =
       // complementary colors
       [`${prefix}-${paletteKey}-highlight`]: modifyValue(invert(color)),
       [`${prefix}-${paletteKey}-inverse`]: modifyValue(
-        getPaletteContrast(palette, color)
+        readableColor(color, palette.dark, palette.light)
       ),
     } as MakeColorRangeReturnValue<T, O>;
 

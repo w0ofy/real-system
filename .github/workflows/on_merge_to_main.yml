@@ -2,15 +2,11 @@ name: Merge to main
 
 on:
   push:
-    paths:
-      - "packages/**"
-      - ".changeset/*"
     branches:
       - main
 
 jobs:
-  version-packages:
-    name: Version packages
+  prerelease-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Setup environment
@@ -21,34 +17,29 @@ jobs:
         if: steps.env_setup.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
-      - name: Version packages and create pull request
+      - name: Run prerelease tests
+        run: yarn prerelease
+
+  version-or-publish-packages:
+    runs-on: ubuntu-latest
+    needs: prerelease-tests
+    steps:
+      - name: Setup environment
+        id: env_setup
+        uses: bigwoof91/real-system/.github/actions/setup-env@main
+
+      - name: Yarn install
+        if: steps.env_setup.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+
+      - name: Create PR or Publish Package
         uses: changesets/action@master
         with:
           version: yarn version:stable
-          commit: "chore(release): version packages"
-          title: "chore(release): version packages"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
-
-  publish-packages:
-    runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, 'chore(release): version packages')"
-    steps:
-      - name: Setup environment
-        id: env_setup
-        uses: bigwoof91/real-system/.github/actions/setup-env@main
-
-      - name: Yarn install
-        if: steps.env_setup.outputs.cache-hit != 'true'
-        run: yarn install --immutable
-        
-      - name: Test and Publish Packages
-        uses: changesets/action@master
-        with:
           publish: yarn release:stable
           commit: "chore(release): publish packages"
           title: "chore(release): publish packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false

@@ -15,30 +15,17 @@ module.exports = {
     // enable type checking
     check: true,
     checkOptions: {
-      // check all ts and tsx files, but not fixtures as they include errors on purpose
+      // check all ts and tsx files
       reportFiles: ['packages/**/*.{ts,tsx}'],
     },
-    // choose react-docgen-typescript to generate the prop tables
     reactDocgen: 'react-docgen-typescript',
-    // reactDocgenTypescriptOptions: {
-    //   shouldExtractLiteralValuesFromEnum: true,
-    //   propFilter: (prop) =>
-
-    //     prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
-    // },
     // these options will include styled-system props
     reactDocgenTypescriptOptions: {
       skipPropsWithoutDoc: false,
       shouldExtractLiteralValuesFromEnum: true,
-      // // don't include node_module props as you'll cause the machine to run out of memory on our repo
-      propFilter: (prop) => {
-        // document props from styled-system
-        return prop.parent
-          ? /real-system\/node_modules\/@types\/styled-system\/index.d.ts/.test(
-              prop?.parent?.fileName
-            )
-          : true;
-      },
+      // don't include node_module props as you can cause the machine to run out of memory
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
 
@@ -61,5 +48,8 @@ module.exports = {
     console.table(config.resolve.alias);
 
     return config;
+  },
+  features: {
+    babelModeV7: true,
   },
 };

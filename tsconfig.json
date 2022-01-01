@@ -4,10 +4,16 @@
     ".jest/setupFilesAfterEnv.ts",
     ".jest/globals/testTheme.d.ts"
   ],
-  "exclude": ["node_modules", "lib", "tools/templates"],
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "lib",
+    "**/lib",
+    "tools/templates"
+  ],
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es2017",
+    "target": "es2015",
     "lib": ["es2017", "DOM"],
     "module": "commonjs",
     "outDir": "lib",

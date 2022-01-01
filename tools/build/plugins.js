@@ -10,12 +10,11 @@ const { ENV } = require('../utils');
 const plugins = [
   esbuild({
     color: true,
-    target: ['es2017', 'chrome58', 'firefox57', 'safari11', 'edge18', 'node12'],
+    target: ['es2015', 'chrome60', 'firefox60', 'safari11', 'edge18', 'node12'],
     minify: true,
     define: {
       'process.env.NODE_ENV': `"${ENV}"`,
     },
-    sourcemap: true,
   }),
   del({ targets: 'lib', runOnce: true }),
   peerDepsExternal(),

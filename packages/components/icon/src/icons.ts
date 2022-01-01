@@ -1,26 +1,18 @@
-import * as Feather from 'react-feather';
+import * as OIcons from '@heroicons/react/outline';
+import * as SIcons from '@heroicons/react/solid';
 
-import { kebabCase } from '@real-system/utils';
+import type { Icons } from './types';
+import { getIcons } from './utils';
 
-import { FeatherIconKeys, FeatherIconValues, Icons } from './types';
+const SolidIcons = getIcons(SIcons);
+const OutlineIcons = getIcons(OIcons);
+const ICONS_LIST = Object.keys(OutlineIcons) as Icons[];
 
-type IconsMap = { [key in Icons]: FeatherIconValues };
+type IconsMap = { [key in Icons]: Icons };
 
-const ICONS = (() => {
-  const featherIcons = Object.keys(Feather) as FeatherIconKeys[];
-  const icons = featherIcons.reduce((o, rawKey) => {
-    const key = kebabCase<typeof rawKey>(rawKey);
-    return { ...o, [key]: Feather[rawKey] };
-  }, {} as IconsMap);
-
-  return icons;
-})();
-
-type IconNamesMap = { [key in Icons]: Icons };
-
-const ICON_NAMES = Object.keys(ICONS).reduce(
+const ICONS_MAP = ICONS_LIST.reduce(
   (o, key) => ({ ...o, [key]: key }),
-  {} as IconNamesMap
+  {} as IconsMap
 );
 
-export { ICON_NAMES, ICONS };
+export { ICONS_LIST, ICONS_MAP, OutlineIcons, SolidIcons };

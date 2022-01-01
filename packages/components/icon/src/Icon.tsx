@@ -1,71 +1,57 @@
-import React, { forwardRef, useCallback } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
-import { Box, BoxAs } from '@real-system/box';
-import {
-  getToken,
-  ThemeScales,
-  ThemeTokens,
-  useTheme,
-} from '@real-system/theme';
+import { Box } from '@real-system/box';
+import styled from '@real-system/styling';
+import { useToken } from '@real-system/theme';
 
-import { ICON_NAMES, ICONS } from './icons';
-import { IconIntent, IconProps, Icons, InternalIconProps } from './types';
+import { INTENT_MAP, SIZE_MAP } from './constants';
+import { OutlineIcons, SolidIcons } from './icons';
+import { IconProps, Icons, InternalIconProps } from './types';
 
-const BoxAsIcon = BoxAs<InternalIconProps>(({ icon, ...restProps }) => {
-  const Icon = ICONS[icon];
-  return <Icon {...restProps} />;
-});
-
-const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
-  default: 'color-text',
-  primary: 'color-text-brand',
-  success: 'color-text-success',
-  danger: 'color-text-danger',
-  warning: 'color-text-warning',
-  info: 'color-text-info',
-};
+const StyledIcon = styled(({ Icon, ...restProps }: InternalIconProps) => {
+  return <Icon {...(restProps as any)} />;
+})<InternalIconProps>`
+  height: ${({ size }) => size};
+  width: ${({ size }) => size};
+  color: ${({ color }) => color};
+`;
 
 /**
  * @todo add a11y props and functionnality
  */
-const Icon = forwardRef<HTMLOrSVGElement, IconProps>(
-  ({ size = 'size-icon-30', icon, intent, ...restProps }, ref) => {
-    const theme = useTheme();
-    const token = useCallback(
-      (token: ThemeTokens, scale?: ThemeScales) =>
-        getToken(token, scale)({ theme }),
-      [theme]
-    );
-    const iconSize = token(size, 'sizes');
-    const iconIntent = !intent ? 'currentColor' : token(INTENT_MAP[intent]);
-
-    return (
-      <Box
-        as="span"
-        display="flex"
-        flexShrink={0}
-        flexGrow={0}
-        width={iconSize}
-        height={iconSize}
-        _focus={{
-          outline: '2px solid',
-          outlineColor: 'color-border-primary',
-        }}
-        {...restProps}>
-        <BoxAsIcon
-          ref={ref}
-          icon={icon}
-          alt={icon}
-          title={icon}
-          size={iconSize}
-          color={iconIntent}
-        />
-      </Box>
-    );
+const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
+  { size = 'sm', icon, intent, solid = false, title = icon, ...restProps },
+  ref
+) {
+  const Icon = useMemo(
+    () => (solid ? SolidIcons[icon] : OutlineIcons[icon]),
+    [icon, solid]
+  );
+  const iconSize = useToken(SIZE_MAP[size], 'sizes');
+  let iconColor = useToken(INTENT_MAP[intent || 'default']);
+  if (!intent) {
+    iconColor = 'currentColor';
   }
-);
 
-Icon.displayName = 'Icon';
+  return (
+    <Box
+      ref={ref}
+      as="span"
+      display="flex"
+      flexShrink={0}
+      flexGrow={0}
+      width={iconSize}
+      height={iconSize}
+      title={title}
+      _focus={{
+        outline: '2px solid',
+        outlineColor: 'color-border-primary',
+      }}
+      {...restProps}>
+      <StyledIcon Icon={Icon} size={iconSize} color={iconColor} />
+    </Box>
+  );
+});
 
-export { Icon, ICON_NAMES, ICONS };
+export { Icon };
 export type { IconProps, Icons };

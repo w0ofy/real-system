@@ -1,6 +1,6 @@
 {
   "name": "@real-system/text",
-  "version": "0.0.1-rc.0",
+  "version": "0.0.12",
   "description": "Text primitive for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -9,7 +9,8 @@
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
+    "build": "yarn build:js && yarn types",
+    "build:js": "NODE_ENV=production node ./tools/build.js",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
     "types": "tsc"
@@ -29,12 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/styling": "^0.0.1-rc.0",
+    "@real-system/styling": "^0.0.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/styling": "^0.0.1-rc.0",
+    "@real-system/styling": "^0.0.11",
     "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

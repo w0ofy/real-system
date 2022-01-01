@@ -1,3 +1,4 @@
 export * from './Box';
-export * from './safelySpreadBoxProps';
+export { composeBoxStyleProps } from './styleProps/props';
+export * from './styleProps/safelySpreadBoxProps';
 export * from './types';

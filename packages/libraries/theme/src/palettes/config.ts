@@ -1,7 +1,7 @@
 import { Palette } from './types';
 
 export type DefaultPaletteColors =
-  | '#7d4cdb'
+  | '#3366FF'
   | '#198038'
   | '#f1c21b'
   | '#da1e28'
@@ -11,8 +11,8 @@ export type DefaultPaletteColors =
   | '#FD6FFF'
   | '#81FCED'
   | '#FFCA58'
-  | '#332f3c'
-  | '#120c1d'
+  | '#474d66'
+  | '#101840'
   | '#ffffff';
 
 export type PaletteConfig = {
@@ -21,7 +21,7 @@ export type PaletteConfig = {
 
 const palettes: PaletteConfig = {
   default: {
-    brand: '#7d4cdb',
+    brand: '#3366FF',
     status: {
       success: '#198038',
       warning: '#f1c21b',
@@ -35,8 +35,8 @@ const palettes: PaletteConfig = {
       tertiary: '#81FCED',
       quaternary: '#FFCA58',
     },
-    neutral: '#332f3c',
-    dark: '#120c1d',
+    neutral: '#474d66',
+    dark: '#101840',
     light: '#ffffff',
   },
 };

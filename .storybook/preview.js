@@ -1,8 +1,9 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
-import { themes, ThemeProvider } from '@real-system/theme';
-import { isProduction } from '../tools/utils/env';
+import { themes, ThemeProvider } from '../packages/libraries/theme/src/index';
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 export const globalTypes = {
   theme: {

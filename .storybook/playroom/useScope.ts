@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTheme } from '@real-system/theme';
+import { useTheme } from '../../packages/libraries/theme/src/index';
 
 function makeState() {
   const [state, setState] = useState(undefined);

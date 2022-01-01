@@ -3,7 +3,7 @@
   "include": ["./src/**/*"],
   "compilerOptions": {
     "module": "commonjs",
-    "outDir": "./lib/",
+    "outDir": "./lib",
     "rootDir": "./src",
     "composite": false
   }
