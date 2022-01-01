@@ -3127,7 +3127,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-aria/focus@npm:^3.5.0":
+"@react-aria/checkbox@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "@react-aria/checkbox@npm:3.2.3"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-aria/label": ^3.1.3
+    "@react-aria/toggle": ^3.1.4
+    "@react-aria/utils": ^3.8.2
+    "@react-stately/checkbox": ^3.0.3
+    "@react-stately/toggle": ^3.2.3
+    "@react-types/checkbox": ^3.2.3
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: cef8135db9fed849270cffa6ff3004e4972acd6accb23706bf99e4040774e2b9be375a2003237999877531d40e98a918dc7f22257f8f8b80b680f82ffbd3ed4e
+  languageName: node
+  linkType: hard
+
+"@react-aria/focus@npm:^3.4.1, @react-aria/focus@npm:^3.5.0":
   version: 3.5.0
   resolution: "@react-aria/focus@npm:3.5.0"
   dependencies:
@@ -3142,7 +3159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-aria/interactions@npm:^3.6.0":
+"@react-aria/interactions@npm:^3.6.0, @react-aria/interactions@npm:^3.7.0":
   version: 3.7.0
   resolution: "@react-aria/interactions@npm:3.7.0"
   dependencies:
@@ -3152,6 +3169,20 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
   checksum: d1f5d07b78195e94f5f706d04ad3cd5d4a9f256d6e5b88f086971ad493f9fce931546601b9b3d06671798cc9c68630438f2a2f61cfda7376a03235c721abf6a5
+  languageName: node
+  linkType: hard
+
+"@react-aria/label@npm:^3.1.3":
+  version: 3.2.1
+  resolution: "@react-aria/label@npm:3.2.1"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-aria/utils": ^3.10.0
+    "@react-types/label": ^3.5.0
+    "@react-types/shared": ^3.10.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: c66cc571962f24c0ab89517cf0b79858af8bfeb74361516298a3a3fd0ce29f38f1200c93d2ad305d670f57ff00a94b1fe235591824e2cbacec931f2d43308174
   languageName: node
   linkType: hard
 
@@ -3166,7 +3197,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-aria/utils@npm:^3.10.0, @react-aria/utils@npm:^3.9.0":
+"@react-aria/toggle@npm:^3.1.4":
+  version: 3.1.5
+  resolution: "@react-aria/toggle@npm:3.1.5"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-aria/focus": ^3.4.1
+    "@react-aria/interactions": ^3.7.0
+    "@react-aria/utils": ^3.10.0
+    "@react-stately/toggle": ^3.2.3
+    "@react-types/checkbox": ^3.2.3
+    "@react-types/shared": ^3.10.0
+    "@react-types/switch": ^3.1.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: de910b4126945e118a5dcf0b9cfeb82fb77bb95bc56907dc977c5296300e12af036b8ee1eac8e2ac4932b3b230b530ab13e498a35097dc83644f6c591bbc4b39
+  languageName: node
+  linkType: hard
+
+"@react-aria/utils@npm:^3.10.0, @react-aria/utils@npm:^3.8.2, @react-aria/utils@npm:^3.9.0":
   version: 3.11.0
   resolution: "@react-aria/utils@npm:3.11.0"
   dependencies:
@@ -3311,6 +3360,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-stately/checkbox@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@react-stately/checkbox@npm:3.0.3"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-stately/toggle": ^3.2.3
+    "@react-stately/utils": ^3.2.2
+    "@react-types/checkbox": ^3.2.3
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: df0430bf25fcb13b9dab12dfeb6c612917a0a9771313718d8cc2d0088576c10e3b3af952c4990ac175953a214844a58f9dad2f80018fd8c74fcb3f114946751f
+  languageName: node
+  linkType: hard
+
 "@react-stately/toggle@npm:^3.2.3":
   version: 3.2.3
   resolution: "@react-stately/toggle@npm:3.2.3"
@@ -3358,6 +3421,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-types/label@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@react-types/label@npm:3.5.0"
+  dependencies:
+    "@react-types/shared": ^3.9.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: 04c9af07960583548f75980bdec3bc377f6e55507d3014abf55e27dab98cc80c4873a0583160b592a4dfda9dc3417a2222c4ff855723d48ccf89fd6aaeb4ab35
+  languageName: node
+  linkType: hard
+
 "@react-types/shared@npm:^3.10.0, @react-types/shared@npm:^3.10.1, @react-types/shared@npm:^3.8.0, @react-types/shared@npm:^3.9.0":
   version: 3.10.1
   resolution: "@react-types/shared@npm:3.10.1"
@@ -3367,34 +3441,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-types/switch@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@react-types/switch@npm:3.1.2"
+  dependencies:
+    "@react-types/checkbox": ^3.2.3
+    "@react-types/shared": ^3.8.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: 5843c8be07d916fdc167671db3779de5792582ec06bd14bfebb028ad4acdb44c4b5ecbf9b953a01a252f1261b9527395df0cba9214b7bddeff8a76e08a03853a
+  languageName: node
+  linkType: hard
+
 "@real-system/animation@^0.0.4, @real-system/animation@workspace:packages/libraries/animation":
   version: 0.0.0-use.local
   resolution: "@real-system/animation@workspace:packages/libraries/animation"
   dependencies:
     concurrently: ^6.4.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
     react-spring: ^9.3.3
     typescript: ^4.5.2
   peerDependencies:
     react: ^17.0.2
-    react-dom: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
-"@real-system/aria-button@^0.0.4, @real-system/aria-button@workspace:packages/libraries/aria-button":
-  version: 0.0.0-use.local
-  resolution: "@real-system/aria-button@workspace:packages/libraries/aria-button"
-  dependencies:
-    "@react-aria/button": ^3.3.4
-    "@react-types/button": ^3.4.1
-    concurrently: ^6.4.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    typescript: ^4.5.2
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -3419,7 +3486,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/button-primitive@workspace:packages/primitives/button-primitive"
   dependencies:
-    "@real-system/aria-button": ^0.0.4
+    "@real-system/react-aria": ^0.0.0
     "@real-system/styling": ^0.0.10
     "@real-system/utils": ^0.0.9
     concurrently: ^6.4.0
@@ -3427,7 +3494,7 @@ __metadata:
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/aria-button": ^0.0.4
+    "@real-system/react-aria": ^0.0.0
     "@real-system/styling": ^0.0.10
     "@real-system/utils": ^0.0.9
     react: ^17.0.2
@@ -3464,7 +3531,6 @@ __metadata:
     "@babel/cli": ^7.16.0
     "@babel/core": ^7.16.0
     "@real-system/animation": ^0.0.4
-    "@real-system/aria-button": ^0.0.4
     "@real-system/box": ^0.0.12
     "@real-system/button": ^0.0.13
     "@real-system/button-primitive": ^0.0.6
@@ -3473,6 +3539,7 @@ __metadata:
     "@real-system/flex": ^0.0.5
     "@real-system/icon": ^0.0.12
     "@real-system/input": ^0.0.11
+    "@real-system/react-aria": ^0.0.0
     "@real-system/spinner": ^0.0.11
     "@real-system/state": ^0.0.4
     "@real-system/styling": ^0.0.10
@@ -3606,6 +3673,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/react-aria@^0.0.0, @real-system/react-aria@workspace:packages/libraries/react-aria":
+  version: 0.0.0-use.local
+  resolution: "@real-system/react-aria@workspace:packages/libraries/react-aria"
+  dependencies:
+    "@react-aria/button": ^3.3.4
+    "@react-aria/checkbox": ^3.2.3
+    "@react-stately/toggle": ^3.2.3
+    "@react-types/button": ^3.4.1
+    "@react-types/checkbox": ^3.2.3
+    concurrently: ^6.4.0
+    typescript: ^4.5.2
+  peerDependencies:
+    react: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/spinner@^0.0.11, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@real-system/spinner@workspace:packages/components/spinner"
@@ -3632,12 +3715,9 @@ __metadata:
   dependencies:
     concurrently: ^6.4.0
     constate: ^3.3.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
     react: ^17.0.2
-    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 

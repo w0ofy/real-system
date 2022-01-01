@@ -1,7 +1,6 @@
 # Automatically generated from "yarn generate-packages"
 /lib
 /animation
-/aria-button
 /box
 /button
 /button-primitive
@@ -10,6 +9,7 @@
 /flex
 /icon
 /input
+/react-aria
 /spinner
 /state
 /styling
