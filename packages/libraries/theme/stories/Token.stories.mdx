@@ -57,15 +57,15 @@ const MyComponent = () => {
 `getToken` uses lodash's `get` and accepts type-checked `token`, `scale` and `fallback` arguments.
 
 ```typescript
-type ReturnType = string | number | undefined;
+type ReturnValue = string | number | undefined;
 /**
  * A styleFn to get theme tokens
  */
 function getToken(
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
-  fallback: ReturnType = undefined
-): ReturnType;
+  fallback: ReturnValue = undefined
+): ReturnValue;
 ```
 
 #### `useToken` signature
@@ -73,13 +73,13 @@ function getToken(
 `useToken` uses `getToken` and `useTheme` under the hood and accepts type-checked `token`, `scale` and `fallback` arguments.
 
 ```typescript
-type ReturnType = string | number | undefined;
+type ReturnValue = string | number | undefined;
 /**
  * A styleFn to get theme tokens
  */
-function getToken(
+function useToken(
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
-  fallback: ReturnType = undefined
-): ReturnType;
+  fallback: ReturnValue = undefined
+): ReturnValue;
 ```
