@@ -13,14 +13,16 @@
     "@real-system/theme": "0.0.0",
     "@real-system/utils": "0.0.0",
     "@real-system/box": "0.0.1",
-    "@real-system/text": "0.0.0"
+    "@real-system/text": "0.0.0",
+    "@real-system/dialog": "0.0.6",
+    "@real-system/flex": "0.0.6",
+    "@real-system/animation": "0.0.5",
+    "@real-system/react-aria": "0.0.0",
+    "@real-system/state": "0.0.5",
+    "@real-system/button-primitive": "0.0.7",
+    "@real-system/dialog-primitive": "0.0.5"
   },
   "changesets": [
-    "beige-ants-reply",
-    "great-dolls-fly",
-    "lemon-rabbits-vanish",
-    "metal-feet-lay",
-    "rare-coats-happen",
-    "yellow-lobsters-prove"
+    "dull-months-sleep"
   ]
 }
