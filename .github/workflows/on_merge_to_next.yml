@@ -35,7 +35,7 @@ jobs:
       - name: Create PR or publish next packages
         uses: changesets/action@master
         with:
-          version: yarn version:next
+          version: yarn version:stable
           publish: yarn release:next
           commit: "chore(release:next): publish packages"
           title: "chore(release:next): publish packages"
