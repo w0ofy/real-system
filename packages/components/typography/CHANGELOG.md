@@ -1,5 +1,18 @@
 # @real-system/typography
 
+## 0.0.14
+
+### Patch Changes
+
+- [`f62a1a3`](https://github.com/bigwoof91/real-system/commit/f62a1a3c8c119393e723bc168015f176617eaa0a) - using new babel env-name for bundling and storybook
+
+- Updated dependencies [[`f62a1a3`](https://github.com/bigwoof91/real-system/commit/f62a1a3c8c119393e723bc168015f176617eaa0a)]:
+  - @real-system/visually-hidden@0.0.13
+  - @real-system/styling@0.0.12
+  - @real-system/utils@0.0.11
+  - @real-system/box@0.0.14
+  - @real-system/text@0.0.13
+
 ## 0.0.13
 
 ### Patch Changes
