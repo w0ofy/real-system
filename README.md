@@ -8,35 +8,13 @@
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/bundlephobia/min/@real-system/core" alt="minified size" height="18"/></a>
 </p>
 
-#### **The entire library can be installed via `@real-system/core`**
+#### **The entire library can be installed via [@real-system/core](packages/core)**
 
 - It is recommended that every component be imported by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at build time. Real System `libraries` can only be exported from core subfolders e.g. `@real-system/core/styling`. This is intentional - libraries have many exports which have ambiguous name clashes with many component-module exports.
 
-#### **Every component is its own package via `@real-system/<name-of-package>`**
+#### **Every component is its own package via `@real-system/<name-of-pkg>`** ([components](packages/components), [libraries](packages/libraries), [primitives](packages/primitives))
 
-- This supports a superior DX. Imagine an engineering team simply wants to use the Real System `Box`; we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
-
-| Packages   |                                                                       |
-| :--------- | :-------------------------------------------------------------------- |
-| core       | [@real-system/core](packages/core)                                    |
-| components | [@real-system/button](packages/components/button)                     |
-|            | [@real-system/dialog](packages/components/dialog)                     |
-|            | [@real-system/flex](packages/components/flex)                         |
-|            | [@real-system/icon](packages/components/icon)                         |
-|            | [@real-system/input](packages/components/input)                       |
-|            | [@real-system/spinner](packages/components/spinner)                   |
-|            | [@real-system/typography](packages/components/typography)             |
-|            | [@real-system/visually-hidden](packages/components/visually-hidden)   |
-| libraries  | [@real-system/animation](packages/libraries/animation)                |
-|            | [@real-system/react-aria](packages/libraries/react-aria)            |
-|            | [@real-system/state](packages/libraries/state)                        |
-|            | [@real-system/styling](packages/libraries/styling)                    |
-|            | [@real-system/theme](packages/libraries/theme)                        |
-|            | [@real-system/utils](packages/libraries/utils)                        |
-| primitives | [@real-system/box](packages/primitives/box)                           |
-|            | [@real-system/button-primitive](packages/primitives/button-primitive) |
-|            | [@real-system/dialog-primitive](packages/primitives/dialog-primitive) |
-|            | [@real-system/text](packages/primitives/text)                         |
+- This supports a superior DX. Imagine a product team simply wants to use the Real System `Button`... we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
 
 <hr />
 
@@ -69,20 +47,20 @@ $ yarn add @real-system/styling @real-system/theme @real-system/utils @real-syst
 
 ```jsx
 import { ThemeProvider } from '@real-system/core/theme';
-import { Box } from '@real-system/core/box';
+import { Flex } from '@real-system/core/flex';
 import { Button } from '@real-system/core/button';
 
 const MyComponent = () => {
   return (
     <ThemeProvider>
-      <Box display="flex" flexDirection="column">
+      <Flex vertical>
         <Button mb={8}>Default Button</Button>
         <Button mb={8} variant="primary">
           Primary Button
         </Button>
         <Button variant="minimal">Minimal Button</Button>
         <Button variant="floating">Floating Button</Button>
-      </Box>
+      </Flex>
     </ThemeProvider>
   );
 };
