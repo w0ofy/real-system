@@ -1,5 +1,11 @@
 # @real-system/state
 
+## 0.0.5
+
+### Patch Changes
+
+- [#155](https://github.com/bigwoof91/real-system/pull/155) [`161d695`](https://github.com/bigwoof91/real-system/commit/161d6959a501caf33b01a970cbd09286b34588dd) Thanks [@bigwoof91](https://github.com/bigwoof91)! - using more programmatic babel transforms
+
 ## 0.0.4
 
 ### Patch Changes

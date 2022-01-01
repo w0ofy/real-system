@@ -1,5 +1,15 @@
 # @real-system/dialog-primitive
 
+## 0.0.5
+
+### Patch Changes
+
+- [#157](https://github.com/bigwoof91/real-system/pull/157) [`e501b92`](https://github.com/bigwoof91/real-system/commit/e501b92725c4a662947167ae69c2870bc638faca) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Filtering ButtonPrimitive props and patching dialog spacing
+
+* [#159](https://github.com/bigwoof91/real-system/pull/159) [`e23d429`](https://github.com/bigwoof91/real-system/commit/e23d4298614a0e1d05e7983f3d803a5409d6d653) Thanks [@bigwoof91](https://github.com/bigwoof91)! - replacing aria-button with react-aria - to be used for all future aria utilities
+
+- [#155](https://github.com/bigwoof91/real-system/pull/155) [`161d695`](https://github.com/bigwoof91/real-system/commit/161d6959a501caf33b01a970cbd09286b34588dd) Thanks [@bigwoof91](https://github.com/bigwoof91)! - using more programmatic babel transforms
+
 ## 0.0.4
 
 ### Patch Changes
