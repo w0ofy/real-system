@@ -1,5 +1,29 @@
 # @real-system/core
 
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies [[`f62a1a3`](https://github.com/bigwoof91/real-system/commit/f62a1a3c8c119393e723bc168015f176617eaa0a)]:
+  - @real-system/button@0.0.15
+  - @real-system/dialog@0.0.7
+  - @real-system/flex@0.0.7
+  - @real-system/icon@0.0.14
+  - @real-system/input@0.0.13
+  - @real-system/spinner@0.0.13
+  - @real-system/typography@0.0.14
+  - @real-system/visually-hidden@0.0.13
+  - @real-system/animation@0.0.6
+  - @real-system/react-aria@0.0.1
+  - @real-system/state@0.0.6
+  - @real-system/styling@0.0.12
+  - @real-system/theme@0.0.12
+  - @real-system/utils@0.0.11
+  - @real-system/box@0.0.14
+  - @real-system/button-primitive@0.0.8
+  - @real-system/dialog-primitive@0.0.6
+  - @real-system/text@0.0.13
+
 ## 0.0.16
 
 ### Patch Changes
