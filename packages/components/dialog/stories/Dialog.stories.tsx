@@ -26,7 +26,9 @@ const Template = (args) => {
 
   return (
     <>
-      <Button onPress={openDialog}>Open Dialog</Button>
+      <Button onPress={openDialog} variant="primary">
+        Open Dialog
+      </Button>
       <Dialog
         initialFocusRef={confirmRef}
         ariaLabelledby="dialog"

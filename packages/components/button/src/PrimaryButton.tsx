@@ -16,7 +16,7 @@ const primaryStyles: ButtonStyles = {
     color: 'color-text-brand-inverse',
     backgroundColor: 'color-background-brand',
     _hover: {
-      backgroundColor: 'color-background-brand-strong-1',
+      backgroundColor: 'color-background-brand-strong-2',
     },
     _active: {
       backgroundColor: 'color-background-brand-strong-3',
@@ -37,7 +37,7 @@ const dangerStyles: ButtonStyles = {
     color: 'color-text-danger-inverse',
     backgroundColor: 'color-background-danger',
     _hover: {
-      backgroundColor: 'color-background-danger-strong-1',
+      backgroundColor: 'color-background-danger-strong-2',
     },
     _active: {
       backgroundColor: 'color-background-danger-strong-3',
@@ -58,7 +58,7 @@ const defaultStyles: ButtonStyles = {
     color: 'color-text-neutral-inverse',
     backgroundColor: 'color-background-neutral',
     _hover: {
-      backgroundColor: 'color-background-neutral-strong-1',
+      backgroundColor: 'color-background-neutral-strong-2',
     },
     _active: {
       backgroundColor: 'color-background-neutral-strong-3',

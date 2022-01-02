@@ -20,10 +20,19 @@ export const Default = Template.bind({});
 
 export const CheckboxGroup = () => {
   return (
-    <RealCheckboxGroup label="User type">
-      <Checkbox value="owner">Owner</Checkbox>
-      <Checkbox value="premium">Premium</Checkbox>
-      <Checkbox value="power">Power</Checkbox>
+    <RealCheckboxGroup label="Engineering level" defaultValue={['associate']}>
+      <Checkbox value="architect">Architect</Checkbox>
+      <Checkbox value="principle">Principle</Checkbox>
+      <Checkbox value="staff">Staff</Checkbox>
+      <Checkbox value="senior" isDisabled>
+        Senior
+      </Checkbox>
+      <Checkbox value="mid" isDisabled>
+        Mid
+      </Checkbox>
+      <Checkbox value="associate" isDisabled>
+        Associate
+      </Checkbox>
     </RealCheckboxGroup>
   );
 };
