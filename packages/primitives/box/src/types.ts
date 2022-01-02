@@ -7,11 +7,7 @@ export type BoxPseudoStyleProps = {
 
 export type BoxStyleProps = BoxBaseStyleProps & BoxPseudoStyleProps;
 
-// Omits potential clashes from our style props with HTMLAttributes (i.e. color)
-export type BoxElementProps = Omit<
-  React.HTMLAttributes<HTMLElement>,
-  keyof BoxStyleProps
-> & {
+type BoxComponentProps = {
   as?: keyof JSX.IntrinsicElements;
   type?: string;
   /** Typed as any because Box can be any HTML element */
@@ -35,5 +31,18 @@ export type BoxElementProps = Omit<
   /** generually used for inputs and labels */
   htmlFor?: string | undefined;
 };
+
+export type BoxSVGElementProps = Omit<
+  React.SVGAttributes<SVGElement>,
+  keyof BoxStyleProps
+> &
+  BoxComponentProps;
+
+// Omits potential clashes from our style props with HTMLAttributes (i.e. color)
+export type BoxElementProps = Omit<
+  React.HTMLAttributes<HTMLElement>,
+  keyof BoxStyleProps
+> &
+  BoxComponentProps;
 
 export type BoxProps = BoxElementProps & BoxStyleProps;

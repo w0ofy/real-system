@@ -53,7 +53,10 @@ const realSystemProps = system({
     property: 'strokeWidth',
     scale: 'borderWidths',
   },
-  fill: true,
+  fill: {
+    property: 'fill',
+    scale: 'colors',
+  },
   fillOpacity: true,
   fillRule: true,
   clip: true,

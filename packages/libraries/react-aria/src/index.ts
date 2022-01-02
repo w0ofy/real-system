@@ -1,8 +1,10 @@
 /** react-aria component hooks */
 export * from '@react-aria/button';
 export * from '@react-aria/checkbox';
+export * from '@react-aria/focus';
 
 /** react-aria state hooks */
+export * from '@react-aria/interactions';
 export * from '@react-stately/checkbox';
 export * from '@react-stately/toggle';
 

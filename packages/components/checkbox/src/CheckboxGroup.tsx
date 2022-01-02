@@ -20,7 +20,9 @@ function CheckboxGroup({ children, ...restProps }: CheckboxGroupProps) {
 
   return (
     <Flex vertical {...groupProps}>
-      <Label {...labelProps}>{restProps.label}</Label>
+      <Label as="legend" {...labelProps}>
+        {restProps.label}
+      </Label>
       <CheckboxGroupContextProvider value={state}>
         {children}
       </CheckboxGroupContextProvider>

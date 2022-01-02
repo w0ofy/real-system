@@ -4817,6 +4817,8 @@ __metadata:
   dependencies:
     "@react-aria/button": ^3.3.4
     "@react-aria/checkbox": ^3.2.3
+    "@react-aria/focus": ^3.5.0
+    "@react-aria/interactions": ^3.7.0
     "@react-stately/checkbox": ^3.0.3
     "@react-stately/toggle": ^3.2.3
     "@react-types/button": ^3.4.1

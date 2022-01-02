@@ -1,6 +1,6 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
+import { Box, BoxStyleProps } from '@real-system/box';
 import { Text } from '@real-system/text';
 
 import { RequiredDot } from './RequiredDot';
@@ -12,11 +12,21 @@ export type LabelProps = {
   as?: 'label' | 'legend';
   disabled?: boolean;
   required?: boolean;
+  containerProps?: BoxStyleProps;
+  textProps?: BoxStyleProps;
 } & InternalTypographyProps;
 
 const Label = forwardRef<HTMLLabelElement, LabelProps>(
   (
-    { children, as = 'label', disabled, required, ...restProps },
+    {
+      children,
+      as = 'label',
+      disabled,
+      required,
+      textProps,
+      containerProps,
+      ...restProps
+    },
     ref
   ): React.ReactElement => {
     const dynamicStyles = useMemo(
@@ -45,9 +55,12 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
           as="span"
           display="flex"
           alignItems="center"
-          justifyContent="flex-start">
+          justifyContent="flex-start"
+          {...containerProps}>
           {required ? <RequiredDot disabled={disabled} /> : null}
-          <Box as="span">{children}</Box>
+          <Box as="span" {...textProps}>
+            {children}
+          </Box>
         </Box>
       </Text>
     );
