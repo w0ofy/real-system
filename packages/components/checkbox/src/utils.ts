@@ -5,6 +5,7 @@ import { useFocusWithin, useHover, usePress } from '@real-system/react-aria';
 import {
   CheckboxGroupItemProps,
   CheckboxGroupProps,
+  CustomProps,
   ReactAriaCheckboxGroupItemProps,
   ReactAriaCheckboxGroupProps,
   ReactAriaCheckboxProps,
@@ -36,7 +37,9 @@ const useInteractions = ({ isDisabled }: ReactAriaCheckboxProps) => {
 
 type UseInteractionsReturnValue = ReturnType<typeof useInteractions>;
 
-const restoreCheckboxProps = (props: CheckboxProps): ReactAriaCheckboxProps => {
+const restoreCheckboxProps = (
+  props: CheckboxProps
+): ReactAriaCheckboxProps & CustomProps => {
   const {
     disabled,
     required,
@@ -58,7 +61,7 @@ const restoreCheckboxProps = (props: CheckboxProps): ReactAriaCheckboxProps => {
 
 const restoreCheckboxGroupItemProps = (
   props: CheckboxGroupItemProps
-): ReactAriaCheckboxGroupItemProps => {
+): ReactAriaCheckboxGroupItemProps & CustomProps => {
   const { disabled, required, indeterminate, readonly, ...reactAriaProps } =
     props;
 

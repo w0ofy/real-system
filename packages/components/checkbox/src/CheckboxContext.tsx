@@ -2,10 +2,10 @@ import type { CheckboxGroupState } from '@real-system/react-aria';
 import { constate } from '@real-system/state';
 
 export type CheckboxGroupContext = {
-  value: CheckboxGroupState;
+  state: CheckboxGroupState;
 };
 
-const useCheckboxGroup = ({ value }: CheckboxGroupContext) => value;
+const useCheckboxGroup = ({ state }: CheckboxGroupContext) => state;
 
 export const [
   CheckboxGroupContextProvider,
@@ -15,8 +15,8 @@ export const [
   useCheckboxGroupValue,
 ] = constate(
   useCheckboxGroup,
-  (value) => value,
-  (value) => value.isSelected,
-  (value) => value.isDisabled,
-  (value) => value.value
+  (state) => state,
+  (state) => state.isSelected,
+  (state) => state.isDisabled,
+  (state) => state.value
 );

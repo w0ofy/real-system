@@ -1,6 +1,7 @@
 import React, { forwardRef, useRef } from 'react';
 
 import { useCheckbox, useToggleState } from '@real-system/react-aria';
+import { HelpText } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
@@ -30,7 +31,10 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   );
 
   const { isSelected } = state;
-  const { disabled } = inputProps;
+  const { isDisabled, isReadOnly, helpText, children } = props;
+
+  const disabled = isDisabled || isReadOnly;
+
   return (
     <CheckboxWrapper disabled={disabled} {...interactionProps}>
       <VisuallyHidden>
@@ -41,7 +45,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         isSelected={isSelected}
         {...interactionProps}
       />
-      <CheckboxLabel disabled={disabled}>{props.children}</CheckboxLabel>
+      <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>
+      {helpText && <HelpText>{helpText}</HelpText>}
     </CheckboxWrapper>
   );
 });

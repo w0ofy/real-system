@@ -26,7 +26,7 @@ function CheckboxGroup({ children, ...passedProps }: CheckboxGroupProps) {
       <Label as="legend" {...labelProps}>
         {props.label}
       </Label>
-      <CheckboxGroupContextProvider value={state}>
+      <CheckboxGroupContextProvider state={state}>
         {children}
       </CheckboxGroupContextProvider>
     </Flex>
