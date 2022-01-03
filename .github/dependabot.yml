@@ -25,14 +25,6 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/libraries/aria-button
-    schedule:
-      interval: weekly
-    labels:
-      - 'area: infra'
-      - 'area: security'
-      - 'area: repo'
-  - package-ecosystem: npm
     directory: /packages/primitives/box
     schedule:
       interval: weekly
@@ -98,6 +90,14 @@ updates:
       - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/components/input
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/libraries/react-aria
     schedule:
       interval: weekly
     labels:

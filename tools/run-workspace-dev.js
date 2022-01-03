@@ -114,7 +114,7 @@ const getAdditionalScripts = () => {
   concurrently(allScripts, {
     // continue to log stdout when concurrently finishes commands
     pauseInputStreamOnFinish: false,
-    // log stdout
+    // log all processes
     raw: true,
   });
 })();
