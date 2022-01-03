@@ -10,19 +10,21 @@ import { Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils';
 
 import { CheckboxGroupContextProvider } from './CheckboxContext';
+import { restoreCheckboxGroupProps } from './utils';
 
 type CheckboxGroupProps = Aria_AriaCheckboxGroupProps & {
   children: React.ReactNode;
 };
 
-function CheckboxGroup({ children, ...restProps }: CheckboxGroupProps) {
-  const state = useCheckboxGroupState(restProps);
-  const { groupProps, labelProps } = useCheckboxGroup(restProps, state);
+function CheckboxGroup({ children, ...passedProps }: CheckboxGroupProps) {
+  const props = restoreCheckboxGroupProps(passedProps);
+  const state = useCheckboxGroupState(props);
+  const { groupProps, labelProps } = useCheckboxGroup(props, state);
 
   return (
     <Flex vertical {...groupProps} data-testid={makeTestId('checkbox-group')}>
       <Label as="legend" {...labelProps}>
-        {restProps.label}
+        {props.label}
       </Label>
       <CheckboxGroupContextProvider value={state}>
         {children}

@@ -1,20 +1,18 @@
 import React, { forwardRef, useRef } from 'react';
 
-import {
-  Aria_AriaCheckboxGroupItemProps,
-  useCheckboxGroupItem,
-} from '@real-system/react-aria';
+import { useCheckboxGroupItem } from '@real-system/react-aria';
 import { useMergedRef } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { useCheckboxGroupContext } from './CheckboxContext';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
-import { useInteractions } from './utils';
-
-type CheckboxGroupItemProps = Aria_AriaCheckboxGroupItemProps;
+import { CheckboxGroupItemProps } from './types';
+import { restoreCheckboxGroupItemProps, useInteractions } from './utils';
 
 const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
-  function CheckboxGroupItem(props, ref) {
+  function CheckboxGroupItem(passedProps, ref) {
+    const props = restoreCheckboxGroupItemProps(passedProps);
+
     const interactionProps = useInteractions(props);
     const state = useCheckboxGroupContext();
     const internalRef = useRef<HTMLInputElement>(null);

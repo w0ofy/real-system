@@ -1,24 +1,25 @@
 import React, { forwardRef, useRef } from 'react';
 
-import {
-  Aria_AriaCheckboxGroupItemProps,
-  useCheckbox,
-  useToggleState,
-} from '@real-system/react-aria';
+import { useCheckbox, useToggleState } from '@real-system/react-aria';
 import { useMergedRef } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
-import { useInteractions } from './utils';
-
-type CheckboxProps = Aria_AriaCheckboxGroupItemProps;
+import { CheckboxProps } from './types';
+import { restoreCheckboxProps, useInteractions } from './utils';
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
-  props,
+  passedProps,
   ref
 ) {
+  const props = restoreCheckboxProps(passedProps);
+
   const interactionProps = useInteractions(props);
-  const state = useToggleState(props);
+  const state = useToggleState({
+    ...props,
+    isDisabled: props.isDisabled,
+    isReadOnly: props.isReadOnly,
+  });
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
 

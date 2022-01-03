@@ -26,13 +26,13 @@ export const CheckboxGroup = () => {
       <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
       <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
       <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
-      <CheckboxGroupItem value="senior" isDisabled>
+      <CheckboxGroupItem value="senior" disabled>
         Senior
       </CheckboxGroupItem>
-      <CheckboxGroupItem value="mid" isDisabled>
+      <CheckboxGroupItem value="mid" disabled>
         Mid
       </CheckboxGroupItem>
-      <CheckboxGroupItem value="associate" isDisabled>
+      <CheckboxGroupItem value="associate" disabled>
         Associate
       </CheckboxGroupItem>
     </RealCheckboxGroup>

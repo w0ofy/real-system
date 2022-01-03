@@ -1,15 +1,17 @@
 import { useState } from 'react';
 
+import { useFocusWithin, useHover, usePress } from '@real-system/react-aria';
+
 import {
-  Aria_AriaCheckboxGroupItemProps,
-  useFocusWithin,
-  useHover,
-  usePress,
-} from '@real-system/react-aria';
+  CheckboxGroupItemProps,
+  CheckboxGroupProps,
+  ReactAriaCheckboxGroupItemProps,
+  ReactAriaCheckboxGroupProps,
+  ReactAriaCheckboxProps,
+} from './types';
+import { CheckboxProps } from '.';
 
-import { useCheckboxGroupContext } from './CheckboxContext';
-
-const useInteractions = ({ isDisabled }: Aria_AriaCheckboxGroupItemProps) => {
+const useInteractions = ({ isDisabled }: ReactAriaCheckboxProps) => {
   const [isFocusedWithin, setFocusedWithin] = useState(false);
 
   const { focusWithinProps } = useFocusWithin({
@@ -34,15 +36,57 @@ const useInteractions = ({ isDisabled }: Aria_AriaCheckboxGroupItemProps) => {
 
 type UseInteractionsReturnValue = ReturnType<typeof useInteractions>;
 
-const useIsCheckboxGroup = () => {
-  try {
-    const groupState = useCheckboxGroupContext();
-    if (groupState.value) return true;
-    return false;
-  } catch (_) {
-    return false;
-  }
+const restoreCheckboxProps = (props: CheckboxProps): ReactAriaCheckboxProps => {
+  const {
+    disabled,
+    required,
+    indeterminate,
+    readonly,
+    checked,
+    ...reactAriaProps
+  } = props;
+
+  return {
+    isDisabled: disabled,
+    isReadOnly: readonly,
+    isIndeterminate: indeterminate,
+    isRequired: required,
+    isSelected: checked,
+    ...reactAriaProps,
+  };
+};
+
+const restoreCheckboxGroupItemProps = (
+  props: CheckboxGroupItemProps
+): ReactAriaCheckboxGroupItemProps => {
+  const { disabled, required, indeterminate, readonly, ...reactAriaProps } =
+    props;
+
+  return {
+    isDisabled: disabled,
+    isReadOnly: readonly,
+    isIndeterminate: indeterminate,
+    isRequired: required,
+    ...reactAriaProps,
+  };
+};
+
+const restoreCheckboxGroupProps = (
+  props: CheckboxGroupProps
+): ReactAriaCheckboxGroupProps => {
+  const { disabled, readonly, ...reactAriaProps } = props;
+
+  return {
+    isDisabled: disabled,
+    isReadOnly: readonly,
+    ...reactAriaProps,
+  };
 };
 
 export type { UseInteractionsReturnValue };
-export { useInteractions, useIsCheckboxGroup };
+export {
+  restoreCheckboxGroupItemProps,
+  restoreCheckboxGroupProps,
+  restoreCheckboxProps,
+  useInteractions,
+};
