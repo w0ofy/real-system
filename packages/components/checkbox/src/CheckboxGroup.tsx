@@ -7,6 +7,7 @@ import {
   useCheckboxGroupState,
 } from '@real-system/react-aria';
 import { Label } from '@real-system/typography';
+import { makeTestId } from '@real-system/utils';
 
 import { CheckboxGroupContextProvider } from './CheckboxContext';
 
@@ -19,7 +20,7 @@ function CheckboxGroup({ children, ...restProps }: CheckboxGroupProps) {
   const { groupProps, labelProps } = useCheckboxGroup(restProps, state);
 
   return (
-    <Flex vertical {...groupProps}>
+    <Flex vertical {...groupProps} data-testid={makeTestId('checkbox-group')}>
       <Label as="legend" {...labelProps}>
         {restProps.label}
       </Label>

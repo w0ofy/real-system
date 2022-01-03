@@ -8,8 +8,6 @@ import {
 import { useMergedRef } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
-import { useCheckboxGroupContext } from './CheckboxContext';
-import { CheckboxGroupItem } from './CheckboxGroupItem';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
 import { useInteractions } from './utils';
 
@@ -21,7 +19,6 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
 ) {
   const interactionProps = useInteractions(props);
   const state = useToggleState(props);
-  const groupState = useCheckboxGroupContext();
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
 
@@ -30,10 +27,6 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
-
-  if (groupState.value) {
-    return <CheckboxGroupItem ref={mergedRef} {...props} />;
-  }
 
   const { isSelected } = state;
   const { disabled } = inputProps;

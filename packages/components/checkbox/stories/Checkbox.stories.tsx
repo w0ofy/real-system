@@ -4,11 +4,13 @@ import { Meta } from '@storybook/react';
 import {
   Checkbox,
   CheckboxGroup as RealCheckboxGroup,
+  CheckboxGroupItem,
 } from '@real-system/Checkbox';
 
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
+  subcomponents: { CheckboxGroup: RealCheckboxGroup, CheckboxGroupItem },
   args: {
     children: 'Owner',
   },
@@ -21,18 +23,18 @@ export const Default = Template.bind({});
 export const CheckboxGroup = () => {
   return (
     <RealCheckboxGroup label="Engineering level" defaultValue={['associate']}>
-      <Checkbox value="architect">Architect</Checkbox>
-      <Checkbox value="principle">Principle</Checkbox>
-      <Checkbox value="staff">Staff</Checkbox>
-      <Checkbox value="senior" isDisabled>
+      <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
+      <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
+      <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
+      <CheckboxGroupItem value="senior" isDisabled>
         Senior
-      </Checkbox>
-      <Checkbox value="mid" isDisabled>
+      </CheckboxGroupItem>
+      <CheckboxGroupItem value="mid" isDisabled>
         Mid
-      </Checkbox>
-      <Checkbox value="associate" isDisabled>
+      </CheckboxGroupItem>
+      <CheckboxGroupItem value="associate" isDisabled>
         Associate
-      </Checkbox>
+      </CheckboxGroupItem>
     </RealCheckboxGroup>
   );
 };

@@ -7,6 +7,8 @@ import {
   usePress,
 } from '@real-system/react-aria';
 
+import { useCheckboxGroupContext } from './CheckboxContext';
+
 const useInteractions = ({ isDisabled }: Aria_AriaCheckboxGroupItemProps) => {
   const [isFocusedWithin, setFocusedWithin] = useState(false);
 
@@ -32,5 +34,15 @@ const useInteractions = ({ isDisabled }: Aria_AriaCheckboxGroupItemProps) => {
 
 type UseInteractionsReturnValue = ReturnType<typeof useInteractions>;
 
+const useIsCheckboxGroup = () => {
+  try {
+    const groupState = useCheckboxGroupContext();
+    if (groupState.value) return true;
+    return false;
+  } catch (_) {
+    return false;
+  }
+};
+
 export type { UseInteractionsReturnValue };
-export { useInteractions };
+export { useInteractions, useIsCheckboxGroup };

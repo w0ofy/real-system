@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box';
 import { Flex } from '@real-system/flex';
@@ -101,25 +101,25 @@ type CheckboxWrapperProps = {
   disabled?: boolean;
 } & UseInteractionsReturnValue;
 
-const CheckboxWrapper = ({
-  children,
-  disabled,
-  hoverProps,
-  pressProps,
-  focusWithinProps,
-}: CheckboxWrapperProps) => {
-  return (
-    <Label
-      display="inline-flex"
-      disabled={disabled}
-      {...hoverProps}
-      {...pressProps}
-      {...focusWithinProps}>
-      <Flex as="span" xAlignContent="center" yAlignContent="center">
-        {children}
-      </Flex>
-    </Label>
-  );
-};
+const CheckboxWrapper = forwardRef<HTMLLabelElement, CheckboxWrapperProps>(
+  function CheckboxWrapper(
+    { children, disabled, hoverProps, pressProps, focusWithinProps },
+    ref
+  ) {
+    return (
+      <Label
+        ref={ref}
+        display="inline-flex"
+        disabled={disabled}
+        {...hoverProps}
+        {...pressProps}
+        {...focusWithinProps}>
+        <Flex as="span" xAlignContent="center" yAlignContent="center">
+          {children}
+        </Flex>
+      </Label>
+    );
+  }
+);
 
 export { CheckboxControl, CheckboxLabel, CheckboxWrapper };

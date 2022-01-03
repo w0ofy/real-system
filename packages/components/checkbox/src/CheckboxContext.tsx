@@ -7,5 +7,16 @@ export type CheckboxGroupContext = {
 
 const useCheckboxGroup = ({ value }: CheckboxGroupContext) => value;
 
-export const [CheckboxGroupContextProvider, useCheckboxGroupContext] =
-  constate(useCheckboxGroup);
+export const [
+  CheckboxGroupContextProvider,
+  useCheckboxGroupContext,
+  useCheckboxGroupItemIsSelected,
+  useCheckboxGroupIsDisabled,
+  useCheckboxGroupValue,
+] = constate(
+  useCheckboxGroup,
+  (value) => value,
+  (value) => value.isSelected,
+  (value) => value.isDisabled,
+  (value) => value.value
+);
