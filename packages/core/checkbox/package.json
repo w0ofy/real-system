@@ -1,0 +1,8 @@
+{
+  "name": "@real-system/checkbox",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "../lib/checkbox.js",
+  "types": "../lib/checkbox.d.ts"
+}

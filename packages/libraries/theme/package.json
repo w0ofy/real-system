@@ -42,7 +42,7 @@
   "devDependencies": {
     "@real-system/styling": "0.0.12",
     "@real-system/utils": "0.0.11",
-    "concurrently": "^6.4.0",
+    "concurrently": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.5.2"
