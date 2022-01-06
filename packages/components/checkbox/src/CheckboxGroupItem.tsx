@@ -1,7 +1,6 @@
 import React, { forwardRef, useRef } from 'react';
 
 import { useCheckboxGroupItem } from '@real-system/react-aria';
-import { HelpText } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
@@ -23,26 +22,33 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
       state,
       mergedRef as React.RefObject<HTMLInputElement>
     );
+    const { children, helpText, value } = props;
 
     const disabled =
       state.isDisabled ||
       props.isDisabled ||
       state.isReadOnly ||
       props.isReadOnly;
-    const isSelected = state.isSelected(props.value);
-    const { children, helpText } = props;
+    const isSelected = state.isSelected(value);
+
     return (
-      <CheckboxWrapper disabled={disabled} {...interactionProps}>
-        <VisuallyHidden>
+      <CheckboxWrapper
+        disabled={disabled}
+        helpText={helpText}
+        _first={{ ml: 4 }}
+        _notFirst={{ ml: state.canSelectAll ? 7 : 4 }}
+        {...interactionProps}>
+        <VisuallyHidden as="div">
           <input {...inputProps} ref={mergedRef} />
         </VisuallyHidden>
         <CheckboxControl
           disabled={disabled}
           isSelected={isSelected}
+          indeterminate={props.isIndeterminate}
+          errorText={state.errorText}
           {...interactionProps}
         />
         <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>
-        {helpText && <HelpText>{helpText}</HelpText>}
       </CheckboxWrapper>
     );
   }

@@ -1,6 +1,9 @@
 /**
  * Renamed props to make prop api consistent with other component prop names
  */
+import React from 'react';
+
+import type { FlexProps } from '@real-system/flex';
 import type {
   Aria_AriaCheckboxGroupItemProps,
   Aria_AriaCheckboxGroupProps,
@@ -33,18 +36,28 @@ type CheckboxProps = RenamedReactAriaProps &
 
 type ReactAriaCheckboxProps = Aria_AriaCheckboxProps;
 
+type CustomCheckboxGroupProps = {
+  errorText?: string;
+  children: React.ReactNode;
+  canSelectAll?: boolean;
+};
+
 /** Checkbox Group */
 type CheckboxGroupProps = Pick<RenamedReactAriaProps, 'readonly' | 'disabled'> &
-  Omit<Aria_AriaCheckboxGroupProps, PropsToRename>;
+  Omit<Aria_AriaCheckboxGroupProps, PropsToRename> &
+  CustomProps &
+  CustomCheckboxGroupProps &
+  FlexProps;
 
 type ReactAriaCheckboxGroupProps = Aria_AriaCheckboxGroupProps;
 
 /** Checkbox Group Item */
-type CheckboxGroupItemProps = Omit<RenamedReactAriaProps, 'checked'> &
+type CheckboxGroupItemProps = RenamedReactAriaProps &
   Omit<Aria_AriaCheckboxGroupItemProps, PropsToRename> &
   CustomProps;
 
-type ReactAriaCheckboxGroupItemProps = Aria_AriaCheckboxGroupItemProps;
+type ReactAriaCheckboxGroupItemProps = Aria_AriaCheckboxGroupItemProps &
+  Pick<Aria_AriaCheckboxProps, 'isSelected'>;
 
 export type {
   // real system props

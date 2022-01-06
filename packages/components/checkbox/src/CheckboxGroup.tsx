@@ -1,36 +1,47 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { Flex } from '@real-system/flex';
 import {
-  Aria_AriaCheckboxGroupProps,
   useCheckboxGroup,
   useCheckboxGroupState,
 } from '@real-system/react-aria';
-import { Label } from '@real-system/typography';
+import { HelpText, Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils';
 
 import { CheckboxGroupContextProvider } from './CheckboxContext';
+import { CheckboxGroupProps } from './types';
 import { restoreCheckboxGroupProps } from './utils';
 
-type CheckboxGroupProps = Aria_AriaCheckboxGroupProps & {
-  children: React.ReactNode;
-};
+const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
+  function CheckboxGroup(passedProps, ref) {
+    const props = restoreCheckboxGroupProps(passedProps);
+    const state = useCheckboxGroupState(props);
+    const { groupProps, labelProps } = useCheckboxGroup(props, state);
+    const { children, helpText, errorText, canSelectAll } = passedProps;
 
-function CheckboxGroup({ children, ...passedProps }: CheckboxGroupProps) {
-  const props = restoreCheckboxGroupProps(passedProps);
-  const state = useCheckboxGroupState(props);
-  const { groupProps, labelProps } = useCheckboxGroup(props, state);
+    return (
+      <Flex
+        vertical
+        {...groupProps}
+        data-testid={makeTestId('checkbox-group')}
+        ref={ref}>
+        <Label as="legend" mb={helpText ? 3 : 8} {...labelProps}>
+          {props.label}
+        </Label>
+        {helpText && (
+          <HelpText mt={0} mb={8}>
+            {helpText}
+          </HelpText>
+        )}
+        <CheckboxGroupContextProvider
+          state={{ ...state, errorText, canSelectAll }}>
+          {children}
+        </CheckboxGroupContextProvider>
+        {errorText && <HelpText errorText={errorText} mb={8} />}
+      </Flex>
+    );
+  }
+);
 
-  return (
-    <Flex vertical {...groupProps} data-testid={makeTestId('checkbox-group')}>
-      <Label as="legend" {...labelProps}>
-        {props.label}
-      </Label>
-      <CheckboxGroupContextProvider state={state}>
-        {children}
-      </CheckboxGroupContextProvider>
-    </Flex>
-  );
-}
-
+export type { CheckboxGroupProps };
 export { CheckboxGroup };

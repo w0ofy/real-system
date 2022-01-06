@@ -2,7 +2,10 @@ import type { CheckboxGroupState } from '@real-system/react-aria';
 import { constate } from '@real-system/state';
 
 export type CheckboxGroupContext = {
-  state: CheckboxGroupState;
+  state: CheckboxGroupState & {
+    errorText: string | undefined;
+    canSelectAll: boolean | undefined;
+  };
 };
 
 const useCheckboxGroup = ({ state }: CheckboxGroupContext) => state;

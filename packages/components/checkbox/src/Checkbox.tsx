@@ -1,7 +1,6 @@
 import React, { forwardRef, useRef } from 'react';
 
 import { useCheckbox, useToggleState } from '@real-system/react-aria';
-import { HelpText } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
@@ -36,17 +35,20 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   const disabled = isDisabled || isReadOnly;
 
   return (
-    <CheckboxWrapper disabled={disabled} {...interactionProps}>
-      <VisuallyHidden>
+    <CheckboxWrapper
+      disabled={disabled}
+      helpText={helpText}
+      {...interactionProps}>
+      <VisuallyHidden as="div">
         <input {...inputProps} ref={mergedRef} />
       </VisuallyHidden>
       <CheckboxControl
         disabled={disabled}
         isSelected={isSelected}
+        indeterminate={props.isIndeterminate}
         {...interactionProps}
       />
       <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>
-      {helpText && <HelpText>{helpText}</HelpText>}
     </CheckboxWrapper>
   );
 });

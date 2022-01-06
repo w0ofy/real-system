@@ -1,10 +1,12 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
+import { Box } from '@real-system/box';
 import {
   Checkbox,
   CheckboxGroup as RealCheckboxGroup,
   CheckboxGroupItem,
+  useIndeterminate,
 } from '@real-system/Checkbox';
 
 export default {
@@ -12,29 +14,75 @@ export default {
   component: Checkbox,
   subcomponents: { CheckboxGroup: RealCheckboxGroup, CheckboxGroupItem },
   args: {
-    children: 'Owner',
+    children: 'Give this user "Owner" permissions',
+  },
+  argTypes: {
+    errorText: { type: 'string' },
+    checked: { type: 'boolean' },
   },
 } as Meta;
 
-const Template = (args) => <Checkbox {...args} />;
+const Template = (args) => (
+  <Checkbox
+    {...args}
+    helpText="Determines if the user has permission to add, edit and delete other users"
+  />
+);
 
 export const Default = Template.bind({});
 
-export const CheckboxGroup = () => {
+export const Indeterminate = (args) => {
+  const [checkedItems, setCheckedItems] = React.useState([]);
+
+  const values = ['principle', 'staff', 'senior', 'mid', 'associate'];
+  const { indeterminateProps, checkBoxGroupProps } = useIndeterminate({
+    values,
+    indeterminateValue: 'all',
+    checkedItems,
+    setCheckedItems,
+  });
+
   return (
-    <RealCheckboxGroup label="Engineering level" defaultValue={['associate']}>
-      <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
-      <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
-      <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
-      <CheckboxGroupItem value="senior" disabled>
-        Senior
+    <RealCheckboxGroup
+      label="What engineering level is the new team member?"
+      defaultValue={['associate']}
+      value={checkedItems}
+      helpText="You must select at least one level in order for an engineer join the team"
+      {...checkBoxGroupProps}
+      {...args}>
+      <CheckboxGroupItem value={'all'} {...indeterminateProps}>
+        All
       </CheckboxGroupItem>
-      <CheckboxGroupItem value="mid" disabled>
-        Mid
-      </CheckboxGroupItem>
-      <CheckboxGroupItem value="associate" disabled>
-        Associate
-      </CheckboxGroupItem>
+      <CheckboxGroupItem value={values[0]}>Principle</CheckboxGroupItem>
+      <CheckboxGroupItem value={values[1]}>Staff</CheckboxGroupItem>
+      <CheckboxGroupItem value={values[2]}>Senior</CheckboxGroupItem>
+      <CheckboxGroupItem value={values[3]}>Mid</CheckboxGroupItem>
+      <CheckboxGroupItem value={values[4]}>Associate</CheckboxGroupItem>
     </RealCheckboxGroup>
+  );
+};
+
+export const CheckboxGroup = (args) => {
+  return (
+    <Box display="block" width="34rem">
+      <RealCheckboxGroup
+        label="What engineering level is the new team member?"
+        defaultValue={['associate']}
+        helpText="You must select at least one level in order for an engineer join the team"
+        {...args}>
+        <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
+        <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
+        <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
+        <CheckboxGroupItem value="senior" disabled>
+          Senior
+        </CheckboxGroupItem>
+        <CheckboxGroupItem value="mid" disabled>
+          Mid
+        </CheckboxGroupItem>
+        <CheckboxGroupItem value="associate" disabled>
+          Associate
+        </CheckboxGroupItem>
+      </RealCheckboxGroup>
+    </Box>
   );
 };

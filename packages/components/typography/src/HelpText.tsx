@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box';
 import { Icon, IconProps } from '@real-system/icon';
@@ -13,6 +13,8 @@ export type HelpTextProps = {
   children?: React.ReactNode;
   id?: string;
   variant?: HelpTextIntents;
+  hideErrorIcon?: boolean;
+  errorText?: string;
 } & InternalTypographyProps;
 
 const LABEL_INTENT_MAP: { [key in HelpTextIntents]: string } = {
@@ -28,9 +30,21 @@ const ICON_INTENT_MAP: {
 
 const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
   (
-    { children, variant = 'default', as = 'span', ...restProps },
+    {
+      children,
+      variant = 'default',
+      as = 'span',
+      hideErrorIcon = false,
+      errorText,
+      ...restProps
+    },
     ref
   ): React.ReactElement => {
+    const variantOverride = useMemo(
+      () => (hideErrorIcon || errorText ? 'danger' : variant),
+      [hideErrorIcon, errorText, variant]
+    );
+
     return (
       <Text
         as={as}
@@ -38,23 +52,24 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
         alignItems="center"
         p={0}
         m={0}
-        mt={5}
+        mt={2}
         fontSize={1}
         fontWeight={0}
         lineHeight={1}
-        color={`color-text-${LABEL_INTENT_MAP[variant]}`}
+        color={`color-text-${LABEL_INTENT_MAP[variantOverride]}`}
         {...restProps}
         ref={ref}>
-        {variant === 'danger' && (
+        {!hideErrorIcon && errorText && (
           <Box>
             <Icon
               icon="exclamation-circle"
-              intent={ICON_INTENT_MAP[variant]}
+              solid
+              intent={ICON_INTENT_MAP[variantOverride]}
               mr={2}
             />
           </Box>
         )}
-        <Box as="span">{children}</Box>
+        <Box as="span">{errorText ? errorText : children}</Box>
       </Text>
     );
   }
