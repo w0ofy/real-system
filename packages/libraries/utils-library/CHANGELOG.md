@@ -1,5 +1,11 @@
 # @real-system/utils
 
+## 0.0.1
+
+### Patch Changes
+
+- [#190](https://github.com/bigwoof91/real-system/pull/190) [`4125202`](https://github.com/bigwoof91/real-system/commit/41252029a70dbc00e40f27a5f0e3f4f9f28d9329) Thanks [@bigwoof91](https://github.com/bigwoof91)! - updated primitive and library package names
+
 ## 0.0.11
 
 ### Patch Changes
