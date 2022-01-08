@@ -41,6 +41,7 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
           </Flex>
           {hideCloseButton ? null : (
             <Button
+              tabIndex={0}
               variant="minimal"
               onPress={handleOnClose}
               data-testid={makeTestId('dialog-close-button')}>
