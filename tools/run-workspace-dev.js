@@ -65,12 +65,12 @@ const getAdditionalScripts = () => {
  * "dev": "node ./tools/run-workspace-dev" // this is the package.json script
  * $ yarn dev --filter=icon,spinner,visually-hidden,typography
  * output:
- *    yarn workspace @real-system/box dev
+ *    yarn workspace @real-system/box-primitive dev
  *    yarn workspace @real-system/button dev
  *    yarn workspace @real-system/input dev
- *    yarn workspace @real-system/styling dev
- *    yarn workspace @real-system/theme dev
- *    yarn workspace @real-system/utils dev
+ *    yarn workspace @real-system/styling-library dev
+ *    yarn workspace @real-system/theme-library dev
+ *    yarn workspace @real-system/utils-library dev
  *    yarn:storybook
  *    yarn:playroom
  * ```
@@ -79,7 +79,7 @@ const getAdditionalScripts = () => {
  * "dev": "node ./tools/run-workspace-dev" // this is the package.json script
  * $ yarn dev --only=box
  * output:
- *    yarn workspace @real-system/box dev
+ *    yarn workspace @real-system/box-primitive dev
  *    yarn:storybook
  *    yarn:playroom
  * ```

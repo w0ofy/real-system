@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box';
-import { majorScale } from '@real-system/theme';
+import { Box, BoxStyleProps } from '@real-system/box-primitive';
+import { majorScale } from '@real-system/theme-library';
 
 const makePositionalStyles = (isSuffix = false) => {
   let styles: BoxStyleProps = {

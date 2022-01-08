@@ -1,5 +1,5 @@
-import type { CheckboxGroupState } from '@real-system/react-aria';
-import { constate } from '@real-system/state';
+import type { CheckboxGroupState } from '@real-system/react-aria-library';
+import { constate } from '@real-system/state-library';
 
 export type CheckboxGroupContext = {
   state: CheckboxGroupState & {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 
 import { RequiredDot } from './RequiredDot';
 

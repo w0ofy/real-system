@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { Input } from '@real-system/input';

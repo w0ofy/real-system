@@ -1,4 +1,4 @@
-import { css } from '@real-system/styling';
+import { css } from '@real-system/styling-library';
 
 import type { ButtonPrimitiveBaseStyleProps } from './props';
 

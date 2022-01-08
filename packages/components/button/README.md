@@ -11,9 +11,9 @@
 # install peer dependencies
 
 # npm
-$ npm install @real-system/styling @real-system/box @real-system/utils react react-dom
+$ npm install @real-system/styling-library @real-system/box-primitive @real-system/utils-library react react-dom
 # yarn
-$ yarn add @real-system/styling @real-system/box @real-system/utils react react-dom
+$ yarn add @real-system/styling-library @real-system/box-primitive @real-system/utils-library react react-dom
 
 # install button
 
@@ -26,7 +26,7 @@ $ yarn add @real-system/button
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme';
+import { ThemeProvider } from '@real-system/theme-library';
 import { Button } from '@real-system/button';
 
 const MyComponent = () => {

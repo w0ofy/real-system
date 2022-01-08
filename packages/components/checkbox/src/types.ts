@@ -8,7 +8,7 @@ import type {
   Aria_AriaCheckboxGroupItemProps,
   Aria_AriaCheckboxGroupProps,
   Aria_AriaCheckboxProps,
-} from '@real-system/react-aria';
+} from '@real-system/react-aria-library';
 
 type RenamedReactAriaProps = {
   disabled?: Aria_AriaCheckboxProps['isDisabled'];

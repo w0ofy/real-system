@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { ThemeProvider } from '@real-system/theme';
+import { ThemeProvider } from '@real-system/theme-library';
 
 import { ButtonPrimitive } from '../src/ButtonPrimitive';
 import { ButtonPrimitiveProps } from '../src/types';

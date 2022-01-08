@@ -1,7 +1,7 @@
 import React, { forwardRef, useRef } from 'react';
 
-import { useCheckbox, useToggleState } from '@real-system/react-aria';
-import { useMergedRef } from '@real-system/utils';
+import { useCheckbox, useToggleState } from '@real-system/react-aria-library';
+import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';

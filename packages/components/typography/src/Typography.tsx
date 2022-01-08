@@ -1,6 +1,6 @@
 import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 
-import { BoxAs } from '@real-system/box';
+import { BoxAs } from '@real-system/box-primitive';
 
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';

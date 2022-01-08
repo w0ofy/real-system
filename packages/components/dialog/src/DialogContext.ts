@@ -1,4 +1,4 @@
-import { constate } from '@real-system/state';
+import { constate } from '@real-system/state-library';
 
 export type DialogState = {
   isOpen: boolean;

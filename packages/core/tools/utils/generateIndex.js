@@ -12,7 +12,7 @@ const getIndexOutput = async () => {
   });
   let output = '';
   pkgList
-    // only output components and primitives - libraries should be accessed by using unbaralled exports
+    // only output components and primitives - libraries require unbaralled exports in order to be accessed (this avoids named-export conflicts)
     .filter((pkg) => !pkg.location.includes('/libraries/'))
     .map((pkg) => pkg.name)
     .forEach((pkg) => {

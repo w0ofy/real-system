@@ -1,7 +1,7 @@
 # Automatically generated from "yarn generate-packages"
 /lib
-/animation
-/box
+/animation-library
+/box-primitive
 /button
 /button-primitive
 /checkbox
@@ -10,12 +10,12 @@
 /flex
 /icon
 /input
-/react-aria
+/react-aria-library
 /spinner
-/state
-/styling
-/text
-/theme
+/state-library
+/styling-library
+/text-primitive
+/theme-library
 /typography
-/utils
+/utils-library
 /visually-hidden

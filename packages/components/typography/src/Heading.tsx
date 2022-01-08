@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Text, TextStyleProps } from '@real-system/text';
+import { Text, TextStyleProps } from '@real-system/text-primitive';
 
 import {
   HeadingAsTags,

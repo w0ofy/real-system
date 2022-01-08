@@ -1,6 +1,6 @@
 import { Property } from 'csstype';
 
-import { system } from '@real-system/styling';
+import { system } from '@real-system/styling-library';
 
 const realSystemProps = system({
   // text control props

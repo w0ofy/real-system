@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { Flex, FlexProps } from '@real-system/flex';
-import { makeTestId } from '@real-system/utils';
+import { makeTestId } from '@real-system/utils-library';
 
 type DialogFooterProps = FlexProps;
 

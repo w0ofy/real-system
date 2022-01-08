@@ -11,9 +11,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/react-aria @real-system/state @real-system/styling @real-system/theme @real-system/typography @real-system/utils
+$ npm install react react-dom @real-system/react-aria @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/typography @real-system/utils-library
 # yarn
-$ yarn add react react-dom @real-system/react-aria @real-system/state @real-system/styling @real-system/theme @real-system/typography @real-system/utils
+$ yarn add react react-dom @real-system/react-aria @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/typography @real-system/utils-library
 
 # install checkbox
 

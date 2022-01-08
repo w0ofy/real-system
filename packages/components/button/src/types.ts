@@ -4,7 +4,7 @@ import type {
   ButtonPrimitiveProps,
   ButtonPrimitiveStyleProps,
 } from '@real-system/button-primitive';
-import type { PaletteIntents, PaletteSizes } from '@real-system/theme';
+import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
 
 export type ButtonSizes = Extract<PaletteSizes, 'sm' | 'md' | 'lg'>;
 export type ButtonVariants = 'default' | 'primary' | 'minimal' | 'floating';

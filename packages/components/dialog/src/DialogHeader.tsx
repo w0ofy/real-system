@@ -1,10 +1,10 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Box, BoxProps } from '@real-system/box';
+import { Box, BoxProps } from '@real-system/box-primitive';
 import { Button } from '@real-system/button';
 import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
-import { makeTestId } from '@real-system/utils';
+import { makeTestId } from '@real-system/utils-library';
 
 import { useDialogContext } from './DialogContext';
 

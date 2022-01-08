@@ -1,4 +1,4 @@
-import { AriaButton_AriaButtonProps } from '@real-system/react-aria';
+import { AriaButton_AriaButtonProps } from '@real-system/react-aria-library';
 
 type ButtonPrimitiveAriaProps = Omit<
   AriaButton_AriaButtonProps<'button' | 'span'>,
