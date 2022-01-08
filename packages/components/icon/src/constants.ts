@@ -1,4 +1,4 @@
-import type { PaletteSizes, ThemeTokens } from '@real-system/theme';
+import type { PaletteSizes, ThemeTokens } from '@real-system/theme-library';
 
 import type { IconIntent } from './types';
 

@@ -20,7 +20,7 @@ import {
   SpaceProps,
   typography,
   TypographyProps,
-} from '@real-system/styling';
+} from '@real-system/styling-library';
 
 import { RealSystemProps, realSystemProps } from './realSystemProps';
 

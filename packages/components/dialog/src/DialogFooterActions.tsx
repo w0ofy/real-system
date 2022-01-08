@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Box, BoxProps } from '@real-system/box';
-import { makeTestId } from '@real-system/utils';
+import { Box, BoxProps } from '@real-system/box-primitive';
+import { makeTestId } from '@real-system/utils-library';
 
 type Justify = 'start' | 'end';
 type DialogFooterActionsProps = {

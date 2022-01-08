@@ -38,9 +38,9 @@ $ yarn add @real-system/core
 # or install individual packages (remember, some packages peer-depend on other real system packages)
 
 # npm
-$ npm install @real-system/styling @real-system/theme @real-system/utils @real-system/button
+$ npm install @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/button
 # yarn
-$ yarn add @real-system/styling @real-system/theme @real-system/utils @real-system/button
+$ yarn add @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/button
 ```
 
 # Usage

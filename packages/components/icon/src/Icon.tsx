@@ -1,8 +1,8 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
-import styled from '@real-system/styling';
-import { useToken } from '@real-system/theme';
+import { Box } from '@real-system/box-primitive';
+import styled from '@real-system/styling-library';
+import { useToken } from '@real-system/theme-library';
 
 import { INTENT_MAP, SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';

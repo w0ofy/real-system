@@ -1,8 +1,8 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
-import type { FlexboxProps, LayoutProps } from '@real-system/styling';
-import { makeTestId } from '@real-system/utils';
+import { Box } from '@real-system/box-primitive';
+import type { FlexboxProps, LayoutProps } from '@real-system/styling-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import type { FlexProps } from './types';
 import {

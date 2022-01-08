@@ -1,9 +1,9 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 import { Icon, IconProps } from '@real-system/icon';
-import { Text } from '@real-system/text';
-import { PaletteIntents } from '@real-system/theme';
+import { Text } from '@real-system/text-primitive';
+import { PaletteIntents } from '@real-system/theme-library';
 
 import { InternalTypographyProps } from './types';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { MarginProps } from '@real-system/styling';
+import type { MarginProps } from '@real-system/styling-library';
 
 import { InputBoxProps, InputBoxTypes } from './InputBox';
 

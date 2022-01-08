@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 
-import { useTransition } from '@real-system/animation';
-import type { BoxStyleProps } from '@real-system/box';
+import { useTransition } from '@real-system/animation-library';
+import type { BoxStyleProps } from '@real-system/box-primitive';
 import type { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
-import { makeTestId } from '@real-system/utils';
+import { makeTestId } from '@real-system/utils-library';
 
 import { DialogContent, DialogOverlay } from './components';
 import { DialogContextProvider, DialogState } from './DialogContext';

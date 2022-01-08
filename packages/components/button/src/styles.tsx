@@ -2,8 +2,8 @@ import {
   ButtonPrimitiveStyleProps,
   buttonPrimitiveStyles,
 } from '@real-system/button-primitive';
-import { majorScale } from '@real-system/theme';
-import { merge } from '@real-system/utils';
+import { majorScale } from '@real-system/theme-library';
+import { merge } from '@real-system/utils-library';
 
 import { ButtonSizes, ButtonStates, ButtonVariants } from './types';
 

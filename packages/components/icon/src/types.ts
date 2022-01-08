@@ -1,9 +1,9 @@
 import * as Icons from '@heroicons/react/outline';
 import type { Property } from 'csstype';
 
-import type { MarginProps } from '@real-system/styling';
-import type { PaletteIntents, PaletteSizes } from '@real-system/theme';
-import type { KebabCase, RemoveSuffix } from '@real-system/utils';
+import type { MarginProps } from '@real-system/styling-library';
+import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
+import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */
 type HeroIconSet = typeof Icons;

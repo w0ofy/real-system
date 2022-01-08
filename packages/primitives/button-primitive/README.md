@@ -11,9 +11,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/react-aria
+$ npm install react react-dom @real-system/react-aria-library
 # yarn
-$ yarn add react react-dom @real-system/react-aria
+$ yarn add react react-dom @real-system/react-aria-library
 
 # install button-primitive
 

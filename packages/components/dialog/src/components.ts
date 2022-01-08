@@ -1,11 +1,14 @@
-import { animated } from '@real-system/animation';
-import { BoxStyleProps, composeBoxStyleProps } from '@real-system/box';
+import { animated } from '@real-system/animation-library';
+import {
+  BoxStyleProps,
+  composeBoxStyleProps,
+} from '@real-system/box-primitive';
 import {
   DialogContentPrimitive,
   DialogOverlayPrimitive,
 } from '@real-system/dialog-primitive';
-import styled, { polished } from '@real-system/styling';
-import { getToken, majorScale } from '@real-system/theme';
+import styled, { polished } from '@real-system/styling-library';
+import { getToken, majorScale } from '@real-system/theme-library';
 
 const { transparentize } = polished;
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))<BoxStyleProps>`

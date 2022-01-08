@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box';
-import { merge } from '@real-system/utils';
+import { Box, BoxStyleProps } from '@real-system/box-primitive';
+import { merge } from '@real-system/utils-library';
 
 import { Addon } from './Addon';
 

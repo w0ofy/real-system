@@ -1,7 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box';
-import { Text } from '@real-system/text';
+import { Box, BoxStyleProps } from '@real-system/box-primitive';
+import { Text } from '@real-system/text-primitive';
 
 import { RequiredDot } from './RequiredDot';
 import { InternalTypographyProps } from './types';

@@ -1,10 +1,8 @@
-import { BoxAs, BoxStyleProps } from '@real-system/box';
-import styled, { keyframes } from '@real-system/styling';
-
-import { PaletteSizes } from '../../../libraries/theme/src/palettes/types';
+import { BoxAs, BoxStyleProps } from '@real-system/box-primitive';
+import styled, { keyframes } from '@real-system/styling-library';
+import { PaletteSizes } from '@real-system/theme-library';
 
 import { circleCircumference } from './constants';
-import { SpinnerProps } from './types';
 
 const svgKeyframes = keyframes`
   0%,

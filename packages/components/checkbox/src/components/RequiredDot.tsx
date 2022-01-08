@@ -1,7 +1,7 @@
 import React from 'react';
 
-import type { BoxProps } from '@real-system/box';
-import { Box } from '@real-system/box';
+import type { BoxProps } from '@real-system/box-primitive';
+import { Box } from '@real-system/box-primitive';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 export type RequiredDotProps = {

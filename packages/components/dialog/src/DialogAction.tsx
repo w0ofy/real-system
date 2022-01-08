@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback, useRef } from 'react';
 
 import { Button, ButtonProps } from '@real-system/button';
-import { makeTestId, useMergedRef } from '@real-system/utils';
+import { makeTestId, useMergedRef } from '@real-system/utils-library';
 
 import { useDialogContext } from './DialogContext';
 

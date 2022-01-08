@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 import { Button } from '@real-system/button';
 import { Icon, ICONS_LIST } from '@real-system/icon';
 import { Heading } from '@real-system/typography';
-import { capitalize } from '@real-system/utils';
+import { capitalize } from '@real-system/utils-library';
 
 export default {
   title: 'Components/Button',

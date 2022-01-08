@@ -4,9 +4,9 @@ import { Flex } from '@real-system/flex';
 import {
   useCheckboxGroup,
   useCheckboxGroupState,
-} from '@real-system/react-aria';
+} from '@real-system/react-aria-library';
 import { HelpText, Label } from '@real-system/typography';
-import { makeTestId } from '@real-system/utils';
+import { makeTestId } from '@real-system/utils-library';
 
 import { CheckboxGroupContextProvider } from './CheckboxContext';
 import { CheckboxGroupProps } from './types';

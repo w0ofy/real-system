@@ -1,4 +1,4 @@
-import { TextProps } from '@real-system/text';
+import { TextProps } from '@real-system/text-primitive';
 
 export type InternalTypographyProps = Partial<Omit<TextProps, 'as'>>;
 export type TypographyVariants = 'paragraph' | 'inline';

@@ -1,6 +1,10 @@
 import { useCallback, useMemo, useState } from 'react';
 
-import { useFocusWithin, useHover, usePress } from '@real-system/react-aria';
+import {
+  useFocusWithin,
+  useHover,
+  usePress,
+} from '@real-system/react-aria-library';
 
 import {
   CheckboxGroupItemProps,

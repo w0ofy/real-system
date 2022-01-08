@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
 
 import { UseInteractionsReturnValue } from '../utils';

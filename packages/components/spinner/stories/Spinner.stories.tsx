@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 import { Spinner } from '@real-system/spinner';
 
 export default {

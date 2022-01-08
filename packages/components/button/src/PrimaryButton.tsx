@@ -4,7 +4,7 @@ import {
   ButtonPrimitive,
   ButtonPrimitiveStyleProps,
 } from '@real-system/button-primitive';
-import { merge } from '@real-system/utils';
+import { merge } from '@real-system/utils-library';
 
 import { baseStyles } from './styles';
 import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
