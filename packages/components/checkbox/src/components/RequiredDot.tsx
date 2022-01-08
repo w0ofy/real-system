@@ -10,7 +10,6 @@ export type RequiredDotProps = {
 
 const RequiredDot = ({
   disabled = false,
-  cursor = 'pointer',
   ...restProps
 }: RequiredDotProps): React.ReactElement => {
   return (
@@ -21,7 +20,7 @@ const RequiredDot = ({
       justifyContent="center"
       height="size-icon-2"
       mr={2}
-      cursor={disabled ? 'not-allowed' : cursor}>
+      cursor={disabled ? 'not-allowed' : 'default'}>
       <Box
         {...restProps}
         as="span"

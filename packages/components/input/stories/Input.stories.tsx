@@ -31,6 +31,22 @@ const Template = (args) => {
         <HelpText>Use your personal email address.</HelpText>
       </Container>
       <Container>
+        <Label htmlFor="input" required>
+          Email
+        </Label>
+        <Input
+          type="email"
+          id="input"
+          name="email-address"
+          placeholder="personal@realsystem.com"
+          error
+          {...args}
+        />
+        <HelpText errorText="Field is required">
+          Use your personal email address.
+        </HelpText>
+      </Container>
+      <Container>
         <Label htmlFor="input-1" required>
           Email (prefix)
         </Label>

@@ -1,4 +1,5 @@
 import * as Icons from '@heroicons/react/outline';
+import type { Property } from 'csstype';
 
 import type { MarginProps } from '@real-system/styling';
 import type { PaletteIntents, PaletteSizes } from '@real-system/theme';
@@ -38,7 +39,11 @@ type IconProps = {
   /**
    * Controls the color of the icon. If an `intent` is not provided the color defaults to `currentColor`
    */
-  intent?: IconIntent;
+  intent?: IconIntent | string;
+  /**
+   * Overrides intent and can be used to customize the icon color beyond what intent provides i.e. a checkmark for Checkbox component
+   */
+  color?: Property.Color;
   /**
    * Controls solid or default (outline) icon style
    */

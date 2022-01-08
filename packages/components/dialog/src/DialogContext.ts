@@ -1,10 +1,14 @@
 import { constate } from '@real-system/state';
 
-export type DialogContext = {
-  isVisible: boolean;
+export type DialogState = {
+  isOpen: boolean;
   dismiss: (event?: React.SyntheticEvent) => void;
 };
 
-const useDialog = (modalContext: DialogContext) => modalContext;
+export type DialogContext = {
+  state: DialogState;
+};
+
+const useDialog = ({ state }: DialogContext) => state;
 
 export const [DialogContextProvider, useDialogContext] = constate(useDialog);

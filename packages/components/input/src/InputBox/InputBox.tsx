@@ -42,6 +42,7 @@ const baseStyles: BoxStyleProps = {
 
 const styles: { [key in InputBoxStates]: BoxStyleProps } = {
   default: merge(baseStyles, {
+    color: 'color-text',
     borderColor: 'color-border-neutral-weak-5',
     _hover: {
       borderColor: 'color-border-neutral-weak-2',
@@ -56,12 +57,13 @@ const styles: { [key in InputBoxStates]: BoxStyleProps } = {
     },
   }),
   disabled: merge(baseStyles, {
-    color: 'color-background-disabled-strong-3',
+    color: 'color-text-disabled-strong-3',
     bg: 'color-background-disabled-weak-5',
     borderColor: 'color-border-disabled',
     cursor: 'not-allowed',
   }),
   readonly: merge(baseStyles, {
+    color: 'color-text-disabled-strong-7',
     bg: 'color-background-disabled-weak-3',
     borderColor: 'color-border-disabled-strong-2',
     _hover: { borderColor: 'color-border-disabled-strong-2' },

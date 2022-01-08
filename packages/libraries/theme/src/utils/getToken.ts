@@ -5,7 +5,7 @@ import type { ThemeScales, ThemeTokens } from './types';
 /**
  * A styleFn to get theme tokens
  */
-const getToken = <T = string | number>(
+const getToken = <T = any>(
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
   fallback?: T

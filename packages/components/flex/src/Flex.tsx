@@ -33,7 +33,7 @@ const getFlexProps = (props: FlexProps): FlexboxProps & LayoutProps => {
   };
 };
 
-const Flex = forwardRef<HTMLDivElement, FlexProps>(function Flex(
+const Flex = forwardRef<HTMLElement, FlexProps>(function Flex(
   {
     basis,
     children,

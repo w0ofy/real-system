@@ -53,10 +53,14 @@ const realSystemProps = system({
     property: 'strokeWidth',
     scale: 'borderWidths',
   },
-  fill: true,
+  fill: {
+    property: 'fill',
+    scale: 'colors',
+  },
   fillOpacity: true,
   fillRule: true,
   clip: true,
+  clipPath: true,
   // list
   listStyle: true,
   listStyleType: true,
@@ -124,6 +128,7 @@ type RealSystemProps = {
   fillOpacity?: Property.FillOpacity;
   fillRule?: Property.FillRule;
   clip?: Property.Clip;
+  clipPath?: Property.ClipPath;
   objectFit?: Property.ObjectFit;
   objectPosition?: Property.ObjectPosition<string>;
 

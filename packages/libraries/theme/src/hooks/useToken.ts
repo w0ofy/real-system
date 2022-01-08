@@ -10,10 +10,10 @@ import { useTheme } from './useTheme';
 const useToken = (
   token: ThemeTokens,
   scale: ThemeScales = 'colors',
-  fallback?: string | number
-): string | number => {
+  fallback?: any
+): any => {
   const theme = useTheme();
-  return getToken<string | number>(token, scale, fallback)({ theme });
+  return getToken<any>(token, scale, fallback)({ theme });
 };
 
 export { useToken };
