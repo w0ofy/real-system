@@ -3531,7 +3531,7 @@ __metadata:
     "@real-system/spinner": ^0.0.13
     "@real-system/state-library": ^0.0.0
     "@real-system/styling-library": ^0.0.0
-    "@real-system/text": ^0.0.13
+    "@real-system/text-primitive": ^0.0.0
     "@real-system/theme-library": ^0.0.0
     "@real-system/typography": ^0.0.14
     "@real-system/utils-library": ^0.0.0
@@ -3746,7 +3746,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/text-primitive@0.0.0, @real-system/text-primitive@workspace:packages/primitives/text-primitive":
+"@real-system/text-primitive@0.0.0, @real-system/text-primitive@^0.0.0, @real-system/text-primitive@workspace:packages/primitives/text-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/text-primitive@workspace:packages/primitives/text-primitive"
   dependencies:
@@ -3761,17 +3761,6 @@ __metadata:
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
-
-"@real-system/text@npm:^0.0.13":
-  version: 0.0.13
-  resolution: "@real-system/text@npm:0.0.13"
-  peerDependencies:
-    "@real-system/styling": ^0.0.12
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: 6921cc134c21adf0f22ea43e54324430f905f5a4b501efdd7a0cccd163fa8cfb5ab4ed57e1ea8156248c5026b15d83524b71117be7088a611903d09ab167771b
-  languageName: node
-  linkType: hard
 
 "@real-system/theme-library@^0.0.0, @real-system/theme-library@workspace:packages/libraries/theme-library":
   version: 0.0.0-use.local
