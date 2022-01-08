@@ -46,7 +46,7 @@
     "@real-system/animation-library": "^0.0.0",
     "@real-system/box-primitive": "^0.0.0",
     "@real-system/button": "^0.0.15",
-    "@real-system/dialog-primitive": "^0.0.0",
+    "@real-system/dialog-primitive": "^0.0.6",
     "@real-system/flex": "^0.0.7",
     "@real-system/state-library": "^0.0.0",
     "@real-system/styling-library": "^0.0.0",
