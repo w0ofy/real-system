@@ -2,20 +2,33 @@ import React from 'react';
 
 import { Box } from '@real-system/box';
 
-type CheckboxLabelProps = { children: React.ReactNode; disabled?: boolean };
+import { RequiredDot } from './RequiredDot';
 
-const CheckboxLabel = ({ children, disabled }: CheckboxLabelProps) => {
+type CheckboxLabelProps = {
+  children: React.ReactNode;
+  disabled?: boolean;
+  required?: boolean;
+};
+
+const CheckboxLabel = ({
+  children,
+  disabled,
+  required,
+}: CheckboxLabelProps) => {
   return (
-    <Box
-      as="span"
-      color={disabled ? 'color-text-strong-3' : 'color-text'}
-      fontFamily="font-family-text"
-      fontSize={1}
-      fontWeight={1}
-      lineHeight={1}
-      mb={0}>
-      {children}
-    </Box>
+    <>
+      {required && <RequiredDot disabled={disabled} />}
+      <Box
+        as="span"
+        color={disabled ? 'color-text-strong-3' : 'color-text'}
+        fontFamily="font-family-text"
+        fontSize={1}
+        fontWeight={1}
+        lineHeight={1}
+        mb={0}>
+        {children}
+      </Box>
+    </>
   );
 };
 

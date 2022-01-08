@@ -18,14 +18,19 @@ export default {
   },
   argTypes: {
     errorText: { type: 'string' },
+    helpText: { type: 'string' },
     checked: { type: 'boolean' },
+    required: { type: 'boolean' },
+    readonly: { type: 'boolean' },
+    indeterminate: { type: 'boolean' },
+    disabled: { type: 'boolean' },
   },
 } as Meta;
 
 const Template = (args) => (
   <Checkbox
-    {...args}
     helpText="Determines if the user has permission to add, edit and delete other users"
+    {...args}
   />
 );
 
@@ -47,7 +52,7 @@ export const Indeterminate = (args) => {
       label="What engineering level is the new team member?"
       defaultValue={['associate']}
       value={checkedItems}
-      helpText="You must select at least one level in order for an engineer join the team"
+      helpText="Select at least 1 level for the new engineer"
       {...checkBoxGroupProps}
       {...args}>
       <CheckboxGroupItem value={'all'} {...indeterminateProps}>
@@ -68,7 +73,7 @@ export const CheckboxGroup = (args) => {
       <RealCheckboxGroup
         label="What engineering level is the new team member?"
         defaultValue={['associate']}
-        helpText="You must select at least one level in order for an engineer join the team"
+        helpText="Select at least 1 level for the new engineer"
         {...args}>
         <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
         <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>

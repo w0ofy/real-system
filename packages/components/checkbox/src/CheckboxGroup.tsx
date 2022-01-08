@@ -17,7 +17,7 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
     const props = restoreCheckboxGroupProps(passedProps);
     const state = useCheckboxGroupState(props);
     const { groupProps, labelProps } = useCheckboxGroup(props, state);
-    const { children, helpText, errorText, canSelectAll } = passedProps;
+    const { children, helpText, errorText, required, canSelectAll } = props;
 
     return (
       <Flex
@@ -25,7 +25,12 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
         {...groupProps}
         data-testid={makeTestId('checkbox-group')}
         ref={ref}>
-        <Label as="legend" mb={helpText ? 3 : 8} {...labelProps}>
+        <Label
+          as="legend"
+          mb={helpText ? 3 : 8}
+          required={required}
+          cursor="default"
+          {...labelProps}>
           {props.label}
         </Label>
         {helpText && (

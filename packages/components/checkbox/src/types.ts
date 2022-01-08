@@ -30,22 +30,26 @@ type PropsToRename =
   | 'isSelected';
 
 /** Checkbox */
+type CustomCheckboxProps = {
+  errorText?: string;
+} & CustomProps;
+
 type CheckboxProps = RenamedReactAriaProps &
   Omit<Aria_AriaCheckboxProps, PropsToRename> &
-  CustomProps;
+  CustomCheckboxProps;
 
 type ReactAriaCheckboxProps = Aria_AriaCheckboxProps;
 
+/** Checkbox Group */
 type CustomCheckboxGroupProps = {
-  errorText?: string;
   children: React.ReactNode;
   canSelectAll?: boolean;
-};
+  required?: boolean;
+} & Pick<CustomCheckboxProps, 'errorText'> &
+  CustomProps;
 
-/** Checkbox Group */
 type CheckboxGroupProps = Pick<RenamedReactAriaProps, 'readonly' | 'disabled'> &
   Omit<Aria_AriaCheckboxGroupProps, PropsToRename> &
-  CustomProps &
   CustomCheckboxGroupProps &
   FlexProps;
 
@@ -64,6 +68,8 @@ export type {
   CheckboxGroupItemProps,
   CheckboxGroupProps,
   CheckboxProps,
+  CustomCheckboxGroupProps,
+  CustomCheckboxProps,
   CustomProps,
   // react aria props
   ReactAriaCheckboxGroupItemProps,

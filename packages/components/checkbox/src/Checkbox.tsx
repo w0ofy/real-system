@@ -30,7 +30,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   );
 
   const { isSelected } = state;
-  const { isDisabled, isReadOnly, helpText, children } = props;
+  const { isDisabled, isReadOnly, helpText, children, isRequired, errorText } =
+    props;
 
   const disabled = isDisabled || isReadOnly;
 
@@ -38,6 +39,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
     <CheckboxWrapper
       disabled={disabled}
       helpText={helpText}
+      errorText={errorText}
       {...interactionProps}>
       <VisuallyHidden as="div">
         <input {...inputProps} ref={mergedRef} />
@@ -46,9 +48,12 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         disabled={disabled}
         isSelected={isSelected}
         indeterminate={props.isIndeterminate}
+        errorText={errorText}
         {...interactionProps}
       />
-      <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>
+      <CheckboxLabel disabled={disabled} required={isRequired}>
+        {children}
+      </CheckboxLabel>
     </CheckboxWrapper>
   );
 });

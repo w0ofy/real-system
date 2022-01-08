@@ -24,6 +24,7 @@ const CheckboxWrapper = forwardRef<
     pressProps,
     focusWithinProps,
     helpText,
+    errorText,
     ...restProps
   },
   ref
@@ -41,8 +42,8 @@ const CheckboxWrapper = forwardRef<
           {children}
         </Flex>
       </Label>
-      {helpText && (
-        <HelpText mt={2} ml={12}>
+      {(helpText || errorText) && (
+        <HelpText mt={2} ml={12} errorText={errorText}>
           {helpText}
         </HelpText>
       )}

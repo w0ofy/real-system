@@ -5,6 +5,8 @@ import { useFocusWithin, useHover, usePress } from '@real-system/react-aria';
 import {
   CheckboxGroupItemProps,
   CheckboxGroupProps,
+  CustomCheckboxGroupProps,
+  CustomCheckboxProps,
   CustomProps,
   ReactAriaCheckboxGroupItemProps,
   ReactAriaCheckboxGroupProps,
@@ -39,7 +41,7 @@ type UseInteractionsReturnValue = ReturnType<typeof useInteractions>;
 
 const restoreCheckboxProps = (
   props: CheckboxProps
-): ReactAriaCheckboxProps & CustomProps => {
+): ReactAriaCheckboxProps & CustomProps & CustomCheckboxProps => {
   const {
     disabled,
     required,
@@ -55,6 +57,18 @@ const restoreCheckboxProps = (
     isIndeterminate: indeterminate,
     isRequired: required,
     isSelected: checked,
+    ...reactAriaAndCustomProps,
+  };
+};
+
+const restoreCheckboxGroupProps = (
+  props: CheckboxGroupProps
+): ReactAriaCheckboxGroupProps & CustomCheckboxGroupProps => {
+  const { disabled, readonly, ...reactAriaAndCustomProps } = props;
+
+  return {
+    isDisabled: disabled,
+    isReadOnly: readonly,
     ...reactAriaAndCustomProps,
   };
 };
@@ -81,18 +95,7 @@ const restoreCheckboxGroupItemProps = (
   };
 };
 
-const restoreCheckboxGroupProps = (
-  props: CheckboxGroupProps
-): ReactAriaCheckboxGroupProps => {
-  const { disabled, readonly, ...reactAriaAndCustomProps } = props;
-
-  return {
-    isDisabled: disabled,
-    isReadOnly: readonly,
-    ...reactAriaAndCustomProps,
-  };
-};
-
+/** useIndeterminate hook */
 type UseIndeterminateParams<V extends string, A extends string> = {
   values: V[];
   indeterminateValue: A;
