@@ -32,7 +32,7 @@ type BoxComponentProps = {
   htmlFor?: string | undefined;
 };
 
-export type BoxSVGElementProps = Omit<
+export type BoxAsSVGElementProps = Omit<
   React.SVGAttributes<SVGElement>,
   keyof BoxStyleProps
 > &

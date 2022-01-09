@@ -5,7 +5,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import { composeBoxStyleProps } from './styleProps/props';
 import { getPseudoStyles } from './styleProps/pseudoPropStyles';
-import type { BoxProps, BoxSVGElementProps } from './types';
+import type { BoxAsSVGElementProps, BoxProps } from './types';
 
 /**
  * `Box` primitive component. Used to create all block-level styles and elements in Real System.
@@ -47,8 +47,8 @@ function BoxAs<T = any>(as: As) {
   });
 }
 
-function BoxSVGElement(as: As) {
-  return forwardRef<SVGElement, BoxSVGElementProps>(function BoxSVGElement(
+function BoxAsSVGElement(as: As) {
+  return forwardRef<SVGElement, BoxAsSVGElementProps>(function BoxAsSVGElement(
     props,
     ref
   ): React.ReactElement {
@@ -63,4 +63,4 @@ function BoxSVGElement(as: As) {
   });
 }
 
-export { Box, BoxAs, BoxSVGElement };
+export { Box, BoxAs, BoxAsSVGElement };
