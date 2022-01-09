@@ -1,7 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import { Text } from '@real-system/text-primitive';
+import { TextPrimitive } from '@real-system/text-primitive';
 
 import { RequiredDot } from './RequiredDot';
 import { InternalTypographyProps } from './types';
@@ -39,7 +39,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
     );
 
     return (
-      <Text
+      <TextPrimitive
         as={as}
         display="block"
         p={0}
@@ -65,7 +65,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
             {children}
           </Box>
         </Box>
-      </Text>
+      </TextPrimitive>
     );
   }
 );

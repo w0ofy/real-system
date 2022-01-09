@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Text, TextStyleProps } from '@real-system/text-primitive';
+import { TextPrimitive, TextStyleProps } from '@real-system/text-primitive';
 
 import {
   HeadingAsTags,
@@ -65,7 +65,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
     ref
   ): React.ReactElement => {
     return (
-      <Text
+      <TextPrimitive
         as={as}
         m={0}
         color="color-text"
@@ -73,7 +73,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
         ref={ref}
         mb={mb ?? styles[variant].mb}>
         {children}
-      </Text>
+      </TextPrimitive>
     );
   }
 );

@@ -1,3 +1,3 @@
 export * from './styleProps/safelySpreadTextProps';
-export * from './Text';
+export * from './TextPrimitive';
 export * from './types';

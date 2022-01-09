@@ -25,4 +25,4 @@ export type TextElementProps = Omit<
   variant?: string;
 };
 
-export type TextProps = TextElementProps & TextStyleProps;
+export type TextPrimitiveProps = TextElementProps & TextStyleProps;

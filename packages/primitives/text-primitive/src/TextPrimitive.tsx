@@ -4,11 +4,11 @@ import styled from '@real-system/styling-library';
 
 import { composeTextStyleProps } from './styleProps/props';
 import { getPseudoStyles } from './styleProps/pseudoPropStyles';
-import type { TextProps } from './types';
+import type { TextPrimitiveProps } from './types';
 
 const StyledText = styled.div(composeTextStyleProps(), getPseudoStyles);
 
-const Text = forwardRef<HTMLElement, TextProps>(function Text(
+const TextPrimitive = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(
   {
     children,
     color = 'color-text',
@@ -34,4 +34,4 @@ const Text = forwardRef<HTMLElement, TextProps>(function Text(
   );
 });
 
-export { Text };
+export { TextPrimitive };

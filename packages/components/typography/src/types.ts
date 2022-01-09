@@ -1,6 +1,6 @@
-import { TextProps } from '@real-system/text-primitive';
+import type { TextPrimitiveProps } from '@real-system/text-primitive';
 
-export type InternalTypographyProps = Partial<Omit<TextProps, 'as'>>;
+export type InternalTypographyProps = Partial<Omit<TextPrimitiveProps, 'as'>>;
 export type TypographyVariants = 'paragraph' | 'inline';
 export type TypographyAsTags = Extract<
   keyof JSX.IntrinsicElements,

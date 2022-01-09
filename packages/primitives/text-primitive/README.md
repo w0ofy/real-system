@@ -26,9 +26,9 @@ $ yarn add @real-system/text-primitive
 ### Code Example
 
 ```typescript
-import { Text, TextProps, safelySpreadTextProps } from '@real-system/text-primitive';
+import { Text, TextPrimitiveProps, safelySpreadTextProps } from '@real-system/text-primitive';
 
-const H1 = (props: TextProps) => (
+const H1 = (props: TextPrimitiveProps) => (
   <Text as="h1" fontSize={10} {...safelySpreadTextProps(props)}>
     The quick brown fox jumped over the lazy dog.
   </Text>

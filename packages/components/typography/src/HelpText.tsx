@@ -2,7 +2,7 @@ import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
 import { Icon, IconProps } from '@real-system/icon';
-import { Text } from '@real-system/text-primitive';
+import { TextPrimitive } from '@real-system/text-primitive';
 import { PaletteIntents } from '@real-system/theme-library';
 
 import { InternalTypographyProps } from './types';
@@ -46,7 +46,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
     );
 
     return (
-      <Text
+      <TextPrimitive
         as={as}
         display="flex"
         alignItems="center"
@@ -70,7 +70,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
           </Box>
         )}
         <Box as="span">{errorText ? errorText : children}</Box>
-      </Text>
+      </TextPrimitive>
     );
   }
 );

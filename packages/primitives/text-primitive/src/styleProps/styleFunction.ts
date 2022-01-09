@@ -1,17 +1,17 @@
 import { css } from '@real-system/styling-library';
 
-import type { TextProps } from '../types';
+import type { TextPrimitiveProps } from '../types';
 
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 
 /**
  * Take _ prefixed style props and convert them to custom style props for CSS pseudo selectors
  *
- * @param {TextProps} props any prop that Text can take
+ * @param {TextPrimitiveProps} props any prop that Text can take
  * @return {*}  {(((props?: Record<string, unknown> | undefined) => CSSObject) | Record<string, never>)}
  */
 const getPseudoStyles = (
-  props: TextProps
+  props: TextPrimitiveProps
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
