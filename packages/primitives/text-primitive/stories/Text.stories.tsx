@@ -1,15 +1,17 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Text } from '@real-system/text-primitive';
+import { TextPrimitive } from '@real-system/text-primitive';
 
 export default {
-  title: 'Primitives/Text',
-  component: Text,
+  title: 'Primitives/TextPrimitive',
+  component: TextPrimitive,
 } as Meta;
 
 const Template = (args) => (
-  <Text {...args}>The quick brown fox jumped over the lazy dog.</Text>
+  <TextPrimitive {...args}>
+    The quick brown fox jumped over the lazy dog.
+  </TextPrimitive>
 );
 
 export const Default = Template.bind({});
