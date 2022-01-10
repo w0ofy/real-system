@@ -78,7 +78,7 @@
     "@babel/register": "^7.16.7",
     "@changesets/changelog-github": "^0.4.2",
     "@changesets/cli": "^2.19.0",
-    "@commitlint/cli": "^16.0.1",
+    "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
     "@commitlint/cz-commitlint": "^16.0.0",
     "@commitlint/prompt-cli": "^16.0.0",
