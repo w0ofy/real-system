@@ -95,7 +95,7 @@ const CheckboxControl = ({
         disabled ? 'color-background-disabled-weak-5' : backgroundColor
       }
       borderColor={disabled ? 'color-border-disabled' : borderColor}
-      borderRadius={1}
+      borderRadius={2}
       transition="box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in"
       boxShadow={!isPressed && isFocusedWithin ? 'shadow-focus' : 'none'}>
       <CheckboxIcon

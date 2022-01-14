@@ -30,7 +30,7 @@ const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
   alignItems: 'center',
   justifyContent: 'center',
   border: 1,
-  borderRadius: 1,
+  borderRadius: 2,
   transition:
     'background-color 150ms ease-in-out, box-shadow 150ms ease-in, color 150ms ease-in-out',
   fontSize: 1,

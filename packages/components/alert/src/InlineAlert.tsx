@@ -13,18 +13,25 @@ type InlineAlertProps = {
 
 const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
   function InlineAlert({ children, intent = 'info', ...restProps }, ref) {
-    const iconColor = `color-text-${intent}-weak-1`;
+    const iconColor = `color-text-${intent}`;
     const textColor = `color-text-${intent}-${maybeWarning(intent)}`;
     return (
-      <Flex width="100%" yAlignContent="center" {...restProps} ref={ref}>
-        <Icon
-          size="md"
-          solid
-          icon={ICON_MAP[intent]}
-          color={iconColor}
-          mr={5}
-          title={intent}
-        />
+      <Flex
+        width="100%"
+        yAlignContent="center"
+        flexWrap="nowrap"
+        {...restProps}
+        ref={ref}>
+        <Flex mt={1} mr={4} alignSelf="flex-start">
+          <Icon
+            size="md"
+            solid
+            icon={ICON_MAP[intent]}
+            color={iconColor}
+            title={intent}
+          />
+        </Flex>
+
         <Typography.Heading
           variant="heading5"
           as="span"

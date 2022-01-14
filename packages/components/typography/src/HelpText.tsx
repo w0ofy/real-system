@@ -19,7 +19,7 @@ export type HelpTextProps = {
 
 const LABEL_INTENT_MAP: { [key in HelpTextIntents]: string } = {
   danger: 'danger',
-  default: 'neutral-weak-3',
+  default: 'neutral-weak-2',
 };
 const ICON_INTENT_MAP: {
   [key in HelpTextIntents]: IconProps['intent'];

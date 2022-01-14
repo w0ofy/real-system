@@ -15,7 +15,7 @@ type AlertProps = {
 } & CommonAlertProps;
 
 const makeBorderOrIconColor = (intent: AlertIntents) => (icon?: boolean) =>
-  `color-${icon ? 'text' : 'border'}-${intent}-weak-2`;
+  `color-${icon ? 'text' : 'border'}-${intent}`;
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   { children, intent = 'info', title, onDismiss = undefined, ...restProps },
