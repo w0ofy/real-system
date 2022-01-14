@@ -3,6 +3,7 @@ import type { PaletteKeys } from '../palettes/types';
 export type TokenSuffixes =
   | 'highlight'
   | 'inverse'
+  | 'weak-05'
   | 'weak-1'
   | 'weak-15'
   | 'weak-2'
@@ -27,6 +28,7 @@ export type TokenSuffixes =
   | 'strong'
   | 'stronger'
   | 'strongest'
+  | 'strong-05'
   | 'strong-1'
   | 'strong-15'
   | 'strong-2'

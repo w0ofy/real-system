@@ -70,9 +70,11 @@ const makeColorRange =
       [`${prefix}-${paletteKey}-weak-2`]: modifyValue(tint(0.2, color)),
       [`${prefix}-${paletteKey}-weak-15`]: modifyValue(tint(0.15, color)),
       [`${prefix}-${paletteKey}-weak-1`]: modifyValue(tint(0.1, color)),
+      [`${prefix}-${paletteKey}-weak-05`]: modifyValue(tint(0.05, color)),
       // palette color
       [`${prefix}-${paletteKey}`]: modifyValue(color),
       // palette strengthening
+      [`${prefix}-${paletteKey}-strong-05`]: modifyValue(shade(0.05, color)),
       [`${prefix}-${paletteKey}-strong-1`]: modifyValue(shade(0.1, color)),
       [`${prefix}-${paletteKey}-strong-15`]: modifyValue(shade(0.15, color)),
       [`${prefix}-${paletteKey}-strong-2`]: modifyValue(shade(0.2, color)),
@@ -94,7 +96,7 @@ const makeColorRange =
       // complementary colors
       [`${prefix}-${paletteKey}-highlight`]: modifyValue(invert(color)),
       [`${prefix}-${paletteKey}-inverse`]: modifyValue(
-        readableColor(color, palette.dark, palette.light)
+        readableColor(color, 'black', 'white')
       ),
     } as MakeColorRangeReturnValue<T, O>;
 

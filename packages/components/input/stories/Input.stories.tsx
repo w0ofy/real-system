@@ -87,7 +87,7 @@ const Template = (args) => {
           name="email-address"
           value="personal@realsystem.com"
           suffix={
-            <Button size="sm" variant="floating" intent="default">
+            <Button size="sm" variant="floating">
               <Icon icon="clipboard-copy" />
             </Button>
           }

@@ -11,14 +11,14 @@ import { ICON_MAP, maybeWarning } from './utils';
 type AlertProps = {
   title: string;
   children?: React.ReactNode;
-  cta?: { label: string; onPress: ButtonProps['onPress'] } | undefined;
+  onDismiss?: ButtonProps['onPress'];
 } & CommonAlertProps;
 
 const makeBorderOrIconColor = (intent: AlertIntents) => (icon?: boolean) =>
   `color-${icon ? 'text' : 'border'}-${intent}-weak-2`;
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
-  { children, intent = 'info', title, cta, ...restProps },
+  { children, intent = 'info', title, onDismiss = undefined, ...restProps },
   ref
 ) {
   const borderOrIconColor = makeBorderOrIconColor(intent);
@@ -63,21 +63,9 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
         )}
       </Flex>
 
-      {cta?.label && cta?.onPress && (
-        <Button
-          mr={0}
-          mt={1}
-          ml="auto"
-          onPress={cta.onPress}
-          variant="primary"
-          intent={
-            intent === 'danger'
-              ? intent
-              : intent === 'info' || intent === 'success'
-              ? 'primary'
-              : 'default'
-          }>
-          {cta.label}
+      {onDismiss && (
+        <Button mr={0} mt={1} ml="auto" onPress={onDismiss} variant="floating">
+          <Icon icon="x" size="md" />
         </Button>
       )}
     </Flex>

@@ -14,6 +14,7 @@ export default {
     trailingIcon: { control: { type: 'select', options: ICONS_LIST } },
     leadingIcon: { control: { type: 'select', options: ICONS_LIST } },
     loading: { control: 'boolean' },
+    size: { control: 'select', options: ['sm', 'md', 'lg'] },
   },
   args: {
     children: 'Button',
@@ -49,59 +50,75 @@ const ShowcaseTemplate = (args) => (
       {capitalize(args.variant)} {args.size ? capitalize(args.size) : ''}
     </Heading>
     <Row>
-      <Button {...args} intent="default" />
-      <Button
-        {...args}
-        intent="default"
-        trailingIcon={<Icon icon="download" />}
-      />
-      <Button
-        {...args}
-        intent="default"
-        leadingIcon={<Icon icon="download" />}
-      />
-      <Button {...args} intent="default">
+      <Button {...args} />
+      <Button {...args} trailingIcon={<Icon icon="cog" />} />
+      <Button {...args} leadingIcon={<Icon icon="cog" />} />
+      <Button {...args}>
         <Icon icon="download" />
       </Button>
     </Row>
     {args.variant !== 'floating' && (
       <Row>
         <Button {...args} disabled />
-        <Button {...args} disabled trailingIcon={<Icon icon="download" />} />
-        <Button {...args} disabled leadingIcon={<Icon icon="download" />} />
+        <Button {...args} disabled trailingIcon={<Icon icon="cog" />} />
+        <Button {...args} disabled leadingIcon={<Icon icon="cog" />} />
         <Button {...args} disabled>
-          <Icon icon="download" />
+          <Icon icon="cog" />
         </Button>
       </Row>
     )}
     <Row>
       <Button {...args} intent="primary" />
-      <Button {...args} intent="primary" trailingIcon={<Icon icon="cog" />} />
-      <Button {...args} intent="primary" leadingIcon={<Icon icon="cog" />} />
+      <Button {...args} intent="primary" trailingIcon={<Icon icon="login" />} />
+      <Button {...args} intent="primary" leadingIcon={<Icon icon="login" />} />
       <Button {...args} intent="primary">
-        <Icon icon="cog" />
+        <Icon icon="login" />
       </Button>
     </Row>
-    {args.variant !== 'text' && (
-      <Row>
-        <Button {...args} intent="primary" disabled />
-        <Button
-          {...args}
-          disabled
-          intent="primary"
-          trailingIcon={<Icon icon="cog" />}
-        />
-        <Button
-          {...args}
-          disabled
-          intent="primary"
-          leadingIcon={<Icon icon="cog" />}
-        />
-        <Button {...args} intent="primary" disabled>
-          <Icon icon="cog" />
-        </Button>
-      </Row>
-    )}
+    <Row>
+      <Button {...args} intent="primary" disabled />
+      <Button
+        {...args}
+        disabled
+        intent="primary"
+        trailingIcon={<Icon icon="login" />}
+      />
+      <Button
+        {...args}
+        disabled
+        intent="primary"
+        leadingIcon={<Icon icon="login" />}
+      />
+      <Button {...args} intent="primary" disabled>
+        <Icon icon="login" />
+      </Button>
+    </Row>
+    <Row>
+      <Button {...args} intent="success" />
+      <Button {...args} intent="success" trailingIcon={<Icon icon="save" />} />
+      <Button {...args} intent="success" leadingIcon={<Icon icon="save" />} />
+      <Button {...args} intent="success">
+        <Icon icon="save" />
+      </Button>
+    </Row>
+    <Row>
+      <Button {...args} intent="success" disabled />
+      <Button
+        {...args}
+        intent="success"
+        trailingIcon={<Icon icon="save" />}
+        disabled
+      />
+      <Button
+        {...args}
+        intent="success"
+        leadingIcon={<Icon icon="save" />}
+        disabled
+      />
+      <Button {...args} intent="success" disabled>
+        <Icon icon="save" />
+      </Button>
+    </Row>
     <Row>
       <Button {...args} intent="danger" />
       <Button {...args} intent="danger" trailingIcon={<Icon icon="trash" />} />
@@ -110,31 +127,31 @@ const ShowcaseTemplate = (args) => (
         <Icon icon="trash" />
       </Button>
     </Row>
-    {args.variant !== 'text' && (
-      <Row>
-        <Button {...args} intent="danger" disabled />
-        <Button
-          {...args}
-          intent="danger"
-          trailingIcon={<Icon icon="trash" />}
-          disabled
-        />
-        <Button
-          {...args}
-          intent="danger"
-          leadingIcon={<Icon icon="trash" />}
-          disabled
-        />
-        <Button {...args} intent="danger" disabled>
-          <Icon icon="trash" />
-        </Button>
-      </Row>
-    )}
+    <Row>
+      <Button {...args} intent="danger" disabled />
+      <Button
+        {...args}
+        intent="danger"
+        trailingIcon={<Icon icon="trash" />}
+        disabled
+      />
+      <Button
+        {...args}
+        intent="danger"
+        leadingIcon={<Icon icon="trash" />}
+        disabled
+      />
+      <Button {...args} intent="danger" disabled>
+        <Icon icon="trash" />
+      </Button>
+    </Row>
   </Box>
 );
 
 ShowcaseTemplate.defaultProps = {
   children: 'Button',
+  variant: 'default',
+  intent: 'neutral',
   mr: 10,
 };
 

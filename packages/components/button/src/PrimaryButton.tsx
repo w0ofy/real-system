@@ -7,7 +7,7 @@ import {
 import { merge } from '@real-system/utils-library';
 
 import { baseStyles } from './styles';
-import { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
+import type { ButtonIntents, ButtonStates, InternalButtonProps } from './types';
 
 type ButtonStyles = Record<ButtonStates, ButtonPrimitiveStyleProps>;
 
@@ -35,12 +35,12 @@ const primaryStyles: ButtonStyles = {
 const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-danger-inverse',
-    backgroundColor: 'color-background-danger',
+    backgroundColor: 'color-background-danger-weak-05',
     _hover: {
-      backgroundColor: 'color-background-danger-strong-2',
+      backgroundColor: 'color-background-danger-strong-1',
     },
     _active: {
-      backgroundColor: 'color-background-danger-strong-3',
+      backgroundColor: 'color-background-danger-strong-2',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -53,15 +53,36 @@ const dangerStyles: ButtonStyles = {
   }),
 };
 
-const defaultStyles: ButtonStyles = {
+const successStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-neutral-inverse',
-    backgroundColor: 'color-background-neutral',
+    color: 'color-text-success-inverse',
+    backgroundColor: 'color-background-success-weak-05',
     _hover: {
-      backgroundColor: 'color-background-neutral-strong-2',
+      backgroundColor: 'color-background-success-strong-1',
     },
     _active: {
-      backgroundColor: 'color-background-neutral-strong-3',
+      backgroundColor: 'color-background-success-strong-2',
+    },
+  }),
+  loading: merge(baseStyles.loading, {
+    color: 'color-text-success-weak-6',
+    backgroundColor: 'color-background-success-weak-9',
+  }),
+  disabled: merge(baseStyles.disabled, {
+    color: 'color-text-success-weak-6',
+    backgroundColor: 'color-background-success-weak-9',
+  }),
+};
+
+const neutralStyles: ButtonStyles = {
+  default: merge(baseStyles.default, {
+    color: 'color-text-neutral-inverse',
+    backgroundColor: 'color-background-neutral-weak-1',
+    _hover: {
+      backgroundColor: 'color-background-neutral-strong-1',
+    },
+    _active: {
+      backgroundColor: 'color-background-neutral-strong-2',
     },
   }),
   loading: merge(baseStyles.loading, {
@@ -77,9 +98,10 @@ const defaultStyles: ButtonStyles = {
 const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
-  default: defaultStyles,
+  neutral: neutralStyles,
   primary: primaryStyles,
   danger: dangerStyles,
+  success: successStyles,
 };
 
 const PrimaryButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
