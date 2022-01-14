@@ -1,15 +1,26 @@
+import type { PaletteKeys } from '../palettes/types';
+
 export type TokenSuffixes =
   | 'highlight'
   | 'inverse'
   | 'weak-1'
+  | 'weak-15'
   | 'weak-2'
+  | 'weak-25'
   | 'weak-3'
+  | 'weak-35'
   | 'weak-4'
+  | 'weak-45'
   | 'weak-5'
+  | 'weak-55'
   | 'weak-6'
+  | 'weak-65'
   | 'weak-7'
+  | 'weak-75'
   | 'weak-8'
+  | 'weak-85'
   | 'weak-9'
+  | 'weak-95'
   | 'weak'
   | 'weaker'
   | 'weakest'
@@ -17,14 +28,23 @@ export type TokenSuffixes =
   | 'stronger'
   | 'strongest'
   | 'strong-1'
+  | 'strong-15'
   | 'strong-2'
+  | 'strong-25'
   | 'strong-3'
+  | 'strong-35'
   | 'strong-4'
+  | 'strong-45'
   | 'strong-5'
+  | 'strong-55'
   | 'strong-6'
+  | 'strong-65'
   | 'strong-7'
+  | 'strong-75'
   | 'strong-8'
-  | 'strong-9';
+  | 'strong-85'
+  | 'strong-9'
+  | 'strong-95';
 
 export type TokenPrefixes =
   | 'color'
@@ -35,3 +55,5 @@ export type TokenPrefixes =
   | 'shadow-border'
   | 'drop-shadow'
   | 'overlay-shadow';
+
+export type Token = `${TokenPrefixes}-${PaletteKeys}-${TokenSuffixes}`;

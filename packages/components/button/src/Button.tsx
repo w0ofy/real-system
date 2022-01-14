@@ -43,6 +43,7 @@ type LabelProps = {
 const Label = styled.span<LabelProps>((props) => ({
   marginLeft: props.ml,
   marginRight: props.mr,
+  whiteSpace: 'nowrap',
 }));
 
 const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? organScale(5) : 0);

@@ -14,7 +14,7 @@ type ButtonStyles = Record<ButtonStates, ButtonPrimitiveStyleProps>;
 const primaryStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-brand',
-    backgroundColor: 'color-background',
+    backgroundColor: 'transparent',
     borderColor: 'color-border-brand-weak-6',
     _hover: {
       color: 'color-text-brand-strong-2',
@@ -42,7 +42,7 @@ const primaryStyles: ButtonStyles = {
 const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-danger',
-    backgroundColor: 'color-background',
+    backgroundColor: 'transparent',
     borderColor: 'color-border-danger-weak-6',
     _hover: {
       color: 'color-text-danger-strong-2',
@@ -70,7 +70,7 @@ const dangerStyles: ButtonStyles = {
 const defaultStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
     color: 'color-text-neutral',
-    backgroundColor: 'color-background',
+    backgroundColor: 'transparent',
     borderColor: 'color-border-neutral-weak-6',
     _hover: {
       color: 'color-text-neutral-strong-2',
