@@ -25,7 +25,7 @@ const CheckboxIcon = ({
         isSelected
           ? disabled
             ? 'color-text-disabled-strong-3'
-            : 'color-background-brand-inverse'
+            : 'color-background-brand-contrast'
           : 'transparent'
       }
     />
@@ -54,7 +54,7 @@ const CheckboxControl = ({
   indeterminate,
 }: CheckboxControlProps) => {
   const backgroundColor = useMemo(() => {
-    const defaultColor = 'color-background-brand-inverse';
+    const defaultColor = 'color-background-brand-contrast';
 
     if (isSelected) {
       if (errorText) {
@@ -95,7 +95,7 @@ const CheckboxControl = ({
         disabled ? 'color-background-disabled-weak-5' : backgroundColor
       }
       borderColor={disabled ? 'color-border-disabled' : borderColor}
-      borderRadius={1}
+      borderRadius={2}
       transition="box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in"
       boxShadow={!isPressed && isFocusedWithin ? 'shadow-focus' : 'none'}>
       <CheckboxIcon

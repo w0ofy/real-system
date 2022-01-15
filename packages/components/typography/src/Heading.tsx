@@ -30,29 +30,30 @@ const styles: {
   heading3: {
     fontSize: 4,
     lineHeight: 4,
-    fontWeight: 3,
+    fontWeight: 2,
     mb: 3,
   },
   heading4: {
     fontSize: 3,
     lineHeight: 3,
-    fontWeight: 3,
+    fontWeight: 2,
     mb: 3,
   },
   heading5: {
     fontSize: 2,
     lineHeight: 2,
-    fontWeight: 3,
-    mb: 3,
+    fontWeight: 2,
+    mb: 2,
   },
   heading6: {
     fontSize: 1,
     lineHeight: 1,
-    fontWeight: 3,
+    fontWeight: 2,
     mb: 1,
   },
 };
 
+/** @todo map variant to html tags */
 export type HeadingProps = {
   children?: React.ReactNode;
   variant?: HeadingVariants;
@@ -61,7 +62,7 @@ export type HeadingProps = {
 
 const Heading = forwardRef<HeadingElement, HeadingProps>(
   (
-    { variant = 'heading2', children, mb, as = 'div' },
+    { variant = 'heading2', children, mb, as = 'div', ...restProps },
     ref
   ): React.ReactElement => {
     return (
@@ -70,6 +71,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
         m={0}
         color="color-text"
         {...styles[variant]}
+        {...restProps}
         ref={ref}
         mb={mb ?? styles[variant].mb}>
         {children}

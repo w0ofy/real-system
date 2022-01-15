@@ -21,7 +21,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         lineHeight={1}
         backgroundColor="transparent"
         border="none"
-        borderRadius={1}
+        borderRadius={2}
         boxShadow="none"
         color="inherit"
         cursor={
@@ -35,16 +35,13 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         resize="none"
         ref={ref}
         _placeholder={{
-          fontStyle: 'italic',
           color: 'color-text-neutral-weak-6',
           transition: '150ms all ease-in',
         }}
         _hover_placeholder={{
-          fontStyle: 'italic',
           color: 'color-text-neutral-weak-4',
         }}
         _focus_placeholder={{
-          fontStyle: 'italic',
           color: 'color-text-neutral-weak-4',
         }}
         _focus={{ outline: 'none' }}

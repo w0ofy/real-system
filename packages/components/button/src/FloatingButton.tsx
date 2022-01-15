@@ -32,13 +32,13 @@ const primaryStyles: ButtonStyles = {
 
 const dangerStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-danger',
+    color: 'color-text-danger-weak-05',
     backgroundColor: 'none',
     _hover: {
-      color: 'color-text-danger-strong-4',
+      color: 'color-text-danger-strong-3',
     },
     _active: {
-      color: 'color-text-danger-strong-6',
+      color: 'color-text-danger-strong-5',
     },
   }),
   loading: merge(baseStyles.disabled, {
@@ -49,15 +49,34 @@ const dangerStyles: ButtonStyles = {
   }),
 };
 
-const defaultStyles: ButtonStyles = {
+const successStyles: ButtonStyles = {
   default: merge(baseStyles.default, {
-    color: 'color-text-neutral',
+    color: 'color-text-success-weak-05',
     backgroundColor: 'none',
     _hover: {
-      color: 'color-text-neutral-strong-4',
+      color: 'color-text-success-strong-3',
     },
     _active: {
-      color: 'color-text-neutral-strong-6',
+      color: 'color-text-success-strong-5',
+    },
+  }),
+  loading: merge(baseStyles.disabled, {
+    color: 'color-text-success-weak-6',
+  }),
+  disabled: merge(baseStyles.disabled, {
+    color: 'color-text-success-weak-6',
+  }),
+};
+
+const neutralStyles: ButtonStyles = {
+  default: merge(baseStyles.default, {
+    color: 'color-text-neutral-weak-05',
+    backgroundColor: 'none',
+    _hover: {
+      color: 'color-text-neutral-strong-3',
+    },
+    _active: {
+      color: 'color-text-neutral-strong-5',
     },
   }),
   loading: merge(baseStyles.disabled, {
@@ -71,14 +90,15 @@ const defaultStyles: ButtonStyles = {
 const STYLE_MAP: {
   [key in ButtonIntents]: ButtonStyles;
 } = {
-  default: defaultStyles,
+  neutral: neutralStyles,
   primary: primaryStyles,
   danger: dangerStyles,
+  success: successStyles,
 };
 
 const FloatingButton = forwardRef<HTMLButtonElement, InternalButtonProps>(
   function FloatingButton(
-    { children, intent = 'default', buttonState, ...restProps },
+    { children, intent = 'neutral', buttonState, ...restProps },
     ref
   ): React.ReactElement {
     return (

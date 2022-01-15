@@ -8,9 +8,10 @@ import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
 
 export type ButtonSizes = Extract<PaletteSizes, 'sm' | 'md' | 'lg'>;
 export type ButtonVariants = 'default' | 'primary' | 'minimal' | 'floating';
-export type ButtonIntents =
-  | 'default'
-  | Extract<PaletteIntents, 'danger' | 'primary'>;
+export type ButtonIntents = Extract<
+  PaletteIntents,
+  'danger' | 'primary' | 'neutral' | 'success'
+>;
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 export type ButtonTabIndexes = 0 | -1;
 type ButtonTypes = 'submit' | 'button' | 'reset';

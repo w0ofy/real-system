@@ -10,7 +10,7 @@
 
 #### **The entire library can be installed via [@real-system/core](packages/core)**
 
-- It is recommended that every component be imported by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at build time. Real System `libraries` can only be exported from core subfolders e.g. `@real-system/core/styling`. This is intentional - libraries have many exports which have ambiguous name clashes with many component-module exports.
+- It is recommended that every component be imported by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at compile time. Real System `libraries` can only be exported from core subfolders e.g. `@real-system/core/styling`. This is intentional - libraries have many exports which have ambiguous name clashes with many component-module exports.
 
 #### **Every component is its own package via `@real-system/<name-of-pkg>`** ([components](packages/components), [libraries](packages/libraries), [primitives](packages/primitives))
 

@@ -18,7 +18,7 @@ export const globalTypes = {
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
       icon: 'paintbrush',
       // array of plain string values or MenuItem shape (see below)
-      items: ['realsystem'],
+      items: Object.keys(themes),
     },
   },
 };
@@ -48,6 +48,8 @@ export const parameters = {
           ['Overview', 'Token System', 'Tokens', 'Scales', 'Advanced'],
         ],
         'Components',
+        'Layout',
+        'Utilities',
         'Primitives',
         'Sandbox',
       ],

@@ -31,8 +31,8 @@ const getSizeStyles = (
     fontSize: 1,
   },
   sm: {
-    px: ifNotFloating(variant, 5),
-    py: ifNotFloating(variant, 3),
+    px: ifNotFloating(variant, 4),
+    py: ifNotFloating(variant, 4),
     height: ifNotFloating(variant, majorScale(3), 6),
     lineHeight: ifNotFloating(variant, majorScale(3), 6),
     fontSize: 1,
