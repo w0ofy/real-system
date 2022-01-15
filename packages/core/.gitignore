@@ -1,5 +1,6 @@
 # Automatically generated from "yarn generate-packages"
 /lib
+/alert
 /animation-library
 /box-primitive
 /button

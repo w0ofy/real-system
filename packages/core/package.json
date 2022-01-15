@@ -20,6 +20,7 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
+    "@real-system/alert": "^0.0.0",
     "@real-system/animation-library": "^0.0.1",
     "@real-system/box-primitive": "^0.0.1",
     "@real-system/button": "^0.0.16",

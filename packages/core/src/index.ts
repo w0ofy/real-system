@@ -1,3 +1,4 @@
+export * from '@real-system/alert';
 export * from '@real-system/box-primitive';
 export * from '@real-system/button';
 export * from '@real-system/button-primitive';
