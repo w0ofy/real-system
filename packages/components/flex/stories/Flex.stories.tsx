@@ -6,7 +6,7 @@ import { Flex, FlexProps } from '@real-system/flex';
 import { Typography } from '@real-system/typography';
 
 export default {
-  title: 'Components/Flex',
+  title: 'Layout/Flex',
   component: Flex,
 } as Meta;
 

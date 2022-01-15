@@ -25,7 +25,7 @@ const CheckboxIcon = ({
         isSelected
           ? disabled
             ? 'color-text-disabled-strong-3'
-            : 'color-background-brand-inverse'
+            : 'color-background-brand-contrast'
           : 'transparent'
       }
     />
@@ -54,7 +54,7 @@ const CheckboxControl = ({
   indeterminate,
 }: CheckboxControlProps) => {
   const backgroundColor = useMemo(() => {
-    const defaultColor = 'color-background-brand-inverse';
+    const defaultColor = 'color-background-brand-contrast';
 
     if (isSelected) {
       if (errorText) {

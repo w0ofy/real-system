@@ -95,7 +95,7 @@ const makeColorRange =
       [`${prefix}-${paletteKey}-strong-95`]: modifyValue(shade(0.95, color)),
       // complementary colors
       [`${prefix}-${paletteKey}-highlight`]: modifyValue(invert(color)),
-      [`${prefix}-${paletteKey}-inverse`]: modifyValue(
+      [`${prefix}-${paletteKey}-contrast`]: modifyValue(
         readableColor(color, 'black', 'white')
       ),
     } as MakeColorRangeReturnValue<T, O>;

@@ -21,7 +21,7 @@ const makePositionalStyles = (isSuffix = false) => {
 
 const makeColorStyles = (isDisabled = false) => {
   const styles = {
-    backgroundColor: 'color-background-disabled-weak-5',
+    backgroundColor: 'color-background-disabled-weak-6',
     borderColor: 'color-border-disabled',
   };
   if (isDisabled) {

@@ -14,7 +14,7 @@ const realSystemStyles = css({
     MozOsxFontSmoothing: 'auto',
     fontFamily: 'font-family-text',
     fontWeight: 0,
-    letterSpacing: '0.2px',
+    letterSpacing: 3,
     backgroundColor: 'color-background',
   },
 });
