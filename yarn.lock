@@ -3707,7 +3707,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/box-primitive@^0.0.1, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
+"@real-system/box-primitive@0.0.1, @real-system/box-primitive@^0.0.1, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
   dependencies:
@@ -3723,19 +3723,6 @@ __metadata:
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
-
-"@real-system/box@npm:0.0.14":
-  version: 0.0.14
-  resolution: "@real-system/box@npm:0.0.14"
-  dependencies:
-    deepmerge: ^4.2.2
-  peerDependencies:
-    "@real-system/styling": ^0.0.12
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: 8728aa98037082ce39003432b4fe15fae592e1a275a79a9a8548227864ef2d97171b3a566805a1bc4d6b9a8d7299af4fac853a1ef24ea9b731bca2ca69620722
-  languageName: node
-  linkType: hard
 
 "@real-system/button-primitive@^0.0.9, @real-system/button-primitive@workspace:packages/primitives/button-primitive":
   version: 0.0.0-use.local
@@ -4117,14 +4104,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/visually-hidden@workspace:packages/components/visually-hidden"
   dependencies:
-    "@real-system/box": 0.0.14
+    "@real-system/box-primitive": 0.0.1
     "@real-system/styling-library": ^0.0.1
     concurrently: ^7.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
-    "@real-system/box": 0.0.14
+    "@real-system/box-primitive": 0.0.1
     "@real-system/styling-library": ^0.0.1
     react: ^17.0.2
     react-dom: ^17.0.2
