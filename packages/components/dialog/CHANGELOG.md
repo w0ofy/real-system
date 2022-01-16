@@ -1,5 +1,23 @@
 # @real-system/dialog
 
+## 0.0.9
+
+### Patch Changes
+
+- [`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b) - renamed BoxSVGElement to BoxAsSVGElement
+
+- Updated dependencies [[`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b), [`df57832`](https://github.com/bigwoof91/real-system/commit/df57832efce48f0d4073ff19b49c01ee7ff10196)]:
+  - @real-system/button@0.0.17
+  - @real-system/flex@0.0.9
+  - @real-system/typography@0.0.16
+  - @real-system/animation-library@0.0.2
+  - @real-system/state-library@0.0.2
+  - @real-system/styling-library@0.0.2
+  - @real-system/theme-library@0.0.2
+  - @real-system/utils-library@0.0.2
+  - @real-system/box-primitive@0.0.2
+  - @real-system/dialog-primitive@0.0.8
+
 ## 0.0.8
 
 ### Patch Changes

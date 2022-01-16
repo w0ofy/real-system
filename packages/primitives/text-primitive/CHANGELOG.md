@@ -1,5 +1,14 @@
 # @real-system/text
 
+## 0.0.2
+
+### Patch Changes
+
+- [`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b) - renamed BoxSVGElement to BoxAsSVGElement
+
+- Updated dependencies [[`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b)]:
+  - @real-system/styling-library@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes
