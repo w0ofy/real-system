@@ -7,7 +7,7 @@ import {
   CheckboxGroup as RealCheckboxGroup,
   CheckboxGroupItem,
   useIndeterminate,
-} from '@real-system/Checkbox';
+} from '@real-system/checkbox';
 
 export default {
   title: 'Components/Checkbox',
