@@ -3282,6 +3282,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@reach/alert@npm:^0.16.0":
+  version: 0.16.0
+  resolution: "@reach/alert@npm:0.16.0"
+  dependencies:
+    "@reach/utils": 0.16.0
+    "@reach/visually-hidden": 0.16.0
+    prop-types: ^15.7.2
+    tslib: ^2.3.0
+  peerDependencies:
+    react: ^16.8.0 || 17.x
+    react-dom: ^16.8.0 || 17.x
+  checksum: 1f67c66dc71ef45f9f46e732309e5bc2d8acad4ea24d60705f8abc8771604509573339ec96cdd3ce81c64bfa922162bf02398cb0f9b9bf8c0231b35c5732024c
+  languageName: node
+  linkType: hard
+
 "@reach/dialog@npm:^0.16.2":
   version: 0.16.2
   resolution: "@reach/dialog@npm:0.16.2"
@@ -3299,7 +3314,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reach/portal@npm:0.16.2":
+"@reach/portal@npm:0.16.2, @reach/portal@npm:^0.16.2":
   version: 0.16.2
   resolution: "@reach/portal@npm:0.16.2"
   dependencies:
@@ -3323,6 +3338,19 @@ __metadata:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
   checksum: 36bc0eb41a71798eb6186b23de265ba709e51dae5bf214fb8505c66bb3f2e6a41bb2401457350436ba89ca9e3a50f93a04fe7c33d15648ce11e568a85622d770
+  languageName: node
+  linkType: hard
+
+"@reach/visually-hidden@npm:0.16.0":
+  version: 0.16.0
+  resolution: "@reach/visually-hidden@npm:0.16.0"
+  dependencies:
+    prop-types: ^15.7.2
+    tslib: ^2.3.0
+  peerDependencies:
+    react: ^16.8.0 || 17.x
+    react-dom: ^16.8.0 || 17.x
+  checksum: e2af8978857640dcf031e1942da397b15dfbddbd3bce2d406e923cd9947f07c8beb18e4ae399f4eea34e8f1390a2a8327a4220113a9682771f86ea32a9778c8b
   languageName: node
   linkType: hard
 
@@ -3669,10 +3697,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@real-system/alert-primitive@^0.0.0, @real-system/alert-primitive@workspace:packages/primitives/alert-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/alert-primitive@workspace:packages/primitives/alert-primitive"
+  dependencies:
+    "@reach/alert": ^0.16.0
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.2
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/alert@^0.0.1, @real-system/alert@workspace:packages/components/alert":
   version: 0.0.0-use.local
   resolution: "@real-system/alert@workspace:packages/components/alert"
   dependencies:
+    "@real-system/alert-primitive": ^0.0.0
     "@real-system/button": ^0.0.17
     "@real-system/flex": ^0.0.9
     "@real-system/icon": ^0.0.16
@@ -3684,6 +3728,7 @@ __metadata:
     react-dom: ^17.0.2
     typescript: ^4.5.2
   peerDependencies:
+    "@real-system/alert-primitive": ^0.0.0
     "@real-system/button": ^0.0.17
     "@real-system/flex": ^0.0.9
     "@real-system/icon": ^0.0.16
@@ -3950,6 +3995,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/portal-primitive@workspace:packages/primitives/portal-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/portal-primitive@workspace:packages/primitives/portal-primitive"
+  dependencies:
+    "@reach/portal": ^0.16.2
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.2
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/react-aria-library@^0.0.2, @real-system/react-aria-library@workspace:packages/libraries/react-aria-library":
   version: 0.0.0-use.local
   resolution: "@real-system/react-aria-library@workspace:packages/libraries/react-aria-library"
@@ -4051,6 +4111,32 @@ __metadata:
     typescript: ^4.5.2
   peerDependencies:
     "@real-system/styling-library": ^0.0.2
+    "@real-system/utils-library": ^0.0.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@real-system/toaster@workspace:packages/components/toaster":
+  version: 0.0.0-use.local
+  resolution: "@real-system/toaster@workspace:packages/components/toaster"
+  dependencies:
+    "@real-system/alert": ^0.0.1
+    "@real-system/animation-library": ^0.0.2
+    "@real-system/box-primitive": ^0.0.2
+    "@real-system/styling-library": ^0.0.2
+    "@real-system/theme-library": ^0.0.2
+    "@real-system/utils-library": ^0.0.2
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.2
+  peerDependencies:
+    "@real-system/alert": ^0.0.1
+    "@real-system/animation-library": ^0.0.2
+    "@real-system/box-primitive": ^0.0.2
+    "@real-system/styling-library": ^0.0.2
+    "@real-system/theme-library": ^0.0.2
     "@real-system/utils-library": ^0.0.2
     react: ^17.0.2
     react-dom: ^17.0.2

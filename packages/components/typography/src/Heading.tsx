@@ -69,7 +69,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(
       <TextPrimitive
         as={as}
         m={0}
-        color="color-text"
+        color="color-text-neutral-strong-5"
         {...styles[variant]}
         {...restProps}
         ref={ref}

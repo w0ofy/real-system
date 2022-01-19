@@ -1,8 +1,9 @@
 {
-  "name": "@real-system/alert",
-  "version": "0.0.1",
-  "description": "Alert component for real system.",
-  "status": "production",
+  "name": "@real-system/alert-primitive",
+  "version": "0.0.0",
+  "description": "Alert primitive component for real system.",
+  "status": "development",
+  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -21,7 +22,7 @@
   },
   "keywords": [
     "real-system",
-    "alert"
+    "alert-primitive"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -30,27 +31,16 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/alert-primitive": "^0.0.0",
-    "@real-system/button": "^0.0.17",
-    "@real-system/flex": "^0.0.9",
-    "@real-system/icon": "^0.0.16",
-    "@real-system/styling-library": "^0.0.2",
-    "@real-system/theme-library": "^0.0.2",
-    "@real-system/typography": "^0.0.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/alert-primitive": "^0.0.0",
-    "@real-system/button": "^0.0.17",
-    "@real-system/flex": "^0.0.9",
-    "@real-system/icon": "^0.0.16",
-    "@real-system/styling-library": "^0.0.2",
-    "@real-system/theme-library": "^0.0.2",
-    "@real-system/typography": "^0.0.16",
     "concurrently": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@reach/alert": "^0.16.0"
   }
 }

@@ -41,8 +41,8 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
     ref
   ): React.ReactElement => {
     const variantOverride = useMemo(
-      () => (hideErrorIcon || errorText ? 'danger' : variant),
-      [hideErrorIcon, errorText, variant]
+      () => (errorText ? 'danger' : variant),
+      [errorText, variant]
     );
 
     return (

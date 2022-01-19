@@ -69,13 +69,18 @@ export const HelpText = () => (
   <Box display="flex" flexDirection="column">
     <Typography.HelpText id="help-text">Help text</Typography.HelpText>
     <Typography.HelpText id="help-text-danger" variant="danger">
+      Danger variant help text
+    </Typography.HelpText>
+    <Typography.HelpText
+      id="help-text-danger"
+      variant="danger"
+      errorText="Error help text">
       Danger help text
     </Typography.HelpText>
     <Typography.HelpText
       id="help-text-danger"
-      errorText="Danger help text without icon"
-      hideErrorIcon>
-      Help text
-    </Typography.HelpText>
+      errorText="Error help text without icon"
+      hideErrorIcon
+    />
   </Box>
 );

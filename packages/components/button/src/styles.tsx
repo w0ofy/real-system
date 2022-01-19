@@ -11,7 +11,7 @@ const ifNotFloating = (
   variant: ButtonVariants,
   value: number | string,
   ifElse?: number | string
-) => (variant === 'floating' ? ifElse || 0 : value);
+) => (variant !== 'floating' ? value : ifElse || 0);
 
 const getSizeStyles = (
   variant: ButtonVariants
@@ -19,15 +19,15 @@ const getSizeStyles = (
   lg: {
     px: ifNotFloating(variant, 7),
     py: ifNotFloating(variant, 4),
-    height: ifNotFloating(variant, majorScale(5), 2),
-    lineHeight: ifNotFloating(variant, majorScale(5), 2),
+    height: ifNotFloating(variant, majorScale(5), 7),
+    lineHeight: ifNotFloating(variant, majorScale(5), 7),
     fontSize: 2,
   },
   md: {
     px: ifNotFloating(variant, 6),
     py: ifNotFloating(variant, 3),
-    height: ifNotFloating(variant, majorScale(4), 6),
-    lineHeight: ifNotFloating(variant, majorScale(4), 6),
+    height: ifNotFloating(variant, majorScale(4), 7),
+    lineHeight: ifNotFloating(variant, majorScale(4), 7),
     fontSize: 1,
   },
   sm: {
