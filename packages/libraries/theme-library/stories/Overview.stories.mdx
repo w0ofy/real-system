@@ -15,7 +15,7 @@ The `ThemeProvider` provides all components with their styles - Without `ThemePr
 By default, `ThemeProvider` will use the real system default theme if a custom theme isn't provided.
 
 ```jsx
-import { ThemeProvider } from '@real-system/core/theme';
+import { ThemeProvider } from '@real-system/core/theme-library';
 
 const MyComponent = () => {
   return <ThemeProvider>...</ThemeProvider>;
@@ -56,7 +56,10 @@ type Palette = {
 Easily customize a theme by providing your own color [palette](#palette).
 
 ```jsx
-import { tokenizePalette, ThemeProvider } from '@real-system/core/theme';
+import {
+  tokenizePalette,
+  ThemeProvider,
+} from '@real-system/core/theme-library';
 
 const customTheme = tokenizePalette({
   brand: '#7d4cdb',

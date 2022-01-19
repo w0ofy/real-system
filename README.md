@@ -46,7 +46,7 @@ $ yarn add @real-system/styling-library @real-system/theme-library @real-system/
 # Usage
 
 ```jsx
-import { ThemeProvider } from '@real-system/core/theme';
+import { ThemeProvider } from '@real-system/core/theme-library';
 import { Flex } from '@real-system/core/flex';
 import { Button } from '@real-system/core/button';
 
