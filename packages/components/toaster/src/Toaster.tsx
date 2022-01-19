@@ -123,4 +123,5 @@ const Toaster = ({ toasts, pop }: ToasterProps) => {
   );
 };
 
+export type { ToasterProps };
 export { Toaster };

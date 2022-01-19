@@ -26,8 +26,9 @@ $ yarn add @real-system/portal-primitive
 ### Code Example
 
 ```javascript
-import { Portal } from '@real-system/portal-primitive';
+import { PortalPrimitive } from '@real-system/portal-primitive';
 
-...
-
+const MyComponent = () => (
+  <PortalPrimitive>Portal primitive content</PortalPrimitive>
+);
 ```

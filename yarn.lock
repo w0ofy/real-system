@@ -3995,7 +3995,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/portal-primitive@workspace:packages/primitives/portal-primitive":
+"@real-system/portal-primitive@^0.0.0, @real-system/portal-primitive@workspace:packages/primitives/portal-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/portal-primitive@workspace:packages/primitives/portal-primitive"
   dependencies:
@@ -4124,6 +4124,7 @@ __metadata:
     "@real-system/alert": ^0.0.1
     "@real-system/animation-library": ^0.0.2
     "@real-system/box-primitive": ^0.0.2
+    "@real-system/portal-primitive": ^0.0.0
     "@real-system/styling-library": ^0.0.2
     "@real-system/theme-library": ^0.0.2
     "@real-system/utils-library": ^0.0.2
@@ -4135,6 +4136,7 @@ __metadata:
     "@real-system/alert": ^0.0.1
     "@real-system/animation-library": ^0.0.2
     "@real-system/box-primitive": ^0.0.2
+    "@real-system/portal-primitive": ^0.0.0
     "@real-system/styling-library": ^0.0.2
     "@real-system/theme-library": ^0.0.2
     "@real-system/utils-library": ^0.0.2

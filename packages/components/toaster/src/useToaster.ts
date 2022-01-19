@@ -7,7 +7,7 @@ import type { PushProps, ToasterToast, UseToasterReturnedProps } from './types';
 const isValidInteger = (dismissAfter: unknown) =>
   dismissAfter != null && Number.isInteger(dismissAfter);
 
-export const useToaster = (): UseToasterReturnedProps => {
+const useToaster = (): UseToasterReturnedProps => {
   const isMounted = useRef<boolean | null>(null);
   const [toasts, setToasts] = useState<ToasterToast[]>([]);
 
@@ -87,22 +87,25 @@ export const useToaster = (): UseToasterReturnedProps => {
     [toasts]
   );
 
-  const notify: UseToasterReturnedProps['notify'] = useCallback(
+  const notify = useCallback(
     (message, props = {}) => push(message, { ...props, intent: 'info' }),
     [push]
   );
-  const danger: UseToasterReturnedProps['danger'] = useCallback(
+  const danger = useCallback(
     (message, props = {}) => push(message, { ...props, intent: 'danger' }),
     [push]
   );
-  const warning: UseToasterReturnedProps['warning'] = useCallback(
+  const warning = useCallback(
     (message, props = {}) => push(message, { ...props, intent: 'warning' }),
     [push]
   );
-  const success: UseToasterReturnedProps['success'] = useCallback(
+  const success = useCallback(
     (message, props = {}) => push(message, { ...props, intent: 'success' }),
     [push]
   );
 
   return { toasts, pop, danger, notify, warning, success };
 };
+
+export type { ToasterToast, UseToasterReturnedProps };
+export { useToaster };

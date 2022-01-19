@@ -26,8 +26,8 @@ $ yarn add @real-system/alert-primitive
 ### Code Example
 
 ```javascript
-import { Alert } from '@real-system/alert-primitive';
+import { AlertPrimitive } from '@real-system/alert-primitive';
 
-...
-
+const PoliteAlert = () => <AlertPrimitive>Alert primitive Content</AlertPrimitive>;
+const AssertiveAlert = () => <AlertPrimitive type="assertive">Alert primitive Content</AlertPrimitive>;
 ```

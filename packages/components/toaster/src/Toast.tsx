@@ -43,4 +43,5 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
   );
 });
 
+export type { ToastProps };
 export { Toast };

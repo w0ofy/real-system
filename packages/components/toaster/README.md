@@ -26,8 +26,20 @@ $ yarn add @real-system/toaster
 ### Code Example
 
 ```javascript
-import { Toaster } from '@real-system/toaster';
+import { Toaster, useToast } from '@real-system/toaster';
 
-...
+export const MyComponent = (args) => {
+  const toaster = useToaster();
+  return (
+    <Flex vertical>
+      <Button
+        mb={4}
+        onPress={() => toaster.notify('12 new messages')}>
+        Push Toast
+      </Button>
+      <Toaster {...toaster} />
+    </Flex>
+  );
+};
 
 ```
