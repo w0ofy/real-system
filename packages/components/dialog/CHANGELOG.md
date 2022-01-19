@@ -1,5 +1,17 @@
 # @real-system/dialog
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [[`2262044`](https://github.com/bigwoof91/real-system/commit/226204470736268aea2cbd0af64838feaa837569)]:
+  - @real-system/button@0.0.18
+  - @real-system/typography@0.0.17
+  - @real-system/animation-library@0.0.3
+  - @real-system/utils-library@0.0.3
+  - @real-system/flex@0.0.10
+  - @real-system/theme-library@0.0.3
+
 ## 0.0.9
 
 ### Patch Changes
