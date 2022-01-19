@@ -1,5 +1,6 @@
 import merge from 'deepmerge';
 
+export * from './canUseDOM';
 export * from './captialize';
 export * from './kebabCase';
 export * from './makeTestId';

@@ -10,8 +10,8 @@ export default {
   component: Alert,
   subcomponents: { InlineAlert: RealInlineAlert },
   args: {
-    title: 'There are over 200 integrations available',
-    children:
+    children: 'There are over 200 integrations available',
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dod eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 } as Meta;
