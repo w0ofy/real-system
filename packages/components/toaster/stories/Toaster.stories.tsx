@@ -17,12 +17,35 @@ export const Showcase = (args) => {
     <Flex vertical>
       <Button
         mb={4}
+        intent="primary"
         onPress={() =>
           toaster.notify('12 new messages', {
             description: 'Hi, my name is Bond, James Bond... Hello',
           })
         }>
-        Notify
+        Notify toaster
+      </Button>
+      <Button
+        mb={4}
+        intent="primary"
+        onPress={() =>
+          toaster.notify('Successfully installed Real System', {
+            dismissAfter: false,
+            description:
+              'You have now have full access to components that make sense.',
+          })
+        }>
+        Notify toaster with no timer
+      </Button>
+      <Button
+        mb={4}
+        onPress={() =>
+          toaster.warning('You forgot to enter some details', {
+            description:
+              'Fill in your first name, last name and date of birth.',
+          })
+        }>
+        Warning toaster
       </Button>
       <Button
         intent="danger"
@@ -36,17 +59,7 @@ export const Showcase = (args) => {
             },
           })
         }>
-        Danger
-      </Button>
-      <Button
-        mb={4}
-        onPress={() =>
-          toaster.warning('You forgot to enter some details', {
-            description:
-              'Fill in your first name, last name and date of birth.',
-          })
-        }>
-        Warn
+        Danger toaster
       </Button>
       <Button
         mb={4}
@@ -57,19 +70,7 @@ export const Showcase = (args) => {
               'You have now have full access to components that make sense.',
           })
         }>
-        Success
-      </Button>
-      <Button
-        mb={4}
-        intent="success"
-        onPress={() =>
-          toaster.success('Successfully installed Real System', {
-            dismissAfter: 0,
-            description:
-              'You have now have full access to components that make sense.',
-          })
-        }>
-        Success
+        Success toaster
       </Button>
       <Toaster {...toaster} />
     </Flex>

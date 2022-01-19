@@ -63,7 +63,7 @@ const ShowcaseTemplate = (args) => (
         <Button {...args} disabled trailingIcon={<Icon icon="cog" />} />
         <Button {...args} disabled leadingIcon={<Icon icon="cog" />} />
         <Button {...args} disabled>
-          <Icon icon="cog" />
+          <Icon icon="download" />
         </Button>
       </Row>
     )}
