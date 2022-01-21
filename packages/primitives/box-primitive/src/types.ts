@@ -1,3 +1,5 @@
+import type { RealSystemElementProps } from '@real-system/types-library';
+
 import type { BoxBaseStyleProps } from './styleProps/props';
 import { PSEUDO_PROP_STYLES } from './styleProps/pseudoPropStyles';
 
@@ -26,11 +28,9 @@ type BoxComponentProps = {
   datetime?: string;
   /** variant for variant styling */
   variant?: string;
-  /** testid for unit testing libraries like @testing-library/react */
-  'data-testid'?: string;
   /** generually used for inputs and labels */
   htmlFor?: string | undefined;
-};
+} & RealSystemElementProps;
 
 export type BoxAsSVGElementProps = Omit<
   React.SVGAttributes<SVGElement>,

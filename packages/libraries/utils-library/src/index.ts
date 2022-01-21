@@ -4,5 +4,3 @@ export * from './helpers';
 export * from './private';
 /** hooks */
 export * from './hooks';
-/** type utils */
-export * from './typeHelpers';

@@ -1,4 +1,4 @@
-import { AddPrefix } from '@real-system/utils-library';
+import type { AddPrefix } from '@real-system/types-library';
 
 /**
  * @description all palette keys, regardless of depth
