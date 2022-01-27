@@ -1,8 +1,8 @@
-import { KebabCase } from 'type-fest';
+import type { KebabCase } from '@real-system/types-library';
 
 import { _logger } from '../private';
 
-const kebabCase = <S extends string>(str: string): KebabCase<S> => {
+const kebabCase = <S extends string>(str: S): KebabCase<S> => {
   if (!str || typeof str !== 'string') {
     /** @todo find better way of typing for this */
     _logger.throw.type(

@@ -2,6 +2,8 @@ import React, { useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
 import { majorScale } from '@real-system/theme-library';
+import type { RealSystemElementProps } from '@real-system/types-library';
+import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {
   let styles: BoxStyleProps = {
@@ -34,10 +36,11 @@ export type AddonProps = {
   children: NonNullable<React.ReactNode>;
   disabled?: boolean;
   isSuffix?: boolean;
-};
+} & BoxStyleProps &
+  RealSystemElementProps;
 
 const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
-  { children, disabled, isSuffix = false },
+  { children, disabled, isSuffix = false, ...restProps },
   ref
 ) {
   const colorStyles = useMemo(() => makeColorStyles(disabled), [disabled]);
@@ -50,14 +53,16 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
 
   return (
     <Box
+      data-testid={makeTestId('input-box-addon')}
       display="flex"
-      alignItems="center"
       justifyContent="center"
+      alignItems="center"
       height={16}
       lineHeight={majorScale(4)}
       px={4}
       {...positionalStyles}
       {...colorStyles}
+      {...restProps}
       ref={ref}>
       {children}
     </Box>

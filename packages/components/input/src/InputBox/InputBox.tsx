@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import { merge } from '@real-system/utils-library';
+import type { RealSystemElementProps } from '@real-system/types-library';
+import { makeTestId, merge } from '@real-system/utils-library';
 
-import { Addon } from './Addon';
+import { Addon, AddonProps } from './Addon';
 
 export type InputBoxTypes =
   | 'text'
@@ -24,7 +25,8 @@ export type InputBoxProps = {
   type?: InputBoxTypes;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
-};
+  addonProps?: Omit<AddonProps, 'children'>;
+} & RealSystemElementProps;
 
 type InputBoxStates = 'readonly' | 'hidden' | 'disabled' | 'default' | 'error';
 
@@ -96,7 +98,17 @@ const styles: { [key in InputBoxStates]: BoxStyleProps } = {
 
 const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
   (
-    { disabled, error = false, readOnly, children, type, suffix, prefix },
+    {
+      disabled,
+      error = false,
+      readOnly,
+      children,
+      type,
+      suffix,
+      prefix,
+      addonProps,
+      ...restProps
+    },
     ref
   ) => {
     const isHidden = type === 'hidden';
@@ -116,11 +128,20 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
     }
 
     return (
-      <Box ref={ref} {...styles[state]}>
-        {prefix && <Addon disabled={disabled}>{prefix}</Addon>}
+      <Box
+        ref={ref}
+        {...styles[state]}
+        height="100%"
+        data-testid={makeTestId('input-box')}
+        {...restProps}>
+        {prefix && (
+          <Addon disabled={disabled} {...addonProps}>
+            {prefix}
+          </Addon>
+        )}
         {children}
         {suffix && (
-          <Addon disabled={disabled} isSuffix>
+          <Addon disabled={disabled} {...addonProps} isSuffix>
             {suffix}
           </Addon>
         )}

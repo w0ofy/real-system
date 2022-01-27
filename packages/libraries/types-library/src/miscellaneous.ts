@@ -4,11 +4,6 @@ export type RemoveSuffix<
 > = T extends `${infer Prefix}${S}` ? Prefix : never;
 
 /**
- * @description get the typeof value of an object
- */
-export type ValueOf<O> = O[keyof O];
-
-/**
  * @description add a prefix to a string type
  */
 export type AddPrefix<TKey, TPrefix extends string> = TKey extends string
