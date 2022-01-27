@@ -1,6 +1,7 @@
 # Automatically generated from "yarn generate-packages"
 /lib
 /alert
+/alert-primitive
 /animation-library
 /box-primitive
 /button
@@ -11,12 +12,16 @@
 /flex
 /icon
 /input
+/portal-primitive
 /react-aria-library
 /spinner
 /state-library
 /styling-library
 /text-primitive
+/textarea
 /theme-library
+/toaster
+/types-library
 /typography
 /utils-library
 /visually-hidden

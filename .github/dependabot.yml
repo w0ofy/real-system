@@ -25,6 +25,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/primitives/alert-primitive
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/libraries/animation-library
     schedule:
       interval: weekly
@@ -113,6 +121,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/primitives/portal-primitive
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/libraries/react-aria-library
     schedule:
       interval: weekly
@@ -153,7 +169,31 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/components/textarea
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/libraries/theme-library
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/components/toaster
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/libraries/types-library
     schedule:
       interval: weekly
     labels:
