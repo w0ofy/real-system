@@ -3827,6 +3827,7 @@ __metadata:
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
   dependencies:
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     concurrently: ^7.0.0
     deepmerge: ^4.2.2
     react: ^17.0.2
@@ -3834,6 +3835,7 @@ __metadata:
     typescript: ^4.5.2
   peerDependencies:
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -3845,6 +3847,7 @@ __metadata:
   dependencies:
     "@real-system/react-aria-library": ^0.0.2
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -3853,6 +3856,7 @@ __metadata:
   peerDependencies:
     "@real-system/react-aria-library": ^0.0.2
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4004,6 +4008,7 @@ __metadata:
     "@real-system/box-primitive": ^0.0.2
     "@real-system/styling-library": ^0.0.2
     "@real-system/theme-library": ^0.0.3
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -4013,6 +4018,7 @@ __metadata:
     "@real-system/box-primitive": ^0.0.2
     "@real-system/styling-library": ^0.0.2
     "@real-system/theme-library": ^0.0.3
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4049,6 +4055,7 @@ __metadata:
   dependencies:
     "@real-system/box-primitive": ^0.0.2
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     "@real-system/typography": ^0.0.17
     "@real-system/visually-hidden": ^0.0.15
     concurrently: ^7.0.0
@@ -4058,6 +4065,7 @@ __metadata:
   peerDependencies:
     "@real-system/box-primitive": ^0.0.2
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     "@real-system/typography": ^0.0.17
     "@real-system/visually-hidden": ^0.0.15
     react: ^17.0.2
@@ -4176,6 +4184,7 @@ __metadata:
     "@real-system/input": ^0.0.16
     "@real-system/styling-library": ^0.0.2
     "@real-system/theme-library": ^0.0.3
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -4187,6 +4196,7 @@ __metadata:
     "@real-system/input": ^0.0.16
     "@real-system/styling-library": ^0.0.2
     "@real-system/theme-library": ^0.0.3
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4198,6 +4208,7 @@ __metadata:
   resolution: "@real-system/theme-library@workspace:packages/libraries/theme-library"
   dependencies:
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     concurrently: ^7.0.0
     csstype: ^3.0.10
@@ -4206,6 +4217,7 @@ __metadata:
     typescript: ^4.5.2
   peerDependencies:
     "@real-system/styling-library": ^0.0.2
+    "@real-system/types-library": ^0.0.0
     "@real-system/utils-library": ^0.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4240,7 +4252,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/types-library@workspace:packages/libraries/types-library":
+"@real-system/types-library@^0.0.0, @real-system/types-library@workspace:packages/libraries/types-library":
   version: 0.0.0-use.local
   resolution: "@real-system/types-library@workspace:packages/libraries/types-library"
   dependencies:
@@ -4283,6 +4295,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/utils-library@workspace:packages/libraries/utils-library"
   dependencies:
+    "@real-system/types-library": ^0.0.0
     chalk: ^4.1.2
     concurrently: ^7.0.0
     deepmerge: ^4.2.2
@@ -4292,6 +4305,7 @@ __metadata:
     react-uid: ^2.3.1
     typescript: ^4.5.2
   peerDependencies:
+    "@real-system/types-library": ^0.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
