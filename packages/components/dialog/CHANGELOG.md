@@ -1,5 +1,23 @@
 # @real-system/dialog
 
+## 0.0.12
+
+### Patch Changes
+
+- [`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef) - updating versions to latest bumps
+
+- Updated dependencies [[`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef)]:
+  - @real-system/button@0.0.20
+  - @real-system/flex@0.0.12
+  - @real-system/typography@0.0.19
+  - @real-system/theme-library@0.0.5
+  - @real-system/utils-library@0.0.5
+  - @real-system/box-primitive@0.0.4
+  - @real-system/animation-library@0.0.4
+  - @real-system/state-library@0.0.3
+  - @real-system/styling-library@0.0.3
+  - @real-system/dialog-primitive@0.0.9
+
 ## 0.0.11
 
 ### Patch Changes

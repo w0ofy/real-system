@@ -1,5 +1,17 @@
 # @real-system/button
 
+## 0.0.20
+
+### Patch Changes
+
+- [`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef) - updating versions to latest bumps
+
+- Updated dependencies [[`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef)]:
+  - @real-system/theme-library@0.0.5
+  - @real-system/utils-library@0.0.5
+  - @real-system/button-primitive@0.0.13
+  - @real-system/styling-library@0.0.3
+
 ## 0.0.19
 
 ### Patch Changes

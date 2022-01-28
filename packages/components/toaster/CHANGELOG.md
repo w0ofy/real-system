@@ -1,5 +1,20 @@
 # @real-system/toaster
 
+## 0.0.3
+
+### Patch Changes
+
+- [`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef) - updating versions to latest bumps
+
+- Updated dependencies [[`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef)]:
+  - @real-system/alert@0.0.4
+  - @real-system/theme-library@0.0.5
+  - @real-system/utils-library@0.0.5
+  - @real-system/box-primitive@0.0.4
+  - @real-system/animation-library@0.0.4
+  - @real-system/styling-library@0.0.3
+  - @real-system/portal-primitive@0.0.2
+
 ## 0.0.2
 
 ### Patch Changes
