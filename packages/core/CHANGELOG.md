@@ -1,5 +1,38 @@
 # @real-system/core
 
+## 0.0.22-next.0
+
+### Patch Changes
+
+- [`4dc0117`](https://github.com/bigwoof91/real-system/commit/4dc011714decda9c3adacb0c2620c9cf45f9a620) - testing next
+
+- Updated dependencies [[`4dc0117`](https://github.com/bigwoof91/real-system/commit/4dc011714decda9c3adacb0c2620c9cf45f9a620)]:
+  - @real-system/alert@0.0.4-next.0
+  - @real-system/button@0.0.20-next.0
+  - @real-system/checkbox@0.0.5-next.0
+  - @real-system/dialog@0.0.12-next.0
+  - @real-system/flex@0.0.12-next.0
+  - @real-system/icon@0.0.19-next.0
+  - @real-system/input@0.0.18-next.0
+  - @real-system/spinner@0.0.18-next.0
+  - @real-system/textarea@0.0.2-next.0
+  - @real-system/toaster@0.0.3-next.0
+  - @real-system/typography@0.0.19-next.0
+  - @real-system/visually-hidden@0.0.17-next.0
+  - @real-system/theme-library@0.0.5-next.0
+  - @real-system/types-library@0.0.2-next.0
+  - @real-system/utils-library@0.0.5-next.0
+  - @real-system/box-primitive@0.0.4-next.0
+  - @real-system/button-primitive@0.0.13-next.0
+  - @real-system/animation-library@0.0.4-next.0
+  - @real-system/react-aria-library@0.0.3-next.0
+  - @real-system/state-library@0.0.3-next.0
+  - @real-system/styling-library@0.0.3-next.0
+  - @real-system/alert-primitive@0.0.2-next.0
+  - @real-system/dialog-primitive@0.0.9-next.0
+  - @real-system/portal-primitive@0.0.2-next.0
+  - @real-system/text-primitive@0.0.3-next.0
+
 ## 0.0.21
 
 ### Patch Changes
