@@ -11,9 +11,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom
+$ npm install react react-dom @real-system/types-library
 # yarn
-$ yarn add react react-dom
+$ yarn add react react-dom @real-system/types-library
 
 # install utils
 
@@ -26,12 +26,10 @@ $ yarn add @real-system/utils-library
 ### Code Example
 
 ```javascript
-import { ValueOf } from '@real-system/utils-library';
+import { kebabCase } from '@real-system/utils-library';
 
-const obj = {
-  keyOne: 'one',
-  keyTwo: 'two,
-}
-type Values = ValueOf<typeof obj>;
-// output: type Values = 'one' | 'two';
+const formatString = (name: Names) =>
+  kebabCase(name);
+
+formatString('JimSlim') // output: 'jim-slim'
 ```
