@@ -1,5 +1,16 @@
 # @real-system/theme
 
+## 0.0.0-20220128083632
+
+### Patch Changes
+
+- [`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef) - updating versions to latest bumps
+
+- Updated dependencies [[`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef)]:
+  - @real-system/types-library@0.0.0-20220128083632
+  - @real-system/utils-library@0.0.0-20220128083632
+  - @real-system/styling-library@0.0.0-20220128083632
+
 ## 0.0.5-next.0
 
 ### Patch Changes
