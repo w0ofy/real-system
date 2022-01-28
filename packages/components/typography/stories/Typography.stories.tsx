@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box';
+import { Box } from '@real-system/box-primitive';
 import { Typography } from '@real-system/typography';
 
 export default {
@@ -69,7 +69,18 @@ export const HelpText = () => (
   <Box display="flex" flexDirection="column">
     <Typography.HelpText id="help-text">Help text</Typography.HelpText>
     <Typography.HelpText id="help-text-danger" variant="danger">
+      Danger variant help text
+    </Typography.HelpText>
+    <Typography.HelpText
+      id="help-text-danger"
+      variant="danger"
+      errorText="Error help text">
       Danger help text
     </Typography.HelpText>
+    <Typography.HelpText
+      id="help-text-danger"
+      errorText="Error help text without icon"
+      hideErrorIcon
+    />
   </Box>
 );

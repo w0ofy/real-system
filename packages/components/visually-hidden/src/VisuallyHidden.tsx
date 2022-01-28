@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxProps } from '@real-system/box';
+import { Box, BoxProps } from '@real-system/box-primitive';
 
 export type VisuallyHiddenProps = Pick<BoxProps, 'as'> & {
   children: NonNullable<React.ReactNode>;
@@ -13,12 +13,13 @@ const VisuallyHidden = forwardRef<HTMLElement, VisuallyHiddenProps>(
         {...restProps}
         ref={ref}
         as={as}
-        border="none"
+        border="0px"
         width="1px"
         height="1px"
-        p={0}
+        padding={0}
         clip="rect(0 0 0 0)"
-        margin="space-negative-1"
+        clipPath="inset(50%)"
+        margin="0 -1px -1px 0"
         overflow="hidden"
         position="absolute"
         textTransform="none"

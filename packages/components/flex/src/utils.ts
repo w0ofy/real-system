@@ -1,4 +1,4 @@
-import { ValueOf } from '@real-system/utils';
+import type { ValueOf } from '@real-system/types-library';
 
 import type {
   Basis,

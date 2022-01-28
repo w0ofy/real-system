@@ -46,7 +46,7 @@ $ yarn add @real-system/core
 // index.js
 import React, { ReactDOM } from 'react';
 
-import { ThemeProvider } from '@real-system/core/theme';
+import { ThemeProvider } from '@real-system/core/theme-library';
 import { App } from './App';
 
 ReactDOM.render(
@@ -76,7 +76,7 @@ You can use the Real System components so long is they are nested within Theme c
 // index.js
 import React, { ReactDOM } from 'react';
 
-import { ThemeProvider } from '@real-system/core/theme';
+import { ThemeProvider } from '@real-system/core/theme-library';
 import { App } from './App';
 
 ReactDOM.render(
@@ -89,7 +89,7 @@ ReactDOM.render(
 );
 
 // App.js
-import { Box } from '@real-system/core/box';
+import { Box } from '@real-system/core/box-primitive';
 
 const App = () => (
   <Box margin={2} backgroundColor="color-background">...</Box>

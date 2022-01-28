@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
 
-import { animated } from '@real-system/animation';
+import { animated } from '@real-system/animation-library';
 import { Button } from '@real-system/button';
 import {
   DialogContentPrimitive,
   DialogOverlayPrimitive,
 } from '@real-system/dialog-primitive';
-import styled, { polished } from '@real-system/styling';
-import { getToken, majorScale } from '@real-system/theme';
+import styled, { polished } from '@real-system/styling-library';
+import { getToken, majorScale } from '@real-system/theme-library';
 import { Typography } from '@real-system/typography';
 
 const { transparentize } = polished;

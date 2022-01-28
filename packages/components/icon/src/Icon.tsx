@@ -1,8 +1,8 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box';
-import styled from '@real-system/styling';
-import { useToken } from '@real-system/theme';
+import { Box } from '@real-system/box-primitive';
+import styled from '@real-system/styling-library';
+import { useToken } from '@real-system/theme-library';
 
 import { INTENT_MAP, SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';
@@ -20,7 +20,14 @@ const StyledIcon = styled(({ Icon, ...restProps }: InternalIconProps) => {
  * @todo add a11y props and functionnality
  */
 const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
-  { size = 'sm', icon, intent, solid = false, title = icon, ...restProps },
+  {
+    size = 'sm',
+    icon,
+    intent = undefined,
+    solid = false,
+    title = icon,
+    ...restProps
+  },
   ref
 ) {
   const Icon = useMemo(
@@ -28,8 +35,8 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     [icon, solid]
   );
   const iconSize = useToken(SIZE_MAP[size], 'sizes');
-  let iconColor = useToken(INTENT_MAP[intent || 'default']);
-  if (!intent) {
+  let iconColor = useToken(INTENT_MAP[intent || 'default']) as string;
+  if (intent === undefined || restProps.color) {
     iconColor = 'currentColor';
   }
 
@@ -43,10 +50,6 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
       width={iconSize}
       height={iconSize}
       title={title}
-      _focus={{
-        outline: '2px solid',
-        outlineColor: 'color-border-primary',
-      }}
       {...restProps}>
       <StyledIcon Icon={Icon} size={iconSize} color={iconColor} />
     </Box>

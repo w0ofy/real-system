@@ -1,5 +1,5 @@
-import type { BoxProps } from '@real-system/box';
-import type { ResponsiveValue } from '@real-system/styling';
+import type { BoxProps } from '@real-system/box-primitive';
+import type { ResponsiveValue } from '@real-system/styling-library';
 
 export type DisplayOptions = 'flex' | 'inline-flex';
 export type Display = ResponsiveValue<DisplayOptions>;

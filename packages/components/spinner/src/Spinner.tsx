@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box } from '@real-system/box';
-import { useUID } from '@real-system/utils';
+import { Box } from '@real-system/box-primitive';
+import { useUID } from '@real-system/utils-library';
 
 import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';

@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/addon-docs';
+
+import { ThemeProvider } from '@real-system/theme-library';
+
+import { TokenSearch } from './components';
+
+import { makeMdxParameters } from '/.storybook/utils';
+
+<Meta
+  title="Real System/Theming/Tokens/Z Indices"
+  parameters={makeMdxParameters()}
+/>
+
+# Z Indices
+
+<ThemeProvider>
+  <TokenSearch scale="zIndices" />
+</ThemeProvider>

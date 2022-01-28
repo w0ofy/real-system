@@ -1,7 +1,7 @@
 import React from 'react';
 
-import type { BoxProps } from '@real-system/box';
-import { Box } from '@real-system/box';
+import type { BoxProps } from '@real-system/box-primitive';
+import { Box } from '@real-system/box-primitive';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 export type RequiredDotProps = {
@@ -10,6 +10,7 @@ export type RequiredDotProps = {
 
 const RequiredDot = ({
   disabled = false,
+  cursor = 'pointer',
   ...restProps
 }: RequiredDotProps): React.ReactElement => {
   return (
@@ -19,8 +20,8 @@ const RequiredDot = ({
       alignItems="center"
       justifyContent="center"
       height="size-icon-2"
-      mr={3}
-      cursor={disabled ? 'not-allowed' : 'pointer'}>
+      mr={2}
+      cursor={disabled ? 'not-allowed' : cursor}>
       <Box
         {...restProps}
         as="span"

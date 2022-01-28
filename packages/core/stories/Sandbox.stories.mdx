@@ -1,9 +1,13 @@
 import { Meta, Story } from '@storybook/addon-docs';
 
+import { Box } from '@real-system/box-primitive';
+
 import { makeMdxParameters } from '/.storybook/utils';
 
 <Meta
   title="Sandbox/Live Coding"
+  // Meta requires a component -- just using Box so this story renders
+  component={Box}
   parameters={{
     ...makeMdxParameters({
       playroom: {

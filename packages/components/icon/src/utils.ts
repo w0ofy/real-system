@@ -1,4 +1,4 @@
-import { kebabCase } from '@real-system/utils';
+import { kebabCase } from '@real-system/utils-library';
 
 import { HeroIconNames, HeroIconSet, Icons, IconValue } from './types';
 

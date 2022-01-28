@@ -1,12 +1,12 @@
 import React, { forwardRef } from 'react';
 
-import { useTransition } from '@real-system/animation';
-import type { BoxStyleProps } from '@real-system/box';
+import { useTransition } from '@real-system/animation-library';
+import type { BoxStyleProps } from '@real-system/box-primitive';
 import type { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
-import { makeTestId } from '@real-system/utils';
+import { makeTestId } from '@real-system/utils-library';
 
 import { DialogContent, DialogOverlay } from './components';
-import { DialogContext, DialogContextProvider } from './DialogContext';
+import { DialogContextProvider, DialogState } from './DialogContext';
 
 const useTransitionProps = {
   from: { opacity: 0, transform: 'translate3d(0, 10px, 0)' },
@@ -15,7 +15,7 @@ const useTransitionProps = {
   config: { duration: 250, mass: 0.5, tension: 370, friction: 26 },
 };
 
-type DialogProps = DialogContext &
+type DialogProps = DialogState &
   BoxStyleProps &
   Pick<DialogOverlayPrimitiveProps, 'allowPinchZoom' | 'initialFocusRef'> & {
     /**
@@ -37,19 +37,19 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
     children,
     dismiss,
     initialFocusRef,
-    isVisible,
+    isOpen,
     overlayProps,
     ...restProps
   }: DialogProps,
   ref
 ) {
-  const transition = useTransition(isVisible, useTransitionProps);
+  const transition = useTransition(isOpen, useTransitionProps);
 
   return (
-    <DialogContextProvider dismiss={dismiss} isVisible={isVisible}>
+    <DialogContextProvider state={{ dismiss, isOpen }}>
       {transition(
-        (styles, visible) =>
-          visible && (
+        (styles, isVisible) =>
+          isVisible && (
             <DialogOverlay
               style={{ opacity: styles.opacity }}
               onDismiss={dismiss}

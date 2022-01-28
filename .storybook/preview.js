@@ -1,7 +1,10 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
-import { themes, ThemeProvider } from '../packages/libraries/theme/src/index';
+import {
+  themes,
+  ThemeProvider,
+} from '../packages/libraries/theme-library/src/index';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -15,7 +18,7 @@ export const globalTypes = {
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
       icon: 'paintbrush',
       // array of plain string values or MenuItem shape (see below)
-      items: ['realsystem'],
+      items: Object.keys(themes),
     },
   },
 };
@@ -42,9 +45,11 @@ export const parameters = {
         [
           'Getting Started',
           'Theming',
-          ['Overview', 'Token System', 'Tokens', 'Advanced'],
+          ['Overview', 'Token System', 'Tokens', 'Scales', 'Advanced'],
         ],
         'Components',
+        'Layout',
+        'Utilities',
         'Primitives',
         'Sandbox',
       ],

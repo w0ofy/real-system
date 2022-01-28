@@ -1,9 +1,9 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Spinner } from '@real-system/spinner';
-import styled from '@real-system/styling';
-import { organScale } from '@real-system/theme';
-import { makeTestId } from '@real-system/utils';
+import styled from '@real-system/styling-library';
+import { organScale } from '@real-system/theme-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import { DefaultButton } from './DefaultButton';
 import { FloatingButton } from './FloatingButton';
@@ -43,6 +43,7 @@ type LabelProps = {
 const Label = styled.span<LabelProps>((props) => ({
   marginLeft: props.ml,
   marginRight: props.mr,
+  whiteSpace: 'nowrap',
 }));
 
 const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? organScale(5) : 0);

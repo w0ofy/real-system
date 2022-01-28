@@ -1,6 +1,6 @@
 import React, { forwardRef, ForwardRefExoticComponent } from 'react';
 
-import { BoxAs } from '@real-system/box';
+import { TextPrimitive } from '@real-system/text-primitive';
 
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';
@@ -10,8 +10,6 @@ import {
   TypographyAsTags,
   TypographyVariants,
 } from './types';
-
-const P = BoxAs<TypographyProps>('p');
 
 type TypographyVariantMap = {
   [key in TypographyVariants]: Extract<TypographyAsTags, 'p' | 'span'>;
@@ -26,7 +24,7 @@ export type TypographyProps = {
   children?: React.ReactNode;
   variant?: keyof typeof TYPOGRAPHY_VARIANT_MAP;
   as?: TypographyAsTags;
-} & Pick<InternalTypographyProps, 'mb' | 'marginBottom'>;
+} & InternalTypographyProps;
 
 export interface TypographyComponent
   extends ForwardRefExoticComponent<TypographyProps> {
@@ -44,7 +42,7 @@ const Typography: TypographyComponent = forwardRef<
   ref
 ): React.ReactElement {
   return (
-    <P
+    <TextPrimitive
       fontSize={1}
       fontWeight={0}
       lineHeight={2}
@@ -55,7 +53,7 @@ const Typography: TypographyComponent = forwardRef<
       mb={(marginBottom || mb) ?? 2}
       ref={ref}>
       {children}
-    </P>
+    </TextPrimitive>
   );
 });
 

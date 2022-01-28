@@ -1,8 +1,8 @@
 import React, { forwardRef, useRef } from 'react';
 
-import { useButton } from '@real-system/react-aria';
-import styled, { StyledComponent } from '@real-system/styling';
-import { _logger, makeTestId, useMergedRef } from '@real-system/utils';
+import { useButton } from '@real-system/react-aria-library';
+import styled, { StyledComponent } from '@real-system/styling-library';
+import { _logger, makeTestId, useMergedRef } from '@real-system/utils-library';
 
 import { composeButtonPrimitiveStyleProps } from './styleProps/props';
 import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
