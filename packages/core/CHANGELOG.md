@@ -1,5 +1,38 @@
 # @real-system/core
 
+## 0.0.0-20220128083632
+
+### Patch Changes
+
+- [`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef) - updating versions to latest bumps
+
+- Updated dependencies [[`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef)]:
+  - @real-system/alert@0.0.0-20220128083632
+  - @real-system/button@0.0.0-20220128083632
+  - @real-system/checkbox@0.0.0-20220128083632
+  - @real-system/dialog@0.0.0-20220128083632
+  - @real-system/flex@0.0.0-20220128083632
+  - @real-system/icon@0.0.0-20220128083632
+  - @real-system/input@0.0.0-20220128083632
+  - @real-system/spinner@0.0.0-20220128083632
+  - @real-system/textarea@0.0.0-20220128083632
+  - @real-system/toaster@0.0.0-20220128083632
+  - @real-system/typography@0.0.0-20220128083632
+  - @real-system/visually-hidden@0.0.0-20220128083632
+  - @real-system/theme-library@0.0.0-20220128083632
+  - @real-system/types-library@0.0.0-20220128083632
+  - @real-system/utils-library@0.0.0-20220128083632
+  - @real-system/box-primitive@0.0.0-20220128083632
+  - @real-system/button-primitive@0.0.0-20220128083632
+  - @real-system/animation-library@0.0.0-20220128083632
+  - @real-system/react-aria-library@0.0.0-20220128083632
+  - @real-system/state-library@0.0.0-20220128083632
+  - @real-system/styling-library@0.0.0-20220128083632
+  - @real-system/alert-primitive@0.0.0-20220128083632
+  - @real-system/dialog-primitive@0.0.0-20220128083632
+  - @real-system/portal-primitive@0.0.0-20220128083632
+  - @real-system/text-primitive@0.0.0-20220128083632
+
 ## 0.0.22-next.0
 
 ### Patch Changes

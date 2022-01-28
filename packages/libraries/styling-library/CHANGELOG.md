@@ -1,5 +1,11 @@
 # @real-system/styling
 
+## 0.0.0-20220128083632
+
+### Patch Changes
+
+- [`7ddb00a`](https://github.com/bigwoof91/real-system/commit/7ddb00a6101952bac809ed5ac81326e293a9b3ef) - updating versions to latest bumps
+
 ## 0.0.3-next.0
 
 ### Patch Changes
