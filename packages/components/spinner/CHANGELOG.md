@@ -1,5 +1,16 @@
 # @real-system/typography
 
+## 0.0.18-next.0
+
+### Patch Changes
+
+- [`4dc0117`](https://github.com/bigwoof91/real-system/commit/4dc011714decda9c3adacb0c2620c9cf45f9a620) - testing next
+
+- Updated dependencies [[`4dc0117`](https://github.com/bigwoof91/real-system/commit/4dc011714decda9c3adacb0c2620c9cf45f9a620)]:
+  - @real-system/utils-library@0.0.5-next.0
+  - @real-system/box-primitive@0.0.4-next.0
+  - @real-system/styling-library@0.0.3-next.0
+
 ## 0.0.17
 
 ### Patch Changes
