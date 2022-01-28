@@ -33,7 +33,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Create PR or Publish Package
-        uses: changesets/action@master
+        uses: changesets/action@v1
         with:
           version: yarn version:stable
           publish: yarn release:stable
