@@ -1,6 +1,6 @@
 {
   "name": "@real-system/input",
-  "version": "0.0.16",
+  "version": "0.0.13-rc.0",
   "description": "Real System input component",
   "status": "production",
   "main": "lib/index.js",
@@ -32,21 +32,19 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box-primitive": "^0.0.2",
-    "@real-system/styling-library": "^0.0.2",
-    "@real-system/types-library": "^0.0.0",
-    "@real-system/typography": "^0.0.17",
-    "@real-system/visually-hidden": "^0.0.15",
+    "@real-system/box": "^0.0.14-rc.0",
+    "@real-system/styling": "^0.0.12-rc.0",
+    "@real-system/typography": "^0.0.14-rc.0",
+    "@real-system/visually-hidden": "^0.0.13-rc.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/box-primitive": "^0.0.2",
-    "@real-system/styling-library": "^0.0.2",
-    "@real-system/types-library": "^0.0.0",
-    "@real-system/typography": "^0.0.17",
-    "@real-system/visually-hidden": "^0.0.15",
-    "concurrently": "^7.0.0",
+    "@real-system/box": "^0.0.14-rc.0",
+    "@real-system/styling": "^0.0.12-rc.0",
+    "@real-system/typography": "^0.0.14-rc.0",
+    "@real-system/visually-hidden": "^0.0.13-rc.0",
+    "concurrently": "^6.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.5.5"

@@ -1,6 +1,6 @@
 {
-  "name": "@real-system/styling-library",
-  "version": "0.0.2",
+  "name": "@real-system/styling",
+  "version": "0.0.12-rc.0",
   "description": "theme and components for real system",
   "status": "production",
   "main": "lib/index.js",

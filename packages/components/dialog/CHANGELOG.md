@@ -1,72 +1,22 @@
 # @real-system/dialog
 
-## 0.0.10
-
-### Patch Changes
-
-- Updated dependencies [[`2262044`](https://github.com/bigwoof91/real-system/commit/226204470736268aea2cbd0af64838feaa837569)]:
-  - @real-system/button@0.0.18
-  - @real-system/typography@0.0.17
-  - @real-system/animation-library@0.0.3
-  - @real-system/utils-library@0.0.3
-  - @real-system/flex@0.0.10
-  - @real-system/theme-library@0.0.3
-
-## 0.0.9
-
-### Patch Changes
-
-- [`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b) - renamed BoxSVGElement to BoxAsSVGElement
-
-- Updated dependencies [[`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b), [`df57832`](https://github.com/bigwoof91/real-system/commit/df57832efce48f0d4073ff19b49c01ee7ff10196)]:
-  - @real-system/button@0.0.17
-  - @real-system/flex@0.0.9
-  - @real-system/typography@0.0.16
-  - @real-system/animation-library@0.0.2
-  - @real-system/state-library@0.0.2
-  - @real-system/styling-library@0.0.2
-  - @real-system/theme-library@0.0.2
-  - @real-system/utils-library@0.0.2
-  - @real-system/box-primitive@0.0.2
-  - @real-system/dialog-primitive@0.0.8
-
-## 0.0.8
-
-### Patch Changes
-
-- [#190](https://github.com/bigwoof91/real-system/pull/190) [`4125202`](https://github.com/bigwoof91/real-system/commit/41252029a70dbc00e40f27a5f0e3f4f9f28d9329) Thanks [@bigwoof91](https://github.com/bigwoof91)! - updated primitive and library package names
-
-* [#162](https://github.com/bigwoof91/real-system/pull/162) [`f2e41bf`](https://github.com/bigwoof91/real-system/commit/f2e41bf0319a3e40898bc60ee230dbc6eeead598) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Releasing checkbox
-
-* Updated dependencies [[`4125202`](https://github.com/bigwoof91/real-system/commit/41252029a70dbc00e40f27a5f0e3f4f9f28d9329), [`f2e41bf`](https://github.com/bigwoof91/real-system/commit/f2e41bf0319a3e40898bc60ee230dbc6eeead598)]:
-  - @real-system/button@0.0.16
-  - @real-system/flex@0.0.8
-  - @real-system/typography@0.0.15
-  - @real-system/animation-library@0.0.1
-  - @real-system/state-library@0.0.1
-  - @real-system/styling-library@0.0.1
-  - @real-system/theme-library@0.0.1
-  - @real-system/utils-library@0.0.1
-  - @real-system/box-primitive@0.0.1
-  - @real-system/dialog-primitive@0.0.7
-
-## 0.0.7
+## 0.0.7-rc.0
 
 ### Patch Changes
 
 - [`f62a1a3`](https://github.com/bigwoof91/real-system/commit/f62a1a3c8c119393e723bc168015f176617eaa0a) - using new babel env-name for bundling and storybook
 
 - Updated dependencies [[`f62a1a3`](https://github.com/bigwoof91/real-system/commit/f62a1a3c8c119393e723bc168015f176617eaa0a)]:
-  - @real-system/button@0.0.15
-  - @real-system/flex@0.0.7
-  - @real-system/typography@0.0.14
-  - @real-system/animation@0.0.6
-  - @real-system/state@0.0.6
-  - @real-system/styling@0.0.12
-  - @real-system/theme@0.0.12
-  - @real-system/utils@0.0.11
-  - @real-system/box@0.0.14
-  - @real-system/dialog-primitive@0.0.6
+  - @real-system/button@0.0.15-rc.0
+  - @real-system/flex@0.0.7-rc.0
+  - @real-system/typography@0.0.14-rc.0
+  - @real-system/animation@0.0.6-rc.0
+  - @real-system/state@0.0.6-rc.0
+  - @real-system/styling@0.0.12-rc.0
+  - @real-system/theme@0.0.12-rc.0
+  - @real-system/utils@0.0.11-rc.0
+  - @real-system/box@0.0.14-rc.0
+  - @real-system/dialog-primitive@0.0.6-rc.0
 
 ## 0.0.6
 

@@ -1,24 +1,6 @@
 # @real-system/animation
 
-## 0.0.3
-
-### Patch Changes
-
-- [#214](https://github.com/bigwoof91/real-system/pull/214) [`2262044`](https://github.com/bigwoof91/real-system/commit/226204470736268aea2cbd0af64838feaa837569) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Adding toaster component API and related side-effect fixes
-
-## 0.0.2
-
-### Patch Changes
-
-- [`2af05bd`](https://github.com/bigwoof91/real-system/commit/2af05bdb658db7874c75dca4efe4d05251a12a4b) - renamed BoxSVGElement to BoxAsSVGElement
-
-## 0.0.1
-
-### Patch Changes
-
-- [#190](https://github.com/bigwoof91/real-system/pull/190) [`4125202`](https://github.com/bigwoof91/real-system/commit/41252029a70dbc00e40f27a5f0e3f4f9f28d9329) Thanks [@bigwoof91](https://github.com/bigwoof91)! - updated primitive and library package names
-
-## 0.0.6
+## 0.0.6-rc.0
 
 ### Patch Changes
 
