@@ -1,6 +1,6 @@
 {
   "name": "@real-system/react-aria-library",
-  "version": "0.0.0-20220128083632",
+  "version": "0.0.0-next-20220128085747",
   "description": "React aria library for real system.",
   "status": "production",
   "main": "lib/index.js",
