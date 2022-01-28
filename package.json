@@ -47,7 +47,7 @@
     "prerelease": "yarn lint && yarn test --runInBand",
     "release:stable": "yarn build && yarn changeset publish",
     "version:next": "yarn changeset pre enter next && yarn version:stable",
-    "release:next": "yarn build && yarn changeset publish --tag next",
+    "release:next": "yarn build && yarn changeset publish",
     "___________BUILD___________": "build scripts",
     "productionize": "node tools/productionize-package.js",
     "build": "yarn workspaces foreach --topological-dev run build",
