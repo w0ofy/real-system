@@ -4,9 +4,9 @@ import { composeBoxStyleProps } from '@real-system/box-primitive';
 import styled, { css } from '@real-system/styling-library';
 import { majorScale } from '@real-system/theme-library';
 
-import { TextAreaProps } from './types';
+import { TextareaProps } from './types';
 
-const TextAreaElement = styled(TextareaAutosize)<TextAreaProps>(
+const TextareaElement = styled(TextareaAutosize)<TextareaProps>(
   css({
     appearance: 'none',
     background: 'transparent',
@@ -48,4 +48,4 @@ const TextAreaElement = styled(TextareaAutosize)<TextAreaProps>(
   composeBoxStyleProps()
 );
 
-export { TextAreaElement };
+export { TextareaElement };

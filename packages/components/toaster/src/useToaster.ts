@@ -7,7 +7,10 @@ import type { PushProps, ToasterToast, UseToasterReturnedProps } from './types';
 const isValidInteger = (dismissAfter: unknown) =>
   dismissAfter != null && Number.isInteger(dismissAfter);
 
-const useToaster = (): UseToasterReturnedProps => {
+/**
+ * Generates `Toaster` methods to control `toasts` and props to pass to `Toaster`
+ */
+const useToaster = function useToaster(): UseToasterReturnedProps {
   const isMounted = useRef<boolean | null>(null);
   const [toasts, setToasts] = useState<ToasterToast[]>([]);
 

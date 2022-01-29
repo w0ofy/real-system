@@ -2,11 +2,10 @@ import * as React from 'react';
 
 import { safelySpreadBoxProps } from '@real-system/box-primitive';
 import { InputBox } from '@real-system/input';
-import type { RealSystemElementProps } from '@real-system/types-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { TextAreaElement } from './TextAreaElement';
-import { TextAreaProps } from './types';
+import { TextareaElement } from './TextareaElement';
+import type { TextareaProps } from './types';
 
 const addonProps = {
   height: 'unset',
@@ -16,8 +15,8 @@ const addonProps = {
   'data-testid': makeTestId('text-area-input-box-addon'),
 };
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  function TextArea(
+const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+  function Textarea(
     { children, disabled, error, prefix, suffix, readOnly, ...props },
     ref
   ) {
@@ -33,7 +32,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
         readOnly={readOnly}
         addonProps={addonProps}
         data-testid={makeTestId('text-area-input-box')}>
-        <TextAreaElement
+        <TextareaElement
           data-testid={makeTestId('text-area')}
           {...safelySpreadBoxProps(restProps)}
           async
@@ -45,11 +44,10 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
           rows={3}
           spellCheck>
           {children}
-        </TextAreaElement>
+        </TextareaElement>
       </InputBox>
     );
   }
 );
 
-export type { TextAreaProps };
-export { TextArea };
+export { Textarea };
