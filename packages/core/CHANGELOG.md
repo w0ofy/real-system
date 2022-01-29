@@ -1,5 +1,38 @@
 # @real-system/core
 
+## 0.0.0-next-20220129225534
+
+### Patch Changes
+
+- [`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d) - Testing esbuild 0.14.14
+
+- Updated dependencies [[`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d)]:
+  - @real-system/alert@0.0.0-next-20220129225534
+  - @real-system/button@0.0.0-next-20220129225534
+  - @real-system/checkbox@0.0.0-next-20220129225534
+  - @real-system/dialog@0.0.0-next-20220129225534
+  - @real-system/flex@0.0.0-next-20220129225534
+  - @real-system/icon@0.0.0-next-20220129225534
+  - @real-system/input@0.0.0-next-20220129225534
+  - @real-system/spinner@0.0.0-next-20220129225534
+  - @real-system/textarea@0.0.0-next-20220129225534
+  - @real-system/toaster@0.0.0-next-20220129225534
+  - @real-system/typography@0.0.0-next-20220129225534
+  - @real-system/visually-hidden@0.0.0-next-20220129225534
+  - @real-system/animation-library@0.0.0-next-20220129225534
+  - @real-system/react-aria-library@0.0.0-next-20220129225534
+  - @real-system/state-library@0.0.0-next-20220129225534
+  - @real-system/styling-library@0.0.0-next-20220129225534
+  - @real-system/theme-library@0.0.0-next-20220129225534
+  - @real-system/types-library@0.0.0-next-20220129225534
+  - @real-system/utils-library@0.0.0-next-20220129225534
+  - @real-system/alert-primitive@0.0.0-next-20220129225534
+  - @real-system/box-primitive@0.0.0-next-20220129225534
+  - @real-system/button-primitive@0.0.0-next-20220129225534
+  - @real-system/dialog-primitive@0.0.0-next-20220129225534
+  - @real-system/portal-primitive@0.0.0-next-20220129225534
+  - @real-system/text-primitive@0.0.0-next-20220129225534
+
 ## 0.0.23
 
 ### Patch Changes
