@@ -6,7 +6,7 @@ const kebabCase = <S extends string>(str: S): KebabCase<S> => {
   if (!str || typeof str !== 'string') {
     /** @todo find better way of typing for this */
     _logger.throw.type(
-      'utils.kebabCase',
+      'utils-library.kebabCase',
       'kebabCase util requires a string type argument.'
     );
     return '' as KebabCase<S>;
