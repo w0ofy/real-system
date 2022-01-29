@@ -1,5 +1,20 @@
 # @real-system/alert
 
+## 0.0.5
+
+### Patch Changes
+
+- [#231](https://github.com/bigwoof91/real-system/pull/231) [`fe20971`](https://github.com/bigwoof91/real-system/commit/fe209712d2560009cc24b4f1a2210f9d93f7e985) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Fixing Toaster compile errors + adding toaster docs
+
+- Updated dependencies [[`fe20971`](https://github.com/bigwoof91/real-system/commit/fe209712d2560009cc24b4f1a2210f9d93f7e985)]:
+  - @real-system/icon@0.0.20
+  - @real-system/button@0.0.21
+  - @real-system/flex@0.0.13
+  - @real-system/typography@0.0.20
+  - @real-system/styling-library@0.0.4
+  - @real-system/theme-library@0.0.6
+  - @real-system/alert-primitive@0.0.3
+
 ## 0.0.4
 
 ### Patch Changes

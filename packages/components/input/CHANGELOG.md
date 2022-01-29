@@ -1,5 +1,18 @@
 # @real-system/input
 
+## 0.0.19
+
+### Patch Changes
+
+- [#231](https://github.com/bigwoof91/real-system/pull/231) [`fe20971`](https://github.com/bigwoof91/real-system/commit/fe209712d2560009cc24b4f1a2210f9d93f7e985) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Fixing Toaster compile errors + adding toaster docs
+
+- Updated dependencies [[`fe20971`](https://github.com/bigwoof91/real-system/commit/fe209712d2560009cc24b4f1a2210f9d93f7e985)]:
+  - @real-system/types-library@0.0.3
+  - @real-system/typography@0.0.20
+  - @real-system/visually-hidden@0.0.18
+  - @real-system/styling-library@0.0.4
+  - @real-system/box-primitive@0.0.5
+
 ## 0.0.18
 
 ### Patch Changes
