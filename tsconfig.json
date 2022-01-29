@@ -13,9 +13,9 @@
   ],
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es2015",
-    "lib": ["es2017", "DOM"],
-    "module": "commonjs",
+    "target": "ES2015",
+    "lib": ["ES2017", "DOM"],
+    "module": "ES2015",
     "outDir": "lib",
     "jsx": "react",
     "strict": true,
@@ -33,7 +33,8 @@
     "resolveJsonModule": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "preserveValueImports": true
   },
   "watchOptions": {
     "excludeDirectories": [
