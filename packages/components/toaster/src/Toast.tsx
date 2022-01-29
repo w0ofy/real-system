@@ -25,7 +25,6 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
     }
   }, [setFocus]);
 
-  /** @todo fix padding & alignment?? do we need padding? do we need a flex container? */
   return (
     <Box ref={ref} {...restProps}>
       <Alert

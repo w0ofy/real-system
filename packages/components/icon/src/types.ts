@@ -1,12 +1,12 @@
-import * as Icons from '@heroicons/react/outline';
+import * as IconComponents from '@heroicons/react/outline';
 import type { Property } from 'csstype';
 
 import type { MarginProps } from '@real-system/styling-library';
 import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
-import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
+import type { KebabCase, RemoveSuffix } from '@real-system/types-library';
 
 /** Hero Icon types */
-type HeroIconSet = typeof Icons;
+type HeroIconSet = typeof IconComponents;
 type HeroIconNames = keyof HeroIconSet;
 
 /** Raw/unformatted icons */
@@ -19,7 +19,7 @@ type RawIcons = KebabCase<HeroIconNames>;
 type Icons = RemoveSuffix<RawIcons, '-icon'>;
 
 /** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
-type IconValue = typeof Icons['AcademicCapIcon'];
+type IconValue = typeof IconComponents['AcademicCapIcon'];
 type IconIntent =
   | Extract<
       PaletteIntents,

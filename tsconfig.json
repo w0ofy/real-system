@@ -37,6 +37,7 @@
   },
   "watchOptions": {
     "excludeDirectories": [
+      "node_modules",
       "**/node_modules",
       "**/lib",
       "tools",

@@ -11,8 +11,11 @@ import { useToken } from '@real-system/theme-library';
 import { Toast } from './Toast';
 import { ToastPortal } from './ToastPortal';
 import type { ToasterProps } from './types';
+// imported in order to create any easy link with jsdoc
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useToaster } from './useToaster';
 
-export const AnimatedToast = animated(Box);
+const AnimatedToast = animated(Box);
 
 interface ReturnTargetState {
   trigger: HTMLElement | null;
@@ -37,7 +40,14 @@ const onFocus =
     }
   };
 
-const Toaster = ({ toasts, pop }: ToasterProps) => {
+/**
+ *
+ * @description Toaster component and container for Toasts. Should be used with `useToaster`. Pass `toasts` and `pop` props manually; `useToaster` is preferred.
+ *
+ * @see {@link useToaster}
+ * @see {@link Toast}
+ */
+const Toaster = function Toaster({ toasts, pop }: ToasterProps) {
   const [refMap] = useState(() => new WeakMap());
   const [returnTarget, setReturnTarget] = useState<ReturnTargetState>({
     trigger: null,

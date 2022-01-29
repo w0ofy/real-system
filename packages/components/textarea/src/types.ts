@@ -1,6 +1,8 @@
 import React from 'react';
 
-type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+import { RealSystemElementProps } from '@real-system/types-library';
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   disabled?: boolean;
   error?: boolean;
   height?: never;
@@ -14,6 +16,6 @@ type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   size?: never;
   style?: never;
   width?: never;
-};
+} & RealSystemElementProps;
 
-export type { TextAreaProps };
+export type { TextareaProps };

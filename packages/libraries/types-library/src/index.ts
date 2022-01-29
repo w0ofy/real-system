@@ -1,3 +1,4 @@
-export * from './miscellaneous';
+export * from './kebabCase';
 export * from './props';
-export * from 'type-fest';
+export * from './stringConjunctions';
+export * from './valueOf';
