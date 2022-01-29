@@ -1,5 +1,11 @@
 # @real-system/types-library
 
+## 0.0.0-next-20220129231735
+
+### Patch Changes
+
+- [`fb28b86`](https://github.com/bigwoof91/real-system/commit/fb28b86ae78a12af006a0ecc3de050b8e8d8eacd) - Trying to fix build for esbuild@0.14.14 usage
+
 ## 0.0.0-next-20220129225534
 
 ### Patch Changes

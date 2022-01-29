@@ -1,6 +1,6 @@
 {
   "name": "@real-system/icon",
-  "version": "0.0.0-next-20220129225534",
+  "version": "0.0.0-next-20220129231735",
   "description": "icon component for real system",
   "status": "production",
   "main": "lib/index.js",
@@ -30,10 +30,10 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box-primitive": "^0.0.0-next-20220129225534",
-    "@real-system/styling-library": "^0.0.0-next-20220129225534",
-    "@real-system/theme-library": "^0.0.0-next-20220129225534",
-    "@real-system/utils-library": "^0.0.0-next-20220129225534",
+    "@real-system/box-primitive": "^0.0.0-next-20220129231735",
+    "@real-system/styling-library": "^0.0.0-next-20220129231735",
+    "@real-system/theme-library": "^0.0.0-next-20220129231735",
+    "@real-system/utils-library": "^0.0.0-next-20220129231735",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -42,10 +42,10 @@
     "csstype": "^3.0.10"
   },
   "devDependencies": {
-    "@real-system/box-primitive": "^0.0.0-next-20220129225534",
-    "@real-system/styling-library": "^0.0.0-next-20220129225534",
-    "@real-system/theme-library": "^0.0.0-next-20220129225534",
-    "@real-system/utils-library": "^0.0.0-next-20220129225534",
+    "@real-system/box-primitive": "^0.0.0-next-20220129231735",
+    "@real-system/styling-library": "^0.0.0-next-20220129231735",
+    "@real-system/theme-library": "^0.0.0-next-20220129231735",
+    "@real-system/utils-library": "^0.0.0-next-20220129231735",
     "concurrently": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

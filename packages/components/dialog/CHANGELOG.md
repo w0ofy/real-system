@@ -1,5 +1,23 @@
 # @real-system/dialog
 
+## 0.0.0-next-20220129231735
+
+### Patch Changes
+
+- [`fb28b86`](https://github.com/bigwoof91/real-system/commit/fb28b86ae78a12af006a0ecc3de050b8e8d8eacd) - Trying to fix build for esbuild@0.14.14 usage
+
+- Updated dependencies [[`fb28b86`](https://github.com/bigwoof91/real-system/commit/fb28b86ae78a12af006a0ecc3de050b8e8d8eacd)]:
+  - @real-system/button@0.0.0-next-20220129231735
+  - @real-system/flex@0.0.0-next-20220129231735
+  - @real-system/typography@0.0.0-next-20220129231735
+  - @real-system/animation-library@0.0.0-next-20220129231735
+  - @real-system/state-library@0.0.0-next-20220129231735
+  - @real-system/styling-library@0.0.0-next-20220129231735
+  - @real-system/theme-library@0.0.0-next-20220129231735
+  - @real-system/utils-library@0.0.0-next-20220129231735
+  - @real-system/box-primitive@0.0.0-next-20220129231735
+  - @real-system/dialog-primitive@0.0.0-next-20220129231735
+
 ## 0.0.0-next-20220129225534
 
 ### Patch Changes
