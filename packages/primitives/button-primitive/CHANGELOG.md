@@ -1,5 +1,17 @@
 # @real-system/button-primitive
 
+## 0.0.0-next-20220129225534
+
+### Patch Changes
+
+- [`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d) - Testing esbuild 0.14.14
+
+- Updated dependencies [[`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d)]:
+  - @real-system/react-aria-library@0.0.0-next-20220129225534
+  - @real-system/styling-library@0.0.0-next-20220129225534
+  - @real-system/types-library@0.0.0-next-20220129225534
+  - @real-system/utils-library@0.0.0-next-20220129225534
+
 ## 0.0.14
 
 ### Patch Changes

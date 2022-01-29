@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.0-next-20220129225534
+
+### Patch Changes
+
+- [`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d) - Testing esbuild 0.14.14
+
 ## 0.0.10
 
 ### Patch Changes
