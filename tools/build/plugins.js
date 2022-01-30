@@ -15,6 +15,7 @@ const plugins = [
     define: {
       'process.env.NODE_ENV': `"${ENV}"`,
     },
+    treeShaking: true,
   }),
   del({ targets: 'lib', runOnce: true }),
   peerDepsExternal(),

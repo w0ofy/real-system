@@ -1,5 +1,113 @@
 # @real-system/dialog
 
+## 0.0.0-20220130051114
+
+### Patch Changes
+
+- test
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-20220130051114
+  - @real-system/flex@0.0.0-20220130051114
+  - @real-system/typography@0.0.0-20220130051114
+  - @real-system/animation-library@0.0.0-20220130051114
+  - @real-system/state-library@0.0.0-20220130051114
+  - @real-system/styling-library@0.0.0-20220130051114
+  - @real-system/theme-library@0.0.0-20220130051114
+  - @real-system/utils-library@0.0.0-20220130051114
+  - @real-system/box-primitive@0.0.0-20220130051114
+  - @real-system/dialog-primitive@0.0.0-20220130051114
+
+## 0.0.0-next-20220130051016
+
+### Patch Changes
+
+- test
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-next-20220130051016
+  - @real-system/flex@0.0.0-next-20220130051016
+  - @real-system/typography@0.0.0-next-20220130051016
+  - @real-system/animation-library@0.0.0-next-20220130051016
+  - @real-system/state-library@0.0.0-next-20220130051016
+  - @real-system/styling-library@0.0.0-next-20220130051016
+  - @real-system/theme-library@0.0.0-next-20220130051016
+  - @real-system/utils-library@0.0.0-next-20220130051016
+  - @real-system/box-primitive@0.0.0-next-20220130051016
+  - @real-system/dialog-primitive@0.0.0-next-20220130051016
+
+## 0.0.0-next-20220130005939
+
+### Patch Changes
+
+- rereleasing
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-next-20220130005939
+  - @real-system/flex@0.0.0-next-20220130005939
+  - @real-system/typography@0.0.0-next-20220130005939
+  - @real-system/animation-library@0.0.0-next-20220130005939
+  - @real-system/state-library@0.0.0-next-20220130005939
+  - @real-system/styling-library@0.0.0-next-20220130005939
+  - @real-system/theme-library@0.0.0-next-20220130005939
+  - @real-system/utils-library@0.0.0-next-20220130005939
+  - @real-system/box-primitive@0.0.0-next-20220130005939
+  - @real-system/dialog-primitive@0.0.0-next-20220130005939
+
+## 0.0.0-next-20220130004926
+
+### Patch Changes
+
+- testing publishing
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-next-20220130004926
+  - @real-system/flex@0.0.0-next-20220130004926
+  - @real-system/typography@0.0.0-next-20220130004926
+  - @real-system/animation-library@0.0.0-next-20220130004926
+  - @real-system/state-library@0.0.0-next-20220130004926
+  - @real-system/styling-library@0.0.0-next-20220130004926
+  - @real-system/theme-library@0.0.0-next-20220130004926
+  - @real-system/utils-library@0.0.0-next-20220130004926
+  - @real-system/box-primitive@0.0.0-next-20220130004926
+  - @real-system/dialog-primitive@0.0.0-next-20220130004926
+
+## 0.0.0-next-20220129231735
+
+### Patch Changes
+
+- [`fb28b86`](https://github.com/bigwoof91/real-system/commit/fb28b86ae78a12af006a0ecc3de050b8e8d8eacd) - Trying to fix build for esbuild@0.14.14 usage
+
+- Updated dependencies [[`fb28b86`](https://github.com/bigwoof91/real-system/commit/fb28b86ae78a12af006a0ecc3de050b8e8d8eacd)]:
+  - @real-system/button@0.0.0-next-20220129231735
+  - @real-system/flex@0.0.0-next-20220129231735
+  - @real-system/typography@0.0.0-next-20220129231735
+  - @real-system/animation-library@0.0.0-next-20220129231735
+  - @real-system/state-library@0.0.0-next-20220129231735
+  - @real-system/styling-library@0.0.0-next-20220129231735
+  - @real-system/theme-library@0.0.0-next-20220129231735
+  - @real-system/utils-library@0.0.0-next-20220129231735
+  - @real-system/box-primitive@0.0.0-next-20220129231735
+  - @real-system/dialog-primitive@0.0.0-next-20220129231735
+
+## 0.0.0-next-20220129225534
+
+### Patch Changes
+
+- [`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d) - Testing esbuild 0.14.14
+
+- Updated dependencies [[`ec8fb33`](https://github.com/bigwoof91/real-system/commit/ec8fb33010cda3c400151dd060c474cf04b49d9d)]:
+  - @real-system/button@0.0.0-next-20220129225534
+  - @real-system/flex@0.0.0-next-20220129225534
+  - @real-system/typography@0.0.0-next-20220129225534
+  - @real-system/animation-library@0.0.0-next-20220129225534
+  - @real-system/state-library@0.0.0-next-20220129225534
+  - @real-system/styling-library@0.0.0-next-20220129225534
+  - @real-system/theme-library@0.0.0-next-20220129225534
+  - @real-system/utils-library@0.0.0-next-20220129225534
+  - @real-system/box-primitive@0.0.0-next-20220129225534
+  - @real-system/dialog-primitive@0.0.0-next-20220129225534
+
 ## 0.0.13
 
 ### Patch Changes
