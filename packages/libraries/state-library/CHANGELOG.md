@@ -1,5 +1,17 @@
 # @real-system/state
 
+## 0.0.0-20220130051114
+
+### Patch Changes
+
+- test
+
+## 0.0.0-next-20220130051016
+
+### Patch Changes
+
+- test
+
 ## 0.0.0-next-20220130005939
 
 ### Patch Changes

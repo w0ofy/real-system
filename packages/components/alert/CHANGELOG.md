@@ -1,5 +1,35 @@
 # @real-system/alert
 
+## 0.0.0-20220130051114
+
+### Patch Changes
+
+- test
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-20220130051114
+  - @real-system/flex@0.0.0-20220130051114
+  - @real-system/icon@0.0.0-20220130051114
+  - @real-system/typography@0.0.0-20220130051114
+  - @real-system/styling-library@0.0.0-20220130051114
+  - @real-system/theme-library@0.0.0-20220130051114
+  - @real-system/alert-primitive@0.0.0-20220130051114
+
+## 0.0.0-next-20220130051016
+
+### Patch Changes
+
+- test
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-next-20220130051016
+  - @real-system/flex@0.0.0-next-20220130051016
+  - @real-system/icon@0.0.0-next-20220130051016
+  - @real-system/typography@0.0.0-next-20220130051016
+  - @real-system/styling-library@0.0.0-next-20220130051016
+  - @real-system/theme-library@0.0.0-next-20220130051016
+  - @real-system/alert-primitive@0.0.0-next-20220130051016
+
 ## 0.0.0-next-20220130005939
 
 ### Patch Changes

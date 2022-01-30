@@ -1,4 +1,4 @@
-const { logger, getExternalDeps, ENV, isProduction } = require('../utils');
+const { logger, getExternalDeps, ENV } = require('../utils');
 
 // ESbuild config
 const baseEsbuildConfig = {
@@ -7,24 +7,21 @@ const baseEsbuildConfig = {
   platform: 'node',
   bundle: true,
   target: ['es2015', 'chrome60', 'firefox60', 'safari11', 'edge18', 'node12'],
-  minify: isProduction,
+  minify: false,
   define: {
     'process.env.NODE_ENV': `"${ENV}"`,
   },
   logLevel: 'error',
-  sourcemap: !isProduction,
+  sourcemap: false,
 };
 
-const shouldWatch = (pkg = {}) =>
-  !isProduction
-    ? {
-        // eslint-disable-next-line no-unused-vars
-        async onRebuild(err, _result) {
-          if (err) logger.error(err);
-          logger.info(`Rebundled ${pkg.name}.`);
-        },
-      }
-    : false;
+const shouldWatch = (pkg = {}) => ({
+  // eslint-disable-next-line no-unused-vars
+  async onRebuild(err, _result) {
+    if (err) logger.error(err);
+    logger.info(`Rebundled ${pkg.name}.`);
+  },
+});
 
 /**
  *

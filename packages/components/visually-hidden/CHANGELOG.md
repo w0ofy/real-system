@@ -1,5 +1,25 @@
 # @real-system/visually-hidden
 
+## 0.0.0-20220130051114
+
+### Patch Changes
+
+- test
+
+- Updated dependencies []:
+  - @real-system/styling-library@0.0.0-20220130051114
+  - @real-system/box-primitive@0.0.0-20220130051114
+
+## 0.0.0-next-20220130051016
+
+### Patch Changes
+
+- test
+
+- Updated dependencies []:
+  - @real-system/styling-library@0.0.0-next-20220130051016
+  - @real-system/box-primitive@0.0.0-next-20220130051016
+
 ## 0.0.0-next-20220130005939
 
 ### Patch Changes
