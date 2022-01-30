@@ -1,5 +1,38 @@
 # @real-system/core
 
+## 0.0.0-next-20220130005939
+
+### Patch Changes
+
+- rereleasing
+
+- Updated dependencies []:
+  - @real-system/alert@0.0.0-next-20220130005939
+  - @real-system/button@0.0.0-next-20220130005939
+  - @real-system/checkbox@0.0.0-next-20220130005939
+  - @real-system/dialog@0.0.0-next-20220130005939
+  - @real-system/flex@0.0.0-next-20220130005939
+  - @real-system/icon@0.0.0-next-20220130005939
+  - @real-system/input@0.0.0-next-20220130005939
+  - @real-system/spinner@0.0.0-next-20220130005939
+  - @real-system/textarea@0.0.0-next-20220130005939
+  - @real-system/toaster@0.0.0-next-20220130005939
+  - @real-system/typography@0.0.0-next-20220130005939
+  - @real-system/visually-hidden@0.0.0-next-20220130005939
+  - @real-system/animation-library@0.0.0-next-20220130005939
+  - @real-system/react-aria-library@0.0.0-next-20220130005939
+  - @real-system/state-library@0.0.0-next-20220130005939
+  - @real-system/styling-library@0.0.0-next-20220130005939
+  - @real-system/theme-library@0.0.0-next-20220130005939
+  - @real-system/types-library@0.0.0-next-20220130005939
+  - @real-system/utils-library@0.0.0-next-20220130005939
+  - @real-system/alert-primitive@0.0.0-next-20220130005939
+  - @real-system/box-primitive@0.0.0-next-20220130005939
+  - @real-system/button-primitive@0.0.0-next-20220130005939
+  - @real-system/dialog-primitive@0.0.0-next-20220130005939
+  - @real-system/portal-primitive@0.0.0-next-20220130005939
+  - @real-system/text-primitive@0.0.0-next-20220130005939
+
 ## 0.0.0-next-20220130004926
 
 ### Patch Changes

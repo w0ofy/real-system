@@ -1,5 +1,18 @@
 # @real-system/flex
 
+## 0.0.0-next-20220130005939
+
+### Patch Changes
+
+- rereleasing
+
+- Updated dependencies []:
+  - @real-system/styling-library@0.0.0-next-20220130005939
+  - @real-system/theme-library@0.0.0-next-20220130005939
+  - @real-system/types-library@0.0.0-next-20220130005939
+  - @real-system/utils-library@0.0.0-next-20220130005939
+  - @real-system/box-primitive@0.0.0-next-20220130005939
+
 ## 0.0.0-next-20220130004926
 
 ### Patch Changes
