@@ -1,5 +1,23 @@
 # @real-system/dialog
 
+## 0.0.0-next-20220130004926
+
+### Patch Changes
+
+- testing publishing
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-next-20220130004926
+  - @real-system/flex@0.0.0-next-20220130004926
+  - @real-system/typography@0.0.0-next-20220130004926
+  - @real-system/animation-library@0.0.0-next-20220130004926
+  - @real-system/state-library@0.0.0-next-20220130004926
+  - @real-system/styling-library@0.0.0-next-20220130004926
+  - @real-system/theme-library@0.0.0-next-20220130004926
+  - @real-system/utils-library@0.0.0-next-20220130004926
+  - @real-system/box-primitive@0.0.0-next-20220130004926
+  - @real-system/dialog-primitive@0.0.0-next-20220130004926
+
 ## 0.0.0-next-20220129231735
 
 ### Patch Changes

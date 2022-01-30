@@ -1,5 +1,18 @@
 # @real-system/input
 
+## 0.0.0-next-20220130004926
+
+### Patch Changes
+
+- testing publishing
+
+- Updated dependencies []:
+  - @real-system/typography@0.0.0-next-20220130004926
+  - @real-system/visually-hidden@0.0.0-next-20220130004926
+  - @real-system/styling-library@0.0.0-next-20220130004926
+  - @real-system/types-library@0.0.0-next-20220130004926
+  - @real-system/box-primitive@0.0.0-next-20220130004926
+
 ## 0.0.0-next-20220129231735
 
 ### Patch Changes

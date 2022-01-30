@@ -1,5 +1,20 @@
 # @real-system/alert
 
+## 0.0.0-next-20220130004926
+
+### Patch Changes
+
+- testing publishing
+
+- Updated dependencies []:
+  - @real-system/button@0.0.0-next-20220130004926
+  - @real-system/flex@0.0.0-next-20220130004926
+  - @real-system/icon@0.0.0-next-20220130004926
+  - @real-system/typography@0.0.0-next-20220130004926
+  - @real-system/styling-library@0.0.0-next-20220130004926
+  - @real-system/theme-library@0.0.0-next-20220130004926
+  - @real-system/alert-primitive@0.0.0-next-20220130004926
+
 ## 0.0.0-next-20220129231735
 
 ### Patch Changes

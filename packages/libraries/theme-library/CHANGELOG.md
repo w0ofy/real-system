@@ -1,5 +1,16 @@
 # @real-system/theme
 
+## 0.0.0-next-20220130004926
+
+### Patch Changes
+
+- testing publishing
+
+- Updated dependencies []:
+  - @real-system/styling-library@0.0.0-next-20220130004926
+  - @real-system/types-library@0.0.0-next-20220130004926
+  - @real-system/utils-library@0.0.0-next-20220130004926
+
 ## 0.0.0-next-20220129231735
 
 ### Patch Changes

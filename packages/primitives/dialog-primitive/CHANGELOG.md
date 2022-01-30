@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.0-next-20220130004926
+
+### Patch Changes
+
+- testing publishing
+
 ## 0.0.0-next-20220129231735
 
 ### Patch Changes
