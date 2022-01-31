@@ -1,6 +1,6 @@
 {
   "name": "@real-system/types-library",
-  "version": "0.0.0-20220130051114",
+  "version": "0.0.3",
   "description": "Types library for real system.",
   "status": "production",
   "main": "lib/index.js",
