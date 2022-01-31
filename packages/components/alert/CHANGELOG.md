@@ -1,5 +1,20 @@
 # @real-system/alert
 
+## 0.0.6
+
+### Patch Changes
+
+- [`70434a2`](https://github.com/bigwoof91/real-system/commit/70434a2a8250ad2f3eb50f5266cb9cca29d0fffa) - Using esbuild@0.14.14
+
+- Updated dependencies [[`70434a2`](https://github.com/bigwoof91/real-system/commit/70434a2a8250ad2f3eb50f5266cb9cca29d0fffa)]:
+  - @real-system/button@0.0.22
+  - @real-system/flex@0.0.14
+  - @real-system/icon@0.0.21
+  - @real-system/typography@0.0.21
+  - @real-system/styling-library@0.0.5
+  - @real-system/theme-library@0.0.7
+  - @real-system/alert-primitive@0.0.4
+
 ## 0.0.0-20220130051114
 
 ### Patch Changes

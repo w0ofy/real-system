@@ -1,5 +1,38 @@
 # @real-system/core
 
+## 0.0.24
+
+### Patch Changes
+
+- [`70434a2`](https://github.com/bigwoof91/real-system/commit/70434a2a8250ad2f3eb50f5266cb9cca29d0fffa) - Using esbuild@0.14.14
+
+- Updated dependencies [[`70434a2`](https://github.com/bigwoof91/real-system/commit/70434a2a8250ad2f3eb50f5266cb9cca29d0fffa)]:
+  - @real-system/alert@0.0.6
+  - @real-system/button@0.0.22
+  - @real-system/checkbox@0.0.7
+  - @real-system/dialog@0.0.14
+  - @real-system/flex@0.0.14
+  - @real-system/icon@0.0.21
+  - @real-system/input@0.0.20
+  - @real-system/spinner@0.0.20
+  - @real-system/textarea@0.0.4
+  - @real-system/toaster@0.0.5
+  - @real-system/typography@0.0.21
+  - @real-system/visually-hidden@0.0.19
+  - @real-system/animation-library@0.0.6
+  - @real-system/react-aria-library@0.0.5
+  - @real-system/state-library@0.0.5
+  - @real-system/styling-library@0.0.5
+  - @real-system/theme-library@0.0.7
+  - @real-system/types-library@0.0.4
+  - @real-system/utils-library@0.0.7
+  - @real-system/alert-primitive@0.0.4
+  - @real-system/box-primitive@0.0.6
+  - @real-system/button-primitive@0.0.15
+  - @real-system/dialog-primitive@0.0.11
+  - @real-system/portal-primitive@0.0.4
+  - @real-system/text-primitive@0.0.5
+
 ## 0.0.0-20220130051114
 
 ### Patch Changes

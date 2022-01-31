@@ -1,6 +1,6 @@
 {
   "name": "@real-system/theme-library",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "theming for real system",
   "status": "production",
   "main": "lib/index.js",
@@ -31,9 +31,9 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/styling-library": "^0.0.4",
-    "@real-system/types-library": "^0.0.3",
-    "@real-system/utils-library": "^0.0.6",
+    "@real-system/styling-library": "^0.0.5",
+    "@real-system/types-library": "^0.0.4",
+    "@real-system/utils-library": "^0.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -41,9 +41,9 @@
     "csstype": "^3.0.10"
   },
   "devDependencies": {
-    "@real-system/styling-library": "^0.0.4",
-    "@real-system/types-library": "^0.0.3",
-    "@real-system/utils-library": "^0.0.6",
+    "@real-system/styling-library": "^0.0.5",
+    "@real-system/types-library": "^0.0.4",
+    "@real-system/utils-library": "^0.0.7",
     "concurrently": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
