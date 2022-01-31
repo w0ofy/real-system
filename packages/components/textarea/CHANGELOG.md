@@ -1,5 +1,19 @@
 # @real-system/textarea
 
+## 0.0.4
+
+### Patch Changes
+
+- [`70434a2`](https://github.com/bigwoof91/real-system/commit/70434a2a8250ad2f3eb50f5266cb9cca29d0fffa) - Using esbuild@0.14.14
+
+- Updated dependencies [[`70434a2`](https://github.com/bigwoof91/real-system/commit/70434a2a8250ad2f3eb50f5266cb9cca29d0fffa)]:
+  - @real-system/input@0.0.20
+  - @real-system/styling-library@0.0.5
+  - @real-system/theme-library@0.0.7
+  - @real-system/types-library@0.0.4
+  - @real-system/utils-library@0.0.7
+  - @real-system/box-primitive@0.0.6
+
 ## 0.0.0-20220130051114
 
 ### Patch Changes
