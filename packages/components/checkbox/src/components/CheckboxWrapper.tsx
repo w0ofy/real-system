@@ -43,7 +43,7 @@ const CheckboxWrapper = forwardRef<
         </Flex>
       </Label>
       {(helpText || errorText) && (
-        <HelpText mt={2} ml={12} errorText={errorText}>
+        <HelpText mt={0} ml={12} errorText={errorText}>
           {helpText}
         </HelpText>
       )}

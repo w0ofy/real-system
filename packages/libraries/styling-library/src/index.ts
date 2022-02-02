@@ -1,6 +1,7 @@
 // Base styling system (emotion)
 import styled from '@emotion/styled';
 
+export { default as isPropValid } from '@emotion/is-prop-valid';
 export type {
   ThemeProviderProps as PrimitiveThemeProviderProps,
   SerializedStyles,

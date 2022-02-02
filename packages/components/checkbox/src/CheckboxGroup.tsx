@@ -12,6 +12,9 @@ import { CheckboxGroupContextProvider } from './CheckboxContext';
 import { CheckboxGroupProps } from './types';
 import { restoreCheckboxGroupProps } from './utils';
 
+/**
+ * @todo add orientation controls
+ */
 const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
   function CheckboxGroup(passedProps, ref) {
     const props = restoreCheckboxGroupProps(passedProps);
@@ -27,14 +30,14 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>(
         ref={ref}>
         <Label
           as="legend"
-          mb={helpText ? 3 : 8}
+          mb={helpText ? 2 : 6}
           required={required}
           cursor="default"
           {...labelProps}>
           {props.label}
         </Label>
         {helpText && (
-          <HelpText mt={0} mb={8}>
+          <HelpText mt={0} mb={6}>
             {helpText}
           </HelpText>
         )}

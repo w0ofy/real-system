@@ -35,7 +35,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
       <CheckboxWrapper
         disabled={disabled}
         helpText={helpText}
-        _first={{ ml: 4 }}
+        ml={4}
         _notFirst={{ ml: state.canSelectAll ? 7 : 4 }}
         {...interactionProps}>
         <VisuallyHidden as="div">

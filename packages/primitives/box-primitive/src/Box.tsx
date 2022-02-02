@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
 
-import styled from '@real-system/styling-library';
+import styled, { isPropValid } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
+import { BOX_STYLE_PROPS } from './styleProps/constants';
 import { composeBoxStyleProps } from './styleProps/props';
 import { getPseudoStyles } from './styleProps/pseudoPropStyles';
 import type { BoxAsSVGElementProps, BoxProps } from './types';
@@ -47,13 +48,18 @@ function BoxAs<T = any>(as: As) {
   });
 }
 
+const StyledBoxSVG = styled('div', {
+  shouldForwardProp: (prop) =>
+    isPropValid(prop) && !BOX_STYLE_PROPS.includes(prop as string),
+})<any>(composeBoxStyleProps(), getPseudoStyles);
+
 function BoxAsSVGElement(as: As) {
   return forwardRef<SVGElement, BoxAsSVGElementProps>(function BoxAsSVGElement(
     props,
     ref
   ): React.ReactElement {
     return (
-      <StyledBox
+      <StyledBoxSVG
         as={as}
         data-testid={makeTestId<'box-svg-element'>('box-svg-element')}
         ref={ref}
