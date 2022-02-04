@@ -6,62 +6,66 @@ import React from 'react';
 import type { FlexProps } from '@real-system/flex';
 import type {
   Aria_AriaCheckboxGroupItemProps,
-  Aria_AriaCheckboxGroupProps,
-  Aria_AriaCheckboxProps,
+  SpectrumCheckboxGroupProps,
+  SpectrumCheckboxProps,
 } from '@real-system/react-aria-library';
 
-type RenamedReactAriaProps = {
-  disabled?: Aria_AriaCheckboxProps['isDisabled'];
-  readonly?: Aria_AriaCheckboxProps['isReadOnly'];
-  indeterminate?: Aria_AriaCheckboxProps['isIndeterminate'];
-  required?: Aria_AriaCheckboxProps['isRequired'];
-  checked?: Aria_AriaCheckboxProps['isSelected'];
+type RenamedCheckboxProps = {
+  disabled?: SpectrumCheckboxProps['isDisabled'];
+  readonly?: SpectrumCheckboxProps['isReadOnly'];
+  indeterminate?: SpectrumCheckboxProps['isIndeterminate'];
+  required?: SpectrumCheckboxProps['isRequired'];
+  checked?: SpectrumCheckboxProps['isSelected'];
+  defaultChecked?: SpectrumCheckboxProps['defaultSelected'];
 };
 
-type CustomProps = {
-  helpText?: string;
+type RenamedCheckboxGroupProps = {
+  readonly?: SpectrumCheckboxGroupProps['isReadOnly'];
+  disabled?: SpectrumCheckboxGroupProps['isDisabled'];
 };
 
+/** should match keys of values in RenamedCheckboxProps */
 type PropsToRename =
   | 'isDisabled'
   | 'isReadonly'
   | 'isIndeterminate'
   | 'isRequired'
-  | 'isSelected';
+  | 'isSelected'
+  | 'defaultSelected';
 
-/** Checkbox */
-type CustomCheckboxProps = {
+type CustomProps = {
+  helpText?: string;
   errorText?: string;
-} & CustomProps;
+};
 
-type CheckboxProps = RenamedReactAriaProps &
-  Omit<Aria_AriaCheckboxProps, PropsToRename> &
-  CustomCheckboxProps;
+type CheckboxProps = RenamedCheckboxProps &
+  Omit<SpectrumCheckboxProps, PropsToRename> &
+  CustomProps;
 
-type ReactAriaCheckboxProps = Aria_AriaCheckboxProps;
+type ReactAriaCheckboxProps = SpectrumCheckboxProps;
 
 /** Checkbox Group */
 type CustomCheckboxGroupProps = {
   children: React.ReactNode;
   canSelectAll?: boolean;
   required?: boolean;
-} & Pick<CustomCheckboxProps, 'errorText'> &
-  CustomProps;
+} & CustomProps;
 
-type CheckboxGroupProps = Pick<RenamedReactAriaProps, 'readonly' | 'disabled'> &
-  Omit<Aria_AriaCheckboxGroupProps, PropsToRename> &
+type CheckboxGroupProps = RenamedCheckboxGroupProps &
+  Omit<SpectrumCheckboxGroupProps, PropsToRename> &
   CustomCheckboxGroupProps &
   FlexProps;
 
-type ReactAriaCheckboxGroupProps = Aria_AriaCheckboxGroupProps;
+type ReactAriaCheckboxGroupProps = SpectrumCheckboxGroupProps;
 
 /** Checkbox Group Item */
-type CheckboxGroupItemProps = RenamedReactAriaProps &
+type CheckboxGroupItemProps = RenamedCheckboxProps &
   Omit<Aria_AriaCheckboxGroupItemProps, PropsToRename> &
   CustomProps;
 
 type ReactAriaCheckboxGroupItemProps = Aria_AriaCheckboxGroupItemProps &
-  Pick<Aria_AriaCheckboxProps, 'isSelected'>;
+  // we've altered the react-aria CheckboxGroupItem api to also accept 'checked' which needs to get renamed to `isSelected`
+  Pick<SpectrumCheckboxProps, 'isSelected' | 'defaultSelected'>;
 
 export type {
   // real system props
@@ -69,7 +73,6 @@ export type {
   CheckboxGroupProps,
   CheckboxProps,
   CustomCheckboxGroupProps,
-  CustomCheckboxProps,
   CustomProps,
   // react aria props
   ReactAriaCheckboxGroupItemProps,

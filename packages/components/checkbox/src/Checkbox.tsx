@@ -1,37 +1,41 @@
 import React, { forwardRef, useRef } from 'react';
 
-import { useCheckbox, useToggleState } from '@real-system/react-aria-library';
+import {
+  useCheckbox,
+  useInteractions,
+  useToggleState,
+} from '@real-system/react-aria-library';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
 import { CheckboxProps } from './types';
-import { restoreCheckboxProps, useInteractions } from './utils';
+import { restoreCheckboxProps } from './utils';
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   passedProps,
   ref
 ) {
-  const props = restoreCheckboxProps(passedProps);
+  const restoredProps = restoreCheckboxProps(passedProps);
 
-  const interactionProps = useInteractions(props);
+  const interactionProps = useInteractions(restoredProps);
   const state = useToggleState({
-    ...props,
-    isDisabled: props.isDisabled,
-    isReadOnly: props.isReadOnly,
+    ...restoredProps,
+    isDisabled: restoredProps.isDisabled,
+    isReadOnly: restoredProps.isReadOnly,
   });
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
 
   const { inputProps } = useCheckbox(
-    props,
+    restoredProps,
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
 
   const { isSelected } = state;
   const { isDisabled, isReadOnly, helpText, children, isRequired, errorText } =
-    props;
+    restoredProps;
 
   const disabled = isDisabled || isReadOnly;
 
@@ -47,7 +51,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
       <CheckboxControl
         disabled={disabled}
         isSelected={isSelected}
-        indeterminate={props.isIndeterminate}
+        indeterminate={restoredProps.isIndeterminate}
         errorText={errorText}
         {...interactionProps}
       />

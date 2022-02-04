@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import { AlertPrimitive } from '@real-system/alert-primitive';
 
 export default {
-  title: 'Primitives/AlertPrimitive',
+  title: 'Primitives/Alert Primitive',
   component: AlertPrimitive,
 } as Meta;
 

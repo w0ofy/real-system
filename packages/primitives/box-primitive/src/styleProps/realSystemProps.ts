@@ -42,7 +42,10 @@ const realSystemProps = system({
   animationPlayState: true,
   animationTimingFunction: true,
   // svg props
-  stroke: true,
+  stroke: {
+    property: 'stroke',
+    scale: 'colors',
+  },
   strokeDasharray: true,
   strokeDashoffset: true,
   strokeLinecap: true,

@@ -33,16 +33,18 @@ type BoxComponentProps = {
 } & RealSystemElementProps;
 
 export type BoxAsSVGElementProps = Omit<
-  React.SVGAttributes<SVGElement>,
+  React.SVGProps<SVGElement>,
   keyof BoxStyleProps
 > &
-  BoxComponentProps;
+  BoxComponentProps &
+  BoxStyleProps;
 
 // Omits potential clashes from our style props with HTMLAttributes (i.e. color)
 export type BoxElementProps = Omit<
   React.HTMLAttributes<HTMLElement>,
   keyof BoxStyleProps
 > &
-  BoxComponentProps;
+  BoxComponentProps &
+  BoxStyleProps;
 
 export type BoxProps = BoxElementProps & BoxStyleProps;

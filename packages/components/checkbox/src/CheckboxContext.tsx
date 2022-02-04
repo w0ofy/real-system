@@ -1,10 +1,14 @@
-import type { CheckboxGroupState } from '@real-system/react-aria-library';
+import type {
+  CheckboxGroupState,
+  SpectrumCheckboxGroupProps,
+} from '@real-system/react-aria-library';
 import { constate } from '@real-system/state-library';
 
 export type CheckboxGroupContext = {
   state: CheckboxGroupState & {
     errorText: string | undefined;
     canSelectAll: boolean | undefined;
+    orientation: SpectrumCheckboxGroupProps['orientation'];
   };
 };
 

@@ -20,6 +20,8 @@ const PSEUDO_PROP_STYLES = {
     '&:disabled, &:disabled:focus, &:disabled:hover, &[aria-disabled=true], &[aria-disabled=true]:focus, &[aria-disabled=true]:hover',
   _invalid: '&:invalid, &[aria-invalid=true]',
   _pressed: '&[aria-pressed=true]',
+  _firstChild: '&:first-child',
+  _lastChild: '&:last-child',
   _first: '&:first-of-type',
   _last: '&:last-of-type',
   _notFirst: '&:not(:first-of-type)',

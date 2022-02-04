@@ -2,9 +2,8 @@ import React, { forwardRef } from 'react';
 
 import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
+import type { UseInteractionsReturnValue } from '@real-system/react-aria-library';
 import { HelpText, Label } from '@real-system/typography';
-
-import type { UseInteractionsReturnValue } from '../utils';
 
 type CheckboxWrapperProps = {
   children: React.ReactNode;
@@ -30,10 +29,10 @@ const CheckboxWrapper = forwardRef<
   ref
 ) {
   return (
-    <Flex inline vertical _notLast={{ mb: 5 }} {...restProps}>
+    <Flex inline vertical {...restProps}>
       <Label
-        ref={ref}
         display="inline-flex"
+        ref={ref}
         disabled={disabled}
         {...hoverProps}
         {...pressProps}
@@ -43,7 +42,7 @@ const CheckboxWrapper = forwardRef<
         </Flex>
       </Label>
       {(helpText || errorText) && (
-        <HelpText mt={2} ml={12} errorText={errorText}>
+        <HelpText mt={0} ml={12} errorText={errorText}>
           {helpText}
         </HelpText>
       )}

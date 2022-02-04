@@ -1,16 +1,9 @@
-import { useCallback, useMemo, useState } from 'react';
-
-import {
-  useFocusWithin,
-  useHover,
-  usePress,
-} from '@real-system/react-aria-library';
+import { useCallback, useMemo } from 'react';
 
 import {
   CheckboxGroupItemProps,
   CheckboxGroupProps,
   CustomCheckboxGroupProps,
-  CustomCheckboxProps,
   CustomProps,
   ReactAriaCheckboxGroupItemProps,
   ReactAriaCheckboxGroupProps,
@@ -18,40 +11,16 @@ import {
 } from './types';
 import { CheckboxProps } from '.';
 
-const useInteractions = ({ isDisabled }: ReactAriaCheckboxProps) => {
-  const [isFocusedWithin, setFocusedWithin] = useState(false);
-
-  const { focusWithinProps } = useFocusWithin({
-    isDisabled: isDisabled,
-    onFocusWithinChange: (isFocusedWithin) => setFocusedWithin(isFocusedWithin),
-  });
-  const { pressProps, isPressed } = usePress({
-    isDisabled: isDisabled,
-  });
-  const { hoverProps, isHovered } = useHover({ isDisabled: isDisabled });
-
-  return {
-    hoverProps,
-    isHovered,
-    isFocusedWithin,
-    setFocusedWithin,
-    focusWithinProps,
-    pressProps,
-    isPressed,
-  };
-};
-
-type UseInteractionsReturnValue = ReturnType<typeof useInteractions>;
-
 const restoreCheckboxProps = (
   props: CheckboxProps
-): ReactAriaCheckboxProps & CustomProps & CustomCheckboxProps => {
+): ReactAriaCheckboxProps & CustomProps => {
   const {
     disabled,
     required,
     indeterminate,
     readonly,
     checked,
+    defaultChecked,
     ...reactAriaAndCustomProps
   } = props;
 
@@ -61,6 +30,7 @@ const restoreCheckboxProps = (
     isIndeterminate: indeterminate,
     isRequired: required,
     isSelected: checked,
+    defaultSelected: defaultChecked,
     ...reactAriaAndCustomProps,
   };
 };
@@ -86,6 +56,7 @@ const restoreCheckboxGroupItemProps = (
     indeterminate,
     readonly,
     checked,
+    defaultChecked,
     ...reactAriaAndCustomProps
   } = props;
 
@@ -95,6 +66,7 @@ const restoreCheckboxGroupItemProps = (
     isIndeterminate: indeterminate,
     isRequired: required,
     isSelected: checked,
+    defaultSelected: defaultChecked,
     ...reactAriaAndCustomProps,
   };
 };
@@ -161,11 +133,10 @@ const useIndeterminate = <V extends string, A extends string>({
   };
 };
 
-export type { UseIndeterminateParams, UseInteractionsReturnValue };
+export type { UseIndeterminateParams };
 export {
   restoreCheckboxGroupItemProps,
   restoreCheckboxGroupProps,
   restoreCheckboxProps,
   useIndeterminate,
-  useInteractions,
 };
