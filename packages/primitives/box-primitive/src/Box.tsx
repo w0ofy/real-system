@@ -32,7 +32,7 @@ Box.defaultProps = { 'data-testid': makeTestId<'box'>('box') };
 
 type As = BoxProps['as'];
 
-function BoxAs<T extends BoxProps>(as: As) {
+function BoxAs<T extends Record<string, any>>(as: As) {
   return forwardRef<HTMLOrSVGElement, BoxProps & T>(function BoxAs(
     props,
     ref

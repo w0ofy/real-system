@@ -129,6 +129,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/components/radio-group
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/libraries/react-aria-library
     schedule:
       interval: weekly
