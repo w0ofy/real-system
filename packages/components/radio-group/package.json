@@ -1,9 +1,8 @@
 {
   "name": "@real-system/radio-group",
   "version": "0.0.0",
-  "description": "Radio button components for real system.",
-  "status": "development",
-  "private": true,
+  "description": "Radio group components for real system.",
+  "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
