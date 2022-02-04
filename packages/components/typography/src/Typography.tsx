@@ -1,4 +1,4 @@
-import React, { forwardRef, ForwardRefExoticComponent } from 'react';
+import React, { forwardRef } from 'react';
 
 import { TextPrimitive } from '@real-system/text-primitive';
 
@@ -27,7 +27,7 @@ export type TypographyProps = {
 } & InternalTypographyProps;
 
 export interface TypographyComponent
-  extends ForwardRefExoticComponent<TypographyProps> {
+  extends React.ForwardRefExoticComponent<TypographyProps> {
   Heading: typeof Heading;
   Label: typeof Label;
   HelpText: typeof HelpText;

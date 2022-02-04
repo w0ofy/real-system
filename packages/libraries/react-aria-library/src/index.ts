@@ -10,16 +10,21 @@ export * from '@react-stately/checkbox';
 export * from '@react-stately/radio';
 export * from '@react-stately/toggle';
 /** react-aria types */
-export type { AriaButtonProps as AriaButton_AriaButtonProps } from '@react-types/button';
+export type {
+  AriaButtonProps as AriaButton_AriaButtonProps,
+  SpectrumButtonProps,
+} from '@react-types/button';
 export type {
   AriaCheckboxGroupItemProps as Aria_AriaCheckboxGroupItemProps,
   AriaCheckboxGroupProps as Aria_AriaCheckboxGroupProps,
   AriaCheckboxProps as Aria_AriaCheckboxProps,
   AriaToggleProps as Aria_AriaToggleProps,
+  SpectrumCheckboxGroupProps,
+  SpectrumCheckboxProps,
 } from '@react-types/checkbox';
 export type {
-  AriaRadioGroupProps as Aria_AriaRadioGroupProps,
-  AriaRadioProps as Aria_AriaRadioProps,
+  SpectrumRadioGroupProps,
+  SpectrumRadioProps,
 } from '@react-types/radio';
 
 /** home-brewed */

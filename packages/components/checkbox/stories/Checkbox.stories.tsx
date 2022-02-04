@@ -27,14 +27,37 @@ export default {
   },
 } as Meta;
 
-const Template = (args) => (
+export const Default = (args) => (
   <Checkbox
     helpText="Determines if the user has permission to add, edit and delete other users"
     {...args}
   />
 );
 
-export const Default = Template.bind({});
+export const CheckboxGroup = (args) => {
+  return (
+    <Box display="block" width="34rem">
+      <RealCheckboxGroup
+        label="What engineering level is the new team member?"
+        defaultValue={['associate']}
+        helpText="Select at least 1 level for the new engineer"
+        {...args}>
+        <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
+        <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
+        <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
+        <CheckboxGroupItem value="senior" disabled>
+          Senior
+        </CheckboxGroupItem>
+        <CheckboxGroupItem value="mid" disabled>
+          Mid
+        </CheckboxGroupItem>
+        <CheckboxGroupItem value="associate" disabled>
+          Associate
+        </CheckboxGroupItem>
+      </RealCheckboxGroup>
+    </Box>
+  );
+};
 
 export const Indeterminate = (args) => {
   const [checkedItems, setCheckedItems] = React.useState([]);
@@ -64,30 +87,5 @@ export const Indeterminate = (args) => {
       <CheckboxGroupItem value={values[3]}>Mid</CheckboxGroupItem>
       <CheckboxGroupItem value={values[4]}>Associate</CheckboxGroupItem>
     </RealCheckboxGroup>
-  );
-};
-
-export const CheckboxGroup = (args) => {
-  return (
-    <Box display="block" width="34rem">
-      <RealCheckboxGroup
-        label="What engineering level is the new team member?"
-        defaultValue={['associate']}
-        helpText="Select at least 1 level for the new engineer"
-        {...args}>
-        <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
-        <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
-        <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
-        <CheckboxGroupItem value="senior" disabled>
-          Senior
-        </CheckboxGroupItem>
-        <CheckboxGroupItem value="mid" disabled>
-          Mid
-        </CheckboxGroupItem>
-        <CheckboxGroupItem value="associate" disabled>
-          Associate
-        </CheckboxGroupItem>
-      </RealCheckboxGroup>
-    </Box>
   );
 };

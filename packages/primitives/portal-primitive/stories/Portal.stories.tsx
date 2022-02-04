@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import { PortalPrimitive } from '@real-system/portal-primitive';
 
 export default {
-  title: 'Primitives/PortalPrimitive',
+  title: 'Primitives/Portal Primitive',
   component: PortalPrimitive,
 } as Meta;
 

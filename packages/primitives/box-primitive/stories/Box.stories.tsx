@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import { Box } from '@real-system/box-primitive';
 
 export default {
-  title: 'Primitives/Box',
+  title: 'Primitives/Box Primitive',
   component: Box,
   args: {
     children: 'Box',

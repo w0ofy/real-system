@@ -2,8 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
-
-import { UseInteractionsReturnValue } from '../utils';
+import type { UseInteractionsReturnValue } from '@real-system/react-aria-library';
 
 type CheckboxIconProps = {
   isSelected: boolean;
@@ -43,6 +42,12 @@ const selectedHoverColor = 'color-background-brand-strong-3';
 const selectedColor = 'color-background-brand';
 const errorHoverColor = 'color-background-danger-strong-3';
 const errorColor = 'color-background-danger';
+const transition =
+  'box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in';
+const getSelectedColor = (isHovered: boolean) =>
+  isHovered ? selectedHoverColor : selectedColor;
+const getErrorColor = (isHovered: boolean) =>
+  isHovered ? errorHoverColor : errorColor;
 
 const CheckboxControl = ({
   disabled,
@@ -56,32 +61,37 @@ const CheckboxControl = ({
   const backgroundColor = useMemo(() => {
     const defaultColor = 'color-background-brand-contrast';
 
+    if (disabled) {
+      return 'color-background-disabled-weak-5';
+    }
     if (isSelected) {
       if (errorText) {
-        return isHovered ? errorHoverColor : errorColor;
+        return getErrorColor(isHovered);
       }
-      return isHovered ? selectedHoverColor : selectedColor;
+      return getSelectedColor(isHovered);
     }
     return defaultColor;
-  }, [isSelected, isHovered, errorText]);
+  }, [disabled, isSelected, errorText, isHovered]);
 
   const borderColor = useMemo(() => {
     const defaultColor = isHovered
       ? 'color-border-neutral-weak-2'
       : 'color-border-neutral-weak-5';
 
+    if (disabled) {
+      return 'color-border-disabled';
+    }
     if (errorText) {
-      return isHovered ? errorHoverColor : errorColor;
+      return getErrorColor(isHovered);
     }
     if (isSelected) {
-      return isHovered ? selectedHoverColor : selectedColor;
+      return getSelectedColor(isHovered);
     }
     if (isFocusedWithin) {
       return 'color-border-neutral';
     }
-
     return defaultColor;
-  }, [isHovered, errorText, isSelected, isFocusedWithin]);
+  }, [isHovered, disabled, errorText, isSelected, isFocusedWithin]);
 
   return (
     <Box
@@ -91,12 +101,10 @@ const CheckboxControl = ({
       mr={4}
       borderStyle="solid"
       borderWidth={1}
-      backgroundColor={
-        disabled ? 'color-background-disabled-weak-5' : backgroundColor
-      }
-      borderColor={disabled ? 'color-border-disabled' : borderColor}
+      backgroundColor={backgroundColor}
+      borderColor={borderColor}
       borderRadius={2}
-      transition="box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in"
+      transition={transition}
       boxShadow={!isPressed && isFocusedWithin ? 'shadow-focus' : 'none'}>
       <CheckboxIcon
         isSelected={isSelected}

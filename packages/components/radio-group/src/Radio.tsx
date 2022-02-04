@@ -2,11 +2,7 @@ import React, { useRef } from 'react';
 import { forwardRef } from 'react';
 
 import { Flex } from '@real-system/flex';
-import {
-  Aria_AriaRadioProps,
-  useInteractions,
-  useRadio,
-} from '@real-system/react-aria-library';
+import { useInteractions, useRadio } from '@real-system/react-aria-library';
 import { Label } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
@@ -14,32 +10,35 @@ import { VisuallyHidden } from '@real-system/visually-hidden';
 import { useRadioGroupContext } from './RadioContext';
 import { RadioControl } from './RadioControl';
 import { RadioLabel } from './RadioLabel';
-
-type RadioProps = Aria_AriaRadioProps;
+import { RadioProps } from './types';
+import { restoreRadioProps } from './utils';
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
   props,
   ref
 ) {
-  const { children } = props;
-  const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
-    useInteractions(props);
+  const restoredProps = restoreRadioProps(props);
+
   const state = useRadioGroupContext();
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
   const { inputProps } = useRadio(
-    props,
+    restoredProps,
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
+  const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
+    useInteractions(restoredProps);
 
-  const isSelected = state.selectedValue === props.value;
+  const { value, isDisabled, children } = restoredProps;
+  const isSelected = state.selectedValue === value;
+  const isVertical = state.orientation === 'vertical' ? true : false;
 
   return (
     <Label
       display="inline-flex"
-      disabled={props.isDisabled}
-      _notLast={{ mb: 5 }}
+      disabled={isDisabled}
+      _notLast={isVertical ? { mb: 5 } : { mr: 5 }}
       {...hoverProps}
       {...pressProps}
       {...focusWithinProps}>
@@ -48,11 +47,12 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
           <input {...inputProps} ref={mergedRef} />
         </VisuallyHidden>
         <RadioControl
-          disabled={props.isDisabled}
+          errorText={state.errorText}
+          disabled={isDisabled}
           isSelected={isSelected}
           {...restInteractions}
         />
-        <RadioLabel disabled={props.isDisabled}>{children}</RadioLabel>
+        <RadioLabel disabled={isDisabled}>{children}</RadioLabel>
       </Flex>
     </Label>
   );

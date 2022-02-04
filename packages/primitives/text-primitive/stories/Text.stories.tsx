@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import { TextPrimitive } from '@real-system/text-primitive';
 
 export default {
-  title: 'Primitives/TextPrimitive',
+  title: 'Primitives/Text Primitive',
   component: TextPrimitive,
 } as Meta;
 

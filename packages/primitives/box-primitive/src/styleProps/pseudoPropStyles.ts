@@ -26,6 +26,8 @@ const PSEUDO_PROP_STYLES = {
   _invalid: '&:invalid, &[aria-invalid=true]',
   _pressed: '&[aria-pressed=true]',
   _readOnly: '&[aria-readonly=true], &[readonly]',
+  _firstChild: '&:first-child',
+  _lastChild: '&:last-child',
   _first: '&:first-of-type',
   _last: '&:last-of-type',
   _expanded: '&[aria-expanded=true]',
