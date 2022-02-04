@@ -3719,6 +3719,7 @@ __metadata:
     "@real-system/icon": ^0.0.21
     "@real-system/input": ^0.0.20
     "@real-system/portal-primitive": ^0.0.4
+    "@real-system/radio-group": ^0.0.0
     "@real-system/react-aria-library": ^0.0.5
     "@real-system/spinner": ^0.0.20
     "@real-system/state-library": ^0.0.5
@@ -3876,7 +3877,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/radio-group@workspace:packages/components/radio-group":
+"@real-system/radio-group@^0.0.0, @real-system/radio-group@workspace:packages/components/radio-group":
   version: 0.0.0-use.local
   resolution: "@real-system/radio-group@workspace:packages/components/radio-group"
   dependencies:
