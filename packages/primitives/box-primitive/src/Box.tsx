@@ -31,8 +31,9 @@ const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(
 Box.defaultProps = { 'data-testid': makeTestId<'box'>('box') };
 
 type As = BoxProps['as'];
+type GivenProps = { [key: string]: any };
 
-function BoxAs<T extends Record<string, any>>(as: As) {
+function BoxAs<T extends GivenProps>(as: As) {
   return forwardRef<HTMLOrSVGElement, BoxProps & T>(function BoxAs(
     props,
     ref
