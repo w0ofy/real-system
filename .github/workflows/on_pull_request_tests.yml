@@ -8,7 +8,7 @@ on:
 
 jobs:
   unit-tests:
-    name: Unit Tests
+    name: Run unit tests
     runs-on: ubuntu-latest
     steps:
       - name: Setup environment
@@ -24,3 +24,22 @@ jobs:
 
       - name: Run tests
         run: yarn test
+  package-size:
+    name: Diff compressed package sizes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+
+      - uses: zahnster/compressed-size-action@2.4.2
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          build-script: "build:js"
+          # only check commonjs files
+          pattern: "**/lib/**/*.js"
+          exclude: "{**/*.map,**/node_modules/**}"
