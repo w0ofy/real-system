@@ -5,6 +5,7 @@ import { Button, ButtonProps } from '@real-system/button';
 import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
 import { Typography } from '@real-system/typography';
+import { makeTestId } from '@real-system/utils-library';
 
 import { AlertIntents, CommonAlertProps } from './types';
 import { ICON_MAP } from './utils';
@@ -46,6 +47,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
       borderWidth={1}
       borderColor={borderOrIconColor()}
       backgroundColor={bgColor}
+      data-testid={makeTestId('alert')}
       {...restProps}
       ref={ref}>
       <Icon
