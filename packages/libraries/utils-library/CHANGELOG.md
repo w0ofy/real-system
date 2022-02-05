@@ -1,5 +1,14 @@
 # @real-system/utils
 
+## 0.0.8
+
+### Patch Changes
+
+- [`b7c87ca`](https://github.com/bigwoof91/real-system/commit/b7c87ca9d6cf3508a76e6afd0138b1dcfa001ac9) - fixing box-primitive given props
+
+- Updated dependencies [[`b7c87ca`](https://github.com/bigwoof91/real-system/commit/b7c87ca9d6cf3508a76e6afd0138b1dcfa001ac9)]:
+  - @real-system/types-library@0.0.5
+
 ## 0.0.7
 
 ### Patch Changes

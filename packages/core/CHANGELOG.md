@@ -1,5 +1,39 @@
 # @real-system/core
 
+## 0.0.25
+
+### Patch Changes
+
+- [`b7c87ca`](https://github.com/bigwoof91/real-system/commit/b7c87ca9d6cf3508a76e6afd0138b1dcfa001ac9) - fixing box-primitive given props
+
+- Updated dependencies [[`f16931a`](https://github.com/bigwoof91/real-system/commit/f16931add449c979f5c7c8c0be2d8ad20d4f82a9), [`b7c87ca`](https://github.com/bigwoof91/real-system/commit/b7c87ca9d6cf3508a76e6afd0138b1dcfa001ac9)]:
+  - @real-system/checkbox@0.0.8
+  - @real-system/radio-group@0.0.1
+  - @real-system/typography@0.0.22
+  - @real-system/react-aria-library@0.0.6
+  - @real-system/styling-library@0.0.6
+  - @real-system/alert-primitive@0.0.5
+  - @real-system/box-primitive@0.0.7
+  - @real-system/button-primitive@0.0.16
+  - @real-system/portal-primitive@0.0.5
+  - @real-system/text-primitive@0.0.6
+  - @real-system/alert@0.0.7
+  - @real-system/button@0.0.23
+  - @real-system/dialog@0.0.15
+  - @real-system/flex@0.0.15
+  - @real-system/icon@0.0.22
+  - @real-system/input@0.0.21
+  - @real-system/spinner@0.0.21
+  - @real-system/textarea@0.0.5
+  - @real-system/toaster@0.0.6
+  - @real-system/visually-hidden@0.0.20
+  - @real-system/animation-library@0.0.7
+  - @real-system/state-library@0.0.6
+  - @real-system/theme-library@0.0.8
+  - @real-system/types-library@0.0.5
+  - @real-system/utils-library@0.0.8
+  - @real-system/dialog-primitive@0.0.12
+
 ## 0.0.24
 
 ### Patch Changes

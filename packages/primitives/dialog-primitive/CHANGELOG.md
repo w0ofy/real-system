@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.12
+
+### Patch Changes
+
+- [`b7c87ca`](https://github.com/bigwoof91/real-system/commit/b7c87ca9d6cf3508a76e6afd0138b1dcfa001ac9) - fixing box-primitive given props
+
 ## 0.0.11
 
 ### Patch Changes
