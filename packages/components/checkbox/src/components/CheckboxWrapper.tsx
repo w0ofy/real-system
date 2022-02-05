@@ -34,6 +34,7 @@ const CheckboxWrapper = forwardRef<
         display="inline-flex"
         ref={ref}
         disabled={disabled}
+        mb={0}
         {...hoverProps}
         {...pressProps}
         {...focusWithinProps}>
