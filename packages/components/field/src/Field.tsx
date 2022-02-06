@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Flex } from '@real-system/flex';
 import { HelpText, Label } from '@real-system/typography';
+import { makeTestId } from '@real-system/utils-library';
 
 import type { FieldProps } from './types';
 
@@ -26,7 +27,11 @@ const Field = ({
   );
   if (builtIns)
     return (
-      <Flex vertical xAlignContent="left" {...restProps}>
+      <Flex
+        vertical
+        xAlignContent="left"
+        data-testid={makeTestId('field')}
+        {...restProps}>
         {label && (
           <Label htmlFor={labelFor} required={required} whiteSpace="nowrap">
             {label}

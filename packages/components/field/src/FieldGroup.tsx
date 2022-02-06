@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Flex } from '@real-system/flex';
+import { makeTestId } from '@real-system/utils-library';
 
 import type { FieldGroupProps, FieldProps } from './types';
 
@@ -12,7 +13,11 @@ import type { FieldGroupProps, FieldProps } from './types';
 const FieldGroup = ({ children, inline, ...restProps }: FieldGroupProps) => {
   const dynamicProps = inline ? {} : { vertical: true };
   return (
-    <Flex {...dynamicProps} space={8} {...restProps}>
+    <Flex
+      {...dynamicProps}
+      space={8}
+      data-testid={makeTestId('field-group')}
+      {...restProps}>
       {children}
     </Flex>
   );
