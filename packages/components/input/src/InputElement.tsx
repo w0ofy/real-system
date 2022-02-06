@@ -1,8 +1,19 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box, BoxProps } from '@real-system/box-primitive';
 
 import { InputProps } from './types';
+
+const getCursor = ({
+  disabled,
+  readOnly,
+  type,
+}: InputProps): BoxProps['cursor'] => {
+  if ((type === 'date' || type === 'time') && !readOnly && !disabled) {
+    return 'text';
+  }
+  return 'auto';
+};
 
 const InputElement = forwardRef<HTMLInputElement, InputProps>(
   function InputElement(props, ref) {
@@ -24,13 +35,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         borderRadius={2}
         boxShadow="none"
         color="inherit"
-        cursor={
-          (props.type === 'date' || props.type === 'time') &&
-          !props.readOnly &&
-          !props.disabled
-            ? 'text'
-            : 'auto'
-        }
+        cursor={getCursor(props)}
         outline="none"
         resize="none"
         ref={ref}

@@ -81,6 +81,11 @@ const realSystemProps = system({
   transform: true,
   transformOrigin: true,
   visibility: true,
+  // grid or flex props
+  gap: {
+    property: 'gap',
+    scale: 'space',
+  },
 });
 
 type RealSystemProps = {
@@ -150,6 +155,8 @@ type RealSystemProps = {
   resize?: Property.Resize;
   transform?: Property.Transform;
   transformOrigin?: Property.TransformOrigin<string>;
+
+  gap?: Property.Gap | number;
 };
 
 export { realSystemProps };
