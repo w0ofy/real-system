@@ -1,6 +1,6 @@
 const path = require('path');
 const { command } = require('execa');
-const { PACKAGE_STATUS } = require('./env');
+const { PACKAGE_STATUS_CONFIG } = require('./env');
 
 const getPkgJsonFromWorkspace = (workspace) =>
   require(`${__dirname}/../../${workspace.location}/package.json`);
@@ -24,6 +24,12 @@ const getWorkspaceData = (data) => ({
 
 const DEFAULT_CONFIG = { withCore: false, hasProdStatus: undefined };
 
+/**
+ *
+ * @param {object} config Configuration object for getWorkspacesInfo.
+ * @param {boolean} config.hasProdStatus Will return workspaces (packages) that are production-ready.
+ * @param {boolean} config.withCore Will return the `core` workspace (packages).
+ */
 const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
   let data = await command('yarn workspaces list --json');
 
@@ -41,11 +47,11 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
       .filter((name) => (config.withCore ? true : !name.includes('core')))
       .filter((name) => {
         const { pkgJson } = getWorkspaceData(data[name]);
-        const pkgStatus = PACKAGE_STATUS[pkgJson.status];
+        const isProductionReady = PACKAGE_STATUS_CONFIG[pkgJson.status];
         if (config.hasProdStatus === false) {
-          return !pkgStatus;
+          return !isProductionReady;
         } else if (config.hasProdStatus) {
-          return pkgStatus;
+          return isProductionReady;
         }
         return true;
       })
@@ -58,7 +64,7 @@ const getWorkspacesInfo = async (config = DEFAULT_CONFIG) => {
       const pureName = getPurePkgName(name);
       purePkgNames.push(pureName);
       // push to coreDependencies if package is productionized (ready for release)
-      if (PACKAGE_STATUS[pkgJson.status]) {
+      if (PACKAGE_STATUS_CONFIG[pkgJson.status]) {
         coreDependencies[name] = `^${pkgJson.version}`;
       }
 

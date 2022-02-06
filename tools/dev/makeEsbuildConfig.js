@@ -1,4 +1,4 @@
-const { logger, getExternalDeps, ENV } = require('../utils');
+const { logger, ENV } = require('../utils');
 
 // ESbuild config
 const baseEsbuildConfig = {
@@ -15,13 +15,21 @@ const baseEsbuildConfig = {
   sourcemap: false,
 };
 
-const shouldWatch = (pkg = {}) => ({
+const watch = (pkg = {}) => ({
   // eslint-disable-next-line no-unused-vars
   async onRebuild(err, _result) {
     if (err) logger.error(err);
-    logger.info(`Rebundled ${pkg.name}.`);
+    logger.info(`Rebundled ${pkg.name}`);
   },
 });
+
+const getExternalDeps = (packageJson = {}) => {
+  const externalDeps = Object.keys({
+    ...packageJson.peerDependencies,
+  });
+  const wildcardedExternalDeps = externalDeps.map((dep) => `${dep}/*`);
+  return [...externalDeps, ...wildcardedExternalDeps];
+};
 
 /**
  *
@@ -35,7 +43,7 @@ const makeEsbuildConfig = (pkgJson, overrides = { format: 'cjs' }) => {
   return {
     ...baseEsbuildConfig,
     entryPoints: [pkgJson['main:dev']],
-    watch: shouldWatch(pkgJson),
+    watch: watch(pkgJson),
     external: getExternalDeps(pkgJson),
     format: 'cjs',
     outfile: overrides.format === 'cjs' ? pkgJson.main : pkgJson.module,

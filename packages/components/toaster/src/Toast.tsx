@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import { Alert } from '@real-system/alert';
 import { Box } from '@real-system/box-primitive';
+import { makeTestId } from '@real-system/utils-library';
 
 import type { ToastProps } from './types';
 
@@ -26,7 +27,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
   }, [setFocus]);
 
   return (
-    <Box ref={ref} {...restProps}>
+    <Box ref={ref} data-testid={makeTestId('toast')} {...restProps}>
       <Alert
         shrink={0}
         boxShadow={1}
