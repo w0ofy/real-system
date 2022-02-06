@@ -10,7 +10,7 @@ const CORE_PATH = join(__dirname, '../../packages/core');
 const PRODUCTION = 'production';
 const DEVELOPMENT = 'development';
 const EXPERIMENTAL = 'experimental';
-const PACKAGE_STATUS = {
+const PACKAGE_STATUS_CONFIG = {
   // released or ready for release
   [PRODUCTION]: true,
   // under development, not ready for release
@@ -23,7 +23,7 @@ module.exports = {
   ENV,
   isProduction,
   BUNDLE_OUTPUT_DIR,
-  PACKAGE_STATUS,
+  PACKAGE_STATUS_CONFIG,
   PRODUCTION,
   DEVELOPMENT,
   EXPERIMENTAL,

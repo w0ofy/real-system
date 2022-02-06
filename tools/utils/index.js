@@ -5,12 +5,11 @@ const {
   BUNDLE_OUTPUT_DIR,
   CORE_PATH,
   ROOT_PATH,
-  PACKAGE_STATUS,
+  PACKAGE_STATUS_CONFIG,
   PRODUCTION,
   DEVELOPMENT,
   EXPERIMENTAL,
 } = require('./env');
-const { getExternalDeps } = require('./getExternalDeps');
 const { writeToFile } = require('./writeToFile');
 const {
   getWorkspacesInfo,
@@ -25,7 +24,6 @@ module.exports = {
   makeNewLine,
   ENV,
   isProduction,
-  getExternalDeps,
   BUNDLE_OUTPUT_DIR,
   getWorkspacesInfo,
   getFullPkgName,
@@ -33,7 +31,7 @@ module.exports = {
   updatePackageCache,
   CORE_PATH,
   ROOT_PATH,
-  PACKAGE_STATUS,
+  PACKAGE_STATUS_CONFIG,
   PRODUCTION,
   DEVELOPMENT,
   EXPERIMENTAL,
