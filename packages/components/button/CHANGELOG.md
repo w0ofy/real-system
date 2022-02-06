@@ -1,5 +1,12 @@
 # @real-system/button
 
+## 0.0.24
+
+### Patch Changes
+
+- Updated dependencies [[`11397fd`](https://github.com/bigwoof91/real-system/commit/11397fdaf8607962ac6dff90235cf6120d33eb23)]:
+  - @real-system/button-primitive@0.0.17
+
 ## 0.0.23
 
 ### Patch Changes

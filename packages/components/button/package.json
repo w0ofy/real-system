@@ -1,6 +1,6 @@
 {
   "name": "@real-system/button",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Real System Button component",
   "status": "production",
   "main": "lib/index.js",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/button-primitive": "^0.0.16",
+    "@real-system/button-primitive": "^0.0.17",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.8",
     "@real-system/utils-library": "^0.0.8",
@@ -38,7 +38,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/button-primitive": "^0.0.16",
+    "@real-system/button-primitive": "^0.0.17",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.8",
     "@real-system/utils-library": "^0.0.8",

@@ -1,5 +1,32 @@
 # @real-system/core
 
+## 0.0.26
+
+### Patch Changes
+
+- [#259](https://github.com/bigwoof91/real-system/pull/259) [`11397fd`](https://github.com/bigwoof91/real-system/commit/11397fdaf8607962ac6dff90235cf6120d33eb23) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Added Field and FieldGroup component API
+
+* [#256](https://github.com/bigwoof91/real-system/pull/256) [`c150f71`](https://github.com/bigwoof91/real-system/commit/c150f71079357dfa62ca2efac1439daa8d853c09) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Added Truncate component API
+
+* Updated dependencies [[`11397fd`](https://github.com/bigwoof91/real-system/commit/11397fdaf8607962ac6dff90235cf6120d33eb23), [`c150f71`](https://github.com/bigwoof91/real-system/commit/c150f71079357dfa62ca2efac1439daa8d853c09), [`2877a8c`](https://github.com/bigwoof91/real-system/commit/2877a8cfaec31e8b5d8b7919061463ececb46401)]:
+  - @real-system/field@0.0.1
+  - @real-system/flex@0.0.16
+  - @real-system/input@0.0.22
+  - @real-system/box-primitive@0.0.8
+  - @real-system/button-primitive@0.0.17
+  - @real-system/truncate@0.0.1
+  - @real-system/alert@0.0.8
+  - @real-system/toaster@0.0.7
+  - @real-system/checkbox@0.0.9
+  - @real-system/dialog@0.0.16
+  - @real-system/radio-group@0.0.2
+  - @real-system/textarea@0.0.6
+  - @real-system/icon@0.0.23
+  - @real-system/spinner@0.0.22
+  - @real-system/typography@0.0.23
+  - @real-system/visually-hidden@0.0.21
+  - @real-system/button@0.0.24
+
 ## 0.0.25
 
 ### Patch Changes
