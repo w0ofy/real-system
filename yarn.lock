@@ -3868,6 +3868,7 @@ __metadata:
     "@real-system/checkbox": ^0.0.8
     "@real-system/dialog": ^0.0.15
     "@real-system/dialog-primitive": ^0.0.12
+    "@real-system/field": ^0.0.0
     "@real-system/flex": ^0.0.15
     "@real-system/icon": ^0.0.22
     "@real-system/input": ^0.0.21
@@ -3939,6 +3940,32 @@ __metadata:
     "@real-system/theme-library": ^0.0.8
     "@real-system/typography": ^0.0.22
     "@real-system/utils-library": ^0.0.8
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@real-system/field@^0.0.0, @real-system/field@workspace:packages/components/field":
+  version: 0.0.0-use.local
+  resolution: "@real-system/field@workspace:packages/components/field"
+  dependencies:
+    "@real-system/box-primitive": ^0.0.7
+    "@real-system/flex": ^0.0.15
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.8
+    "@real-system/typography": ^0.0.22
+    "@real-system/utils": ^0.0.11
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.5
+  peerDependencies:
+    "@real-system/box-primitive": ^0.0.7
+    "@real-system/flex": ^0.0.15
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.8
+    "@real-system/typography": ^0.0.22
+    "@real-system/utils": ^0.0.11
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -4310,6 +4337,22 @@ __metadata:
     react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
+
+"@real-system/utils@npm:^0.0.11":
+  version: 0.0.11
+  resolution: "@real-system/utils@npm:0.0.11"
+  dependencies:
+    chalk: ^4.1.2
+    deepmerge: ^4.2.2
+    lodash.get: ^4.4.2
+    react-uid: ^2.3.1
+    type-fest: ^2.5.3
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  checksum: 607b9939827862aea750c144d60abdf007d3936c1e49c1018de3d325ca7a47aaebc2fe82f22cef2140c7fe7da378da96c25e03b3b7c16ff7bf70f3f479ffeb83
+  languageName: node
+  linkType: hard
 
 "@real-system/visually-hidden@^0.0.20, @real-system/visually-hidden@workspace:packages/components/visually-hidden":
   version: 0.0.0-use.local
@@ -23048,6 +23091,13 @@ __metadata:
   version: 0.8.1
   resolution: "type-fest@npm:0.8.1"
   checksum: d61c4b2eba24009033ae4500d7d818a94fd6d1b481a8111612ee141400d5f1db46f199c014766b9fa9b31a6a7374d96fc748c6d688a78a3ce5a33123839becb7
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^2.5.3":
+  version: 2.11.1
+  resolution: "type-fest@npm:2.11.1"
+  checksum: fcbf57ab65eafa517432ba4ec60e83e283ab88e21e3ac60d6081be515a6488de322660a86048f13ec5f0ba655092d680ced780e0cb86dd6fec59e04b4b6061b5
   languageName: node
   linkType: hard
 

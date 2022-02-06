@@ -6,6 +6,7 @@ export * from '@real-system/button-primitive';
 export * from '@real-system/checkbox';
 export * from '@real-system/dialog';
 export * from '@real-system/dialog-primitive';
+export * from '@real-system/field';
 export * from '@real-system/flex';
 export * from '@real-system/icon';
 export * from '@real-system/input';

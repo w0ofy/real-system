@@ -29,6 +29,7 @@
     "@real-system/checkbox": "^0.0.8",
     "@real-system/dialog": "^0.0.15",
     "@real-system/dialog-primitive": "^0.0.12",
+    "@real-system/field": "^0.0.0",
     "@real-system/flex": "^0.0.15",
     "@real-system/icon": "^0.0.22",
     "@real-system/input": "^0.0.21",

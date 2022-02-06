@@ -57,19 +57,23 @@ export type FlexProps = Omit<BoxProps, 'display'> & {
    */
   xAlignContent?: HorizontalAlign;
   /**
-   * shorthand for flexGrow css property
+   * shorthand for `flexGrow` css property
    */
   grow?: Grow;
   /**
-   * shorthand for flexShrink css property
+   * shorthand for `flexShrink` css property
    */
   shrink?: Shrink;
   /**
-   * shorthand for flexBasis css property
+   * shorthand for `flexBasis` css property
    */
   basis?: Basis;
   /**
-   * shorthand for flexWrap css property
+   * shorthand for `flexWrap` css property
    */
   wrap?: Wrap;
+  /**
+   * alias for `gap` css property
+   */
+  space?: BoxProps['gap'];
 };

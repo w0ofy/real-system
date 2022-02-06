@@ -5,7 +5,7 @@ import type { MarginProps } from '@real-system/styling-library';
 import { InputBoxProps, InputBoxTypes } from './InputBox';
 
 export type InputProps = Omit<InputBoxProps, 'children' | 'type'> & {
-  id?: string;
+  id: string;
   suffix?: React.ReactNode;
   prefix?: React.ReactNode;
   name?: string;

@@ -170,12 +170,15 @@ const xAlignContentToProps = ({
 const getDisplay = (props: FlexProps): FlexProps['display'] =>
   props.inline ? 'inline-flex' : 'flex';
 
+const getSpace = (props: FlexProps): FlexProps['space'] => props.space || 0;
+
 export {
   getBasis,
   getDirection,
   getDisplay,
   getGrow,
   getShrink,
+  getSpace,
   getSuffix,
   getWrap,
   xAlignContentToProps,
