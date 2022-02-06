@@ -1,6 +1,6 @@
 {
   "name": "@real-system/box-primitive",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A basic div with style props that should be used to build other components",
   "status": "production",
   "main": "lib/index.js",

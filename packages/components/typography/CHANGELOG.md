@@ -1,5 +1,13 @@
 # @real-system/typography
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies [[`11397fd`](https://github.com/bigwoof91/real-system/commit/11397fdaf8607962ac6dff90235cf6120d33eb23)]:
+  - @real-system/box-primitive@0.0.8
+  - @real-system/visually-hidden@0.0.21
+
 ## 0.0.22
 
 ### Patch Changes

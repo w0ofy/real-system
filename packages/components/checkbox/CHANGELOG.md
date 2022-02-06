@@ -1,5 +1,15 @@
 # @real-system/checkbox
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [[`11397fd`](https://github.com/bigwoof91/real-system/commit/11397fdaf8607962ac6dff90235cf6120d33eb23)]:
+  - @real-system/flex@0.0.16
+  - @real-system/box-primitive@0.0.8
+  - @real-system/typography@0.0.23
+  - @real-system/visually-hidden@0.0.21
+
 ## 0.0.8
 
 ### Patch Changes
