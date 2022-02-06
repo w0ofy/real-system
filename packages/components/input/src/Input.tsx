@@ -7,8 +7,8 @@ import { safelySpreadInputProps } from './utils';
 
 type TypeProps = {
   type: InputBoxTypes;
-  inputmode?: string | undefined;
-  pattern?: string | undefined;
+  inputmode?: string;
+  pattern?: string;
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
@@ -28,7 +28,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   },
   ref
 ) {
-  const typeProps: TypeProps = { type: type };
+  const typeProps: TypeProps = { type };
 
   if (type === 'number') {
     typeProps.type = 'text';

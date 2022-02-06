@@ -3942,6 +3942,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/field@workspace:packages/components/field":
+  version: 0.0.0-use.local
+  resolution: "@real-system/field@workspace:packages/components/field"
+  dependencies:
+    "@real-system/box-primitive": ^0.0.7
+    "@real-system/flex": ^0.0.15
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.8
+    "@real-system/typography": ^0.0.22
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.5
+  peerDependencies:
+    "@real-system/box-primitive": ^0.0.7
+    "@real-system/flex": ^0.0.15
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.8
+    "@real-system/typography": ^0.0.22
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/flex@^0.0.15, @real-system/flex@workspace:packages/components/flex":
   version: 0.0.0-use.local
   resolution: "@real-system/flex@workspace:packages/components/flex"

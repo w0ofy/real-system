@@ -64,7 +64,7 @@ const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
     if (restProps.onClick) {
       _logger.warn(
         'button-primitive',
-        '`onClick` prop is deprecated. You can use this but we recommend using `onPress` to conform to cross-platform friendly events.'
+        '`onClick` prop is deprecated. You can use this but we recommend using `onPress` to conform to cross-platform requirements.'
       );
     }
 

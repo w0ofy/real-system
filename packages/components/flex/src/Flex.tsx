@@ -1,7 +1,6 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box-primitive';
-import type { FlexboxProps, LayoutProps } from '@real-system/styling-library';
+import { Box, BoxProps } from '@real-system/box-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { FlexProps } from './types';
@@ -11,27 +10,27 @@ import {
   getDisplay,
   getGrow,
   getShrink,
+  getSpace,
   getWrap,
   xAlignContentToProps,
   yAlignContentToProps,
 } from './utils';
 
-const getFlexProps = (props: FlexProps): FlexboxProps & LayoutProps => {
-  return {
-    flexGrow: getGrow(props),
-    flexShrink: getShrink(props),
-    flexBasis: getBasis(props),
-    flexDirection: getDirection(props),
-    flexWrap: getWrap(props),
-    justifyContent: props.vertical
-      ? yAlignContentToProps(props)
-      : xAlignContentToProps(props),
-    alignItems: props.vertical
-      ? xAlignContentToProps(props)
-      : yAlignContentToProps(props),
-    display: getDisplay(props),
-  };
-};
+const getFlexProps = (props: FlexProps): Partial<BoxProps> => ({
+  flexGrow: getGrow(props),
+  flexShrink: getShrink(props),
+  flexBasis: getBasis(props),
+  flexDirection: getDirection(props),
+  flexWrap: getWrap(props),
+  justifyContent: props.vertical
+    ? yAlignContentToProps(props)
+    : xAlignContentToProps(props),
+  alignItems: props.vertical
+    ? xAlignContentToProps(props)
+    : yAlignContentToProps(props),
+  display: getDisplay(props),
+  gap: getSpace(props),
+});
 
 const Flex = forwardRef<HTMLElement, FlexProps>(function Flex(
   {
@@ -45,6 +44,7 @@ const Flex = forwardRef<HTMLElement, FlexProps>(function Flex(
     yAlignContent,
     wrap,
     inline,
+    space,
     ...restProps
   }: FlexProps,
   ref
@@ -59,9 +59,20 @@ const Flex = forwardRef<HTMLElement, FlexProps>(function Flex(
         vertical,
         yAlignContent,
         wrap,
+        space,
         inline,
       }),
-    [basis, xAlignContent, grow, shrink, vertical, yAlignContent, wrap, inline]
+    [
+      basis,
+      xAlignContent,
+      grow,
+      shrink,
+      vertical,
+      yAlignContent,
+      wrap,
+      space,
+      inline,
+    ]
   );
 
   return (

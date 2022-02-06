@@ -15,9 +15,6 @@ import {
   // PROPS: flexbox
   flexbox,
   FlexboxProps,
-  // PROPS: grid
-  grid,
-  GridProps,
   // PROPS: layout (includes overflow)
   layout,
   LayoutProps,
@@ -49,7 +46,6 @@ const composeBoxStyleProps = (): ReturnType<typeof compose> =>
     shadow,
     position,
     typography,
-    grid,
     // real system props
     realSystemProps
   );
@@ -70,7 +66,6 @@ type BoxBaseStyleProps = Partial<
     ColorProps &
     PositionProps &
     TypographyProps &
-    GridProps &
     RealSystemProps
 >;
 
@@ -80,7 +75,6 @@ export {
   color,
   composeBoxStyleProps,
   flexbox,
-  grid,
   layout,
   position,
   shadow,
@@ -93,7 +87,6 @@ export type {
   BoxBaseStyleProps,
   ColorProps,
   FlexboxProps,
-  GridProps,
   LayoutProps,
   PositionProps,
   ShadowProps,
