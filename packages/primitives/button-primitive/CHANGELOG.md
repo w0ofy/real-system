@@ -1,5 +1,14 @@
 # @real-system/button-primitive
 
+## 0.0.18
+
+### Patch Changes
+
+- [#264](https://github.com/bigwoof91/real-system/pull/264) [`531c338`](https://github.com/bigwoof91/real-system/commit/531c338b7aa96a632512fa9530b3bffa64a513cf) Thanks [@bigwoof91](https://github.com/bigwoof91)! - added tooltip and react-laag library
+
+- Updated dependencies [[`531c338`](https://github.com/bigwoof91/real-system/commit/531c338b7aa96a632512fa9530b3bffa64a513cf)]:
+  - @real-system/utils-library@0.0.9
+
 ## 0.0.17
 
 ### Patch Changes

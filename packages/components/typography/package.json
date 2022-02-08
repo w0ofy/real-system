@@ -1,6 +1,6 @@
 {
   "name": "@real-system/typography",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Real System Typography components",
   "status": "production",
   "main": "lib/index.js",
@@ -36,7 +36,7 @@
     "@real-system/box-primitive": "^0.0.8",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/text-primitive": "0.0.6",
-    "@real-system/utils-library": "^0.0.8",
+    "@real-system/utils-library": "^0.0.9",
     "@real-system/visually-hidden": "^0.0.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -45,7 +45,7 @@
     "@real-system/box-primitive": "^0.0.8",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/text-primitive": "0.0.6",
-    "@real-system/utils-library": "^0.0.8",
+    "@real-system/utils-library": "^0.0.9",
     "@real-system/visually-hidden": "^0.0.21",
     "concurrently": "^7.0.0",
     "react": "^17.0.2",

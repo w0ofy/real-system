@@ -1,5 +1,12 @@
 # @real-system/input
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/typography@0.0.24
+
 ## 0.0.22
 
 ### Patch Changes

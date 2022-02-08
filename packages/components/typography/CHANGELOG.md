@@ -1,5 +1,12 @@
 # @real-system/typography
 
+## 0.0.24
+
+### Patch Changes
+
+- Updated dependencies [[`531c338`](https://github.com/bigwoof91/real-system/commit/531c338b7aa96a632512fa9530b3bffa64a513cf)]:
+  - @real-system/utils-library@0.0.9
+
 ## 0.0.23
 
 ### Patch Changes
