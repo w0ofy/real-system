@@ -49,12 +49,14 @@ const shadowBorder = makeColorRange<'shadow-border'>('shadow-border');
 const dropShadow = makeColorRange<'drop-shadow'>('drop-shadow');
 const overlayShadow = makeColorRange<'overlay-shadow'>('overlay-shadow');
 const combinedOverlayNeutral = (palette: Palette) => {
-  const overlayBefore = overlayShadow<'neutral'>('neutral', palette, {
-    suffix: '0px 0px 1px',
-  })['overlay-shadow-neutral-weak-4'];
-  const overlayAfter = overlayShadow<'neutral'>('neutral', palette, {
-    suffix: '0px 16px 24px -8px',
-  })['overlay-shadow-neutral-weak-4'];
+  const makePart = (suffix: string) =>
+    overlayShadow<'neutral'>('neutral', palette, {
+      suffix,
+    })['overlay-shadow-neutral-weak-4'];
+
+  const overlayBefore = makePart('0px 0px 1px');
+  const overlayAfter = makePart('0px 16px 24px -8px');
+
   return `${overlayBefore}, ${overlayAfter}`;
 };
 

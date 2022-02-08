@@ -38,7 +38,7 @@ const DialogContent = styled(animated(DialogContentPrimitive))<BoxStyleProps>`
   border-radius: ${getToken(2, 'radii')};
   display: flex;
   flex-direction: column;
-  z-index: ${getToken(4, 'zIndices')};
+  z-index: ${getToken(1, 'zIndices')};
   opacity: 1;
   ${composeBoxStyleProps()}
 `;

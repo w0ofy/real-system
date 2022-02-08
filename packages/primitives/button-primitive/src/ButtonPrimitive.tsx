@@ -73,6 +73,7 @@ const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
         as={as}
         {...buttonPrimitiveStyles}
         {...safelySpreadInternalProps(restProps)}
+        {...restProps}
         {...buttonProps}
         ref={mergedRef}>
         {children}

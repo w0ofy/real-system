@@ -39,7 +39,7 @@ const DialogContent = styled(animated(DialogContentPrimitive))`
   border-radius: ${getToken(2, 'radii')};
   display: flex;
   flex-direction: column;
-  z-index: ${getToken(4, 'zIndices')};
+  z-index: ${getToken(3, 'zIndices')};
   opacity: 1;
 `;
 
