@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';
-import { Button } from '@real-system/button';
+import { Button, ButtonProps } from '@real-system/button';
 import { Icon, ICONS_LIST } from '@real-system/icon';
 import { Heading } from '@real-system/typography';
 import { capitalize } from '@real-system/utils-library';
@@ -44,10 +45,10 @@ const Row = (props) => (
   />
 );
 
-const ShowcaseTemplate = (args) => (
+const ShowcaseTemplate = ({ onClick = undefined, ...args }: ButtonProps) => (
   <Box display="flex" flexDirection="column" mr={10}>
     <Heading as="h2" variant="heading2">
-      {capitalize(args.variant)} {args.size ? capitalize(args.size) : ''}
+      {capitalize(args.variant!)} {args.size ? capitalize(args.size!) : ''}
     </Heading>
     <Row>
       <Button {...args} />
@@ -181,7 +182,7 @@ export const FloatingButton = ({ icon, ...args }) => (
   </Container>
 );
 
-export const IconButton = ({ icon, ...args }) => (
+export const IconButton = ({ icon, onClick, ...args }) => (
   <Container>
     <Row>
       <Button {...args}>

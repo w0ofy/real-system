@@ -12,7 +12,7 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
     const { dismiss } = useDialogContext();
 
     const innerRef = useRef<HTMLButtonElement>(null);
-    const combinedRef = useMergedRef<HTMLButtonElement>(innerRef, ref);
+    const mergedRef = useMergedRef<HTMLButtonElement>(innerRef, ref);
 
     const handleOnPress = useCallback(
       (e) => {
@@ -28,7 +28,7 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
       <Button
         onPress={handleOnPress}
         data-testid={makeTestId('modal-action')}
-        ref={combinedRef}
+        ref={mergedRef}
         {...restProps}
       />
     );

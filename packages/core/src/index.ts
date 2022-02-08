@@ -16,6 +16,7 @@ export * from '@real-system/spinner';
 export * from '@real-system/text-primitive';
 export * from '@real-system/textarea';
 export * from '@real-system/toaster';
+export * from '@real-system/tooltip';
 export * from '@real-system/truncate';
 export * from '@real-system/typography';
 export * from '@real-system/visually-hidden';

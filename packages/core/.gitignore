@@ -16,6 +16,7 @@
 /portal-primitive
 /radio-group
 /react-aria-library
+/react-laag-library
 /spinner
 /state-library
 /styling-library
@@ -23,6 +24,7 @@
 /textarea
 /theme-library
 /toaster
+/tooltip
 /truncate
 /types-library
 /typography

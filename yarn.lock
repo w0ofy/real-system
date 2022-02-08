@@ -3888,6 +3888,7 @@ __metadata:
     "@real-system/portal-primitive": ^0.0.5
     "@real-system/radio-group": ^0.0.2
     "@real-system/react-aria-library": ^0.0.6
+    "@real-system/react-laag-library": ^0.0.0
     "@real-system/spinner": ^0.0.22
     "@real-system/state-library": ^0.0.6
     "@real-system/styling-library": ^0.0.6
@@ -3895,6 +3896,7 @@ __metadata:
     "@real-system/textarea": ^0.0.6
     "@real-system/theme-library": ^0.0.8
     "@real-system/toaster": ^0.0.7
+    "@real-system/tooltip": ^0.0.0
     "@real-system/truncate": ^0.0.1
     "@real-system/types-library": ^0.0.5
     "@real-system/typography": ^0.0.23
@@ -4125,6 +4127,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/react-laag-library@^0.0.0, @real-system/react-laag-library@workspace:packages/libraries/react-laag-library":
+  version: 0.0.0-use.local
+  resolution: "@real-system/react-laag-library@workspace:packages/libraries/react-laag-library"
+  dependencies:
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-laag: ^2.0.3
+    typescript: ^4.5.5
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/spinner@^0.0.22, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@real-system/spinner@workspace:packages/components/spinner"
@@ -4265,6 +4282,34 @@ __metadata:
     "@real-system/portal-primitive": ^0.0.5
     "@real-system/styling-library": ^0.0.6
     "@real-system/theme-library": ^0.0.8
+    "@real-system/utils-library": ^0.0.8
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@real-system/tooltip@^0.0.0, @real-system/tooltip@workspace:packages/components/tooltip":
+  version: 0.0.0-use.local
+  resolution: "@real-system/tooltip@workspace:packages/components/tooltip"
+  dependencies:
+    "@real-system/animation-library": ^0.0.7
+    "@real-system/box-primitive": ^0.0.8
+    "@real-system/react-laag-library": ^0.0.0
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.8
+    "@real-system/typography": ^0.0.23
+    "@real-system/utils-library": ^0.0.8
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.5
+  peerDependencies:
+    "@real-system/animation-library": ^0.0.7
+    "@real-system/box-primitive": ^0.0.8
+    "@real-system/react-laag-library": ^0.0.0
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.8
+    "@real-system/typography": ^0.0.23
     "@real-system/utils-library": ^0.0.8
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -19954,6 +19999,18 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-laag@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "react-laag@npm:2.0.3"
+  dependencies:
+    tiny-warning: ^1.0.3
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0
+    react-dom: ^16.0.0 || ^17.0.0
+  checksum: 7c7f0f1414858be4da70db029ca6e4e56240a1c67a6b6b253dcabcf0381f502da46d0d046fee61e01984b71294ceec9e198c24d846c5a3b00895ee7def805071
   languageName: node
   linkType: hard
 

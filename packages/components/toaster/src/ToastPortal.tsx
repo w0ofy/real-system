@@ -18,7 +18,7 @@ const ToastPortal = forwardRef<HTMLDivElement, ToastPortalProps>(
           position="fixed"
           right={6}
           top={12}
-          zIndex={9}
+          zIndex={2}
           ref={ref}>
           {children}
         </Box>

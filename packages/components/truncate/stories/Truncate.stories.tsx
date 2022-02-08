@@ -15,7 +15,7 @@ export default {
 } as Meta;
 
 const Template = (args) => (
-  <Box maxWidth="5rem">
+  <Box maxWidth="17rem">
     <Typography>
       <Truncate {...args} />
     </Typography>
