@@ -1,6 +1,6 @@
 {
   "name": "@real-system/react-laag-library",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React laag library abstraction for real system.",
   "status": "production",
   "main": "lib/index.js",
