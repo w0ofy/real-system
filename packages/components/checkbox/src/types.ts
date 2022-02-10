@@ -5,7 +5,7 @@ import React from 'react';
 
 import type { FlexProps } from '@real-system/flex';
 import type {
-  Aria_AriaCheckboxGroupItemProps,
+  AriaCheckboxGroupItemProps,
   SpectrumCheckboxGroupProps,
   SpectrumCheckboxProps,
 } from '@real-system/react-aria-library';
@@ -60,10 +60,10 @@ type ReactAriaCheckboxGroupProps = SpectrumCheckboxGroupProps;
 
 /** Checkbox Group Item */
 type CheckboxGroupItemProps = RenamedCheckboxProps &
-  Omit<Aria_AriaCheckboxGroupItemProps, PropsToRename> &
+  Omit<AriaCheckboxGroupItemProps, PropsToRename> &
   CustomProps;
 
-type ReactAriaCheckboxGroupItemProps = Aria_AriaCheckboxGroupItemProps &
+type ReactAriaCheckboxGroupItemProps = AriaCheckboxGroupItemProps &
   // we've altered the react-aria CheckboxGroupItem api to also accept 'checked' which needs to get renamed to `isSelected`
   Pick<SpectrumCheckboxProps, 'isSelected' | 'defaultSelected'>;
 

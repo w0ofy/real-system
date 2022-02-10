@@ -32,7 +32,7 @@
   "peerDependencies": {
     "@real-system/animation-library": "^0.0.7",
     "@real-system/box-primitive": "^0.0.8",
-    "@real-system/react-laag-library": "^0.0.1",
+    "@real-system/react-aria-library": "^0.0.6",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.9",
     "@real-system/typography": "^0.0.24",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@real-system/animation-library": "^0.0.7",
     "@real-system/box-primitive": "^0.0.8",
-    "@real-system/react-laag-library": "^0.0.1",
+    "@real-system/react-aria-library": "^0.0.6",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.9",
     "@real-system/typography": "^0.0.24",

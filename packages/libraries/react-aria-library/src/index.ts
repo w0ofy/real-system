@@ -9,16 +9,14 @@ export * from '@react-aria/interactions';
 export * from '@react-stately/checkbox';
 export * from '@react-stately/radio';
 export * from '@react-stately/toggle';
+
 /** react-aria types */
+export type { AriaButtonProps, SpectrumButtonProps } from '@react-types/button';
 export type {
-  AriaButtonProps as AriaButton_AriaButtonProps,
-  SpectrumButtonProps,
-} from '@react-types/button';
-export type {
-  AriaCheckboxGroupItemProps as Aria_AriaCheckboxGroupItemProps,
-  AriaCheckboxGroupProps as Aria_AriaCheckboxGroupProps,
-  AriaCheckboxProps as Aria_AriaCheckboxProps,
-  AriaToggleProps as Aria_AriaToggleProps,
+  AriaCheckboxGroupItemProps,
+  AriaCheckboxGroupProps,
+  AriaCheckboxProps,
+  AriaToggleProps,
   SpectrumCheckboxGroupProps,
   SpectrumCheckboxProps,
 } from '@react-types/checkbox';
@@ -26,6 +24,9 @@ export type {
   SpectrumRadioGroupProps,
   SpectrumRadioProps,
 } from '@react-types/radio';
+export type { AriaLabelingProps } from '@react-types/shared';
 
-/** home-brewed */
+/** standardized react-aria */
+export * from './overlays';
+export * from './tooltip';
 export * from './useInteractions';
