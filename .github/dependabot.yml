@@ -17,6 +17,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/libraries/a11y-library
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/components/alert
     schedule:
       interval: weekly
@@ -145,14 +153,6 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/libraries/a11y-library
-    schedule:
-      interval: weekly
-    labels:
-      - 'area: infra'
-      - 'area: security'
-      - 'area: repo'
-  - package-ecosystem: npm
     directory: /packages/components/spinner
     schedule:
       interval: weekly
@@ -202,6 +202,14 @@ updates:
       - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/components/toaster
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/components/tooltip
     schedule:
       interval: weekly
     labels:

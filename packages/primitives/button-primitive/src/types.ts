@@ -1,7 +1,6 @@
 import React from 'react';
 
 import type { AriaButtonProps } from '@real-system/a11y-library';
-import type { UseHoverProps } from '@real-system/react-laag-library';
 import type { RealSystemElementProps } from '@real-system/types-library';
 
 import type { ButtonPrimitiveBaseStyleProps } from './styleProps/props';
@@ -27,8 +26,7 @@ type ButtonPrimitiveElementProps = ButtonPrimitiveAriaProps & {
   disabled?: AriaButtonProps['isDisabled'];
   /** @deprecated `onClick` event handler for button - you can use this but it is recommended to use onPress to conform to cross-platform friendly events. */
   onClick?: React.MouseEventHandler<any>;
-} & RealSystemElementProps &
-  Partial<UseHoverProps>;
+} & RealSystemElementProps;
 
 type ButtonPrimitiveProps = ButtonPrimitiveElementProps &
   ButtonPrimitiveStyleProps;

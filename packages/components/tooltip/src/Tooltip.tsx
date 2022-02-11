@@ -14,11 +14,6 @@ import { TooltipPopup } from './components';
 import { TRANSITIONS_CONFIG } from './constants';
 import type { TooltipProps } from './types';
 
-/**
- * @todo add aria labelling logic
- * @todo remove react-laag
- * @todo use standardized tooltip hooks from a11y
- */
 const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   props,
   ref

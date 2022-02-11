@@ -4236,20 +4236,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/react-laag-library@^0.0.1, @real-system/react-laag-library@workspace:packages/libraries/react-laag-library":
-  version: 0.0.0-use.local
-  resolution: "@real-system/react-laag-library@workspace:packages/libraries/react-laag-library"
+"@real-system/react-laag-library@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@real-system/react-laag-library@npm:0.0.1"
   dependencies:
-    concurrently: ^7.0.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
     react-laag: ^2.0.3
-    typescript: ^4.5.5
   peerDependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
-  languageName: unknown
-  linkType: soft
+  checksum: 7741cf66b15f10638db9121eaf084dec8c4b2be249932c4072d9040c91e27b5149923fe1ad0231f55cedab051ee7ee5ac17b6854dd96bccd963358a0b5882324
+  languageName: node
+  linkType: hard
 
 "@real-system/spinner@^0.0.23, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local

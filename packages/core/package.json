@@ -36,7 +36,6 @@
     "@real-system/input": "^0.0.23",
     "@real-system/portal-primitive": "^0.0.5",
     "@real-system/radio-group": "^0.0.3",
-    "@real-system/react-laag-library": "^0.0.1",
     "@real-system/spinner": "^0.0.23",
     "@real-system/state-library": "^0.0.6",
     "@real-system/styling-library": "^0.0.6",
