@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
+    "@real-system/a11y-library": "^0.0.0",
     "@real-system/box-primitive": "^0.0.8",
     "@real-system/flex": "^0.0.17",
-    "@real-system/react-aria-library": "^0.0.6",
     "@real-system/state-library": "^0.0.6",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.9",
@@ -42,9 +42,9 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@real-system/a11y-library": "^0.0.0",
     "@real-system/box-primitive": "^0.0.8",
     "@real-system/flex": "^0.0.17",
-    "@real-system/react-aria-library": "^0.0.6",
     "@real-system/state-library": "^0.0.6",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.9",

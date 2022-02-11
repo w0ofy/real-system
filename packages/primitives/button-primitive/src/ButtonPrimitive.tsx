@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef } from 'react';
 
-import { useButton } from '@real-system/react-aria-library';
+import { useButton } from '@real-system/a11y-library';
 import styled, { StyledComponent } from '@real-system/styling-library';
 import { _logger, makeTestId, useMergedRef } from '@real-system/utils-library';
 

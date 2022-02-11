@@ -1,12 +1,12 @@
 import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
 
-import { useTransition } from '@real-system/animation-library';
 import {
   useOverlayPosition,
   useTooltip,
   useTooltipTrigger,
   useTooltipTriggerState,
-} from '@real-system/react-aria-library';
+} from '@real-system/a11y-library';
+import { useTransition } from '@real-system/animation-library';
 import { Typography } from '@real-system/typography';
 import { isReactText, useMergedRef } from '@real-system/utils-library';
 
@@ -17,7 +17,7 @@ import type { TooltipProps } from './types';
 /**
  * @todo add aria labelling logic
  * @todo remove react-laag
- * @todo use standardized tooltip hooks from react-aria-library
+ * @todo use standardized tooltip hooks from a11y
  */
 const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   props,

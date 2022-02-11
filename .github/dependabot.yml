@@ -145,7 +145,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/libraries/react-aria-library
+    directory: /packages/libraries/a11y-library
     schedule:
       interval: weekly
     labels:

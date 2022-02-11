@@ -1,1 +1,1 @@
-export * from '@real-system/react-aria-library';
+export * from '@real-system/a11y-library';

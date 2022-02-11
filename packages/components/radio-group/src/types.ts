@@ -4,48 +4,32 @@
 import React from 'react';
 
 import type {
-  SpectrumRadioGroupProps,
-  SpectrumRadioProps,
-} from '@real-system/react-aria-library';
-
-type RenamedRadioProps = {
-  disabled?: SpectrumRadioProps['isDisabled'];
-};
-
-type RenamedRadioGroupProps = {
-  disabled?: SpectrumRadioGroupProps['isDisabled'];
-  readonly?: SpectrumRadioGroupProps['isReadOnly'];
-  required?: SpectrumRadioGroupProps['isRequired'];
-};
-
-type PropsToRename = 'isDisabled' | 'isReadonly' | 'isRequired';
+  AriaRadioGroupProps,
+  AriaRadioProps,
+} from '@real-system/a11y-library';
 
 type CustomProps = {
+  disabled?: boolean;
   helpText?: string;
   errorText?: string;
 };
 
 /** Radio */
-type RadioProps = RenamedRadioProps &
-  Omit<SpectrumRadioProps, PropsToRename> &
-  CustomProps;
-
-type AriaRadioProps = SpectrumRadioProps;
+type RadioProps = AriaRadioProps & CustomProps;
 
 /** Radio Group */
-type CustomRadioGroupProps = { children?: React.ReactNode };
+type CustomRadioGroupProps = {
+  children?: React.ReactNode;
+  readonly?: boolean;
+  required?: boolean;
+};
 
-type RadioGroupProps = RenamedRadioGroupProps &
-  Omit<SpectrumRadioGroupProps, PropsToRename> &
+type RadioGroupProps = AriaRadioGroupProps &
   CustomProps &
   CustomRadioGroupProps;
 
-type AriaRadioGroupProps = SpectrumRadioGroupProps & CustomRadioGroupProps;
-
 export type {
   // react aria props
-  AriaRadioGroupProps,
-  AriaRadioProps,
   CustomProps,
   // real system props
   RadioGroupProps,

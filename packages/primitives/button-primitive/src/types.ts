@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { AriaButtonProps } from '@real-system/react-aria-library';
+import type { AriaButtonProps } from '@real-system/a11y-library';
 import type { UseHoverProps } from '@real-system/react-laag-library';
 import type { RealSystemElementProps } from '@real-system/types-library';
 

@@ -3,8 +3,8 @@ import {
   useOverlayPosition as useAriaOverlayPosition,
 } from '@react-aria/overlays';
 
+import { OVERLAY_PLACEMENT_MAP } from './constants';
 import { AriaOverlayPlacement } from './types';
-import { OVERLAY_PLACEMENT_MAP } from '.';
 
 type UseOverlayPositionParams = {
   placement: AriaOverlayPlacement;

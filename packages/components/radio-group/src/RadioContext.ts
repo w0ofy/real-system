@@ -1,13 +1,13 @@
 import type {
-  RadioGroupState,
-  SpectrumRadioGroupProps,
-} from '@real-system/react-aria-library';
+  AriaRadioGroupProps,
+  AriaRadioGroupState,
+} from '@real-system/a11y-library';
 import { constate } from '@real-system/state-library';
 
 export type RadioGroupContext = {
-  state: RadioGroupState & {
+  state: AriaRadioGroupState & {
     errorText: string | undefined;
-    orientation: SpectrumRadioGroupProps['orientation'];
+    orientation: AriaRadioGroupProps['orientation'];
   };
 };
 

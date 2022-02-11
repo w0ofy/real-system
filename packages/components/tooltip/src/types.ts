@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AriaTooltipProps } from '@real-system/react-aria-library';
+import { AriaTooltipProps } from '@real-system/a11y-library';
 
 type TooltipProps = {
   children: React.ReactNode;

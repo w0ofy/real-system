@@ -1,17 +1,16 @@
 import React, { forwardRef } from 'react';
 
-import { Flex } from '@real-system/flex';
 import {
   useCheckboxGroup,
   useCheckboxGroupState,
-} from '@real-system/react-aria-library';
+} from '@real-system/a11y-library';
+import { Flex } from '@real-system/flex';
 import { HelpText, Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CheckboxGroupContextProvider } from './CheckboxContext';
 import { CheckboxGroupItem } from './CheckboxGroupItem';
 import { CheckboxGroupProps } from './types';
-import { restoreCheckboxGroupProps } from './utils';
 
 export interface CheckboxGroupComponent
   extends React.ForwardRefExoticComponent<CheckboxGroupProps> {
@@ -26,11 +25,10 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
   HTMLDivElement,
   CheckboxGroupProps
 >(function CheckboxGroup(props, ref) {
-  const restoredProps = restoreCheckboxGroupProps(props);
-  const state = useCheckboxGroupState(restoredProps);
-  const { groupProps, labelProps } = useCheckboxGroup(restoredProps, state);
+  const state = useCheckboxGroupState(props);
+  const { groupProps, labelProps } = useCheckboxGroup(props, state);
   const { children, helpText, errorText, required, canSelectAll, orientation } =
-    restoredProps;
+    props;
 
   return (
     <Flex
@@ -44,7 +42,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         required={required}
         cursor="default"
         {...labelProps}>
-        {restoredProps.label}
+        {props.label}
       </Label>
       {helpText && (
         <HelpText mt={0} mb={6}>

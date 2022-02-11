@@ -1,17 +1,16 @@
 import React, { forwardRef, useMemo, useRef } from 'react';
 
-import type { FlexProps } from '@real-system/flex';
 import {
   useCheckboxGroupItem,
   useInteractions,
-} from '@real-system/react-aria-library';
+} from '@real-system/a11y-library';
+import type { FlexProps } from '@real-system/flex';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { useCheckboxGroupContext } from './CheckboxContext';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
 import { CheckboxGroupItemProps } from './types';
-import { restoreCheckboxGroupItemProps } from './utils';
 
 const canSelectAllStyles = {
   _first: {
@@ -23,10 +22,10 @@ const canSelectAllStyles = {
 };
 
 const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
-  function CheckboxGroupItem(passedProps, ref) {
-    const props = restoreCheckboxGroupItemProps(passedProps);
+  function CheckboxGroupItem(props, ref) {
+    const { children, helpText, value, disabled: isDisabled } = props;
 
-    const interactionProps = useInteractions(props);
+    const interactionProps = useInteractions({ isDisabled });
     const state = useCheckboxGroupContext();
     const internalRef = useRef<HTMLInputElement>(null);
     const mergedRef = useMergedRef(internalRef, ref);
@@ -35,12 +34,8 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
       state,
       mergedRef as React.RefObject<HTMLInputElement>
     );
-    const { children, helpText, value } = props;
     const disabled =
-      state.isDisabled ||
-      props.isDisabled ||
-      state.isReadOnly ||
-      props.isReadOnly;
+      state.isDisabled || props.disabled || state.isReadOnly || props.readonly;
     const isSelected = state.isSelected(value);
 
     const dynamicStyles = useMemo((): FlexProps => {
@@ -72,7 +67,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
         <CheckboxControl
           disabled={disabled}
           isSelected={isSelected}
-          indeterminate={props.isIndeterminate}
+          indeterminate={props.indeterminate}
           errorText={state.errorText}
           {...interactionProps}
         />

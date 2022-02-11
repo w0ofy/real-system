@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 
+import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
 import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
-import type { UseInteractionsReturnValue } from '@real-system/react-aria-library';
 
 type CheckboxIconProps = {
   isSelected: boolean;

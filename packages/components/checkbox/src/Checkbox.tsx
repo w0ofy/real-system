@@ -4,45 +4,35 @@ import {
   useCheckbox,
   useInteractions,
   useToggleState,
-} from '@real-system/react-aria-library';
+} from '@real-system/a11y-library';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
 import { CheckboxProps } from './types';
-import { restoreCheckboxProps } from './utils';
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
-  passedProps,
+  props,
   ref
 ) {
-  const restoredProps = restoreCheckboxProps(passedProps);
-
-  const interactionProps = useInteractions(restoredProps);
-  const state = useToggleState({
-    ...restoredProps,
-    isDisabled: restoredProps.isDisabled,
-    isReadOnly: restoredProps.isReadOnly,
-  });
+  const interactionProps = useInteractions({ isDisabled: props.disabled });
+  const state = useToggleState(props);
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
 
   const { inputProps } = useCheckbox(
-    restoredProps,
+    props,
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
 
-  const { isSelected } = state;
-  const { isDisabled, isReadOnly, helpText, children, isRequired, errorText } =
-    restoredProps;
-
-  const disabled = isDisabled || isReadOnly;
+  const { errorText } = props;
+  const disabled = props.disabled || props.readonly;
 
   return (
     <CheckboxWrapper
       disabled={disabled}
-      helpText={helpText}
+      helpText={props.helpText}
       errorText={errorText}
       {...interactionProps}>
       <VisuallyHidden as="div">
@@ -50,13 +40,13 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
       </VisuallyHidden>
       <CheckboxControl
         disabled={disabled}
-        isSelected={isSelected}
-        indeterminate={restoredProps.isIndeterminate}
+        isSelected={state.isSelected}
+        indeterminate={props.indeterminate}
         errorText={errorText}
         {...interactionProps}
       />
-      <CheckboxLabel disabled={disabled} required={isRequired}>
-        {children}
+      <CheckboxLabel disabled={disabled} required={props.required}>
+        {props.children}
       </CheckboxLabel>
     </CheckboxWrapper>
   );
