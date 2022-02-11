@@ -1,0 +1,8 @@
+{
+  "name": "@real-system/react-aria-library",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "../lib/react-aria-library.js",
+  "types": "../lib/react-aria-library.d.ts"
+}

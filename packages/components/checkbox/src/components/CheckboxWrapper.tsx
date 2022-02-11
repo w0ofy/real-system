@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
+import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
 import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
-import type { UseInteractionsReturnValue } from '@real-system/react-aria-library';
 import { HelpText, Label } from '@real-system/typography';
 
 type CheckboxWrapperProps = {

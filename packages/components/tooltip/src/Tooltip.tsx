@@ -1,96 +1,85 @@
-import React, { useMemo } from 'react';
+import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
 
-import { useTransition } from '@real-system/animation-library';
 import {
-  Placement,
-  useHover,
-  UseHoverOptions,
-  useLayer,
-} from '@real-system/react-laag-library';
-import { useToken } from '@real-system/theme-library';
+  useOverlayPosition,
+  useTooltip,
+  useTooltipTrigger,
+  useTooltipTriggerState,
+} from '@real-system/a11y-library';
+import { useTransition } from '@real-system/animation-library';
 import { Typography } from '@real-system/typography';
-import { isReactText } from '@real-system/utils-library';
+import { isReactText, useMergedRef } from '@real-system/utils-library';
 
-import { TooltipArrow, TooltipPopup } from './components';
-import { BG_COLOR, TRANSITIONS_CONFIG } from './constants';
+import { TooltipPopup } from './components';
+import { TRANSITIONS_CONFIG } from './constants';
+import type { TooltipProps } from './types';
 
-type TooltipProps = {
-  children: React.ReactElement;
-  label: string;
-  ariaLabel?: string;
-  placement?: Placement;
-  disabled?: boolean;
-} & Omit<UseHoverOptions, 'hideOnScroll'>;
+const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
+  props,
+  ref
+) {
+  const { label, children, placement } = props;
 
-const Tooltip = ({
-  children,
-  label,
-  ariaLabel = label,
-  placement = 'top-center',
-  disabled = false,
-  delayEnter = 50,
-  delayLeave = 200,
-}: TooltipProps) => {
-  const [isHovered, hoverProps] = useHover({
-    delayEnter,
-    delayLeave,
+  const state = useTooltipTriggerState(props);
+  const transitions = useTransition(state.isOpen, TRANSITIONS_CONFIG);
+
+  const internalRef = useRef<HTMLElement>(null);
+  const mergedRef = useMergedRef<HTMLElement>(ref, internalRef);
+  const tipRef = useRef<HTMLElement>(null);
+
+  // get overlay position props
+  const { overlayProps: positionProps } = useOverlayPosition({
+    targetRef: mergedRef as React.RefObject<HTMLElement>,
+    overlayRef: tipRef,
+    placement: placement || 'top',
+    offset: 5,
+    isOpen: state.isOpen,
   });
-  const isVisible = useMemo(
-    () => isHovered && !disabled,
-    [isHovered, disabled]
-  );
+  // Get props for the trigger and tooltip
+  const { triggerProps, tooltipProps: tooltipPropsFromTrigger } =
+    useTooltipTrigger(props, state, mergedRef as React.RefObject<HTMLElement>);
+  const { tooltipProps } = useTooltip(tooltipPropsFromTrigger, state);
 
-  const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
-    placement,
-    isOpen: isVisible,
-    overflowContainer: false,
-    auto: true,
-    triggerOffset: 8,
-  });
-  const transitions = useTransition(isVisible, TRANSITIONS_CONFIG);
-
+  // create the trigger if children is number, text or element
   const trigger = useMemo(() => {
-    if (isReactText(trigger)) {
+    if (isReactText(children)) {
       return (
-        <span {...triggerProps} {...hoverProps}>
+        <span {...triggerProps} ref={mergedRef}>
           {children}
         </span>
       );
     }
-    return React.cloneElement(children, {
+    return cloneElement(children as React.ReactElement, {
       ...triggerProps,
-      ...hoverProps,
+      ref: mergedRef,
     });
-  }, [children, triggerProps, hoverProps]);
-
-  const arrowColor = useToken(BG_COLOR);
+  }, [children, triggerProps, mergedRef]);
 
   return (
     <>
       {trigger}
       {transitions(
-        (styles, visible) =>
-          visible &&
-          renderLayer(
+        (styles, isVisible) =>
+          isVisible && (
             <TooltipPopup
-              aria-label={ariaLabel}
-              {...layerProps}
-              style={{ ...styles, ...layerProps.style }}>
+              {...tooltipProps}
+              {...positionProps}
+              ref={tipRef}
+              style={{ ...styles, ...positionProps.style }}>
               <Typography as="span" color="color-background-light">
                 {label}
               </Typography>
-              <TooltipArrow
-                {...arrowProps}
-                size={8}
-                backgroundColor={arrowColor}
-                borderColor={arrowColor}
-                borderWidth={1}
-              />
             </TooltipPopup>
           )
       )}
     </>
   );
+});
+
+Tooltip.defaultProps = {
+  delay: 50,
+  placement: 'top',
 };
 
+export type { TooltipProps };
 export { Tooltip };

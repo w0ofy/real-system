@@ -1,6 +1,6 @@
 {
-  "name": "@real-system/react-aria-library",
-  "version": "0.0.6",
+  "name": "@real-system/a11y-library",
+  "version": "0.0.0",
   "description": "React aria library for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -29,9 +29,11 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
+    "@real-system/types-library": "0.0.5",
     "react": "^17.0.2"
   },
   "devDependencies": {
+    "@real-system/types-library": "0.0.5",
     "concurrently": "^7.0.0",
     "typescript": "^4.5.5"
   },
@@ -40,12 +42,18 @@
     "@react-aria/checkbox": "^3.2.3",
     "@react-aria/focus": "^3.5.0",
     "@react-aria/interactions": "^3.7.0",
+    "@react-aria/overlays": "^3.7.3",
     "@react-aria/radio": "^3.1.6",
+    "@react-aria/tooltip": "^3.1.3",
     "@react-stately/checkbox": "^3.0.3",
     "@react-stately/radio": "^3.3.2",
     "@react-stately/toggle": "^3.2.3",
+    "@react-stately/tooltip": "^3.0.5",
     "@react-types/button": "^3.4.1",
     "@react-types/checkbox": "^3.2.3",
-    "@react-types/radio": "^3.1.2"
+    "@react-types/overlays": "^3.5.1",
+    "@react-types/radio": "^3.1.2",
+    "@react-types/shared": "^3.10.1",
+    "@react-types/tooltip": "^3.1.2"
   }
 }

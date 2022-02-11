@@ -20,6 +20,7 @@
     "minify-bundle": "node ./tools/minify"
   },
   "dependencies": {
+    "@real-system/a11y-library": "^0.0.0",
     "@real-system/alert": "^0.0.9",
     "@real-system/alert-primitive": "^0.0.5",
     "@real-system/animation-library": "^0.0.7",
@@ -35,8 +36,6 @@
     "@real-system/input": "^0.0.23",
     "@real-system/portal-primitive": "^0.0.5",
     "@real-system/radio-group": "^0.0.3",
-    "@real-system/react-aria-library": "^0.0.6",
-    "@real-system/react-laag-library": "^0.0.1",
     "@real-system/spinner": "^0.0.23",
     "@real-system/state-library": "^0.0.6",
     "@real-system/styling-library": "^0.0.6",

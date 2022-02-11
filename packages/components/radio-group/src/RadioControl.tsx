@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo } from 'react';
 
+import { UseInteractionsReturnValue } from '@real-system/a11y-library';
 import { Box } from '@real-system/box-primitive';
 import { Flex } from '@real-system/flex';
-import { UseInteractionsReturnValue } from '@real-system/react-aria-library';
 
 type RadioControlProps = {
   disabled?: boolean;

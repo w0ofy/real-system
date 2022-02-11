@@ -1,18 +1,14 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 
+import { useRadioGroup, useRadioGroupState } from '@real-system/a11y-library';
 import { Flex } from '@real-system/flex';
-import {
-  useRadioGroup,
-  useRadioGroupState,
-} from '@real-system/react-aria-library';
 import { HelpText, Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { Radio } from './Radio';
 import { RadioGroupContextProvider } from './RadioContext';
 import type { RadioGroupProps } from './types';
-import { restoreRadioGroupProps } from './utils';
 
 export interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<RadioGroupProps> {
@@ -24,11 +20,9 @@ const RadioGroup: RadioGroupComponent = forwardRef<
   HTMLDivElement,
   RadioGroupProps
 >(function RadioGroup(props, ref) {
-  const restoredProps = restoreRadioGroupProps(props);
-  const state = useRadioGroupState(restoredProps);
-  const { radioGroupProps, labelProps } = useRadioGroup(restoredProps, state);
-  const { errorText, label, helpText, isRequired, children, orientation } =
-    restoredProps;
+  const state = useRadioGroupState(props);
+  const { radioGroupProps, labelProps } = useRadioGroup(props, state);
+  const { errorText, label, helpText, required, children, orientation } = props;
 
   return (
     <Flex
@@ -38,7 +32,7 @@ const RadioGroup: RadioGroupComponent = forwardRef<
       ref={ref}>
       <Label
         as="legend"
-        required={isRequired}
+        required={required}
         mb={helpText ? 2 : 6}
         cursor="default"
         {...labelProps}>

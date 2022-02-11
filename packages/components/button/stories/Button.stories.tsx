@@ -176,7 +176,7 @@ export const MinimalButton = (args) => {
   );
 };
 
-export const FloatingButton = ({ icon, ...args }) => (
+export const FloatingButton = ({ icon, ...args }: ButtonProps) => (
   <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
     <ShowcaseTemplate {...args} variant="floating" />
   </Container>

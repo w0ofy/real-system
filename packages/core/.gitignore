@@ -1,5 +1,6 @@
 # Automatically generated from "yarn generate-packages"
 /lib
+/a11y-library
 /alert
 /alert-primitive
 /animation-library
@@ -15,8 +16,6 @@
 /input
 /portal-primitive
 /radio-group
-/react-aria-library
-/react-laag-library
 /spinner
 /state-library
 /styling-library

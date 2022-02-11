@@ -11,9 +11,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/box-primitive @real-system/flex @real-system/react-aria-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/visually-hidden
+$ npm install react react-dom @real-system/box-primitive @real-system/flex @real-system/a11y-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/visually-hidden
 # yarn
-$ yarn add react react-dom @real-system/box-primitive @real-system/flex @real-system/react-aria-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/visually-hidden
+$ yarn add react react-dom @real-system/box-primitive @real-system/flex @real-system/a11y-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/visually-hidden
 
 # install radio
 

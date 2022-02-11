@@ -1,6 +1,5 @@
 import { animated } from '@real-system/animation-library';
 import { Box } from '@real-system/box-primitive';
-import { Arrow } from '@real-system/react-laag-library';
 import styled from '@real-system/styling-library';
 import { getToken } from '@real-system/theme-library';
 
@@ -19,9 +18,4 @@ const TooltipPopup = styled(animated(Box))`
   max-width: 30rem;
 `;
 
-const TooltipArrow = styled(Arrow)`
-  z-index: ${getToken(1, 'zIndices')};
-  pointer-events: none;
-`;
-
-export { TooltipArrow, TooltipPopup };
+export { TooltipPopup };
