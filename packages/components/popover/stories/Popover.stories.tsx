@@ -1,0 +1,45 @@
+import React from 'react';
+import { Meta } from '@storybook/react';
+
+import { Box } from '@real-system/box-primitive';
+import {
+  Popover,
+  PopoverButton,
+  PopoverContainer,
+  PopoverDescription,
+  PopoverDismiss,
+  PopoverHeading,
+} from '@real-system/popover';
+
+export default {
+  title: 'Components/Popover',
+  component: Popover,
+  subcomponents: {
+    PopoverButton,
+    PopoverContainer,
+    PopoverDescription,
+    PopoverDismiss,
+    PopoverHeading,
+  },
+  argTypes: { hideCloseButton: { type: 'boolean' } },
+} as Meta;
+
+const Template = (args) => {
+  return (
+    <Box p={20} overflow="auto">
+      <PopoverContainer placement="right-start">
+        <PopoverButton>Open Popover</PopoverButton>
+        <Popover hideCloseButton={args.hideCloseButton}>
+          <PopoverHeading mb={8}>Meet Popover</PopoverHeading>
+          <PopoverDescription mb={8}>
+            Hello there. I am a popover! Use me as a non-modal dialog to display
+            additional rich content above your UI.
+          </PopoverDescription>
+          <PopoverDismiss variant="primary">Confirm</PopoverDismiss>
+        </Popover>
+      </PopoverContainer>
+    </Box>
+  );
+};
+
+export const Default = Template.bind({});

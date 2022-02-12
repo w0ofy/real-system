@@ -31,7 +31,8 @@ export type Basis = ResponsiveValue<BasisOptions>;
 export type WrapOptions = boolean;
 export type Wrap = ResponsiveValue<WrapOptions>;
 
-export type FlexProps = Omit<BoxProps, 'display'> & {
+type SomeBoxProps = Omit<BoxProps, 'display'>;
+export type FlexProps = SomeBoxProps & {
   /**
    * renders children
    */

@@ -1,25 +1,17 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { forwardRef } from 'react';
 
-import { useButton } from '@real-system/a11y-library';
-import styled, { StyledComponent } from '@real-system/styling-library';
-import { _logger, makeTestId, useMergedRef } from '@real-system/utils-library';
+import { Button as AriaButton } from '@real-system/ariakit-library';
+import styled from '@real-system/styling-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import { composeButtonPrimitiveStyleProps } from './styleProps/props';
 import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
-import { safelySpreadInternalProps } from './styleProps/safelySpreadInternalProps';
 import type { ButtonPrimitiveProps, ButtonPrimitiveStyleProps } from './types';
 
-const StyledButtonPrimitive = styled.button<ButtonPrimitiveStyleProps>(
+const StyledButtonPrimitive = styled(AriaButton)<ButtonPrimitiveProps>(
   composeButtonPrimitiveStyleProps(),
   getPseudoButtonStyles
-) as StyledComponent<
-  Omit<
-    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
-    'color'
-  >,
-  ButtonPrimitiveStyleProps,
-  Record<string, unknown>
->;
+);
 
 const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
   appearance: 'none',
@@ -45,37 +37,13 @@ const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
   _disabled: { cursor: 'not-allowed' },
 };
 
-const ButtonPrimitive = forwardRef<HTMLElement, ButtonPrimitiveProps>(
-  function ButtonPrimitive(
-    { as = 'button', children, disabled, ...restProps },
-    ref
-  ) {
-    const internalRef = useRef<HTMLElement>(null);
-    const mergedRef = useMergedRef<HTMLElement>(internalRef, ref);
-    const { buttonProps } = useButton(
-      {
-        ...restProps,
-        elementType: as,
-        isDisabled: disabled,
-      },
-      mergedRef as React.MutableRefObject<HTMLElement>
-    );
-
-    if (restProps.onClick) {
-      _logger.warn(
-        'button-primitive',
-        '`onClick` prop is deprecated. You can use this but we recommend using `onPress` to conform to cross-platform requirements.'
-      );
-    }
-
+const ButtonPrimitive = forwardRef<HTMLButtonElement, ButtonPrimitiveProps>(
+  function ButtonPrimitive({ children, ...restProps }, ref) {
     return (
       <StyledButtonPrimitive
-        as={as}
         {...buttonPrimitiveStyles}
-        {...safelySpreadInternalProps(restProps)}
         {...restProps}
-        {...buttonProps}
-        ref={mergedRef}>
+        ref={ref}>
         {children}
       </StyledButtonPrimitive>
     );

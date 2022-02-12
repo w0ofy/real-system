@@ -4,6 +4,7 @@ import {
   borderColors,
   borders,
   colors,
+  filters,
   shadows,
   textColors,
 } from '../tokens/paletteScales';
@@ -59,6 +60,7 @@ export type RadiiTokens = keyof typeof radii;
 export type SpaceTokens = keyof typeof space;
 export type SizeTokens = keyof typeof sizes;
 export type ZIndexTokens = keyof typeof zIndices;
+export type FilterTokens = keyof ReturnType<typeof filters>;
 
 // all token typings
 export type ThemeTokens =
@@ -78,6 +80,7 @@ export type ThemeTokens =
   | BorderColorTokens
   | BorderTokens
   | ShadowTokens
-  | OrdinalTokens;
+  | OrdinalTokens
+  | FilterTokens;
 
 export type ThemeScales = keyof ThemeShape;

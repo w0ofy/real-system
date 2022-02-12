@@ -8,19 +8,27 @@ import {
 } from '@real-system/a11y-library';
 import { useTransition } from '@real-system/animation-library';
 import { Typography } from '@real-system/typography';
-import { isReactText, useMergedRef } from '@real-system/utils-library';
+import {
+  isReactText,
+  makeTestId,
+  useMergedRef,
+} from '@real-system/utils-library';
 
 import { TooltipPopup } from './components';
 import { TRANSITIONS_CONFIG } from './constants';
 import type { TooltipProps } from './types';
 
 const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
-  props,
+  {
+    label,
+    children,
+    placement,
+    'data-testid': dataTestid = 'tooltip',
+    ...restProps
+  },
   ref
 ) {
-  const { label, children, placement } = props;
-
-  const state = useTooltipTriggerState(props);
+  const state = useTooltipTriggerState(restProps);
   const transitions = useTransition(state.isOpen, TRANSITIONS_CONFIG);
 
   const internalRef = useRef<HTMLElement>(null);
@@ -37,7 +45,11 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   });
   // Get props for the trigger and tooltip
   const { triggerProps, tooltipProps: tooltipPropsFromTrigger } =
-    useTooltipTrigger(props, state, mergedRef as React.RefObject<HTMLElement>);
+    useTooltipTrigger(
+      restProps,
+      state,
+      mergedRef as React.RefObject<HTMLElement>
+    );
   const { tooltipProps } = useTooltip(tooltipPropsFromTrigger, state);
 
   // create the trigger if children is number, text or element
@@ -62,6 +74,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
         (styles, isVisible) =>
           isVisible && (
             <TooltipPopup
+              data-testid={makeTestId(dataTestid)}
               {...tooltipProps}
               {...positionProps}
               ref={tipRef}

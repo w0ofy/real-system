@@ -8,7 +8,7 @@ import { useDialogContext } from './DialogContext';
 type DialogActionProps = ButtonProps;
 
 const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
-  function DialogAction({ onPress = undefined, ...restProps }, ref) {
+  function DialogAction({ onClick = undefined, ...restProps }, ref) {
     const { dismiss } = useDialogContext();
 
     const innerRef = useRef<HTMLButtonElement>(null);
@@ -16,17 +16,17 @@ const DialogAction = forwardRef<HTMLButtonElement, DialogActionProps>(
 
     const handleOnPress = useCallback(
       (e) => {
-        if (onPress) {
-          return onPress(e);
+        if (onClick) {
+          return onClick(e);
         }
         !!dismiss && dismiss();
       },
-      [onPress, dismiss]
+      [onClick, dismiss]
     );
 
     return (
       <Button
-        onPress={handleOnPress}
+        onClick={handleOnPress}
         data-testid={makeTestId('modal-action')}
         ref={mergedRef}
         {...restProps}

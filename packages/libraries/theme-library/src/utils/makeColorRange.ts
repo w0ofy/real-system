@@ -12,6 +12,7 @@ const { tint, shade, invert, readableColor } = polished;
 type Modifications = {
   prefix?: string;
   suffix?: string;
+  override?: (color: string) => any;
 };
 
 type MakeColorRangeReturnValue<
@@ -25,12 +26,14 @@ const formatConjunction = (str: string | undefined, isPrefix = false) =>
 const defaultMods: Modifications = {
   prefix: '',
   suffix: '',
+  override: undefined,
 };
 
 const applyValueModifications =
   (mods = defaultMods) =>
   (val: string) => {
-    const { prefix = '', suffix = '' } = mods;
+    const { prefix = '', suffix = '', override } = mods;
+    if (override) return override(val);
     return `${formatConjunction(prefix, true)}${val}${formatConjunction(
       suffix
     )}`;

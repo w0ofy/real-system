@@ -3233,7 +3233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+"@popperjs/core@npm:^2.11.0, @popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
   version: 2.11.2
   resolution: "@popperjs/core@npm:2.11.2"
   checksum: 5695bf020eda54636e16a62dc9b5fdd92beaf7b2d19f62fcef049d57c5cff92773562d80cbf760b217c3ec928da310eb24994ab6a00fd39dffa0af9b5dfc01a6
@@ -3902,6 +3902,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/ariakit-library@^0.0.0, @real-system/ariakit-library@workspace:packages/libraries/ariakit-library":
+  version: 0.0.0-use.local
+  resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
+  dependencies:
+    ariakit: ^2.0.0-alpha.18
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.5
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/box-primitive@0.0.8, @real-system/box-primitive@^0.0.8, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
@@ -4188,6 +4203,40 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/popover@workspace:packages/components/popover":
+  version: 0.0.0-use.local
+  resolution: "@real-system/popover@workspace:packages/components/popover"
+  dependencies:
+    "@real-system/animation-library": ^0.0.7
+    "@real-system/ariakit-library": ^0.0.0
+    "@real-system/box-primitive": ^0.0.8
+    "@real-system/button": ^0.0.25
+    "@real-system/flex": ^0.0.17
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.9
+    "@real-system/types-library": ^0.0.5
+    "@real-system/typography": ^0.0.24
+    "@real-system/utils-library": ^0.0.9
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.5
+  peerDependencies:
+    "@real-system/animation-library": ^0.0.7
+    "@real-system/ariakit-library": ^0.0.0
+    "@real-system/box-primitive": ^0.0.8
+    "@real-system/button": ^0.0.25
+    "@real-system/flex": ^0.0.17
+    "@real-system/styling-library": ^0.0.6
+    "@real-system/theme-library": ^0.0.9
+    "@real-system/types-library": ^0.0.5
+    "@real-system/typography": ^0.0.24
+    "@real-system/utils-library": ^0.0.9
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/portal-primitive@^0.0.5, @real-system/portal-primitive@workspace:packages/primitives/portal-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/portal-primitive@workspace:packages/primitives/portal-primitive"
@@ -4390,6 +4439,7 @@ __metadata:
     "@real-system/box-primitive": ^0.0.8
     "@real-system/styling-library": ^0.0.6
     "@real-system/theme-library": ^0.0.9
+    "@real-system/types-library": ^0.0.5
     "@real-system/typography": ^0.0.24
     "@real-system/utils-library": ^0.0.9
     concurrently: ^7.0.0
@@ -4402,6 +4452,7 @@ __metadata:
     "@real-system/box-primitive": ^0.0.8
     "@real-system/styling-library": ^0.0.6
     "@real-system/theme-library": ^0.0.9
+    "@real-system/types-library": ^0.0.5
     "@real-system/typography": ^0.0.24
     "@real-system/utils-library": ^0.0.9
     react: ^17.0.2
@@ -8512,6 +8563,28 @@ __metadata:
   version: 5.0.0
   resolution: "aria-query@npm:5.0.0"
   checksum: c41f98866c5a304561ee8cae55856711cddad6f3f85d8cb43cc5f79667078d9b8979ce32d244c1ff364e6463a4d0b6865804a33ccc717fed701b281cf7dc6296
+  languageName: node
+  linkType: hard
+
+"ariakit-utils@npm:^0.17.0-alpha.11":
+  version: 0.17.0-alpha.11
+  resolution: "ariakit-utils@npm:0.17.0-alpha.11"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^18.0.0-beta
+  checksum: a42e15a471662b169985f150aeab1dae37ee2a8383e1e2a34dca750fcbbac53107b8de1b1435678b3fccc5efc6e783d2757f53ba5befdbd4695047bceea75455
+  languageName: node
+  linkType: hard
+
+"ariakit@npm:^2.0.0-alpha.18":
+  version: 2.0.0-alpha.18
+  resolution: "ariakit@npm:2.0.0-alpha.18"
+  dependencies:
+    "@popperjs/core": ^2.11.0
+    ariakit-utils: ^0.17.0-alpha.11
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^18.0.0-beta
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^18.0.0-beta
+  checksum: 679338084b78f1f4f901e015ac58b93a0cfc060bee1168299456a2324b42ccc6d4756e67faabe45b9878caca300f4998b121ece7a9ef37f136af81d4537d5ad2
   languageName: node
   linkType: hard
 

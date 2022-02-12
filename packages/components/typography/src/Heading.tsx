@@ -58,16 +58,17 @@ export type HeadingProps = {
   children?: React.ReactNode;
   variant?: HeadingVariants;
   as?: HeadingAsTags;
+  tag?: HeadingAsTags;
 } & InternalTypographyProps;
 
 const Heading = forwardRef<HeadingElement, HeadingProps>(
   (
-    { variant = 'heading2', children, mb, as = 'div', ...restProps },
+    { variant = 'heading2', children, mb, as = 'div', tag, ...restProps },
     ref
   ): React.ReactElement => {
     return (
       <TextPrimitive
-        as={as}
+        as={tag || as}
         m={0}
         color="color-text-neutral-strong-5"
         {...styles[variant]}

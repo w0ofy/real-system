@@ -34,7 +34,7 @@ export const MyComponent = (args) => {
     <Flex vertical>
       <Button
         mb={4}
-        onPress={() => toaster.notify('12 new messages')}>
+        onClick={() => toaster.notify('12 new messages')}>
         Push Toast
       </Button>
       <Toaster {...toaster} />

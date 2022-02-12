@@ -49,6 +49,7 @@ export type TokenSuffixes =
   | 'strong-95';
 
 export type TokenPrefixes =
+  | 'filter-shadow'
   | 'color'
   | 'color-background'
   | 'color-text'

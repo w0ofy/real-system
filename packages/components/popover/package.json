@@ -1,8 +1,9 @@
 {
-  "name": "@real-system/tooltip",
-  "version": "0.0.1",
-  "description": "Tooltip component for real system.",
-  "status": "production",
+  "name": "@real-system/popover",
+  "version": "0.0.0",
+  "description": "Popover component for real system.",
+  "status": "development",
+  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -21,7 +22,7 @@
   },
   "keywords": [
     "real-system",
-    "tooltip"
+    "popover"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -30,9 +31,11 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/a11y-library": "^0.0.0",
     "@real-system/animation-library": "^0.0.7",
+    "@real-system/ariakit-library": "^0.0.0",
     "@real-system/box-primitive": "^0.0.8",
+    "@real-system/button": "^0.0.25",
+    "@real-system/flex": "^0.0.17",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.9",
     "@real-system/types-library": "^0.0.5",
@@ -42,9 +45,11 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/a11y-library": "^0.0.0",
     "@real-system/animation-library": "^0.0.7",
+    "@real-system/ariakit-library": "^0.0.0",
     "@real-system/box-primitive": "^0.0.8",
+    "@real-system/button": "^0.0.25",
+    "@real-system/flex": "^0.0.17",
     "@real-system/styling-library": "^0.0.6",
     "@real-system/theme-library": "^0.0.9",
     "@real-system/types-library": "^0.0.5",

@@ -26,7 +26,7 @@ const Template = (args) => {
 
   return (
     <>
-      <Button onPress={openDialog} variant="primary">
+      <Button onClick={openDialog} variant="primary">
         Open Dialog
       </Button>
       <Dialog
@@ -50,11 +50,11 @@ const Template = (args) => {
         </DialogBody>
         <DialogFooter>
           <DialogFooterActions>
-            <DialogAction onPress={closeDialog}>Close</DialogAction>
+            <DialogAction onClick={closeDialog}>Close</DialogAction>
             <DialogAction
               variant="primary"
               ref={confirmRef}
-              onPress={closeDialog}>
+              onClick={closeDialog}>
               Confirm
             </DialogAction>
           </DialogFooterActions>

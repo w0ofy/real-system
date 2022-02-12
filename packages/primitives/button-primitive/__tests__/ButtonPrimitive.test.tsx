@@ -39,7 +39,7 @@ describe('ButtonPrimitive', () => {
 
   describe('As span', () => {
     it('is disabled with proper a11y rules', () => {
-      render(<ButtonPrimitiveComponent as="span" disabled />);
+      render(<ButtonPrimitiveComponent disabled />);
       expect(
         queryButtonPrimitive()?.getAttribute('aria-disabled')
       ).toBeTruthy();
