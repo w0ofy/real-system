@@ -12,4 +12,15 @@ export {
   PopoverStateProps as AriaPopoverStateProps,
   usePopoverState as useAriaPopoverState,
 } from 'ariakit/popover';
-export * from 'ariakit/tooltip';
+export {
+  Tooltip as AriaTooltip,
+  TooltipAnchor as AriaTooltipAnchor,
+  TooltipAnchorProps as AriaTooltipAnchorProps,
+  TooltipArrow as AriaTooltipArrow,
+  TooltipArrowOptions as AriaTooltipArrowOptions,
+  TooltipArrowProps as AriaTooltipArrowProps,
+  TooltipProps as AriaTooltipProps,
+  TooltipState as AriaTooltipState,
+  TooltipStateProps as AriaTooltipStateProps,
+  useTooltipState as useAriaTooltipState,
+} from 'ariakit/tooltip';

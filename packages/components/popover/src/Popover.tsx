@@ -32,7 +32,9 @@ const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
         borderColor="color-border-neutral-weak-8"
         borderRadius={2}
         padding={10}
+        _focus={{ outline: '0' }}
         bg="color-background"
+        zIndex={1}
         ref={ref}
       />
     );
@@ -55,7 +57,6 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(function Popover(
       {!hideCloseButton && (
         <Button
           onClick={state.hide}
-          size="sm"
           variant="floating"
           position="absolute"
           top={5}

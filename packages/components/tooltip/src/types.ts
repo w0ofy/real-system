@@ -1,12 +1,17 @@
 import React from 'react';
 
-import { AriaTooltipProps } from '@real-system/a11y-library';
+import { AriaTooltipStateProps } from '@real-system/ariakit-library';
 import type { RealSystemElementProps } from '@real-system/types-library';
 
+type StateProps = Pick<
+  AriaTooltipStateProps,
+  'visible' | 'timeout' | 'placement'
+>;
 type TooltipProps = {
   children: React.ReactNode;
   label: string;
-} & AriaTooltipProps &
+  disabled?: boolean;
+} & Partial<StateProps> &
   RealSystemElementProps;
 
 export type { TooltipProps };

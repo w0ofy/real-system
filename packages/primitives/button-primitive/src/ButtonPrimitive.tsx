@@ -1,18 +1,23 @@
 import React, { forwardRef } from 'react';
 
 import { Button as AriaButton } from '@real-system/ariakit-library';
-import styled from '@real-system/styling-library';
+import styled, { isPropValid } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
+import { BUTTON_PRIMITIVE_STYLE_PROPS_MAP } from './styleProps/constants';
 import { composeButtonPrimitiveStyleProps } from './styleProps/props';
 import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
 import type { ButtonPrimitiveProps, ButtonPrimitiveStyleProps } from './types';
 
-const StyledButtonPrimitive = styled(AriaButton)<ButtonPrimitiveProps>(
+const StyledButtonPrimitive = styled(AriaButton, {
+  shouldForwardProp: (prop) =>
+    isPropValid(prop) && !BUTTON_PRIMITIVE_STYLE_PROPS_MAP[prop],
+})<ButtonPrimitiveProps>(
   composeButtonPrimitiveStyleProps(),
   getPseudoButtonStyles
 );
 
+console.log(BUTTON_PRIMITIVE_STYLE_PROPS_MAP);
 const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
   appearance: 'none',
   color: 'color-text',
