@@ -1,26 +1,30 @@
 export * from 'ariakit/button';
+export type {
+  PopoverDisclosureProps as AriaPopoverDisclosureProps,
+  PopoverProps as AriaPopoverProps,
+  PopoverState as AriaPopoverState,
+  PopoverStateProps as AriaPopoverStateProps,
+} from 'ariakit/popover';
 export {
   Popover as AriaPopover,
   PopoverArrow as AriaPopoverArrow,
   PopoverDescription as AriaPopoverDescription,
   PopoverDisclosure as AriaPopoverDisclosure,
-  PopoverDisclosureProps as AriaPopoverDisclosureProps,
   PopoverDismiss as AriaPopoverDismiss,
   PopoverHeading as AriaPopoverHeading,
-  PopoverProps as AriaPopoverProps,
-  PopoverState as AriaPopoverState,
-  PopoverStateProps as AriaPopoverStateProps,
   usePopoverState as useAriaPopoverState,
 } from 'ariakit/popover';
-export {
-  Tooltip as AriaTooltip,
-  TooltipAnchor as AriaTooltipAnchor,
+export type {
   TooltipAnchorProps as AriaTooltipAnchorProps,
-  TooltipArrow as AriaTooltipArrow,
   TooltipArrowOptions as AriaTooltipArrowOptions,
   TooltipArrowProps as AriaTooltipArrowProps,
   TooltipProps as AriaTooltipProps,
   TooltipState as AriaTooltipState,
   TooltipStateProps as AriaTooltipStateProps,
+} from 'ariakit/tooltip';
+export {
+  Tooltip as AriaTooltip,
+  TooltipAnchor as AriaTooltipAnchor,
+  TooltipArrow as AriaTooltipArrow,
   useTooltipState as useAriaTooltipState,
 } from 'ariakit/tooltip';

@@ -2,7 +2,6 @@
 <p align="center">Radio button components for real system.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/radio-group"><img src="https://badgen.net/npm/v/@real-system/radio-group?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/radio-group"><img src="https://badgen.net/bundlephobia/min/@real-system/radio-group" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

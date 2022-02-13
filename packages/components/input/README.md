@@ -2,7 +2,6 @@
 <p align="center">Real System's Input components.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/input"><img src="https://badgen.net/npm/v/@real-system/input?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/input"><img src="https://badgen.net/bundlephobia/min/@real-system/input" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

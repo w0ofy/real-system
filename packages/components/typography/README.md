@@ -2,7 +2,6 @@
 <p align="center">Real System's Typography components.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/typography"><img src="https://badgen.net/npm/v/@real-system/typography?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/typography"><img src="https://badgen.net/bundlephobia/min/@real-system/typography" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage
