@@ -1,16 +1,14 @@
-import {
-  OverlayProps,
-  OverlayTriggerProps,
+import type {
+  OverlayProps as AriaOverlayProps,
+  OverlayTriggerProps as AriaOverlayTriggerProps,
   Placement,
 } from '@react-types/overlays';
 
 import type { KebabCase } from '@real-system/types-library';
 
 type RestoredAriaOverlayPlacement = Placement;
-
 type AriaOverlayPlacement = KebabCase<Placement>;
-type AriaOverlayProps = OverlayProps;
-type AriaOverlayTriggerProps = OverlayTriggerProps;
+
 export type {
   AriaOverlayPlacement,
   AriaOverlayProps,

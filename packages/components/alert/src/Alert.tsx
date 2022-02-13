@@ -13,7 +13,7 @@ import { ICON_MAP } from './utils';
 type AlertProps = {
   description?: string;
   children: React.ReactNode;
-  onDismiss?: ButtonProps['onPress'];
+  onDismiss?: ButtonProps['onClick'];
   dismissRef?: React.Ref<HTMLButtonElement>;
 } & CommonAlertProps;
 
@@ -75,7 +75,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
           mr={0}
           mt={1}
           ml="auto"
-          onPress={onDismiss}
+          onClick={onDismiss}
           variant="floating">
           <Icon icon="x" size="md" />
         </Button>

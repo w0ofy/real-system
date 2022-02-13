@@ -3,7 +3,7 @@ import { ButtonPrimitiveProps, ButtonPrimitiveStyleProps } from '../types';
 import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 import { BUTTON_PRIMITIVE_PROPS_TO_BLOCK as BUTTON_PRIMITIVE_STYLE_PROPS } from './safelySpreadButtonPrimitiveProps';
 
-const PROPS_TO_ALLOW = [
+const BUTTON_PRIMITIVE_PROPS_TO_ALLOW = [
   ...BUTTON_PRIMITIVE_STYLE_PROPS,
   ...Object.keys(PSEUDO_PROP_STYLES),
 ];
@@ -18,7 +18,7 @@ const safelySpreadInternalProps = (
 ): ButtonPrimitiveStyleProps => {
   return Object.keys(props).reduce(
     (newProps: ButtonPrimitiveStyleProps, key): ButtonPrimitiveStyleProps => {
-      if (PROPS_TO_ALLOW.includes(key)) {
+      if (BUTTON_PRIMITIVE_PROPS_TO_ALLOW.includes(key)) {
         newProps[key] = props[key];
       }
       return newProps;
@@ -27,4 +27,4 @@ const safelySpreadInternalProps = (
   );
 };
 
-export { safelySpreadInternalProps };
+export { BUTTON_PRIMITIVE_PROPS_TO_ALLOW, safelySpreadInternalProps };

@@ -76,4 +76,23 @@ const shadows = (palette: Palette) => {
   };
 };
 
-export { backgroundColors, borderColors, borders, colors, shadows, textColors };
+const filter = makeColorRange<'filter-shadow'>('filter-shadow');
+
+const filters = (palette: Palette) => {
+  const neutrals = filter<'neutral'>('neutral', palette, {
+    override: (color) => `drop-shadow(${color} 0px 2px 6px)`,
+  });
+  return {
+    ...neutrals,
+  };
+};
+
+export {
+  backgroundColors,
+  borderColors,
+  borders,
+  colors,
+  filters,
+  shadows,
+  textColors,
+};

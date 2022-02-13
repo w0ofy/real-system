@@ -56,6 +56,10 @@ const realSystemProps = system({
     property: 'strokeWidth',
     scale: 'borderWidths',
   },
+  filter: {
+    property: 'filter',
+    scale: 'filters',
+  },
   fill: {
     property: 'fill',
     scale: 'colors',
@@ -132,6 +136,7 @@ type RealSystemProps = {
   strokeMiterlimit?: Property.StrokeMiterlimit;
   strokeOpacity?: Property.StrokeOpacity;
   strokeWidth?: Property.StrokeWidth;
+  filter?: Property.Filter;
   fill?: Property.Fill;
   fillOpacity?: Property.FillOpacity;
   fillRule?: Property.FillRule;

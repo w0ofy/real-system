@@ -13,19 +13,19 @@ export type ButtonIntents = Extract<
   'danger' | 'primary' | 'neutral' | 'success'
 >;
 export type ButtonStates = 'disabled' | 'loading' | 'default';
-export type ButtonTabIndexes = 0 | -1;
-type ButtonTypes = 'submit' | 'button' | 'reset';
 
 export type ButtonProps = ButtonPrimitiveProps & {
-  children: React.ReactNode;
+  /** sets the loading state of the buttons */
   loading?: boolean;
+  /** inserts a leading icon */
   leadingIcon?: React.ReactElement;
+  /** inserts a trailing icon */
   trailingIcon?: React.ReactElement;
-  onPress?: ButtonPrimitiveProps['onPress'];
-  tabIndex?: ButtonTabIndexes;
-  type?: ButtonTypes;
+  /** controls button variant */
   variant?: ButtonVariants;
+  /** controls the intent of the button */
   intent?: ButtonIntents;
+  /** controls the size of the button */
   size?: ButtonSizes;
 };
 

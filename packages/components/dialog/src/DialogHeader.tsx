@@ -43,7 +43,7 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
             <Button
               tabIndex={0}
               variant="minimal"
-              onPress={handleOnClose}
+              onClick={handleOnClose}
               data-testid={makeTestId('dialog-close-button')}>
               <Icon icon="x" title="close" />
             </Button>

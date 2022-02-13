@@ -45,7 +45,7 @@ const Row = (props) => (
   />
 );
 
-const ShowcaseTemplate = ({ onClick = undefined, ...args }: ButtonProps) => (
+const ShowcaseTemplate = (args: ButtonProps) => (
   <Box display="flex" flexDirection="column" mr={10}>
     <Heading as="h2" variant="heading2">
       {capitalize(args.variant!)} {args.size ? capitalize(args.size!) : ''}
@@ -176,17 +176,21 @@ export const MinimalButton = (args) => {
   );
 };
 
-export const FloatingButton = ({ icon, ...args }: ButtonProps) => (
+export const FloatingButton = ({
+  leadingIcon,
+  trailingIcon,
+  ...args
+}: ButtonProps) => (
   <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
     <ShowcaseTemplate {...args} variant="floating" />
   </Container>
 );
 
-export const IconButton = ({ icon, onClick, ...args }) => (
+export const IconButton = (args) => (
   <Container>
     <Row>
       <Button {...args}>
-        <Icon icon={icon || 'cog'} />
+        <Icon icon={'cog'} />
       </Button>
     </Row>
   </Container>

@@ -18,7 +18,7 @@ export const Showcase = (args) => {
       <Button
         mb={4}
         intent="primary"
-        onPress={() =>
+        onClick={() =>
           toaster.notify('12 new messages', {
             description: 'Hi, my name is Bond, James Bond... Hello',
           })
@@ -28,7 +28,7 @@ export const Showcase = (args) => {
       <Button
         mb={4}
         intent="primary"
-        onPress={() =>
+        onClick={() =>
           toaster.notify('Successfully installed Real System', {
             dismissAfter: false,
             description:
@@ -39,7 +39,7 @@ export const Showcase = (args) => {
       </Button>
       <Button
         mb={4}
-        onPress={() =>
+        onClick={() =>
           toaster.warning('You forgot to enter some details', {
             description:
               'Fill in your first name, last name and date of birth.',
@@ -50,7 +50,7 @@ export const Showcase = (args) => {
       <Button
         intent="danger"
         mb={4}
-        onPress={() =>
+        onClick={() =>
           toaster.danger('Verification failed', {
             description: 'Contact customer support for assistance.',
             onDismiss: () => {
@@ -64,7 +64,7 @@ export const Showcase = (args) => {
       <Button
         mb={4}
         intent="success"
-        onPress={() =>
+        onClick={() =>
           toaster.success('Successfully installed Real System', {
             description:
               'You have now have full access to components that make sense.',

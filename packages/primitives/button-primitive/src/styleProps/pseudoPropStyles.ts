@@ -27,6 +27,8 @@ const PSEUDO_PROP_STYLES = {
   _notFirst: '&:not(:first-of-type)',
   _notLast: '&:not(:last-of-type)',
 };
+
+type PseudoStyleProps = keyof typeof PSEUDO_PROP_STYLES;
 /**
  * Take _ prefixed style props and convert them to custom style props for CSS pseudo selectors
  *
@@ -38,7 +40,7 @@ const getPseudoButtonStyles = (
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
-  ) as Array<keyof typeof PSEUDO_PROP_STYLES>;
+  ) as PseudoStyleProps[];
 
   if (pseudoProps.length === 0) {
     return {};
@@ -54,4 +56,5 @@ const getPseudoButtonStyles = (
   return css(pseudoStyles);
 };
 
+export type { PseudoStyleProps };
 export { getPseudoButtonStyles, PSEUDO_PROP_STYLES };

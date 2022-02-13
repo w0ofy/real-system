@@ -52,7 +52,7 @@ const Template = (args) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <Button onPress={() => setIsOpen(true)} variant="primary">
+      <Button onClick={() => setIsOpen(true)} variant="primary">
         Open Dialog Primitive
       </Button>
       <DialogOverlay isOpen={isOpen} onDismiss={() => setIsOpen(false)}>
@@ -60,7 +60,7 @@ const Template = (args) => {
           <Typography.Heading variant="heading3" mb={10}>
             Dialog Primitive
           </Typography.Heading>
-          <Button onPress={() => setIsOpen(false)} width={20}>
+          <Button onClick={() => setIsOpen(false)} width={20}>
             Close
           </Button>
         </DialogContent>

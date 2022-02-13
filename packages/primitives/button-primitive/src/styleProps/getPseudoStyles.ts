@@ -28,6 +28,7 @@ const getPseudoButtonStyles = (
     }
   });
 
+  console.log(pseudoStyles);
   return css(pseudoStyles);
 };
 

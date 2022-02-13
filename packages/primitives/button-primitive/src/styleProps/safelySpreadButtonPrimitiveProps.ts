@@ -1,9 +1,11 @@
 import { ButtonPrimitiveElementProps, ButtonPrimitiveProps } from '../types';
 
 import { BUTTON_PRIMITIVE_STYLE_PROPS } from './constants';
+import { PSEUDO_PROP_STYLES } from './pseudoPropStyles';
 
 const BUTTON_PRIMITIVE_PROPS_TO_BLOCK = [
   ...BUTTON_PRIMITIVE_STYLE_PROPS,
+  ...Object.keys(PSEUDO_PROP_STYLES),
   'className',
   'style',
 ];
