@@ -6,7 +6,9 @@ import { makeTestId } from '@real-system/utils-library';
 
 import { usePopoverContext } from './PopoverContext';
 
-export const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
+type PopoverButtonProps = ButtonProps;
+
+const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
   function PopoverButton({ children, ...restProps }, ref) {
     const state = usePopoverContext();
 
@@ -23,4 +25,5 @@ export const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
   }
 );
 
-export type PopoverButtonProps = ButtonProps;
+export type { PopoverButtonProps };
+export { PopoverButton };

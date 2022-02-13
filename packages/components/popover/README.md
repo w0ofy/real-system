@@ -26,28 +26,31 @@ $ yarn add @real-system/popover
 ### Code Example
 
 ```javascript
+import { Popover } from '@real-system/popover';
+
+/** or import each component
 import {
-  Popover,
   PopoverButton,
   PopoverContainer,
   PopoverDescription,
   PopoverDismiss,
   PopoverHeading,
 } from '@real-system/popover';
+**/
 
 const MyComponent = (args) => {
   return (
-    <PopoverContainer placement="right-start">
-      <PopoverButton>Open Popover</PopoverButton>
+    <Popover.Container placement="auto">
+      <Popover.Button>Open Popover</Popover.Button>
       <Popover hideCloseButton={true}>
-        <PopoverHeading mb={8}>Meet Popover</PopoverHeading>
-        <PopoverDescription mb={8}>
+        <Popover.Heading mb={6}>Meet Popover</Popover.Heading>
+        <Popover.Description mb={8}>
           Hello there. I am a popover! Use me as a non-modal dialog to display
           additional rich content above your UI.
-        </PopoverDescription>
-        <PopoverDismiss variant="primary">Confirm</PopoverDismiss>
+        </Popover.Description>
+        <Popover.Dismiss variant="primary">Confirm</Popover.Dismiss>
       </Popover>
-    </PopoverContainer>
+    </Popover.Container>
   );
 };
 
