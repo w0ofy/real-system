@@ -69,9 +69,9 @@ const MyComponent = () => {
 
 Some notes before you begin.
 
-- [Github Issues/Projects](https://github.com/bigwoof91/real-system/issues) are used to track work to be completed.
+- [Github Issues/Projects](https://github.com/bigwoof91/real-system/issues) are used to track work.
 - [Yarn Workspaces](https://yarnpkg.com/features/workspaces) is used to manage the monorepo.
-- Commit messages are linted with [commitlint](https://commitlint.js.org/#/) + [commitizen](https://commitizen-tools.github.io/commitizen/).
+- Commit messages are linted with [commitlint](https://commitlint.js.org/#/) & [commitizen](https://commitizen-tools.github.io/commitizen/).
 
 ## Setup
 
@@ -81,9 +81,6 @@ $ yarn bootstrap
 
 # develop components locally with storybook
 $ yarn dev
-
-# develop the documentation website
-$ yarn website
 ```
 
 ## Contributing
@@ -93,7 +90,6 @@ $ git checkout -b <branch_name>
 $ git add .
 
 # the next step will throw an error if the commit message doesn't follow conventional-changelog standards: https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional
-
 $ git commit -m "<your_commit_message>"
 
 # or to be prompted by commitizen :)
@@ -107,8 +103,9 @@ $ git push origin <branch_name>
 
 ## Under the hood
 
-Real System uses the following projects which compose the majority of component patterns.
+Real System uses the following projects which drive the majority of component compositions and patterns.
 
+- [ariakit](https://github.com/ariakit/ariakit)
 - [styled system](https://styled-system.com/)
 - [@emotion/react](https://emotion.sh/docs/@emotion/react)
 - [@emotion/styled](https://emotion.sh/docs/@emotion/styled)
