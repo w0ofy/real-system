@@ -3,10 +3,10 @@ import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
 import { useTransition } from '@real-system/animation-library';
 import { animated } from '@real-system/animation-library';
 import {
-  AriaTooltip,
-  AriaTooltipAnchor,
-  AriaTooltipArrow,
-  useAriaTooltipState,
+  AriakitTooltip,
+  AriakitTooltipAnchor,
+  AriakitTooltipArrow,
+  useAriakitTooltipState,
 } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
 import styled from '@real-system/styling-library';
@@ -41,7 +41,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   const internalRef = useRef<HTMLElement>(null);
   const mergedRef = useMergedRef<HTMLElement>(ref, internalRef);
 
-  const state = useAriaTooltipState({
+  const state = useAriakitTooltipState({
     placement,
     visible: !disabled && visible,
     ...restProps,
@@ -57,15 +57,15 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   const trigger = useMemo(() => {
     if (isReactText(children)) {
       return (
-        <AriaTooltipAnchor as="span" state={state} ref={mergedRef}>
+        <AriakitTooltipAnchor as="span" state={state} ref={mergedRef}>
           {children}
-        </AriaTooltipAnchor>
+        </AriakitTooltipAnchor>
       );
     }
     // casted type because if it is not ReactText it will be ReactElement
     const Child = children as React.ReactElement;
     return (
-      <AriaTooltipAnchor
+      <AriakitTooltipAnchor
         as="span"
         state={state}
         ref={mergedRef}
@@ -73,7 +73,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
         {(anchorProps) =>
           cloneElement(children as React.ReactElement, anchorProps)
         }
-      </AriaTooltipAnchor>
+      </AriakitTooltipAnchor>
     );
   }, [children, state, mergedRef]);
 
@@ -83,17 +83,17 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
       {transitions(
         (style, item) =>
           item && (
-            <AriaTooltip
+            <AriakitTooltip
               data-testid={makeTestId('tooltip')}
               {...restProps}
               state={state}
               as={StyledTooltip}
               style={style}>
-              <AriaTooltipArrow state={state} />
+              <AriakitTooltipArrow state={state} />
               <Typography as="span" color="color-background-light">
                 {label}
               </Typography>
-            </AriaTooltip>
+            </AriakitTooltip>
           )
       )}
     </>

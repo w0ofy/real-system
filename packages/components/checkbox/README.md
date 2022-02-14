@@ -2,7 +2,6 @@
 <p align="center">Checkbox.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/checkbox"><img src="https://badgen.net/npm/v/@real-system/checkbox?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/checkbox"><img src="https://badgen.net/bundlephobia/min/@real-system/checkbox" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

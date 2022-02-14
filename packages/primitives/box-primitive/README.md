@@ -2,7 +2,6 @@
 <p align="center">Real System's primitive Box component.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/box-primitive"><img src="https://badgen.net/npm/v/@real-system/box-primitive?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/box-primitive"><img src="https://badgen.net/bundlephobia/min/@real-system/box-primitive" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

@@ -1,30 +1,50 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import {
-  AriaPopoverState,
-  AriaPopoverStateProps,
-  useAriaPopoverState,
+  AriakitPopoverState,
+  AriakitPopoverStateProps,
+  useAriakitPopoverState,
 } from '@real-system/ariakit-library';
 import { constate } from '@real-system/state-library';
 
+type CustomPopoverState = {
+  onHide?: () => void;
+};
 type PopoverContext = {
-  state: AriaPopoverState;
+  state: AriakitPopoverState;
 };
 
-type PopoverContainerProps = Pick<AriaPopoverStateProps, 'placement'> & {
+type PopoverContainerProps = Pick<AriakitPopoverStateProps, 'placement'> & {
   children: React.ReactNode;
-};
+} & CustomPopoverState;
 
-const usePopover = ({ state }: PopoverContext): AriaPopoverState => state;
+const usePopover = ({ state }: PopoverContext): AriakitPopoverState => state;
 
-const [PopoverContextProvider, usePopoverContext] = constate(usePopover);
+const [PopoverContextProvider, usePopoverStateContext] = constate(usePopover);
 
-const PopoverContainer = ({ children, placement }: PopoverContainerProps) => {
-  const state = useAriaPopoverState({ placement });
+const PopoverContainer = ({
+  children,
+  onHide,
+  placement,
+}: PopoverContainerProps) => {
+  const { hide, ...restState } = useAriakitPopoverState({
+    placement,
+    gutter: 2,
+  });
+  const handleHide = useCallback(() => {
+    onHide && onHide();
+    hide();
+  }, [hide, onHide]);
+
+  const state = {
+    ...restState,
+    hide: handleHide,
+  };
+
   return (
     <PopoverContextProvider state={state}>{children}</PopoverContextProvider>
   );
 };
 
 export type { PopoverContainerProps, PopoverContext };
-export { PopoverContainer, usePopoverContext };
+export { PopoverContainer, usePopoverStateContext };

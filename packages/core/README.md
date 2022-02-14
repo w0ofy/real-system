@@ -2,7 +2,6 @@
 <p align="center">One bundle containing every package within Real System.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/bundlephobia/min/@real-system/core" alt="minified size" height="18"/></a>
 </p>
 
 ## Usage

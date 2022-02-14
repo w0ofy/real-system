@@ -4,6 +4,7 @@
 /alert
 /alert-primitive
 /animation-library
+/ariakit-library
 /box-primitive
 /button
 /button-primitive
@@ -14,6 +15,7 @@
 /flex
 /icon
 /input
+/popover
 /portal-primitive
 /radio-group
 /spinner

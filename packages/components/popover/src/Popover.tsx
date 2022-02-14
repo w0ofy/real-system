@@ -1,11 +1,10 @@
 import React, { forwardRef } from 'react';
 
 import {
-  AriaPopover,
-  AriaPopoverArrow,
-  AriaPopoverProps,
+  AriakitPopover,
+  AriakitPopoverArrow,
+  AriakitPopoverProps,
 } from '@real-system/ariakit-library';
-import { Button } from '@real-system/button';
 import { Flex, FlexProps } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
 import { RealSystemElementProps } from '@real-system/types-library';
@@ -17,9 +16,9 @@ import {
   PopoverHeading,
 } from './components';
 import { PopoverButton } from './PopoverButton';
-import { PopoverContainer, usePopoverContext } from './PopoverContext';
+import { PopoverContainer, usePopoverStateContext } from './PopoverContext';
 
-type PopoverProps = Omit<AriaPopoverProps, 'state' | 'as'> &
+type PopoverProps = Omit<AriakitPopoverProps, 'state' | 'as'> &
   RealSystemElementProps & {
     hideCloseButton?: boolean;
   };
@@ -62,27 +61,26 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
     { children, dataTestid, hideCloseButton, ...restProps }: PopoverProps,
     ref
   ) {
-    const state = usePopoverContext();
+    const state = usePopoverStateContext();
     return (
-      <AriaPopover
+      <AriakitPopover
         state={state}
         data-testid={makeTestId(dataTestid || 'popover')}
         {...restProps}
         as={StyledPopover}
         ref={ref}>
-        <AriaPopoverArrow state={state} />
+        <AriakitPopoverArrow state={state} />
         {!hideCloseButton && (
-          <Button
-            onClick={state.hide}
+          <PopoverDismiss
             variant="floating"
             position="absolute"
             top={5}
             right={5}>
             <Icon icon="x" />
-          </Button>
+          </PopoverDismiss>
         )}
         {children}
-      </AriaPopover>
+      </AriakitPopover>
     );
   }
 );

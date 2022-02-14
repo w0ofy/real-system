@@ -5,7 +5,6 @@
 <p align="center">
 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=@realsystem/core&color=blue" alt="npm version" height="18"/></a>
-<a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/bundlephobia/min/@real-system/core" alt="minified size" height="18"/></a>
 </p>
 
 #### **The entire library can be installed via [@real-system/core](packages/core)**

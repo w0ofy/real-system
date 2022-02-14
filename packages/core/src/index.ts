@@ -10,6 +10,7 @@ export * from '@real-system/field';
 export * from '@real-system/flex';
 export * from '@real-system/icon';
 export * from '@real-system/input';
+export * from '@real-system/popover';
 export * from '@real-system/portal-primitive';
 export * from '@real-system/radio-group';
 export * from '@real-system/spinner';
