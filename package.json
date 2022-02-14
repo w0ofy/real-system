@@ -115,7 +115,7 @@
     "csstype": "^3.0.10",
     "directory-named-webpack-plugin": "^4.0.1",
     "esbuild": "^0.14.21",
-    "eslint": "^8.8.0",
+    "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^26.1.0",
     "eslint-plugin-mdx": "^1.16.0",
