@@ -5,7 +5,6 @@ import {
   AriakitPopoverArrow,
   AriakitPopoverProps,
 } from '@real-system/ariakit-library';
-import { Button } from '@real-system/button';
 import { Flex, FlexProps } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
 import { RealSystemElementProps } from '@real-system/types-library';
