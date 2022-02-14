@@ -29,11 +29,9 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/types-library": "0.0.5",
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/types-library": "0.0.5",
     "concurrently": "^7.0.0",
     "typescript": "^4.5.5"
   },

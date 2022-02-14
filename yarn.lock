@@ -3759,11 +3759,9 @@ __metadata:
     "@react-types/checkbox": ^3.2.3
     "@react-types/radio": ^3.1.2
     "@react-types/shared": ^3.10.1
-    "@real-system/types-library": 0.0.5
     concurrently: ^7.0.0
     typescript: ^4.5.5
   peerDependencies:
-    "@real-system/types-library": 0.0.5
     react: ^17.0.2
   languageName: unknown
   linkType: soft
@@ -4409,7 +4407,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/types-library@0.0.5, @real-system/types-library@^0.0.5, @real-system/types-library@workspace:packages/libraries/types-library":
+"@real-system/types-library@^0.0.5, @real-system/types-library@workspace:packages/libraries/types-library":
   version: 0.0.0-use.local
   resolution: "@real-system/types-library@workspace:packages/libraries/types-library"
   dependencies:
