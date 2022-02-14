@@ -1,10 +1,10 @@
-import type { ButtonProps as AriaButtonProps } from '@real-system/ariakit-library';
+import type { AriakitButtonProps } from '@real-system/ariakit-library';
 import type { RealSystemElementProps } from '@real-system/types-library';
 
 import type { ButtonPrimitiveBaseStyleProps } from './styleProps/props';
 import type { PseudoStyleProps } from './styleProps/pseudoPropStyles';
 
-type ButtonPrimitiveAriaProps = Omit<AriaButtonProps<'button'>, 'is' | 'as'>;
+type ButtonPrimitiveAriaProps = Omit<AriakitButtonProps<'button'>, 'is' | 'as'>;
 
 type ButtonPrimitivePseudoStyleProps = {
   [key in PseudoStyleProps]?: ButtonPrimitiveBaseStyleProps;

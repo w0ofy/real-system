@@ -1,11 +1,12 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useCallback } from 'react';
 
 import {
-  AriaPopoverDescription,
-  AriaPopoverDismiss,
-  AriaPopoverHeading,
+  AriakitPopoverDescription,
+  AriakitPopoverDismiss,
+  AriakitPopoverHeading,
 } from '@real-system/ariakit-library';
 import { Button, ButtonProps } from '@real-system/button';
+import type { PositionProps } from '@real-system/styling-library';
 import {
   HeadingProps,
   Typography,
@@ -13,21 +14,24 @@ import {
 } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import { usePopoverContext } from './PopoverContext';
+import { usePopoverStateContext } from './PopoverContext';
 
-const PopoverDescription = forwardRef<HTMLParagraphElement, TypographyProps>(
-  function PopoverDescription({ children, ...restProps }, ref) {
-    return (
-      <AriaPopoverDescription
-        as={Typography}
-        data-testid={makeTestId('popover-description')}
-        {...restProps}
-        ref={ref}>
-        {children}
-      </AriaPopoverDescription>
-    );
-  }
-);
+type PopoverDescriptionProps = Omit<TypographyProps, 'as'>;
+
+const PopoverDescription = forwardRef<
+  HTMLParagraphElement,
+  PopoverDescriptionProps
+>(function PopoverDescription({ children, ...restProps }, ref) {
+  return (
+    <AriakitPopoverDescription
+      as={Typography}
+      data-testid={makeTestId('popover-description')}
+      {...restProps}
+      ref={ref}>
+      {children}
+    </AriakitPopoverDescription>
+  );
+});
 
 const StyledHeading = forwardRef<HTMLHeadingElement, HeadingProps>(
   function StyledHeading(props, ref) {
@@ -37,33 +41,53 @@ const StyledHeading = forwardRef<HTMLHeadingElement, HeadingProps>(
   }
 );
 
-const PopoverHeading = forwardRef<
-  HTMLHeadingElement,
-  Omit<HeadingProps, 'as' | 'variant'>
->(function PopoverHeading({ children, ...restProps }, ref) {
-  return (
-    <AriaPopoverHeading
-      as={StyledHeading}
-      data-testid={makeTestId('popover-heading')}
-      {...restProps}
-      ref={ref}>
-      {children}
-    </AriaPopoverHeading>
-  );
-});
+type PopoverHeadingProps = Omit<HeadingProps, 'as' | 'variant'>;
 
-const PopoverDismiss = forwardRef<HTMLButtonElement, ButtonProps>(
-  function PopoverDismiss({ children, ...restProps }, ref) {
-    const state = usePopoverContext();
+const PopoverHeading = forwardRef<HTMLHeadingElement, PopoverHeadingProps>(
+  function PopoverHeading({ children, ...restProps }, ref) {
     return (
-      <AriaPopoverDismiss
+      <AriakitPopoverHeading
+        as={StyledHeading}
+        data-testid={makeTestId('popover-heading')}
+        {...restProps}
+        ref={ref}>
+        {children}
+      </AriakitPopoverHeading>
+    );
+  }
+);
+
+type PopoverDismissProps = Pick<
+  ButtonProps,
+  'variant' | 'intent' | 'children' | 'size'
+> & {
+  /** Override the `PopoverDismiss` `onClick` callback. If used, you will have
+   * to close the popover yourself with the `hide` callback provided by `onDismiss`. */
+  onDismiss?: (hide: () => void) => void;
+} & PositionProps;
+
+const PopoverDismiss = forwardRef<HTMLButtonElement, PopoverDismissProps>(
+  function PopoverDismiss({ children, onDismiss, ...restProps }, ref) {
+    const { hide, ...restState } = usePopoverStateContext();
+    const handleHide = useCallback(() => {
+      if (onDismiss) return onDismiss(hide);
+      hide();
+    }, [onDismiss, hide]);
+
+    const state = {
+      hide: handleHide,
+      ...restState,
+    };
+
+    return (
+      <AriakitPopoverDismiss
         state={state}
         as={Button}
         data-testid={makeTestId('popover-dismiss')}
         {...restProps}
         ref={ref}>
         {children}
-      </AriaPopoverDismiss>
+      </AriakitPopoverDismiss>
     );
   }
 );

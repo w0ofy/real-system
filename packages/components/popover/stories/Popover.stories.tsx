@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Flex } from '@real-system/flex';
 import {
   Popover,
   PopoverButton,
@@ -26,8 +26,8 @@ export default {
 
 const Template = (args) => {
   return (
-    <Box p={20} overflow="auto">
-      <PopoverContainer placement="right-start">
+    <Flex p={10} xAlignContent="center">
+      <PopoverContainer placement="auto">
         <PopoverButton>Open Popover</PopoverButton>
         <Popover hideCloseButton={args.hideCloseButton}>
           <PopoverHeading mb={8}>Meet Popover</PopoverHeading>
@@ -38,7 +38,7 @@ const Template = (args) => {
           <PopoverDismiss variant="primary">Confirm</PopoverDismiss>
         </Popover>
       </PopoverContainer>
-    </Box>
+    </Flex>
   );
 };
 

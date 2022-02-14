@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Button as AriaButton } from '@real-system/ariakit-library';
+import { AriakitButton } from '@real-system/ariakit-library';
 import styled, { isPropValid } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -9,7 +9,7 @@ import { composeButtonPrimitiveStyleProps } from './styleProps/props';
 import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
 import type { ButtonPrimitiveProps, ButtonPrimitiveStyleProps } from './types';
 
-const StyledButtonPrimitive = styled(AriaButton, {
+const StyledButtonPrimitive = styled(AriakitButton, {
   shouldForwardProp: (prop) =>
     isPropValid(prop) && !BUTTON_PRIMITIVE_STYLE_PROPS_MAP[prop],
 })<ButtonPrimitiveProps>(
