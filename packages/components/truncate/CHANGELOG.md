@@ -1,5 +1,17 @@
 # @real-system/truncate
 
+## 0.0.3
+
+### Patch Changes
+
+- [#281](https://github.com/bigwoof91/real-system/pull/281) [`e2f73f1`](https://github.com/bigwoof91/real-system/commit/e2f73f1e051deceb4c2f9568c7c0500e92e1f0f1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Trimming a11y library of unused packages
+
+- Updated dependencies [[`91db72f`](https://github.com/bigwoof91/real-system/commit/91db72f1cd16d30c8f5bc265dce35b791b9c900a), [`e2f73f1`](https://github.com/bigwoof91/real-system/commit/e2f73f1e051deceb4c2f9568c7c0500e92e1f0f1), [`1f59043`](https://github.com/bigwoof91/real-system/commit/1f59043f0792ab9cbfa881a3fa3579c7caba64e4)]:
+  - @real-system/theme-library@0.0.10
+  - @real-system/box-primitive@0.0.9
+  - @real-system/styling-library@0.0.7
+  - @real-system/utils-library@0.0.10
+
 ## 0.0.2
 
 ### Patch Changes

@@ -1,5 +1,46 @@
 # @real-system/core
 
+## 0.0.28
+
+### Patch Changes
+
+- [#281](https://github.com/bigwoof91/real-system/pull/281) [`e2f73f1`](https://github.com/bigwoof91/real-system/commit/e2f73f1e051deceb4c2f9568c7c0500e92e1f0f1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Trimming a11y library of unused packages
+
+* [#267](https://github.com/bigwoof91/real-system/pull/267) [`1f59043`](https://github.com/bigwoof91/real-system/commit/1f59043f0792ab9cbfa881a3fa3579c7caba64e4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Created a11y library to house all a11y standardization and removed react-laag library
+
+* Updated dependencies [[`91db72f`](https://github.com/bigwoof91/real-system/commit/91db72f1cd16d30c8f5bc265dce35b791b9c900a), [`e2f73f1`](https://github.com/bigwoof91/real-system/commit/e2f73f1e051deceb4c2f9568c7c0500e92e1f0f1), [`1f59043`](https://github.com/bigwoof91/real-system/commit/1f59043f0792ab9cbfa881a3fa3579c7caba64e4)]:
+  - @real-system/alert@0.0.10
+  - @real-system/button@0.0.26
+  - @real-system/dialog@0.0.18
+  - @real-system/flex@0.0.18
+  - @real-system/popover@0.0.1
+  - @real-system/toaster@0.0.9
+  - @real-system/tooltip@0.0.2
+  - @real-system/typography@0.0.25
+  - @real-system/a11y-library@0.0.1
+  - @real-system/ariakit-library@0.0.1
+  - @real-system/theme-library@0.0.10
+  - @real-system/types-library@0.0.6
+  - @real-system/box-primitive@0.0.9
+  - @real-system/button-primitive@0.0.19
+  - @real-system/dialog-primitive@0.0.14
+  - @real-system/checkbox@0.0.11
+  - @real-system/field@0.0.3
+  - @real-system/icon@0.0.25
+  - @real-system/input@0.0.24
+  - @real-system/radio-group@0.0.4
+  - @real-system/spinner@0.0.24
+  - @real-system/textarea@0.0.8
+  - @real-system/truncate@0.0.3
+  - @real-system/visually-hidden@0.0.22
+  - @real-system/animation-library@0.0.8
+  - @real-system/state-library@0.0.7
+  - @real-system/styling-library@0.0.7
+  - @real-system/utils-library@0.0.10
+  - @real-system/alert-primitive@0.0.6
+  - @real-system/portal-primitive@0.0.6
+  - @real-system/text-primitive@0.0.7
+
 ## 0.0.27
 
 ### Patch Changes
