@@ -3,6 +3,10 @@
   "version": "0.0.27",
   "status": "production",
   "description": "Contains all the packages from Real System.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigwoof91/real-system.git"
+  },
   "author": "Michael Wolf",
   "license": "MIT",
   "main:dev": "src/index.ts",
