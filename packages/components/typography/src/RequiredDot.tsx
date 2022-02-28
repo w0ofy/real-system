@@ -19,8 +19,8 @@ const RequiredDot = ({
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="size-icon-2"
-      mr={2}
+      height="icon-2"
+      marginRight={2}
       cursor={disabled ? 'not-allowed' : cursor}>
       <Box
         {...restProps}
@@ -29,7 +29,9 @@ const RequiredDot = ({
         display="block"
         height="4px"
         width="4px"
-        bg={disabled ? 'color-text-danger-weak-6' : 'color-text-danger-weak-3'}>
+        bgColor={
+          disabled ? 'color-text-danger-weak-6' : 'color-text-danger-weak-3'
+        }>
         <VisuallyHidden>Required: </VisuallyHidden>
       </Box>
     </Box>

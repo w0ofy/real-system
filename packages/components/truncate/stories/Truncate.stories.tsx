@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';
 import { Truncate } from '@real-system/truncate';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Truncate',
@@ -16,9 +16,9 @@ export default {
 
 const Template = (args) => (
   <Box maxWidth="17rem">
-    <Typography>
+    <Text>
       <Truncate {...args} />
-    </Typography>
+    </Text>
   </Box>
 );
 

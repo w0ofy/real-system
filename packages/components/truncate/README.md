@@ -27,15 +27,15 @@ $ yarn add @real-system/truncate
 ```javascript
 import { Box } from '@real-system/box-primitive';
 import { Truncate } from '@real-system/truncate';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 const MyComponent = (args) => (
   <Box maxWidth="8rem">
-    <Typography>
+    <Text>
       <Truncate title="Some extremely long text to truncate">
         Some extremely long text to truncate
       </Truncate>
-    </Typography>
+    </Text>
   </Box>
 );
 ```

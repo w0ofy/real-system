@@ -1,13 +1,7 @@
-import type { RealSystemElementProps } from '@real-system/types-library';
+import type { StylishProps } from '@real-system/styling-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 
-import type { BoxBaseStyleProps } from './styleProps/props';
-import { PSEUDO_PROP_STYLES } from './styleProps/pseudoPropStyles';
-
-export type BoxPseudoStyleProps = {
-  [key in keyof typeof PSEUDO_PROP_STYLES]?: BoxBaseStyleProps;
-};
-
-export type BoxStyleProps = BoxBaseStyleProps & BoxPseudoStyleProps;
+type BoxStyleProps = StylishProps;
 
 type BoxComponentProps = {
   as?: keyof JSX.IntrinsicElements;
@@ -32,19 +26,12 @@ type BoxComponentProps = {
   htmlFor?: string | undefined;
 } & RealSystemElementProps;
 
-export type BoxAsSVGElementProps = Omit<
-  React.SVGProps<SVGElement>,
-  keyof BoxStyleProps
-> &
-  BoxComponentProps &
-  BoxStyleProps;
-
 // Omits potential clashes from our style props with HTMLAttributes (i.e. color)
-export type BoxElementProps = Omit<
+type HTMLElementProps = Omit<
   React.HTMLAttributes<HTMLElement>,
-  keyof BoxStyleProps
-> &
-  BoxComponentProps &
-  BoxStyleProps;
+  keyof StylishProps
+>;
 
-export type BoxProps = BoxElementProps & BoxStyleProps;
+type BoxProps = Partial<HTMLElementProps> & BoxComponentProps & BoxStyleProps;
+
+export type { BoxProps, BoxStyleProps };

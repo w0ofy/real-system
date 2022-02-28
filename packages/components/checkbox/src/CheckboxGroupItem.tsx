@@ -14,8 +14,8 @@ import { CheckboxGroupItemProps } from './types';
 
 const canSelectAllStyles = {
   _first: {
-    py: 2,
-    px: 3,
+    paddingY: 2,
+    paddingX: 3,
     borderRadius: 1,
     backgroundColor: 'color-background-brand-weak-9',
   },
@@ -44,13 +44,13 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
       if (state.orientation === 'vertical') {
         return {
           ...maybeCanSelectAll,
-          _notLast: { mb: 5 },
-          _notFirst: { ml: state.canSelectAll ? 10 : 4 },
+          _notLast: { marginBottom: 5 },
+          _notFirst: { marginLeft: state.canSelectAll ? 10 : 4 },
         };
       }
       return {
         ...maybeCanSelectAll,
-        _notLast: { mr: 5 },
+        _notLast: { marginRight: 5 },
       };
     }, [state.orientation, state.canSelectAll]);
 
@@ -58,7 +58,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
       <CheckboxWrapper
         disabled={disabled}
         helpText={helpText}
-        ml={4}
+        marginLeft={4}
         {...dynamicStyles}
         {...interactionProps}>
         <VisuallyHidden as="div">

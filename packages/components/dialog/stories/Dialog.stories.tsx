@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogHeading,
 } from '@real-system/dialog';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Dialog',
@@ -38,7 +38,7 @@ const Template = (args) => {
           <DialogHeading id="dialog">Dialog</DialogHeading>
         </DialogHeader>
         <DialogBody>
-          <Typography>
+          <Text>
             Minim aliquip aliquip elit aute. Nostrud minim qui duis cupidatat
             Lorem. Aliqua elit ad aute nulla commodo aliqua aliquip aliquip
             laboris ex sint aute non velit. Ad occaecat et minim dolor in
@@ -46,7 +46,7 @@ const Template = (args) => {
             aute. Nostrud minim qui duis cupidatat Lorem. Aliqua elit ad aute
             nulla commodo aliqua aliquip aliquip laboris ex sint aute non velit.
             Ad occaecat et minim dolor in consectetur deserunt tempor nostrud.
-          </Typography>
+          </Text>
         </DialogBody>
         <DialogFooter>
           <DialogFooterActions>

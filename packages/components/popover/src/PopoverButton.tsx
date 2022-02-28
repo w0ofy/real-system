@@ -18,10 +18,7 @@ type ConditionalProps =
       onHide?: never;
     };
 
-type PopoverButtonProps = Pick<
-  ButtonProps,
-  'variant' | 'intent' | 'children' | 'size'
-> &
+type PopoverButtonProps = Omit<ButtonProps, 'onClick' | 'as'> &
   ConditionalProps;
 
 const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(

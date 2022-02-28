@@ -51,7 +51,6 @@
     "@real-system/toaster": "^0.0.9",
     "@real-system/tooltip": "^0.0.2",
     "@real-system/truncate": "^0.0.3",
-    "@real-system/types-library": "^0.0.6",
     "@real-system/typography": "^0.0.25",
     "@real-system/utils-library": "^0.0.10",
     "@real-system/visually-hidden": "^0.0.22"

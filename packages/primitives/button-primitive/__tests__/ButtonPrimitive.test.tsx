@@ -9,12 +9,11 @@ import { ButtonPrimitiveProps } from '../src/types';
 
 const ButtonPrimitiveComponent = (props: ButtonPrimitiveProps) => (
   <ThemeProvider theme={TEST_THEME}>
-    <ButtonPrimitive {...props} />
+    <ButtonPrimitive data-testid="button-primitive" {...props} />
   </ThemeProvider>
 );
 
-const queryButtonPrimitive = () =>
-  screen.queryByTestId('real-system-button-primitive');
+const queryButtonPrimitive = () => screen.queryByTestId('button-primitive');
 
 describe('ButtonPrimitive', () => {
   it('renders', () => {

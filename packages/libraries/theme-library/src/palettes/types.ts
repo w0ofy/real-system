@@ -1,4 +1,4 @@
-import type { AddPrefix } from '@real-system/types-library';
+import type { AddPrefix } from '@real-system/utils-library';
 
 /**
  * @description all palette keys, regardless of depth
@@ -18,16 +18,8 @@ export type PaletteKeys =
   | 'dark'
   | 'light';
 
-export type PaletteIntents = Extract<
-  PaletteKeys,
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'info'
-  | 'neutral'
->;
+export type PaletteIntents = PaletteKeys;
+
 export type PaletteStatuses = Extract<
   PaletteKeys,
   'success' | 'warning' | 'danger' | 'info' | 'disabled'

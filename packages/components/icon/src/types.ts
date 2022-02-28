@@ -1,9 +1,8 @@
 import * as IconComponents from '@heroicons/react/outline';
-import type { Property } from 'csstype';
 
-import type { MarginProps } from '@real-system/styling-library';
+import type { BoxStyleProps } from '@real-system/box-primitive';
 import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
-import type { KebabCase, RemoveSuffix } from '@real-system/types-library';
+import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */
 type HeroIconSet = typeof IconComponents;
@@ -43,7 +42,7 @@ type IconProps = {
   /**
    * Overrides intent and can be used to customize the icon color beyond what intent provides i.e. a checkmark for Checkbox component
    */
-  color?: Property.Color;
+  color?: BoxStyleProps['color'];
   /**
    * Controls solid or default (outline) icon style
    */
@@ -52,7 +51,7 @@ type IconProps = {
    * Sets the title of the svg
    */
   title?: string;
-} & MarginProps;
+} & BoxStyleProps;
 
 /** private icon props, used for StyledIcon component */
 type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {

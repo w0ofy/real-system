@@ -6,7 +6,7 @@ import { normalizeStyles } from '../normalize';
 
 const realSystemStyles = css({
   html: {
-    fontSize: '0.625rem',
+    fontSize: 'rem-base',
     outlineColor: 'color-border-brand-weak-3',
   },
   body: {
@@ -14,7 +14,7 @@ const realSystemStyles = css({
     MozOsxFontSmoothing: 'auto',
     fontFamily: 'font-family-text',
     fontWeight: 0,
-    letterSpacing: 3,
+    letterSpacing: 'body',
     backgroundColor: 'color-background',
   },
 });

@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 
 import { Box } from '@real-system/box-primitive';
 import { ThemeProvider } from '@real-system/theme-library';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 import { Truncate } from '../src/Truncate';
 
@@ -12,9 +12,9 @@ const TRUNCATED_TEXT = 'This is some extremely long text';
 const TruncateComponent = () => (
   <ThemeProvider theme={TEST_THEME}>
     <Box maxWidth="2rem">
-      <Typography>
+      <Text>
         <Truncate title={TRUNCATED_TEXT}>{TRUNCATED_TEXT}</Truncate>
-      </Typography>
+      </Text>
     </Box>
   </ThemeProvider>
 );

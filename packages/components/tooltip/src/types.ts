@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AriakitTooltipStateProps } from '@real-system/ariakit-library';
-import type { RealSystemElementProps } from '@real-system/types-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 
 type StateProps = Pick<
   AriakitTooltipStateProps,

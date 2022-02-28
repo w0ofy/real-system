@@ -34,7 +34,7 @@ import { Typography } from '@real-system/typography';
 const MyComponent = () => {
   return (
     <ThemeProvider>
-      <Typography.Heading as="h1" variant="heading1">Heading 1</Typography>
+      <Text.Heading as="h1" variant="heading1">Heading 1</Typography>
       <Typography>Body text...</Typography>
     </ThemeProvider>
   )

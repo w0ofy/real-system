@@ -19,7 +19,7 @@ const DialogFooterActions = forwardRef<
     <Box
       display="flex"
       justifyContent={justify === 'start' ? 'flex-start' : 'flex-end'}
-      flexShrink={justify === 'start' ? null : 0}
+      flexShrink={justify === 'start' ? undefined : 0}
       flexWrap="wrap"
       flexGrow={1}
       alignItems="center"
@@ -27,7 +27,7 @@ const DialogFooterActions = forwardRef<
       data-testid={makeTestId('modal-footer-actions')}
       {...restProps}>
       {React.Children.map(children, (child, idx) => (
-        <Box marginRight={isNotLast(idx) ? 7 : null}>{child}</Box>
+        <Box marginRight={isNotLast(idx) ? 7 : undefined}>{child}</Box>
       ))}
     </Box>
   );

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { safelySpreadBoxProps } from '@real-system/box-primitive';
 import { InputBox } from '@real-system/input';
+import { preventSpreadingStyleProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { TextareaElement } from './TextareaElement';
@@ -34,7 +34,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         data-testid={makeTestId('text-area-input-box')}>
         <TextareaElement
           data-testid={makeTestId('text-area')}
-          {...safelySpreadBoxProps(restProps)}
+          {...preventSpreadingStyleProps(restProps)}
           async
           aria-invalid={error}
           aria-readonly={readOnly}

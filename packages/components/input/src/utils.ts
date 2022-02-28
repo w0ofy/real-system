@@ -1,10 +1,4 @@
-export const INPUT_PROPS_TO_BLOCK: string[] = [
-  'className',
-  'style',
-  'size',
-  'height',
-  'width',
-];
+export const INPUT_PROPS_TO_BLOCK: string[] = ['size', 'height', 'width'];
 
 type Props = { [key: string]: any };
 

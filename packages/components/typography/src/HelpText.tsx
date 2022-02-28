@@ -1,80 +1,60 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
-import { Icon, IconProps } from '@real-system/icon';
+import { Icon } from '@real-system/icon';
 import { TextPrimitive } from '@real-system/text-primitive';
-import { PaletteIntents } from '@real-system/theme-library';
+import { PaletteIntents, useComponentTokens } from '@real-system/theme-library';
 
-import { InternalTypographyProps } from './types';
+import { CommonTextProps } from './types';
 
 type HelpTextIntents = Extract<PaletteIntents, 'danger'> | 'default';
 export type HelpTextProps = {
   as?: 'span' | 'div';
   children?: React.ReactNode;
   id?: string;
-  variant?: HelpTextIntents;
+  intent?: HelpTextIntents;
   hideErrorIcon?: boolean;
   errorText?: string;
-} & InternalTypographyProps;
+} & CommonTextProps;
 
-const LABEL_INTENT_MAP: { [key in HelpTextIntents]: string } = {
-  danger: 'danger',
-  default: 'neutral-weak-1',
-};
-const ICON_INTENT_MAP: {
-  [key in HelpTextIntents]: IconProps['intent'];
-} = {
-  danger: 'danger',
-  default: 'default',
-};
+const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
+  {
+    children,
+    intent = 'default',
+    as = 'span',
+    hideErrorIcon = false,
+    errorText,
+    ...restProps
+  },
+  ref
+) {
+  const intentOverride = useMemo(
+    () => (errorText ? 'danger' : intent),
+    [errorText, intent]
+  );
 
-const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(
-  (
-    {
-      children,
-      variant = 'default',
-      as = 'span',
-      hideErrorIcon = false,
-      errorText,
-      ...restProps
-    },
-    ref
-  ): React.ReactElement => {
-    const variantOverride = useMemo(
-      () => (errorText ? 'danger' : variant),
-      [errorText, variant]
-    );
+  const { text, icon } = useComponentTokens<'helpText'>('helpText').parts;
 
-    return (
-      <TextPrimitive
-        as={as}
-        display="flex"
-        alignItems="center"
-        p={0}
-        m={0}
-        mt={2}
-        fontSize={1}
-        fontWeight={0}
-        lineHeight={1}
-        color={`color-text-${LABEL_INTENT_MAP[variantOverride]}`}
-        {...restProps}
-        ref={ref}>
-        {!hideErrorIcon && errorText && (
-          <Box>
-            <Icon
-              icon="exclamation-circle"
-              solid
-              intent={ICON_INTENT_MAP[variantOverride]}
-              mr={2}
-            />
-          </Box>
-        )}
-        <Box as="span">{errorText ? errorText : children}</Box>
-      </TextPrimitive>
-    );
-  }
-);
-
-HelpText.displayName = 'HelpText';
+  return (
+    <TextPrimitive
+      as={as}
+      {...text.baseStyles}
+      {...text.intents[intentOverride]()}
+      {...restProps}
+      ref={ref}>
+      {!hideErrorIcon && errorText && (
+        <Box>
+          <Icon
+            icon="exclamation-circle"
+            solid
+            intent={intentOverride}
+            {...icon.baseStyles}
+          />
+        </Box>
+      )}
+      <Box as="span">{errorText ? errorText : children}</Box>
+    </TextPrimitive>
+  );
+});
 
 export { HelpText };

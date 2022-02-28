@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
 import { majorScale } from '@real-system/theme-library';
-import type { RealSystemElementProps } from '@real-system/types-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {
@@ -59,7 +59,7 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
       alignItems="center"
       height={16}
       lineHeight={majorScale(4)}
-      px={4}
+      paddingX={4}
       {...positionalStyles}
       {...colorStyles}
       {...restProps}

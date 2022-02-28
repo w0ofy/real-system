@@ -40,16 +40,17 @@ const Row = (props) => (
     justifyContent="flex-start"
     alignItems="center"
     width="100%"
-    mb={10}
+    marginBottom={10}
     {...props}
   />
 );
 
 const ShowcaseTemplate = (args: ButtonProps) => (
-  <Box display="flex" flexDirection="column" mr={10}>
+  <Box display="flex" flexDirection="column" marginRight={10}>
     <Heading as="h2" variant="heading2">
       {capitalize(args.variant!)} {args.size ? capitalize(args.size!) : ''}
     </Heading>
+    {/** neutral / default buttons */}
     <Row>
       <Button {...args} />
       <Button {...args} trailingIcon={<Icon icon="cog" />} />
@@ -68,6 +69,7 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         </Button>
       </Row>
     )}
+    {/** primary buttons */}
     <Row>
       <Button {...args} intent="primary" />
       <Button {...args} intent="primary" trailingIcon={<Icon icon="login" />} />
@@ -94,6 +96,7 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         <Icon icon="login" />
       </Button>
     </Row>
+    {/** success buttons */}
     <Row>
       <Button {...args} intent="success" />
       <Button {...args} intent="success" trailingIcon={<Icon icon="save" />} />
@@ -120,6 +123,7 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         <Icon icon="save" />
       </Button>
     </Row>
+    {/** danger buttons */}
     <Row>
       <Button {...args} intent="danger" />
       <Button {...args} intent="danger" trailingIcon={<Icon icon="trash" />} />
@@ -153,7 +157,7 @@ ShowcaseTemplate.defaultProps = {
   children: 'Button',
   variant: 'default',
   intent: 'neutral',
-  mr: 10,
+  marginRight: 10,
 };
 
 export const DefaultButton = (args) => (
@@ -177,7 +181,9 @@ export const MinimalButton = (args) => {
 };
 
 export const FloatingButton = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   leadingIcon,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   trailingIcon,
   ...args
 }: ButtonProps) => (

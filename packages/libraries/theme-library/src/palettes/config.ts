@@ -1,10 +1,8 @@
-import { polished } from '@real-system/styling-library';
-
 import { Palette } from './types';
 
 export type DefaultPaletteColors =
   | '#3366FF'
-  | '#198038'
+  | '#248641'
   | '#ffb020'
   | '#da1e28'
   | '#0043ce'
@@ -41,7 +39,7 @@ const palettes: PaletteConfig = {
   default: {
     brand: '#3366FF',
     status: {
-      success: '#198038',
+      success: '#248641',
       warning: '#ffb020',
       danger: '#da1e28',
       info: '#0043ce',

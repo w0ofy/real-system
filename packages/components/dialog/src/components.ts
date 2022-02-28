@@ -1,17 +1,21 @@
 import { animated } from '@real-system/animation-library';
 import {
-  BoxStyleProps,
-  composeBoxStyleProps,
-} from '@real-system/box-primitive';
-import {
   DialogContentPrimitive,
   DialogOverlayPrimitive,
 } from '@real-system/dialog-primitive';
-import styled, { polished } from '@real-system/styling-library';
+import styled, {
+  getStyleProps,
+  polished,
+  StyleProps,
+} from '@real-system/styling-library';
 import { getToken, majorScale } from '@real-system/theme-library';
+import type { AnyPropUnion } from '@real-system/utils-library';
 
 const { transparentize } = polished;
-const DialogOverlay = styled(animated(DialogOverlayPrimitive))<BoxStyleProps>`
+
+const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
+  AnyPropUnion<StyleProps>
+>`
   position: fixed;
   height: 100%;
   width: 100%;
@@ -24,10 +28,12 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))<BoxStyleProps>`
   bottom: 0;
   background-color: ${({ theme }) =>
     transparentize(0.6, getToken('color-background-neutral')({ theme }))};
-  ${composeBoxStyleProps()}
+  ${getStyleProps}
 `;
 
-const DialogContent = styled(animated(DialogContentPrimitive))<BoxStyleProps>`
+const DialogContent = styled(animated(DialogContentPrimitive))<
+  AnyPropUnion<StyleProps>
+>`
   position: relative;
   box-shadow: ${getToken('overlay-shadow-1', 'shadows')};
   outline: 0;
@@ -38,9 +44,9 @@ const DialogContent = styled(animated(DialogContentPrimitive))<BoxStyleProps>`
   border-radius: ${getToken(2, 'radii')};
   display: flex;
   flex-direction: column;
-  z-index: ${getToken(1, 'zIndices')};
+  z-index: ${getToken('dialog', 'zIndices')};
   opacity: 1;
-  ${composeBoxStyleProps()}
+  ${getStyleProps}
 `;
 
 export { DialogContent, DialogOverlay };

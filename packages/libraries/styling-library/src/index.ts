@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 export { default as isPropValid } from '@emotion/is-prop-valid';
 export type {
   ThemeProviderProps as PrimitiveThemeProviderProps,
-  SerializedStyles,
   GlobalProps as StylingGlobalsProps,
 } from '@emotion/react';
 export {
@@ -16,23 +15,6 @@ export {
   withTheme as primitiveWithTheme,
   Global as StylingGlobals,
 } from '@emotion/react';
-export type {
-  CreateStyled,
-  CreateStyledComponent,
-  StyledComponent,
-  StyledOptions,
-  StyledTags,
-} from '@emotion/styled';
-export type {
-  CSSObject,
-  CSSPseudoSelectorProps,
-  CSSSelectorObject,
-  EmotionLabel,
-  SystemCssProperties,
-  SystemStyleObject,
-  UseThemeFunction,
-  VariantProperty,
-} from '@styled-system/css';
 export { default as css } from '@styled-system/css';
 export * as polished from 'polished';
 export * from 'styled-system';
@@ -41,3 +23,8 @@ export * from 'styled-system';
  * styled, css and token utilities
  */
 export default styled;
+
+/**
+ * real system style props
+ */
+export * from './styled-system';

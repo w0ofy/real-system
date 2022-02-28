@@ -33,13 +33,13 @@ const RadioGroup: RadioGroupComponent = forwardRef<
       <Label
         as="legend"
         required={required}
-        mb={helpText ? 2 : 6}
+        marginBottom={helpText ? 2 : 6}
         cursor="default"
         {...labelProps}>
         {label}
       </Label>
       {helpText && (
-        <HelpText mt={0} mb={6}>
+        <HelpText marginTop={0} marginBottom={6}>
           {helpText}
         </HelpText>
       )}
@@ -48,7 +48,7 @@ const RadioGroup: RadioGroupComponent = forwardRef<
           {children}
         </RadioGroupContextProvider>
       </Flex>
-      {errorText && <HelpText errorText={errorText} mb={8} />}
+      {errorText && <HelpText errorText={errorText} marginBottom={8} />}
     </Flex>
   );
 });

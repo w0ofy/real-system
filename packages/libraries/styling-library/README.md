@@ -42,3 +42,11 @@ const MyComponent = () => {
 };
 
 ```
+
+## Project Status
+
+**UNDER DEVELOPMENT**
+
+- [x] Build custom style props for easier spreading of props throughout component API's
+- [ ] Build a custom styled-system for deeper customization/requirements and ease-of-use within real system composition
+- [ ] Build abstraction layer of emotion API

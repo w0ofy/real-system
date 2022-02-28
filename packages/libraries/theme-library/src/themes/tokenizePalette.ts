@@ -5,6 +5,7 @@ import {
   borders,
   borderWidths,
   colors,
+  components,
   filters,
   fonts,
   fontSizes,
@@ -17,8 +18,9 @@ import {
   space,
   textColors,
   zIndices,
-} from '../tokens';
-import { makeTokenScale } from '../utils/makeTokenScale';
+} from '../tokens/factory';
+
+import { makeTokenScale } from './utils';
 
 /**
  *
@@ -34,6 +36,7 @@ const tokenizePalette = (palette: Palette = palettes.default) => ({
     ...borderColors(palette),
     ...textColors(palette),
   },
+  components,
   filters: filters(palette),
   borders: makeTokenScale(borders(palette)),
   shadows: makeTokenScale(shadows(palette)),

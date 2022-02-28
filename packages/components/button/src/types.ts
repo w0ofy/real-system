@@ -1,17 +1,14 @@
 import React from 'react';
 
-import type {
-  ButtonPrimitiveProps,
-  ButtonPrimitiveStyleProps,
-} from '@real-system/button-primitive';
-import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
+import type { ButtonPrimitiveProps } from '@real-system/button-primitive';
+import type { ThemeShape } from '@real-system/theme-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 
-export type ButtonSizes = Extract<PaletteSizes, 'sm' | 'md' | 'lg'>;
-export type ButtonVariants = 'default' | 'primary' | 'minimal' | 'floating';
-export type ButtonIntents = Extract<
-  PaletteIntents,
-  'danger' | 'primary' | 'neutral' | 'success'
->;
+type ButtonConfig = ThemeShape['components']['button'];
+
+export type ButtonSize = keyof ButtonConfig['sizes'];
+export type ButtonIntent = keyof ButtonConfig['intents'];
+
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 
 export type ButtonProps = ButtonPrimitiveProps & {
@@ -22,14 +19,9 @@ export type ButtonProps = ButtonPrimitiveProps & {
   /** inserts a trailing icon */
   trailingIcon?: React.ReactElement;
   /** controls button variant */
-  variant?: ButtonVariants;
+  variant?: keyof ButtonConfig['variants'];
   /** controls the intent of the button */
-  intent?: ButtonIntents;
+  intent?: ButtonIntent;
   /** controls the size of the button */
-  size?: ButtonSizes;
-};
-
-export type InternalButtonProps = Omit<ButtonProps, 'variant' | 'size'> & {
-  buttonState: ButtonStates;
-  ref?: any;
-} & ButtonPrimitiveStyleProps;
+  size?: ButtonSize;
+} & RealSystemElementProps;

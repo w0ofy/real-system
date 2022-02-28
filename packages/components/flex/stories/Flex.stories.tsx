@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';
 import { Flex, FlexProps } from '@real-system/flex';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Layout/Flex',
@@ -13,13 +13,16 @@ export default {
 export const Default: Story<FlexProps> = (args) => (
   <Flex {...args}>
     <Flex>
-      <Box backgroundColor="color-background-brand-disabled" p={8}>
-        <Typography>Left item</Typography>
+      <Box backgroundColor="color-background-brand-disabled" padding={8}>
+        <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex grow>
-      <Box backgroundColor="color-background-info-disabled" p={8} width="100%">
-        <Typography>Right item</Typography>
+      <Box
+        backgroundColor="color-background-info-disabled"
+        padding={8}
+        width="100%">
+        <Text>Right item</Text>
       </Box>
     </Flex>
   </Flex>
@@ -28,13 +31,19 @@ export const Default: Story<FlexProps> = (args) => (
 export const Vertical: Story<FlexProps> = () => (
   <Flex vertical>
     <Flex grow>
-      <Box backgroundColor="color-background-brand-disabled" p={8} width="100%">
-        <Typography>Left item</Typography>
+      <Box
+        backgroundColor="color-background-brand-disabled"
+        padding={8}
+        width="100%">
+        <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex grow>
-      <Box backgroundColor="color-background-info-disabled" p={8} width="100%">
-        <Typography>Right item</Typography>
+      <Box
+        backgroundColor="color-background-info-disabled"
+        padding={8}
+        width="100%">
+        <Text>Right item</Text>
       </Box>
     </Flex>
   </Flex>
@@ -43,13 +52,19 @@ export const Vertical: Story<FlexProps> = () => (
 export const Wrapping: Story<FlexProps> = () => (
   <Flex wrap>
     <Flex basis={900}>
-      <Box backgroundColor="color-background-brand-disabled" p={8} width="100%">
-        <Typography>Left item</Typography>
+      <Box
+        backgroundColor="color-background-brand-disabled"
+        padding={8}
+        width="100%">
+        <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex>
-      <Box backgroundColor="color-background-info-disabled" p={8} width="100%">
-        <Typography>Right item</Typography>
+      <Box
+        backgroundColor="color-background-info-disabled"
+        padding={8}
+        width="100%">
+        <Text>Right item</Text>
       </Box>
     </Flex>
   </Flex>
@@ -58,17 +73,20 @@ export const Wrapping: Story<FlexProps> = () => (
 export const VerticalAlignment: Story<FlexProps> = () => (
   <Flex yAlignContent="center">
     <Flex grow>
-      <Box backgroundColor="color-background-brand-disabled" p={8} width="100%">
-        <Typography>Left item</Typography>
+      <Box
+        backgroundColor="color-background-brand-disabled"
+        padding={8}
+        width="100%">
+        <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex grow>
       <Box
         backgroundColor="color-background-info-disabled"
-        p={8}
+        padding={8}
         width="100%"
         height={120}>
-        <Typography>Right item</Typography>
+        <Text>Right item</Text>
       </Box>
     </Flex>
   </Flex>
@@ -81,8 +99,8 @@ export const HorizontalAlignment: Story<FlexProps> = () => (
         width="100%"
         textAlign="center"
         backgroundColor="color-background-brand-disabled"
-        p={8}>
-        <Typography>Left item</Typography>
+        padding={8}>
+        <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex width="50%">
@@ -90,8 +108,8 @@ export const HorizontalAlignment: Story<FlexProps> = () => (
         width="100%"
         textAlign="center"
         backgroundColor="color-background-info-disabled"
-        p={8}>
-        <Typography>Right item</Typography>
+        padding={8}>
+        <Text>Right item</Text>
       </Box>
     </Flex>
   </Flex>
