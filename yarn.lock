@@ -2314,7 +2314,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin@npm:^11.7.1":
   version: 11.7.2
   resolution: "@emotion/babel-plugin@npm:11.7.2"
   dependencies:
@@ -2414,12 +2414,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/is-prop-valid@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@emotion/is-prop-valid@npm:1.1.1"
+"@emotion/is-prop-valid@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@emotion/is-prop-valid@npm:1.1.2"
   dependencies:
     "@emotion/memoize": ^0.7.4
-  checksum: 5816696dae6ac79537a31fe95256e0c1f55651507204676dd9903542b102f727c16a68924e6634a89b0972f0d15b0803bb9d4e14bd0fb8a49da8a2e3956e6639
+  checksum: 58b1f2d429a589f8f5bc2c33a8732cbb7bbcb17131a103511ef9a94ac754d7eeb53d627f947da480cd977f9d419fd92e244991680292f3287204159652745707
   languageName: node
   linkType: hard
 
@@ -2458,15 +2458,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.7.1":
-  version: 11.7.1
-  resolution: "@emotion/react@npm:11.7.1"
+"@emotion/react@npm:^11.8.1":
+  version: 11.8.1
+  resolution: "@emotion/react@npm:11.8.1"
   dependencies:
     "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.7.1
     "@emotion/cache": ^11.7.1
     "@emotion/serialize": ^1.0.2
     "@emotion/sheet": ^1.1.0
-    "@emotion/utils": ^1.0.0
+    "@emotion/utils": ^1.1.0
     "@emotion/weak-memoize": ^0.2.5
     hoist-non-react-statics: ^3.3.1
   peerDependencies:
@@ -2477,7 +2478,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 3392aa71f9c68c16022947959f7f842174e6b075b3baf58e185462411cd9b5a87557109a9225b1abaa2d7200a08b7cb9d7f21aa035f0d36b2c89e19b2a124e02
+  checksum: a767c6d7ca9e45dc3c1e873cfa51952db24e0d279944403ceb06be82d15859354e128becf6f7d0f8ff2b5f3460e3c165cd2b16ab1a2446e8e15e134a69e6ea3a
   languageName: node
   linkType: hard
 
@@ -2549,15 +2550,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.6.0":
-  version: 11.6.0
-  resolution: "@emotion/styled@npm:11.6.0"
+"@emotion/styled@npm:^11.8.1":
+  version: 11.8.1
+  resolution: "@emotion/styled@npm:11.8.1"
   dependencies:
     "@babel/runtime": ^7.13.10
-    "@emotion/babel-plugin": ^11.3.0
-    "@emotion/is-prop-valid": ^1.1.1
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/is-prop-valid": ^1.1.2
     "@emotion/serialize": ^1.0.2
-    "@emotion/utils": ^1.0.0
+    "@emotion/utils": ^1.1.0
   peerDependencies:
     "@babel/core": ^7.0.0
     "@emotion/react": ^11.0.0-rc.0
@@ -2567,7 +2568,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 612bbf114a4ca49e5b3ec4554bea1cd5aad9eeb2371babc3e6b79eab5020bd0300b9904108b621837fe715e221ba09dd131dc29918c1fd966e082d8e74fca833
+  checksum: 67150fa788785c34e285b90acecc91fe7a63babceaefbeffd053bed0fa31f72a05bfeeb9d15620766e543e007b9ccac2e836812eec2e791f962ec4e52731ae4c
   languageName: node
   linkType: hard
 
@@ -2596,6 +2597,13 @@ __metadata:
   version: 1.0.0
   resolution: "@emotion/utils@npm:1.0.0"
   checksum: 3ce8048441a915447d9ef51eb6d1d4cbcce8c8d1647bc7a23333ce2fb2249e74cf9471670d6f49a716e93ff633c9e7a6633517698e17391aebfc40c9d0cabcc0
+  languageName: node
+  linkType: hard
+
+"@emotion/utils@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@emotion/utils@npm:1.1.0"
+  checksum: d3b681ca3a23b07033ac6c6937e71010a5549ac8ccec325eb6c91a7e48d9a73db83fa5dadc58be981bb125d7c00fedca868ea4362b1da9e02866615f96be4df1
   languageName: node
   linkType: hard
 
@@ -3843,7 +3851,7 @@ __metadata:
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
   dependencies:
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
+    "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
     deepmerge: ^4.2.2
     react: ^17.0.2
@@ -3851,7 +3859,7 @@ __metadata:
     typescript: ^4.5.5
   peerDependencies:
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
+    "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -3863,7 +3871,6 @@ __metadata:
   dependencies:
     "@real-system/a11y-library": ^0.0.1
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -3872,7 +3879,6 @@ __metadata:
   peerDependencies:
     "@real-system/a11y-library": ^0.0.1
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3966,7 +3972,6 @@ __metadata:
     "@real-system/toaster": ^0.0.9
     "@real-system/tooltip": ^0.0.2
     "@real-system/truncate": ^0.0.3
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
     "@real-system/utils-library": ^0.0.10
     "@real-system/visually-hidden": ^0.0.22
@@ -4028,6 +4033,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/element-primitives@workspace:packages/primitives/element-primitives":
+  version: 0.0.0-use.local
+  resolution: "@real-system/element-primitives@workspace:packages/primitives/element-primitives"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.1
+    "@real-system/styling-library": ^0.0.7
+    "@real-system/theme-library": ^0.0.10
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.5.5
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.1
+    "@real-system/styling-library": ^0.0.7
+    "@real-system/theme-library": ^0.0.10
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/field@^0.0.3, @real-system/field@workspace:packages/components/field":
   version: 0.0.0-use.local
   resolution: "@real-system/field@workspace:packages/components/field"
@@ -4061,7 +4086,6 @@ __metadata:
     "@real-system/box-primitive": ^0.0.9
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -4071,7 +4095,6 @@ __metadata:
     "@real-system/box-primitive": ^0.0.9
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4088,7 +4111,6 @@ __metadata:
     "@real-system/theme-library": ^0.0.10
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
-    csstype: ^3.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.5
@@ -4108,8 +4130,8 @@ __metadata:
   dependencies:
     "@real-system/box-primitive": ^0.0.9
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
+    "@real-system/utils-library": ^0.0.10
     "@real-system/visually-hidden": ^0.0.22
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -4118,8 +4140,8 @@ __metadata:
   peerDependencies:
     "@real-system/box-primitive": ^0.0.9
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
+    "@real-system/utils-library": ^0.0.10
     "@real-system/visually-hidden": ^0.0.22
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4137,7 +4159,6 @@ __metadata:
     "@real-system/flex": ^0.0.18
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
@@ -4152,7 +4173,6 @@ __metadata:
     "@real-system/flex": ^0.0.18
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
     "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
@@ -4243,14 +4263,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/styling-library@workspace:packages/libraries/styling-library"
   dependencies:
-    "@emotion/is-prop-valid": ^1.1.1
-    "@emotion/react": ^11.7.1
-    "@emotion/styled": ^11.6.0
+    "@emotion/is-prop-valid": ^1.1.2
+    "@emotion/react": ^11.8.1
+    "@emotion/styled": ^11.8.1
     "@styled-system/css": ^5.1.5
     "@types/styled-system": 5.1.15
     concurrently: ^7.0.0
     csstype: ^3.0.10
-    polished: ^4.1.3
+    polished: ^4.1.4
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: 5.1.5
@@ -4287,7 +4307,6 @@ __metadata:
     "@real-system/input": ^0.0.24
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
     react: ^17.0.2
@@ -4299,7 +4318,6 @@ __metadata:
     "@real-system/input": ^0.0.24
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4311,16 +4329,13 @@ __metadata:
   resolution: "@real-system/theme-library@workspace:packages/libraries/theme-library"
   dependencies:
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
-    csstype: ^3.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.5.5
   peerDependencies:
     "@real-system/styling-library": ^0.0.7
-    "@real-system/types-library": ^0.0.6
     "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4364,7 +4379,6 @@ __metadata:
     "@real-system/box-primitive": ^0.0.9
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
     "@real-system/utils-library": ^0.0.10
     concurrently: ^7.0.0
@@ -4377,7 +4391,6 @@ __metadata:
     "@real-system/box-primitive": ^0.0.9
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
-    "@real-system/types-library": ^0.0.6
     "@real-system/typography": ^0.0.25
     "@real-system/utils-library": ^0.0.10
     react: ^17.0.2
@@ -4402,20 +4415,6 @@ __metadata:
     "@real-system/styling-library": ^0.0.7
     "@real-system/theme-library": ^0.0.10
     "@real-system/utils-library": ^0.0.10
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
-"@real-system/types-library@^0.0.6, @real-system/types-library@workspace:packages/libraries/types-library":
-  version: 0.0.0-use.local
-  resolution: "@real-system/types-library@workspace:packages/libraries/types-library"
-  dependencies:
-    concurrently: ^7.0.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    typescript: ^4.5.5
-  peerDependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -4449,7 +4448,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/utils-library@workspace:packages/libraries/utils-library"
   dependencies:
-    "@real-system/types-library": ^0.0.6
     chalk: ^4.1.2
     concurrently: ^7.0.0
     deepmerge: ^4.2.2
@@ -4457,9 +4455,9 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-uid: ^2.3.1
+    type-fest: 2.12.0
     typescript: ^4.5.5
   peerDependencies:
-    "@real-system/types-library": ^0.0.6
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -19278,7 +19276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"polished@npm:^4.0.5, polished@npm:^4.1.3":
+"polished@npm:^4.0.5, polished@npm:^4.1.4":
   version: 4.1.4
   resolution: "polished@npm:4.1.4"
   dependencies:
@@ -23346,6 +23344,13 @@ __metadata:
   version: 4.0.8
   resolution: "type-detect@npm:4.0.8"
   checksum: 62b5628bff67c0eb0b66afa371bd73e230399a8d2ad30d852716efcc4656a7516904570cd8631a49a3ce57c10225adf5d0cbdcb47f6b0255fe6557c453925a15
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:2.12.0":
+  version: 2.12.0
+  resolution: "type-fest@npm:2.12.0"
+  checksum: 3ebe6529db84c7ceb579a0c693b92c4bf83fa5a78b5d6a1d3c2138696ad69e0a1ebc7e1b707ee0a2a6bd5aef71bf2bf4fc6fc81a6c752330e10faf0deea80f05
   languageName: node
   linkType: hard
 

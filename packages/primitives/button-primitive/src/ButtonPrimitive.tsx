@@ -1,24 +1,20 @@
 import React, { forwardRef } from 'react';
 
 import { AriakitButton } from '@real-system/ariakit-library';
-import styled, { isPropValid } from '@real-system/styling-library';
-import { makeTestId } from '@real-system/utils-library';
+import styled, {
+  getPseudoStyleProps,
+  getStyleProps,
+  isNotStyleProp,
+  isPropValid,
+} from '@real-system/styling-library';
 
-import { BUTTON_PRIMITIVE_STYLE_PROPS_MAP } from './styleProps/constants';
-import { composeButtonPrimitiveStyleProps } from './styleProps/props';
-import { getPseudoButtonStyles } from './styleProps/pseudoPropStyles';
-import type { ButtonPrimitiveProps, ButtonPrimitiveStyleProps } from './types';
+import type { ButtonPrimitiveProps } from './types';
 
 const StyledButtonPrimitive = styled(AriakitButton, {
-  shouldForwardProp: (prop) =>
-    isPropValid(prop) && !BUTTON_PRIMITIVE_STYLE_PROPS_MAP[prop],
-})<ButtonPrimitiveProps>(
-  composeButtonPrimitiveStyleProps(),
-  getPseudoButtonStyles
-);
+  shouldForwardProp: (prop) => isPropValid(prop) && isNotStyleProp(prop),
+})<any>(getStyleProps, getPseudoStyleProps);
 
-console.log(BUTTON_PRIMITIVE_STYLE_PROPS_MAP);
-const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
+const baseStyles = {
   appearance: 'none',
   color: 'color-text',
   background: 'none',
@@ -36,27 +32,20 @@ const buttonPrimitiveStyles: ButtonPrimitiveStyleProps = {
   textDecoration: 'none',
   position: 'relative',
   margin: 0,
+  cursor: 'pointer',
   _hover: {},
   _focus: { boxShadow: 'shadow-focus', outline: 'none' },
   _active: { boxShadow: 'none' },
-  _disabled: { cursor: 'not-allowed' },
 };
 
 const ButtonPrimitive = forwardRef<HTMLButtonElement, ButtonPrimitiveProps>(
   function ButtonPrimitive({ children, ...restProps }, ref) {
     return (
-      <StyledButtonPrimitive
-        {...buttonPrimitiveStyles}
-        {...restProps}
-        ref={ref}>
+      <StyledButtonPrimitive {...baseStyles} {...restProps} ref={ref}>
         {children}
       </StyledButtonPrimitive>
     );
   }
 );
 
-ButtonPrimitive.defaultProps = {
-  'data-testid': makeTestId<'button-primitive'>('button-primitive'),
-};
-
-export { ButtonPrimitive, buttonPrimitiveStyles };
+export { ButtonPrimitive };

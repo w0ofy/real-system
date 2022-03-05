@@ -1,6 +1,5 @@
-import type { KebabCase } from '@real-system/types-library';
-
 import { _logger } from '../private';
+import type { KebabCase } from '../types/kebabCase';
 
 const kebabCase = <S extends string>(str: S): KebabCase<S> => {
   if (!str || typeof str !== 'string') {

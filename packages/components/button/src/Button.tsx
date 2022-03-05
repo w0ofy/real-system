@@ -1,17 +1,13 @@
 import React, { forwardRef, useMemo } from 'react';
 
+import { ButtonPrimitive } from '@real-system/button-primitive';
 import { Spinner } from '@real-system/spinner';
 import styled from '@real-system/styling-library';
 import { organScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { DefaultButton } from './DefaultButton';
-import { FloatingButton } from './FloatingButton';
-import { MinimalButton } from './MinimalButton';
-import { PrimaryButton } from './PrimaryButton';
-import { getSizeStyles } from './styles';
-import { ButtonProps, ButtonStates, ButtonVariants } from './types';
-import { InternalButtonProps } from './types';
+import { makeButtonStylesFromVariant } from './Button.styles';
+import { ButtonIntent, ButtonProps, ButtonStates } from './types';
 
 const getButtonState = (
   disabled?: boolean,
@@ -26,23 +22,14 @@ const getButtonState = (
   return 'default';
 };
 
-const BUTTON_VARIANTS: {
-  [key in ButtonVariants]: React.FC<InternalButtonProps>;
-} = {
-  default: DefaultButton,
-  primary: PrimaryButton,
-  minimal: MinimalButton,
-  floating: FloatingButton,
-};
-
 type LabelProps = {
-  ml: number | string;
-  mr: number | string;
+  marginLeft: number | string;
+  marginRight: number | string;
 };
 
 const Label = styled.span<LabelProps>((props) => ({
-  marginLeft: props.ml,
-  marginRight: props.mr,
+  marginLeft: props.marginLeft,
+  marginRight: props.marginRight,
   whiteSpace: 'nowrap',
 }));
 
@@ -60,37 +47,49 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     size = 'md',
     leadingIcon,
     trailingIcon,
+    intent: intentProp = undefined,
     ...restProps
   },
   ref
 ): React.ReactElement {
+  const intent: ButtonIntent = useMemo(() => {
+    if (intentProp === undefined) {
+      if (variant === 'primary') return 'primary';
+      return 'neutral';
+    }
+    return intentProp;
+  }, [intentProp, variant]);
   const buttonState = useMemo(
     () => getButtonState(disabled, loading),
     [disabled, loading]
-  );
-  const sizeStyles = useMemo(
-    () => getSizeStyles(variant)[size],
-    [variant, size]
   );
   const isLoading = useMemo(
     () => buttonState === 'loading' && variant !== 'floating',
     [buttonState, variant]
   );
-  const isDisabled = buttonState !== 'default';
-  const ButtonVariant = BUTTON_VARIANTS[variant];
+  const showDisabled = buttonState !== 'default';
+
+  const buttonStyles = useMemo(
+    () =>
+      makeButtonStylesFromVariant[variant]({
+        size,
+        intent,
+        loading: isLoading,
+      }),
+    [intent, isLoading, size, variant]
+  );
+
   return (
-    <ButtonVariant
+    <ButtonPrimitive
       data-testid={makeTestId('button')}
+      disabled={showDisabled}
+      {...buttonStyles}
       {...restProps}
-      {...sizeStyles}
-      loading={isLoading}
-      buttonState={buttonState}
-      disabled={isDisabled}
       ref={ref}>
       {leadingIcon ? leadingIcon : null}
       <Label
-        ml={getLabelMarginX(leadingIcon)}
-        mr={getLabelMarginX(trailingIcon)}>
+        marginLeft={getLabelMarginX(leadingIcon)}
+        marginRight={getLabelMarginX(trailingIcon)}>
         {isLoading ? (
           <Spinner size="sm" color="color-text-neutral-weak-3" />
         ) : (
@@ -98,7 +97,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
         )}
       </Label>
       {trailingIcon ? trailingIcon : null}
-    </ButtonVariant>
+    </ButtonPrimitive>
   );
 });
 

@@ -36,7 +36,7 @@ const TokenSearch = ({ scale }: { scale: ThemeScales }) => {
   }, [term, rawTokens]);
   return (
     <Box display="flex" flexDirection="column">
-      <Box display="block" mb={10} width="25rem">
+      <Box display="block" marginBottom={10} width="25rem">
         <Input
           type="text"
           // @ts-ignore

@@ -34,7 +34,7 @@ const CheckboxWrapper = forwardRef<
         display="inline-flex"
         ref={ref}
         disabled={disabled}
-        mb={0}
+        marginBottom={0}
         {...hoverProps}
         {...pressProps}
         {...focusWithinProps}>
@@ -43,7 +43,7 @@ const CheckboxWrapper = forwardRef<
         </Flex>
       </Label>
       {(helpText || errorText) && (
-        <HelpText mt={0} ml={12} errorText={errorText}>
+        <HelpText marginTop={0} marginLeft={12} errorText={errorText}>
           {helpText}
         </HelpText>
       )}

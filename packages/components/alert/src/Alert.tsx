@@ -4,7 +4,7 @@ import { AlertPrimitive } from '@real-system/alert-primitive';
 import { Button, ButtonProps } from '@real-system/button';
 import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { AlertIntents, CommonAlertProps } from './types';
@@ -41,7 +41,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
       yAlignContent="top"
       xAlignContent="left"
       width="100%"
-      p={7}
+      padding={7}
       borderRadius={2}
       borderStyle="solid"
       borderWidth={1}
@@ -55,26 +55,30 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
         solid
         icon={ICON_MAP[intent]}
         color={borderOrIconColor(true)}
-        mr={5}
+        marginRight={5}
         title={`${intent} ${children ? ': ' + children : ''}`}
       />
-      <Flex vertical yAlignContent="center" xAlignContent="left" mr={20}>
+      <Flex
+        vertical
+        yAlignContent="center"
+        xAlignContent="left"
+        marginRight={20}>
         <AlertPrimitive type={type}>
           {children && (
-            <Typography.Heading variant="heading5" as="h5" mt={1}>
+            <Text.Heading variant="heading5" as="h5" marginTop={1}>
               {children}
-            </Typography.Heading>
+            </Text.Heading>
           )}
-          {description && <Typography>{description}</Typography>}
+          {description && <Text>{description}</Text>}
         </AlertPrimitive>
       </Flex>
 
       {onDismiss && (
         <Button
           ref={dismissRef}
-          mr={0}
-          mt={1}
-          ml="auto"
+          marginRight={0}
+          marginTop={1}
+          marginLeft="auto"
           onClick={onDismiss}
           variant="floating">
           <Icon icon="x" size="md" />

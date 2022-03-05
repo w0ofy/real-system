@@ -1,28 +1,31 @@
-import type { TextBaseStyleProps } from './styleProps/props';
-import { PSEUDO_PROP_STYLES } from './styleProps/pseudoPropStyles';
+import React from 'react';
 
-export type TextPseudoStyleProps = {
-  [key in keyof typeof PSEUDO_PROP_STYLES]?: TextBaseStyleProps;
-};
-
-export type TextStyleProps = TextBaseStyleProps & TextPseudoStyleProps;
+import type { StylishProps } from '@real-system/styling-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 
 // Omits potential clashes from our style props with HTMLAttributes (i.e. color)
-export type TextElementProps = Omit<
-  React.HTMLAttributes<HTMLElement>,
-  'color'
-> & {
+type TextElementProps = {
   as: keyof JSX.IntrinsicElements;
+  /** href html attribute for anchor elements */
   href?: string;
   /** Typed as any because Text can be any HTML element */
   ref?: any | null;
+  /** rel html attribute */
   rel?: string;
   target?: string;
-  dateTime?: string;
   /** element identifier for customization */
   element?: string;
   /** variant for variant styling */
   variant?: string;
-};
+  /** text to be rendered */
+  children?: React.ReactNode;
+} & RealSystemElementProps;
 
-export type TextPrimitiveProps = TextElementProps & TextStyleProps;
+type TextPrimitiveProps = Omit<
+  React.HTMLAttributes<HTMLElement>,
+  keyof TextElementProps | keyof StylishProps
+> &
+  TextElementProps &
+  StylishProps;
+
+export type { TextPrimitiveProps };

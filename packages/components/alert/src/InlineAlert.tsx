@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 import { AlertPrimitive } from '@real-system/alert-primitive';
 import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { AlertIntents, CommonAlertProps } from './types';
@@ -34,7 +34,7 @@ const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
         data-testid={makeTestId('inline-alert')}
         {...restProps}
         ref={ref}>
-        <Flex mt={1} mr={4} alignSelf="flex-start">
+        <Flex marginTop={1} marginRight={4} alignSelf="flex-start">
           <Icon
             size="md"
             solid
@@ -44,13 +44,13 @@ const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
           />
         </Flex>
         <AlertPrimitive type={type}>
-          <Typography.Heading
+          <Text.Heading
             variant="heading5"
             as="span"
             color={textColor}
-            mb={0}>
+            marginBottom={0}>
             {children}
-          </Typography.Heading>
+          </Text.Heading>
         </AlertPrimitive>
       </Flex>
     );

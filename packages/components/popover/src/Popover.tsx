@@ -7,16 +7,14 @@ import {
 } from '@real-system/ariakit-library';
 import { Flex, FlexProps } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
-import { RealSystemElementProps } from '@real-system/types-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import {
-  PopoverDescription,
-  PopoverDismiss,
-  PopoverHeading,
-} from './components';
 import { PopoverButton } from './PopoverButton';
 import { PopoverContainer, usePopoverStateContext } from './PopoverContext';
+import { PopoverDescription } from './PopoverDescription';
+import { PopoverDismiss } from './PopoverDismiss';
+import { PopoverHeading } from './PopoverHeading';
 
 type PopoverProps = Omit<AriakitPopoverProps, 'state' | 'as'> &
   RealSystemElementProps & {
@@ -38,8 +36,8 @@ const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
         borderRadius={2}
         padding={10}
         _focus={{ outline: '0' }}
-        bg="color-background"
-        zIndex={1}
+        bgColor="color-background"
+        zIndex="popover"
         ref={ref}
       />
     );
@@ -55,17 +53,17 @@ export interface PopoverComponent
   Description: typeof PopoverDescription;
 }
 
-// @ts-expect-error Popover subcomponent properties are defined on the fn object after this is defined
+// @ts-expect-error Popover subcomponent properties are defined on the component object after this is defined
 const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
   function Popover(
-    { children, dataTestid, hideCloseButton, ...restProps }: PopoverProps,
+    { children, hideCloseButton, ...restProps }: PopoverProps,
     ref
   ) {
     const state = usePopoverStateContext();
     return (
       <AriakitPopover
         state={state}
-        data-testid={makeTestId(dataTestid || 'popover')}
+        data-testid={makeTestId('popover')}
         {...restProps}
         as={StyledPopover}
         ref={ref}>

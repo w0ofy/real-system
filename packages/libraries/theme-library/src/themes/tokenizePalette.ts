@@ -17,8 +17,9 @@ import {
   space,
   textColors,
   zIndices,
-} from '../tokens';
-import { makeTokenScale } from '../utils/makeTokenScale';
+} from '../tokens/factory';
+
+import { makeTokenScale } from './utils';
 
 /**
  *

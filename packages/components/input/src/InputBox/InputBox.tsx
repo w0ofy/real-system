@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import type { RealSystemElementProps } from '@real-system/types-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 import { makeTestId, merge } from '@real-system/utils-library';
 
 import { Addon, AddonProps } from './Addon';
@@ -36,7 +36,7 @@ const baseStyles: BoxStyleProps = {
   border: '1px solid',
   borderRadius: 2,
   transition: 'box-shadow 150ms ease-in, border-color 150ms ease-in',
-  bg: 'color-background',
+  bgColor: 'color-background',
   cursor: 'text',
   outline: 'none',
   boxShadow: 'none',
@@ -60,13 +60,13 @@ const styles: { [key in InputBoxStates]: BoxStyleProps } = {
   }),
   disabled: merge(baseStyles, {
     color: 'color-text-disabled-strong-3',
-    bg: 'color-background-disabled-weak-5',
+    bgColor: 'color-background-disabled-weak-5',
     borderColor: 'color-border-disabled',
     cursor: 'not-allowed',
   }),
   readonly: merge(baseStyles, {
     color: 'color-text-disabled-strong-7',
-    bg: 'color-background-disabled-weak-3',
+    bgColor: 'color-background-disabled-weak-3',
     borderColor: 'color-border-disabled-strong-2',
     _hover: { borderColor: 'color-border-disabled-strong-2' },
     _focusWithin: {
@@ -85,7 +85,7 @@ const styles: { [key in InputBoxStates]: BoxStyleProps } = {
     _active: { borderColor: 'color-border-danger-strong-3' },
   }),
   hidden: merge(baseStyles, {
-    bg: 'none',
+    bgColor: 'none',
     border: 0,
     _hover: { border: 0 },
     _focusWithin: {

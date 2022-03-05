@@ -38,7 +38,7 @@ export const WithError = () => (
 
 export const StoryFieldGroup = () => (
   <form>
-    <FieldGroup mb={8}>
+    <FieldGroup marginBottom={8}>
       <Field inline label="First name" labelFor="firstName" required>
         <Input type="text" id="firstName" />
       </Field>
@@ -59,7 +59,7 @@ StoryFieldGroup.storyName = 'Field Group';
 
 export const InlineFieldGroup = () => (
   <form>
-    <FieldGroup inline mb={8}>
+    <FieldGroup inline marginBottom={8}>
       <Field inline label="First name" labelFor="firstName" required>
         <Input type="text" id="firstName" />
       </Field>

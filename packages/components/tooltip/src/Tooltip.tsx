@@ -11,7 +11,7 @@ import {
 import { Box } from '@real-system/box-primitive';
 import styled from '@real-system/styling-library';
 import { getToken } from '@real-system/theme-library';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import {
   isReactText,
   makeTestId,
@@ -22,13 +22,13 @@ import { TRANSITIONS_CONFIG } from './constants';
 import type { TooltipProps } from './types';
 
 const StyledTooltip = styled(animated(Box))`
-  z-index: ${getToken(1, 'zIndices')};
+  z-index: ${getToken('tooltip', 'zIndices')};
   pointer-events: none;
   padding: ${getToken(4, 'space')};
   padding-top: ${getToken(3, 'space')};
   padding-bottom: ${getToken(3, 'space')};
   box-shadow: ${getToken('drop-shadow-neutral-weak-2', 'shadows')};
-  background: ${getToken('color-background-dark')};
+  background-color: ${getToken('color-background-dark')};
   border: ${getToken('border-1', 'borders')};
   border-radius: ${getToken(2, 'radii')};
   max-width: 30rem;
@@ -90,9 +90,9 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
               as={StyledTooltip}
               style={style}>
               <AriakitTooltipArrow state={state} />
-              <Typography as="span" color="color-background-light">
+              <Text as="span" color="color-background-light">
                 {label}
-              </Typography>
+              </Text>
             </AriakitTooltip>
           )
       )}
@@ -102,7 +102,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
 
 Tooltip.defaultProps = {
   placement: 'top',
-  dataTestid: 'tooltip',
+  'data-testid': 'tooltip',
 };
 
 export type { TooltipProps };

@@ -26,12 +26,12 @@ export default {
 
 const Template = (args) => {
   return (
-    <Flex p={10} xAlignContent="center">
+    <Flex padding={10} xAlignContent="center">
       <PopoverContainer placement="auto">
         <PopoverButton>Open Popover</PopoverButton>
         <Popover hideCloseButton={args.hideCloseButton}>
-          <PopoverHeading mb={8}>Meet Popover</PopoverHeading>
-          <PopoverDescription mb={8}>
+          <PopoverHeading marginBottom={8}>Meet Popover</PopoverHeading>
+          <PopoverDescription marginBottom={8}>
             Hello there. I am a popover! Use me as a non-modal dialog to display
             additional rich content above your UI.
           </PopoverDescription>

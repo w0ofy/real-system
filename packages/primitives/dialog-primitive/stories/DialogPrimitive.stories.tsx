@@ -9,7 +9,7 @@ import {
 } from '@real-system/dialog-primitive';
 import styled, { polished } from '@real-system/styling-library';
 import { getToken, majorScale } from '@real-system/theme-library';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 const { transparentize } = polished;
 
@@ -57,9 +57,9 @@ const Template = (args) => {
       </Button>
       <DialogOverlay isOpen={isOpen} onDismiss={() => setIsOpen(false)}>
         <DialogContent>
-          <Typography.Heading variant="heading3" mb={10}>
+          <Text.Heading variant="heading3" marginBottom={10}>
             Dialog Primitive
-          </Typography.Heading>
+          </Text.Heading>
           <Button onClick={() => setIsOpen(false)} width={20}>
             Close
           </Button>

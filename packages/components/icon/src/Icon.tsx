@@ -17,7 +17,7 @@ const StyledIcon = styled(({ Icon, ...restProps }: InternalIconProps) => {
 `;
 
 /**
- * @todo add a11y props and functionnality
+ * @todo add a11y props and functionality
  */
 const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
   {

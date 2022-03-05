@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 export default {
@@ -10,5 +10,5 @@ export default {
 } as Meta;
 
 export const Default = () => {
-  return <Typography.Label required>First Name</Typography.Label>;
+  return <Text.Label required>First Name</Text.Label>;
 };

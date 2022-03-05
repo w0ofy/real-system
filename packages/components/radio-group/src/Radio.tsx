@@ -35,7 +35,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
     <Label
       display="inline-flex"
       disabled={disabled}
-      _notLast={isVertical ? { mb: 5 } : { mr: 5 }}
+      _notLast={isVertical ? { marginBottom: 5 } : { marginRight: 5 }}
       {...hoverProps}
       {...pressProps}
       {...focusWithinProps}>

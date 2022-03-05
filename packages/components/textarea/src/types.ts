@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { RealSystemElementProps } from '@real-system/types-library';
+import { RealSystemElementProps } from '@real-system/utils-library';
 
 type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   disabled?: boolean;

@@ -1,34 +1,28 @@
 import React, { forwardRef } from 'react';
 
-import styled from '@real-system/styling-library';
+import styled, {
+  getPseudoStyleProps,
+  getStyleProps,
+} from '@real-system/styling-library';
 
-import { composeTextStyleProps } from './styleProps/props';
-import { getPseudoStyles } from './styleProps/pseudoPropStyles';
 import type { TextPrimitiveProps } from './types';
 
-const StyledText = styled.div(composeTextStyleProps(), getPseudoStyles);
+const StyledText = styled.div<any>(getStyleProps, getPseudoStyleProps);
+
+const baseStyles = {
+  color: 'color-text',
+  fontSize: 1,
+  fontWeight: 0,
+  lineHeight: 4,
+  margin: 0,
+};
 
 const TextPrimitive = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(
-  {
-    children,
-    color = 'color-text',
-    fontSize = 1,
-    fontWeight = 0,
-    lineHeight = 4,
-    m = 0,
-    ...restProps
-  },
+  { children, ...restProps },
   ref
 ) {
   return (
-    <StyledText
-      ref={ref}
-      fontSize={fontSize}
-      fontWeight={fontWeight}
-      lineHeight={lineHeight}
-      color={color}
-      m={m}
-      {...restProps}>
+    <StyledText ref={ref} {...baseStyles} {...restProps}>
       {children}
     </StyledText>
   );

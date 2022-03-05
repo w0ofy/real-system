@@ -16,7 +16,7 @@ const RadioLabel = ({ children, disabled }: RadioLabelProps) => {
       fontSize={1}
       fontWeight={1}
       lineHeight={1}
-      mb={0}>
+      marginBottom={0}>
       {children}
     </Box>
   );

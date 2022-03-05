@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/types-library
+$ npm install react react-dom
 # yarn
-$ yarn add react react-dom @real-system/types-library
+$ yarn add react react-dom
 
 # install utils
 

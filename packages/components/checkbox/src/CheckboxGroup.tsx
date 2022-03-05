@@ -38,14 +38,14 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
       ref={ref}>
       <Label
         as="legend"
-        mb={helpText ? 2 : 6}
+        marginBottom={helpText ? 2 : 6}
         required={required}
         cursor="default"
         {...labelProps}>
         {props.label}
       </Label>
       {helpText && (
-        <HelpText mt={0} mb={6}>
+        <HelpText marginTop={0} marginBottom={6}>
           {helpText}
         </HelpText>
       )}
@@ -58,7 +58,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
           {children}
         </CheckboxGroupContextProvider>
       </Flex>
-      {errorText && <HelpText errorText={errorText} mb={8} />}
+      {errorText && <HelpText errorText={errorText} marginBottom={8} />}
     </Flex>
   );
 });

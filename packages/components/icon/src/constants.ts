@@ -1,8 +1,12 @@
-import type { PaletteSizes, ThemeTokens } from '@real-system/theme-library';
+import type {
+  PaletteSizes,
+  SizeTokens,
+  TextColorTokens,
+} from '@real-system/theme-library';
 
 import type { IconIntent } from './types';
 
-const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
+const INTENT_MAP: { [key in IconIntent]: TextColorTokens } = {
   default: 'color-text',
   primary: 'color-text-brand',
   success: 'color-text-success',
@@ -11,14 +15,14 @@ const INTENT_MAP: { [key in IconIntent]: ThemeTokens } = {
   info: 'color-text-info',
 };
 
-const SIZE_MAP: { [key in PaletteSizes]: ThemeTokens } = {
-  xxs: 'size-icon-1',
-  xs: 'size-icon-2',
-  sm: 'size-icon-3',
-  md: 'size-icon-4',
-  lg: 'size-icon-5',
-  xl: 'size-icon-6',
-  xxl: 'size-icon-7',
+const SIZE_MAP: { [key in PaletteSizes]: SizeTokens } = {
+  xxs: 'icon-1',
+  xs: 'icon-2',
+  sm: 'icon-3',
+  md: 'icon-4',
+  lg: 'icon-5',
+  xl: 'icon-6',
+  xxl: 'icon-7',
 };
 
 export { INTENT_MAP, SIZE_MAP };

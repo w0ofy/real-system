@@ -4,7 +4,7 @@ import { Box, BoxStyleProps } from '@real-system/box-primitive';
 import { TextPrimitive } from '@real-system/text-primitive';
 
 import { RequiredDot } from './RequiredDot';
-import { InternalTypographyProps } from './types';
+import { CommonTextProps } from './types';
 
 export type LabelProps = {
   children?: React.ReactNode;
@@ -14,62 +14,58 @@ export type LabelProps = {
   required?: boolean;
   containerProps?: BoxStyleProps;
   textProps?: BoxStyleProps;
-} & InternalTypographyProps;
+} & CommonTextProps;
 
-const Label = forwardRef<HTMLLabelElement, LabelProps>(
-  (
-    {
-      children,
-      as = 'label',
-      disabled,
-      required,
-      textProps,
-      containerProps,
-      cursor = 'pointer',
-      ...restProps
-    },
-    ref
-  ): React.ReactElement => {
-    const dynamicStyles = useMemo(
-      () => ({
-        color: disabled ? 'color-text-disabled-strong-3' : 'color-text',
-        cursor: disabled ? 'not-allowed' : cursor,
-      }),
-      [cursor, disabled]
-    );
+const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
+  {
+    children,
+    as = 'label',
+    disabled,
+    required,
+    textProps,
+    containerProps,
+    cursor = 'pointer',
+    ...restProps
+  },
+  ref
+) {
+  const dynamicStyles = useMemo(
+    () => ({
+      color: disabled ? 'color-text-disabled-strong-3' : 'color-text',
+      cursor: disabled ? 'not-allowed' : cursor,
+    }),
+    [cursor, disabled]
+  );
 
-    return (
-      <TextPrimitive
-        as={as}
-        display="block"
-        p={0}
-        m={0}
-        mb={2}
-        fontSize={1}
-        fontWeight={3}
-        lineHeight={1}
-        color={dynamicStyles.color}
-        cursor={dynamicStyles.cursor}
-        {...restProps}
-        ref={ref}>
-        <Box
-          as="span"
-          display="flex"
-          alignItems="center"
-          justifyContent="flex-start"
-          {...containerProps}>
-          {required ? (
-            <RequiredDot disabled={disabled} cursor={dynamicStyles.cursor} />
-          ) : null}
-          <Box as="span" {...textProps}>
-            {children}
-          </Box>
+  return (
+    <TextPrimitive
+      as={as}
+      display="block"
+      padding={0}
+      margin={0}
+      marginBottom={2}
+      fontSize={1}
+      fontWeight={3}
+      lineHeight={1}
+      color={dynamicStyles.color}
+      cursor={dynamicStyles.cursor}
+      {...restProps}
+      ref={ref}>
+      <Box
+        as="span"
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        {...containerProps}>
+        {required ? (
+          <RequiredDot disabled={disabled} cursor={dynamicStyles.cursor} />
+        ) : null}
+        <Box as="span" {...textProps}>
+          {children}
         </Box>
-      </TextPrimitive>
-    );
-  }
-);
-
-Label.displayName = 'Label';
+      </Box>
+    </TextPrimitive>
+  );
+});
 
 export { Label };

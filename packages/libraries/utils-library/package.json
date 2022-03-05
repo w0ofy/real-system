@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/types-library": "^0.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -39,10 +38,10 @@
     "chalk": "^4.1.2",
     "deepmerge": "^4.2.2",
     "lodash.get": "^4.4.2",
-    "react-uid": "^2.3.1"
+    "react-uid": "^2.3.1",
+    "type-fest": "2.12.0"
   },
   "devDependencies": {
-    "@real-system/types-library": "^0.0.6",
     "concurrently": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

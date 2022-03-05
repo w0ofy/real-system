@@ -1,8 +1,7 @@
 import type { BoxProps } from '@real-system/box-primitive';
 import type { ResponsiveValue } from '@real-system/styling-library';
 
-export type DisplayOptions = 'flex' | 'inline-flex';
-export type Display = ResponsiveValue<DisplayOptions>;
+export type Display = 'flex' | 'inline-flex';
 export type VerticalAlignOptions =
   | 'top'
   | 'center'
@@ -31,8 +30,7 @@ export type Basis = ResponsiveValue<BasisOptions>;
 export type WrapOptions = boolean;
 export type Wrap = ResponsiveValue<WrapOptions>;
 
-type SomeBoxProps = Omit<BoxProps, 'display'>;
-export type FlexProps = SomeBoxProps & {
+export type FlexElementProps = {
   /**
    * renders children
    */
@@ -78,3 +76,7 @@ export type FlexProps = SomeBoxProps & {
    */
   space?: BoxProps['gap'];
 };
+
+type FlexProps = FlexElementProps & Omit<BoxProps, keyof FlexElementProps>;
+
+export type { FlexProps };

@@ -30,13 +30,13 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
         borderBottomColor="color-border-neutral-weak-9"
         margin={0}
         flexShrink={0}
-        py={8}
-        px={8}
+        paddingY={8}
+        paddingX={8}
         ref={ref}
         data-testid={makeTestId('dialog-header')}
         {...restProps}>
         <Flex yAlignContent="center" xAlignContent="between" wrap={false}>
-          <Flex grow={1} mr={12}>
+          <Flex grow={1} marginRight={12}>
             {children}
           </Flex>
           {hideCloseButton ? null : (

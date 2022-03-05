@@ -2,82 +2,81 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
-  title: 'Components/Typography',
-  component: Typography,
+  title: 'Components/Text',
+  component: Text,
   args: {
     children: 'The quick brown fox jumps over the lazy dog',
-    variant: 'primary',
   },
 } as Meta;
 
 const Template = (args) => {
   return (
     <>
-      <Typography {...args}>
+      <Text {...args} variant="paragraph">
         The quick brown fox jumps over the{' '}
-        <Typography {...args} variant="inline" fontWeight={3}>
+        <Text {...args} variant="inline" fontWeight={3}>
           lazy
-        </Typography>{' '}
+        </Text>{' '}
         dog.
-      </Typography>
+      </Text>
     </>
   );
 };
 
-Template.storyName = 'Typography';
+Template.storyName = 'Text';
 
 export const Default = Template.bind({});
 
 export const Heading = () => (
   <Box display="flex" flexDirection="column">
-    <Typography.Heading as="h1" variant="heading1">
+    <Text.Heading as="h1" variant="heading1">
       Heading 1
-    </Typography.Heading>
-    <Typography.Heading as="h2" variant="heading2">
+    </Text.Heading>
+    <Text.Heading as="h2" variant="heading2">
       Heading 2
-    </Typography.Heading>
-    <Typography.Heading as="h3" variant="heading3">
+    </Text.Heading>
+    <Text.Heading as="h3" variant="heading3">
       Heading 3
-    </Typography.Heading>
-    <Typography.Heading as="h4" variant="heading4">
+    </Text.Heading>
+    <Text.Heading as="h4" variant="heading4">
       Heading 4
-    </Typography.Heading>
-    <Typography.Heading as="h5" variant="heading5">
+    </Text.Heading>
+    <Text.Heading as="h5" variant="heading5">
       Heading 5
-    </Typography.Heading>
-    <Typography.Heading as="h6" variant="heading6">
+    </Text.Heading>
+    <Text.Heading as="h6" variant="heading6">
       Heading 6
-    </Typography.Heading>
+    </Text.Heading>
   </Box>
 );
 
 export const Label = () => (
   <Box display="flex" flexDirection="column">
-    <Typography.Label>Label</Typography.Label>
-    <Typography.Label disabled>Disabled Label</Typography.Label>
-    <Typography.Label required>Required Label</Typography.Label>
-    <Typography.Label required disabled>
+    <Text.Label>Label</Text.Label>
+    <Text.Label disabled>Disabled Label</Text.Label>
+    <Text.Label required>Required Label</Text.Label>
+    <Text.Label required disabled>
       Disabled Required Label
-    </Typography.Label>
+    </Text.Label>
   </Box>
 );
 
 export const HelpText = () => (
   <Box display="flex" flexDirection="column">
-    <Typography.HelpText id="help-text">Help text</Typography.HelpText>
-    <Typography.HelpText id="help-text-danger" variant="danger">
+    <Text.HelpText id="help-text">Help text</Text.HelpText>
+    <Text.HelpText id="help-text-danger" intent="danger">
       Danger variant help text
-    </Typography.HelpText>
-    <Typography.HelpText
+    </Text.HelpText>
+    <Text.HelpText
       id="help-text-danger"
-      variant="danger"
+      intent="danger"
       errorText="Error help text">
       Danger help text
-    </Typography.HelpText>
-    <Typography.HelpText
+    </Text.HelpText>
+    <Text.HelpText
       id="help-text-danger"
       errorText="Error help text without icon"
       hideErrorIcon

@@ -46,31 +46,31 @@ const WheelCircle = styled(BoxAs<SVGCircleElementProps>('circle'))({
 
 const STYLES_BY_SIZE: { [key in PaletteSizes]: BoxStyleProps } = {
   xxs: {
-    size: 'size-spinner-1',
+    size: 'spinner-1',
     borderWidth: 6,
   },
   xs: {
-    size: 'size-spinner-2',
+    size: 'spinner-2',
     borderWidth: 6,
   },
   sm: {
-    size: 'size-spinner-3',
+    size: 'spinner-3',
     borderWidth: 6,
   },
   md: {
-    size: 'size-spinner-4',
+    size: 'spinner-4',
     borderWidth: 6,
   },
   lg: {
-    size: 'size-spinner-5',
+    size: 'spinner-5',
     borderWidth: 8,
   },
   xl: {
-    size: 'size-spinner-6',
+    size: 'spinner-6',
     borderWidth: 9,
   },
   xxl: {
-    size: 'size-spinner-7',
+    size: 'spinner-7',
     borderWidth: 9,
   },
 };

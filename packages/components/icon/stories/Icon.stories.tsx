@@ -20,13 +20,13 @@ export default {
 export const Showcase = (args) => {
   return (
     <Box display="flex">
-      <Icon {...args} mr={8} size="xxs" />
-      <Icon {...args} mr={8} size="xs" />
-      <Icon {...args} mr={8} size="sm" />
-      <Icon {...args} mr={8} size="md" />
-      <Icon {...args} mr={8} size="lg" />
-      <Icon {...args} mr={8} size="xl" />
-      <Icon {...args} mr={8} size="xxl" />
+      <Icon {...args} marginRight={8} size="xxs" />
+      <Icon {...args} marginRight={8} size="xs" />
+      <Icon {...args} marginRight={8} size="sm" />
+      <Icon {...args} marginRight={8} size="md" />
+      <Icon {...args} marginRight={8} size="lg" />
+      <Icon {...args} marginRight={8} size="xl" />
+      <Icon {...args} marginRight={8} size="xxl" />
     </Box>
   );
 };

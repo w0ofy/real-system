@@ -1,7 +1,6 @@
 import TextareaAutosize from 'react-autosize-textarea';
 
-import { composeBoxStyleProps } from '@real-system/box-primitive';
-import styled, { css } from '@real-system/styling-library';
+import styled, { css, getStyleProps } from '@real-system/styling-library';
 import { majorScale } from '@real-system/theme-library';
 
 import { TextareaProps } from './types';
@@ -10,6 +9,7 @@ const TextareaElement = styled(TextareaAutosize)<TextareaProps>(
   css({
     appearance: 'none',
     background: 'transparent',
+    backgroundColor: 'transparent',
     border: 'none',
     borderRadius: 'borderRadius20',
     boxShadow: 'none',
@@ -45,7 +45,7 @@ const TextareaElement = styled(TextareaAutosize)<TextareaProps>(
       '-webkit-opacity': '1',
     },
   }),
-  composeBoxStyleProps()
+  getStyleProps
 );
 
 export { TextareaElement };

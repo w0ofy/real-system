@@ -1,55 +1,56 @@
 import React, { forwardRef } from 'react';
 
-import { TextPrimitive, TextStyleProps } from '@real-system/text-primitive';
+import { TextPrimitive } from '@real-system/text-primitive';
 
 import {
+  CommonTextProps,
   HeadingAsTags,
   HeadingElement,
   HeadingVariants,
-  InternalTypographyProps,
 } from './types';
 
-const styles: {
-  [key in HeadingVariants]: Pick<
-    TextStyleProps,
-    'fontSize' | 'lineHeight' | 'mb' | 'fontWeight'
-  >;
-} = {
+const variants = {
   heading1: {
     fontSize: 7,
     lineHeight: 7,
     fontWeight: 3,
-    mb: 5,
+    marginBottom: 5,
+    color: 'color-text-neutral-strong-3',
   },
   heading2: {
     fontSize: 5,
     lineHeight: 5,
     fontWeight: 3,
-    mb: 4,
+    marginBottom: 4,
+    color: 'color-text-neutral-strong-3',
   },
   heading3: {
     fontSize: 4,
     lineHeight: 4,
     fontWeight: 2,
-    mb: 3,
+    marginBottom: 3,
+    color: 'color-text-neutral-strong-3',
   },
   heading4: {
     fontSize: 3,
     lineHeight: 3,
     fontWeight: 2,
-    mb: 3,
+    marginBottom: 3,
+    color: 'color-text-neutral-strong-3',
   },
   heading5: {
     fontSize: 2,
     lineHeight: 2,
     fontWeight: 2,
-    mb: 2,
+    marginBottom: 2,
+    color: 'color-text-neutral-strong-3',
   },
   heading6: {
     fontSize: 1,
     lineHeight: 1,
     fontWeight: 2,
-    mb: 1,
+    marginBottom: 1,
+    color: 'color-text-neutral-strong-3',
   },
 };
 
@@ -59,28 +60,18 @@ export type HeadingProps = {
   variant?: HeadingVariants;
   as?: HeadingAsTags;
   tag?: HeadingAsTags;
-} & InternalTypographyProps;
+} & CommonTextProps;
 
-const Heading = forwardRef<HeadingElement, HeadingProps>(
-  (
-    { variant = 'heading2', children, mb, as = 'div', tag, ...restProps },
-    ref
-  ): React.ReactElement => {
-    return (
-      <TextPrimitive
-        as={tag || as}
-        m={0}
-        color="color-text-neutral-strong-5"
-        {...styles[variant]}
-        {...restProps}
-        ref={ref}
-        mb={mb ?? styles[variant].mb}>
-        {children}
-      </TextPrimitive>
-    );
-  }
-);
-
-Heading.displayName = 'Heading';
+const Heading = forwardRef<HeadingElement, HeadingProps>(function Heading(
+  { variant = 'heading2', children, as = 'div', tag, ...restProps },
+  ref
+) {
+  const variantStyles = variants[variant];
+  return (
+    <TextPrimitive as={tag || as} {...variantStyles} {...restProps} ref={ref}>
+      {children}
+    </TextPrimitive>
+  );
+});
 
 export { Heading };

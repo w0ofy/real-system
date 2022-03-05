@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { MarginProps } from '@real-system/styling-library';
+import type { BoxStyleProps } from '@real-system/box-primitive';
 
 import { InputBoxProps, InputBoxTypes } from './InputBox';
 
@@ -18,5 +18,5 @@ export type InputProps = Omit<InputBoxProps, 'children' | 'type'> & {
   width?: never;
   height?: never;
   className?: never;
-} & MarginProps &
+} & BoxStyleProps &
   Omit<React.InputHTMLAttributes<HTMLInputElement>, 'color'>;
