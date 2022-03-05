@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   },
   "dependencies": {
     "@react-aria/checkbox": "^3.2.3",
