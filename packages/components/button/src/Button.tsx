@@ -3,9 +3,10 @@ import React, { forwardRef, useMemo } from 'react';
 import { ButtonPrimitive } from '@real-system/button-primitive';
 import { Spinner } from '@real-system/spinner';
 import styled from '@real-system/styling-library';
-import { organScale, useComponentTokens } from '@real-system/theme-library';
+import { organScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
+import { makeButtonStylesFromVariant } from './Button.styles';
 import { ButtonIntent, ButtonProps, ButtonStates } from './types';
 
 const getButtonState = (
@@ -68,16 +69,16 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   );
   const showDisabled = buttonState !== 'default';
 
-  const { variants } = useComponentTokens<'button'>('button');
   const buttonStyles = useMemo(
     () =>
-      variants[variant]({
+      makeButtonStylesFromVariant[variant]({
         size,
         intent,
         loading: isLoading,
       }),
-    [intent, isLoading, size, variant, variants]
+    [intent, isLoading, size, variant]
   );
+
   return (
     <ButtonPrimitive
       data-testid={makeTestId('button')}

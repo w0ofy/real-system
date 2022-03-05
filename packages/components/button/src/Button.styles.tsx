@@ -1,35 +1,10 @@
+import type { StylishProps } from '@real-system/styling-library';
+import { majorScale, PaletteIntents } from '@real-system/theme-library';
 import { merge } from '@real-system/utils-library';
 
-import type { PaletteIntents } from '../../palettes';
-import { majorScale } from '../../sizeUtils';
+import type { ButtonIntent, ButtonProps, ButtonSize } from './types';
 
-import type { ThemeConfigFnArgs } from './types';
-
-const baseStyles = {
-  appearance: 'none',
-  color: 'color-text',
-  background: 'none',
-  display: 'inline-flex',
-  flexWrap: 'nowrap',
-  alignItems: 'center',
-  justifyContent: 'center',
-  border: 1,
-  borderRadius: 2,
-  transition:
-    'background-color 150ms ease-in-out, box-shadow 150ms ease-in, color 150ms ease-in-out',
-  fontSize: 1,
-  fontFamily: 'font-family-text',
-  fontWeight: 1,
-  textDecoration: 'none',
-  position: 'relative',
-  margin: 0,
-  cursor: 'pointer',
-  _hover: {},
-  _focus: { boxShadow: 'shadow-focus', outline: 'none' },
-  _active: { boxShadow: 'none' },
-};
-
-const sizes = {
+const sizes: Record<ButtonSize, StylishProps> = {
   sm: {
     padding: 4,
     fontSize: 1,
@@ -52,34 +27,25 @@ const sizes = {
   },
 };
 
-const intents: Record<ButtonIntents, ButtonIntents | 'brand'> = {
+const intents: Record<ButtonIntent, PaletteIntents> = {
   primary: 'brand',
   success: 'success',
   danger: 'danger',
   neutral: 'neutral',
 };
 
-type ButtonSizes = keyof typeof sizes;
-type ButtonIntents = Extract<
-  PaletteIntents,
-  'primary' | 'success' | 'danger' | 'neutral'
->;
-
-type VariantArgs = ThemeConfigFnArgs<{
-  size: ButtonSizes;
-  intent: ButtonIntents;
-  loading: boolean;
-}>;
-
-const makeVariantStyles = (size: ButtonSizes, styles) =>
-  merge(sizes[size], styles);
+const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
 
 const getCursorStyle = (loading) =>
   loading ? { cursor: 'wait' } : { cursor: 'not-allowed' };
 
-const variants = {
-  floating: ({ size, intent, loading }: VariantArgs) =>
-    makeVariantStyles(size, {
+const makeButtonStylesFromVariant = {
+  floating: ({
+    size,
+    intent,
+    loading,
+  }: Required<Pick<ButtonProps, 'size' | 'intent' | 'loading'>>) =>
+    mergeStyles(size, {
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
@@ -96,8 +62,8 @@ const variants = {
         color: `color-text-${intents[intent]}-weak-6`,
       },
     }),
-  minimal: ({ size, intent, loading }: VariantArgs) =>
-    makeVariantStyles(size, {
+  minimal: ({ size, intent, loading }) =>
+    mergeStyles(size, {
       color: `color-text-${intents[intent]}`,
       backgroundColor: 'transparent',
       _hover: {
@@ -114,8 +80,8 @@ const variants = {
         backgroundColor: `color-background-${intents[intent]}-weak-9`,
       },
     }),
-  primary: ({ size, intent, loading }: VariantArgs) =>
-    makeVariantStyles(size, {
+  primary: ({ size, intent, loading }) =>
+    mergeStyles(size, {
       color: `color-text-${intents[intent]}-contrast`,
       backgroundColor: `color-background-${intents[intent]}`,
       _hover: {
@@ -130,8 +96,8 @@ const variants = {
         backgroundColor: `color-background-${intents[intent]}-weak-9`,
       },
     }),
-  default: ({ size, intent, loading }: VariantArgs) =>
-    makeVariantStyles(size, {
+  default: ({ size, intent, loading }) =>
+    mergeStyles(size, {
       color: `color-text-${intents[intent]}`,
       backgroundColor: 'transparent',
       borderColor: `color-border-${intents[intent]}-weak-6`,
@@ -154,14 +120,4 @@ const variants = {
     }),
 };
 
-const buttonTheme = {
-  baseStyles,
-  sizes,
-  variants,
-  intents,
-};
-
-type ButtonTheme = typeof buttonTheme;
-
-export type { ButtonTheme };
-export { buttonTheme };
+export { makeButtonStylesFromVariant };

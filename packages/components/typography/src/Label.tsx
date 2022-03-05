@@ -1,8 +1,7 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
 import { TextPrimitive } from '@real-system/text-primitive';
-import { useComponentTokens } from '@real-system/theme-library';
 
 import { RequiredDot } from './RequiredDot';
 import { CommonTextProps } from './types';
@@ -30,20 +29,36 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
   },
   ref
 ) {
-  const { text, requiredDot, innerSpan } =
-    useComponentTokens<'label'>('label').parts;
+  const dynamicStyles = useMemo(
+    () => ({
+      color: disabled ? 'color-text-disabled-strong-3' : 'color-text',
+      cursor: disabled ? 'not-allowed' : cursor,
+    }),
+    [cursor, disabled]
+  );
+
   return (
     <TextPrimitive
       as={as}
-      {...text.baseStyles({ disabled, cursor })}
+      display="block"
+      padding={0}
+      margin={0}
+      marginBottom={2}
+      fontSize={1}
+      fontWeight={3}
+      lineHeight={1}
+      color={dynamicStyles.color}
+      cursor={dynamicStyles.cursor}
       {...restProps}
       ref={ref}>
-      <Box as="span" {...innerSpan.baseStyles} {...containerProps}>
+      <Box
+        as="span"
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        {...containerProps}>
         {required ? (
-          <RequiredDot
-            disabled={disabled}
-            {...requiredDot.baseStyles({ disabled, cursor })}
-          />
+          <RequiredDot disabled={disabled} cursor={dynamicStyles.cursor} />
         ) : null}
         <Box as="span" {...textProps}>
           {children}

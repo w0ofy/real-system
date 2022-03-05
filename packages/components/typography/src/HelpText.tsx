@@ -1,9 +1,9 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
-import { Icon } from '@real-system/icon';
+import { Icon, IconProps } from '@real-system/icon';
 import { TextPrimitive } from '@real-system/text-primitive';
-import { PaletteIntents, useComponentTokens } from '@real-system/theme-library';
+import { PaletteIntents } from '@real-system/theme-library';
 
 import { CommonTextProps } from './types';
 
@@ -17,10 +17,21 @@ export type HelpTextProps = {
   errorText?: string;
 } & CommonTextProps;
 
+const LABEL_INTENT: { [key in HelpTextIntents]: string } = {
+  danger: 'danger',
+  default: 'neutral-weak-1',
+};
+const ICON_INTENT: {
+  [key in HelpTextIntents]: IconProps['intent'];
+} = {
+  danger: 'danger',
+  default: 'default',
+};
+
 const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
   {
     children,
-    intent = 'default',
+    variant = 'default',
     as = 'span',
     hideErrorIcon = false,
     errorText,
@@ -28,18 +39,23 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
   },
   ref
 ) {
-  const intentOverride = useMemo(
-    () => (errorText ? 'danger' : intent),
-    [errorText, intent]
+  const variantOverride = useMemo(
+    () => (errorText ? 'danger' : variant),
+    [errorText, variant]
   );
-
-  const { text, icon } = useComponentTokens<'helpText'>('helpText').parts;
 
   return (
     <TextPrimitive
       as={as}
-      {...text.baseStyles}
-      {...text.intents[intentOverride]()}
+      display="flex"
+      alignItems="center"
+      padding={0}
+      margin={0}
+      marginTop={2}
+      fontSize={1}
+      fontWeight={0}
+      lineHeight={1}
+      color={`color-text-${LABEL_INTENT[variantOverride]}`}
       {...restProps}
       ref={ref}>
       {!hideErrorIcon && errorText && (
@@ -47,8 +63,8 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
           <Icon
             icon="exclamation-circle"
             solid
-            intent={intentOverride}
-            {...icon.baseStyles}
+            intent={ICON_INTENT[variantOverride]}
+            marginRight={2}
           />
         </Box>
       )}

@@ -8,7 +8,6 @@ const colorProps: StylePropConfig<ColorProps> = {
     property: 'color',
     scale: STYLE_PROP_SCALES.colors,
   },
-
   color: {
     property: 'color',
     scale: STYLE_PROP_SCALES.colors,

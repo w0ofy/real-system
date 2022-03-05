@@ -3,7 +3,10 @@ import type { StylishProps } from '@real-system/styling-library';
 
 type ButtonPrimitiveStyleProps = StylishProps;
 
-type ButtonPrimitiveProps = Omit<AriakitButtonProps<'button'>, 'is' | 'as'> &
+type ButtonPrimitiveProps = Omit<
+  AriakitButtonProps<'button'>,
+  'is' | 'as' | 'color'
+> &
   ButtonPrimitiveStyleProps;
 
 export type {

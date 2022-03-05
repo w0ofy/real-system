@@ -1,11 +1,5 @@
-import { useMemo } from 'react';
-
 import { useTheme } from '../../themes/useTheme';
 import { ThemeScales, ThemeTokens } from '../factory';
-import type {
-  TokenizedComponentNames,
-  TokenizedComponents,
-} from '../factory/componentTokens';
 
 import { getToken } from './getToken';
 
@@ -21,19 +15,4 @@ const useToken = (
   return getToken<any>(token, scale, fallback)({ theme });
 };
 
-/**
- *
- * @todo build options arg; return variant, part, etc.
- */
-const useComponentTokens = <T extends TokenizedComponentNames>(
-  component: T
-): TokenizedComponents[T] => {
-  const theme = useTheme();
-  const componentTheme = useMemo(
-    () => theme?.['components']?.[component],
-    [component, theme]
-  );
-  return componentTheme;
-};
-
-export { useComponentTokens, useToken };
+export { useToken };

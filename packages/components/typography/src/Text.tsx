@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 import { TextPrimitive } from '@real-system/text-primitive';
-import { useComponentTokens } from '@real-system/theme-library';
 
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';
@@ -29,9 +28,18 @@ export interface TextComponent
   Label: typeof Label;
   HelpText: typeof HelpText;
 }
-/**
- * @todo refactor typography api: rename components; use theme config
- */
+
+const variants = {
+  paragraph: {
+    lineHeight: 2,
+    marginBottom: 2,
+  },
+  inline: {
+    lineHeight: 2,
+    marginBottom: 2,
+  },
+};
+
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
 const Text: TextComponent = forwardRef<
   HTMLParagraphElement | HTMLSpanElement,
@@ -40,8 +48,7 @@ const Text: TextComponent = forwardRef<
   { children, variant = 'paragraph', as, ...restProps },
   ref
 ): React.ReactElement {
-  const { variants } = useComponentTokens<'text'>('text');
-  const variantStyles = variants[variant]?.();
+  const variantStyles = variants?.[variant];
   return (
     <TextPrimitive
       {...variantStyles}
