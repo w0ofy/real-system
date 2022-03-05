@@ -44,6 +44,6 @@
     "@react-stately/toggle": "^3.2.3",
     "@react-types/checkbox": "^3.2.3",
     "@react-types/radio": "^3.1.2",
-    "@react-types/shared": "^3.10.1"
+    "@react-types/shared": "^3.11.1"
   }
 }
