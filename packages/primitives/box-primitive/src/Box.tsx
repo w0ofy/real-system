@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import styled, {
-  getPseudoStyleProps,
+  getPseudoProps,
   getStyleProps,
 } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
@@ -14,7 +14,7 @@ import type { BoxProps } from './types';
 const StyledBox = styled('div', {})<any>(
   { boxSizing: 'border-box' },
   getStyleProps,
-  getPseudoStyleProps
+  getPseudoProps
 );
 
 const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(

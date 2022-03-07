@@ -90,7 +90,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
               as={StyledTooltip}
               style={style}>
               <AriakitTooltipArrow state={state} />
-              <Text as="span" color="color-background-light">
+              <Text as="span" color="color-text-light">
                 {label}
               </Text>
             </AriakitTooltip>

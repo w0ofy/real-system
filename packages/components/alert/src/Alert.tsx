@@ -7,7 +7,7 @@ import { Icon } from '@real-system/icon';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import { AlertIntents, CommonAlertProps } from './types';
+import { CommonAlertProps } from './types';
 import { ICON_MAP } from './utils';
 
 type AlertProps = {
@@ -16,9 +16,6 @@ type AlertProps = {
   onDismiss?: ButtonProps['onClick'];
   dismissRef?: React.Ref<HTMLButtonElement>;
 } & CommonAlertProps;
-
-const makeBorderOrIconColor = (intent: AlertIntents) => (icon?: boolean) =>
-  `color-${icon ? 'text' : 'border'}-${intent}`;
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   {
@@ -32,8 +29,9 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   },
   ref
 ) {
-  const borderOrIconColor = makeBorderOrIconColor(intent);
   const bgColor = `color-background-${intent}-weak-95`;
+  const borderColor = `color-border-${intent}`;
+  const iconColor = `color-text-${intent}`;
 
   return (
     <Flex
@@ -45,7 +43,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
       borderRadius={2}
       borderStyle="solid"
       borderWidth={1}
-      borderColor={borderOrIconColor()}
+      borderColor={borderColor}
       backgroundColor={bgColor}
       data-testid={makeTestId('alert')}
       {...restProps}
@@ -54,7 +52,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
         size="md"
         solid
         icon={ICON_MAP[intent]}
-        color={borderOrIconColor(true)}
+        textColor={iconColor}
         marginRight={5}
         title={`${intent} ${children ? ': ' + children : ''}`}
       />

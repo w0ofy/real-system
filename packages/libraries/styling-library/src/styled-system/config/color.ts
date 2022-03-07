@@ -8,6 +8,10 @@ const colorProps: StylePropConfig<ColorProps> = {
     property: 'color',
     scale: STYLE_PROP_SCALES.colors,
   },
+  foreground: {
+    properties: ['color', 'borderColor'],
+    scale: STYLE_PROP_SCALES.colors,
+  },
   color: {
     property: 'color',
     scale: STYLE_PROP_SCALES.colors,
@@ -19,6 +23,7 @@ const colorProps: StylePropConfig<ColorProps> = {
 };
 
 type ColorProps = {
+  foreground?: Token<CSS.Color, 'colors'>;
   textColor?: Token<CSS.Color, 'colors'>;
   color?: Token<CSS.Color, 'colors'>;
   fill?: Token<CSS.Fill, 'colors'>;

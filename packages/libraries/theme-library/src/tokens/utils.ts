@@ -8,11 +8,7 @@ import type { TokenPrefixes, TokenSuffixes } from './utils.types';
 const { tint, shade, invert, readableColor } = polished;
 
 const getPaletteColor = (palette: Palette, key: PaletteKeys): string =>
-  _get.oneOf<Palette, string>(
-    palette,
-    [key, `status.${key}`, `accent.${key}`],
-    ''
-  );
+  _get.oneOf<Palette, string>(palette, [key, `status.${key}`], '');
 
 type Modifications = {
   prefix?: string;
@@ -45,7 +41,7 @@ const applyValueModifications =
   };
 
 /**
- ** Mechanism for generating color-tokens for a given prefix and palette
+ ** Mechanism for generating color-tokens for a given prefix and palette color
  */
 const makeColorRange =
   <T extends TokenPrefixes>(colorPrefix: T) =>
@@ -122,7 +118,7 @@ const makeEachColorRange = <T extends TokenPrefixes>(
 ) => {
   const colorRange = makeColorRange<T>(colorPrefix);
   return {
-    ...colorRange<'brand'>('brand', palette, mods),
+    ...colorRange<'primary'>('primary', palette, mods),
     ...colorRange<'success'>('success', palette, mods),
     ...colorRange<'info'>('info', palette, mods),
     ...colorRange<'warning'>('warning', palette, mods),

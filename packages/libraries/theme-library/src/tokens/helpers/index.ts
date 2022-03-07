@@ -1,2 +1,2 @@
 export * from './getToken';
-export * from './useTokens';
+export * from './useToken';

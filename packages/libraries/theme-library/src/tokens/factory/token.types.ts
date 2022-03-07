@@ -1,10 +1,9 @@
-import type { StylePropScales } from '@real-system/styling-library';
+import type { StylePropScaleNames } from '@real-system/styling-library';
 
 import {
   backgroundColors,
   borderColors,
   borders,
-  colors,
   filters,
   shadows,
   textColors,
@@ -45,7 +44,6 @@ export type OrdinalTokens =
   | 19;
 
 // palette tokens
-export type ColorTokens = keyof ReturnType<typeof colors>;
 export type BackgroundColorTokens = keyof ReturnType<typeof backgroundColors>;
 export type TextColorTokens = keyof ReturnType<typeof textColors>;
 export type BorderColorTokens = keyof ReturnType<typeof borderColors>;
@@ -77,7 +75,6 @@ export type ThemeTokens =
   | SpaceTokens
   | SizeTokens
   | ZIndexTokens
-  | ColorTokens
   | BackgroundColorTokens
   | TextColorTokens
   | BorderColorTokens
@@ -86,4 +83,4 @@ export type ThemeTokens =
   | OrdinalTokens
   | FilterTokens;
 
-export type ThemeScales = StylePropScales;
+export type ThemeScales = StylePropScaleNames;

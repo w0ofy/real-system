@@ -3,11 +3,11 @@ import { Meta } from '@storybook/addon-docs';
 import { makeMdxParameters } from '/.storybook/utils';
 
 <Meta
-  title="Real System/Theming/Token System"
+  title="Real System/Theming/Design Tokens"
   parameters={makeMdxParameters()}
 />
 
-# Tokens
+# Design Tokens
 
 > **Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.<br/> _— Salesforce UX, Lightning Design System_**
 
@@ -32,7 +32,7 @@ The [getToken](#gettoken) style function was built so tokens can be grabbed from
 
 ```jsx
 import styled from '@real-system/styling-library';
-import { getToken, useToken } from '@real-system/theme-library';
+import { getToken, useTokens } from '@real-system/theme-library';
 import { Box } from '@real-system/box-primitive';
 
 const StyledBox = styled(Box)`
@@ -42,8 +42,7 @@ const StyledBox = styled(Box)`
 
 // or
 const MyComponent = () => {
-  const bg = useToken('color-background');
-  const space = useToken(5, 'space');
+  const [bg, space] = useTokens({ colors: 'color-background', space: 5 });
   const styles = {
     backgroundColor: bg,
     margin: space,
@@ -59,12 +58,24 @@ const MyComponent = () => {
 ```typescript
 type ReturnValue = string | number | undefined;
 /**
- * A styleFn to get theme tokens
+ * A styleFn to get a theme token
  */
 function getToken(
   token: ThemeTokens,
-  scale: ThemeScales = 'colors',
+  scale: ThemeScales = 'textColors',
   fallback: ReturnValue = undefined
+): ReturnValue;
+
+/**
+ * `getTokens`
+ * A styleFn to get many theme tokens
+ */
+
+type ReturnValue = any[];
+
+function getTokens(
+  tokenMap: Partial<Record<ThemeScales, ThemeTokens>>,
+  fallback: ReturnValue
 ): ReturnValue;
 ```
 
@@ -79,7 +90,19 @@ type ReturnValue = string | number | undefined;
  */
 function useToken(
   token: ThemeTokens,
-  scale: ThemeScales = 'colors',
+  scale: ThemeScales = 'textColors',
+  fallback: ReturnValue = undefined
+): ReturnValue;
+
+/**
+ * `useTokens`
+ * A styleFn to get theme tokens
+ */
+
+type ReturnValue = any[];
+
+function useTokens(
+  tokenMap: Partial<Record<ThemeScales, ThemeTokens>>,
   fallback: ReturnValue = undefined
 ): ReturnValue;
 ```

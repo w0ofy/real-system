@@ -4,7 +4,6 @@ import type { AddPrefix } from '@real-system/utils-library';
  * @description all palette keys, regardless of depth
  */
 export type PaletteKeys =
-  | 'brand'
   | 'primary'
   | 'secondary'
   | 'tertiary'
@@ -28,19 +27,23 @@ export type PaletteAccents = Extract<
   PaletteKeys,
   'primary' | 'secondary' | 'tertiary' | 'quaternary'
 >;
-export type PaletteColors = Extract<
+export type PaletteMains = Extract<
   PaletteKeys,
-  'brand' | 'neutral' | 'dark' | 'light'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'quaternary'
+  | 'neutral'
+  | 'dark'
+  | 'light'
 >;
 
 export type PaletteAccessors =
-  | PaletteColors
-  | AddPrefix<PaletteAccents, 'accent.'>
+  | PaletteMains
   | AddPrefix<PaletteStatuses, 'status.'>;
 
 export type Palette<T = string> = {
-  accent: { [key in PaletteAccents]: T };
   status: { [key in PaletteStatuses]: T };
-} & { [key in PaletteColors]: T };
+} & { [key in PaletteMains]: T };
 
 export type PaletteSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';

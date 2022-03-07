@@ -11,7 +11,7 @@ import {
   SvgGroup,
   TrackCircle,
   WheelCircle,
-} from './styles';
+} from './Spinner.styles';
 import { SpinnerProps } from './types';
 
 /**

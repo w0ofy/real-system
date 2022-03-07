@@ -31,19 +31,16 @@ design [token system](/docs/real-system-theming-token-system--page).
 ```typescript
 // real system default palette
 type Palette = {
-  brand: string;
+  primary: string;
+  secondary: string;
+  tertiary: string;
+  quaternary: string;
   status: {
     success: string;
     warning: string;
     danger: string;
     info: string;
     disabled: string;
-  };
-  accent: {
-    primary: string;
-    secondary: string;
-    tertiary: string;
-    quaternary: string;
   };
   neutral: string;
   dark: string;
@@ -62,19 +59,16 @@ import {
 } from '@real-system/core/theme-library';
 
 const customTheme = tokenizePalette({
-  brand: '#7d4cdb',
+  primary: '#7d4cdb',
+  secondary: '#FD6FFF',
+  tertiary: '#81FCED',
+  quaternary: '#FFCA58',
   status: {
     success: '#198038',
     warning: '#f1c21b',
     danger: '#da1e28',
     info: '#0043ce',
     disabled: '#e7e7e9',
-  },
-  accent: {
-    primary: '#6FFFB0',
-    secondary: '#FD6FFF',
-    tertiary: '#81FCED',
-    quaternary: '#FFCA58',
   },
   neutral: '#332f3c',
   dark: '#120c1d',
@@ -104,51 +98,13 @@ const StyledBox = styled(Box)`
   background-color: ${getToken('color-background')};
 `;
 
-// `useToken` usage
+// `useTokens` usage
 const MyComponent = () => {
-  const bg = useToken('color-background');
-  const space = useToken(5, 'space');
+  const [bg, space] = useTokens({ colors: 'color-background', space: 5 });
   const styles = {
     backgroundColor: bg,
     margin: space,
   };
   return <div styles={styles}>...</div>;
-};
-```
-
-### `getToken`
-
-`getToken` uses lodash's `get` and exposes type-checked `token`, `scale` and `fallback` arguments.
-
-```typescript
-type Props = { theme: DefaultTheme };
-type GetTokenReturnValue = string | number | undefined;
-/**
- * A styleFn to get theme tokens
- */
-const getToken = <T = GetTokenReturnValue>(
-  token: ThemeTokens,
-  scale: ThemeScales = 'colors',
-  fallback: GetTokenReturnValue = undefined
-) => {
-  return function (props: Props): T {
-    return get(props.theme, `${scale}.${token}`, fallback);
-  };
-};
-```
-
-### `useToken`
-
-`useToken` is a hook that simply wraps `getToken`
-
-```typescript
-const useToken = (
-  token: ThemeTokens,
-  scale: ThemeScales = 'colors',
-  fallback: GetTokenReturnValue = undefined
-): GetTokenReturnValue => {
-  const theme = primitiveUseTheme();
-  const value = getToken(token, scale, fallback)({ theme });
-  return value;
 };
 ```

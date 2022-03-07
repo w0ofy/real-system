@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react';
 
 import styled, {
-  getPseudoStyleProps,
+  getPseudoProps,
   getStyleProps,
 } from '@real-system/styling-library';
 
 import type { TextPrimitiveProps } from './types';
 
-const StyledText = styled.div<any>(getStyleProps, getPseudoStyleProps);
+const StyledText = styled.div<any>(getStyleProps, getPseudoProps);
 
 const baseStyles = {
   color: 'color-text',

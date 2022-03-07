@@ -1,7 +1,7 @@
 import { organScale } from '../../sizeUtils';
 
 /**
- ** Scales that don't require palette
+ ** Tokens that don't require palette
  **/
 
 const space = {
