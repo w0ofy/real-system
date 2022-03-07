@@ -1,9 +1,9 @@
-import { PSEUDO_STYLE_PROPS } from './pseudoProps';
+import { PSEUDO_PROPS } from './pseudoProps';
 import { STYLE_PROPS } from './styleProps';
 
 type Props = { [key: string]: any };
 
-const STYLE_PROPS_TO_BLOCK = [...STYLE_PROPS, ...PSEUDO_STYLE_PROPS];
+const STYLE_PROPS_TO_BLOCK = [...STYLE_PROPS, ...PSEUDO_PROPS];
 
 const preventSpreadingStyleProps = (props: Props): Props =>
   Object.keys(props).reduce((newProps: Props, key: any): Props => {

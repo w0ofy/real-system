@@ -13,7 +13,7 @@ export default {
 export const Default: Story<FlexProps> = (args) => (
   <Flex {...args}>
     <Flex>
-      <Box backgroundColor="color-background-brand-disabled" padding={8}>
+      <Box backgroundColor="color-background-primary-disabled" padding={8}>
         <Text>Left item</Text>
       </Box>
     </Flex>
@@ -32,7 +32,7 @@ export const Vertical: Story<FlexProps> = () => (
   <Flex vertical>
     <Flex grow>
       <Box
-        backgroundColor="color-background-brand-disabled"
+        backgroundColor="color-background-primary-disabled"
         padding={8}
         width="100%">
         <Text>Left item</Text>
@@ -53,7 +53,7 @@ export const Wrapping: Story<FlexProps> = () => (
   <Flex wrap>
     <Flex basis={900}>
       <Box
-        backgroundColor="color-background-brand-disabled"
+        backgroundColor="color-background-primary-disabled"
         padding={8}
         width="100%">
         <Text>Left item</Text>
@@ -74,7 +74,7 @@ export const VerticalAlignment: Story<FlexProps> = () => (
   <Flex yAlignContent="center">
     <Flex grow>
       <Box
-        backgroundColor="color-background-brand-disabled"
+        backgroundColor="color-background-primary-disabled"
         padding={8}
         width="100%">
         <Text>Left item</Text>
@@ -98,7 +98,7 @@ export const HorizontalAlignment: Story<FlexProps> = () => (
       <Box
         width="100%"
         textAlign="center"
-        backgroundColor="color-background-brand-disabled"
+        backgroundColor="color-background-primary-disabled"
         padding={8}>
         <Text>Left item</Text>
       </Box>

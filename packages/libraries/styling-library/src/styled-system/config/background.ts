@@ -15,7 +15,6 @@ const backgroundProps: StylePropConfig<BackgroundProps> = {
   background: true,
   bg: {
     property: 'background',
-    scale: STYLE_PROP_SCALES.colors,
   },
   backgroundImage: true,
   backgroundSize: true,

@@ -7,6 +7,9 @@
 <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=@realsystem/core&color=blue" alt="npm version" height="18"/></a>
 </p>
 
+<p align="center"><strong>⚠️⚠️⚠️ CONSUMER CAUTION ⚠️⚠️⚠️</strong></p>
+<p align="center"><strong>Under heavy development. API breaking changes will likely occur upon every patch release until a major release cut.</strong></p>
+
 #### **The entire library can be installed via [@real-system/core](packages/core)**
 
 - It is recommended that every component be imported by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at compile time. Real System's `libraries` can only be exported from core subfolders e.g. `@real-system/core/styling-library`. This is intentional - libraries have many exports which have ambiguous name clashes with many component-module exports.

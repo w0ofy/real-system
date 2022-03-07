@@ -4,7 +4,6 @@ import {
   borderColors,
   borders,
   borderWidths,
-  colors,
   filters,
   fonts,
   fontSizes,
@@ -27,10 +26,8 @@ import { makeTokenScale } from './utils';
  */
 const tokenizePalette = (palette: Palette = palettes.default) => ({
   palette: palette,
-  // scales that inherit the palette
+  // scales that require palette
   colors: {
-    // @todo remove `colors` tokens
-    ...colors(palette),
     ...backgroundColors(palette),
     ...borderColors(palette),
     ...textColors(palette),

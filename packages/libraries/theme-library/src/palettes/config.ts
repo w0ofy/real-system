@@ -37,7 +37,13 @@ export type PaletteConfig = {
 
 const palettes: PaletteConfig = {
   default: {
-    brand: '#3366FF',
+    primary: '#3366FF',
+    secondary: '#fd6fff',
+    tertiary: '#81fced',
+    quaternary: '#ffca58',
+    neutral: '#596375',
+    dark: '#101840',
+    light: '#ffffff',
     status: {
       success: '#248641',
       warning: '#ffb020',
@@ -45,18 +51,15 @@ const palettes: PaletteConfig = {
       info: '#0043ce',
       disabled: '#e7e7e9',
     },
-    accent: {
-      primary: '#6fffb0',
-      secondary: '#fd6fff',
-      tertiary: '#81fced',
-      quaternary: '#ffca58',
-    },
-    neutral: '#596375',
-    dark: '#101840',
-    light: '#ffffff',
   },
   stripe: {
-    brand: '#555abf',
+    primary: '#555abf',
+    secondary: '#7456b7',
+    tertiary: '#68d5f8',
+    quaternary: '#f3be58',
+    neutral: '#525e7e',
+    dark: '#32325d',
+    light: '#ffffff',
     status: {
       success: '#0d7361',
       warning: '#f3be58',
@@ -64,15 +67,6 @@ const palettes: PaletteConfig = {
       info: '#1f7bb7',
       disabled: '#e7e7e9',
     },
-    accent: {
-      primary: '#7456b7',
-      secondary: '#9251ab',
-      tertiary: '#68d5f8',
-      quaternary: '#f3be58',
-    },
-    neutral: '#525e7e',
-    dark: '#32325d',
-    light: '#ffffff',
   },
 };
 

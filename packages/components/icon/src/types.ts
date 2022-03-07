@@ -38,7 +38,7 @@ type IconProps = {
   /**
    * Controls the color of the icon. If an `intent` is not provided the color defaults to `currentColor`
    */
-  intent?: IconIntent | string;
+  intent?: IconIntent;
   /**
    * Overrides intent and can be used to customize the icon color beyond what intent provides i.e. a checkmark for Checkbox component
    */

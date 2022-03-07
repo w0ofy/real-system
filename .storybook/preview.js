@@ -45,7 +45,7 @@ export const parameters = {
         [
           'Getting Started',
           'Theming',
-          ['Overview', 'Token System', 'Tokens', 'Scales', 'Advanced'],
+          ['Overview', 'Design Tokens', 'Token List', 'Scales', 'Advanced'],
         ],
         'Components',
         'Layout',

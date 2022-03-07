@@ -8,7 +8,7 @@ import type { IconIntent } from './types';
 
 const INTENT_MAP: { [key in IconIntent]: TextColorTokens } = {
   default: 'color-text',
-  primary: 'color-text-brand',
+  primary: 'color-text-primary',
   success: 'color-text-success',
   danger: 'color-text-danger',
   warning: 'color-text-warning',

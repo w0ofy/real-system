@@ -5,13 +5,10 @@ import {
 } from '@real-system/dialog-primitive';
 import styled, {
   getStyleProps,
-  polished,
   StyleProps,
 } from '@real-system/styling-library';
 import { getToken, majorScale } from '@real-system/theme-library';
 import type { AnyPropUnion } from '@real-system/utils-library';
-
-const { transparentize } = polished;
 
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
   AnyPropUnion<StyleProps>
@@ -26,8 +23,7 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${({ theme }) =>
-    transparentize(0.6, getToken('color-background-neutral')({ theme }))};
+  background-color: ${getToken('color-background-overlay')};
   ${getStyleProps}
 `;
 

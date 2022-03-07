@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import { AriakitButton } from '@real-system/ariakit-library';
 import styled, {
-  getPseudoStyleProps,
+  getPseudoProps,
   getStyleProps,
   isNotStyleProp,
   isPropValid,
@@ -12,7 +12,7 @@ import type { ButtonPrimitiveProps } from './types';
 
 const StyledButtonPrimitive = styled(AriakitButton, {
   shouldForwardProp: (prop) => isPropValid(prop) && isNotStyleProp(prop),
-})<any>(getStyleProps, getPseudoStyleProps);
+})<any>(getStyleProps, getPseudoProps);
 
 const baseStyles = {
   appearance: 'none',
@@ -36,6 +36,7 @@ const baseStyles = {
   _hover: {},
   _focus: { boxShadow: 'shadow-focus', outline: 'none' },
   _active: { boxShadow: 'none' },
+  _disabled: {},
 };
 
 const ButtonPrimitive = forwardRef<HTMLButtonElement, ButtonPrimitiveProps>(

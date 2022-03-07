@@ -2,7 +2,7 @@ import css from '@styled-system/css';
 
 import type { StyleProps } from './styleProps';
 
-const pseudoStylePropsMap = {
+const pseudoPropsMap = {
   _hover: '&:hover',
   _hover_placeholder: '&:hover::placeholder',
   _active: '&:active, &[data-active=true]',
@@ -42,17 +42,17 @@ const pseudoStylePropsMap = {
     '&::-webkit-calendar-picker-indicator:hover',
 };
 
-type PseudoStylePropNames = keyof typeof pseudoStylePropsMap;
-type PseudoStyleProps = {
-  [key in PseudoStylePropNames]?: StyleProps;
+type PseudoPropNames = keyof typeof pseudoPropsMap;
+type PseudoProps = {
+  [key in PseudoPropNames]?: StyleProps;
 };
 
-const getPseudoStyleProps = (
+const getPseudoProps = (
   props: Record<string, any>
 ): ReturnType<typeof css> | Record<string, any> => {
   const pseudoProps = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
-  ) as Array<PseudoStylePropNames>;
+  ) as Array<PseudoPropNames>;
 
   if (pseudoProps.length === 0) {
     return {};
@@ -60,16 +60,14 @@ const getPseudoStyleProps = (
 
   const pseudoStyles: { [key: string]: any } = {};
   pseudoProps.forEach((pseudoProp) => {
-    if (pseudoStylePropsMap[pseudoProp] != null) {
-      pseudoStyles[pseudoStylePropsMap[pseudoProp]] = props[pseudoProp];
+    if (pseudoPropsMap[pseudoProp] != null) {
+      pseudoStyles[pseudoPropsMap[pseudoProp]] = props[pseudoProp];
     }
   });
   return css(pseudoStyles);
 };
 
-const PSEUDO_STYLE_PROPS = Object.keys(
-  pseudoStylePropsMap
-) as PseudoStylePropNames[];
+const PSEUDO_PROPS = Object.keys(pseudoPropsMap) as PseudoPropNames[];
 
-export type { PseudoStylePropNames, PseudoStyleProps };
-export { getPseudoStyleProps, PSEUDO_STYLE_PROPS };
+export type { PseudoPropNames, PseudoProps };
+export { getPseudoProps, PSEUDO_PROPS };

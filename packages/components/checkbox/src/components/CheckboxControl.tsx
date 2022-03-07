@@ -24,7 +24,7 @@ const CheckboxIcon = ({
         isSelected
           ? disabled
             ? 'color-text-disabled-strong-3'
-            : 'color-background-brand-contrast'
+            : 'color-background-primary-contrast'
           : 'transparent'
       }
     />
@@ -38,16 +38,14 @@ type CheckboxControlProps = {
   errorText?: string;
 } & UseInteractionsReturnValue;
 
-const selectedHoverColor = 'color-background-brand-strong-3';
-const selectedColor = 'color-background-brand';
-const errorHoverColor = 'color-background-danger-strong-3';
-const errorColor = 'color-background-danger';
 const transition =
   'box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in';
-const getSelectedColor = (isHovered: boolean) =>
-  isHovered ? selectedHoverColor : selectedColor;
-const getErrorColor = (isHovered: boolean) =>
-  isHovered ? errorHoverColor : errorColor;
+
+type ColorType = 'border' | 'background';
+const getSelectedColor = (isHovered: boolean, type: ColorType = 'background') =>
+  isHovered ? `color-${type}-primary-strong-3` : `color-${type}-primary`;
+const getErrorColor = (isHovered: boolean, type: ColorType = 'background') =>
+  isHovered ? `color-${type}-danger-strong-3` : `color-${type}-danger`;
 
 const CheckboxControl = ({
   disabled,
@@ -59,7 +57,7 @@ const CheckboxControl = ({
   indeterminate,
 }: CheckboxControlProps) => {
   const backgroundColor = useMemo(() => {
-    const defaultColor = 'color-background-brand-contrast';
+    const defaultColor = 'color-background-primary-contrast';
 
     if (disabled) {
       return 'color-background-disabled-weak-5';
@@ -82,10 +80,10 @@ const CheckboxControl = ({
       return 'color-border-disabled';
     }
     if (errorText) {
-      return getErrorColor(isHovered);
+      return getErrorColor(isHovered, 'border');
     }
     if (isSelected) {
-      return getSelectedColor(isHovered);
+      return getSelectedColor(isHovered, 'border');
     }
     if (isFocusedWithin) {
       return 'color-border-neutral';

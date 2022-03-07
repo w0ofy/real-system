@@ -7,11 +7,9 @@ import {
   DialogContentPrimitive,
   DialogOverlayPrimitive,
 } from '@real-system/dialog-primitive';
-import styled, { polished } from '@real-system/styling-library';
+import styled from '@real-system/styling-library';
 import { getToken, majorScale } from '@real-system/theme-library';
 import { Text } from '@real-system/typography';
-
-const { transparentize } = polished;
 
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))`
   position: fixed;
@@ -24,8 +22,7 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${({ theme }) =>
-    transparentize(0.6, getToken('color-background-neutral')({ theme }))};
+  background-color: ${getToken('color-background-overlay')};
 `;
 
 const DialogContent = styled(animated(DialogContentPrimitive))`

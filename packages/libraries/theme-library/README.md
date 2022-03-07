@@ -27,12 +27,15 @@ $ yarn add @real-system/theme-library
 ### Code Example
 
 ```jsx
-import { ThemeProvider, useToken } from '@real-system/theme-library';
+import { ThemeProvider, useTokens } from '@real-system/theme-library';
 
 const OtherComponent = () => {
-  const token = useToken('color-background');
+  const [bgColor, textColor] = useToken({
+    colors: 'color-background',
+    colors: 'color-text'
+  });
   return (
-    <div style={{ backgroundColor: token }}>...</div>
+    <div style={{ backgroundColor: bgColor, color: textColor }}>...</div>
   );
 };
 

@@ -1,8 +1,6 @@
-import type { ScaleValueTypings } from './_types';
+import type { StylePropScaleNames } from './_types';
 
-const STYLE_PROP_SCALES: {
-  [key in keyof ScaleValueTypings]: keyof ScaleValueTypings;
-} = {
+const STYLE_PROP_SCALES: Record<StylePropScaleNames, StylePropScaleNames> = {
   borders: 'borders',
   borderWidths: 'borderWidths',
   colors: 'colors',
@@ -19,6 +17,4 @@ const STYLE_PROP_SCALES: {
   zIndices: 'zIndices',
 };
 
-type StylePropScales = keyof typeof STYLE_PROP_SCALES;
-
-export { STYLE_PROP_SCALES, StylePropScales };
+export { STYLE_PROP_SCALES };

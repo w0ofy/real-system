@@ -4,20 +4,14 @@ import { Palette } from '../../palettes';
 import { makeColorRange, makeEachColorRange } from '../utils';
 
 /**
- ** Scales that require palette
+ ** Tokens that require palette
  **/
-
-const colors = (palette: Palette) => ({
-  'color-light': palette.light,
-  'color-dark': palette.dark,
-  ...makeEachColorRange<'color'>('color', palette),
-});
 
 const backgroundColors = (palette: Palette) => ({
   'color-background': palette.light,
   'color-background-dark': palette.dark,
   'color-background-light': palette.light,
-  'color-background-overlay': polished.transparentize(0.6, palette.dark),
+  'color-background-overlay': polished.transparentize(0.6, palette.neutral),
   ...makeEachColorRange<'color-background'>('color-background', palette),
 });
 
@@ -32,7 +26,6 @@ const borderColors = (palette: Palette) => ({
   'color-border': palette.neutral,
   'color-border-dark': palette.dark,
   'color-border-light': palette.light,
-  ...makeColorRange<'color-border'>('color-border')('brand', palette),
   ...makeEachColorRange<'color-border'>('color-border', palette),
 });
 
@@ -61,7 +54,7 @@ const combinedOverlayNeutral = (palette: Palette) => {
 };
 
 const shadows = (palette: Palette) => {
-  const shadowBorderBrand = shadowBorder<'brand'>('brand', palette, {
+  const shadowBorderBrand = shadowBorder<'primary'>('primary', palette, {
     prefix: '0 0 0 3px',
   });
   const dropShadowNeutral = dropShadow<'neutral'>('neutral', palette, {
@@ -69,7 +62,7 @@ const shadows = (palette: Palette) => {
   });
 
   return {
-    'shadow-focus': shadowBorderBrand['shadow-border-brand-weak-3'],
+    'shadow-focus': shadowBorderBrand['shadow-border-primary-weak-3'],
     'overlay-shadow-1': combinedOverlayNeutral(palette),
     ...shadowBorderBrand,
     ...dropShadowNeutral,
@@ -91,7 +84,6 @@ export {
   backgroundColors,
   borderColors,
   borders,
-  colors,
   filters,
   shadows,
   textColors,

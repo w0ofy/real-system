@@ -32,7 +32,7 @@ export const WithError = () => (
     helpText="Provide your first name"
     errorText="This field is required"
     required>
-    <Input type="text" id="firstName" />
+    <Input type="text" id="firstName" error />
   </Field>
 );
 

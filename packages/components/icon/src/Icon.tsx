@@ -2,7 +2,7 @@ import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
 import styled from '@real-system/styling-library';
-import { useToken } from '@real-system/theme-library';
+import { useTokens } from '@real-system/theme-library';
 
 import { INTENT_MAP, SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';
@@ -34,8 +34,12 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     () => (solid ? SolidIcons[icon] : OutlineIcons[icon]),
     [icon, solid]
   );
-  const iconSize = useToken(SIZE_MAP[size], 'sizes');
-  let iconColor = useToken(INTENT_MAP[intent || 'default']) as string;
+  // eslint-disable-next-line prefer-const
+  let [iconSize, iconColor] = useTokens({
+    sizes: SIZE_MAP[size],
+    colors: INTENT_MAP[intent || 'default'],
+  });
+
   if (intent === undefined || restProps.color) {
     iconColor = 'currentColor';
   }
