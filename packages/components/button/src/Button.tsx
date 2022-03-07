@@ -3,7 +3,7 @@ import React, { forwardRef, useMemo } from 'react';
 import { ButtonPrimitive } from '@real-system/button-primitive';
 import { Spinner } from '@real-system/spinner';
 import styled from '@real-system/styling-library';
-import { organScale } from '@real-system/theme-library';
+import { patchScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { makeButtonStylesFromVariant } from './Button.styles';
@@ -33,7 +33,7 @@ const Label = styled.span<LabelProps>((props) => ({
   whiteSpace: 'nowrap',
 }));
 
-const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? organScale(5) : 0);
+const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? patchScale(5) : 0);
 
 /**
  * @todo update sizes API with more variations

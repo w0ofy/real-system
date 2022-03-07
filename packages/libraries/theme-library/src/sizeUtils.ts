@@ -55,6 +55,7 @@ const majorScale = (
   size: number,
   { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
 ) => makeScaleUtil(size, 8, { origin: 'majorScale', format, destructive });
+
 /**
  * Creates a multiple-of-4 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
  */
@@ -62,57 +63,14 @@ const minorScale = (
   size: number,
   { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
 ) => makeScaleUtil(size, 4, { origin: 'minorScale', format, destructive });
+
 /**
  * Creates a multiple-of-2 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
  */
-const organScale = (
+const patchScale = (
   size: number,
   { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
-) => makeScaleUtil(size, 2, { origin: 'organScale', format, destructive });
-/**
- * Creates a multiple-of-1 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
- */
-const molecularScale = (
-  size: number,
-  { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
-) =>
-  makeScaleUtil(size, 1, {
-    origin: 'molecularScale',
-    format,
-    destructive,
-  });
-/**
- * Creates a multiple-of-0.5 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
- */
-const atomicScale = (
-  size: number,
-  { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
-) =>
-  makeScaleUtil(size, 0.5, {
-    origin: 'atomicScale',
-    format,
-    destructive,
-  });
-
-/**
- * Creates a multiple-of-0.25 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
- */
-const traceScale = (
-  size: number,
-  { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
-) =>
-  makeScaleUtil(size, 0.25, {
-    origin: 'traceScale',
-    format,
-    destructive,
-  });
+) => makeScaleUtil(size, 2, { origin: 'patchScale', format, destructive });
 
 export type { ScalerOptions };
-export {
-  atomicScale,
-  majorScale,
-  minorScale,
-  molecularScale,
-  organScale,
-  traceScale,
-};
+export { majorScale, minorScale, patchScale };
