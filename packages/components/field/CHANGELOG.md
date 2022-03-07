@@ -1,5 +1,20 @@
 # @real-system/field
 
+## 0.0.4
+
+### Patch Changes
+
+- [#290](https://github.com/bigwoof91/real-system/pull/290) [`543ad58`](https://github.com/bigwoof91/real-system/commit/543ad58ae368a18066a2a9e37d7fd634824eb0a4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Moving style props to styling library
+
+* [#299](https://github.com/bigwoof91/real-system/pull/299) [`78b7e30`](https://github.com/bigwoof91/real-system/commit/78b7e30bafaf42e9e9b6c9efe56fd97722868fb4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Removed 'brand' palette key; simplified intents; removed flat `colors` tokens
+
+* Updated dependencies [[`543ad58`](https://github.com/bigwoof91/real-system/commit/543ad58ae368a18066a2a9e37d7fd634824eb0a4), [`78b7e30`](https://github.com/bigwoof91/real-system/commit/78b7e30bafaf42e9e9b6c9efe56fd97722868fb4)]:
+  - @real-system/flex@0.0.19
+  - @real-system/typography@0.0.26
+  - @real-system/styling-library@0.0.8
+  - @real-system/theme-library@0.0.11
+  - @real-system/box-primitive@0.0.10
+
 ## 0.0.3
 
 ### Patch Changes

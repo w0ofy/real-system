@@ -1,5 +1,40 @@
 # @real-system/core
 
+## 0.0.29
+
+### Patch Changes
+
+- [#290](https://github.com/bigwoof91/real-system/pull/290) [`543ad58`](https://github.com/bigwoof91/real-system/commit/543ad58ae368a18066a2a9e37d7fd634824eb0a4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Moving style props to styling library
+
+* [#299](https://github.com/bigwoof91/real-system/pull/299) [`78b7e30`](https://github.com/bigwoof91/real-system/commit/78b7e30bafaf42e9e9b6c9efe56fd97722868fb4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Removed 'brand' palette key; simplified intents; removed flat `colors` tokens
+
+* Updated dependencies [[`543ad58`](https://github.com/bigwoof91/real-system/commit/543ad58ae368a18066a2a9e37d7fd634824eb0a4), [`78b7e30`](https://github.com/bigwoof91/real-system/commit/78b7e30bafaf42e9e9b6c9efe56fd97722868fb4)]:
+  - @real-system/alert@0.0.11
+  - @real-system/button@0.0.27
+  - @real-system/checkbox@0.0.12
+  - @real-system/dialog@0.0.19
+  - @real-system/field@0.0.4
+  - @real-system/flex@0.0.19
+  - @real-system/icon@0.0.26
+  - @real-system/input@0.0.25
+  - @real-system/popover@0.0.2
+  - @real-system/radio-group@0.0.5
+  - @real-system/spinner@0.0.25
+  - @real-system/textarea@0.0.9
+  - @real-system/toaster@0.0.10
+  - @real-system/tooltip@0.0.3
+  - @real-system/truncate@0.0.4
+  - @real-system/typography@0.0.26
+  - @real-system/visually-hidden@0.0.23
+  - @real-system/styling-library@0.0.8
+  - @real-system/theme-library@0.0.11
+  - @real-system/utils-library@0.0.11
+  - @real-system/box-primitive@0.0.10
+  - @real-system/button-primitive@0.0.20
+  - @real-system/dialog-primitive@0.0.15
+  - @real-system/text-primitive@0.0.8
+  - @real-system/a11y-library@0.0.2
+
 ## 0.0.28
 
 ### Patch Changes

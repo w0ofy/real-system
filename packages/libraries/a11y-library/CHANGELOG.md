@@ -1,5 +1,11 @@
 # @real-system/react-aria
 
+## 0.0.2
+
+### Patch Changes
+
+- [#299](https://github.com/bigwoof91/real-system/pull/299) [`78b7e30`](https://github.com/bigwoof91/real-system/commit/78b7e30bafaf42e9e9b6c9efe56fd97722868fb4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Removed 'brand' palette key; simplified intents; removed flat `colors` tokens
+
 ## 0.0.1
 
 ### Patch Changes
