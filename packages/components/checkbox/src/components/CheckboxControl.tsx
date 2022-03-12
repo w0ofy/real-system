@@ -23,8 +23,8 @@ const CheckboxIcon = ({
       color={
         isSelected
           ? disabled
-            ? 'color-text-disabled-strong-3'
-            : 'color-background-primary-contrast'
+            ? 'gray-400'
+            : 'blue-500-readable'
           : 'transparent'
       }
     />
@@ -41,11 +41,10 @@ type CheckboxControlProps = {
 const transition =
   'box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in';
 
-type ColorType = 'border' | 'background';
-const getSelectedColor = (isHovered: boolean, type: ColorType = 'background') =>
-  isHovered ? `color-${type}-primary-strong-3` : `color-${type}-primary`;
-const getErrorColor = (isHovered: boolean, type: ColorType = 'background') =>
-  isHovered ? `color-${type}-danger-strong-3` : `color-${type}-danger`;
+const getSelectedColor = (isHovered: boolean) =>
+  isHovered ? 'blue-600' : 'blue-500';
+const getErrorColor = (isHovered: boolean) =>
+  isHovered ? 'red-600' : 'red-500';
 
 const CheckboxControl = ({
   disabled,
@@ -57,11 +56,9 @@ const CheckboxControl = ({
   indeterminate,
 }: CheckboxControlProps) => {
   const backgroundColor = useMemo(() => {
-    const defaultColor = 'color-background-primary-contrast';
+    const defaultColor = 'blue-500-readable';
 
-    if (disabled) {
-      return 'color-background-disabled-weak-5';
-    }
+    if (disabled) return 'gray-100';
     if (isSelected) {
       if (errorText) {
         return getErrorColor(isHovered);
@@ -72,21 +69,17 @@ const CheckboxControl = ({
   }, [disabled, isSelected, errorText, isHovered]);
 
   const borderColor = useMemo(() => {
-    const defaultColor = isHovered
-      ? 'color-border-neutral-weak-2'
-      : 'color-border-neutral-weak-5';
+    const defaultColor = isHovered ? 'gray-300' : 'gray-200';
 
-    if (disabled) {
-      return 'color-border-disabled';
-    }
+    if (disabled) return 'gray-300';
     if (errorText) {
-      return getErrorColor(isHovered, 'border');
+      return getErrorColor(isHovered);
     }
     if (isSelected) {
-      return getSelectedColor(isHovered, 'border');
+      return getSelectedColor(isHovered);
     }
     if (isFocusedWithin) {
-      return 'color-border-neutral';
+      return 'gray-200';
     }
     return defaultColor;
   }, [isHovered, disabled, errorText, isSelected, isFocusedWithin]);
@@ -103,7 +96,7 @@ const CheckboxControl = ({
       borderColor={borderColor}
       borderRadius={2}
       transition={transition}
-      boxShadow={!isPressed && isFocusedWithin ? 'shadow-focus' : 'none'}>
+      boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}>
       <CheckboxIcon
         isSelected={isSelected}
         disabled={disabled}

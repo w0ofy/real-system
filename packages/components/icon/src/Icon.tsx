@@ -37,7 +37,7 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
   // eslint-disable-next-line prefer-const
   let [iconSize, iconColor] = useTokens({
     sizes: SIZE_MAP[size],
-    colors: INTENT_MAP[intent || 'default'],
+    colors: INTENT_MAP[intent || 'neutral'],
   });
 
   if (intent === undefined || restProps.color) {

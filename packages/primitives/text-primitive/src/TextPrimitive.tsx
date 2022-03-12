@@ -10,7 +10,7 @@ import type { TextPrimitiveProps } from './types';
 const StyledText = styled.div<any>(getStyleProps, getPseudoProps);
 
 const baseStyles = {
-  color: 'color-text',
+  color: 'gray-800',
   fontSize: 1,
   fontWeight: 0,
   lineHeight: 4,

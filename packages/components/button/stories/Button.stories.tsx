@@ -19,7 +19,7 @@ export default {
   },
   args: {
     children: 'Button',
-    variant: 'default',
+    variant: 'outline',
   },
 } as Meta;
 
@@ -47,10 +47,10 @@ const Row = (props) => (
 
 const ShowcaseTemplate = (args: ButtonProps) => (
   <Box display="flex" flexDirection="column" marginRight={10}>
-    <Heading as="h2" variant="heading2">
+    <Heading as="h2">
       {capitalize(args.variant!)} {args.size ? capitalize(args.size!) : ''}
     </Heading>
-    {/** neutral / default buttons */}
+    {/** neutral  buttons */}
     <Row>
       <Button {...args} />
       <Button {...args} trailingIcon={<Icon icon="cog" />} />
@@ -59,94 +59,106 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         <Icon icon="download" />
       </Button>
     </Row>
-    {args.variant !== 'floating' && (
-      <Row>
-        <Button {...args} disabled />
-        <Button {...args} disabled trailingIcon={<Icon icon="cog" />} />
-        <Button {...args} disabled leadingIcon={<Icon icon="cog" />} />
-        <Button {...args} disabled>
-          <Icon icon="download" />
-        </Button>
-      </Row>
-    )}
+    <Row>
+      <Button {...args} disabled />
+      <Button {...args} disabled trailingIcon={<Icon icon="cog" />} />
+      <Button {...args} disabled leadingIcon={<Icon icon="cog" />} />
+      <Button {...args} disabled>
+        <Icon icon="download" />
+      </Button>
+    </Row>
     {/** primary buttons */}
     <Row>
-      <Button {...args} intent="primary" />
-      <Button {...args} intent="primary" trailingIcon={<Icon icon="login" />} />
-      <Button {...args} intent="primary" leadingIcon={<Icon icon="login" />} />
-      <Button {...args} intent="primary">
+      <Button {...args} colorScheme="purple" />
+      <Button
+        {...args}
+        colorScheme="purple"
+        trailingIcon={<Icon icon="login" />}
+      />
+      <Button
+        {...args}
+        colorScheme="purple"
+        leadingIcon={<Icon icon="login" />}
+      />
+      <Button {...args} colorScheme="purple">
         <Icon icon="login" />
       </Button>
     </Row>
     <Row>
-      <Button {...args} intent="primary" disabled />
+      <Button {...args} colorScheme="purple" disabled />
       <Button
         {...args}
         disabled
-        intent="primary"
+        colorScheme="purple"
         trailingIcon={<Icon icon="login" />}
       />
       <Button
         {...args}
         disabled
-        intent="primary"
+        colorScheme="purple"
         leadingIcon={<Icon icon="login" />}
       />
-      <Button {...args} intent="primary" disabled>
+      <Button {...args} colorScheme="purple" disabled>
         <Icon icon="login" />
       </Button>
     </Row>
     {/** success buttons */}
     <Row>
-      <Button {...args} intent="success" />
-      <Button {...args} intent="success" trailingIcon={<Icon icon="save" />} />
-      <Button {...args} intent="success" leadingIcon={<Icon icon="save" />} />
-      <Button {...args} intent="success">
+      <Button {...args} colorScheme="green" />
+      <Button
+        {...args}
+        colorScheme="green"
+        trailingIcon={<Icon icon="save" />}
+      />
+      <Button
+        {...args}
+        colorScheme="green"
+        leadingIcon={<Icon icon="save" />}
+      />
+      <Button {...args} colorScheme="green">
         <Icon icon="save" />
       </Button>
     </Row>
     <Row>
-      <Button {...args} intent="success" disabled />
+      <Button {...args} colorScheme="green" disabled />
       <Button
         {...args}
-        intent="success"
+        colorScheme="green"
         trailingIcon={<Icon icon="save" />}
         disabled
       />
       <Button
         {...args}
-        intent="success"
+        colorScheme="green"
         leadingIcon={<Icon icon="save" />}
         disabled
       />
-      <Button {...args} intent="success" disabled>
+      <Button {...args} colorScheme="green" disabled>
         <Icon icon="save" />
       </Button>
     </Row>
     {/** danger buttons */}
     <Row>
-      <Button {...args} intent="danger" />
-      <Button {...args} intent="danger" trailingIcon={<Icon icon="trash" />} />
-      <Button {...args} intent="danger" leadingIcon={<Icon icon="trash" />} />
-      <Button {...args} intent="danger">
+      <Button {...args} colorScheme="red" />
+      <Button {...args} colorScheme="red" trailingIcon={<Icon icon="trash" />} />
+      <Button {...args} colorScheme="red" leadingIcon={<Icon icon="trash" />} />
+      <Button {...args} colorScheme="red">
         <Icon icon="trash" />
       </Button>
     </Row>
     <Row>
-      <Button {...args} intent="danger" disabled />
-      <Button
-        {...args}
-        intent="danger"
+      <Button {...args} colorScheme="red" disabled />
+      <Button {...args} colorScheme="red"
         trailingIcon={<Icon icon="trash" />}
         disabled
       />
       <Button
         {...args}
-        intent="danger"
+        colorScheme="red"
         leadingIcon={<Icon icon="trash" />}
         disabled
       />
-      <Button {...args} intent="danger" disabled>
+      <Button {...args} colorScheme="red" disabled>
         <Icon icon="trash" />
       </Button>
     </Row>
@@ -155,20 +167,20 @@ const ShowcaseTemplate = (args: ButtonProps) => (
 
 ShowcaseTemplate.defaultProps = {
   children: 'Button',
-  variant: 'default',
+  variant: 'outline',
   intent: 'neutral',
   marginRight: 10,
 };
 
-export const DefaultButton = (args) => (
+export const OutlineButton = (args) => (
   <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
     <ShowcaseTemplate {...args} />
   </Container>
 );
 
-export const PrimaryButton = (args) => (
+export const FillButton = (args) => (
   <Container flexDirection="row" flexWrap="wrap" alignItems="flex-start">
-    <ShowcaseTemplate {...args} variant="primary" />
+    <ShowcaseTemplate {...args} variant="fill" />
   </Container>
 );
 

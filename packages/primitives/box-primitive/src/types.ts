@@ -20,8 +20,6 @@ type BoxComponentProps = {
   // optgroup props
   label?: string;
   datetime?: string;
-  /** variant for variant styling */
-  variant?: string;
   /** generually used for inputs and labels */
   htmlFor?: string | undefined;
 } & RealSystemElementProps;

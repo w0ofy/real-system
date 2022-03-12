@@ -29,11 +29,6 @@ const ThemeProvider = ({
   );
 };
 
-/**
- * @todo create ThemeConsumer
- * @todo create Theme[Component] model
- */
-
 const ThemeContext = PrimitiveThemeContext;
 
 export { ThemeContext, ThemeProvider };

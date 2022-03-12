@@ -6,7 +6,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 const StyledHeading = forwardRef<HTMLHeadingElement, HeadingProps>(
   function StyledHeading(props, ref) {
-    return <Text.Heading {...props} as="h1" variant="heading4" ref={ref} />;
+    return <Text.Heading {...props} as="h1" size="h4" ref={ref} />;
   }
 );
 

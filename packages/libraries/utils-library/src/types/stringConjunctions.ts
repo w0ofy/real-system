@@ -9,6 +9,14 @@ export type RemoveSuffix<
 export type AddPrefix<TKey, TPrefix extends string> = TKey extends string
   ? `${TPrefix}${TKey}`
   : never;
+
+/**
+ * @description add a suffix to a string type
+ */
+export type AddSuffix<TKey, TSuffix extends string> = TKey extends string
+  ? `${TKey}${TSuffix}`
+  : never;
+
 /**
  * @description remove a prefix to a string type
  */

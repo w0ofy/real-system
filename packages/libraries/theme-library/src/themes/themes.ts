@@ -8,4 +8,6 @@ const themes = {
   stripe: tokenizePalette(palettes.stripe),
 };
 
+console.log(themes.realsystem);
+
 export { themes };

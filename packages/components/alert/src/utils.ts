@@ -1,4 +1,5 @@
 import type { Icons } from '@real-system/icon';
+import type { PaletteColorNames } from '@real-system/theme-library';
 
 import type { AlertIntents } from './types';
 
@@ -9,4 +10,11 @@ const ICON_MAP: Record<AlertIntents, Icons> = {
   warning: 'exclamation-circle',
 };
 
-export { ICON_MAP };
+const INTENT_COLOR_MAP: Record<AlertIntents, PaletteColorNames> = {
+  success: 'green',
+  info: 'blue',
+  warning: 'orange',
+  danger: 'red',
+};
+
+export { ICON_MAP, INTENT_COLOR_MAP };

@@ -17,7 +17,7 @@ const canSelectAllStyles = {
     paddingY: 2,
     paddingX: 3,
     borderRadius: 1,
-    backgroundColor: 'color-background-primary-weak-9',
+    backgroundColor: 'blue-50',
   },
 };
 

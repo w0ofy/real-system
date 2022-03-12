@@ -20,7 +20,7 @@ const CheckboxLabel = ({
       {required && <RequiredDot disabled={disabled} />}
       <Box
         as="span"
-        color={disabled ? 'color-text-strong-3' : 'color-text'}
+        color={disabled ? 'gray-300' : 'gray-500'}
         fontFamily="font-family-text"
         fontSize={1}
         fontWeight={1}

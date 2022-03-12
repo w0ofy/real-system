@@ -88,19 +88,19 @@ If you want to use a `token` outside of style props, you can use the `getToken` 
 
 ```jsx
 // style prop usage
-<Box p={5} m={2} backgroundColor="color-background"></Box>;
+<Box p={5} m={2} backgroundColor="white"></Box>;
 
 // `getToken` usage
 import { getToken, useTheme } from '@real-system/theme-library';
 
 const StyledBox = styled(Box)`
   margin: ${getToken(2, 'space')};
-  background-color: ${getToken('color-background')};
+  background-color: ${getToken('white')};
 `;
 
 // `useTokens` usage
 const MyComponent = () => {
-  const [bg, space] = useTokens({ colors: 'color-background', space: 5 });
+  const [bg, space] = useTokens({ colors: 'white', space: 5 });
   const styles = {
     backgroundColor: bg,
     margin: space,

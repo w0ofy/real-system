@@ -1933,7 +1933,7 @@ module.exports = {
     81: '0 3px 7px #030305',
     82: '0 3px 7px #b8b299',
     83: '0 3px 7px white',
-    'shadow-focus': '0 0 0 3px #7093ff',
+    'focus-outline': '0 0 0 3px #7093ff',
     'overlay-shadow-1': '#9094a3 0px 0px 1px, #9094a3 0px 16px 24px -8px',
     'shadow-border-brand-weak-95': '0 0 0 3px #f4f7ff',
     'shadow-border-brand-weak-9': '0 0 0 3px #eaefff',

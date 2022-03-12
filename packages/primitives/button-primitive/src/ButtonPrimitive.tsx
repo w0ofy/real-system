@@ -16,7 +16,7 @@ const StyledButtonPrimitive = styled(AriakitButton, {
 
 const baseStyles = {
   appearance: 'none',
-  color: 'color-text',
+  color: 'gray-500',
   background: 'none',
   display: 'inline-flex',
   flexWrap: 'nowrap',
@@ -34,7 +34,7 @@ const baseStyles = {
   margin: 0,
   cursor: 'pointer',
   _hover: {},
-  _focus: { boxShadow: 'shadow-focus', outline: 'none' },
+  _focus: { boxShadow: 'focus-outline', outline: 'none' },
   _active: { boxShadow: 'none' },
   _disabled: {},
 };

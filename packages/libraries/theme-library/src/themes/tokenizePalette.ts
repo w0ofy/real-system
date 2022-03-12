@@ -1,9 +1,8 @@
 import { Palette, palettes } from '../palettes';
 import {
-  backgroundColors,
-  borderColors,
   borders,
   borderWidths,
+  colors,
   filters,
   fonts,
   fontSizes,
@@ -14,39 +13,36 @@ import {
   shadows,
   sizes,
   space,
-  textColors,
   zIndices,
 } from '../tokens/factory';
 
 import { makeTokenScale } from './utils';
 
 /**
- *
  * @description generates a tokenized theme with the given Palette. Uses the realsystem palette by default
  */
-const tokenizePalette = (palette: Palette = palettes.default) => ({
-  palette: palette,
-  // scales that require palette
-  colors: {
-    ...backgroundColors(palette),
-    ...borderColors(palette),
-    ...textColors(palette),
-  },
-  filters: filters(palette),
-  borders: makeTokenScale(borders(palette)),
-  shadows: makeTokenScale(shadows(palette)),
-  // scales that DON'T require palette
-  fonts: makeTokenScale(fonts),
-  fontSizes: makeTokenScale(fontSizes),
-  fontWeights: makeTokenScale(fontWeights),
-  letterSpacings: makeTokenScale(letterSpacings),
-  lineHeights: makeTokenScale(lineHeights),
-  borderWidths: makeTokenScale(borderWidths),
-  radii: makeTokenScale(radii),
-  sizes: makeTokenScale(sizes),
-  zIndices: makeTokenScale(zIndices),
-  space: makeTokenScale(space),
-});
+const tokenizePalette = (palette: Palette = palettes.default) => {
+  const colorTokens = colors(palette);
+  return {
+    palette,
+    // scales that require color tokens
+    colors: colorTokens,
+    filters: makeTokenScale(filters(colorTokens)),
+    borders: makeTokenScale(borders(colorTokens)),
+    shadows: makeTokenScale(shadows(colorTokens)),
+    // scales that DON'T require color tokens
+    fonts: makeTokenScale(fonts),
+    fontSizes: makeTokenScale(fontSizes),
+    fontWeights: makeTokenScale(fontWeights),
+    letterSpacings: makeTokenScale(letterSpacings),
+    lineHeights: makeTokenScale(lineHeights),
+    borderWidths: makeTokenScale(borderWidths),
+    radii: makeTokenScale(radii),
+    sizes: makeTokenScale(sizes),
+    zIndices: makeTokenScale(zIndices),
+    space: makeTokenScale(space),
+  };
+};
 
 type ThemeShape = ReturnType<typeof tokenizePalette>;
 

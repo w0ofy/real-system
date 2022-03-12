@@ -49,7 +49,7 @@ export const StoryFieldGroup = () => (
         <Input type="tel" id="phoneNumber" />
       </Field>
     </FieldGroup>
-    <Button type="reset" variant="primary">
+    <Button type="reset" variant="fill">
       Submit
     </Button>
   </form>
@@ -70,7 +70,7 @@ export const InlineFieldGroup = () => (
         <Input type="tel" id="phoneNumber" />
       </Field>
     </FieldGroup>
-    <Button type="reset" variant="primary">
+    <Button type="reset" variant="fill">
       Submit
     </Button>
   </form>
@@ -97,7 +97,7 @@ export const WithoutBuiltins = () => (
         <Label htmlFor="phoneNumber">Phone number</Label>
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Button type="reset" variant="primary">
+      <Button type="reset" variant="fill">
         Submit
       </Button>
     </FieldGroup>

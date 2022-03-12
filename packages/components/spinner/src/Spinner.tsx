@@ -23,7 +23,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
     title = 'Loading',
     as = 'span',
     display = 'flex',
-    color = 'color-text',
+    color = 'gray-500',
     delay = 250,
     ...restProps
   },

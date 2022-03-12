@@ -3,11 +3,10 @@ import React, { forwardRef, useMemo } from 'react';
 import { Box } from '@real-system/box-primitive';
 import { Icon, IconProps } from '@real-system/icon';
 import { TextPrimitive } from '@real-system/text-primitive';
-import { PaletteIntents } from '@real-system/theme-library';
 
 import { CommonTextProps } from './types';
 
-type HelpTextIntents = Extract<PaletteIntents, 'danger'> | 'default';
+type HelpTextIntents = Extract<IconProps['intent'], 'danger' | 'neutral'>;
 export type HelpTextProps = {
   as?: 'span' | 'div';
   children?: React.ReactNode;
@@ -17,31 +16,25 @@ export type HelpTextProps = {
   errorText?: string;
 } & CommonTextProps;
 
-const LABEL_INTENT: { [key in HelpTextIntents]: string } = {
-  danger: 'danger',
-  default: 'neutral-weak-1',
-};
-const ICON_INTENT: {
-  [key in HelpTextIntents]: IconProps['intent'];
-} = {
-  danger: 'danger',
-  default: 'default',
+const LABEL_COLORS: { [key in HelpTextIntents]: string } = {
+  danger: 'red-500',
+  neutral: 'gray-400',
 };
 
 const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
   {
     children,
-    variant = 'default',
     as = 'span',
     hideErrorIcon = false,
     errorText,
+    intent: intentProp = 'neutral',
     ...restProps
   },
   ref
 ) {
-  const variantOverride = useMemo(
-    () => (errorText ? 'danger' : variant),
-    [errorText, variant]
+  const intent = useMemo(
+    () => (errorText ? 'danger' : intentProp),
+    [errorText, intentProp]
   );
 
   return (
@@ -55,7 +48,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
       fontSize={1}
       fontWeight={0}
       lineHeight={1}
-      color={`color-text-${LABEL_INTENT[variantOverride]}`}
+      color={LABEL_COLORS[intent]}
       {...restProps}
       ref={ref}>
       {!hideErrorIcon && errorText && (
@@ -63,7 +56,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
           <Icon
             icon="exclamation-circle"
             solid
-            intent={ICON_INTENT[variantOverride]}
+            intent={intent}
             marginRight={2}
           />
         </Box>

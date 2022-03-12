@@ -55,58 +55,58 @@
     "code": "<Input />"
   },
   {
-    "group": "Text",
+    "group": "Typography",
     "name": "Default",
     "code": "<Text>paragraph</Text>"
   },
   {
-    "group": "Text",
+    "group": "Typography",
     "name": "Inline",
-    "code": "<Text variant=\"inline\">inline/span</Text>"
+    "code": "<Text inline>inline/span</Text>"
   },
   {
-    "group": "Text",
+    "group": "Typography",
     "name": "Medium",
     "code": "<Text fontWeight=\"1\">medium font weight</Text>"
   },
   {
-    "group": "Text",
+    "group": "Typography",
     "name": "Semi Bold",
     "code": "<Text fontWeight=\"2\">semi bold</Text>"
   },
   {
-    "group": "Text",
+    "group": "Typography",
     "name": "Bold",
     "code": "<Text fontWeight=\"3\">bold</Text>"
   },
   {
-    "group": "Text",
-    "name": "Heading1",
-    "code": "<Text.Heading as=\"h1\" variant=\"heading1\">Heading1</Text.Heading>"
+    "group": "Typography",
+    "name": "H1",
+    "code": "<Text.Heading as=\"h1\">Heading1</Text.Heading>"
   },
   {
-    "group": "Text",
-    "name": "Heading2",
-    "code": "<Text.Heading as=\"h2\" variant=\"heading2\">Heading2</Text.Heading>"
+    "group": "Typography",
+    "name": "H2",
+    "code": "<Text.Heading as=\"h2\">Heading2</Text.Heading>"
   },
   {
-    "group": "Text",
-    "name": "Heading3",
-    "code": "<Text.Heading as=\"h3\" variant=\"heading3\">Heading3</Text.Heading>"
+    "group": "Typography",
+    "name": "H3",
+    "code": "<Text.Heading as=\"h3\">Heading3</Text.Heading>"
   },
   {
-    "group": "Text",
-    "name": "Heading4",
-    "code": "<Text.Heading as=\"h4\" variant=\"heading4\">Heading4</Text.Heading>"
+    "group": "Typography",
+    "name": "H4",
+    "code": "<Text.Heading as=\"h4\">Heading4</Text.Heading>"
   },
   {
-    "group": "Text",
-    "name": "Heading5",
-    "code": "<Text.Heading as=\"h5\" variant=\"heading5\">Heading5</Text.Heading>"
+    "group": "Typography",
+    "name": "H5",
+    "code": "<Text.Heading as=\"h5\">Heading5</Text.Heading>"
   },
   {
-    "group": "Text",
-    "name": "Heading6",
-    "code": "<Text.Heading as=\"h6\" variant=\"heading6\">Heading6</Text.Heading>"
+    "group": "Typography",
+    "name": "H6",
+    "code": "<Text.Heading as=\"h6\">Heading6</Text.Heading>"
   }
 ]

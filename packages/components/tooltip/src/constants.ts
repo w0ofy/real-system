@@ -7,6 +7,4 @@ const TRANSITIONS_CONFIG: UseTransitionProps = {
   config: { mass: 1, tension: 500, friction: 40 },
 };
 
-const BG_COLOR = 'color-background-dark';
-
-export { BG_COLOR, TRANSITIONS_CONFIG };
+export { TRANSITIONS_CONFIG };

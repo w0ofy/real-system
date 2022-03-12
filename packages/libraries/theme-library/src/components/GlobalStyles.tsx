@@ -7,7 +7,7 @@ import { normalizeStyles } from '../normalize';
 const realSystemStyles = css({
   html: {
     fontSize: 'rem-base',
-    outlineColor: 'color-border-primary-weak-3',
+    outlineColor: 'blue-400',
   },
   body: {
     WebkitFontSmoothing: 'subpixel-antialiased',
@@ -15,7 +15,7 @@ const realSystemStyles = css({
     fontFamily: 'font-family-text',
     fontWeight: 0,
     letterSpacing: 'body',
-    backgroundColor: 'color-background',
+    backgroundColor: 'white',
   },
 });
 

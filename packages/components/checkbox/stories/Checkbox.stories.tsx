@@ -60,7 +60,7 @@ export const CheckboxGroup = (args) => {
 };
 
 export const Indeterminate = (args) => {
-  const [checkedItems, setCheckedItems] = React.useState([]);
+  const [checkedItems, setCheckedItems] = React.useState(['associate']);
 
   const values = ['principle', 'staff', 'senior', 'mid', 'associate'];
   const { indeterminateProps, checkBoxGroupProps } = useIndeterminate({
@@ -73,12 +73,10 @@ export const Indeterminate = (args) => {
   return (
     <RealCheckboxGroup
       label="What engineering level is the new team member?"
-      defaultValue={['associate']}
       value={checkedItems}
       helpText="Select at least 1 level for the new engineer"
-      {...checkBoxGroupProps}
-      {...args}>
-      <CheckboxGroupItem value={'all'} {...indeterminateProps}>
+      {...checkBoxGroupProps}>
+      <CheckboxGroupItem value="all" {...indeterminateProps}>
         All
       </CheckboxGroupItem>
       <CheckboxGroupItem value={values[0]}>Principle</CheckboxGroupItem>

@@ -17,12 +17,10 @@ type RadioControlProps = {
 const transition =
   'box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in';
 
-type ColorType = 'border' | 'background';
-
-const getSelectedColor = (isHovered: boolean, type: ColorType = 'background') =>
-  isHovered ? `color-${type}-primary-strong-3` : `color-${type}-primary`;
-const getErrorColor = (isHovered: boolean, type: ColorType = 'background') =>
-  isHovered ? `color-${type}-danger-strong-3` : `color-${type}-danger`;
+const getSelectedColor = (isHovered: boolean) =>
+  isHovered ? 'blue-600' : 'blue-500';
+const getErrorColor = (isHovered: boolean) =>
+  isHovered ? 'red-600' : 'red-500';
 
 const RadioControl = ({
   disabled,
@@ -34,9 +32,9 @@ const RadioControl = ({
 }: RadioControlProps) => {
   const backgroundColor = useCallback(
     (isDot = false) => {
-      const defaultColor = 'color-background-primary-contrast';
+      const defaultColor = 'blue-500-readable';
 
-      if (disabled) return 'color-background-disabled-weak-5';
+      if (disabled) return 'gray-100';
       if (isSelected && !isDot) {
         if (errorText) {
           return getErrorColor(isHovered);
@@ -49,19 +47,17 @@ const RadioControl = ({
   );
 
   const borderColor = useMemo(() => {
-    const defaultColor = isHovered
-      ? 'color-border-neutral-weak-2'
-      : 'color-border-neutral-weak-5';
+    const defaultColor = isHovered ? 'gray-300' : 'gray-200';
 
-    if (disabled) return 'color-border-disabled';
+    if (disabled) return 'gray-300';
     if (errorText) {
-      return getErrorColor(isHovered, 'border');
+      return getErrorColor(isHovered);
     }
     if (isSelected) {
-      return getSelectedColor(isHovered, 'border');
+      return getSelectedColor(isHovered);
     }
     if (isFocusedWithin) {
-      return 'color-border-neutral';
+      return 'gray-200';
     }
 
     return defaultColor;
@@ -80,7 +76,7 @@ const RadioControl = ({
       borderStyle="solid"
       borderColor={borderColor}
       borderRadius="border-radius-circle"
-      boxShadow={!isPressed && isFocusedWithin ? 'shadow-focus' : 'none'}
+      boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}
       backgroundColor={backgroundColor()}
       transition={transition}>
       <Box
