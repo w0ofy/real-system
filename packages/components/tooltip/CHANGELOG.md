@@ -1,5 +1,13 @@
 # @real-system/tooltip
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`fb3aea3`](https://github.com/bigwoof91/real-system/commit/fb3aea3948e20b8cb17dc11f93fe3771c1fa8b74)]:
+  - @real-system/theme-library@0.0.13
+  - @real-system/typography@0.0.28
+
 ## 0.0.4
 
 ### Patch Changes

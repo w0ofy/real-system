@@ -1,5 +1,12 @@
 # @real-system/text
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [[`fb3aea3`](https://github.com/bigwoof91/real-system/commit/fb3aea3948e20b8cb17dc11f93fe3771c1fa8b74)]:
+  - @real-system/theme-library@0.0.13
+
 ## 0.0.9
 
 ### Patch Changes
