@@ -1,5 +1,11 @@
 # @real-system/theme
 
+## 0.0.13
+
+### Patch Changes
+
+- [`fb3aea3`](https://github.com/bigwoof91/real-system/commit/fb3aea3948e20b8cb17dc11f93fe3771c1fa8b74) - Cleaning up intent and status type usage
+
 ## 0.0.12
 
 ### Patch Changes

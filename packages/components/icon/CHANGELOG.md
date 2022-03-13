@@ -1,5 +1,14 @@
 # @real-system/icon
 
+## 0.0.28
+
+### Patch Changes
+
+- [`fb3aea3`](https://github.com/bigwoof91/real-system/commit/fb3aea3948e20b8cb17dc11f93fe3771c1fa8b74) - Cleaning up intent and status type usage
+
+- Updated dependencies [[`fb3aea3`](https://github.com/bigwoof91/real-system/commit/fb3aea3948e20b8cb17dc11f93fe3771c1fa8b74)]:
+  - @real-system/theme-library@0.0.13
+
 ## 0.0.27
 
 ### Patch Changes
