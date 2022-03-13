@@ -1,18 +1,4 @@
 module.exports = {
-  palette: {
-    white: '#ffffff',
-    black: '#101840',
-    gray: '#596375',
-    blue: '#3366FF',
-    red: '#da1e28',
-    orange: '#ffb020',
-    yellow: '#ffca58',
-    green: '#248641',
-    teal: '#319795',
-    cyan: '#00B5D8',
-    purple: '#7F58DE',
-    pink: '#D53F8C',
-  },
   colors: {
     transparent: 'transparent',
     current: 'currentColor',
