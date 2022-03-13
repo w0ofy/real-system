@@ -1,4 +1,4 @@
-type PaletteColors =
+type ColorSchemes =
   | 'black'
   | 'white'
   | 'gray'
@@ -18,9 +18,6 @@ type HEX = `#${string}`;
 
 type PaletteValues = RGB | RGBA | HEX;
 
-type Palette<T extends PaletteValues = PaletteValues> = Record<
-  PaletteColors,
-  T
->;
+type Palette<T extends PaletteValues = PaletteValues> = Record<ColorSchemes, T>;
 
-export type { Palette, PaletteColors, PaletteValues };
+export type { ColorSchemes, Palette, PaletteValues };
