@@ -26,22 +26,22 @@ const TextareaElement = styled(TextareaAutosize)<TextareaProps>(
     width: '100%',
 
     '&::placeholder': {
-      color: 'color-text-neutral-weak-6',
+      color: 'gray-200',
     },
 
     '&:hover::placeholder': {
-      color: 'color-text-neutral-weak-4',
+      color: 'gray-300',
     },
 
     '&:focus::placeholder': {
-      color: 'color-text-neutral-weak-4',
+      color: 'gray-300',
     },
 
     '&:disabled': {
-      color: 'color-text-disabled-strong-3',
+      color: 'gray-300',
       cursor: 'not-allowed',
       // Fixes value color in Safari
-      '-webkit-text-fill-color': 'color-text-disabled-strong-3',
+      '-webkit-text-fill-color': 'gray-50',
       '-webkit-opacity': '1',
     },
   }),

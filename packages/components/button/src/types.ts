@@ -1,13 +1,17 @@
 import React from 'react';
 
 import type { ButtonPrimitiveProps } from '@real-system/button-primitive';
-import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
+import type {
+  PaletteColors,
+  ThemeIntents,
+  ThemeSizes,
+} from '@real-system/theme-library';
 import type { RealSystemElementProps } from '@real-system/utils-library';
 
-export type ButtonVariants = 'default' | 'primary' | 'minimal' | 'floating';
-export type ButtonSize = Extract<PaletteSizes, 'sm' | 'md' | 'lg'>;
+export type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
+export type ButtonSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;
 export type ButtonIntent = Extract<
-  PaletteIntents,
+  ThemeIntents,
   'danger' | 'primary' | 'neutral' | 'success'
 >;
 export type ButtonStates = 'disabled' | 'loading' | 'default';
@@ -25,4 +29,6 @@ export type ButtonProps = ButtonPrimitiveProps & {
   intent?: ButtonIntent;
   /** controls the size of the button */
   size?: ButtonSize;
+  /** Choose palette color scheme from theme */
+  colorScheme?: PaletteColors;
 } & RealSystemElementProps;

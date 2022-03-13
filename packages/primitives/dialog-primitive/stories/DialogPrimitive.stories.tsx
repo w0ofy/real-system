@@ -22,17 +22,17 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${getToken('color-background-overlay')};
+  background-color: ${getToken('black-alpha-500')};
 `;
 
 const DialogContent = styled(animated(DialogContentPrimitive))`
   position: relative;
-  box-shadow: ${getToken('overlay-shadow-1', 'shadows')};
+  box-shadow: ${getToken('dialog', 'shadows')};
   outline: 0;
   width: 100%;
   max-width: ${majorScale(65)};
   min-height: 150px;
-  background-color: ${getToken('color-background')};
+  background-color: ${getToken('white')};
   border-radius: ${getToken(2, 'radii')};
   display: flex;
   flex-direction: column;
@@ -49,12 +49,12 @@ const Template = (args) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <Button onClick={() => setIsOpen(true)} variant="primary">
+      <Button onClick={() => setIsOpen(true)} variant="fill">
         Open Dialog Primitive
       </Button>
       <DialogOverlay isOpen={isOpen} onDismiss={() => setIsOpen(false)}>
         <DialogContent>
-          <Text.Heading variant="heading3" marginBottom={10}>
+          <Text.Heading as="h3" marginBottom={10}>
             Dialog Primitive
           </Text.Heading>
           <Button onClick={() => setIsOpen(false)} width={20}>

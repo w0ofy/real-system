@@ -21,7 +21,7 @@ describe('ButtonPrimitive', () => {
     expect(queryButtonPrimitive()).toBeTruthy();
   });
   it('renders style props and outputs token values for given style props', () => {
-    const styleProps = { marginBottom: 5, color: 'color-background' };
+    const styleProps = { marginBottom: 5, color: 'white' };
 
     render(<ButtonPrimitiveComponent {...styleProps} />);
 

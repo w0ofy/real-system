@@ -15,8 +15,6 @@ type TextElementProps = {
   target?: string;
   /** element identifier for customization */
   element?: string;
-  /** variant for variant styling */
-  variant?: string;
   /** text to be rendered */
   children?: React.ReactNode;
 } & RealSystemElementProps;

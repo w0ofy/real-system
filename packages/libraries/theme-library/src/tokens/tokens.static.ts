@@ -1,4 +1,4 @@
-import { patchScale } from '../../sizeUtils';
+import { patchScale } from '../sizeUtils';
 
 /**
  ** Tokens that don't require palette
@@ -98,6 +98,10 @@ const sizes = {
   'spinner-5': patchScale(12),
   'spinner-6': patchScale(13),
   'spinner-7': patchScale(15),
+
+  max: 'max-content',
+  min: 'min-content',
+  full: '100%',
 };
 
 const zIndices = {
@@ -175,12 +179,12 @@ const fontSizes = {
   button: patchScale(6),
   'button-sm': patchScale(6),
   'button-lg': patchScale(7),
-  'heading-1': patchScale(17),
-  'heading-2': patchScale(13),
-  'heading-3': patchScale(11),
-  'heading-4': patchScale(9),
-  'heading-5': patchScale(7),
-  'heading-6': patchScale(6),
+  h1: patchScale(17),
+  h2: patchScale(13),
+  h3: patchScale(11),
+  h4: patchScale(9),
+  h5: patchScale(7),
+  h6: patchScale(6),
 };
 
 const lineHeights = {
@@ -200,12 +204,12 @@ const lineHeights = {
   button: patchScale(6),
   'button-sm': patchScale(6),
   'button-lg': patchScale(7),
-  'heading-1': patchScale(17),
-  'heading-2': patchScale(13),
-  'heading-3': patchScale(11),
-  'heading-4': patchScale(9),
-  'heading-5': patchScale(7),
-  'heading-6': patchScale(6),
+  h1: patchScale(17),
+  h2: patchScale(13),
+  h3: patchScale(11),
+  h4: patchScale(9),
+  h5: patchScale(7),
+  h6: patchScale(6),
 };
 
 const fonts = {

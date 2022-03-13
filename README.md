@@ -57,7 +57,7 @@ const MyComponent = () => {
     <ThemeProvider>
       <Flex vertical>
         <Button mb={8}>Default Button</Button>
-        <Button mb={8} variant="primary">
+        <Button mb={8} variant="fill">
           Primary Button
         </Button>
         <Button variant="minimal">Minimal Button</Button>

@@ -14,9 +14,7 @@ const DialogFooter = forwardRef<HTMLDivElement, DialogFooterProps>(
         shrink={0}
         paddingY={8}
         paddingX={8}
-        borderTopStyle="solid"
-        borderTopWidth="1px"
-        borderTopColor="color-border-neutral-weak-9"
+        borderTop="weak"
         data-testid={makeTestId('dialog-footer')}
         {...restProps}
         ref={ref}>

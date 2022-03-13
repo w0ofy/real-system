@@ -32,82 +32,83 @@ const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
 const getCursorStyle = (loading) =>
   loading ? { cursor: 'wait' } : { cursor: 'not-allowed' };
 
+type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
+
+/**
+ * @todo modularize this kind of function in theme-library
+ */
+const maybeWarning = (colorScheme: Params['colorScheme']) =>
+  colorScheme === 'orange' ? '700' : '600';
+
 const makeButtonStylesFromVariant = {
-  floating: ({
-    size,
-    intent,
-    loading,
-  }: Required<Pick<ButtonProps, 'size' | 'intent' | 'loading'>>) =>
+  floating: ({ size, loading, colorScheme }: Params) =>
     mergeStyles(size, {
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
-      color: `color-text-${intent}`,
-      backgroundColor: 'none',
-      _hover: {
-        color: `color-text-${intent}-strong-4`,
-      },
-      _active: {
-        color: `color-text-${intent}-strong-6`,
-      },
-      _disabled: {
-        ...getCursorStyle(loading),
-        color: `color-text-${intent}-weak-6`,
-      },
-    }),
-  minimal: ({ size, intent, loading }) =>
-    mergeStyles(size, {
-      color: `color-text-${intent}`,
+      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
       _hover: {
-        color: `color-text-${intent}-strong-1`,
-        backgroundColor: `color-background-${intent}-weak-9`,
+        color: `${colorScheme}-700`,
       },
       _active: {
-        color: `color-text-${intent}-strong-5`,
-        backgroundColor: `color-background-${intent}-weak-8`,
+        color: `${colorScheme}-800`,
       },
       _disabled: {
         ...getCursorStyle(loading),
-        color: `color-text-${intent}-weak-6`,
-        backgroundColor: `color-background-${intent}-weak-9`,
+        color: `${colorScheme}-300`,
       },
     }),
-  primary: ({ size, intent, loading }) =>
+  minimal: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
-      color: `color-text-${intent}-contrast`,
-      backgroundColor: `color-background-${intent}`,
-      _hover: {
-        backgroundColor: `color-background-${intent}-strong-2`,
-      },
-      _active: {
-        backgroundColor: `color-background-${intent}-strong-3`,
-      },
-      _disabled: {
-        ...getCursorStyle(loading),
-        color: `color-text-${intent}-weak-6`,
-        backgroundColor: `color-background-${intent}-weak-9`,
-      },
-    }),
-  default: ({ size, intent, loading }) =>
-    mergeStyles(size, {
-      color: `color-text-${intent}`,
+      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
-      borderColor: `color-border-${intent}-weak-6`,
       _hover: {
-        color: `color-text-${intent}-strong-2`,
-        backgroundColor: `color-background-${intent}-weak-9`,
-        borderColor: `color-border-${intent}-weak-2`,
+        backgroundColor: `${colorScheme}-50`,
       },
       _active: {
-        color: `color-text-${intent}-strong-3`,
-        backgroundColor: `color-background-${intent}-weak-8`,
-        borderColor: `color-border-${intent}-strong-1`,
+        color: `${colorScheme}-900`,
+        backgroundColor: `${colorScheme}-100`,
       },
       _disabled: {
         ...getCursorStyle(loading),
-        color: `color-text-${intent}-weak-6`,
-        borderColor: `color-border-${intent}-weak-9`,
+        color: `${colorScheme}-300`,
+        backgroundColor: `${colorScheme}-50`,
+      },
+    }),
+  fill: ({ size, colorScheme, loading }: Params) =>
+    mergeStyles(size, {
+      color: `${colorScheme}-500-readable`,
+      backgroundColor: `${colorScheme}-500`,
+      _hover: {
+        backgroundColor: `${colorScheme}-600`,
+      },
+      _active: {
+        backgroundColor: `${colorScheme}-700`,
+      },
+      _disabled: {
+        ...getCursorStyle(loading),
+        color: `${colorScheme}-300`,
+        backgroundColor: `${colorScheme}-50`,
+      },
+    }),
+  outline: ({ size, colorScheme, loading }: Params) =>
+    mergeStyles(size, {
+      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
+      backgroundColor: 'transparent',
+      borderColor: `${colorScheme}-300`,
+      _hover: {
+        backgroundColor: `${colorScheme}-50`,
+        borderColor: `${colorScheme}-400`,
+      },
+      _active: {
+        backgroundColor: `${colorScheme}-100`,
+        borderColor: `${colorScheme}-500`,
+      },
+      _disabled: {
+        ...getCursorStyle(loading),
+        color: `${colorScheme}-300`,
+        borderColor: `${colorScheme}-200`,
       },
     }),
 };

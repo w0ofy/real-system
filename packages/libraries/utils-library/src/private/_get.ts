@@ -1,5 +1,7 @@
 import lodashGet from 'lodash.get';
 
+import { Dict } from '../types';
+
 type Get<T = any> = {
   (obj: Record<any, any>, path: string[] | string, fallback?: T): T;
   oneOf: typeof _getOneOf;
@@ -7,7 +9,7 @@ type Get<T = any> = {
 
 const _get: Get = lodashGet;
 
-const _getOneOf = <S = Record<string, any>, F = any>(
+const _getOneOf = <S = Dict, F = any>(
   obj: S,
   accessors: string[],
   fallback?: F

@@ -27,8 +27,8 @@ const StyledTooltip = styled(animated(Box))`
   padding: ${getToken(4, 'space')};
   padding-top: ${getToken(3, 'space')};
   padding-bottom: ${getToken(3, 'space')};
-  box-shadow: ${getToken('drop-shadow-neutral-weak-2', 'shadows')};
-  background-color: ${getToken('color-background-dark')};
+  box-shadow: ${getToken('tooltip', 'shadows')};
+  background-color: ${getToken('black')};
   border: ${getToken('border-1', 'borders')};
   border-radius: ${getToken(2, 'radii')};
   max-width: 30rem;
@@ -90,7 +90,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
               as={StyledTooltip}
               style={style}>
               <AriakitTooltipArrow state={state} />
-              <Text as="span" color="color-text-light">
+              <Text as="span" color="white">
                 {label}
               </Text>
             </AriakitTooltip>

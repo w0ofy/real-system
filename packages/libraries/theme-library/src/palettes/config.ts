@@ -1,72 +1,66 @@
 import { Palette } from './types';
 
 export type DefaultPaletteColors =
-  | '#3366FF'
-  | '#248641'
-  | '#ffb020'
-  | '#da1e28'
-  | '#0043ce'
-  | '#e7e7e9'
-  | '#6fffb0'
-  | '#fd6fff'
-  | '#81fced'
-  | '#ffca58'
-  | '#596375'
+  | '#ffffff'
   | '#101840'
-  | '#ffffff';
+  | '#596375'
+  | '#3366FF'
+  | '#da1e28'
+  | '#ffb020'
+  | '#ffca58'
+  | '#248641'
+  | '#319795'
+  | '#00b5d8'
+  | '#7f58de'
+  | '#d53f8c';
 
 export type StripePaletteColors =
-  | '#555abf'
-  | '#0d7361'
-  | '#f3be58'
-  | '#c23d4a'
-  | '#1f7bb7'
-  | '#e7e7e9'
-  | '#7456b7'
-  | '#9251ab'
-  | '#68d5f8'
-  | '#f3be58'
-  | '#525e7e'
+  | '#ffffff'
   | '#32325d'
-  | '#ffffff';
+  | '#525e7e'
+  | '#1f7bb7'
+  | '#c23d4a'
+  | '#f3be58'
+  | '#f3be58'
+  | '#0d7361'
+  | '#319795'
+  | '#68d5f8'
+  | '#7456b7'
+  | '#d53f8c';
 
 export type PaletteConfig = {
-  default: Palette<DefaultPaletteColors>;
+  realSystem: Palette<DefaultPaletteColors>;
   stripe: Palette<StripePaletteColors>;
 };
 
 const palettes: PaletteConfig = {
-  default: {
-    primary: '#3366FF',
-    secondary: '#fd6fff',
-    tertiary: '#81fced',
-    quaternary: '#ffca58',
-    neutral: '#596375',
-    dark: '#101840',
-    light: '#ffffff',
-    status: {
-      success: '#248641',
-      warning: '#ffb020',
-      danger: '#da1e28',
-      info: '#0043ce',
-      disabled: '#e7e7e9',
-    },
+  realSystem: {
+    white: '#ffffff',
+    black: '#101840',
+    gray: '#596375',
+    blue: '#3366FF',
+    red: '#da1e28',
+    orange: '#ffb020',
+    yellow: '#ffca58',
+    green: '#248641',
+    teal: '#319795',
+    cyan: '#00b5d8',
+    purple: '#7f58de',
+    pink: '#d53f8c',
   },
   stripe: {
-    primary: '#555abf',
-    secondary: '#7456b7',
-    tertiary: '#68d5f8',
-    quaternary: '#f3be58',
-    neutral: '#525e7e',
-    dark: '#32325d',
-    light: '#ffffff',
-    status: {
-      success: '#0d7361',
-      warning: '#f3be58',
-      danger: '#c23d4a',
-      info: '#1f7bb7',
-      disabled: '#e7e7e9',
-    },
+    white: '#ffffff',
+    black: '#32325d',
+    gray: '#525e7e',
+    blue: '#1f7bb7',
+    red: '#c23d4a',
+    orange: '#f3be58',
+    yellow: '#f3be58',
+    green: '#0d7361',
+    teal: '#319795',
+    cyan: '#68d5f8',
+    purple: '#7456b7',
+    pink: '#d53f8c',
   },
 };
 

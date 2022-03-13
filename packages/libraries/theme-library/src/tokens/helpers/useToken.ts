@@ -1,23 +1,28 @@
 import { useTheme } from '../../themes/useTheme';
-import { ThemeScales, ThemeTokens } from '../factory';
+import type {
+  ExtendedThemeTokens,
+  ThemeScales,
+  ThemeTokens,
+  WildCardThemeToken,
+} from '../types';
 
 import { getToken, getTokens } from './getToken';
 
-const useToken = <T extends ThemeTokens = ThemeTokens>(
-  token: T,
+const useToken = <T extends WildCardThemeToken = ThemeTokens, O = any>(
+  token: ExtendedThemeTokens<T>,
   scale: ThemeScales = 'colors',
-  fallback?: any
-): any => {
+  fallback?: O
+): O => {
   const theme = useTheme();
-  return getToken<any>(token, scale, fallback)({ theme });
+  return getToken<T, O>(token, scale, fallback)({ theme });
 };
 
-const useTokens = <T extends ThemeTokens[] = ThemeTokens[]>(
-  tokensMap: Parameters<typeof getTokens>[0],
-  fallback?: T
-): any => {
+const useTokens = <T extends WildCardThemeToken = ThemeTokens, O = any>(
+  tokenMap: Partial<Record<ThemeScales, ExtendedThemeTokens<T>>>,
+  fallback?: O
+): O[] => {
   const theme = useTheme();
-  return getTokens<any>(tokensMap, fallback)({ theme });
+  return getTokens<T, O>(tokenMap, fallback)({ theme });
 };
 
 export { useToken, useTokens };

@@ -35,7 +35,7 @@ const Aside = BoxAs('aside');
 const MyComponent = () => {
   return (
     <ThemeProvider>
-      <Aside background="color-background" display="flex" flexDirection="column">
+      <Aside background="white" display="flex" flexDirection="column">
         <Box display="flex">...</Box>
       </Aside>
     </ThemeProvider>

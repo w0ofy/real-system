@@ -7,7 +7,7 @@ import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { AlertIntents, CommonAlertProps } from './types';
-import { ICON_MAP } from './utils';
+import { ICON_MAP, INTENT_COLOR_MAP } from './utils';
 
 type InlineAlertProps = {
   /**
@@ -17,15 +17,15 @@ type InlineAlertProps = {
 } & CommonAlertProps;
 
 const maybeWarning = (intent: AlertIntents) =>
-  intent === 'warning' ? 'strong-45' : 'strong-2';
+  intent === 'warning' ? '700' : '600';
 
 const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
   function InlineAlert(
     { children, intent = 'info', type = 'polite', ...restProps },
     ref
   ) {
-    const iconColor = `color-text-${intent}`;
-    const textColor = `color-text-${intent}-${maybeWarning(intent)}`;
+    const iconColor = `${INTENT_COLOR_MAP[intent]}-500`;
+    const textColor = `${INTENT_COLOR_MAP[intent]}-${maybeWarning(intent)}`;
     return (
       <Flex
         width="100%"
@@ -44,11 +44,7 @@ const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
           />
         </Flex>
         <AlertPrimitive type={type}>
-          <Text.Heading
-            variant="heading5"
-            as="span"
-            color={textColor}
-            marginBottom={0}>
+          <Text.Heading size="h5" as="span" color={textColor} marginBottom={0}>
             {children}
           </Text.Heading>
         </AlertPrimitive>

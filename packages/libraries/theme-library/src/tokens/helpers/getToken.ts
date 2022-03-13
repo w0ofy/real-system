@@ -1,28 +1,34 @@
 import { _get } from '@real-system/utils-library';
 
-import type { ThemeScales, ThemeTokens } from '../factory';
+import type {
+  ExtendedThemeTokens,
+  ThemeScales,
+  ThemeTokens,
+  WildCardThemeToken,
+} from '../types';
 
 /**
- * A styleFn to get theme tokens
+ * A styleFn to get a theme token
  */
-const getToken = <T = any>(
-  token: ThemeTokens,
+const getToken = <T extends WildCardThemeToken = ThemeTokens, O = any>(
+  token: ExtendedThemeTokens<T>,
   scale: ThemeScales = 'colors',
-  fallback?: T
+  fallback?: O
 ) => {
-  return function <P = T>(props): P {
+  return function <P = O>(props): P {
     return _get(props.theme, `${scale}.${token}`, fallback);
   };
 };
 
-type TokensArray = any[];
-
-const getTokens = <T extends TokensArray = TokensArray>(
-  tokenMap: Partial<Record<ThemeScales, ThemeTokens>>,
-  fallback?: T
+/**
+ * A styleFn to get many theme tokens
+ */
+const getTokens = <T extends WildCardThemeToken = ThemeTokens, O = any>(
+  tokenMap: Partial<Record<ThemeScales, ExtendedThemeTokens<T>>>,
+  fallback?: O
 ) => {
-  return function <P extends T = T>(props): P {
-    const values = [] as unknown as P;
+  return function <P extends O = O>(props): P[] {
+    const values = [] as unknown as P[];
 
     for (const scale in tokenMap) {
       values.push(_get(props?.theme, `${scale}.${tokenMap[scale]}`, fallback));

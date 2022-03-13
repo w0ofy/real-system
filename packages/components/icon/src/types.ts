@@ -1,7 +1,7 @@
 import * as IconComponents from '@heroicons/react/outline';
 
 import type { BoxStyleProps } from '@real-system/box-primitive';
-import type { PaletteIntents, PaletteSizes } from '@real-system/theme-library';
+import type { ThemeIntents, ThemeSizes } from '@real-system/theme-library';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */
@@ -19,12 +19,7 @@ type Icons = RemoveSuffix<RawIcons, '-icon'>;
 
 /** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
 type IconValue = typeof IconComponents['AcademicCapIcon'];
-type IconIntent =
-  | Extract<
-      PaletteIntents,
-      'primary' | 'success' | 'danger' | 'warning' | 'info'
-    >
-  | 'default';
+type IconIntent = Exclude<ThemeIntents, 'secondary'>;
 
 type IconProps = {
   /**
@@ -34,7 +29,7 @@ type IconProps = {
   /**
    * Controls the size of the icon
    */
-  size?: PaletteSizes;
+  size?: ThemeSizes;
   /**
    * Controls the color of the icon. If an `intent` is not provided the color defaults to `currentColor`
    */
@@ -44,7 +39,7 @@ type IconProps = {
    */
   color?: BoxStyleProps['color'];
   /**
-   * Controls solid or default (outline) icon style
+   * Controls solid or outline (default) icon style
    */
   solid?: boolean;
   /**

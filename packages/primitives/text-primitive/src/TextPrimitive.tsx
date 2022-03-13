@@ -10,11 +10,12 @@ import type { TextPrimitiveProps } from './types';
 const StyledText = styled.div<any>(getStyleProps, getPseudoProps);
 
 const baseStyles = {
-  color: 'color-text',
+  color: 'gray-800',
   fontSize: 1,
   fontWeight: 0,
   lineHeight: 4,
   margin: 0,
+  letterSpacing: 'body',
 };
 
 const TextPrimitive = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(

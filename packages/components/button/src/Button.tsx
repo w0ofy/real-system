@@ -43,22 +43,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     children,
     disabled,
     loading,
-    variant = 'default',
+    variant = 'outline',
     size = 'md',
     leadingIcon,
     trailingIcon,
-    intent: intentProp = undefined,
+    colorScheme = 'gray',
     ...restProps
   },
   ref
 ): React.ReactElement {
-  const intent: ButtonIntent = useMemo(() => {
-    if (intentProp === undefined) {
-      if (variant === 'primary') return 'primary';
-      return 'neutral';
-    }
-    return intentProp;
-  }, [intentProp, variant]);
   const buttonState = useMemo(
     () => getButtonState(disabled, loading),
     [disabled, loading]
@@ -73,10 +66,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     () =>
       makeButtonStylesFromVariant[variant]({
         size,
-        intent,
+        colorScheme,
         loading: isLoading,
       }),
-    [intent, isLoading, size, variant]
+    [isLoading, size, variant, colorScheme]
   );
 
   return (
@@ -90,11 +83,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       <Label
         marginLeft={getLabelMarginX(leadingIcon)}
         marginRight={getLabelMarginX(trailingIcon)}>
-        {isLoading ? (
-          <Spinner size="sm" color="color-text-neutral-weak-3" />
-        ) : (
-          children
-        )}
+        {isLoading ? <Spinner size="sm" color="gray-300" /> : children}
       </Label>
       {trailingIcon ? trailingIcon : null}
     </ButtonPrimitive>

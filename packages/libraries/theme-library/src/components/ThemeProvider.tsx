@@ -6,21 +6,20 @@ import {
   PrimitiveThemeProviderProps,
 } from '@real-system/styling-library';
 
-import { themes, ThemeShape } from '../themes';
+import { ExtendableThemeShape, themes } from '../themes';
 
 import { GlobalStyles } from './GlobalStyles';
 
 export type ThemeProviderProps = {
-  theme?: ThemeShape;
+  theme?: ExtendableThemeShape;
 } & Pick<PrimitiveThemeProviderProps, 'children'>;
 
 const ThemeProvider = ({
   children,
-  theme,
-  ...restProps
+  theme = themes.realSystem,
 }: ThemeProviderProps): React.ReactElement => {
   return (
-    <PrimitiveThemeProvider theme={theme || themes.realsystem} {...restProps}>
+    <PrimitiveThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         {children}
@@ -28,11 +27,6 @@ const ThemeProvider = ({
     </PrimitiveThemeProvider>
   );
 };
-
-/**
- * @todo create ThemeConsumer
- * @todo create Theme[Component] model
- */
 
 const ThemeContext = PrimitiveThemeContext;
 

@@ -1,49 +1,26 @@
-import type { AddPrefix } from '@real-system/utils-library';
+type PaletteColors =
+  | 'black'
+  | 'white'
+  | 'gray'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'teal'
+  | 'blue'
+  | 'cyan'
+  | 'purple'
+  | 'pink';
 
-/**
- * @description all palette keys, regardless of depth
- */
-export type PaletteKeys =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'quaternary'
-  | 'success'
-  | 'info'
-  | 'warning'
-  | 'danger'
-  | 'disabled'
-  | 'neutral'
-  | 'dark'
-  | 'light';
+type RGB = `rgb(${number}, ${number}, ${number})`;
+type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
+type HEX = `#${string}`;
 
-export type PaletteIntents = PaletteKeys;
+type PaletteValues = RGB | RGBA | HEX;
 
-export type PaletteStatuses = Extract<
-  PaletteKeys,
-  'success' | 'warning' | 'danger' | 'info' | 'disabled'
->;
-export type PaletteAccents = Extract<
-  PaletteKeys,
-  'primary' | 'secondary' | 'tertiary' | 'quaternary'
->;
-export type PaletteMains = Extract<
-  PaletteKeys,
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'quaternary'
-  | 'neutral'
-  | 'dark'
-  | 'light'
+type Palette<T extends PaletteValues = PaletteValues> = Record<
+  PaletteColors,
+  T
 >;
 
-export type PaletteAccessors =
-  | PaletteMains
-  | AddPrefix<PaletteStatuses, 'status.'>;
-
-export type Palette<T = string> = {
-  status: { [key in PaletteStatuses]: T };
-} & { [key in PaletteMains]: T };
-
-export type PaletteSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type { Palette, PaletteColors, PaletteValues };

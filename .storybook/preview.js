@@ -12,7 +12,7 @@ export const globalTypes = {
   theme: {
     name: 'Real System Theme',
     description: 'Global theme for components',
-    defaultValue: 'realsystem',
+    defaultValue: 'realSystem',
     toolbar: {
       // All available icons
       // https://github.com/storybookjs/storybook/blob/master/lib/components/src/icon/icons.tsx
@@ -25,7 +25,7 @@ export const globalTypes = {
 
 export const decorators = [
   (Story, context) => {
-    const theme = themes[context.globals.theme || 'realsystem'];
+    const theme = themes[context.globals.theme || 'realSystem'];
     return (
       <ThemeProvider theme={theme}>
         <Story />
@@ -45,7 +45,7 @@ export const parameters = {
         [
           'Getting Started',
           'Theming',
-          ['Overview', 'Design Tokens', 'Token List', 'Scales', 'Advanced'],
+          ['Overview', 'Theme Customization', 'Design Tokens', 'Token List'],
         ],
         'Components',
         'Layout',

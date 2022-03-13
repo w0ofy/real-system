@@ -8,7 +8,7 @@ import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CommonAlertProps } from './types';
-import { ICON_MAP } from './utils';
+import { ICON_MAP, INTENT_COLOR_MAP } from './utils';
 
 type AlertProps = {
   description?: string;
@@ -29,9 +29,9 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   },
   ref
 ) {
-  const bgColor = `color-background-${intent}-weak-95`;
-  const borderColor = `color-border-${intent}`;
-  const iconColor = `color-text-${intent}`;
+  const bgColor = `${INTENT_COLOR_MAP[intent]}-100`;
+  const borderColor = bgColor;
+  const iconColor = `${INTENT_COLOR_MAP[intent]}-500`;
 
   return (
     <Flex
@@ -63,7 +63,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
         marginRight={20}>
         <AlertPrimitive type={type}>
           {children && (
-            <Text.Heading variant="heading5" as="h5" marginTop={1}>
+            <Text.Heading as="h5" marginTop={1}>
               {children}
             </Text.Heading>
           )}

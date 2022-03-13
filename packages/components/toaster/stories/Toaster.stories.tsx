@@ -17,7 +17,7 @@ export const Showcase = (args) => {
     <Flex vertical>
       <Button
         marginBottom={4}
-        intent="primary"
+        colorScheme="blue"
         onClick={() =>
           toaster.notify('12 new messages', {
             description: 'Hi, my name is Bond, James Bond... Hello',
@@ -27,7 +27,7 @@ export const Showcase = (args) => {
       </Button>
       <Button
         marginBottom={4}
-        intent="primary"
+        colorScheme="blue"
         onClick={() =>
           toaster.notify('Successfully installed Real System', {
             dismissAfter: false,
@@ -38,6 +38,7 @@ export const Showcase = (args) => {
         Notify toaster with no timer
       </Button>
       <Button
+        colorScheme="orange"
         marginBottom={4}
         onClick={() =>
           toaster.warning('You forgot to enter some details', {
@@ -48,7 +49,7 @@ export const Showcase = (args) => {
         Warning toaster
       </Button>
       <Button
-        intent="danger"
+        colorScheme="red"
         marginBottom={4}
         onClick={() =>
           toaster.danger('Verification failed', {
@@ -63,7 +64,7 @@ export const Showcase = (args) => {
       </Button>
       <Button
         marginBottom={4}
-        intent="success"
+        colorScheme="green"
         onClick={() =>
           toaster.success('Successfully installed Real System', {
             description:

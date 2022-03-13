@@ -8,10 +8,18 @@ const argv = require('minimist')(process.argv, {
   },
   boolean: ['select'],
 });
-const { prompt } = require('inquirer');
+const inquirer = require('inquirer');
+const fuzzy = require('fuzzy');
 const concurrently = require('concurrently').concurrently;
 const { getFullPkgName } = require('./utils');
 const semverGtr = require('semver/ranges/gtr');
+
+inquirer.registerPrompt(
+  'checkbox-plus',
+  require('inquirer-checkbox-plus-prompt')
+);
+
+const { prompt } = inquirer;
 
 /**
  * Helpers
@@ -28,10 +36,18 @@ const getPackagesToWatch = async () => {
   if (argv['select'] === true) {
     return await prompt([
       {
-        type: 'checkbox',
+        type: 'checkbox-plus',
         name: 'packagesToWatch',
         message: 'Select packages to run in watch mode.',
-        choices: pkgNames,
+        pageSize: 10,
+        highlight: true,
+        searchable: true,
+        source: (_answersSoFar, input = '') =>
+          new Promise(function (resolve) {
+            const fuzzyResult = fuzzy.filter(input, pkgNames);
+            const data = fuzzyResult.map((element) => element.original);
+            resolve(data);
+          }),
       },
     ]).then((answers) => {
       return answers.packagesToWatch;

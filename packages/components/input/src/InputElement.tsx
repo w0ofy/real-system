@@ -40,14 +40,14 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         resize="none"
         ref={ref}
         _placeholder={{
-          color: 'color-text-neutral-weak-6',
+          color: 'gray-200',
           transition: '150ms all ease-in',
         }}
         _hover_placeholder={{
-          color: 'color-text-neutral-weak-4',
+          color: 'gray-300',
         }}
         _focus_placeholder={{
-          color: 'color-text-neutral-weak-4',
+          color: 'gray-300',
         }}
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'not-allowed' }}

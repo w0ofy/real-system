@@ -1,0 +1,197 @@
+import { Meta } from '@storybook/addon-docs';
+
+import { makeMdxParameters } from '/.storybook/utils';
+
+<Meta
+  title="Real System/Theming/Theme Customization"
+  parameters={makeMdxParameters()}
+/>
+
+# Theme Customization
+
+_It is suggested you read the [Overview](/docs/real-system-theming-overview--page) before you continue with this section_
+
+There are varying levels to customizing Real System's theme. On the top-most level there is a `palette`,
+which consists of colors. On the lower level there is a `theme`, which consists of all of Real System's design tokens.
+Real System's theming API provides you to create and/or extend upon each level.
+
+## Philosophy
+
+#### Low Level ([palettes](/docs/real-system-theming-theme-customization--page#palette-customization))
+
+Creating or overriding a `palette` follows this philosophy: Low effort, high return.
+By simply changing 1 or 2 colors, you impact many components throughout the system. But,
+this doesn't give you granular (or "atomic") control over component's look & feel.
+You can **override** an existing palette or **create** your own palette.
+
+#### High Level ([themes and tokens](/docs/real-system-theming-theme-customization--page#theme--token-customization))
+
+Creating or extending a `theme` follows a different philosophy: low effort, low return.
+At first that sounds odd — but this API layer is meant to grant you the granular control
+over component's look & feel that a `palette` can't. If you want to change 1 color
+A theme consists of hundreds of visual design atoms that are used throughout components.
+Each atom is considered to be a [token](/docs/real-system-theming-design-tokens--page).
+You can **add** and **modify** tokens as you see fit.
+
+## Palette Customization
+
+### Extending a Palette
+
+```jsx
+import {
+  ThemeProvider,
+  overridePalette,
+  makeTheme,
+} from '@real-system/core/theme-library';
+
+// overrides an existing palette's key-value pair
+const palette: overridePalette('realSystem', {
+  white: '#efefef',
+  black: '#000000',
+});
+
+// given a palette, makes a theme filled with scales of tokens
+const theme = makeTheme(palette);
+
+const MyComponent = () => {
+  return <ThemeProvider theme={theme}>...</ThemeProvider>;
+};
+```
+
+### Creating a Palette
+
+```jsx
+import {
+  ThemeProvider,
+  Palette,
+  makeTheme,
+} from '@real-system/core/theme-library';
+
+// `Palette` type ensures you provide all necessary palette colors for `makeTheme`
+const palette: Palette = {
+  white: '#ffffff',
+  black: '#000000',
+  gray: '#596375',
+  blue: '#3366FF',
+  red: '#da1e28',
+  orange: '#ffb020',
+  yellow: '#ffca58',
+  green: '#248641',
+  teal: '#319795',
+  cyan: '#00b5d8',
+  purple: '#7f58de',
+  pink: '#d53f8c',
+};
+
+const myTheme = makeTheme(palette);
+
+const App = () => {
+  return <ThemeProvider theme={myTheme}>...</ThemeProvider>;
+};
+```
+
+## Theme & Token Customization
+
+### Extending a Theme
+
+```jsx
+import {
+  ThemeProvider,
+  extendTheme,
+  themes,
+} from '@real-system/core/theme-library';
+
+// FIRST: customize an existing theme; replace existing tokens and/or add new ones
+
+/**
+ * @param {theme} accepts a name (string) of a built-in theme or your own custom theme object.
+ * @param {overrides} accepts a callback or an object. The theme's colors are passed to the callback so you can easily customize other tokens with the theme's color tokens.
+*/
+const mytheme: extendTheme('realSystem', (colors) => {
+  colors: {
+    primary: colors['purple-500'],
+    secondary: colors['black-400'],
+  },
+  shadows: {
+    'focus-outline': `0 0 0 3px ${colors['blue-200']}`,
+  }
+});
+
+// or
+const myTheme: extendTheme(themes.realSystem, {
+  shadows: {
+    'focus-outline': '0 0 0 3px #525e7e',
+    'button': '0px 8px 15px rgba(0, 0, 0, 0.1)'
+  }
+});
+
+// THEN: pass the customized theme to ThemeProvider
+
+const App = () => {
+  return <ThemeProvider theme={myTheme}>...</ThemeProvider>;
+};
+```
+
+### Creating a Theme
+
+```jsx
+import {
+  ThemeProvider,
+  Palette,
+  makeTheme,
+  extendTheme,
+} from '@real-system/core/theme-library';
+
+// FIRST: create a palette
+
+// `Palette` type ensures you provide all necessary palette colors for `makeTheme`
+const palette: Palette = {
+  white: '#ffffff',
+  black: '#000000',
+  gray: '#596375',
+  blue: '#3366FF',
+  red: '#da1e28',
+  orange: '#ffb020',
+  yellow: '#ffca58',
+  green: '#248641',
+  teal: '#319795',
+  cyan: '#00b5d8',
+  purple: '#7f58de',
+  pink: '#d53f8c',
+};
+
+// SECOND: make a theme from the palette
+
+const themeFromPalette = makeTheme(palette);
+
+// THIRD: customize your theme; replace existing tokens and/or add new ones
+
+const myTheme = extendTheme(themeFromPalette, {
+  colors: {
+    'disabled-bg': '#ccc',
+    'disabled-foreground': '#666',
+  },
+});
+
+// or
+const myTheme = extendTheme(themeFromPalette, {
+  colors: {
+    'disabled-bg': themeFromPalette.colors['gray-400'],
+    'disabled-foreground': themeFromPalette.colors['gray-700'],
+  },
+});
+
+// or
+const myTheme = extendTheme(themeFromPalette, (colors) => ({
+  colors: {
+    'disabled-bg': colors['gray-400'],
+    'disabled-foreground': colors['gray-700'],
+  },
+}));
+
+// FINALLY: pass your theme to ThemeProvider
+
+const App = () => {
+  return <ThemeProvider theme={myTheme}>...</ThemeProvider>;
+};
+```

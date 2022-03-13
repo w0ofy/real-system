@@ -13,15 +13,12 @@ export default {
 export const Default: Story<FlexProps> = (args) => (
   <Flex {...args}>
     <Flex>
-      <Box backgroundColor="color-background-primary-disabled" padding={8}>
+      <Box backgroundColor="gray-100" padding={8}>
         <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex grow>
-      <Box
-        backgroundColor="color-background-info-disabled"
-        padding={8}
-        width="100%">
+      <Box backgroundColor="blue-100" padding={8} width="100%">
         <Text>Right item</Text>
       </Box>
     </Flex>
@@ -31,18 +28,12 @@ export const Default: Story<FlexProps> = (args) => (
 export const Vertical: Story<FlexProps> = () => (
   <Flex vertical>
     <Flex grow>
-      <Box
-        backgroundColor="color-background-primary-disabled"
-        padding={8}
-        width="100%">
+      <Box backgroundColor="gray-100" padding={8} width="100%">
         <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex grow>
-      <Box
-        backgroundColor="color-background-info-disabled"
-        padding={8}
-        width="100%">
+      <Box backgroundColor="blue-100" padding={8} width="100%">
         <Text>Right item</Text>
       </Box>
     </Flex>
@@ -52,18 +43,12 @@ export const Vertical: Story<FlexProps> = () => (
 export const Wrapping: Story<FlexProps> = () => (
   <Flex wrap>
     <Flex basis={900}>
-      <Box
-        backgroundColor="color-background-primary-disabled"
-        padding={8}
-        width="100%">
+      <Box backgroundColor="gray-100" padding={8} width="100%">
         <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex>
-      <Box
-        backgroundColor="color-background-info-disabled"
-        padding={8}
-        width="100%">
+      <Box backgroundColor="blue-100" padding={8} width="100%">
         <Text>Right item</Text>
       </Box>
     </Flex>
@@ -73,19 +58,12 @@ export const Wrapping: Story<FlexProps> = () => (
 export const VerticalAlignment: Story<FlexProps> = () => (
   <Flex yAlignContent="center">
     <Flex grow>
-      <Box
-        backgroundColor="color-background-primary-disabled"
-        padding={8}
-        width="100%">
+      <Box backgroundColor="gray-100" padding={8} width="100%">
         <Text>Left item</Text>
       </Box>
     </Flex>
     <Flex grow>
-      <Box
-        backgroundColor="color-background-info-disabled"
-        padding={8}
-        width="100%"
-        height={120}>
+      <Box backgroundColor="blue-100" padding={8} width="100%" height={120}>
         <Text>Right item</Text>
       </Box>
     </Flex>
@@ -98,7 +76,7 @@ export const HorizontalAlignment: Story<FlexProps> = () => (
       <Box
         width="100%"
         textAlign="center"
-        backgroundColor="color-background-primary-disabled"
+        backgroundColor="gray-100"
         padding={8}>
         <Text>Left item</Text>
       </Box>
@@ -107,7 +85,7 @@ export const HorizontalAlignment: Story<FlexProps> = () => (
       <Box
         width="100%"
         textAlign="center"
-        backgroundColor="color-background-info-disabled"
+        backgroundColor="blue-100"
         padding={8}>
         <Text>Right item</Text>
       </Box>

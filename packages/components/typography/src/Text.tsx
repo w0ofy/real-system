@@ -5,20 +5,11 @@ import { TextPrimitive } from '@real-system/text-primitive';
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';
 import { Label } from './Label';
-import { CommonTextProps, TextAsTags, TextVariants } from './types';
-
-type TextVariantMap = {
-  [key in TextVariants]: Extract<TextAsTags, 'p' | 'span'>;
-};
-
-const TYPOGRAPHY_VARIANT_MAP: TextVariantMap = {
-  paragraph: 'p',
-  inline: 'span',
-};
+import { CommonTextProps, TextAsTags } from './types';
 
 export type TextProps = {
   children?: React.ReactNode;
-  variant?: keyof typeof TYPOGRAPHY_VARIANT_MAP;
+  inline?: boolean;
   as?: TextAsTags;
 } & CommonTextProps;
 
@@ -29,31 +20,20 @@ export interface TextComponent
   HelpText: typeof HelpText;
 }
 
-const variants = {
-  paragraph: {
-    lineHeight: 2,
-    marginBottom: 2,
-  },
-  inline: {
-    lineHeight: 2,
-    marginBottom: 2,
-  },
-};
-
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
 const Text: TextComponent = forwardRef<
   HTMLParagraphElement | HTMLSpanElement,
   TextProps
 >(function Text(
-  { children, variant = 'paragraph', as, ...restProps },
+  { children, as, inline = false, ...restProps },
   ref
 ): React.ReactElement {
-  const variantStyles = variants?.[variant];
   return (
     <TextPrimitive
-      {...variantStyles}
+      lineHeight={2}
+      marginBottom={2}
       {...restProps}
-      as={as || TYPOGRAPHY_VARIANT_MAP[variant]}
+      as={as || inline ? 'span' : 'p'}
       ref={ref}>
       {children}
     </TextPrimitive>

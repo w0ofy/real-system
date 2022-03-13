@@ -32,11 +32,11 @@ const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
         yAlignContent="top"
         border="border-2"
         filter="filter-shadow-neutral-weak-8"
-        borderColor="color-border-neutral-weak-8"
+        borderColor="gray-100"
         borderRadius={2}
         padding={10}
         _focus={{ outline: '0' }}
-        bgColor="color-background"
+        bgColor="white"
         zIndex="popover"
         ref={ref}
       />
@@ -70,10 +70,11 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
         <AriakitPopoverArrow state={state} />
         {!hideCloseButton && (
           <PopoverDismiss
-            variant="floating"
+            variant="minimal"
             position="absolute"
             top={5}
-            right={5}>
+            right={5}
+            size="sm">
             <Icon icon="x" />
           </PopoverDismiss>
         )}

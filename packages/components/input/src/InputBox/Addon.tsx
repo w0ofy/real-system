@@ -23,8 +23,8 @@ const makePositionalStyles = (isSuffix = false) => {
 
 const makeColorStyles = (isDisabled = false) => {
   const styles = {
-    backgroundColor: 'color-background-disabled-weak-6',
-    borderColor: 'color-border-disabled',
+    backgroundColor: 'gray-50',
+    borderColor: 'gray-100',
   };
   if (isDisabled) {
     styles.backgroundColor = 'none';

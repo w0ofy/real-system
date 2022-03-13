@@ -7,7 +7,7 @@ type DialogHeadingProps = Omit<HeadingProps, 'variant'>;
 
 const DialogHeading = (props: DialogHeadingProps) => (
   <Heading
-    variant="heading3"
+    as="h3"
     marginBottom={0}
     data-testid={makeTestId('modal-heading')}
     {...props}

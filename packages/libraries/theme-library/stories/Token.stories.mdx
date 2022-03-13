@@ -22,7 +22,7 @@ Some style props can be used with shorthand syntax and all props follow longhand
 
 ```jsx
 // style prop usage
-<Box p={5} m={2} backgroundColor="color-background"></Box>
+<Box p={5} m={2} backgroundColor="white"></Box>
 ```
 
 ### Getters
@@ -37,15 +37,15 @@ import { Box } from '@real-system/box-primitive';
 
 const StyledBox = styled(Box)`
   margin: ${getToken(2, 'space')};
-  background-color: ${getToken('color-background')};
+  background-color: ${getToken('white')};
 `;
 
 // or
 const MyComponent = () => {
-  const [bg, space] = useTokens({ colors: 'color-background', space: 5 });
+  const [black, fivePixelsOrHalfRem] = useTokens({ colors: 'black', space: 5 });
   const styles = {
-    backgroundColor: bg,
-    margin: space,
+    backgroundColor: black,
+    margin: fivePixelsOrHalfRem,
   };
   return <div styles={styles}>...</div>;
 };

@@ -31,8 +31,8 @@ import { ThemeProvider, useTokens } from '@real-system/theme-library';
 
 const OtherComponent = () => {
   const [bgColor, textColor] = useToken({
-    colors: 'color-background',
-    colors: 'color-text'
+    colors: 'white',
+    colors: 'gray-500'
   });
   return (
     <div style={{ backgroundColor: bgColor, color: textColor }}>...</div>

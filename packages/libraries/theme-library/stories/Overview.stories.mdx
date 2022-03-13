@@ -4,106 +4,147 @@ import { makeMdxParameters } from '/.storybook/utils';
 
 <Meta title="Real System/Theming/Overview" parameters={makeMdxParameters()} />
 
-# Theming
+# Theming Overview
 
 Real System's mission is to empower engineers and teams to easily theme and extend fundamental UI components in order to quickly build react applications.
-This concept leads to this series of documents which provide instructions on how to use and customize [Real System](https://github.com/bigwoof91/real-system)'s look and feel.
+This concept leads to this series of theming documents which provide instructions on how to use and customize [Real System](https://github.com/bigwoof91/real-system)'s look and feel.
 
-## ThemeProvider
-
-The `ThemeProvider` provides all components with their styles - Without `ThemeProvider` [Real System](https://github.com/bigwoof91/real-system) is broken.
-By default, `ThemeProvider` will use the real system default theme if a custom theme isn't provided.
-
-```jsx
-import { ThemeProvider } from '@real-system/core/theme-library';
-
-const MyComponent = () => {
-  return <ThemeProvider>...</ThemeProvider>;
-};
-```
+Let's walk through the major components within Real System's theming API.
 
 ## Palettes
 
-The primary driver of a `theme` is a `palette`. A `palette` consists of `13` core colors of your choosing.
-The `palette` is fed into a color-scheme mechanism ([tokenizePalette](#customizing-a-palette)) which [shades](https://polished.js.org/docs/#shade) and [tints](https://polished.js.org/docs/#tint) colors. In turn, this creates an extensive
-design [token system](/docs/real-system-theming-token-system--page).
+The primary driver of a `theme` is a `palette`. A `palette` consists of `12` core color schemes of your choosing.
+The `palette` is fed into a color-scheming mechanism which [shades](https://polished.js.org/docs/#shade) and
+[tints](https://polished.js.org/docs/#tint) colors. In turn, this creates an extensive
+[design token](/docs/real-system-theming-token-system--page) system which live within the `theme` object, in the [ThemeProvider](#themeprovider).
+
+_Learn how to [customize a palette](/docs/real-system-theming-theme-customization--page#high-level-philosophy-palettes)_
+
+#### Palette Signature
 
 ```typescript
-// real system default palette
-type Palette = {
-  primary: string;
-  secondary: string;
-  tertiary: string;
-  quaternary: string;
-  status: {
-    success: string;
-    warning: string;
-    danger: string;
-    info: string;
-    disabled: string;
-  };
-  neutral: string;
-  dark: string;
-  light: string;
+type PaletteColors =
+  | 'black'
+  | 'white'
+  | 'gray'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'teal'
+  | 'blue'
+  | 'cyan'
+  | 'purple'
+  | 'pink';
+
+type RGB = `rgb(${number}, ${number}, ${number})`;
+type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
+type HEX = `#${string}`;
+
+type PaletteValues = RGB | RGBA | HEX;
+
+type Palette<T extends PaletteValues = PaletteValues> = Record<
+  PaletteColors,
+  T
+>;
+
+const realSystem: Palette = {
+  white: '#ffffff',
+  black: '#101840',
+  gray: '#596375',
+  blue: '#3366FF',
+  red: '#da1e28',
+  orange: '#ffb020',
+  yellow: '#ffca58',
+  green: '#248641',
+  teal: '#319795',
+  cyan: '#00b5d8',
+  purple: '#7f58de',
+  pink: '#d53f8c',
 };
 ```
 
-## Customizing a Palette
+## Theme & ThemeProvider
 
-Easily customize a theme by providing your own color [palette](#palette).
+The `ThemeProvider` provides all components with their styles - Without `ThemeProvider`
+[Real System](https://github.com/bigwoof91/real-system) is broken.
+`ThemeProvider` accepts a strictly typed theme but it can be extended with new properties.
+will use the `realSystem` theme if a `theme` prop isn't provided.
+
+**_Note: themes and palettes have the same names_**
+
+_Learn how to [customize a theme](/docs/real-system-theming-theme-customization--page#low-level-philosophy-themes-and-tokens)_
 
 ```jsx
-import {
-  tokenizePalette,
-  ThemeProvider,
-} from '@real-system/core/theme-library';
+import { ThemeProvider, themes } from '@real-system/core/theme-library';
 
-const customTheme = tokenizePalette({
-  primary: '#7d4cdb',
-  secondary: '#FD6FFF',
-  tertiary: '#81FCED',
-  quaternary: '#FFCA58',
-  status: {
-    success: '#198038',
-    warning: '#f1c21b',
-    danger: '#da1e28',
-    info: '#0043ce',
-    disabled: '#e7e7e9',
-  },
-  neutral: '#332f3c',
-  dark: '#120c1d',
-  light: '#ffffff',
-});
+// default theme is themes.realSystem
+const App = () => {
+  return <ThemeProvider>...</ThemeProvider>;
+};
 
-const MyComponent = () => {
-  return <ThemeProvider theme={customTheme}>...</ThemeProvider>;
+// use a different built-in theme
+const App = () => {
+  return <ThemeProvider theme={themes.stripe}>...</ThemeProvider>;
 };
 ```
 
-## Tokens
+## Scales & Tokens
 
-Any `token` can be used with its associated `scale` by using a style prop.
-If you want to use a `token` outside of style props, you can use the `getToken` style function to make this easy.
-`getToken` is also "hookified" into `useToken` to make it easy to use tokens in components.
+Kudos to [styled-system]() and other resources for developing this concept.
+
+#### Scales
+
+The objects in Real System's theme are referred to as `scales`. The philosphy of a `scale` is
+**constraint-based design**. They are meant to make it easy to do the right thing, but possible to handle one-off exceptions.
+
+```typescript
+// this is not a signature, just a list of scales
+const theme = {
+  // real system's scales
+  borders: { ... }
+  borderWidths: { ... }
+  colors: { ... }
+  filters: { ... }
+  fonts: { ... }
+  fontSizes: { ... }
+  fontWeights: { ... }
+  letterSpacings: { ... }
+  lineHeights: { ... }
+  radii: { ... }
+  shadows: { ... }
+  sizes: { ... }
+  space: { ... }
+  zIndices: { ... }
+};
+```
+
+#### Tokens
+
+Scales contain `tokens` aka design atoms. For example, `gray-50` is a token and it lives in the `colors` scale.
+
+Any `token` can be used with its associated `scale` by using a style prop. If you want to use a `token`
+outside of style props, you can use the `getToken` style function to make this easy. `getToken` is also
+"hookified" into `useToken` to make it easy to use tokens within in function components.
 
 ```jsx
 // style prop usage
-<Box p={5} m={2} backgroundColor="color-background"></Box>;
+<Box p={5} m={2} backgroundColor="white"></Box>;
 
 // `getToken` usage
 import { getToken, useTheme } from '@real-system/theme-library';
 
 const StyledBox = styled(Box)`
   margin: ${getToken(2, 'space')};
-  background-color: ${getToken('color-background')};
+  background-color: ${getToken('white')};
 `;
 
 // `useTokens` usage
 const MyComponent = () => {
-  const [bg, space] = useTokens({ colors: 'color-background', space: 5 });
+  const [black, fivePixelsOrHalfRem] = useTokens({ colors: 'black', space: 5 });
   const styles = {
-    backgroundColor: bg,
-    margin: space,
+    backgroundColor: black,
+    margin: fivePixelsOrHalfRem,
   };
   return <div styles={styles}>...</div>;
 };

@@ -15,7 +15,7 @@ const BoxComponent = (props: BoxProps = {}) => (
 
 const queryBoxComponent = () => screen.queryByTestId('real-system-box');
 const queryCustomTestId = (testId: string) => screen.queryByTestId(testId);
-const styleProps = { marginBottom: 5, color: 'color-background' };
+const styleProps = { marginBottom: 5, color: 'white' };
 
 describe('Box', () => {
   it('renders', () => {
