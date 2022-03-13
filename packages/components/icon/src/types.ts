@@ -19,7 +19,7 @@ type Icons = RemoveSuffix<RawIcons, '-icon'>;
 
 /** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
 type IconValue = typeof IconComponents['AcademicCapIcon'];
-type IconIntent = Exclude<ThemeIntents, 'secondary'>;
+type IconIntent = Exclude<ThemeIntents, 'secondary' | 'disabled'>;
 
 type IconProps = {
   /**

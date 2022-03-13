@@ -5,11 +5,12 @@ type ThemeIntents =
   | 'info'
   | 'warning'
   | 'danger'
-  | 'neutral';
+  | 'neutral'
+  | 'disabled';
 
 type ThemeStatuses = Extract<
   ThemeIntents,
-  'success' | 'warning' | 'danger' | 'info' | 'disabled'
+  'success' | 'warning' | 'danger' | 'info'
 >;
 type ThemeSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 

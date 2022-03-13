@@ -1,6 +1,6 @@
 import { Palette } from './types';
 
-export type DefaultPaletteColors =
+export type DefaultColorSchemes =
   | '#ffffff'
   | '#101840'
   | '#596375'
@@ -14,7 +14,7 @@ export type DefaultPaletteColors =
   | '#7f58de'
   | '#d53f8c';
 
-export type StripePaletteColors =
+export type StripeColorSchemes =
   | '#ffffff'
   | '#32325d'
   | '#525e7e'
@@ -29,8 +29,8 @@ export type StripePaletteColors =
   | '#d53f8c';
 
 export type PaletteConfig = {
-  realSystem: Palette<DefaultPaletteColors>;
-  stripe: Palette<StripePaletteColors>;
+  realSystem: Palette<DefaultColorSchemes>;
+  stripe: Palette<StripeColorSchemes>;
 };
 
 const palettes: PaletteConfig = {

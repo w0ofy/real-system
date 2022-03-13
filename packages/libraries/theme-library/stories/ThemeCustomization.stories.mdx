@@ -17,18 +17,23 @@ Real System's theming API provides you to create and/or extend upon each level.
 
 ## Philosophy
 
-#### Low Level ([palettes](/docs/real-system-theming-theme-customization--page#palette-customization))
+It should be easier to have greater impact. The lesser the impact of your change, the more difficult things get.
+
+#### High Level ([palettes](/docs/real-system-theming-theme-customization--page#palette-customization))
 
 Creating or overriding a `palette` follows this philosophy: Low effort, high return.
-By simply changing 1 or 2 colors, you impact many components throughout the system. But,
-this doesn't give you granular (or "atomic") control over component's look & feel.
-You can **override** an existing palette or **create** your own palette.
+You can **override** an existing palette or **create** your own palette. If you want to
+change one of the color schemes throughout the system, you can! By simply
+changing 1 or 2 colors, you impact many components throughout the system. But certain
+changes may be undesirable — this doesn't give you granular (or "atomic") control over component's look and feel.
+This segues into the low-level system philosophy...
 
-#### High Level ([themes and tokens](/docs/real-system-theming-theme-customization--page#theme--token-customization))
+#### Low Level ([themes and tokens](/docs/real-system-theming-theme-customization--page#theme--token-customization))
 
-Creating or extending a `theme` follows a different philosophy: low effort, low return.
+Creating or extending a `theme` follows a different philosophy: high effort, low return.
 At first that sounds odd — but this API layer is meant to grant you the granular control
-over component's look & feel that a `palette` can't. If you want to change 1 color
+over component's look & feel that a `palette` can't. If you want to change 1 color within a component,
+you can — but this requires knowledge of the inner-workings of the theme object (tokens).
 A theme consists of hundreds of visual design atoms that are used throughout components.
 Each atom is considered to be a [token](/docs/real-system-theming-design-tokens--page).
 You can **add** and **modify** tokens as you see fit.

@@ -23,7 +23,7 @@ _Learn how to [customize a palette](/docs/real-system-theming-theme-customizatio
 #### Palette Signature
 
 ```typescript
-type PaletteColors =
+type ColorSchemes =
   | 'black'
   | 'white'
   | 'gray'
@@ -44,7 +44,7 @@ type HEX = `#${string}`;
 type PaletteValues = RGB | RGBA | HEX;
 
 type Palette<T extends PaletteValues = PaletteValues> = Record<
-  PaletteColors,
+  ColorSchemes,
   T
 >;
 

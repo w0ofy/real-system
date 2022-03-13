@@ -7,7 +7,7 @@ import { patchScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { makeButtonStylesFromVariant } from './Button.styles';
-import { ButtonIntent, ButtonProps, ButtonStates } from './types';
+import { ButtonProps, ButtonStates } from './types';
 
 const getButtonState = (
   disabled?: boolean,
