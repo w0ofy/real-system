@@ -43,10 +43,7 @@ type HEX = `#${string}`;
 
 type PaletteValues = RGB | RGBA | HEX;
 
-type Palette<T extends PaletteValues = PaletteValues> = Record<
-  ColorSchemes,
-  T
->;
+type Palette<T extends PaletteValues = PaletteValues> = Record<ColorSchemes, T>;
 
 const realSystem: Palette = {
   white: '#ffffff',
