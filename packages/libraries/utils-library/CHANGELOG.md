@@ -1,5 +1,11 @@
 # @real-system/utils
 
+## 0.0.12
+
+### Patch Changes
+
+- [#304](https://github.com/bigwoof91/real-system/pull/304) [`be9d463`](https://github.com/bigwoof91/real-system/commit/be9d463e6cce7e0e7649729fcea6b16545027486) Thanks [@bigwoof91](https://github.com/bigwoof91)! - rearchitected theme and palette; naming conventions, inheritance, customizable
+
 ## 0.0.11
 
 ### Patch Changes

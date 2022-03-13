@@ -1,5 +1,37 @@
 # @real-system/core
 
+## 0.0.30
+
+### Patch Changes
+
+- [#304](https://github.com/bigwoof91/real-system/pull/304) [`be9d463`](https://github.com/bigwoof91/real-system/commit/be9d463e6cce7e0e7649729fcea6b16545027486) Thanks [@bigwoof91](https://github.com/bigwoof91)! - rearchitected theme and palette; naming conventions, inheritance, customizable
+
+- Updated dependencies [[`be9d463`](https://github.com/bigwoof91/real-system/commit/be9d463e6cce7e0e7649729fcea6b16545027486)]:
+  - @real-system/alert@0.0.12
+  - @real-system/button@0.0.28
+  - @real-system/checkbox@0.0.13
+  - @real-system/dialog@0.0.20
+  - @real-system/field@0.0.5
+  - @real-system/flex@0.0.20
+  - @real-system/icon@0.0.27
+  - @real-system/input@0.0.26
+  - @real-system/popover@0.0.3
+  - @real-system/radio-group@0.0.6
+  - @real-system/spinner@0.0.26
+  - @real-system/textarea@0.0.10
+  - @real-system/toaster@0.0.11
+  - @real-system/tooltip@0.0.4
+  - @real-system/typography@0.0.27
+  - @real-system/ariakit-library@0.0.2
+  - @real-system/theme-library@0.0.12
+  - @real-system/utils-library@0.0.12
+  - @real-system/box-primitive@0.0.11
+  - @real-system/button-primitive@0.0.21
+  - @real-system/dialog-primitive@0.0.16
+  - @real-system/text-primitive@0.0.9
+  - @real-system/truncate@0.0.5
+  - @real-system/visually-hidden@0.0.24
+
 ## 0.0.29
 
 ### Patch Changes
