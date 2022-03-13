@@ -8,7 +8,7 @@ import { Input } from '@real-system/input';
 import { themes, ThemeScales } from '@real-system/theme-library';
 
 const useThemeTokens = (scale) => {
-  const theme = useMemo(() => themes.realsystem, []);
+  const theme = useMemo(() => themes.realSystem, []);
   const tokenMap = useMemo(() => theme[scale], [theme, scale]);
   const rawTokens = useMemo(() => Object.keys(tokenMap), [tokenMap]);
   return {

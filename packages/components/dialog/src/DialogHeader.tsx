@@ -25,9 +25,7 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
     return (
       <Box
         as="header"
-        borderBottomStyle="solid"
-        borderBottomWidth="1px"
-        borderBottomColor="gray-100"
+        borderBottom="weak"
         margin={0}
         flexShrink={0}
         paddingY={8}

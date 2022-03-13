@@ -1,3 +1,5 @@
+import { merge } from '@real-system/utils-library';
+
 import { Palette, palettes } from '../palettes';
 import {
   borders,
@@ -14,17 +16,16 @@ import {
   sizes,
   space,
   zIndices,
-} from '../tokens/factory';
+} from '../tokens';
 
 import { makeTokenScale } from './utils';
 
 /**
- * @description generates a tokenized theme with the given Palette. Uses the realsystem palette by default
+ * @description generates a tokenized theme with a given Palette. Uses the `default` palette if a palette isn't provided
  */
-const tokenizePalette = (palette: Palette = palettes.default) => {
+const makeTheme = (palette: Palette = palettes.realSystem) => {
   const colorTokens = colors(palette);
   return {
-    palette,
     // scales that require color tokens
     colors: colorTokens,
     filters: makeTokenScale(filters(colorTokens)),
@@ -44,7 +45,10 @@ const tokenizePalette = (palette: Palette = palettes.default) => {
   };
 };
 
-type ThemeShape = ReturnType<typeof tokenizePalette>;
+type ThemeShape = ReturnType<typeof makeTheme>;
+type ExtendableThemeShape =
+  | Partial<ThemeShape>
+  | Partial<Record<keyof ThemeShape, unknown>>;
 
-export type { ThemeShape };
-export { tokenizePalette };
+export type { ExtendableThemeShape, ThemeShape };
+export { makeTheme };

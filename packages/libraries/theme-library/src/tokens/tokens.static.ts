@@ -1,4 +1,4 @@
-import { patchScale } from '../../sizeUtils';
+import { patchScale } from '../sizeUtils';
 
 /**
  ** Tokens that don't require palette

@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { ButtonPrimitiveProps } from '@real-system/button-primitive';
 import type {
-  PaletteColorNames,
+  PaletteColors,
   ThemeIntents,
   ThemeSizes,
 } from '@real-system/theme-library';
@@ -30,5 +30,5 @@ export type ButtonProps = ButtonPrimitiveProps & {
   /** controls the size of the button */
   size?: ButtonSize;
   /** Choose palette color scheme from theme */
-  colorScheme?: PaletteColorNames;
+  colorScheme?: PaletteColors;
 } & RealSystemElementProps;

@@ -34,13 +34,19 @@ const getCursorStyle = (loading) =>
 
 type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
 
+/**
+ * @todo modularize this kind of function in theme-library
+ */
+const maybeWarning = (colorScheme: Params['colorScheme']) =>
+  colorScheme === 'orange' ? '700' : '600';
+
 const makeButtonStylesFromVariant = {
   floating: ({ size, loading, colorScheme }: Params) =>
     mergeStyles(size, {
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
-      color: `${colorScheme}-600`,
+      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
       _hover: {
         color: `${colorScheme}-700`,
@@ -55,7 +61,7 @@ const makeButtonStylesFromVariant = {
     }),
   minimal: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
-      color: `${colorScheme}-600`,
+      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
       _hover: {
         backgroundColor: `${colorScheme}-50`,
@@ -88,7 +94,7 @@ const makeButtonStylesFromVariant = {
     }),
   outline: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
-      color: `${colorScheme}-600`,
+      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
       borderColor: `${colorScheme}-300`,
       _hover: {

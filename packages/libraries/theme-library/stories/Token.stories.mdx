@@ -42,10 +42,10 @@ const StyledBox = styled(Box)`
 
 // or
 const MyComponent = () => {
-  const [bg, space] = useTokens({ colors: 'white', space: 5 });
+  const [black, fivePixelsOrHalfRem] = useTokens({ colors: 'black', space: 5 });
   const styles = {
-    backgroundColor: bg,
-    margin: space,
+    backgroundColor: black,
+    margin: fivePixelsOrHalfRem,
   };
   return <div styles={styles}>...</div>;
 };

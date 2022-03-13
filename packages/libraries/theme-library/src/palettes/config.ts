@@ -10,9 +10,9 @@ export type DefaultPaletteColors =
   | '#ffca58'
   | '#248641'
   | '#319795'
-  | '#00B5D8'
-  | '#7F58DE'
-  | '#D53F8C';
+  | '#00b5d8'
+  | '#7f58de'
+  | '#d53f8c';
 
 export type StripePaletteColors =
   | '#ffffff'
@@ -26,15 +26,15 @@ export type StripePaletteColors =
   | '#319795'
   | '#68d5f8'
   | '#7456b7'
-  | '#D53F8C';
+  | '#d53f8c';
 
 export type PaletteConfig = {
-  default: Palette<DefaultPaletteColors>;
+  realSystem: Palette<DefaultPaletteColors>;
   stripe: Palette<StripePaletteColors>;
 };
 
 const palettes: PaletteConfig = {
-  default: {
+  realSystem: {
     white: '#ffffff',
     black: '#101840',
     gray: '#596375',
@@ -44,9 +44,9 @@ const palettes: PaletteConfig = {
     yellow: '#ffca58',
     green: '#248641',
     teal: '#319795',
-    cyan: '#00B5D8',
-    purple: '#7F58DE',
-    pink: '#D53F8C',
+    cyan: '#00b5d8',
+    purple: '#7f58de',
+    pink: '#d53f8c',
   },
   stripe: {
     white: '#ffffff',
@@ -60,7 +60,7 @@ const palettes: PaletteConfig = {
     teal: '#319795',
     cyan: '#68d5f8',
     purple: '#7456b7',
-    pink: '#D53F8C',
+    pink: '#d53f8c',
   },
 };
 

@@ -62,7 +62,12 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(function Heading(
   const headingStyles = stylesConfig[size || as];
 
   return (
-    <TextPrimitive as={as} {...headingStyles} {...restProps} ref={ref}>
+    <TextPrimitive
+      as={as}
+      {...headingStyles}
+      letterSpacing="heading"
+      {...restProps}
+      ref={ref}>
       {children}
     </TextPrimitive>
   );

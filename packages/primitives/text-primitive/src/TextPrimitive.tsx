@@ -15,6 +15,7 @@ const baseStyles = {
   fontWeight: 0,
   lineHeight: 4,
   margin: 0,
+  letterSpacing: 'body',
 };
 
 const TextPrimitive = forwardRef<HTMLElement, TextPrimitiveProps>(function Text(

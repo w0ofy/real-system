@@ -1,4 +1,4 @@
-export type PaletteColorNames =
+type PaletteColors =
   | 'black'
   | 'white'
   | 'gray'
@@ -12,31 +12,15 @@ export type PaletteColorNames =
   | 'purple'
   | 'pink';
 
-/**
- * @description all palette keys, regardless of depth
- */
-export type PaletteKeys =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'info'
-  | 'warning'
-  | 'danger'
-  | 'neutral';
+type RGB = `rgb(${number}, ${number}, ${number})`;
+type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
+type HEX = `#${string}`;
 
-export type Palette<T extends string = string> = Record<PaletteColorNames, T>;
+type PaletteValues = RGB | RGBA | HEX;
 
-export type ThemeIntents =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'info'
-  | 'warning'
-  | 'danger'
-  | 'neutral';
-
-export type ThemeStatuses = Extract<
-  ThemeIntents,
-  'success' | 'warning' | 'danger' | 'info' | 'disabled'
+type Palette<T extends PaletteValues = PaletteValues> = Record<
+  PaletteColors,
+  T
 >;
-export type ThemeSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+
+export type { Palette, PaletteColors, PaletteValues };

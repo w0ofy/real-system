@@ -14,7 +14,10 @@ type PopoverContext = {
   state: AriakitPopoverState;
 };
 
-type PopoverContainerProps = Pick<AriakitPopoverStateProps, 'placement'> & {
+type PopoverContainerProps = Pick<
+  AriakitPopoverStateProps,
+  'placement' | 'flip'
+> & {
   children: React.ReactNode;
 } & CustomPopoverState;
 
@@ -22,14 +25,30 @@ const usePopover = ({ state }: PopoverContext): AriakitPopoverState => state;
 
 const [PopoverContextProvider, usePopoverStateContext] = constate(usePopover);
 
+const ifAutoPlacements = (
+  placement: PopoverContainerProps['placement'],
+  flip
+) => {
+  if (
+    placement === 'auto' ||
+    placement === 'auto-end' ||
+    placement === 'auto-start'
+  ) {
+    return true;
+  }
+  return flip;
+};
+
 const PopoverContainer = ({
   children,
   onHide,
-  placement,
+  placement = 'auto',
+  flip = true,
 }: PopoverContainerProps) => {
   const { hide, ...restState } = useAriakitPopoverState({
     placement,
     gutter: 2,
+    flip: ifAutoPlacements(placement, flip),
   });
   const handleHide = useCallback(() => {
     onHide && onHide();

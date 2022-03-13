@@ -140,7 +140,11 @@ const ShowcaseTemplate = (args: ButtonProps) => (
     {/** danger buttons */}
     <Row>
       <Button {...args} colorScheme="red" />
-      <Button {...args} colorScheme="red" trailingIcon={<Icon icon="trash" />} />
+      <Button
+        {...args}
+        colorScheme="red"
+        trailingIcon={<Icon icon="trash" />}
+      />
       <Button {...args} colorScheme="red" leadingIcon={<Icon icon="trash" />} />
       <Button {...args} colorScheme="red">
         <Icon icon="trash" />
@@ -148,7 +152,9 @@ const ShowcaseTemplate = (args: ButtonProps) => (
     </Row>
     <Row>
       <Button {...args} colorScheme="red" disabled />
-      <Button {...args} colorScheme="red"
+      <Button
+        {...args}
+        colorScheme="red"
         trailingIcon={<Icon icon="trash" />}
         disabled
       />

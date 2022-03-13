@@ -1,6 +1,6 @@
 import type { StylePropScaleNames } from '@real-system/styling-library';
 
-import { borders, colors, filters, shadows } from './paletteTokens';
+import { borders, colors, filters, shadows } from './tokens.dynamic';
 import {
   borderWidths,
   fonts,
@@ -12,7 +12,7 @@ import {
   sizes,
   space,
   zIndices,
-} from './staticTokens';
+} from './tokens.static';
 
 export type OrdinalTokens =
   | 0
@@ -36,7 +36,7 @@ export type OrdinalTokens =
   | 18
   | 19;
 
-// palette tokens
+// dynamic tokens
 export type ColorTokens = keyof ReturnType<typeof colors>;
 export type BorderTokens = keyof ReturnType<typeof borders>;
 export type FilterTokens = keyof ReturnType<typeof filters>;
@@ -72,6 +72,8 @@ export type ThemeTokens =
   | FilterTokens
   | ColorTokens;
 
-export type ColorTokenMap = Record<ColorTokens, string>;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type ExtendedThemeTokens<T> = ThemeTokens | T;
+export type WildCardThemeToken = string | number;
 
 export type ThemeScales = StylePropScaleNames;

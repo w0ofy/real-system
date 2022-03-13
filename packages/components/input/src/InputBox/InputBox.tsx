@@ -45,9 +45,9 @@ const baseStyles: BoxStyleProps = {
 const styles: { [key in InputBoxStates]: BoxStyleProps } = {
   default: merge(baseStyles, {
     color: 'gray-500',
-    borderColor: 'gray-300',
+    borderColor: 'gray-200',
     _hover: {
-      borderColor: 'gray-400',
+      borderColor: 'gray-300',
     },
     _focusWithin: {
       borderColor: 'gray-400',

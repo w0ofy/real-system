@@ -27,7 +27,7 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))`
 
 const DialogContent = styled(animated(DialogContentPrimitive))`
   position: relative;
-  box-shadow: ${getToken('overlay-shadow-1', 'shadows')};
+  box-shadow: ${getToken('dialog', 'shadows')};
   outline: 0;
   width: 100%;
   max-width: ${majorScale(65)};

@@ -1,7 +1,6 @@
-import { Palette } from '../../palettes/types';
+import { Palette } from '../palettes/types';
 
-import { makeColorTokensFromPalette } from './colors.utils';
-import type { ColorTokenMap } from './tokens.types';
+import { makeColorTokensFromPalette } from './tokens.utils';
 
 const colors = (palette: Palette) => ({
   transparent: 'transparent',
@@ -11,7 +10,9 @@ const colors = (palette: Palette) => ({
   ...makeColorTokensFromPalette(palette),
 });
 
-const borders = (colors: ColorTokenMap) => ({
+type ThemeColors = ReturnType<typeof colors>;
+
+const borders = (colors: ThemeColors) => ({
   'border-0': 0,
   'border-1': '1px solid transparent',
   'border-2': `1px solid ${colors['gray-500']}`,
@@ -21,7 +22,7 @@ const borders = (colors: ColorTokenMap) => ({
   strong: `1px solid ${colors['gray-200']}`,
 });
 
-const shadows = (colors: ColorTokenMap) => {
+const shadows = (colors: ThemeColors) => {
   return {
     'focus-outline': `0 0 0 3px ${colors['blue-400']}`,
     dialog: `${colors['gray-300']} 0px 0px 1px, ${colors['gray-300']} 0px 16px 24px -8px`,
@@ -29,10 +30,11 @@ const shadows = (colors: ColorTokenMap) => {
   };
 };
 
-const filters = (colors: ColorTokenMap) => {
+const filters = (colors: ThemeColors) => {
   return {
     popover: `drop-shadow(${colors['gray-100']} 0px 2px 6px)`,
   };
 };
 
+export type { ThemeColors };
 export { borders, colors, filters, shadows };

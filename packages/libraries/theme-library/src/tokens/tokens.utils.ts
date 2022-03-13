@@ -1,7 +1,7 @@
 import { polished } from '@real-system/styling-library';
 import type { AddSuffix } from '@real-system/utils-library';
 
-import { Palette, PaletteColorNames, palettes } from '../../palettes';
+import { Palette, PaletteColors, palettes } from '../palettes';
 
 const { tint, shade, readableColor, transparentize } = polished;
 
@@ -29,7 +29,7 @@ type ColorTokenSuffixes =
   | AddSuffix<'900', '-readable'>
   | AddSuffix<'950', '-readable'>;
 
-type MakeColorRangeReturnValue<T extends PaletteColorNames> = Record<
+type MakeColorRangeReturnValue<T extends PaletteColors> = Record<
   `${T}-${ColorTokenSuffixes}`,
   string
 >;
@@ -37,8 +37,8 @@ type MakeColorRangeReturnValue<T extends PaletteColorNames> = Record<
 /**
  * Mechanism for generating palette color ranges
  */
-const makeColorRangeFromPalette = <T extends PaletteColorNames>(
-  plt: Palette = palettes.default,
+const makeColorRangeFromPalette = <T extends PaletteColors>(
+  plt: Palette = palettes.realSystem,
   paletteKey: T
 ): MakeColorRangeReturnValue<T> => {
   const color = plt[paletteKey];
@@ -77,7 +77,7 @@ const makeColorRangeFromPalette = <T extends PaletteColorNames>(
 
 /** @todo make alphas from palette */
 const makeAlphasFromPalette = (
-  { white, black }: Palette = palettes.default
+  { white, black }: Palette = palettes.realSystem
 ) => {
   return {
     'white-alpha-50': transparentize(0.96, white),
@@ -107,9 +107,11 @@ const makeAlphasFromPalette = (
 /**
  * Mechanism for generating color-tokens for ALL possible prefixes from a palette
  */
-const makeColorTokensFromPalette = (palette: Palette = palettes.default) => {
+const makeColorTokensFromPalette = (palette: Palette = palettes.realSystem) => {
   return {
     ...makeColorRangeFromPalette<'gray'>(palette, 'gray'),
+    ...makeColorRangeFromPalette<'black'>(palette, 'black'),
+    ...makeColorRangeFromPalette<'white'>(palette, 'white'),
     ...makeColorRangeFromPalette<'red'>(palette, 'red'),
     ...makeColorRangeFromPalette<'blue'>(palette, 'blue'),
     ...makeColorRangeFromPalette<'teal'>(palette, 'teal'),
