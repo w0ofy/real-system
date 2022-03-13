@@ -1,11 +1,8 @@
 import type { AlertPrimitiveProps } from '@real-system/alert-primitive';
 import type { FlexProps } from '@real-system/flex';
-import type { ThemeIntents } from '@real-system/theme-library';
+import type { ThemeStatuses } from '@real-system/theme-library';
 
-type AlertIntents = Extract<
-  ThemeIntents,
-  'info' | 'success' | 'danger' | 'warning'
->;
+type AlertIntents = ThemeStatuses;
 
 type CommonAlertProps = {
   intent?: AlertIntents;

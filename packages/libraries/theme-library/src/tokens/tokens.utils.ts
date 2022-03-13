@@ -1,7 +1,7 @@
 import { polished } from '@real-system/styling-library';
 import type { AddSuffix } from '@real-system/utils-library';
 
-import { Palette, PaletteColors, palettes } from '../palettes';
+import { Palette, ColorSchemes, palettes } from '../palettes';
 
 const { tint, shade, readableColor, transparentize } = polished;
 
@@ -29,7 +29,7 @@ type ColorTokenSuffixes =
   | AddSuffix<'900', '-readable'>
   | AddSuffix<'950', '-readable'>;
 
-type MakeColorRangeReturnValue<T extends PaletteColors> = Record<
+type MakeColorRangeReturnValue<T extends ColorSchemes> = Record<
   `${T}-${ColorTokenSuffixes}`,
   string
 >;
@@ -37,7 +37,7 @@ type MakeColorRangeReturnValue<T extends PaletteColors> = Record<
 /**
  * Mechanism for generating palette color ranges
  */
-const makeColorRangeFromPalette = <T extends PaletteColors>(
+const makeColorRangeFromPalette = <T extends ColorSchemes>(
   plt: Palette = palettes.realSystem,
   paletteKey: T
 ): MakeColorRangeReturnValue<T> => {
