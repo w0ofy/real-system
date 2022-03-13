@@ -1,13 +1,20 @@
 import { palettes } from './config';
 import { Palette, PaletteValues } from './types';
 
+type InitialPalette = keyof typeof palettes | Palette;
+
 const overridePalette = <T extends PaletteValues = PaletteValues>(
-  paletteName: keyof typeof palettes,
+  initialPalette: InitialPalette,
   overrides: Partial<Palette<T>>
 ) => {
-  const palette = palettes[paletteName];
+  if (typeof initialPalette === 'string') {
+    return {
+      ...palettes[initialPalette],
+      ...overrides,
+    };
+  }
   return {
-    ...palette,
+    ...initialPalette,
     ...overrides,
   };
 };
