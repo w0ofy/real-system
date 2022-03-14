@@ -44,7 +44,7 @@ const WheelCircle = styled(BoxAs<SVGCircleElementProps>('circle'))({
     `1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
 });
 
-const STYLES_BY_SIZE: { [key in ThemeSizes]: BoxStyleProps } = {
+const STYLES_BY_SIZE: Record<ThemeSizes, BoxStyleProps> = {
   xxs: {
     size: 'spinner-1',
     borderWidth: 6,

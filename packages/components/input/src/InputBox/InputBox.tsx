@@ -42,7 +42,7 @@ const baseStyles: BoxStyleProps = {
   boxShadow: 'none',
 };
 
-const styles: { [key in InputBoxStates]: BoxStyleProps } = {
+const styles: Record<InputBoxStates, BoxStyleProps> = {
   default: merge(baseStyles, {
     color: 'gray-500',
     borderColor: 'gray-200',

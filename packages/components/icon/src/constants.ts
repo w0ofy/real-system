@@ -1,12 +1,12 @@
 import type {
   ColorTokens,
-  ThemeSizes,
   SizeTokens,
+  ThemeSizes,
 } from '@real-system/theme-library';
 
 import type { IconIntent } from './types';
 
-const INTENT_MAP: { [key in IconIntent]: ColorTokens } = {
+const INTENT_MAP: Record<IconIntent, ColorTokens> = {
   neutral: 'gray-500',
   primary: 'blue-500',
   success: 'green-500',
@@ -15,7 +15,7 @@ const INTENT_MAP: { [key in IconIntent]: ColorTokens } = {
   info: 'blue-500',
 };
 
-const SIZE_MAP: { [key in ThemeSizes]: SizeTokens } = {
+const SIZE_MAP: Record<ThemeSizes, SizeTokens> = {
   xxs: 'icon-1',
   xs: 'icon-2',
   sm: 'icon-3',
