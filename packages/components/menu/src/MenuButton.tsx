@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 
 import { AriakitMenuButton } from '@real-system/ariakit-library';
+import { BoxStyleProps } from '@real-system/box-primitive';
 import { Button, ButtonProps } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 
@@ -11,23 +12,26 @@ type ConstantProps = Pick<
   | 'variant'
   | 'colorScheme'
   | 'children'
-  | 'size'
   | 'trailingIcon'
   | 'leadingIcon'
   | 'size'
-> & {
-  children: React.ReactNode;
-};
+> &
+  BoxStyleProps;
 
-type MenuButtonProps =
-  | ({
+/**
+ * @todo maybe add _expanded pseudo style prop (to theme library / button ?) ??? see chakra-ui for MenuButton example
+ */
+type MenuButtonProps = (
+  | {
       trailingArrow?: boolean;
       leadingArrow?: never;
-    } & ConstantProps)
-  | ({
-      trailingArrow?: boolean;
-      leadingArrow?: never;
-    } & ConstantProps);
+    }
+  | {
+      trailingArrow?: never;
+      leadingArrow?: boolean;
+    }
+) &
+  ConstantProps;
 
 const MenuButton = ({
   children,

@@ -9,6 +9,9 @@ export type ButtonSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;
 
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 
+/**
+ * @todo maybe add _expanded pseudo style prop ??? see chakra-ui for MenuButton example
+ */
 export type ButtonProps = ButtonPrimitiveProps & {
   /** sets the loading state of the buttons */
   loading?: boolean;
