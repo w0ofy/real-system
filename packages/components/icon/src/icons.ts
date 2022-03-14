@@ -8,7 +8,7 @@ const SolidIcons = getIcons(SIcons);
 const OutlineIcons = getIcons(OIcons);
 const ICONS_LIST = Object.keys(OutlineIcons) as Icons[];
 
-type IconsMap = { [key in Icons]: Icons };
+type IconsMap = Record<Icons, Icons>;
 
 const ICONS_MAP = ICONS_LIST.reduce(
   (o, key) => ({ ...o, [key]: key }),

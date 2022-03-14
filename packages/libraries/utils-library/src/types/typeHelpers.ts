@@ -4,7 +4,7 @@ export type UnionStringArray<T extends Readonly<string[]>> = T[number];
 
 export type AnyFunction<T = any> = (...args: T[]) => any;
 
-export type Dict<T = any> = Record<string, T>;
+export type Dict<T = any> = Record<string | number | symbol, T>;
 
 export type Booleanish = boolean | 'true' | 'false';
 

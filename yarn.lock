@@ -3663,6 +3663,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/aspect-ratio@^0.0.0, @real-system/aspect-ratio@workspace:packages/components/aspect-ratio":
+  version: 0.0.0-use.local
+  resolution: "@real-system/aspect-ratio@workspace:packages/components/aspect-ratio"
+  dependencies:
+    "@real-system/box-primitive": ^0.0.11
+    "@real-system/styling-library": ^0.0.8
+    "@real-system/theme-library": ^0.0.13
+    "@real-system/utils-library": ^0.0.12
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.6.2
+  peerDependencies:
+    "@real-system/box-primitive": ^0.0.11
+    "@real-system/styling-library": ^0.0.8
+    "@real-system/theme-library": ^0.0.13
+    "@real-system/utils-library": ^0.0.12
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/box-primitive@0.0.11, @real-system/box-primitive@^0.0.11, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
@@ -3767,6 +3789,7 @@ __metadata:
     "@real-system/alert-primitive": ^0.0.6
     "@real-system/animation-library": ^0.0.8
     "@real-system/ariakit-library": ^0.0.2
+    "@real-system/aspect-ratio": ^0.0.0
     "@real-system/box-primitive": ^0.0.11
     "@real-system/button": ^0.0.29
     "@real-system/button-primitive": ^0.0.21

@@ -8,3 +8,6 @@ export * from './kebabCase';
 export * from './makeTestId';
 export { uid } from 'react-uid';
 export { merge };
+export * from './assertion';
+export * from './object';
+export * from './responsive';

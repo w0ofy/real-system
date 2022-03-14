@@ -3,6 +3,7 @@ import React, { forwardRef, useMemo } from 'react';
 import { Box } from '@real-system/box-primitive';
 import { Icon, IconProps } from '@real-system/icon';
 import { TextPrimitive } from '@real-system/text-primitive';
+import { ColorTokens } from '@real-system/theme-library';
 
 import { CommonTextProps } from './types';
 
@@ -16,7 +17,7 @@ export type HelpTextProps = {
   errorText?: string;
 } & CommonTextProps;
 
-const LABEL_COLORS: { [key in HelpTextIntents]: string } = {
+const LABEL_COLORS: Record<HelpTextIntents, ColorTokens> = {
   danger: 'red-500',
   neutral: 'gray-400',
 };
