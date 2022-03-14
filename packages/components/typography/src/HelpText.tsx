@@ -19,7 +19,7 @@ export type HelpTextProps = {
 
 const LABEL_COLORS: Record<HelpTextIntents, ColorTokens> = {
   danger: 'red-500',
-  neutral: 'gray-400',
+  neutral: 'gray-500',
 };
 
 const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(

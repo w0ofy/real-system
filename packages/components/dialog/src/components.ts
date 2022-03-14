@@ -23,7 +23,7 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${getToken('black-alpha-500')};
+  background-color: ${getToken('black-alpha-400')};
   ${getStyleProps}
 `;
 

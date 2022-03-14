@@ -34,7 +34,7 @@ const RadioControl = ({
     (isDot = false) => {
       const defaultColor = 'blue-500-readable';
 
-      if (disabled) return 'gray-100';
+      if (disabled) return 'gray-50';
       if (isSelected && !isDot) {
         if (errorText) {
           return getErrorColor(isHovered);
@@ -49,7 +49,7 @@ const RadioControl = ({
   const borderColor = useMemo(() => {
     const defaultColor = isHovered ? 'gray-300' : 'gray-200';
 
-    if (disabled) return 'gray-300';
+    if (disabled) return 'gray-200';
     if (errorText) {
       return getErrorColor(isHovered);
     }

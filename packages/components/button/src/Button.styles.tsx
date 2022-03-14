@@ -45,6 +45,9 @@ const maybeWarning = (colorScheme: Params['colorScheme']) =>
 const maybeActive = (active: boolean, value: StylishProps) =>
   active ? value._active : value;
 
+/**
+ * @todo lighten fill variant if color scheme is gray
+ */
 const buttonStylesConfig = {
   floating: ({ size, loading, colorScheme, active }: Params) =>
     mergeStyles(size, {
