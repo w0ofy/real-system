@@ -20,6 +20,8 @@ export type ButtonProps = ButtonPrimitiveProps & {
   variant?: ButtonVariants;
   /** controls the size of the button */
   size?: ButtonSize;
-  /** Choose palette color scheme from theme */
+  /** sets color scheme of the button; color scheme is dictated by the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
+  /** sets the active state of the button and will display `:active` CSS pseudo styles */
+  active?: boolean;
 } & RealSystemElementProps;

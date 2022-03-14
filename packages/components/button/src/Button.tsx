@@ -6,7 +6,7 @@ import styled from '@real-system/styling-library';
 import { patchScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { makeButtonStylesFromVariant } from './Button.styles';
+import { buttonStylesConfig } from './Button.styles';
 import { ButtonProps, ButtonStates } from './types';
 
 const getButtonState = (
@@ -48,6 +48,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     leadingIcon,
     trailingIcon,
     colorScheme = 'gray',
+    active = false,
     ...restProps
   },
   ref
@@ -64,12 +65,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
 
   const buttonStyles = useMemo(
     () =>
-      makeButtonStylesFromVariant[variant]({
+      buttonStylesConfig[variant]({
         size,
+        active,
         colorScheme,
         loading: isLoading,
       }),
-    [isLoading, size, variant, colorScheme]
+    [variant, size, active, colorScheme, isLoading]
   );
 
   return (

@@ -32,7 +32,9 @@ const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
 const getCursorStyle = (loading) =>
   loading ? { cursor: 'wait' } : { cursor: 'not-allowed' };
 
-type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
+type Params = Required<
+  Pick<ButtonProps, 'size' | 'loading' | 'colorScheme' | 'active'>
+>;
 
 /**
  * @todo modularize this kind of function in theme-library
@@ -40,71 +42,82 @@ type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
 const maybeWarning = (colorScheme: Params['colorScheme']) =>
   colorScheme === 'orange' ? '700' : '600';
 
-const makeButtonStylesFromVariant = {
-  floating: ({ size, loading, colorScheme }: Params) =>
+const maybeActive = (active: boolean, value: StylishProps) =>
+  active ? value._active : value;
+
+const buttonStylesConfig = {
+  floating: ({ size, loading, colorScheme, active }: Params) =>
     mergeStyles(size, {
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
       color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
-      _hover: {
-        color: `${colorScheme}-700`,
-      },
-      _active: {
-        color: `${colorScheme}-800`,
-      },
+      ...maybeActive(active, {
+        _hover: {
+          color: `${colorScheme}-700`,
+        },
+        _active: {
+          color: `${colorScheme}-800`,
+        },
+      }),
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
       },
     }),
-  minimal: ({ size, colorScheme, loading }: Params) =>
+  minimal: ({ size, colorScheme, loading, active }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
-      _hover: {
-        backgroundColor: `${colorScheme}-50`,
-      },
-      _active: {
-        color: `${colorScheme}-900`,
-        backgroundColor: `${colorScheme}-100`,
-      },
+      ...maybeActive(active, {
+        _hover: {
+          backgroundColor: `${colorScheme}-50`,
+        },
+        _active: {
+          color: `${colorScheme}-900`,
+          backgroundColor: `${colorScheme}-100`,
+        },
+      }),
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         backgroundColor: `${colorScheme}-50`,
       },
     }),
-  fill: ({ size, colorScheme, loading }: Params) =>
+  fill: ({ size, colorScheme, loading, active }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-500-readable`,
       backgroundColor: `${colorScheme}-500`,
-      _hover: {
-        backgroundColor: `${colorScheme}-600`,
-      },
-      _active: {
-        backgroundColor: `${colorScheme}-700`,
-      },
+      ...maybeActive(active, {
+        _hover: {
+          backgroundColor: `${colorScheme}-600`,
+        },
+        _active: {
+          backgroundColor: `${colorScheme}-700`,
+        },
+      }),
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         backgroundColor: `${colorScheme}-50`,
       },
     }),
-  outline: ({ size, colorScheme, loading }: Params) =>
+  outline: ({ size, colorScheme, loading, active }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
       borderColor: `${colorScheme}-300`,
-      _hover: {
-        backgroundColor: `${colorScheme}-50`,
-        borderColor: `${colorScheme}-400`,
-      },
-      _active: {
-        backgroundColor: `${colorScheme}-100`,
-        borderColor: `${colorScheme}-500`,
-      },
+      ...maybeActive(active, {
+        _hover: {
+          backgroundColor: `${colorScheme}-50`,
+          borderColor: `${colorScheme}-400`,
+        },
+        _active: {
+          backgroundColor: `${colorScheme}-100`,
+          borderColor: `${colorScheme}-500`,
+        },
+      }),
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
@@ -113,4 +126,4 @@ const makeButtonStylesFromVariant = {
     }),
 };
 
-export { makeButtonStylesFromVariant };
+export { buttonStylesConfig };
