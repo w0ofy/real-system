@@ -1,7 +1,7 @@
 import { polished } from '@real-system/styling-library';
 import type { AddSuffix } from '@real-system/utils-library';
 
-import { Palette, ColorSchemes, palettes } from '../palettes';
+import { ColorSchemes, Palette, palettes } from '../palettes';
 
 const { tint, shade, readableColor, transparentize } = polished;
 
@@ -41,24 +41,25 @@ const makeColorRangeFromPalette = <T extends ColorSchemes>(
   plt: Palette = palettes.realSystem,
   paletteKey: T
 ): MakeColorRangeReturnValue<T> => {
-  const color = plt[paletteKey];
+  const paletteColor = plt[paletteKey];
 
   const colorRange = {
-    [`${paletteKey}-50`]: tint(0.95, color),
-    [`${paletteKey}-100`]: tint(0.85, color),
-    [`${paletteKey}-200`]: tint(0.65, color),
-    [`${paletteKey}-300`]: tint(0.4, color),
-    [`${paletteKey}-400`]: tint(0.25, color),
-    [`${paletteKey}-500`]: color,
-    [`${paletteKey}-600`]: shade(0.25, color),
-    [`${paletteKey}-700`]: shade(0.4, color),
-    [`${paletteKey}-800`]: shade(0.65, color),
-    [`${paletteKey}-900`]: shade(0.8, color),
-    [`${paletteKey}-950`]: shade(0.95, color),
+    [`${paletteKey}-50`]: tint(0.95, paletteColor),
+    [`${paletteKey}-100`]: tint(0.85, paletteColor),
+    [`${paletteKey}-200`]: tint(0.65, paletteColor),
+    [`${paletteKey}-300`]: tint(0.4, paletteColor),
+    [`${paletteKey}-400`]: tint(0.25, paletteColor),
+    [`${paletteKey}-500`]: paletteColor,
+    [`${paletteKey}-600`]: shade(0.25, paletteColor),
+    [`${paletteKey}-700`]: shade(0.4, paletteColor),
+    [`${paletteKey}-800`]: shade(0.65, paletteColor),
+    [`${paletteKey}-900`]: shade(0.8, paletteColor),
+    [`${paletteKey}-950`]: shade(0.95, paletteColor),
   };
 
   const readableTextRange = Object.keys(colorRange).reduce((a, b) => {
     const c = b.split('-')[0];
+    const color = colorRange[b];
     return {
       ...a,
       [`${b}-readable`]: readableColor(

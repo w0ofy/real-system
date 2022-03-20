@@ -40,7 +40,10 @@ type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
 const maybeWarning = (colorScheme: Params['colorScheme']) =>
   colorScheme === 'orange' ? '700' : '600';
 
-const makeButtonStylesFromVariant = {
+/**
+ * @todo lighten fill variant if color scheme is gray
+ */
+const buttonStylesConfig = {
   floating: ({ size, loading, colorScheme }: Params) =>
     mergeStyles(size, {
       padding: 0,
@@ -52,6 +55,10 @@ const makeButtonStylesFromVariant = {
         color: `${colorScheme}-700`,
       },
       _active: {
+        boxShadow: 'none',
+        color: `${colorScheme}-800`,
+      },
+      _expanded: {
         color: `${colorScheme}-800`,
       },
       _disabled: {
@@ -67,6 +74,11 @@ const makeButtonStylesFromVariant = {
         backgroundColor: `${colorScheme}-50`,
       },
       _active: {
+        boxShadow: 'none',
+        color: `${colorScheme}-900`,
+        backgroundColor: `${colorScheme}-100`,
+      },
+      _expanded: {
         color: `${colorScheme}-900`,
         backgroundColor: `${colorScheme}-100`,
       },
@@ -84,6 +96,10 @@ const makeButtonStylesFromVariant = {
         backgroundColor: `${colorScheme}-600`,
       },
       _active: {
+        boxShadow: 'none',
+        backgroundColor: `${colorScheme}-700`,
+      },
+      _expanded: {
         backgroundColor: `${colorScheme}-700`,
       },
       _disabled: {
@@ -102,6 +118,11 @@ const makeButtonStylesFromVariant = {
         borderColor: `${colorScheme}-400`,
       },
       _active: {
+        boxShadow: 'none',
+        backgroundColor: `${colorScheme}-100`,
+        borderColor: `${colorScheme}-500`,
+      },
+      _expanded: {
         backgroundColor: `${colorScheme}-100`,
         borderColor: `${colorScheme}-500`,
       },
@@ -113,4 +134,4 @@ const makeButtonStylesFromVariant = {
     }),
 };
 
-export { makeButtonStylesFromVariant };
+export { buttonStylesConfig };

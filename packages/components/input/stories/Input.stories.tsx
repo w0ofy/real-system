@@ -192,7 +192,17 @@ export const Composition = (args) => {
           name="email-address"
           value="personal@realsystem.com"
           suffix={
-            <Button size="sm" variant="floating">
+            <Button
+              size="sm"
+              variant="floating"
+              onClick={() => {
+                const type = 'text/plain';
+                window?.navigator?.clipboard?.write([
+                  new ClipboardItem({
+                    [type]: new Blob(['personal@realsystem.com'], { type }),
+                  }),
+                ]);
+              }}>
               <Icon icon="clipboard-copy" />
             </Button>
           }

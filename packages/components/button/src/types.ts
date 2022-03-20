@@ -9,6 +9,9 @@ export type ButtonSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;
 
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 
+/**
+ * @todo maybe add _expanded pseudo style prop ??? see chakra-ui for MenuButton example
+ */
 export type ButtonProps = ButtonPrimitiveProps & {
   /** sets the loading state of the buttons */
   loading?: boolean;
@@ -20,6 +23,6 @@ export type ButtonProps = ButtonPrimitiveProps & {
   variant?: ButtonVariants;
   /** controls the size of the button */
   size?: ButtonSize;
-  /** Choose palette color scheme from theme */
+  /** sets color scheme of the button; color scheme is dictated by the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
 } & RealSystemElementProps;

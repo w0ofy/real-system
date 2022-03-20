@@ -2,7 +2,11 @@ import React, { forwardRef } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
 import styled, { ResponsiveValue } from '@real-system/styling-library';
-import { mapResponsive } from '@real-system/utils-library';
+import {
+  makeTestId,
+  mapResponsive,
+  RealSystemElementProps,
+} from '@real-system/utils-library';
 
 type AspectRatioOptions = {
   /**
@@ -14,7 +18,9 @@ type AspectRatioOptions = {
   children?: React.ReactChild;
 };
 
-type AspectRatioProps = BoxStyleProps & AspectRatioOptions;
+type AspectRatioProps = BoxStyleProps &
+  AspectRatioOptions &
+  RealSystemElementProps;
 
 const StyledBox = styled(Box)`
   & > *:not(style) {
@@ -56,6 +62,7 @@ const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
           display: 'block',
           paddingBottom: mapResponsive(ratio, (r) => `${(1 / r) * 100}%`),
         }}
+        data-testid={makeTestId('aspect-ratio')}
         {...restProps}>
         {child}
       </StyledBox>

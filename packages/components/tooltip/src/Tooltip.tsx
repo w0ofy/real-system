@@ -35,7 +35,16 @@ const StyledTooltip = styled(animated(Box))`
 `;
 
 const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
-  { label, children, placement, disabled, visible, ...restProps },
+  {
+    label,
+    children,
+    placement,
+    disabled,
+    visible,
+    hideArrow = false,
+    gutter = 2,
+    ...restProps
+  },
   ref
 ) {
   const internalRef = useRef<HTMLElement>(null);
@@ -44,8 +53,8 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   const state = useAriakitTooltipState({
     placement,
     visible: !disabled && visible,
+    gutter,
     ...restProps,
-    gutter: 2,
   });
   const isVisible = useMemo(
     () => !disabled && state.visible,
@@ -89,7 +98,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
               state={state}
               as={StyledTooltip}
               style={style}>
-              <AriakitTooltipArrow state={state} />
+              {hideArrow ? null : <AriakitTooltipArrow state={state} />}
               <Text as="span" color="white">
                 {label}
               </Text>

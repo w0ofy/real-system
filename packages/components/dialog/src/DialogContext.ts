@@ -2,7 +2,7 @@ import { constate } from '@real-system/state-library';
 
 export type DialogState = {
   isOpen: boolean;
-  dismiss: (event?: React.SyntheticEvent) => void;
+  onDismiss: (event?: React.SyntheticEvent) => void;
 };
 
 export type DialogContext = {

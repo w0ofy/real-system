@@ -51,6 +51,7 @@ export const parameters = {
         'Layout',
         'Utilities',
         'Primitives',
+        'Recipes',
         'Sandbox',
       ],
     },

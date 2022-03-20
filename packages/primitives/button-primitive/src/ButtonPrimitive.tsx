@@ -14,6 +14,9 @@ const StyledButtonPrimitive = styled(AriakitButton, {
   shouldForwardProp: (prop) => isPropValid(prop) && isNotStyleProp(prop),
 })<any>(getStyleProps, getPseudoProps);
 
+/**
+ * @todo find a better way to merge base styles with Button component API styles i.e. _active style props; boxShadow
+ */
 const baseStyles = {
   appearance: 'none',
   color: 'gray-500',
@@ -25,7 +28,7 @@ const baseStyles = {
   border: 1,
   borderRadius: 2,
   transition:
-    'background-color 150ms ease-in-out, box-shadow 150ms ease-in, color 150ms ease-in-out',
+    'background-color 150ms ease-out, box-shadow 150ms ease-in, color 150ms ease-out',
   fontSize: 1,
   fontFamily: 'font-family-text',
   fontWeight: 1,

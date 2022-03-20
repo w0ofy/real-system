@@ -58,7 +58,7 @@ const CheckboxControl = ({
   const backgroundColor = useMemo(() => {
     const defaultColor = 'blue-500-readable';
 
-    if (disabled) return 'gray-100';
+    if (disabled) return 'gray-50';
     if (isSelected) {
       if (errorText) {
         return getErrorColor(isHovered);
@@ -71,7 +71,7 @@ const CheckboxControl = ({
   const borderColor = useMemo(() => {
     const defaultColor = isHovered ? 'gray-300' : 'gray-200';
 
-    if (disabled) return 'gray-300';
+    if (disabled) return 'gray-200';
     if (errorText) {
       return getErrorColor(isHovered);
     }

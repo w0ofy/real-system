@@ -6,7 +6,7 @@ import styled from '@real-system/styling-library';
 import { patchScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { makeButtonStylesFromVariant } from './Button.styles';
+import { buttonStylesConfig } from './Button.styles';
 import { ButtonProps, ButtonStates } from './types';
 
 const getButtonState = (
@@ -33,7 +33,7 @@ const Label = styled.span<LabelProps>((props) => ({
   whiteSpace: 'nowrap',
 }));
 
-const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? patchScale(5) : 0);
+const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? patchScale(4) : 0);
 
 /**
  * @todo update sizes API with more variations
@@ -64,12 +64,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
 
   const buttonStyles = useMemo(
     () =>
-      makeButtonStylesFromVariant[variant]({
+      buttonStylesConfig[variant]({
         size,
         colorScheme,
         loading: isLoading,
       }),
-    [isLoading, size, variant, colorScheme]
+    [variant, size, colorScheme, isLoading]
   );
 
   return (
