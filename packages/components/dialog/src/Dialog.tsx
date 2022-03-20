@@ -35,7 +35,7 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
     ariaLabelledby,
     allowPinchZoom = true,
     children,
-    dismiss,
+    onDismiss,
     initialFocusRef,
     isOpen,
     overlayProps,
@@ -46,13 +46,13 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   const transition = useTransition(isOpen, useTransitionProps);
 
   return (
-    <DialogContextProvider state={{ dismiss, isOpen }}>
+    <DialogContextProvider state={{ onDismiss, isOpen }}>
       {transition(
         (styles, isVisible) =>
           isVisible && (
             <DialogOverlay
               style={{ opacity: styles.opacity }}
-              onDismiss={dismiss}
+              onDismiss={onDismiss}
               allowPinchZoom={allowPinchZoom}
               initialFocusRef={initialFocusRef}
               {...overlayProps}

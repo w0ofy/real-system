@@ -41,7 +41,7 @@ const SvgGroup = BoxAs<SVGGelementProps>('g');
 const TrackCircle = BoxAs<SVGCircleElementProps>('circle');
 const WheelCircle = styled(BoxAs<SVGCircleElementProps>('circle'))({
   animation:
-    `1.5s ease-in-out infinite both ${circleKeyframes}` as unknown as string,
+    `1.5s ease-out infinite both ${circleKeyframes}` as unknown as string,
 });
 
 const STYLES_BY_SIZE: Record<ThemeSizes, BoxStyleProps> = {

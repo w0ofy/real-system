@@ -50,7 +50,7 @@ const ShowcaseTemplate = (args: ButtonProps) => (
     <Heading as="h2">
       {capitalize(args.variant!)} {args.size ? capitalize(args.size!) : ''}
     </Heading>
-    {/** neutral  buttons */}
+    {/** gray  buttons */}
     <Row>
       <Button {...args} />
       <Button {...args} trailingIcon={<Icon icon="cog" />} />
@@ -67,7 +67,7 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         <Icon icon="download" />
       </Button>
     </Row>
-    {/** primary buttons */}
+    {/** purple buttons */}
     <Row>
       <Button {...args} colorScheme="purple" />
       <Button
@@ -102,7 +102,42 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         <Icon icon="login" />
       </Button>
     </Row>
-    {/** success buttons */}
+    {/** blue buttons */}
+    <Row>
+      <Button {...args} colorScheme="blue" />
+      <Button
+        {...args}
+        colorScheme="blue"
+        trailingIcon={<Icon icon="login" />}
+      />
+      <Button
+        {...args}
+        colorScheme="blue"
+        leadingIcon={<Icon icon="login" />}
+      />
+      <Button {...args} colorScheme="blue">
+        <Icon icon="login" />
+      </Button>
+    </Row>
+    <Row>
+      <Button {...args} colorScheme="blue" disabled />
+      <Button
+        {...args}
+        disabled
+        colorScheme="blue"
+        trailingIcon={<Icon icon="login" />}
+      />
+      <Button
+        {...args}
+        disabled
+        colorScheme="blue"
+        leadingIcon={<Icon icon="login" />}
+      />
+      <Button {...args} colorScheme="blue" disabled>
+        <Icon icon="login" />
+      </Button>
+    </Row>
+    {/** green buttons */}
     <Row>
       <Button {...args} colorScheme="green" />
       <Button
@@ -137,7 +172,7 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         <Icon icon="save" />
       </Button>
     </Row>
-    {/** danger buttons */}
+    {/** red buttons */}
     <Row>
       <Button {...args} colorScheme="red" />
       <Button
@@ -165,6 +200,41 @@ const ShowcaseTemplate = (args: ButtonProps) => (
         disabled
       />
       <Button {...args} colorScheme="red" disabled>
+        <Icon icon="trash" />
+      </Button>
+    </Row>
+    {/** orange buttons */}
+    <Row>
+      <Button {...args} colorScheme="orange" />
+      <Button
+        {...args}
+        colorScheme="orange"
+        trailingIcon={<Icon icon="trash" />}
+      />
+      <Button
+        {...args}
+        colorScheme="orange"
+        leadingIcon={<Icon icon="trash" />}
+      />
+      <Button {...args} colorScheme="orange">
+        <Icon icon="trash" />
+      </Button>
+    </Row>
+    <Row>
+      <Button {...args} colorScheme="orange" disabled />
+      <Button
+        {...args}
+        colorScheme="orange"
+        trailingIcon={<Icon icon="trash" />}
+        disabled
+      />
+      <Button
+        {...args}
+        colorScheme="orange"
+        leadingIcon={<Icon icon="trash" />}
+        disabled
+      />
+      <Button {...args} colorScheme="orange" disabled>
         <Icon icon="trash" />
       </Button>
     </Row>

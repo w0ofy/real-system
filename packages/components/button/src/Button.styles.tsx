@@ -32,9 +32,7 @@ const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
 const getCursorStyle = (loading) =>
   loading ? { cursor: 'wait' } : { cursor: 'not-allowed' };
 
-type Params = Required<
-  Pick<ButtonProps, 'size' | 'loading' | 'colorScheme' | 'active'>
->;
+type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
 
 /**
  * @todo modularize this kind of function in theme-library
@@ -42,85 +40,92 @@ type Params = Required<
 const maybeWarning = (colorScheme: Params['colorScheme']) =>
   colorScheme === 'orange' ? '700' : '600';
 
-const maybeActive = (active: boolean, value: StylishProps) =>
-  active ? value._active : value;
-
 /**
  * @todo lighten fill variant if color scheme is gray
  */
 const buttonStylesConfig = {
-  floating: ({ size, loading, colorScheme, active }: Params) =>
+  floating: ({ size, loading, colorScheme }: Params) =>
     mergeStyles(size, {
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
       color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
-      ...maybeActive(active, {
-        _hover: {
-          color: `${colorScheme}-700`,
-        },
-        _active: {
-          color: `${colorScheme}-800`,
-        },
-      }),
+      _hover: {
+        color: `${colorScheme}-700`,
+      },
+      _active: {
+        boxShadow: 'none',
+        color: `${colorScheme}-800`,
+      },
+      _expanded: {
+        color: `${colorScheme}-800`,
+      },
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
       },
     }),
-  minimal: ({ size, colorScheme, loading, active }: Params) =>
+  minimal: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
-      ...maybeActive(active, {
-        _hover: {
-          backgroundColor: `${colorScheme}-50`,
-        },
-        _active: {
-          color: `${colorScheme}-900`,
-          backgroundColor: `${colorScheme}-100`,
-        },
-      }),
+      _hover: {
+        backgroundColor: `${colorScheme}-50`,
+      },
+      _active: {
+        boxShadow: 'none',
+        color: `${colorScheme}-900`,
+        backgroundColor: `${colorScheme}-100`,
+      },
+      _expanded: {
+        color: `${colorScheme}-900`,
+        backgroundColor: `${colorScheme}-100`,
+      },
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         backgroundColor: `${colorScheme}-50`,
       },
     }),
-  fill: ({ size, colorScheme, loading, active }: Params) =>
+  fill: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-500-readable`,
       backgroundColor: `${colorScheme}-500`,
-      ...maybeActive(active, {
-        _hover: {
-          backgroundColor: `${colorScheme}-600`,
-        },
-        _active: {
-          backgroundColor: `${colorScheme}-700`,
-        },
-      }),
+      _hover: {
+        backgroundColor: `${colorScheme}-600`,
+      },
+      _active: {
+        boxShadow: 'none',
+        backgroundColor: `${colorScheme}-700`,
+      },
+      _expanded: {
+        backgroundColor: `${colorScheme}-700`,
+      },
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         backgroundColor: `${colorScheme}-50`,
       },
     }),
-  outline: ({ size, colorScheme, loading, active }: Params) =>
+  outline: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${maybeWarning(colorScheme)}`,
       backgroundColor: 'transparent',
       borderColor: `${colorScheme}-300`,
-      ...maybeActive(active, {
-        _hover: {
-          backgroundColor: `${colorScheme}-50`,
-          borderColor: `${colorScheme}-400`,
-        },
-        _active: {
-          backgroundColor: `${colorScheme}-100`,
-          borderColor: `${colorScheme}-500`,
-        },
-      }),
+      _hover: {
+        backgroundColor: `${colorScheme}-50`,
+        borderColor: `${colorScheme}-400`,
+      },
+      _active: {
+        boxShadow: 'none',
+        backgroundColor: `${colorScheme}-100`,
+        borderColor: `${colorScheme}-500`,
+      },
+      _expanded: {
+        backgroundColor: `${colorScheme}-100`,
+        borderColor: `${colorScheme}-500`,
+      },
       _disabled: {
         ...getCursorStyle(loading),
         color: `${colorScheme}-300`,

@@ -17,10 +17,10 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
     { children, hideCloseButton = false, ...restProps },
     ref
   ) {
-    const { dismiss } = useDialogContext();
+    const { onDismiss } = useDialogContext();
     const handleOnClose = useCallback(
-      () => (dismiss ? dismiss() : undefined),
-      [dismiss]
+      () => (onDismiss ? onDismiss() : undefined),
+      [onDismiss]
     );
     return (
       <Box

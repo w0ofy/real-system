@@ -23,6 +23,7 @@ const layoutProps: StylePropConfig<LayoutProps> = {
   overflow: true,
   overflowX: true,
   overflowY: true,
+  scrollMargin: true,
   gap: {
     property: 'gap',
     scale: STYLE_PROP_SCALES.space,
@@ -101,6 +102,7 @@ type LayoutProps = {
   overflow?: Token<CSS.Overflow>;
   overflowX?: Token<CSS.OverflowX>;
   overflowY?: Token<CSS.OverflowY>;
+  scrollMargin?: Token<CSS.ScrollMargin, 'space'>;
   gap?: Token<CSS.Gap, 'space'>;
   verticalAlign?: Token<CSS.VerticalAlign>;
   top?: Token<CSS.Top, 'space'>;

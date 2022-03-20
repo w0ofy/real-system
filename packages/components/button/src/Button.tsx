@@ -33,7 +33,7 @@ const Label = styled.span<LabelProps>((props) => ({
   whiteSpace: 'nowrap',
 }));
 
-const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? patchScale(5) : 0);
+const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? patchScale(4) : 0);
 
 /**
  * @todo update sizes API with more variations
@@ -48,7 +48,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     leadingIcon,
     trailingIcon,
     colorScheme = 'gray',
-    active = false,
     ...restProps
   },
   ref
@@ -67,11 +66,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     () =>
       buttonStylesConfig[variant]({
         size,
-        active,
         colorScheme,
         loading: isLoading,
       }),
-    [variant, size, active, colorScheme, isLoading]
+    [variant, size, colorScheme, isLoading]
   );
 
   return (

@@ -19,6 +19,7 @@ import { PopoverHeading } from './PopoverHeading';
 type PopoverProps = Omit<AriakitPopoverProps, 'state' | 'as'> &
   RealSystemElementProps & {
     hideCloseButton?: boolean;
+    hideArrow?: boolean;
   };
 
 const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
@@ -31,7 +32,7 @@ const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
         xAlignContent="left"
         yAlignContent="top"
         border="border-2"
-        filter="filter-shadow-neutral-weak-8"
+        filter="popover"
         borderColor="gray-100"
         borderRadius={2}
         padding={10}
@@ -56,7 +57,12 @@ export interface PopoverComponent
 // @ts-expect-error Popover subcomponent properties are defined on the component object after this is defined
 const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
   function Popover(
-    { children, hideCloseButton, ...restProps }: PopoverProps,
+    {
+      children,
+      hideCloseButton,
+      hideArrow = false,
+      ...restProps
+    }: PopoverProps,
     ref
   ) {
     const state = usePopoverStateContext();
@@ -67,7 +73,7 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
         {...restProps}
         as={StyledPopover}
         ref={ref}>
-        <AriakitPopoverArrow state={state} />
+        {hideArrow ? null : <AriakitPopoverArrow state={state} />}
         {!hideCloseButton && (
           <PopoverDismiss
             variant="minimal"

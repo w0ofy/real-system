@@ -21,7 +21,10 @@ export default {
     PopoverDismiss,
     PopoverHeading,
   },
-  argTypes: { hideCloseButton: { type: 'boolean' } },
+  argTypes: {
+    hideCloseButton: { type: 'boolean' },
+    hideArrow: { type: 'boolean' },
+  },
 } as Meta;
 
 const Template = (args) => {
@@ -29,7 +32,9 @@ const Template = (args) => {
     <Flex padding={10} xAlignContent="center">
       <PopoverContainer placement="auto">
         <PopoverButton variant="minimal">Open Popover</PopoverButton>
-        <Popover hideCloseButton={args.hideCloseButton}>
+        <Popover
+          hideCloseButton={args.hideCloseButton}
+          hideArrow={args.hideArrow}>
           <PopoverHeading marginBottom={8}>Meet Popover</PopoverHeading>
           <PopoverDescription marginBottom={8}>
             Hello there. I am a popover! Use me as a non-modal dialog to display

@@ -18,3 +18,10 @@ export type AnyPropUnion<T> = T | (any | {});
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type StringUnionWithString<T> = T | (string | {});
+
+type AcceptableKey = string | number | symbol;
+
+export type Obj<T = any> = Record<AcceptableKey, T>;
+
+export type RequireSome<T extends Obj, S extends keyof T> = Omit<T, S> &
+  Required<Pick<T, S>>;

@@ -18,7 +18,7 @@ export default {
   component: Dialog,
 } as Meta;
 
-const Template = (args) => {
+const Template = () => {
   const [isOpen, setIsOpen] = useState(false);
   const confirmRef = useRef(null);
   const openDialog = () => setIsOpen(true);
@@ -33,7 +33,7 @@ const Template = (args) => {
         initialFocusRef={confirmRef}
         ariaLabelledby="dialog"
         isOpen={isOpen}
-        dismiss={closeDialog}>
+        onDismiss={closeDialog}>
         <DialogHeader>
           <DialogHeading id="dialog">Dialog</DialogHeading>
         </DialogHeader>

@@ -51,7 +51,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         }}
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'not-allowed' }}
-        transition="0.25s all ease-in-out"
+        transition="0.25s all ease-out"
         {...props}
       />
     );

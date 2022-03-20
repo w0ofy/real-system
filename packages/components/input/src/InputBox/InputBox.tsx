@@ -40,6 +40,9 @@ const baseStyles: BoxStyleProps = {
   cursor: 'text',
   outline: 'none',
   boxShadow: 'none',
+  _hover: {},
+  _focusWithin: {},
+  _active: { boxShadow: 'none' },
 };
 
 const styles: Record<InputBoxStates, BoxStyleProps> = {
@@ -55,7 +58,6 @@ const styles: Record<InputBoxStates, BoxStyleProps> = {
     },
     _active: {
       borderColor: 'gray-400',
-      boxShadow: 'none',
     },
   }),
   disabled: merge(baseStyles, {
@@ -89,12 +91,13 @@ const styles: Record<InputBoxStates, BoxStyleProps> = {
     border: 0,
     _hover: { border: 0 },
     _focusWithin: {
-      boxShadow: 'none',
       border: 0,
     },
     _active: { border: 0 },
   }),
 };
+
+console.log(styles);
 
 const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
   (

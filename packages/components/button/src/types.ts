@@ -25,6 +25,4 @@ export type ButtonProps = ButtonPrimitiveProps & {
   size?: ButtonSize;
   /** sets color scheme of the button; color scheme is dictated by the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
-  /** sets the active state of the button and will display `:active` CSS pseudo styles */
-  active?: boolean;
 } & RealSystemElementProps;

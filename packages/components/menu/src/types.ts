@@ -1,20 +1,8 @@
-import React from 'react';
+import type { BoxStyleProps } from '@real-system/box-primitive';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 
-import { AriakitMenuItemProps } from '@real-system/ariakit-library';
+type MenuElementProps = RealSystemElementProps;
+type CommonMenuProps = MenuElementProps & BoxStyleProps;
+type OmitMenuState<T> = Omit<T, 'state'>;
 
-type LinkOrItem =
-  | {
-      href?: string;
-      onClick?: never;
-    }
-  | {
-      href?: never;
-      onClick?: AriakitMenuItemProps['onClick'];
-    };
-
-type MenuItemProps = {
-  children: NonNullable<React.ReactNode>;
-  disabled?: AriakitMenuItemProps['disabled'];
-} & LinkOrItem;
-
-export type { MenuItemProps };
+export type { CommonMenuProps, MenuElementProps, OmitMenuState };

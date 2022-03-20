@@ -59,13 +59,13 @@ export const HelpText = () => (
       Danger help text
     </Text.HelpText>
     <Text.HelpText
-      id="help-text-danger"
+      id="help-text-error"
       intent="danger"
       errorText="Error help text">
       Danger help text
     </Text.HelpText>
     <Text.HelpText
-      id="help-text-danger"
+      id="help-text-error-without-icon"
       errorText="Error help text without icon"
       hideErrorIcon
     />
