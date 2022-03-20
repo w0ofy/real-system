@@ -47,7 +47,7 @@ const StyledBox = styled(Box)`
  * @description Component for cropping media (videos, images and maps)
  * to a desired aspect ratio.
  */
-const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
+const AspectRatio = forwardRef<HTMLOrSVGElement, AspectRatioProps>(
   function AspectRatio({ ratio = 4 / 3, children, ...restProps }, ref) {
     // enforce single child
     const child = React.Children.only(children);
