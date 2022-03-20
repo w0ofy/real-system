@@ -97,8 +97,6 @@ const styles: Record<InputBoxStates, BoxStyleProps> = {
   }),
 };
 
-console.log(styles);
-
 const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
   (
     {
