@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitMenuItemProps } from '@real-system/ariakit-library';
+import type { AriakitMenuItemProps } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
 import { StylishProps } from '@real-system/styling-library';
@@ -41,7 +41,8 @@ const menuItemStyles: StylishProps = {
   transition: 'background-color 150ms ease-out, color 150ms ease-out',
   paddingX: 7,
   paddingY: 3,
-  display: 'block',
+  display: 'inline-flex',
+  alignItems: 'center',
   width: '100%',
   color: 'gray-500',
   fontSize: 1,

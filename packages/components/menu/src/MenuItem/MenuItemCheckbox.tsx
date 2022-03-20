@@ -5,10 +5,10 @@ import {
   AriakitMenuItemCheckbox,
   AriakitMenuItemCheckboxProps,
 } from '@real-system/ariakit-library';
-import { StylishProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { CommonMenuProps, OmitMenuState } from '../types';
+import type { CommonMenuProps, OmitMenuState } from '../types';
 
 import { BoxMenuItem } from './components';
 

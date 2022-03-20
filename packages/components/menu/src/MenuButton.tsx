@@ -1,7 +1,8 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { AriakitMenuButton } from '@real-system/ariakit-library';
-import { Button, ButtonProps } from '@real-system/button';
+import type { ButtonProps } from '@real-system/button';
+import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { makeTestId } from '@real-system/utils-library';
 

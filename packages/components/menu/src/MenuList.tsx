@@ -6,7 +6,7 @@ import styled, { css } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { useMenuStateContext } from './MenuContext';
-import { CommonMenuProps } from './types';
+import type { CommonMenuProps } from './types';
 
 const StyledBox = styled(Box)(
   css({

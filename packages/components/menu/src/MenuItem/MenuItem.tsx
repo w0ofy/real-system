@@ -2,7 +2,8 @@ import React, { forwardRef, useMemo } from 'react';
 
 import { AriakitMenuItem } from '@real-system/ariakit-library';
 
-import { BoxMenuItem, MenuItemProps, MenuLink } from './components';
+import type { MenuItemProps } from './components';
+import { BoxMenuItem, MenuLink } from './components';
 
 const MenuItem = forwardRef<HTMLAnchorElement | HTMLDivElement, MenuItemProps>(
   function MenuItem({ children, href, disabled, onClick, ...restProps }, ref) {

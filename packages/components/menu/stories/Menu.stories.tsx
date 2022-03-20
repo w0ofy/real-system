@@ -10,6 +10,8 @@ import {
   MenuGroupLabel,
   MenuItem,
   MenuItemCheckbox,
+  MenuItemCommand,
+  MenuItemIcon,
   MenuItemRadio,
   MenuList,
   MenuSeparator,
@@ -28,10 +30,26 @@ export const Default = (args) => (
         <Icon icon="menu" />
       </MenuButton>
       <MenuList>
-        <MenuItem>Edit</MenuItem>
-        <MenuItem>Share</MenuItem>
-        <MenuItem>Archive</MenuItem>
-        <MenuItem disabled>Delete</MenuItem>
+        <MenuItem>
+          <MenuItemIcon icon="pencil-alt" />
+          Edit
+          <MenuItemCommand>E</MenuItemCommand>
+        </MenuItem>
+        <MenuItem>
+          <MenuItemIcon icon="share" />
+          Share
+          <MenuItemCommand>S</MenuItemCommand>
+        </MenuItem>
+        <MenuItem>
+          <MenuItemIcon icon="archive" />
+          Archive
+          <MenuItemCommand>A</MenuItemCommand>
+        </MenuItem>
+        <MenuItem disabled>
+          <MenuItemIcon icon="trash" />
+          Delete
+          <MenuItemCommand>D</MenuItemCommand>
+        </MenuItem>
         <MenuSeparator />
         <MenuItem href="https://system.themikewolf.com" external>
           Report

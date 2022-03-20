@@ -1,9 +1,7 @@
 import React from 'react';
 
-import {
-  AriakitMenuStateProps,
-  useAriakitMenuState,
-} from '@real-system/ariakit-library';
+import type { AriakitMenuStateProps } from '@real-system/ariakit-library';
+import { useAriakitMenuState } from '@real-system/ariakit-library';
 
 import { MenuContextProvider } from './MenuContext';
 

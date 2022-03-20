@@ -1,19 +1,16 @@
 import React from 'react';
 
 import { AriakitMenuGroupLabel } from '@real-system/ariakit-library';
-import { Box } from '@real-system/box-primitive';
+import type { TextPrimitiveProps } from '@real-system/text-primitive';
+import { TextPrimitive } from '@real-system/text-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-import { CommonMenuProps } from '../types';
-
-type MenuGroupLabelProps = {
-  children?: React.ReactNode;
-} & CommonMenuProps;
+type MenuGroupLabelProps = Omit<TextPrimitiveProps, 'as'>;
 
 const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
   return (
     <AriakitMenuGroupLabel
-      as={Box}
+      as={TextPrimitive}
       fontSize={1}
       fontWeight={2}
       lineHeight={2}

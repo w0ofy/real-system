@@ -7,7 +7,7 @@ import {
 import { Box } from '@real-system/box-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-import { CommonMenuProps, OmitMenuState } from './types';
+import type { CommonMenuProps, OmitMenuState } from './types';
 
 type MenuSeparatorProps = OmitMenuState<AriakitMenuSeparatorProps> &
   CommonMenuProps;
