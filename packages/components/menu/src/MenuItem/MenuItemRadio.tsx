@@ -24,15 +24,7 @@ const styleProps: StylishProps = {
 
 const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
   function MenuItemRadio(
-    {
-      children,
-      disabled,
-      onClick,
-      value,
-      name,
-      hideOnClick = true,
-      ...restProps
-    },
+    { children, disabled, onClick, value, name, hideOnClick, ...restProps },
     ref
   ) {
     return (
