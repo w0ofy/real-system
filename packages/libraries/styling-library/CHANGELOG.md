@@ -1,5 +1,11 @@
 # @real-system/styling
 
+## 0.0.9
+
+### Patch Changes
+
+- [#315](https://github.com/bigwoof91/real-system/pull/315) [`3b2e767`](https://github.com/bigwoof91/real-system/commit/3b2e767da36cc57b9450a7b40c4418c2d32d141d) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Added rc Menu component + Dialog props renamed + adding more type helpers to utils
+
 ## 0.0.8
 
 ### Patch Changes
