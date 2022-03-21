@@ -1,5 +1,13 @@
 # @real-system/visually-hidden
 
+## 0.0.25
+
+### Patch Changes
+
+- Updated dependencies [[`3b2e767`](https://github.com/bigwoof91/real-system/commit/3b2e767da36cc57b9450a7b40c4418c2d32d141d)]:
+  - @real-system/styling-library@0.0.9
+  - @real-system/box-primitive@0.0.12
+
 ## 0.0.24
 
 ### Patch Changes
