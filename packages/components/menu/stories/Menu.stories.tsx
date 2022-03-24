@@ -12,6 +12,7 @@ import {
   MenuItemCheckbox,
   MenuItemCommand,
   MenuItemIcon,
+  MenuItemLink,
   MenuItemRadio,
   MenuList,
   MenuSeparator,
@@ -20,7 +21,19 @@ import {
 export default {
   title: 'Components/Menu',
   component: Menu,
-  subcomponents: { MenuButton, Menu, MenuList, MenuItem },
+  subcomponents: {
+    MenuButton,
+    MenuGroup,
+    MenuGroupLabel,
+    MenuItem,
+    MenuItemCheckbox,
+    MenuItemCommand,
+    MenuItemIcon,
+    MenuItemLink,
+    MenuItemRadio,
+    MenuList,
+    MenuSeparator,
+  },
 } as Meta;
 
 export const Default = (args) => (
@@ -51,9 +64,12 @@ export const Default = (args) => (
           <MenuItemCommand>D</MenuItemCommand>
         </MenuItem>
         <MenuSeparator />
-        <MenuItem href="https://system.themikewolf.com" external>
+        <MenuItemLink
+          href="https://system.themikewolf.com"
+          external
+          showExternal>
           Report
-        </MenuItem>
+        </MenuItemLink>
       </MenuList>
     </Menu>
   </Box>
@@ -75,9 +91,12 @@ export const MenuGroups = (args) => (
         <MenuGroup>
           <MenuGroupLabel>Help</MenuGroupLabel>
           <MenuItem>Docs</MenuItem>
-          <MenuItem href="https://system.themikewolf.com" external>
+          <MenuItemLink
+            href="https://system.themikewolf.com"
+            external
+            showExternal>
             FAQ
-          </MenuItem>
+          </MenuItemLink>
         </MenuGroup>
       </MenuList>
     </Menu>

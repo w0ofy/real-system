@@ -4,7 +4,7 @@ import { AriakitMenuGroup } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-import { CommonMenuProps } from '../types';
+import type { CommonMenuProps } from '../types';
 
 type MenuGroupProps = {
   children?: React.ReactNode;

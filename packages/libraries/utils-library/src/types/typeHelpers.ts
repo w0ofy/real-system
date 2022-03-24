@@ -1,3 +1,5 @@
+import React from 'react';
+
 export type Merge<T, P> = P & Omit<T, keyof P>;
 
 export type UnionStringArray<T extends Readonly<string[]>> = T[number];

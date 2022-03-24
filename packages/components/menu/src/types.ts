@@ -1,8 +1,8 @@
 import type { BoxStyleProps } from '@real-system/box-primitive';
-import type { RealSystemElementProps } from '@real-system/utils-library';
+import type { As, RealSystemElementProps } from '@real-system/utils-library';
 
-type MenuElementProps = RealSystemElementProps;
-type CommonMenuProps = MenuElementProps & BoxStyleProps;
+type CommonMenuProps<T extends As = 'div'> = RealSystemElementProps<T> &
+  BoxStyleProps;
 type OmitMenuState<T> = Omit<T, 'state'>;
 
-export type { CommonMenuProps, MenuElementProps, OmitMenuState };
+export type { CommonMenuProps, OmitMenuState };
