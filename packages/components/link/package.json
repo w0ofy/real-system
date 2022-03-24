@@ -1,7 +1,7 @@
 {
-  "name": "@real-system/menu",
-  "version": "0.0.1",
-  "description": "Menu component for real system.",
+  "name": "@real-system/link",
+  "version": "0.0.0",
+  "description": "Link component for real system.",
   "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -21,7 +21,7 @@
   },
   "keywords": [
     "real-system",
-    "menu"
+    "link"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -30,12 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/animation-library": "^0.0.8",
-    "@real-system/ariakit-library": "^0.0.3",
-    "@real-system/box-primitive": "^0.0.12",
-    "@real-system/button": "^0.0.30",
-    "@real-system/link": "^0.0.0",
-    "@real-system/state-library": "^0.0.7",
+    "@real-system/icon": "^0.0.29",
     "@real-system/styling-library": "^0.0.9",
     "@real-system/text-primitive": "^0.0.11",
     "@real-system/theme-library": "^0.0.14",
@@ -44,12 +39,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@real-system/animation-library": "^0.0.8",
-    "@real-system/ariakit-library": "^0.0.3",
-    "@real-system/box-primitive": "^0.0.12",
-    "@real-system/button": "^0.0.30",
-    "@real-system/link": "^0.0.0",
-    "@real-system/state-library": "^0.0.7",
+    "@real-system/icon": "^0.0.29",
     "@real-system/styling-library": "^0.0.9",
     "@real-system/text-primitive": "^0.0.11",
     "@real-system/theme-library": "^0.0.14",

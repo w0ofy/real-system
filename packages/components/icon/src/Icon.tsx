@@ -40,8 +40,12 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     colors: INTENT_MAP[intent || 'neutral'],
   });
 
-  if (intent === undefined || restProps.color) {
-    iconColor = 'currentColor';
+  if (intent === undefined) {
+    if (!restProps.color) {
+      iconColor = 'currentColor';
+    } else {
+      iconColor = restProps.color;
+    }
   }
 
   return (

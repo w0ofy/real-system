@@ -10,7 +10,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from '../types';
 
-import { BoxMenuItem } from './components';
+import { BoxMenuItem } from './MenuItem';
 
 type MenuItemRadioProps = OmitMenuState<AriakitMenuItemRadioProps> &
   CommonMenuProps;
@@ -28,6 +28,7 @@ const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
     ref
   ) {
     return (
+      /** @ts-ignore `as` prop type conflicts */
       <AriakitMenuItemRadio
         as={BoxMenuItem}
         disabled={disabled}

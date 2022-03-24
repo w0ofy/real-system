@@ -25,8 +25,8 @@ const MenuItemIcon = forwardRef<HTMLSpanElement, MenuItemIconProps>(
 
     return (
       <Icon
-        {...spaceProps}
         data-testid={makeTestId('menu-item-icon')}
+        {...spaceProps}
         {...restProps}
         ref={ref}
       />

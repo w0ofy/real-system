@@ -10,7 +10,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from '../types';
 
-import { BoxMenuItem } from './components';
+import { BoxMenuItem } from './MenuItem';
 
 type MenuItemCheckboxProps = OmitMenuState<AriakitMenuItemCheckboxProps> &
   CommonMenuProps;
@@ -28,6 +28,7 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
     ref
   ) {
     return (
+      /** @ts-ignore `as` prop type conflicts */
       <AriakitMenuItemCheckbox
         as={BoxMenuItem}
         disabled={disabled}

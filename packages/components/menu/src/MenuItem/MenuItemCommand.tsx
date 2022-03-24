@@ -17,8 +17,8 @@ const MenuItemCommand = forwardRef<HTMLSpanElement, MenuItemCommandProps>(
         color="gray-400"
         fontWeight={0}
         role="img"
-        ref={ref}
-        {...restProps}>
+        {...restProps}
+        ref={ref}>
         ⌘{children}
       </TextPrimitive>
     );

@@ -4,16 +4,10 @@ import { AriakitMenuButton } from '@real-system/ariakit-library';
 import type { ButtonProps } from '@real-system/button';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
-import { makeTestId } from '@real-system/utils-library';
+import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
 
 import { useMenuStateContext } from './MenuContext';
-import { MenuElementProps } from './types';
 
-type ConstantProps = ButtonProps & MenuElementProps;
-
-/**
- * @todo maybe add _expanded pseudo style prop (to theme library / button ?) ??? see chakra-ui for MenuButton example
- */
 type MenuButtonProps = (
   | {
       trailingArrow?: boolean;
@@ -24,7 +18,8 @@ type MenuButtonProps = (
       leadingArrow?: boolean;
     }
 ) &
-  ConstantProps;
+  ButtonProps &
+  RealSystemElementProps;
 
 const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
   function MenuButton(

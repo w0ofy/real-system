@@ -1,43 +1,70 @@
-import React, { forwardRef, useMemo } from 'react';
+import React, { forwardRef } from 'react';
 
 import { AriakitMenuItem } from '@real-system/ariakit-library';
+import { Box } from '@real-system/box-primitive';
+import { StylishProps } from '@real-system/styling-library';
+import { makeTestId } from '@real-system/utils-library';
 
-import type { MenuItemProps } from './components';
-import { BoxMenuItem, MenuLink } from './components';
+import { CommonMenuItemProps } from './MenuItem.types';
 
-const MenuItem = forwardRef<HTMLAnchorElement | HTMLDivElement, MenuItemProps>(
-  function MenuItem({ children, href, disabled, onClick, ...restProps }, ref) {
-    const Item = useMemo(
-      () =>
-        href
-          ? {
-              Component: MenuLink,
-              props: {
-                href,
-                ref: ref as unknown as React.ForwardedRef<HTMLDivElement>,
-              },
-            }
-          : {
-              Component: BoxMenuItem,
-              props: {
-                onClick,
-                ref: ref as unknown as React.ForwardedRef<HTMLDivElement>,
-              },
-            },
-      [href, onClick, ref]
-    );
+type MenuItemProps = CommonMenuItemProps;
 
+const menuItemStyles: StylishProps = {
+  transition: 'background-color 150ms ease-out, color 150ms ease-out',
+  paddingX: 7,
+  paddingY: 3,
+  display: 'inline-flex',
+  alignItems: 'center',
+  width: '100%',
+  color: 'gray-500',
+  fontSize: 1,
+  fontWeight: 1,
+  lineHeight: 4,
+  textDecoration: 'none',
+  cursor: 'pointer',
+  _hover: {
+    backgroundColor: 'gray-50',
+    color: 'gray-600',
+  },
+  _focus: {
+    outline: 'none',
+    backgroundColor: 'gray-50',
+    color: 'gray-600',
+  },
+  _active: {
+    backgroundColor: 'gray-100',
+    color: 'gray-700',
+  },
+  _checked: {
+    color: 'gray-700',
+  },
+  _disabled: { backgroundColor: 'none', color: 'gray-300' },
+};
+
+const BoxMenuItem = forwardRef<HTMLDivElement, MenuItemProps>(
+  function BoxMenuItem({ children, ...restProps }, ref) {
     return (
-      <AriakitMenuItem
-        as={Item.Component}
-        disabled={disabled}
-        {...Item.props}
-        {...restProps}>
+      <Box {...menuItemStyles} {...restProps} ref={ref}>
         {children}
-      </AriakitMenuItem>
+      </Box>
     );
   }
 );
 
+const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(
+  { children, ...restProps },
+  ref
+) {
+  return (
+    <AriakitMenuItem
+      as={BoxMenuItem}
+      data-testid={makeTestId('menu-item')}
+      {...restProps}
+      ref={ref}>
+      {children}
+    </AriakitMenuItem>
+  );
+});
+
 export type { MenuItemProps };
-export { MenuItem };
+export { BoxMenuItem, MenuItem, menuItemStyles };
