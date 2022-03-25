@@ -330,6 +330,7 @@ module.exports = {
   },
   fontSizes: {
     0: '1rem',
+    1: '1.2rem',
     2: '1.4rem',
     3: '1.8rem',
     4: '2.2rem',
@@ -735,3 +736,4 @@ module.exports = {
     xl: '6.4rem',
     xxl: '12.8rem',
   },
+};
