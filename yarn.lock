@@ -3799,6 +3799,7 @@ __metadata:
     "@real-system/flex": ^0.0.22
     "@real-system/icon": ^0.0.29
     "@real-system/input": ^0.0.28
+    "@real-system/link": ^0.0.0
     "@real-system/menu": ^0.0.1
     "@real-system/popover": ^0.0.5
     "@real-system/portal-primitive": ^0.0.6
