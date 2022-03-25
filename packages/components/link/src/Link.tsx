@@ -38,7 +38,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       ref={ref}
       color="blue-500"
       textDecoration="none"
-      borderRadius={1}
+      borderRadius={3}
       _hover={{
         color: 'blue-600',
         textDecoration: 'underline',

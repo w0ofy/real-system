@@ -94,7 +94,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-6">Disabled</Label>
+        <Label htmlFor="input-6" disabled>
+          Disabled
+        </Label>
         <RealInput disabled id="input-6" name="email-address" {...args} />
       </Container>
     </Box>

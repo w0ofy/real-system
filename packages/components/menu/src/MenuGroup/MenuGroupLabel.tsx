@@ -12,7 +12,7 @@ const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
     <AriakitMenuGroupLabel
       as={TextPrimitive}
       fontSize={1}
-      fontWeight={2}
+      fontWeight={4}
       lineHeight={2}
       color="gray-600"
       marginLeft={7}

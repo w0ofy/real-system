@@ -11,10 +11,10 @@ import type { CommonMenuProps } from './types';
 const StyledBox = styled(Box)(
   css({
     py: 3,
-    zIndex: 1,
+    zIndex: 'dropdown',
     backgroundColor: 'white',
     boxShadow: 'menu',
-    borderRadius: 2,
+    borderRadius: 4,
     width: '15rem',
     minWidth: '15rem',
     maxWidth: '22rem',

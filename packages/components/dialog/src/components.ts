@@ -37,7 +37,7 @@ const DialogContent = styled(animated(DialogContentPrimitive))<
   max-width: ${majorScale(65)};
   min-height: 150px;
   background-color: ${getToken('white')};
-  border-radius: ${getToken(2, 'radii')};
+  border-radius: ${getToken(4, 'radii')};
   display: flex;
   flex-direction: column;
   z-index: ${getToken('dialog', 'zIndices')};

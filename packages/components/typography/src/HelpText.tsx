@@ -47,7 +47,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
       margin={0}
       marginTop={2}
       fontSize={1}
-      fontWeight={0}
+      fontWeight={4}
       lineHeight={1}
       color={LABEL_COLORS[intent]}
       {...restProps}

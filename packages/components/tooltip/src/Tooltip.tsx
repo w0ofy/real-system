@@ -30,7 +30,7 @@ const StyledTooltip = styled(animated(Box))`
   box-shadow: ${getToken('tooltip', 'shadows')};
   background-color: ${getToken('black')};
   border: ${getToken('border-1', 'borders')};
-  border-radius: ${getToken(2, 'radii')};
+  border-radius: ${getToken(4, 'radii')};
   max-width: 30rem;
 `;
 

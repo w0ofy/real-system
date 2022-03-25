@@ -7,14 +7,14 @@ import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {
   let styles: BoxStyleProps = {
-    borderBottomLeftRadius: 2,
-    borderTopLeftRadius: 2,
+    borderBottomLeftRadius: 4,
+    borderTopLeftRadius: 4,
     borderRight: 1,
   };
   if (isSuffix) {
     styles = {
-      borderBottomRightRadius: 2,
-      borderTopRightRadius: 2,
+      borderBottomRightRadius: 4,
+      borderTopRightRadius: 4,
       borderLeft: 1,
     };
   }

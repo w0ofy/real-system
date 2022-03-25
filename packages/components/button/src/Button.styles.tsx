@@ -30,16 +30,20 @@ const sizes: Record<ButtonSize, StylishProps> = {
 const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
 
 const getCursorStyle = (loading) =>
-  loading ? { cursor: 'wait' } : { cursor: 'not-allowed' };
+  loading ? { cursor: 'wait' } : { cursor: 'default' };
 
 type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
 
 /**
  * @todo modularize this kind of function in theme-library
  */
-const maybeWarning = (colorScheme: Params['colorScheme']) =>
+const maybeOrange = (colorScheme: Params['colorScheme']) =>
   colorScheme === 'orange' ? '700' : '600';
-
+const ifGray = (
+  colorScheme: Params['colorScheme'],
+  thenValue: string,
+  elseValue: string
+) => (colorScheme === 'gray' ? thenValue : elseValue);
 /**
  * @todo lighten fill variant if color scheme is gray
  */
@@ -49,7 +53,7 @@ const buttonStylesConfig = {
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
-      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
+      color: `${colorScheme}-${maybeOrange(colorScheme)}`,
       backgroundColor: 'transparent',
       _hover: {
         color: `${colorScheme}-700`,
@@ -68,7 +72,7 @@ const buttonStylesConfig = {
     }),
   minimal: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
-      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
+      color: `${colorScheme}-${maybeOrange(colorScheme)}`,
       backgroundColor: 'transparent',
       _hover: {
         backgroundColor: `${colorScheme}-50`,
@@ -90,17 +94,17 @@ const buttonStylesConfig = {
     }),
   fill: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
-      color: `${colorScheme}-500-readable`,
-      backgroundColor: `${colorScheme}-500`,
+      color: `${colorScheme}-${ifGray(colorScheme, '200', '500')}-readable`,
+      backgroundColor: `${colorScheme}-${ifGray(colorScheme, '100', '500')}`,
       _hover: {
-        backgroundColor: `${colorScheme}-600`,
+        backgroundColor: `${colorScheme}-${ifGray(colorScheme, '200', '600')}`,
       },
       _active: {
         boxShadow: 'none',
-        backgroundColor: `${colorScheme}-700`,
+        backgroundColor: `${colorScheme}-${ifGray(colorScheme, '300', '700')}`,
       },
       _expanded: {
-        backgroundColor: `${colorScheme}-700`,
+        backgroundColor: `${colorScheme}-${ifGray(colorScheme, '300', '700')}`,
       },
       _disabled: {
         ...getCursorStyle(loading),
@@ -110,7 +114,7 @@ const buttonStylesConfig = {
     }),
   outline: ({ size, colorScheme, loading }: Params) =>
     mergeStyles(size, {
-      color: `${colorScheme}-${maybeWarning(colorScheme)}`,
+      color: `${colorScheme}-${maybeOrange(colorScheme)}`,
       backgroundColor: 'transparent',
       borderColor: `${colorScheme}-300`,
       _hover: {

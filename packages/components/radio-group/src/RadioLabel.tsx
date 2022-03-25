@@ -12,9 +12,9 @@ const RadioLabel = ({ children, disabled }: RadioLabelProps) => {
     <Box
       as="span"
       color={disabled ? 'gray-300' : 'gray-500'}
-      fontFamily="font-family-text"
+      fontFamily="body"
       fontSize={1}
-      fontWeight={1}
+      fontWeight={5}
       lineHeight={1}
       marginBottom={0}>
       {children}

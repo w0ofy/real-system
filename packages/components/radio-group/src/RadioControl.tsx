@@ -75,7 +75,7 @@ const RadioControl = ({
       borderWidth="1px"
       borderStyle="solid"
       borderColor={borderColor}
-      borderRadius="border-radius-circle"
+      borderRadius="circle"
       boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}
       backgroundColor={backgroundColor()}
       transition={transition}>
@@ -83,7 +83,7 @@ const RadioControl = ({
         as="span"
         width={3}
         height={3}
-        borderRadius="border-radius-circle"
+        borderRadius="circle"
         backgroundColor={backgroundColor(true)}
       />
     </Flex>

@@ -18,7 +18,7 @@ const menuItemStyles: StylishProps = {
   width: '100%',
   color: 'gray-500',
   fontSize: 1,
-  fontWeight: 1,
+  fontWeight: 3,
   lineHeight: 4,
   textDecoration: 'none',
   cursor: 'pointer',

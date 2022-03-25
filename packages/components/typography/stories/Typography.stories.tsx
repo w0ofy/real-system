@@ -17,7 +17,7 @@ const Template = (args) => {
     <>
       <Text {...args}>
         The quick brown fox jumps over the{' '}
-        <Text {...args} inline fontWeight={3}>
+        <Text {...args} inline fontWeight={5}>
           lazy
         </Text>{' '}
         dog.

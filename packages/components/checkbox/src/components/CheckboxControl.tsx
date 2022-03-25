@@ -94,7 +94,7 @@ const CheckboxControl = ({
       borderWidth={1}
       backgroundColor={backgroundColor}
       borderColor={borderColor}
-      borderRadius={2}
+      borderRadius={4}
       transition={transition}
       boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}>
       <CheckboxIcon

@@ -16,7 +16,7 @@ const canSelectAllStyles = {
   _first: {
     paddingY: 2,
     paddingX: 3,
-    borderRadius: 1,
+    borderRadius: 3,
     backgroundColor: 'blue-50',
   },
 };

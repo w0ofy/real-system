@@ -8,4 +8,6 @@ const themes = {
   stripe: makeTheme(palettes.stripe),
 };
 
+console.log(themes.realSystem);
+
 export { themes };

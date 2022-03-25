@@ -28,11 +28,11 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         margin={0}
         fontFamily="inherit"
         fontSize={1}
-        fontWeight={1}
+        fontWeight={5}
         lineHeight={1}
         backgroundColor="transparent"
         border="none"
-        borderRadius={2}
+        borderRadius={4}
         boxShadow="none"
         color="inherit"
         cursor={getCursor(props)}
@@ -50,7 +50,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
           color: 'gray-300',
         }}
         _focus={{ outline: 'none' }}
-        _disabled={{ cursor: 'not-allowed' }}
+        _disabled={{ cursor: 'default' }}
         transition="0.25s all ease-out"
         {...props}
       />

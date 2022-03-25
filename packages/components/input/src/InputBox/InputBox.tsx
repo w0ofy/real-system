@@ -34,7 +34,7 @@ const baseStyles: BoxStyleProps = {
   display: 'flex',
   width: '100%',
   border: '1px solid',
-  borderRadius: 2,
+  borderRadius: 4,
   transition: 'box-shadow 150ms ease-in, border-color 150ms ease-in',
   bgColor: 'white',
   cursor: 'text',
@@ -64,7 +64,7 @@ const styles: Record<InputBoxStates, BoxStyleProps> = {
     color: 'gray-300',
     bgColor: 'gray-50',
     borderColor: 'gray-200',
-    cursor: 'not-allowed',
+    cursor: 'default',
   }),
   readonly: merge(baseStyles, {
     color: 'gray-300',

@@ -16,13 +16,13 @@ const INTENT_MAP: Record<IconIntent, ColorTokens> = {
 };
 
 const SIZE_MAP: Record<ThemeSizes, SizeTokens> = {
-  xxs: 'icon-1',
-  xs: 'icon-2',
-  sm: 'icon-3',
-  md: 'icon-4',
-  lg: 'icon-5',
-  xl: 'icon-6',
-  xxl: 'icon-7',
+  xxs: 'icon-xxs',
+  xs: 'icon-xs',
+  sm: 'icon-sm',
+  md: 'icon-md',
+  lg: 'icon-lg',
+  xl: 'icon-xl',
+  xxl: 'icon-xxl',
 };
 
 export { INTENT_MAP, SIZE_MAP };

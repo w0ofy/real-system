@@ -12,8 +12,8 @@ const realSystemStyles = css({
   body: {
     WebkitFontSmoothing: 'subpixel-antialiased',
     MozOsxFontSmoothing: 'auto',
-    fontFamily: 'font-family-text',
-    fontWeight: 0,
+    fontFamily: 'body',
+    fontWeight: 2,
     letterSpacing: 'body',
     backgroundColor: 'white',
   },

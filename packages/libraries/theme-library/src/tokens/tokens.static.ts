@@ -47,6 +47,14 @@ const space = {
   'space-negative-18': patchScale(18, { destructive: true }),
   'space-negative-19': patchScale(19, { destructive: true }),
   'space-negative-20': patchScale(20, { destructive: true }),
+
+  xxs: patchScale(1),
+  xs: patchScale(2),
+  sm: patchScale(4),
+  md: patchScale(8),
+  lg: patchScale(16),
+  xl: patchScale(32),
+  xxl: patchScale(64),
 };
 
 const sizes = {
@@ -82,22 +90,21 @@ const sizes = {
   'size-29': patchScale(29),
   'size-30': patchScale(30),
 
-  // should match fontSizes
-  'icon-1': patchScale(5),
-  'icon-2': patchScale(7),
-  'icon-3': patchScale(8),
-  'icon-4': patchScale(10),
-  'icon-5': patchScale(12),
-  'icon-6': patchScale(13),
-  'icon-7': patchScale(15),
-
-  'spinner-1': patchScale(5),
-  'spinner-2': patchScale(7),
-  'spinner-3': patchScale(8),
-  'spinner-4': patchScale(10),
-  'spinner-5': patchScale(12),
-  'spinner-6': patchScale(13),
-  'spinner-7': patchScale(15),
+  /** should match fontSizes */
+  'icon-xxs': patchScale(5),
+  'icon-xs': patchScale(7),
+  'icon-sm': patchScale(8),
+  'icon-md': patchScale(10),
+  'icon-lg': patchScale(12),
+  'icon-xl': patchScale(13),
+  'icon-xxl': patchScale(15),
+  'spinner-xxs': patchScale(5),
+  'spinner-xs': patchScale(7),
+  'spinner-sm': patchScale(8),
+  'spinner-md': patchScale(10),
+  'spinner-lg': patchScale(12),
+  'spinner-xl': patchScale(13),
+  'spinner-xxl': patchScale(15),
 
   max: 'max-content',
   min: 'min-content',
@@ -105,16 +112,6 @@ const sizes = {
 };
 
 const zIndices = {
-  'z-index-0': '0',
-  'z-index-1': '10',
-  'z-index-2': '20',
-  'z-index-3': '30',
-  'z-index-4': '40',
-  'z-index-5': '50',
-  'z-index-6': '60',
-  'z-index-7': '70',
-  'z-index-8': '80',
-  'z-index-9': '90',
   hide: -1,
   auto: 'auto',
   base: 0,
@@ -131,34 +128,18 @@ const zIndices = {
 };
 
 const radii = {
-  'border-radius-0': '0',
-  'border-radius-1': patchScale(1),
-  'border-radius-2': patchScale(2),
-  'border-radius-3': patchScale(4),
-  'border-radius-circle': '50%',
+  none: 0,
+  xxs: '0.5px',
+  xs: '1px',
+  sm: patchScale(1),
+  md: patchScale(2),
+  lg: patchScale(4),
+  xl: patchScale(5),
+  xxl: patchScale(6),
   interactive: patchScale(2),
   layer: patchScale(2),
   squarish: '1px',
   circle: '50%',
-};
-
-const letterSpacings = {
-  'letter-spacing-0': '0',
-  'letter-spacing-1': '0.05px',
-  'letter-spacing-2': '0.1px',
-  'letter-spacing-3': '0.25px',
-  'letter-spacing-4': '0.3px',
-  'letter-spacing-5': '0.5px',
-  body: '0.25px',
-  heading: '0.3px',
-};
-
-const fontWeights = {
-  // 'font-weight-light': 400,
-  'font-weight-normal': '400',
-  'font-weight-medium': '500',
-  'font-weight-semibold': '600',
-  'font-weight-bold': '700',
 };
 
 /** @todo add font-size-0 */
@@ -187,6 +168,28 @@ const fontSizes = {
   h6: patchScale(6),
 };
 
+const fontWeights = {
+  thin: 300,
+  light: 400,
+  regular: 400,
+  medium: 500,
+  'semi-bold': 600,
+  bold: 700,
+};
+
+const letterSpacings = {
+  none: '0',
+  xxs: '0.05px',
+  xs: '0.1px',
+  sm: '0.25px',
+  md: '0.3px',
+  lg: '0.5px',
+  xl: '0.5px',
+  xxl: '0.5px',
+  body: '0.25px',
+  heading: '0.3px',
+};
+
 const lineHeights = {
   'line-height-1': patchScale(5),
   'line-height-2': patchScale(6),
@@ -212,35 +215,32 @@ const lineHeights = {
   h6: patchScale(6),
 };
 
+const defaultFontFamily =
+  '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif';
+
 const fonts = {
-  'font-family-text':
-    '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif',
-  'font-family-code': "'Fira Mono', 'Courier New', Courier, monospace",
-  body: '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif',
+  heading: defaultFontFamily,
+  body: defaultFontFamily,
   code: "'Fira Mono', 'Courier New', Courier, monospace",
 };
 
 const borderWidths = {
-  'border-width-0': '0',
-  'border-width-1': '1px',
-  'border-width-2': '2px',
+  none: 0,
+  md: '1px',
+  lg: '2px',
   'border-width-3': '3px',
-  'border-width-4': '4px',
+  xl: '4px',
   'border-width-5': '5px',
   'border-width-6': '6px',
   'border-width-7': '7px',
-  'border-width-8': '8px',
+  xxl: '8px',
   'border-width-9': '9px',
   'border-width-10': '10px',
-  none: 0,
   xxs: '0.125px',
   xs: '0.25px',
   sm: '0.5',
-  md: '1px',
-  lg: '4px',
-  xl: '8px',
-  xxl: '10px',
 };
+
 export {
   borderWidths,
   fonts,

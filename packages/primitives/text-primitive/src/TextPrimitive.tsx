@@ -12,7 +12,7 @@ const StyledText = styled.div<any>(getStyleProps, getPseudoProps);
 const baseStyles = {
   color: 'gray-800',
   fontSize: 1,
-  fontWeight: 0,
+  fontWeight: 2,
   lineHeight: 4,
   margin: 0,
   letterSpacing: 'body',

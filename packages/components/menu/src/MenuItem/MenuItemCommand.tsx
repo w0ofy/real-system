@@ -15,7 +15,7 @@ const MenuItemCommand = forwardRef<HTMLSpanElement, MenuItemCommandProps>(
         data-testid={makeTestId('menu-item-icon')}
         as="span"
         color="gray-400"
-        fontWeight={0}
+        fontWeight={4}
         role="img"
         {...restProps}
         ref={ref}>

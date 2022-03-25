@@ -32,7 +32,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
   const dynamicStyles = useMemo(
     () => ({
       color: disabled ? 'gray-300' : 'gray-500',
-      cursor: disabled ? 'not-allowed' : cursor,
+      cursor: disabled ? 'default' : cursor,
     }),
     [cursor, disabled]
   );
@@ -45,7 +45,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
       margin={0}
       marginBottom={2}
       fontSize={1}
-      fontWeight={3}
+      fontWeight={5}
       lineHeight={1}
       color={dynamicStyles.color}
       cursor={dynamicStyles.cursor}

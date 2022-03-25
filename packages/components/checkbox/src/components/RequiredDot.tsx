@@ -18,13 +18,13 @@ const RequiredDot = ({
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="icon-2"
+      height="icon-xs"
       marginRight={2}
-      cursor={disabled ? 'not-allowed' : 'default'}>
+      cursor={disabled ? 'default' : 'default'}>
       <Box
         {...restProps}
         as="span"
-        borderRadius="border-radius-circle"
+        borderRadius="circle"
         display="block"
         height="4px"
         width="4px"
