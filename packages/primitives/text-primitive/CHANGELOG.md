@@ -1,5 +1,14 @@
 # @real-system/text
 
+## 0.0.12
+
+### Patch Changes
+
+- [`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9) - Standardizing theme tokens and updated gray-fill button style
+
+- Updated dependencies [[`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9)]:
+  - @real-system/theme-library@0.0.15
+
 ## 0.0.11
 
 ### Patch Changes

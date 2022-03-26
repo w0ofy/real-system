@@ -1,5 +1,13 @@
 # @real-system/utils
 
+## 0.0.14
+
+### Patch Changes
+
+- [`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9) - Standardizing theme tokens and updated gray-fill button style
+
+* [#320](https://github.com/bigwoof91/real-system/pull/320) [`12c3af1`](https://github.com/bigwoof91/real-system/commit/12c3af18e0088a13eb21acf8aa91ff59e119b33b) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Adding link component and breaking menu component into a declartive JSX API
+
 ## 0.0.13
 
 ### Patch Changes

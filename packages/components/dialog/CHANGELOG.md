@@ -1,5 +1,20 @@
 # @real-system/dialog
 
+## 0.0.23
+
+### Patch Changes
+
+- [`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9) - Standardizing theme tokens and updated gray-fill button style
+
+- Updated dependencies [[`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9), [`12c3af1`](https://github.com/bigwoof91/real-system/commit/12c3af18e0088a13eb21acf8aa91ff59e119b33b)]:
+  - @real-system/button@0.0.31
+  - @real-system/typography@0.0.30
+  - @real-system/theme-library@0.0.15
+  - @real-system/utils-library@0.0.14
+  - @real-system/dialog-primitive@0.0.17
+  - @real-system/flex@0.0.23
+  - @real-system/box-primitive@0.0.13
+
 ## 0.0.22
 
 ### Patch Changes

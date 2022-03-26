@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.17
+
+### Patch Changes
+
+- [`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9) - Standardizing theme tokens and updated gray-fill button style
+
 ## 0.0.16
 
 ### Patch Changes

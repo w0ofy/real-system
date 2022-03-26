@@ -1,5 +1,39 @@
 # @real-system/core
 
+## 0.0.33
+
+### Patch Changes
+
+- [`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9) - Standardizing theme tokens and updated gray-fill button style
+
+- Updated dependencies [[`a8d3611`](https://github.com/bigwoof91/real-system/commit/a8d3611d535360b5ede54b20a308306a6d548ca9), [`12c3af1`](https://github.com/bigwoof91/real-system/commit/12c3af18e0088a13eb21acf8aa91ff59e119b33b)]:
+  - @real-system/alert@0.0.15
+  - @real-system/button@0.0.31
+  - @real-system/checkbox@0.0.16
+  - @real-system/dialog@0.0.23
+  - @real-system/icon@0.0.30
+  - @real-system/input@0.0.29
+  - @real-system/link@0.0.1
+  - @real-system/menu@0.0.2
+  - @real-system/popover@0.0.6
+  - @real-system/radio-group@0.0.9
+  - @real-system/spinner@0.0.28
+  - @real-system/textarea@0.0.13
+  - @real-system/tooltip@0.0.7
+  - @real-system/typography@0.0.30
+  - @real-system/theme-library@0.0.15
+  - @real-system/utils-library@0.0.14
+  - @real-system/button-primitive@0.0.23
+  - @real-system/dialog-primitive@0.0.17
+  - @real-system/text-primitive@0.0.12
+  - @real-system/toaster@0.0.14
+  - @real-system/field@0.0.8
+  - @real-system/aspect-ratio@0.0.2
+  - @real-system/flex@0.0.23
+  - @real-system/truncate@0.0.8
+  - @real-system/box-primitive@0.0.13
+  - @real-system/visually-hidden@0.0.26
+
 ## 0.0.32
 
 ### Patch Changes
