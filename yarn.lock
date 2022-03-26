@@ -3684,6 +3684,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/badge@workspace:packages/components/badge":
+  version: 0.0.0-use.local
+  resolution: "@real-system/badge@workspace:packages/components/badge"
+  dependencies:
+    "@real-system/styling-library": ^0.0.9
+    "@real-system/text-primitive": ^0.0.12
+    "@real-system/theme-library": ^0.0.15
+    "@real-system/utils-library": ^0.0.14
+    concurrently: ^7.0.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/styling-library": ^0.0.9
+    "@real-system/text-primitive": ^0.0.12
+    "@real-system/theme-library": ^0.0.15
+    "@real-system/utils-library": ^0.0.14
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@real-system/box-primitive@0.0.13, @real-system/box-primitive@^0.0.13, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
