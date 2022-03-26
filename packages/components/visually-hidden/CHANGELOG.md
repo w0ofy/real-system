@@ -1,5 +1,12 @@
 # @real-system/visually-hidden
 
+## 0.0.26
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/box-primitive@0.0.13
+
 ## 0.0.25
 
 ### Patch Changes
