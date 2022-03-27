@@ -111,23 +111,23 @@ import {
 /**
  * @param {theme} accepts a name (string) of a built-in theme or your own custom theme object.
  * @param {overrides} accepts a callback or an object. The theme's colors are passed to the callback so you can easily customize other tokens with the theme's color tokens.
-*/
-const mytheme: extendTheme('realSystem', (colors) => {
+ */
+const mytheme = extendTheme('realSystem', (colors) => ({
   colors: {
     primary: colors['purple-500'],
     secondary: colors['black-400'],
   },
   shadows: {
     'focus-outline': `0 0 0 3px ${colors['blue-200']}`,
-  }
-});
+  },
+}));
 
 // or
-const myTheme: extendTheme(themes.realSystem, {
+const myTheme = extendTheme(themes.realSystem, {
   shadows: {
     'focus-outline': '0 0 0 3px #525e7e',
-    'button': '0px 8px 15px rgba(0, 0, 0, 0.1)'
-  }
+    button: '0px 8px 15px rgba(0, 0, 0, 0.1)',
+  },
 });
 
 // THEN: pass the customized theme to ThemeProvider

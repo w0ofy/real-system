@@ -4,9 +4,9 @@ import { Box } from '@real-system/box-primitive';
 import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { BadgeProps } from './badge.types';
+import type { BadgeProps, BadgeSize } from './badge.types';
 
-const BADGE_SIZES = {
+const BADGE_SIZES: Record<BadgeSize, string | number> = {
   sm: 0,
   md: 'badge',
   lg: 2,
