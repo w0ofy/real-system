@@ -1,5 +1,14 @@
 # @real-system/truncate
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [[`6b36ed6`](https://github.com/bigwoof91/real-system/commit/6b36ed6db1213a10ea0e716a5cec86670624b5d9)]:
+  - @real-system/styling-library@0.0.10
+  - @real-system/theme-library@0.0.16
+  - @real-system/box-primitive@0.0.14
+
 ## 0.0.8
 
 ### Patch Changes
