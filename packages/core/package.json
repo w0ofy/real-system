@@ -30,6 +30,7 @@
     "@real-system/animation-library": "^0.0.8",
     "@real-system/ariakit-library": "^0.0.3",
     "@real-system/aspect-ratio": "^0.0.2",
+    "@real-system/badge": "^0.0.0",
     "@real-system/box-primitive": "^0.0.13",
     "@real-system/button": "^0.0.31",
     "@real-system/button-primitive": "^0.0.23",
