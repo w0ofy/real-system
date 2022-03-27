@@ -1,5 +1,15 @@
 # @real-system/link
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`6b36ed6`](https://github.com/bigwoof91/real-system/commit/6b36ed6db1213a10ea0e716a5cec86670624b5d9)]:
+  - @real-system/styling-library@0.0.10
+  - @real-system/theme-library@0.0.16
+  - @real-system/icon@0.0.31
+  - @real-system/text-primitive@0.0.13
+
 ## 0.0.1
 
 ### Patch Changes

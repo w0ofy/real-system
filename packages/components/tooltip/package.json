@@ -1,6 +1,6 @@
 {
   "name": "@real-system/tooltip",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Tooltip component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -32,10 +32,10 @@
   "peerDependencies": {
     "@real-system/animation-library": "^0.0.8",
     "@real-system/ariakit-library": "^0.0.3",
-    "@real-system/box-primitive": "^0.0.13",
-    "@real-system/styling-library": "^0.0.9",
-    "@real-system/theme-library": "^0.0.15",
-    "@real-system/typography": "^0.0.30",
+    "@real-system/box-primitive": "^0.0.14",
+    "@real-system/styling-library": "^0.0.10",
+    "@real-system/theme-library": "^0.0.16",
+    "@real-system/typography": "^0.0.31",
     "@real-system/utils-library": "^0.0.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -43,10 +43,10 @@
   "devDependencies": {
     "@real-system/animation-library": "^0.0.8",
     "@real-system/ariakit-library": "^0.0.3",
-    "@real-system/box-primitive": "^0.0.13",
-    "@real-system/styling-library": "^0.0.9",
-    "@real-system/theme-library": "^0.0.15",
-    "@real-system/typography": "^0.0.30",
+    "@real-system/box-primitive": "^0.0.14",
+    "@real-system/styling-library": "^0.0.10",
+    "@real-system/theme-library": "^0.0.16",
+    "@real-system/typography": "^0.0.31",
     "@real-system/utils-library": "^0.0.14",
     "concurrently": "^7.0.0",
     "react": "^17.0.2",

@@ -1,5 +1,12 @@
 # @real-system/box
 
+## 0.0.14
+
+### Patch Changes
+
+- Updated dependencies [[`6b36ed6`](https://github.com/bigwoof91/real-system/commit/6b36ed6db1213a10ea0e716a5cec86670624b5d9)]:
+  - @real-system/styling-library@0.0.10
+
 ## 0.0.13
 
 ### Patch Changes
