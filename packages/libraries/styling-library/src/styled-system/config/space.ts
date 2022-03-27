@@ -32,6 +32,9 @@ const spaceProps: StylePropConfig<SpaceProps> = {
     property: 'marginLeft',
     scale: STYLE_PROP_SCALES.space,
   },
+  marginInline: true,
+  marginInlineStart: true,
+  marginInlineEnd: true,
   padding: {
     property: 'padding',
     scale: STYLE_PROP_SCALES.space,
@@ -60,6 +63,9 @@ const spaceProps: StylePropConfig<SpaceProps> = {
     property: 'paddingLeft',
     scale: STYLE_PROP_SCALES.space,
   },
+  paddingInline: true,
+  paddingInlineStart: true,
+  paddingInlineEnd: true,
 };
 
 type SpaceProps = {
@@ -70,6 +76,9 @@ type SpaceProps = {
   marginRight?: Token<CSS.MarginRight, 'space'>;
   marginBottom?: Token<CSS.MarginBottom, 'space'>;
   marginLeft?: Token<CSS.MarginLeft, 'space'>;
+  marginInline?: Token<CSS.MarginInline, 'space'>;
+  marginInlineStart?: Token<CSS.MarginInlineStart, 'space'>;
+  marginInlineEnd?: Token<CSS.MarginInlineEnd, 'space'>;
   padding?: Token<CSS.Padding, 'space'>;
   paddingX?: Token<CSS.Padding, 'space'>;
   paddingY?: Token<CSS.Padding, 'space'>;
@@ -77,6 +86,9 @@ type SpaceProps = {
   paddingRight?: Token<CSS.PaddingRight, 'space'>;
   paddingBottom?: Token<CSS.PaddingBottom, 'space'>;
   paddingLeft?: Token<CSS.PaddingLeft, 'space'>;
+  paddingInline?: Token<CSS.PaddingInline, 'space'>;
+  paddingInlineStart?: Token<CSS.PaddingInlineStart, 'space'>;
+  paddingInlineEnd?: Token<CSS.PaddingInlineEnd, 'space'>;
 };
 
 export type { SpaceProps };
