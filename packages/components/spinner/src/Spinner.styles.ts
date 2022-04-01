@@ -1,4 +1,4 @@
-import { BoxAs, BoxStyleProps } from '@real-system/box-primitive';
+import { boxAs, BoxStyleProps } from '@real-system/box-primitive';
 import styled, { keyframes } from '@real-system/styling-library';
 import { ThemeSizes } from '@real-system/theme-library';
 
@@ -34,12 +34,13 @@ type SVGElementProps = React.SVGAttributes<SVGSVGElement>;
 type SVGCircleElementProps = React.SVGAttributes<SVGCircleElement>;
 type SVGGelementProps = React.SVGAttributes<SVGGElement>;
 
-const SpinnerSvg = styled(BoxAs<SVGElementProps>('svg'))({
+const SVG = boxAs<SVGElementProps>('svg');
+const SpinnerSVG = styled(SVG)({
   animation: `4.25s linear infinite both ${svgKeyframes}` as unknown as string,
 });
-const SvgGroup = BoxAs<SVGGelementProps>('g');
-const TrackCircle = BoxAs<SVGCircleElementProps>('circle');
-const WheelCircle = styled(BoxAs<SVGCircleElementProps>('circle'))({
+const SvgGroup = boxAs<SVGGelementProps>('g');
+const TrackCircle = boxAs<SVGCircleElementProps>('circle');
+const WheelCircle = styled(boxAs<SVGCircleElementProps>('circle'))({
   animation:
     `1.5s ease-out infinite both ${circleKeyframes}` as unknown as string,
 });
@@ -75,4 +76,4 @@ const STYLES_BY_SIZE: Record<ThemeSizes, BoxStyleProps> = {
   },
 };
 
-export { SpinnerSvg, STYLES_BY_SIZE, SvgGroup, TrackCircle, WheelCircle };
+export { SpinnerSVG, STYLES_BY_SIZE, SvgGroup, TrackCircle, WheelCircle };

@@ -35,7 +35,6 @@
   "peerDependencies": {
     "@real-system/box-primitive": "^0.0.14",
     "@real-system/styling-library": "^0.0.10",
-    "@real-system/text-primitive": "0.0.13",
     "@real-system/utils-library": "^0.0.14",
     "@real-system/visually-hidden": "^0.0.27",
     "react": "^17.0.2",
@@ -44,7 +43,6 @@
   "devDependencies": {
     "@real-system/box-primitive": "^0.0.14",
     "@real-system/styling-library": "^0.0.10",
-    "@real-system/text-primitive": "0.0.13",
     "@real-system/utils-library": "^0.0.14",
     "@real-system/visually-hidden": "^0.0.27",
     "concurrently": "^7.0.0",

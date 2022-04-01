@@ -6,7 +6,7 @@ import { useUID } from '@real-system/utils-library';
 import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';
 import {
-  SpinnerSvg,
+  SpinnerSVG,
   STYLES_BY_SIZE,
   SvgGroup,
   TrackCircle,
@@ -41,7 +41,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
       size={sizeStyles.size}
       ref={ref}
       color={color}>
-      <SpinnerSvg
+      <SpinnerSVG
         display="block"
         height="100%"
         width="100%"
@@ -66,7 +66,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
             {...circleGeometry}
           />
         </SvgGroup>
-      </SpinnerSvg>
+      </SpinnerSVG>
     </Box>
   );
 });

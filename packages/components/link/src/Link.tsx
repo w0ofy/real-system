@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
+import { Box, BoxProps } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
-import { TextPrimitive, TextPrimitiveProps } from '@real-system/text-primitive';
 import type { RealSystemElementProps } from '@real-system/utils-library';
 
 import { EXTERNAL_LINK_PROPS } from './link.constants';
@@ -17,8 +17,8 @@ type LinkProps = {
    * @default false (`true` if external is `true`)
    */
   showExternal?: boolean;
-} & Omit<RealSystemElementProps<'a'>, keyof TextPrimitiveProps> &
-  Partial<TextPrimitiveProps>;
+} & Omit<RealSystemElementProps<'a'>, keyof BoxProps> &
+  Partial<BoxProps>;
 
 /**
  * Links are accessible elements used primarily for navigation.
@@ -32,10 +32,14 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 ) {
   const externalProps = external ? EXTERNAL_LINK_PROPS : {};
   return (
-    <TextPrimitive
+    <Box
       as="a"
+      fontSize={1}
+      fontWeight={2}
+      lineHeight={2}
+      margin={0}
+      letterSpacing="body"
       {...externalProps}
-      ref={ref}
       color="blue-500"
       textDecoration="none"
       borderRadius={3}
@@ -52,7 +56,8 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         textDecoration: 'underline',
       }}
       cursor="pointer"
-      {...restProps}>
+      {...restProps}
+      ref={ref}>
       {children}
       {showExternal ? (
         <Icon
@@ -63,7 +68,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
           marginLeft={2}
         />
       ) : null}
-    </TextPrimitive>
+    </Box>
   );
 });
 

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 
-import { TextPrimitive } from '@real-system/text-primitive';
-
-import { CommonTextProps, HeadingAsTags, HeadingElement } from './types';
+import { BaseText } from './BaseText';
+import type { CommonTextProps, HeadingAsTags, HeadingElement } from './types';
 
 const stylesConfig = {
   h1: {
@@ -62,7 +61,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(function Heading(
   const headingStyles = stylesConfig[size || as];
 
   return (
-    <TextPrimitive
+    <BaseText
       as={as}
       {...headingStyles}
       letterSpacing="heading"
@@ -70,7 +69,7 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(function Heading(
       {...restProps}
       ref={ref}>
       {children}
-    </TextPrimitive>
+    </BaseText>
   );
 });
 

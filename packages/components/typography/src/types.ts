@@ -1,6 +1,8 @@
-import type { TextPrimitiveProps } from '@real-system/text-primitive';
+import type { BoxProps } from '@real-system/box-primitive';
 
-export type CommonTextProps = Omit<TextPrimitiveProps, 'as' | 'size'>;
+export type BaseTextProps = Omit<BoxProps, 'size'>;
+export type CommonTextProps = Omit<BaseTextProps, 'as'>;
+
 export type TextAsTags = Extract<
   keyof JSX.IntrinsicElements,
   'p' | 'span' | 'div' | 'label'

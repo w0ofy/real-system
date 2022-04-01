@@ -18,7 +18,6 @@ export * from '@real-system/popover';
 export * from '@real-system/portal-primitive';
 export * from '@real-system/radio-group';
 export * from '@real-system/spinner';
-export * from '@real-system/text-primitive';
 export * from '@real-system/textarea';
 export * from '@real-system/toaster';
 export * from '@real-system/tooltip';
