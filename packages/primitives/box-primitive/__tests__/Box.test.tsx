@@ -4,7 +4,8 @@ import { render, screen } from '@testing-library/react';
 
 import { ThemeProvider } from '@real-system/theme-library';
 
-import { Box, BoxAs } from '../src/Box';
+import { Box } from '../src/Box';
+import { boxAs } from '../src/boxAs';
 import { BoxProps } from '../src/types';
 
 const BoxComponent = (props: BoxProps = {}) => (
@@ -34,7 +35,7 @@ describe('Box', () => {
   });
 });
 
-const Anchor = BoxAs('a');
+const Anchor = boxAs('a');
 const BoxAsAnchor = (props: BoxProps = {}) => (
   <ThemeProvider theme={TEST_THEME}>
     <Anchor {...props} />
@@ -42,7 +43,7 @@ const BoxAsAnchor = (props: BoxProps = {}) => (
 );
 const queryBoxAsAnchor = () => screen.queryByTestId('real-system-box-as');
 
-describe('BoxAs', () => {
+describe('boxAs', () => {
   it('renders', () => {
     render(<BoxAsAnchor />);
     expect(queryBoxAsAnchor()).toBeTruthy();
