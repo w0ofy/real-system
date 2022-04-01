@@ -3659,7 +3659,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
-    ariakit: ^2.0.0-alpha.19
+    ariakit: 2.0.0-alpha.20
     concurrently: ^7.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -7705,25 +7705,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit-utils@npm:^0.17.0-alpha.12":
-  version: 0.17.0-alpha.12
-  resolution: "ariakit-utils@npm:0.17.0-alpha.12"
+"ariakit-utils@npm:^0.17.0-alpha.13":
+  version: 0.17.0-alpha.13
+  resolution: "ariakit-utils@npm:0.17.0-alpha.13"
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^18.0.0-beta
-  checksum: 7b12b2c362ef01d112481697d987091ae333391f5a7994f920c451ae770dc45aa6b2db5eb0d60b946280b3ab8cc8b36a305a318e6037293ef8e0887659b660a1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: dae06dac172f439c8f0ecde2e6d67ac80289cbb0328621f9abe7e693bfd2961442d8cb7d53eb9866acb50262d3ede5a61cdeeaa965ea42729b00dd465b6565ad
   languageName: node
   linkType: hard
 
-"ariakit@npm:^2.0.0-alpha.19":
-  version: 2.0.0-alpha.19
-  resolution: "ariakit@npm:2.0.0-alpha.19"
+"ariakit@npm:2.0.0-alpha.20":
+  version: 2.0.0-alpha.20
+  resolution: "ariakit@npm:2.0.0-alpha.20"
   dependencies:
     "@popperjs/core": ^2.11.2
-    ariakit-utils: ^0.17.0-alpha.12
+    ariakit-utils: ^0.17.0-alpha.13
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^18.0.0-beta
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^18.0.0-beta
-  checksum: 437ecd6c05eefa570d40d0b00ba193e59898781262b30e591b6b1ca9109bee7317a45fe8aa27ee273fe8a1e6f4275f51067eb4b58c5baa0f8fbffea29b9d700d
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 26982f01adaa335f5bd5e66d703a28451a9c762fce04a6c0330bfefda4b253114a13b9bf23134bfc503c0574ef7ecc6d2041e7bcc0b7e8ac1f2847df897e3008
   languageName: node
   linkType: hard
 
