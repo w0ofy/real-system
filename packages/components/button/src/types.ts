@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import type { ButtonPrimitiveProps } from '@real-system/button-primitive';
 import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-closing-tag-location */
-import React from 'react';
+import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { Input } from '@real-system/input';

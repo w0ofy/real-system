@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { ThemeProvider } from '../../packages/libraries/theme-library/src/index';
 import { Box } from '../../packages/primitives/box-primitive/src/index';
 

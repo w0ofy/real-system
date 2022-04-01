@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { AriakitMenuGroup } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { AriakitMenuGroupLabel } from '@real-system/ariakit-library';
 import type { BoxProps } from '@real-system/box-primitive';

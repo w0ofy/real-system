@@ -1,7 +1,7 @@
 /**
  * Renamed props to make prop api consistent with other component prop names
  */
-import React from 'react';
+import * as React from 'react';
 
 import type {
   AriaRadioGroupProps,

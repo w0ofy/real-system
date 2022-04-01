@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxProps } from '@real-system/box-primitive';
+import type { BoxProps } from '@real-system/box-primitive';
+import { Box } from '@real-system/box-primitive';
 
 export type VisuallyHiddenProps = Pick<BoxProps, 'as'> & {
   children: NonNullable<React.ReactNode>;

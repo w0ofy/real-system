@@ -6,7 +6,7 @@ type BoxStyleProps = StylishProps;
 type BoxComponentProps = {
   as?: keyof JSX.IntrinsicElements;
   type?: string;
-  /** Typed as any because Box can be any HTML element */
+  /** Typed as any because Box can be any HTML or SVG element */
   ref?: any | null;
   // image props
   alt?: string;

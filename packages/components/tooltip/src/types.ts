@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { AriakitTooltipStateProps } from '@real-system/ariakit-library';
 import type { RealSystemElementProps } from '@real-system/utils-library';

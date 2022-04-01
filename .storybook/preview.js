@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
 import {
