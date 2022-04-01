@@ -49,7 +49,6 @@
     "@real-system/spinner": "^0.0.29",
     "@real-system/state-library": "^0.0.7",
     "@real-system/styling-library": "^0.0.10",
-    "@real-system/text-primitive": "^0.0.13",
     "@real-system/textarea": "^0.0.14",
     "@real-system/theme-library": "^0.0.16",
     "@real-system/toaster": "^0.0.15",

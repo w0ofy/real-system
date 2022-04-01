@@ -1,8 +1,8 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import { TextPrimitive } from '@real-system/text-primitive';
 
+import { BaseText } from './BaseText';
 import { RequiredDot } from './RequiredDot';
 import { CommonTextProps } from './types';
 
@@ -38,7 +38,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
   );
 
   return (
-    <TextPrimitive
+    <BaseText
       as={as}
       display="block"
       padding={0}
@@ -64,7 +64,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
           {children}
         </Box>
       </Box>
-    </TextPrimitive>
+    </BaseText>
   );
 });
 

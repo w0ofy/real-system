@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { TextPrimitive } from '@real-system/text-primitive';
-
+import { BaseText } from './BaseText';
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';
 import { Label } from './Label';
@@ -29,14 +28,14 @@ const Text: TextComponent = forwardRef<
   ref
 ): React.ReactElement {
   return (
-    <TextPrimitive
+    <BaseText
       lineHeight={2}
       marginBottom={2}
       {...restProps}
       as={as || inline ? 'span' : 'p'}
       ref={ref}>
       {children}
-    </TextPrimitive>
+    </BaseText>
   );
 });
 

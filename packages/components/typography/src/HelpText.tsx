@@ -2,14 +2,14 @@ import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
 import { Icon, IconProps } from '@real-system/icon';
-import { TextPrimitive } from '@real-system/text-primitive';
 import { ColorTokens } from '@real-system/theme-library';
 
-import { CommonTextProps } from './types';
+import { BaseText } from './BaseText';
+import type { CommonTextProps } from './types';
 
 type HelpTextIntents = Extract<IconProps['intent'], 'danger' | 'neutral'>;
 export type HelpTextProps = {
-  as?: 'span' | 'div';
+  as?: Extract<keyof JSX.IntrinsicElements, 'span' | 'div'>;
   children?: React.ReactNode;
   id?: string;
   intent?: HelpTextIntents;
@@ -39,7 +39,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
   );
 
   return (
-    <TextPrimitive
+    <BaseText
       as={as}
       display="flex"
       alignItems="center"
@@ -63,7 +63,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
         </Box>
       )}
       <Box as="span">{errorText ? errorText : children}</Box>
-    </TextPrimitive>
+    </BaseText>
   );
 });
 
