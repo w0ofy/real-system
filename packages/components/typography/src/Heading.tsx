@@ -48,7 +48,7 @@ const stylesConfig = {
   },
 };
 
-export type HeadingProps = {
+type HeadingProps = {
   children?: React.ReactNode;
   as?: HeadingAsTags;
   size?: HeadingAsTags;
@@ -73,4 +73,5 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(function Heading(
   );
 });
 
+export type { HeadingProps };
 export { Heading };

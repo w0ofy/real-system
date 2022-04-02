@@ -24,7 +24,7 @@ $ yarn add @real-system/ariakit-library
 
 ### Code Example
 
-```javascript
+```typescript
 import { Popover } from '@real-system/ariakit-library';
 
 ...

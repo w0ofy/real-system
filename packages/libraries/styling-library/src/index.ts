@@ -17,7 +17,6 @@ export {
 } from '@emotion/react';
 export { default as css } from '@styled-system/css';
 export * as polished from 'polished';
-export * from 'styled-system';
 
 /**
  * styled, css and token utilities

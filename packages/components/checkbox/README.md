@@ -24,7 +24,7 @@ $ yarn add @real-system/checkbox
 
 ### Code Example
 
-```javascript
+```typescript
 import { Checkbox } from '@real-system/checkbox';
 
 ...

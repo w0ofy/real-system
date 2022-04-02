@@ -24,7 +24,7 @@ $ yarn add @real-system/portal-primitive
 
 ### Code Example
 
-```javascript
+```typescript
 import { PortalPrimitive } from '@real-system/portal-primitive';
 
 const MyComponent = () => (

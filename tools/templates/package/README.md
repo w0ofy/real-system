@@ -24,7 +24,7 @@ $ yarn add @real-system/__pkg__(kebabCase)
 
 ### Code Example
 
-```javascript
+```typescript
 import { __primary_export__ } from '@real-system/__pkg__(kebabCase)';
 
 ...

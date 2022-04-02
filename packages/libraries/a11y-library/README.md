@@ -24,7 +24,7 @@ $ yarn add @real-system/a11y-library
 
 ### Code Example
 
-```javascript
+```typescript
 import { useButton, useCheckbox, useCheckboxGroup, useCheckboxGroupItem } from '@real-system/a11y-library';
 
 ...

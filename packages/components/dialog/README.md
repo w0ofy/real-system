@@ -24,7 +24,7 @@ $ yarn add @real-system/dialog
 
 ### Code Example
 
-```javascript
+```typescript
 import { Dialog } from '@real-system/dialog';
 
 ...

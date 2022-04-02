@@ -24,7 +24,7 @@ $ yarn add @real-system/radio-group
 
 ### Code Example
 
-```javascript
+```typescript
 import { RadioGroup } from '@real-system/radio-group';
 // or
 // import { RadioGroup, Radio } from '@real-system/radio-group';

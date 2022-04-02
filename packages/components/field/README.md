@@ -24,7 +24,7 @@ $ yarn add @real-system/field
 
 ### Code Example
 
-```javascript
+```typescript
 import { Field } from '@real-system/field';
 
 ...

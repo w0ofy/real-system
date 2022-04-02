@@ -24,7 +24,7 @@ $ yarn add @real-system/menu
 
 ### Code Example
 
-```javascript
+```typescript
 import { 
   Menu,
   MenuButton,

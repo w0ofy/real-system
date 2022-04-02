@@ -24,7 +24,7 @@ $ yarn add @real-system/alert-primitive
 
 ### Code Example
 
-```javascript
+```typescript
 import { AlertPrimitive } from '@real-system/alert-primitive';
 
 const PoliteAlert = () => <AlertPrimitive>Alert primitive Content</AlertPrimitive>;

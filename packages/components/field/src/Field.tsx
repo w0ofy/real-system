@@ -7,6 +7,11 @@ import { makeTestId } from '@real-system/utils-library';
 import type { FieldProps } from './types';
 
 /**
+ *
+ * @todo possibly add FieldControl and FieldGroupControl for easy-to-use field context
+ */
+
+/**
  * @description A flex wrapper composed of `Label`, `HelpText` and whatever field **input** is passed as a child.
  * `Field` simplifies the work of composing field **inputs** together. `Field` should *not* be used with **controls** like
  * `RadioGroup` or `CheckboxGroup` — it is meant to be used with inputs only.

@@ -24,7 +24,7 @@ $ yarn add @real-system/toaster
 
 ### Code Example
 
-```javascript
+```typescript
 import { Toaster, useToast } from '@real-system/toaster';
 
 export const MyComponent = (args) => {

@@ -24,7 +24,7 @@ $ yarn add @real-system/badge
 
 ### Code Example
 
-```javascript
+```typescript
 import { Badge } from '@real-system/badge';
 
 ...
