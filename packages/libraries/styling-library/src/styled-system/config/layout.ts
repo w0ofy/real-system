@@ -5,8 +5,14 @@ import type { StylePropConfig, Token } from './_types';
 
 const layoutProps: StylePropConfig<LayoutProps> = {
   display: true,
+  d: {
+    property: 'display',
+  },
   visibility: true,
   position: true,
+  pos: {
+    property: 'position',
+  },
   alignItems: true,
   alignContent: true,
   justifyItems: true,
@@ -55,7 +61,15 @@ const layoutProps: StylePropConfig<LayoutProps> = {
     property: 'width',
     scale: STYLE_PROP_SCALES.sizes,
   },
+  w: {
+    property: 'width',
+    scale: STYLE_PROP_SCALES.sizes,
+  },
   height: {
+    property: 'height',
+    scale: STYLE_PROP_SCALES.sizes,
+  },
+  h: {
     property: 'height',
     scale: STYLE_PROP_SCALES.sizes,
   },
@@ -63,7 +77,15 @@ const layoutProps: StylePropConfig<LayoutProps> = {
     property: 'minWidth',
     scale: STYLE_PROP_SCALES.sizes,
   },
+  minW: {
+    property: 'minWidth',
+    scale: STYLE_PROP_SCALES.sizes,
+  },
   minHeight: {
+    property: 'minHeight',
+    scale: STYLE_PROP_SCALES.sizes,
+  },
+  minH: {
     property: 'minHeight',
     scale: STYLE_PROP_SCALES.sizes,
   },
@@ -71,7 +93,15 @@ const layoutProps: StylePropConfig<LayoutProps> = {
     property: 'maxWidth',
     scale: STYLE_PROP_SCALES.sizes,
   },
+  maxW: {
+    property: 'maxWidth',
+    scale: STYLE_PROP_SCALES.sizes,
+  },
   maxHeight: {
+    property: 'maxHeight',
+    scale: STYLE_PROP_SCALES.sizes,
+  },
+  maxH: {
     property: 'maxHeight',
     scale: STYLE_PROP_SCALES.sizes,
   },
@@ -84,8 +114,10 @@ const layoutProps: StylePropConfig<LayoutProps> = {
 
 type LayoutProps = {
   display?: Token<CSS.Display>;
+  d?: Token<CSS.Display>;
   visibility?: Token<CSS.Visibility>;
   position?: Token<CSS.Position>;
+  pos?: Token<CSS.Position>;
   alignItems?: Token<CSS.AlignItems>;
   alignContent?: Token<CSS.AlignContent>;
   justifyItems?: Token<CSS.JustifyItems>;
@@ -113,11 +145,17 @@ type LayoutProps = {
   float?: Token<CSS.Float, 'space'>;
   zIndex?: Token<CSS.ZIndex, 'zIndices'>;
   width?: Token<CSS.Width, 'sizes'>;
+  w?: Token<CSS.Width, 'sizes'>;
   height?: Token<CSS.Height, 'sizes'>;
+  h?: Token<CSS.Height, 'sizes'>;
   minWidth?: Token<CSS.MinWidth, 'sizes'>;
+  minW?: Token<CSS.MinWidth, 'sizes'>;
   minHeight?: Token<CSS.MinHeight, 'sizes'>;
+  minH?: Token<CSS.MinHeight, 'sizes'>;
   maxWidth?: Token<CSS.MaxWidth, 'sizes'>;
+  maxW?: Token<CSS.MaxWidth, 'sizes'>;
   maxHeight?: Token<CSS.MaxHeight, 'sizes'>;
+  maxH?: Token<CSS.MaxHeight, 'sizes'>;
   size?: Token<CSS.Height | CSS.Width, 'sizes'>;
   boxSizing?: Token<CSS.BoxSizing>;
 };

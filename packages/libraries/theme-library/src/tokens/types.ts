@@ -34,7 +34,8 @@ export type OrdinalTokens =
   | 16
   | 17
   | 18
-  | 19;
+  | 19
+  | 20;
 
 // dynamic tokens
 export type ColorTokens = keyof ReturnType<typeof colors>;

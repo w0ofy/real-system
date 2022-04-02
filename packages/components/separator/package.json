@@ -1,0 +1,52 @@
+{
+  "name": "@real-system/separator",
+  "version": "0.0.0",
+  "description": "Separator component for real system.",
+  "status": "production",
+  "main": "lib/index.js",
+  "main:dev": "src/index.ts",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
+    "build:js": "NODE_ENV=production node ./tools/build.js",
+    "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
+    "types:watch": "tsc --watch",
+    "types": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigwoof91/real-system.git"
+  },
+  "keywords": [
+    "real-system",
+    "separator"
+  ],
+  "author": "Mike Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigwoof91/real-system/issues"
+  },
+  "homepage": "https://github.com/bigwoof91/real-system#readme",
+  "peerDependencies": {
+    "@real-system/ariakit-library": "^0.0.3",
+    "@real-system/box-primitive": "^0.0.14",
+    "@real-system/styling-library": "^0.0.10",
+    "@real-system/theme-library": "^0.0.16",
+    "@real-system/utils-library": "^0.0.15",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@real-system/ariakit-library": "^0.0.3",
+    "@real-system/box-primitive": "^0.0.14",
+    "@real-system/styling-library": "^0.0.10",
+    "@real-system/theme-library": "^0.0.16",
+    "@real-system/utils-library": "^0.0.15",
+    "concurrently": "^7.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^4.6.3"
+  }
+}

@@ -201,6 +201,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/components/separator
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/components/spinner
     schedule:
       interval: weekly

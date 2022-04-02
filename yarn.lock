@@ -4351,6 +4351,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/utils-library@npm:^0.0.15":
+  version: 0.0.15
+  resolution: "@real-system/utils-library@npm:0.0.15"
+  dependencies:
+    chalk: ^4.1.2
+    deepmerge: ^4.2.2
+    lodash.get: ^4.4.2
+    react-uid: ^2.3.1
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 11a1b8cfc520455cf6e8b22200054266185e2b525828c4082fc9fbf2e1cf1c2ecb47d2c1e4a9a1134048aa9658e5346e6aff5245f218fe2c6e6d78f1b510ec7e
+  languageName: node
+  linkType: hard
+
 "@real-system/utils@npm:^0.0.11":
   version: 0.0.11
   resolution: "@real-system/utils@npm:0.0.11"

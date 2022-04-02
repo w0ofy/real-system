@@ -21,7 +21,7 @@ import {
 import { makeTokenScale } from './utils';
 
 /**
- * @description generates a tokenized theme with a given Palette. Uses the `default` palette if a palette isn't provided
+ * @description generates a tokenized theme with a given Palette. Uses the `realSystem` palette if a palette isn't provided
  */
 const makeTheme = (palette: Palette = palettes.realSystem) => {
   const colorTokens = colors(palette);

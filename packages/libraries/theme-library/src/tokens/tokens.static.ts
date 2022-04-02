@@ -221,11 +221,14 @@ const lineHeights = {
 
 const defaultFontFamily =
   '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif';
+const monoFontFamily =
+  'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace';
 
 const fonts = {
   heading: defaultFontFamily,
   body: defaultFontFamily,
-  code: "'Fira Mono', 'Courier New', Courier, monospace",
+  mono: monoFontFamily,
+  code: monoFontFamily,
 };
 
 const borderWidths = {
