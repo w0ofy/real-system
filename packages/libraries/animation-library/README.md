@@ -24,7 +24,7 @@ $ yarn add @real-system/animation-library
 
 ### Code Example
 
-```javascript
+```typescript
 import { reactSpring } from '@real-system/animation-library';
 
 ...

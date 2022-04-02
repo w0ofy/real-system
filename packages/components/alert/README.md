@@ -24,8 +24,9 @@ $ yarn add @real-system/alert
 
 ### Code Example
 
-```javascript
-import { Alert } from '@real-system/alert';
+```typescript
+import { Alert, InlineAlert } from '@real-system/alert';
+import type { AlertProps, InlineAlertProps } from '@real-system/alert';
 
 ...
 

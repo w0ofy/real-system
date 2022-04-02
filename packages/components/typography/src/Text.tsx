@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { BaseText } from './BaseText';
+import { Code } from './Code';
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';
 import { Label } from './Label';
@@ -17,6 +18,7 @@ export interface TextComponent
   Heading: typeof Heading;
   Label: typeof Label;
   HelpText: typeof HelpText;
+  Code: typeof Code;
 }
 
 // @ts-expect-error Heading (component) property is defined on the fn object after this is defined
@@ -42,5 +44,6 @@ const Text: TextComponent = forwardRef<
 Text.Heading = Heading;
 Text.Label = Label;
 Text.HelpText = HelpText;
+Text.Code = Code;
 
 export { Text };

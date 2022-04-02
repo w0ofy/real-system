@@ -24,7 +24,7 @@ $ yarn add @real-system/aspect-ratio
 
 ### Code Example
 
-```javascript
+```typescript
 import { AspectRatio } from '@real-system/aspect-ratio';
 
 ...

@@ -24,7 +24,7 @@ $ yarn add @real-system/link
 
 ### Code Example
 
-```javascript
+```typescript
 import { Link } from '@real-system/link';
 
 ...

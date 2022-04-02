@@ -190,6 +190,8 @@ const letterSpacings = {
   xxl: '0.5px',
   body: '0.25px',
   heading: '0.3px',
+  mono: '0.3px',
+  code: '0.3px',
 };
 
 const lineHeights = {

@@ -24,7 +24,7 @@ $ yarn add @real-system/tooltip
 
 ### Code Example
 
-```javascript
+```typescript
 import { Tooltip } from '@real-system/tooltip';
 
 ...

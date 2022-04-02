@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';
+import { Flex } from '@real-system/flex';
 import { Text } from '@real-system/typography';
 
 export default {
@@ -70,4 +71,28 @@ export const HelpText = () => (
       hideErrorIcon
     />
   </Box>
+);
+
+export const Code = () => (
+  <Flex vertical gap={3}>
+    <Flex>
+      <Text.Code colorScheme="gray" width="auto">
+        const RealSystem = 'Awesome!'
+      </Text.Code>
+    </Flex>
+    <Flex>
+      <Text.Code colorScheme="blue">const RealSystem = 'Intuitive!'</Text.Code>
+    </Flex>
+    <Flex>
+      <Text.Code colorScheme="green">const RealSystem = 'Easy!'</Text.Code>
+    </Flex>
+    <Flex>
+      <Text.Code colorScheme="purple">const RealSystem = 'Radical!'</Text.Code>
+    </Flex>
+    <Flex>
+      <Text.Code colorScheme="red">
+        const RealSystem = 'Not Installed!'
+      </Text.Code>
+    </Flex>
+  </Flex>
 );

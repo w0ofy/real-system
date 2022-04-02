@@ -24,7 +24,7 @@ $ yarn add @real-system/popover
 
 ### Code Example
 
-```javascript
+```typescript
 import { Popover } from '@real-system/popover';
 
 /** or import each component

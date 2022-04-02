@@ -24,7 +24,7 @@ $ yarn add @real-system/flex
 
 ### Code Example
 
-```javascript
+```typescript
 import { Flex } from '@real-system/flex';
 
 ...

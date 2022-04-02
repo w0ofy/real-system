@@ -24,7 +24,7 @@ $ yarn add @real-system/button-primitive
 
 ### Code Example
 
-```javascript
+```typescript
 import { ButtonPrimitive } from '@real-system/button-primitive';
 
 ...

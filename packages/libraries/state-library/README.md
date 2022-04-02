@@ -24,7 +24,7 @@ $ yarn add @real-system/state-library
 
 ### Code Example
 
-```javascript
+```typescript
 import { constate } from '@real-system/state-library';
 
 ...

@@ -24,7 +24,7 @@ $ yarn add @real-system/truncate
 
 ### Code Example
 
-```javascript
+```typescript
 import { Box } from '@real-system/box-primitive';
 import { Truncate } from '@real-system/truncate';
 import { Text } from '@real-system/typography';

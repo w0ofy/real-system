@@ -24,7 +24,7 @@ $ yarn add @real-system/utils-library
 
 ### Code Example
 
-```javascript
+```typescript
 import { kebabCase } from '@real-system/utils-library';
 
 const formatString = (name: Names) =>

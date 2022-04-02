@@ -24,7 +24,7 @@ $ yarn add @real-system/textarea
 
 ### Code Example
 
-```javascript
+```typescript
 import { Textarea } from '@real-system/textarea';
 
 ...

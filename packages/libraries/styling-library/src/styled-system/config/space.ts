@@ -130,7 +130,7 @@ const spaceProps: StylePropConfig<SpaceProps> = {
   },
   paddingInline: true,
   pInline: {
-    property: 'paddingInlineStart',
+    property: 'paddingInline',
   },
   paddingInlineStart: true,
   ps: {

@@ -24,7 +24,7 @@ $ yarn add @real-system/separator
 
 ### Code Example
 
-```javascript
+```typescript
 import { Separator } from '@real-system/separator';
 import type { SeparatorProps } from '@real-system/separator';
 
