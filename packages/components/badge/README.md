@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/utils-library @real-system/text-primitive @real-system/theme-library @real-system/styling-library @real-system/box-primitive
+$ npm install react react-dom @real-system/utils-library @real-system/box-primitive @real-system/theme-library @real-system/styling-library @real-system/box-primitive
 # yarn
-$ yarn add react react-dom @real-system/utils-library @real-system/text-primitive @real-system/theme-library @real-system/styling-library @real-system/box-primitive
+$ yarn add react react-dom @real-system/utils-library @real-system/box-primitive @real-system/theme-library @real-system/styling-library @real-system/box-primitive
 
 # install badge
 

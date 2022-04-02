@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { Flex } from '@real-system/flex';
 import { makeTestId } from '@real-system/utils-library';

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import React from 'react';
+import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';

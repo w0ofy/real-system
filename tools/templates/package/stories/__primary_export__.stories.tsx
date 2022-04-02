@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { __primary_export__ } from '@real-system/__pkg__';

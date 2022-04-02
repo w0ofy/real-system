@@ -25,7 +25,20 @@ $ yarn add @real-system/menu
 ### Code Example
 
 ```javascript
-import { Menu } from '@real-system/menu';
+import { 
+  Menu,
+  MenuButton,
+  MenuGroup,
+  MenuGroupLabel,
+  MenuItem,
+  MenuItemCheckbox,
+  MenuItemCommand,
+  MenuItemIcon,
+  MenuItemLink,
+  MenuItemRadio,
+  MenuList,
+  MenuSeparator,
+} from '@real-system/menu';
 
 ...
 
