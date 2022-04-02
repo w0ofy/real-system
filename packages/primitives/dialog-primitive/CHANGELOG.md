@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.18
+
+### Patch Changes
+
+- [#347](https://github.com/bigwoof91/real-system/pull/347) [`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Adding react 18 support + deprecating react 17
+
 ## 0.0.17
 
 ### Patch Changes

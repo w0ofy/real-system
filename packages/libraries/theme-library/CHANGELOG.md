@@ -1,5 +1,15 @@
 # @real-system/theme
 
+## 0.0.17
+
+### Patch Changes
+
+- [#347](https://github.com/bigwoof91/real-system/pull/347) [`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Adding react 18 support + deprecating react 17
+
+- Updated dependencies [[`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5)]:
+  - @real-system/styling-library@0.0.11
+  - @real-system/utils-library@0.0.15
+
 ## 0.0.16
 
 ### Patch Changes
