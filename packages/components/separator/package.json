@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/ariakit-library": "^0.0.3",
+    "@real-system/ariakit-library": "^0.0.4",
     "@real-system/box-primitive": "^0.0.14",
     "@real-system/styling-library": "^0.0.10",
     "@real-system/theme-library": "^0.0.16",
@@ -39,7 +39,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@real-system/ariakit-library": "^0.0.3",
+    "@real-system/ariakit-library": "^0.0.4",
     "@real-system/box-primitive": "^0.0.14",
     "@real-system/styling-library": "^0.0.10",
     "@real-system/theme-library": "^0.0.16",
