@@ -3680,18 +3680,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/ariakit-library@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@real-system/ariakit-library@npm:0.0.3"
-  dependencies:
-    ariakit: ^2.0.0-alpha.19
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: cb8cc5aeb6ba94ed0ee00e108554c9c10dd7007002d8d03a63afb39158697130d9e7c51a58ea0a5a8c71b6d330401055ba14e6c7ba9aaa85e898a085f9aa0eb4
-  languageName: node
-  linkType: hard
-
 "@real-system/aspect-ratio@^0.0.4, @real-system/aspect-ratio@workspace:packages/components/aspect-ratio":
   version: 0.0.0-use.local
   resolution: "@real-system/aspect-ratio@workspace:packages/components/aspect-ratio"
@@ -3756,20 +3744,6 @@ __metadata:
     react-dom: ^18.0.0
   languageName: unknown
   linkType: soft
-
-"@real-system/box-primitive@npm:^0.0.14":
-  version: 0.0.14
-  resolution: "@real-system/box-primitive@npm:0.0.14"
-  dependencies:
-    deepmerge: ^4.2.2
-  peerDependencies:
-    "@real-system/styling-library": ^0.0.10
-    "@real-system/utils-library": ^0.0.14
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: 4cb4641bc950194d634a4eb6767a0b26b0b484a370fd641aef7fffa37649ee412cd0ba30b051834563e53a6ce251f94e884bc2cd9cbf7f62553a174e33398e0e
-  languageName: node
-  linkType: hard
 
 "@real-system/button-primitive@^0.0.25, @real-system/button-primitive@workspace:packages/primitives/button-primitive":
   version: 0.0.0-use.local
@@ -4177,20 +4151,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/separator@workspace:packages/components/separator"
   dependencies:
-    "@real-system/ariakit-library": ^0.0.3
-    "@real-system/box-primitive": ^0.0.14
-    "@real-system/styling-library": ^0.0.10
-    "@real-system/theme-library": ^0.0.16
+    "@real-system/ariakit-library": ^0.0.4
+    "@real-system/box-primitive": ^0.0.15
+    "@real-system/styling-library": ^0.0.11
+    "@real-system/theme-library": ^0.0.17
     "@real-system/utils-library": ^0.0.15
     concurrently: ^7.0.0
     react: ^18.0.0
     react-dom: ^18.0.0
     typescript: ^4.6.3
   peerDependencies:
-    "@real-system/ariakit-library": ^0.0.3
-    "@real-system/box-primitive": ^0.0.14
-    "@real-system/styling-library": ^0.0.10
-    "@real-system/theme-library": ^0.0.16
+    "@real-system/ariakit-library": ^0.0.4
+    "@real-system/box-primitive": ^0.0.15
+    "@real-system/styling-library": ^0.0.11
+    "@real-system/theme-library": ^0.0.17
     "@real-system/utils-library": ^0.0.15
     react: ^18.0.0
     react-dom: ^18.0.0
@@ -4251,25 +4225,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/styling-library@npm:^0.0.10":
-  version: 0.0.10
-  resolution: "@real-system/styling-library@npm:0.0.10"
-  dependencies:
-    "@emotion/is-prop-valid": ^1.1.2
-    "@emotion/react": ^11.8.2
-    "@emotion/styled": ^11.8.1
-    "@styled-system/css": ^5.1.5
-    "@types/styled-system": 5.1.15
-    csstype: ^3.0.11
-    polished: ^4.1.4
-    styled-system: 5.1.5
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: b212962aa7f075f51cb6168c67435716f2edd85adb3c91d1fed9811ec7afc6ce80e282b7175575cbf42a21edf7183c24ed9d7a99609c749208091b5177783a4e
-  languageName: node
-  linkType: hard
-
 "@real-system/textarea@^0.0.15, @real-system/textarea@workspace:packages/components/textarea":
   version: 0.0.0-use.local
   resolution: "@real-system/textarea@workspace:packages/components/textarea"
@@ -4312,18 +4267,6 @@ __metadata:
     react-dom: ^18.0.0
   languageName: unknown
   linkType: soft
-
-"@real-system/theme-library@npm:^0.0.16":
-  version: 0.0.16
-  resolution: "@real-system/theme-library@npm:0.0.16"
-  peerDependencies:
-    "@real-system/styling-library": ^0.0.10
-    "@real-system/utils-library": ^0.0.14
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: 53f907cad9c1bb659499b7a4b2d46a3dfe4a014c80d9fa3b86c08cbbdb86e84d8dd5ad0feb3bae11805e922a1bde5ee44de26c4c2ba76db01fb8e07e2d5ac0df
-  languageName: node
-  linkType: hard
 
 "@real-system/toaster@^0.0.16, @real-system/toaster@workspace:packages/components/toaster":
   version: 0.0.0-use.local
@@ -7700,7 +7643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-alpha.20, ariakit@npm:^2.0.0-alpha.19":
+"ariakit@npm:2.0.0-alpha.20":
   version: 2.0.0-alpha.20
   resolution: "ariakit@npm:2.0.0-alpha.20"
   dependencies:
