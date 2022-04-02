@@ -1,5 +1,11 @@
 # @real-system/styling
 
+## 0.0.12
+
+### Patch Changes
+
+- [#350](https://github.com/bigwoof91/real-system/pull/350) [`db9e4fa`](https://github.com/bigwoof91/real-system/commit/db9e4fad4f0ee9af44a29bd503f240046dba08cf) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Added more shorthand style props. Created Separator component
+
 ## 0.0.11
 
 ### Patch Changes

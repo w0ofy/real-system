@@ -1,5 +1,40 @@
 # @real-system/core
 
+## 0.0.36
+
+### Patch Changes
+
+- [#350](https://github.com/bigwoof91/real-system/pull/350) [`db9e4fa`](https://github.com/bigwoof91/real-system/commit/db9e4fad4f0ee9af44a29bd503f240046dba08cf) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Added more shorthand style props. Created Separator component
+
+- Updated dependencies [[`db9e4fa`](https://github.com/bigwoof91/real-system/commit/db9e4fad4f0ee9af44a29bd503f240046dba08cf), [`db9e4fa`](https://github.com/bigwoof91/real-system/commit/db9e4fad4f0ee9af44a29bd503f240046dba08cf)]:
+  - @real-system/field@0.0.11
+  - @real-system/flex@0.0.26
+  - @real-system/ariakit-library@0.0.5
+  - @real-system/styling-library@0.0.12
+  - @real-system/theme-library@0.0.18
+  - @real-system/typography@0.0.33
+  - @real-system/alert@0.0.18
+  - @real-system/checkbox@0.0.19
+  - @real-system/dialog@0.0.26
+  - @real-system/popover@0.0.9
+  - @real-system/radio-group@0.0.12
+  - @real-system/menu@0.0.5
+  - @real-system/separator@0.0.1
+  - @real-system/tooltip@0.0.10
+  - @real-system/aspect-ratio@0.0.5
+  - @real-system/badge@0.0.3
+  - @real-system/button@0.0.34
+  - @real-system/icon@0.0.33
+  - @real-system/input@0.0.32
+  - @real-system/link@0.0.4
+  - @real-system/spinner@0.0.31
+  - @real-system/textarea@0.0.16
+  - @real-system/toaster@0.0.17
+  - @real-system/truncate@0.0.11
+  - @real-system/visually-hidden@0.0.29
+  - @real-system/box-primitive@0.0.16
+  - @real-system/button-primitive@0.0.26
+
 ## 0.0.35
 
 ### Patch Changes
