@@ -26,6 +26,7 @@ $ yarn add @real-system/separator
 
 ```javascript
 import { Separator } from '@real-system/separator';
+import type { SeparatorProps } from '@real-system/separator';
 
 ...
 

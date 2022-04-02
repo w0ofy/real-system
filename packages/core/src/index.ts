@@ -17,6 +17,7 @@ export * from '@real-system/menu';
 export * from '@real-system/popover';
 export * from '@real-system/portal-primitive';
 export * from '@real-system/radio-group';
+export * from '@real-system/separator';
 export * from '@real-system/spinner';
 export * from '@real-system/textarea';
 export * from '@real-system/toaster';

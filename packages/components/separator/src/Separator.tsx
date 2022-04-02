@@ -89,4 +89,5 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
   }
 );
 
+export type { SeparatorProps };
 export { Separator };
