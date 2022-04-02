@@ -1,6 +1,6 @@
 {
   "name": "@real-system/alert-primitive",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Alert primitive component for real system.",
   "status": "production",
   "main": "lib/index.js",

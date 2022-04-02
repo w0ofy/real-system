@@ -1,5 +1,20 @@
 # @real-system/link
 
+## 0.0.3
+
+### Patch Changes
+
+- [#347](https://github.com/bigwoof91/real-system/pull/347) [`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Adding react 18 support + deprecating react 17
+
+* [#336](https://github.com/bigwoof91/real-system/pull/336) [`fc37936`](https://github.com/bigwoof91/real-system/commit/fc379360ae68cccbe5a2f7d71c4f5a1d37e2d803) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Removed TextPrimitive API and usage. Changed BoxAs name to boxAs.
+
+* Updated dependencies [[`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5), [`fc37936`](https://github.com/bigwoof91/real-system/commit/fc379360ae68cccbe5a2f7d71c4f5a1d37e2d803)]:
+  - @real-system/icon@0.0.32
+  - @real-system/styling-library@0.0.11
+  - @real-system/theme-library@0.0.17
+  - @real-system/utils-library@0.0.15
+  - @real-system/box-primitive@0.0.15
+
 ## 0.0.2
 
 ### Patch Changes

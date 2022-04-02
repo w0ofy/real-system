@@ -1,5 +1,48 @@
 # @real-system/core
 
+## 0.0.35
+
+### Patch Changes
+
+- [#347](https://github.com/bigwoof91/real-system/pull/347) [`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Adding react 18 support + deprecating react 17
+
+* [#336](https://github.com/bigwoof91/real-system/pull/336) [`fc37936`](https://github.com/bigwoof91/real-system/commit/fc379360ae68cccbe5a2f7d71c4f5a1d37e2d803) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Removed TextPrimitive API and usage. Changed BoxAs name to boxAs.
+
+* Updated dependencies [[`a7c4883`](https://github.com/bigwoof91/real-system/commit/a7c4883510c36bac1d24f2c6e11ebc8caed191a5), [`fc37936`](https://github.com/bigwoof91/real-system/commit/fc379360ae68cccbe5a2f7d71c4f5a1d37e2d803), [`e60d503`](https://github.com/bigwoof91/real-system/commit/e60d5033999d03c19bbc69cd29de18769af8771f), [`fc37936`](https://github.com/bigwoof91/real-system/commit/fc379360ae68cccbe5a2f7d71c4f5a1d37e2d803)]:
+  - @real-system/alert@0.0.17
+  - @real-system/aspect-ratio@0.0.4
+  - @real-system/badge@0.0.2
+  - @real-system/button@0.0.33
+  - @real-system/checkbox@0.0.18
+  - @real-system/dialog@0.0.25
+  - @real-system/field@0.0.10
+  - @real-system/flex@0.0.25
+  - @real-system/icon@0.0.32
+  - @real-system/input@0.0.31
+  - @real-system/link@0.0.3
+  - @real-system/menu@0.0.4
+  - @real-system/popover@0.0.8
+  - @real-system/radio-group@0.0.11
+  - @real-system/spinner@0.0.30
+  - @real-system/textarea@0.0.15
+  - @real-system/toaster@0.0.16
+  - @real-system/tooltip@0.0.9
+  - @real-system/truncate@0.0.10
+  - @real-system/typography@0.0.32
+  - @real-system/visually-hidden@0.0.28
+  - @real-system/a11y-library@0.0.3
+  - @real-system/animation-library@0.0.9
+  - @real-system/ariakit-library@0.0.4
+  - @real-system/state-library@0.0.8
+  - @real-system/styling-library@0.0.11
+  - @real-system/theme-library@0.0.17
+  - @real-system/utils-library@0.0.15
+  - @real-system/alert-primitive@0.0.7
+  - @real-system/box-primitive@0.0.15
+  - @real-system/button-primitive@0.0.25
+  - @real-system/dialog-primitive@0.0.18
+  - @real-system/portal-primitive@0.0.7
+
 ## 0.0.34
 
 ### Patch Changes
