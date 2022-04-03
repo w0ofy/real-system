@@ -1,15 +1,16 @@
 {
-  "name": "@real-system/styling-library",
-  "version": "0.0.12",
-  "description": "theme and components for real system",
-  "status": "production",
+  "name": "@real-system/select",
+  "version": "0.0.0",
+  "description": "Select component for real system.",
+  "status": "development",
+  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn build:js && yarn types",
+    "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "build:js": "NODE_ENV=production node ./tools/build.js",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
@@ -21,8 +22,7 @@
   },
   "keywords": [
     "real-system",
-    "styles",
-    "components"
+    "select"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -31,20 +31,21 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
+    "@real-system/ariakit-library": "^0.0.5",
+    "@real-system/box-primitive": "^0.0.16",
+    "@real-system/styling-library": "^0.0.12",
+    "@real-system/theme-library": "^0.0.18",
+    "@real-system/utils-library": "^0.0.15",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
-  "dependencies": {
-    "@emotion/is-prop-valid": "^1.1.2",
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@types/styled-system": "5.1.15",
-    "csstype": "^3.0.11",
-    "polished": "^4.2.2",
-    "styled-system": "5.1.5"
-  },
   "devDependencies": {
-    "concurrently": "^7.1.0",
+    "@real-system/ariakit-library": "^0.0.5",
+    "@real-system/box-primitive": "^0.0.16",
+    "@real-system/styling-library": "^0.0.12",
+    "@real-system/theme-library": "^0.0.18",
+    "@real-system/utils-library": "^0.0.15",
+    "concurrently": "^7.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^4.6.3"

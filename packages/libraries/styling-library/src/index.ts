@@ -1,6 +1,7 @@
 // Base styling system (emotion)
 import styled from '@emotion/styled';
 
+export { css } from './styled-system/cssFn';
 export { default as isPropValid } from '@emotion/is-prop-valid';
 export type {
   ThemeProviderProps as PrimitiveThemeProviderProps,
@@ -15,7 +16,6 @@ export {
   withTheme as primitiveWithTheme,
   Global as StylingGlobals,
 } from '@emotion/react';
-export { default as css } from '@styled-system/css';
 export * as polished from 'polished';
 
 /**

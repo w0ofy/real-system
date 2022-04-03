@@ -39,12 +39,13 @@ const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
         };
       }
     }, [trailingArrow, leadingArrow]);
+
     return (
       <AriakitMenuButton
         as={Button}
         data-testid={makeTestId('menu-button')}
         state={state}
-        // prop union is too complex. so, casting as any
+        // prop union is too complex. so, type casting as `unknown`
         {...(restProps as unknown)}
         {...chevron}
         ref={ref}>

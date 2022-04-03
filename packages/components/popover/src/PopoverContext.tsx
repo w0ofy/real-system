@@ -25,7 +25,7 @@ const usePopover = ({ state }: PopoverContext): AriakitPopoverState => state;
 
 const [PopoverContextProvider, usePopoverStateContext] = constate(usePopover);
 
-const ifAutoPlacements = (
+const maybeAutoPlacements = (
   placement: PopoverContainerProps['placement'],
   flip
 ) => {
@@ -48,7 +48,7 @@ const PopoverContainer = ({
   const { hide, ...restState } = useAriakitPopoverState({
     placement,
     gutter: 2,
-    flip: ifAutoPlacements(placement, flip),
+    flip: maybeAutoPlacements(placement, flip),
   });
   const handleHide = useCallback(() => {
     onHide && onHide();

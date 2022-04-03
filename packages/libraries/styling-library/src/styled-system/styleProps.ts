@@ -18,16 +18,12 @@ import type {
   TypographyProps,
 } from './config';
 import { styleProps } from './config';
-import type { PseudoProps } from './pseudoProps';
 
 const getStyleProps = system(styleProps);
 
-const STYLE_PROPS = Object.keys(styleProps) as (keyof StyleProps)[];
+type StylePropNames = keyof StyleProps;
 
-/**
- * Includes style props and pseudo style props
- */
-type StylishProps = StyleProps & PseudoProps;
+const STYLE_PROPS = Object.keys(styleProps) as StylePropNames[];
 
 export type {
   AnimationProps,
@@ -39,9 +35,9 @@ export type {
   LayoutProps,
   MiscellaneousProps,
   SpaceProps,
+  StylePropNames,
   StyleProps,
   StylePropScaleNames,
-  StylishProps,
   TransformProps,
   TypographyProps,
 };

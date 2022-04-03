@@ -5,10 +5,7 @@ import type { Length, StylePropConfig, Token } from './_types';
 const transformProps: StylePropConfig<TransformProps> = {
   clipPath: true,
   transform: true,
-  transformOrigin: {
-    property: 'transformOrigin',
-    scale: 'sizes',
-  },
+  transformOrigin: true,
   translateX: true,
   translateY: true,
   skewX: true,

@@ -60,17 +60,29 @@ const spaceProps: StylePropConfig<SpaceProps> = {
     property: 'marginLeft',
     scale: STYLE_PROP_SCALES.space,
   },
-  marginInline: true,
+  marginInline: {
+    property: 'marginInline',
+    scale: STYLE_PROP_SCALES.space,
+  },
   mInline: {
     property: 'marginInline',
+    scale: STYLE_PROP_SCALES.space,
   },
-  marginInlineStart: true,
+  marginInlineStart: {
+    property: 'marginInlineStart',
+    scale: STYLE_PROP_SCALES.space,
+  },
   ms: {
     property: 'marginInlineStart',
+    scale: STYLE_PROP_SCALES.space,
   },
-  marginInlineEnd: true,
+  marginInlineEnd: {
+    property: 'marginInlineEnd',
+    scale: STYLE_PROP_SCALES.space,
+  },
   me: {
     property: 'marginInlineEnd',
+    scale: STYLE_PROP_SCALES.space,
   },
   padding: {
     property: 'padding',
@@ -128,17 +140,29 @@ const spaceProps: StylePropConfig<SpaceProps> = {
     property: 'paddingLeft',
     scale: STYLE_PROP_SCALES.space,
   },
-  paddingInline: true,
+  paddingInline: {
+    property: 'paddingInline',
+    scale: STYLE_PROP_SCALES.space,
+  },
   pInline: {
     property: 'paddingInline',
+    scale: STYLE_PROP_SCALES.space,
   },
-  paddingInlineStart: true,
+  paddingInlineStart: {
+    property: 'paddingInlineStart',
+    scale: STYLE_PROP_SCALES.space,
+  },
   ps: {
     property: 'paddingInlineStart',
+    scale: STYLE_PROP_SCALES.space,
   },
-  paddingInlineEnd: true,
+  paddingInlineEnd: {
+    property: 'paddingInlineEnd',
+    scale: STYLE_PROP_SCALES.space,
+  },
   pe: {
     property: 'paddingInlineEnd',
+    scale: STYLE_PROP_SCALES.space,
   },
 };
 

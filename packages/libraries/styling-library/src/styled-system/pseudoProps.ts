@@ -1,5 +1,4 @@
-import css from '@styled-system/css';
-
+import { css } from './cssFn';
 import type { StyleProps } from './styleProps';
 
 const pseudoPropsMap = {
@@ -19,7 +18,7 @@ const pseudoPropsMap = {
   _firstChild: '&:first-child',
   _focus_placeholder: '&:focus::placeholder',
   _focus: '&:focus',
-  _focusVisible: '&:focus-visible',
+  _focusVisible: '&:focus-visible, &[data-focus-visible]',
   _focusWithin: '&:focus-within',
   _grabbed: '&[aria-grabbed=true]',
   _groupHover: '[role=group]:hover &',
@@ -44,7 +43,7 @@ const pseudoPropsMap = {
 
 type PseudoPropNames = keyof typeof pseudoPropsMap;
 type PseudoProps = {
-  [key in PseudoPropNames]?: StyleProps;
+  [key in PseudoPropNames]?: StyleProps | Record<PseudoPropNames, StyleProps>;
 };
 
 const getPseudoProps = (

@@ -31,9 +31,8 @@ const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
         vertical
         xAlignContent="left"
         yAlignContent="top"
-        border="border-2"
+        border="weak"
         filter="popover"
-        borderColor="gray-100"
         borderRadius={4}
         padding={10}
         _focus={{ outline: '0' }}
