@@ -41,7 +41,7 @@
     "@styled-system/css": "^5.1.5",
     "@types/styled-system": "5.1.15",
     "csstype": "^3.0.11",
-    "polished": "^4.1.4",
+    "polished": "^4.2.0",
     "styled-system": "5.1.5"
   },
   "devDependencies": {
