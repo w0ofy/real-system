@@ -20,7 +20,7 @@ type PopoverProps = Omit<AriakitPopoverProps, 'state' | 'as'> &
   RealSystemElementProps & {
     hideCloseButton?: boolean;
     hideArrow?: boolean;
-  };
+  } & Omit<FlexProps, 'as'>;
 
 const StyledPopover = forwardRef<HTMLDivElement, FlexProps>(
   function StyledPopover(props, ref) {
@@ -69,8 +69,8 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
       <AriakitPopover
         state={state}
         data-testid={makeTestId('popover')}
-        {...restProps}
         as={StyledPopover}
+        {...restProps}
         ref={ref}>
         {hideArrow ? null : <AriakitPopoverArrow state={state} />}
         {!hideCloseButton && (

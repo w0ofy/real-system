@@ -13,7 +13,7 @@ const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
       as={Box}
       fontSize={1}
       fontWeight={5}
-      lineHeight={2}
+      lineHeight={1}
       letterSpacing="body"
       color="gray-500"
       margin={0}

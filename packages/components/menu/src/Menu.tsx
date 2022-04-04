@@ -14,6 +14,10 @@ const isAutoPlacement = (placement: AriakitMenuStateProps['placement']) =>
   placement === 'auto' ||
   placement === 'auto-end' ||
   placement === 'auto-start';
+
+/**
+ * Dropdown menu for the common dropdown menu button pattern.
+ */
 const Menu = ({
   children,
   placement = 'bottom-end',

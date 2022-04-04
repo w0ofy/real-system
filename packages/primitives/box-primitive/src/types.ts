@@ -1,35 +1,30 @@
 import type { StylishProps } from '@real-system/styling-library';
-import type { RealSystemElementProps } from '@real-system/utils-library';
+import type { Dict, RealSystemElementProps } from '@real-system/utils-library';
 
 type BoxStyleProps = StylishProps;
 
-type BoxComponentProps = {
-  as?: keyof JSX.IntrinsicElements;
-  type?: string;
+/**
+ * Real system Box specific props
+ */
+type BoxComponentProps<GivenProps = Dict> = {
+  as?: keyof JSX.IntrinsicElements | React.FunctionComponent<GivenProps>;
   /** Typed as any because Box can be any HTML or SVG element */
-  ref?: any | null;
-  // image props
-  alt?: string;
-  src?: string;
-  // link props
-  href?: string;
-  rel?: string;
-  target?: string;
-  //  select props
-  multiple?: boolean;
-  // optgroup props
-  label?: string;
-  datetime?: string;
-  /** generually used for inputs and labels */
-  htmlFor?: string | undefined;
+  ref?: any;
 } & RealSystemElementProps;
 
-// Omits potential clashes from our style props with HTMLAttributes (i.e. color)
+/**
+ * Omits potential clashes from our `StylishProps` props with `HTMLAttributes` (i.e. color)
+ */
 type HTMLElementProps = Omit<
   React.HTMLAttributes<HTMLElement>,
   keyof StylishProps
 >;
 
-type BoxProps = Partial<HTMLElementProps> & BoxComponentProps & BoxStyleProps;
+/**
+ * All box props
+ */
+type BoxProps<GivenProps = Dict> = Partial<HTMLElementProps> &
+  BoxComponentProps<GivenProps> &
+  BoxStyleProps;
 
 export type { BoxProps, BoxStyleProps };

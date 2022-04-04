@@ -1,23 +1,53 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Select, SelectItem, SelectPopover } from '@real-system/select';
+import {
+  Select,
+  SelectContainer,
+  SelectGroup,
+  SelectGroupLabel,
+  SelectItem,
+  SelectSeparator,
+} from '@real-system/select';
+import { Label } from '@real-system/typography';
 
 export default {
   title: 'Components/Select',
   component: Select,
 } as Meta;
 
-const Template = (args) => {
+export const Default = (args) => {
   return (
-    <Select>
-      <SelectPopover>
+    <SelectContainer {...args}>
+      <Label>Select a fruit</Label>
+      <Select maxW="20rem">
         <SelectItem value="Apple" />
         <SelectItem value="Grape" disabled />
         <SelectItem value="Melon" />
-      </SelectPopover>
-    </Select>
+      </Select>
+    </SelectContainer>
   );
 };
 
-export const Default = Template.bind({});
+export const SelctGroup = (args) => {
+  return (
+    <SelectContainer>
+      <Label>Select Groups</Label>
+      <Select maxW="20rem">
+        <SelectGroup>
+          <SelectGroupLabel>Fruits</SelectGroupLabel>
+          <SelectItem value="Apple" />
+          <SelectItem value="Grape" disabled />
+          <SelectItem value="Melon" />
+        </SelectGroup>
+        <SelectSeparator />
+        <SelectGroup>
+          <SelectGroupLabel>Vegatables</SelectGroupLabel>
+          <SelectItem value="Cucumber" />
+          <SelectItem value="Pepper" disabled />
+          <SelectItem value="Onion" />
+        </SelectGroup>
+      </Select>
+    </SelectContainer>
+  );
+};

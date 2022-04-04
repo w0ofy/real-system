@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Flex } from '@real-system/flex';
+import { Link } from '@real-system/link';
 import {
   Popover,
   PopoverButton,
@@ -9,6 +10,7 @@ import {
   PopoverDescription,
   PopoverDismiss,
   PopoverHeading,
+  PopoverTrigger,
 } from '@real-system/popover';
 
 export default {
@@ -27,7 +29,7 @@ export default {
   },
 } as Meta;
 
-const Template = (args) => {
+export const Default = (args) => {
   return (
     <Flex padding={10} xAlignContent="center">
       <PopoverContainer placement="auto">
@@ -49,4 +51,39 @@ const Template = (args) => {
   );
 };
 
-export const Default = Template.bind({});
+export const CustomTrigger = (args) => {
+  return (
+    <Flex padding={10} xAlignContent="center">
+      <PopoverContainer placement="auto">
+        <PopoverTrigger>
+          <Link as="div" showExternal>
+            External Link
+          </Link>
+        </PopoverTrigger>
+        <Popover
+          maxW="35rem"
+          hideCloseButton={args.hideCloseButton}
+          hideArrow={args.hideArrow}>
+          <PopoverHeading marginBottom={8}>Heads 🆙</PopoverHeading>
+          <PopoverDescription marginBottom={10}>
+            I acknowledge I am leaving the real system storybook and I trust
+            this link.
+          </PopoverDescription>
+          <Flex>
+            <PopoverDismiss
+              mr={4}
+              variant="fill"
+              colorScheme="blue"
+              onClick={(hide) => {
+                window.open('https://system.themikewolf.com');
+                hide();
+              }}>
+              Confirm
+            </PopoverDismiss>
+            <PopoverDismiss variant="minimal">Cancel</PopoverDismiss>
+          </Flex>
+        </Popover>
+      </PopoverContainer>
+    </Flex>
+  );
+};
