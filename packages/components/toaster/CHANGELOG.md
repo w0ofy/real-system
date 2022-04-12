@@ -1,5 +1,12 @@
 # @real-system/toaster
 
+## 0.0.18
+
+### Patch Changes
+
+- Updated dependencies [[`7c1aaba`](https://github.com/bigwoof91/real-system/commit/7c1aabaddd3a9428dae727e85828958b6f8e2565)]:
+  - @real-system/alert@0.0.19
+
 ## 0.0.17
 
 ### Patch Changes

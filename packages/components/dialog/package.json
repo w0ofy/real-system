@@ -1,6 +1,6 @@
 {
   "name": "@real-system/dialog",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Dialog component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -31,7 +31,7 @@
   "peerDependencies": {
     "@real-system/animation-library": "^0.0.9",
     "@real-system/box-primitive": "^0.0.16",
-    "@real-system/button": "^0.0.34",
+    "@real-system/button": "^0.0.35",
     "@real-system/dialog-primitive": "^0.0.18",
     "@real-system/flex": "^0.0.26",
     "@real-system/state-library": "^0.0.8",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@real-system/animation-library": "^0.0.9",
     "@real-system/box-primitive": "^0.0.16",
-    "@real-system/button": "^0.0.34",
+    "@real-system/button": "^0.0.35",
     "@real-system/dialog-primitive": "^0.0.18",
     "@real-system/flex": "^0.0.26",
     "@real-system/state-library": "^0.0.8",

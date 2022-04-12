@@ -1,6 +1,6 @@
 {
   "name": "@real-system/toaster",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Toast components for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/alert": "^0.0.18",
+    "@real-system/alert": "^0.0.19",
     "@real-system/animation-library": "^0.0.9",
     "@real-system/box-primitive": "^0.0.16",
     "@real-system/portal-primitive": "^0.0.7",
@@ -41,7 +41,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@real-system/alert": "^0.0.18",
+    "@real-system/alert": "^0.0.19",
     "@real-system/animation-library": "^0.0.9",
     "@real-system/box-primitive": "^0.0.16",
     "@real-system/portal-primitive": "^0.0.7",
