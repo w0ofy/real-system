@@ -71,6 +71,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     [variant, size, colorScheme, isLoading]
   );
 
+  console.log('jimmy boon');
   return (
     <ButtonPrimitive
       data-testid={makeTestId('button')}
