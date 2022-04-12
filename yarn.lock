@@ -4147,6 +4147,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/select@workspace:packages/components/select":
+  version: 0.0.0-use.local
+  resolution: "@real-system/select@workspace:packages/components/select"
+  dependencies:
+    "@real-system/box-primitive": ^0.0.16
+    "@real-system/styling-library": ^0.0.12
+    "@real-system/theme-library": ^0.0.18
+    concurrently: ^7.0.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/box-primitive": ^0.0.16
+    "@real-system/styling-library": ^0.0.12
+    "@real-system/theme-library": ^0.0.18
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/separator@^0.0.1, @real-system/separator@workspace:packages/components/separator":
   version: 0.0.0-use.local
   resolution: "@real-system/separator@workspace:packages/components/separator"

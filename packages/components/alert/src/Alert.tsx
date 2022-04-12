@@ -15,6 +15,7 @@ type AlertProps = {
   children: React.ReactNode;
   onDismiss?: ButtonProps['onClick'];
   dismissRef?: React.Ref<HTMLButtonElement>;
+  someProp?: React.ReactNode;
 } & CommonAlertProps;
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
