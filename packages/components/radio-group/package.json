@@ -52,7 +52,7 @@
     "@real-system/typography": "^0.0.33",
     "@real-system/utils-library": "^0.0.15",
     "@real-system/visually-hidden": "^0.0.29",
-    "concurrently": "^7.0.0",
+    "concurrently": "^7.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^4.6.3"

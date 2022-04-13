@@ -41,7 +41,7 @@
     "@real-system/styling-library": "^0.0.12",
     "@real-system/theme-library": "^0.0.18",
     "@real-system/utils-library": "^0.0.15",
-    "concurrently": "^7.0.0",
+    "concurrently": "^7.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^4.6.3"
