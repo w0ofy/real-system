@@ -16,14 +16,17 @@ import type {
   StylePropScaleNames,
   TransformProps,
   TypographyProps,
-} from './config';
-import { styleProps } from './config';
+} from '../config';
+import { styleProps } from '../config';
 
 const getStyleProps = system(styleProps);
 
 type StylePropNames = keyof StyleProps;
 
 const STYLE_PROPS = Object.keys(styleProps) as StylePropNames[];
+
+const isStyleProp = (prop: PropertyKey) => !!styleProps[prop];
+const isNotStyleProp = (prop: PropertyKey) => !styleProps[prop];
 
 export type {
   AnimationProps,
@@ -41,4 +44,4 @@ export type {
   TransformProps,
   TypographyProps,
 };
-export { getStyleProps, STYLE_PROPS };
+export { getStyleProps, isNotStyleProp, isStyleProp, STYLE_PROPS };

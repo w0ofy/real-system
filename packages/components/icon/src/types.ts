@@ -1,7 +1,11 @@
 import * as IconComponents from '@heroicons/react/outline';
 
 import type { BoxStyleProps } from '@real-system/box-primitive';
-import type { ThemeIntents, ThemeSizes } from '@real-system/theme-library';
+import type {
+  ColorSchemes,
+  ThemeIntents,
+  ThemeSizes,
+} from '@real-system/theme-library';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */
@@ -31,13 +35,11 @@ type IconProps = {
    */
   size?: ThemeSizes;
   /**
-   * Controls the color of the icon. If an `intent` is not provided the color defaults to `currentColor`
-   */
-  intent?: IconIntent;
-  /**
-   * Overrides intent and can be used to customize the icon color beyond what intent provides i.e. a checkmark for Checkbox component
+   * Overrides colorScheme and can be used to customize the icon color beyond what colorScheme provides i.e. a checkmark for Checkbox component
    */
   color?: BoxStyleProps['color'];
+  /** sets color scheme of the icon; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
+  colorScheme?: ColorSchemes;
   /**
    * Controls solid or outline (default) icon style
    */

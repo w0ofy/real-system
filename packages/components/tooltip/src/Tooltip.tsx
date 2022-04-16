@@ -10,7 +10,6 @@ import {
 } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
 import styled from '@real-system/styling-library';
-import { getToken } from '@real-system/theme-library';
 import { Text } from '@real-system/typography';
 import {
   isReactText,
@@ -21,18 +20,17 @@ import {
 import { TRANSITIONS_CONFIG } from './constants';
 import type { TooltipProps } from './types';
 
-const StyledTooltip = styled(animated(Box))`
-  z-index: ${getToken('tooltip', 'zIndices')};
-  pointer-events: none;
-  padding: ${getToken(4, 'space')};
-  padding-top: ${getToken(3, 'space')};
-  padding-bottom: ${getToken(3, 'space')};
-  box-shadow: ${getToken('tooltip', 'shadows')};
-  background-color: ${getToken('black')};
-  border: ${getToken('border-1', 'borders')};
-  border-radius: ${getToken(4, 'radii')};
-  max-width: 30rem;
-`;
+const StyledTooltip = styled(animated(Box))({
+  zIndex: 'tooltip',
+  pointerEvents: 'none',
+  padding: 4,
+  py: 3,
+  boxShadow: 'tooltip',
+  backgroundColor: 'black',
+  border: 'border-1',
+  borderRadius: 4,
+  maxWidth: '30rem',
+});
 
 const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   {

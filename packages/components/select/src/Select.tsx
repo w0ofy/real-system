@@ -4,14 +4,14 @@ import {
   AriakitSelect,
   AriakitSelectOptions,
 } from '@real-system/ariakit-library';
-import { boxAs, BoxStyleProps } from '@real-system/box-primitive';
-import { StylishProps } from '@real-system/styling-library';
+import { BoxStyleProps } from '@real-system/box-primitive';
+import styled, { StylishProps } from '@real-system/styling-library';
 import { merge } from '@real-system/utils-library';
 
 import { useSelectStateContext } from './SelectContext';
 import { SelectPopover } from './SelectPopover';
 
-const BoxAsSelect = boxAs<AriakitSelectOptions>(AriakitSelect);
+const StyledSelect = styled(AriakitSelect)<AriakitSelectOptions>({});
 
 const resetStyles = {
   bg: 'none',
@@ -86,7 +86,7 @@ const Select = forwardRef<HTMLButtonElement, SelectProps>(function Select(
 
   return (
     <>
-      <BoxAsSelect {...styles} state={state} ref={ref} {...restProps} />
+      <StyledSelect {...styles} state={state} ref={ref} {...restProps} />
       <SelectPopover>{children}</SelectPopover>
     </>
   );

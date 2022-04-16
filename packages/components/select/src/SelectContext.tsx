@@ -1,4 +1,4 @@
-import { AriakitSelectState } from '@real-system/ariakit-library';
+import type { AriakitSelectState } from '@real-system/ariakit-library';
 import { constate } from '@real-system/state-library';
 
 type CustomState = { error: boolean };

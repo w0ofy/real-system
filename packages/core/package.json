@@ -33,7 +33,6 @@
     "@real-system/badge": "^0.0.3",
     "@real-system/box-primitive": "^0.0.16",
     "@real-system/button": "^0.0.34",
-    "@real-system/button-primitive": "^0.0.26",
     "@real-system/checkbox": "^0.0.19",
     "@real-system/dialog": "^0.0.26",
     "@real-system/dialog-primitive": "^0.0.18",

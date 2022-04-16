@@ -89,14 +89,6 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/primitives/button-primitive
-    schedule:
-      interval: weekly
-    labels:
-      - 'area: infra'
-      - 'area: security'
-      - 'area: repo'
-  - package-ecosystem: npm
     directory: /packages/components/checkbox
     schedule:
       interval: weekly
@@ -194,6 +186,14 @@ updates:
       - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/components/radio-group
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/components/select
     schedule:
       interval: weekly
     labels:

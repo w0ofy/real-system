@@ -18,7 +18,7 @@ export default {
 
 export const Default = (args) => {
   return (
-    <SelectContainer {...args}>
+    <SelectContainer {...args} disabled>
       <Label>Select a fruit</Label>
       <Select maxW="20rem">
         <SelectItem value="Apple" />

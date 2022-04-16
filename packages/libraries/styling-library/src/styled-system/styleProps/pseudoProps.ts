@@ -1,5 +1,5 @@
-import { css } from './cssFn';
-import type { StyleProps } from './styleProps';
+import { css } from '../cssFn';
+import type { CSSObject } from '../styled/styled.types';
 
 const pseudoPropsMap = {
   __moz_focus_inner: '&::-moz-focus-inner',
@@ -43,30 +43,38 @@ const pseudoPropsMap = {
 
 type PseudoPropNames = keyof typeof pseudoPropsMap;
 type PseudoProps = {
-  [key in PseudoPropNames]?: StyleProps | Record<PseudoPropNames, StyleProps>;
+  [key in PseudoPropNames]?: CSSObject;
 };
+// type PseudoProps = {
+//   [key in PseudoPropNames]?: Partial<
+//     Record<PseudoPropNames | StylePropNames, StyleProps>
+//   >;
+// };
 
-const getPseudoProps = (
-  props: Record<string, any>
-): ReturnType<typeof css> | Record<string, any> => {
-  const pseudoProps = Object.keys(props).filter((propName) =>
+type Props = Record<string, any>;
+
+const getPseudoProps = (props: Props): ReturnType<typeof css> | Props => {
+  const pseudos = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
   ) as Array<PseudoPropNames>;
 
-  if (pseudoProps.length === 0) {
+  if (pseudos.length === 0) {
     return {};
   }
 
-  const pseudoStyles: { [key: string]: any } = {};
-  pseudoProps.forEach((pseudoProp) => {
+  const pseudoStyles: Props = {};
+  pseudos.forEach((pseudoProp) => {
     if (pseudoPropsMap[pseudoProp] != null) {
       pseudoStyles[pseudoPropsMap[pseudoProp]] = props[pseudoProp];
     }
   });
-  return css(pseudoStyles);
+
+  return css(pseudoStyles)(props);
 };
 
 const PSEUDO_PROPS = Object.keys(pseudoPropsMap) as PseudoPropNames[];
+const isPseudoProp = (prop: PropertyKey) => !!pseudoPropsMap[prop];
+const isNotPseudoProp = (prop: PropertyKey) => !pseudoPropsMap[prop];
 
 export type { PseudoPropNames, PseudoProps };
-export { getPseudoProps, PSEUDO_PROPS };
+export { getPseudoProps, isNotPseudoProp, isPseudoProp, PSEUDO_PROPS };

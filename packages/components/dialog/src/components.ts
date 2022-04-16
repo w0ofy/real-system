@@ -12,37 +12,35 @@ import type { AnyPropUnion } from '@real-system/utils-library';
 
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
   AnyPropUnion<StyleProps>
->`
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: ${getToken('black-alpha-400')};
-  ${getStyleProps}
-`;
+>({
+  position: 'fixed',
+  height: '100%',
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'black-alpha-400',
+});
 
 const DialogContent = styled(animated(DialogContentPrimitive))<
   AnyPropUnion<StyleProps>
->`
-  position: relative;
-  box-shadow: ${getToken('dialog', 'shadows')};
-  outline: 0;
-  width: 100%;
-  max-width: ${majorScale(65)};
-  min-height: 150px;
-  background-color: ${getToken('white')};
-  border-radius: ${getToken(4, 'radii')};
-  display: flex;
-  flex-direction: column;
-  z-index: ${getToken('dialog', 'zIndices')};
-  opacity: 1;
-  ${getStyleProps}
-`;
+>({
+  position: 'relative',
+  boxShadow: 'dialog',
+  outline: 0,
+  width: '100%',
+  maxWidth: majorScale(65),
+  minHeight: '150px',
+  backgroundColor: 'white',
+  borderRadius: 4,
+  display: 'flex',
+  flexDirection: 'column',
+  zIndex: 'dialog',
+  opacity: 1,
+});
 
 export { DialogContent, DialogOverlay };

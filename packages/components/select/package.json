@@ -33,6 +33,7 @@
   "peerDependencies": {
     "@real-system/ariakit-library": "^0.0.5",
     "@real-system/box-primitive": "^0.0.16",
+    "@real-system/state-library": "^0.0.8",
     "@real-system/styling-library": "^0.0.12",
     "@real-system/theme-library": "^0.0.18",
     "@real-system/utils-library": "^0.0.15",
@@ -42,6 +43,7 @@
   "devDependencies": {
     "@real-system/ariakit-library": "^0.0.5",
     "@real-system/box-primitive": "^0.0.16",
+    "@real-system/state-library": "^0.0.8",
     "@real-system/styling-library": "^0.0.12",
     "@real-system/theme-library": "^0.0.18",
     "@real-system/utils-library": "^0.0.15",

@@ -36,10 +36,12 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.2",
+    "@emotion/memoize": "^0.7.5",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@types/styled-system": "5.1.15",
     "csstype": "^3.0.11",
+    "lodash.mergewith": "^4.6.2",
     "polished": "^4.2.2",
     "styled-system": "5.1.5"
   },

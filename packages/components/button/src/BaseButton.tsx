@@ -1,23 +1,12 @@
 import React, { forwardRef } from 'react';
 
 import { AriakitButton } from '@real-system/ariakit-library';
-import styled, {
-  getPseudoProps,
-  getStyleProps,
-  isNotStyleProp,
-  isPropValid,
-} from '@real-system/styling-library';
-
-import type { ButtonPrimitiveProps } from './types';
-
-const StyledButtonPrimitive = styled(AriakitButton, {
-  shouldForwardProp: (prop) => isPropValid(prop) && isNotStyleProp(prop),
-})<any>(getStyleProps, getPseudoProps);
+import styled, { RealSystemComponentProps } from '@real-system/styling-library';
 
 /**
  * @todo find a better way to merge base styles with Button component API styles i.e. _active style props; boxShadow
  */
-const baseStyles = {
+const StyledAriakitButton = styled(AriakitButton)<RealSystemComponentProps>({
   appearance: 'none',
   color: 'gray-500',
   background: 'none',
@@ -40,16 +29,16 @@ const baseStyles = {
   _focus: { boxShadow: 'focus-outline', outline: 'none' },
   _active: { boxShadow: 'none' },
   _disabled: {},
-};
+});
 
-const ButtonPrimitive = forwardRef<HTMLButtonElement, ButtonPrimitiveProps>(
-  function ButtonPrimitive({ children, ...restProps }, ref) {
+const BaseButton = forwardRef<HTMLButtonElement, RealSystemComponentProps>(
+  function BaseButton({ children, ...restProps }, ref) {
     return (
-      <StyledButtonPrimitive {...baseStyles} {...restProps} ref={ref}>
+      <StyledAriakitButton {...restProps} ref={ref}>
         {children}
-      </StyledButtonPrimitive>
+      </StyledAriakitButton>
     );
   }
 );
 
-export { ButtonPrimitive };
+export { BaseButton };

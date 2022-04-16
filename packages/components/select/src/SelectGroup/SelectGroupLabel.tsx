@@ -2,19 +2,20 @@ import React from 'react';
 
 import type { AriakitSelectGroupLabelProps } from '@real-system/ariakit-library';
 import { AriakitSelectGroupLabel } from '@real-system/ariakit-library';
-import type { BoxProps } from '@real-system/box-primitive';
-import { boxAs } from '@real-system/box-primitive';
+import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CommonSelectProps } from '../types';
 
-const BoxAsGroupLabel = boxAs(AriakitSelectGroupLabel);
+const StyledGroupLabel = styled(
+  AriakitSelectGroupLabel
+)<AriakitSelectGroupLabelProps>({});
 
 type SelectGroupLabelProps = CommonSelectProps<AriakitSelectGroupLabelProps>;
 
 const SelectGroupLabel = (props: SelectGroupLabelProps) => {
   return (
-    <BoxAsGroupLabel
+    <StyledGroupLabel
       data-testid={makeTestId('select-group')}
       fontSize={1}
       fontWeight={5}

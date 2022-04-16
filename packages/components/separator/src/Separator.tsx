@@ -4,8 +4,9 @@ import {
   AriakitSeparator,
   AriakitSeparatorProps,
 } from '@real-system/ariakit-library';
-import { boxAs, BoxStyleProps } from '@real-system/box-primitive';
+import { BoxStyleProps } from '@real-system/box-primitive';
 import type { BorderProps, StylishProps } from '@real-system/styling-library';
+import styled from '@real-system/styling-library';
 import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
 
 type SeparatorProps = Pick<AriakitSeparatorProps, 'orientation'> &
@@ -26,7 +27,7 @@ type SeparatorProps = Pick<AriakitSeparatorProps, 'orientation'> &
     borderColor?: BoxStyleProps['borderStyle'];
   };
 
-const BoxAsHR = boxAs('hr');
+const StyledHR = styled('hr')({});
 
 type DividerStyles = {
   vertical: StylishProps;
@@ -63,7 +64,7 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
   function Separator(
     {
       orientation = 'horizontal',
-      borderColor = 'inherit',
+      borderColor = 'gray-50',
       borderWidth = '1px',
       borderStyle = 'solid',
       ...restProps
@@ -78,7 +79,7 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
 
     return (
       <AriakitSeparator
-        as={BoxAsHR}
+        as={StyledHR}
         data-testid={makeTestId('separator')}
         borderWidth={0}
         {...dividerStyles[orientation]}

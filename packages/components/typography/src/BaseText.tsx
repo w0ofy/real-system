@@ -13,6 +13,7 @@ const baseStyles = {
   lineHeight: 4,
   margin: 0,
   letterSpacing: 'body',
+  fontFamily: 'body',
 };
 
 const BaseText = forwardRef<HTMLElement, BaseTextProps>(function Text(

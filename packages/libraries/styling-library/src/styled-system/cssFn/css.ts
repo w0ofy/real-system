@@ -21,7 +21,7 @@ const defaultTheme = {
  * A recursive styleFn for mapping real system style-props
  * to their respective CSS properties and theme scale values.
  */
-export const css = (args) => (props) => {
+const css = (args) => (props) => {
   const theme = { ...defaultTheme, ...(props.theme || props) };
   let result = {};
   const obj = typeof args === 'function' ? args(theme) : args;
@@ -69,4 +69,4 @@ export const css = (args) => (props) => {
   return result;
 };
 
-export default css;
+export { css };

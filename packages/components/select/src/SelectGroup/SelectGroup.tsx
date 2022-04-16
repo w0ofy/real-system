@@ -2,20 +2,20 @@ import React from 'react';
 
 import type { AriakitSelectGroupProps } from '@real-system/ariakit-library';
 import { AriakitSelectGroup } from '@real-system/ariakit-library';
-import type { BoxProps } from '@real-system/box-primitive';
-import { boxAs } from '@real-system/box-primitive';
+import type { StylishProps } from '@real-system/styling-library';
+import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { OmitSelectPrivateProps } from '../types';
+import type { OmitSelectPrivateProps } from '../types';
 
 type SelectGroupProps = OmitSelectPrivateProps<AriakitSelectGroupProps> &
-  BoxProps;
+  StylishProps;
 
-const BoxAsGroup = boxAs(AriakitSelectGroup);
+const StyledGroup = styled(AriakitSelectGroup)<AriakitSelectGroupProps>({});
 
 const SelectGroup = (props: SelectGroupProps) => {
   return (
-    <BoxAsGroup
+    <StyledGroup
       paddingTop={4}
       data-testid={makeTestId('select-group')}
       {...props}

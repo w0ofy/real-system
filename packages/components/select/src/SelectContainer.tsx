@@ -27,22 +27,26 @@ const makeValidChildren = (children, state) => {
     if (ACCEPTED_LABEL_NAMES[child.type?.displayName]) {
       const labelChild = child as React.ReactElement;
       label = (
-        <AriakitSelectLabel state={state}>
-          {(labelProps) =>
+        <AriakitSelectLabel
+          as={(labelProps) =>
             React.cloneElement(labelChild as React.ReactElement, {
               ...labelProps,
               ...labelChild.props,
               cursor: 'pointer',
             })
           }
-        </AriakitSelectLabel>
+          state={state}
+        />
       );
     } else {
       validChildren.push(child);
     }
   });
 
-  return [label, validChildren.length ? validChildren : undefined];
+  return [
+    label ? label : undefined,
+    validChildren.length ? validChildren : undefined,
+  ];
 };
 
 /**
@@ -81,8 +85,10 @@ const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
         {...spreadStyleProps(restProps)}
         ref={ref}>
         <SelectContextProvider state={{ ...state, error }}>
-          {label ? label : null}
-          {validChildren ? validChildren : null}
+          <>
+            {label ? label : null}
+            {validChildren ? validChildren : null}
+          </>
         </SelectContextProvider>
       </Box>
     );

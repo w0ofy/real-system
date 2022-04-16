@@ -2,20 +2,20 @@ import React from 'react';
 
 import type { AriakitSelectSeparatorProps } from '@real-system/ariakit-library';
 import { AriakitSelectSeparator } from '@real-system/ariakit-library';
-import type { BoxProps } from '@real-system/box-primitive';
-import { boxAs } from '@real-system/box-primitive';
+import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { OmitSelectPrivateProps } from './types';
 
-type SelectSeparatorProps =
-  OmitSelectPrivateProps<AriakitSelectSeparatorProps> & BoxProps;
+type SelectSeparatorProps = OmitSelectPrivateProps<AriakitSelectSeparatorProps>;
 
-const BoxAsSeparator = boxAs(AriakitSelectSeparator);
+const StyledSeparator = styled(
+  AriakitSelectSeparator
+)<AriakitSelectSeparatorProps>({});
 
 const SelectSeparator = (props: SelectSeparatorProps) => {
   return (
-    <BoxAsSeparator
+    <StyledSeparator
       width="100%"
       height={0}
       marginY={3}

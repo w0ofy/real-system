@@ -4,7 +4,7 @@ import {
   AriakitMenuSeparator,
   AriakitMenuSeparatorProps,
 } from '@real-system/ariakit-library';
-import { boxAs } from '@real-system/box-primitive';
+import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from './types';
@@ -12,14 +12,16 @@ import type { CommonMenuProps, OmitMenuState } from './types';
 type MenuSeparatorProps = OmitMenuState<AriakitMenuSeparatorProps> &
   CommonMenuProps;
 
-const BoxAsSeparator = boxAs(AriakitMenuSeparator);
+const StyledSeparator = styled(AriakitMenuSeparator)<AriakitMenuSeparatorProps>(
+  {}
+);
 /**
  * @todo Use height instead of margins
  */
-const MenuSeparator = forwardRef<HTMLDivElement, MenuSeparatorProps>(
+const MenuSeparator = forwardRef<HTMLHRElement, MenuSeparatorProps>(
   function MenuSeparator(props, ref) {
     return (
-      <BoxAsSeparator
+      <StyledSeparator
         width="100%"
         height={0}
         marginY={3}

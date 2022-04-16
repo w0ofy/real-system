@@ -2,18 +2,18 @@ import React, { forwardRef } from 'react';
 
 import type { AriakitSelectItemProps } from '@real-system/ariakit-library';
 import { AriakitSelectItem } from '@real-system/ariakit-library';
-import { boxAs } from '@real-system/box-primitive';
+import styled from '@real-system/styling-library';
 
 import { OmitSelectPrivateProps } from './types';
 
 type SelectItemProps = OmitSelectPrivateProps<AriakitSelectItemProps>;
 
-const BoxAsItem = boxAs(AriakitSelectItem);
+const StyledItem = styled(AriakitSelectItem)<AriakitSelectItemProps>({});
 
 const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(
   function SelectItem(props, ref) {
     return (
-      <BoxAsItem
+      <StyledItem
         outline="none"
         display="flex"
         scrollMargin={4}

@@ -1,14 +1,10 @@
-// Base styling system (emotion)
-import styled from '@emotion/styled';
+import { styled } from './styled-system/index';
 
-export { css } from './styled-system/cssFn';
-export { default as isPropValid } from '@emotion/is-prop-valid';
 export type {
   ThemeProviderProps as PrimitiveThemeProviderProps,
   GlobalProps as StylingGlobalsProps,
 } from '@emotion/react';
 export {
-  css as emotionCSS,
   keyframes,
   ThemeContext as PrimitiveThemeContext,
   ThemeProvider as PrimitiveThemeProvider,
