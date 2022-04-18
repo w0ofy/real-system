@@ -1,17 +1,17 @@
 import React from 'react';
 
-import type { AriakitSelectGroupLabelProps } from '@real-system/ariakit-library';
-import { AriakitSelectGroupLabel } from '@real-system/ariakit-library';
+import type { SelectGroupLabelPrimitiveProps } from '@real-system/select-primitive';
+import { SelectGroupLabelPrimitive } from '@real-system/select-primitive';
 import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CommonSelectProps } from '../types';
 
 const StyledGroupLabel = styled(
-  AriakitSelectGroupLabel
-)<AriakitSelectGroupLabelProps>({});
+  SelectGroupLabelPrimitive
+)<SelectGroupLabelPrimitiveProps>({});
 
-type SelectGroupLabelProps = CommonSelectProps<AriakitSelectGroupLabelProps>;
+type SelectGroupLabelProps = CommonSelectProps<SelectGroupLabelPrimitiveProps>;
 
 const SelectGroupLabel = (props: SelectGroupLabelProps) => {
   return (

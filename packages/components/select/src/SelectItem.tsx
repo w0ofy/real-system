@@ -1,14 +1,14 @@
 import React, { forwardRef } from 'react';
 
-import type { AriakitSelectItemProps } from '@real-system/ariakit-library';
-import { AriakitSelectItem } from '@real-system/ariakit-library';
+import type { SelectItemPrimitiveProps } from '@real-system/select-primitive';
+import { SelectItemPrimitive } from '@real-system/select-primitive';
 import styled from '@real-system/styling-library';
 
 import { OmitSelectPrivateProps } from './types';
 
-type SelectItemProps = OmitSelectPrivateProps<AriakitSelectItemProps>;
+type SelectItemProps = OmitSelectPrivateProps<SelectItemPrimitiveProps>;
 
-const StyledItem = styled(AriakitSelectItem)<AriakitSelectItemProps>({});
+const StyledItem = styled(SelectItemPrimitive)<SelectItemPrimitiveProps>({});
 
 const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(
   function SelectItem(props, ref) {

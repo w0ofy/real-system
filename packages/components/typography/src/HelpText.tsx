@@ -1,25 +1,29 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Box } from '@real-system/box-primitive';
-import { Icon, IconProps } from '@real-system/icon';
-import { ColorTokens } from '@real-system/theme-library';
+import { Icon } from '@real-system/icon';
+import type {
+  ColorSchemes,
+  ColorTokens,
+  ThemeStatuses,
+} from '@real-system/theme-library';
 
 import { BaseText } from './BaseText';
 import type { CommonTextProps } from './types';
 
-type HelpTextIntents = Extract<IconProps['intent'], 'danger' | 'neutral'>;
+type HelpTextStatus = Extract<ThemeStatuses, 'danger'>;
 export type HelpTextProps = {
   as?: Extract<keyof JSX.IntrinsicElements, 'span' | 'div'>;
   children?: React.ReactNode;
   id?: string;
-  intent?: HelpTextIntents;
+  status?: HelpTextStatus;
   hideErrorIcon?: boolean;
   errorText?: string;
 } & CommonTextProps;
 
-const LABEL_COLORS: Record<HelpTextIntents, ColorTokens> = {
-  danger: 'red-500',
-  neutral: 'gray-500',
+const LABEL_COLORS: Partial<Record<ColorSchemes, ColorTokens>> = {
+  red: 'red-500',
+  gray: 'gray-500',
 };
 
 const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
@@ -28,14 +32,14 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
     as = 'span',
     hideErrorIcon = false,
     errorText,
-    intent: intentProp = 'neutral',
+    status: statusProp = undefined,
     ...restProps
   },
   ref
 ) {
-  const intent = useMemo(
-    () => (errorText ? 'danger' : intentProp),
-    [errorText, intentProp]
+  const colorScheme = useMemo(
+    () => (errorText ? 'red' : statusProp ? 'red' : 'gray'),
+    [errorText, statusProp]
   );
 
   return (
@@ -49,7 +53,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
       fontSize={1}
       fontWeight={2}
       lineHeight={1}
-      color={LABEL_COLORS[intent]}
+      color={LABEL_COLORS[colorScheme]}
       {...restProps}
       ref={ref}>
       {!hideErrorIcon && errorText && (
@@ -57,7 +61,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
           <Icon
             icon="exclamation-circle"
             solid
-            intent={intent}
+            colorScheme={colorScheme}
             marginRight={2}
           />
         </Box>

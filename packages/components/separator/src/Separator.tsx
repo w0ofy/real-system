@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-import {
-  AriakitSeparator,
-  AriakitSeparatorProps,
-} from '@real-system/ariakit-library';
 import { BoxStyleProps } from '@real-system/box-primitive';
+import {
+  SeparatorPrimitive,
+  SeparatorPrimitiveProps,
+} from '@real-system/separator-primitive';
 import type { BorderProps, StylishProps } from '@real-system/styling-library';
 import styled from '@real-system/styling-library';
 import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
 
-type SeparatorProps = Pick<AriakitSeparatorProps, 'orientation'> &
+type SeparatorProps = Pick<SeparatorPrimitiveProps, 'orientation'> &
   RealSystemElementProps &
   Omit<BoxStyleProps, keyof BorderProps> & {
     /**
@@ -78,7 +78,7 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
     });
 
     return (
-      <AriakitSeparator
+      <SeparatorPrimitive
         as={StyledHR}
         data-testid={makeTestId('separator')}
         borderWidth={0}

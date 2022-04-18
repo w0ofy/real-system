@@ -15,7 +15,10 @@ type RecursiveCSSSelector<D> = {
   [selector: string]: (D | string | RecursiveCSSSelector<D | string>) & D;
 };
 
-type CSSProperties = CSS.Properties & Omit<StyleProps, keyof CSS.Properties>;
+type CSSPropertiesWithoutColor = Omit<CSS.Properties, 'color'>;
+
+type CSSProperties = CSSPropertiesWithoutColor &
+  Omit<StyleProps, keyof CSSPropertiesWithoutColor>;
 
 type ThemeThunk<T> = T | ((theme: StyledDict) => T);
 

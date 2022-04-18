@@ -1,20 +1,18 @@
 import React, { forwardRef } from 'react';
 
-import {
-  AriakitMenuSeparator,
-  AriakitMenuSeparatorProps,
-} from '@real-system/ariakit-library';
+import type { MenuSeparatorPrimitiveProps } from '@real-system/menu-primitive';
+import { MenuSeparatorPrimitive } from '@real-system/menu-primitive';
 import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from './types';
 
-type MenuSeparatorProps = OmitMenuState<AriakitMenuSeparatorProps> &
+type MenuSeparatorProps = OmitMenuState<MenuSeparatorPrimitiveProps> &
   CommonMenuProps;
 
-const StyledSeparator = styled(AriakitMenuSeparator)<AriakitMenuSeparatorProps>(
-  {}
-);
+const StyledSeparator = styled(
+  MenuSeparatorPrimitive
+)<MenuSeparatorPrimitiveProps>({});
 /**
  * @todo Use height instead of margins
  */

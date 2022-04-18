@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-import { AriakitMenuGroupLabel } from '@real-system/ariakit-library';
 import type { BoxProps } from '@real-system/box-primitive';
 import { Box } from '@real-system/box-primitive';
+import { MenuGroupLabelPrimitive } from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 type MenuGroupLabelProps = Omit<BoxProps, 'as'>;
 
 const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
   return (
-    <AriakitMenuGroupLabel
+    <MenuGroupLabelPrimitive
       as={Box}
       fontSize={1}
       fontWeight={5}
@@ -23,7 +23,7 @@ const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
       data-testid={makeTestId('menu-group-label')}
       {...restProps}>
       {children}
-    </AriakitMenuGroupLabel>
+    </MenuGroupLabelPrimitive>
   );
 };
 

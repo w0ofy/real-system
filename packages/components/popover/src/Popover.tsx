@@ -1,12 +1,12 @@
 import React, { forwardRef } from 'react';
 
-import {
-  AriakitPopover,
-  AriakitPopoverArrow,
-  AriakitPopoverProps,
-} from '@real-system/ariakit-library';
 import { Flex, FlexProps } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
+import {
+  PopoverArrowPrimitive,
+  PopoverPrimitive,
+  PopoverPrimitiveProps,
+} from '@real-system/popover-primitive';
 import type { RealSystemElementProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -16,7 +16,7 @@ import { PopoverDescription } from './PopoverDescription';
 import { PopoverDismiss } from './PopoverDismiss';
 import { PopoverHeading } from './PopoverHeading';
 
-type PopoverProps = Omit<AriakitPopoverProps, 'state' | 'as'> &
+type PopoverProps = Omit<PopoverPrimitiveProps, 'state' | 'as'> &
   RealSystemElementProps & {
     hideCloseButton?: boolean;
     hideArrow?: boolean;
@@ -66,13 +66,13 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
   ) {
     const state = usePopoverStateContext();
     return (
-      <AriakitPopover
+      <PopoverPrimitive
         state={state}
         data-testid={makeTestId('popover')}
         as={StyledPopover}
         {...restProps}
         ref={ref}>
-        {hideArrow ? null : <AriakitPopoverArrow state={state} />}
+        {hideArrow ? null : <PopoverArrowPrimitive state={state} />}
         {!hideCloseButton && (
           <PopoverDismiss
             variant="minimal"
@@ -84,7 +84,7 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
           </PopoverDismiss>
         )}
         {children}
-      </AriakitPopover>
+      </PopoverPrimitive>
     );
   }
 );

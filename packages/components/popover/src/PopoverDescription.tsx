@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitPopoverDescription } from '@real-system/ariakit-library';
+import { PopoverDescriptionPrimitive } from '@real-system/popover-primitive';
 import { Text, TextProps } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -11,13 +11,13 @@ const PopoverDescription = forwardRef<
   PopoverDescriptionProps
 >(function PopoverDescription({ children, ...restProps }, ref) {
   return (
-    <AriakitPopoverDescription
+    <PopoverDescriptionPrimitive
       as={Text}
       data-testid={makeTestId('popover-description')}
       {...restProps}
       ref={ref}>
       {children}
-    </AriakitPopoverDescription>
+    </PopoverDescriptionPrimitive>
   );
 });
 

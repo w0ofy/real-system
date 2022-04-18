@@ -1,8 +1,8 @@
-import type { AriakitSelectState } from '@real-system/ariakit-library';
+import type { SelectStatePrimitive } from '@real-system/select-primitive';
 import { constate } from '@real-system/state-library';
 
 type CustomState = { error: boolean };
-type State = AriakitSelectState & CustomState;
+type State = SelectStatePrimitive & CustomState;
 type SelectContext = {
   state: State;
 };

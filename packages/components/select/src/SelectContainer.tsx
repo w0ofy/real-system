@@ -1,10 +1,10 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import {
-  AriakitSelectLabel,
-  useAriakitSelectState,
-} from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
+import {
+  SelectLabelPrimitive,
+  useSelectStatePrimitive,
+} from '@real-system/select-primitive';
 import { spreadStyleProps } from '@real-system/styling-library';
 
 import { maybeAutoPlacements } from './Select.utils';
@@ -27,7 +27,7 @@ const makeValidChildren = (children, state) => {
     if (ACCEPTED_LABEL_NAMES[child.type?.displayName]) {
       const labelChild = child as React.ReactElement;
       label = (
-        <AriakitSelectLabel
+        <SelectLabelPrimitive
           as={(labelProps) =>
             React.cloneElement(labelChild as React.ReactElement, {
               ...labelProps,
@@ -65,7 +65,7 @@ const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
     },
     ref
   ) {
-    const state = useAriakitSelectState({
+    const state = useSelectStatePrimitive({
       placement,
       gutter: 2,
       sameWidth: true,

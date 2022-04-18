@@ -20,7 +20,7 @@ type AlertProps = {
 const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   {
     children,
-    intent = 'info',
+    status = 'info',
     description,
     onDismiss = undefined,
     type = 'polite',
@@ -29,9 +29,9 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
   },
   ref
 ) {
-  const bgColor = `${INTENT_COLOR_MAP[intent]}-100`;
+  const bgColor = `${INTENT_COLOR_MAP[status]}-100`;
   const borderColor = bgColor;
-  const iconColor = `${INTENT_COLOR_MAP[intent]}-500`;
+  const iconColor = `${INTENT_COLOR_MAP[status]}-500`;
 
   return (
     <Flex
@@ -51,10 +51,10 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
       <Icon
         size="md"
         solid
-        icon={ICON_MAP[intent]}
+        icon={ICON_MAP[status]}
         textColor={iconColor}
         marginRight={5}
-        title={`${intent} ${children ? ': ' + children : ''}`}
+        title={`${status} ${children ? ': ' + children : ''}`}
       />
       <Flex
         vertical

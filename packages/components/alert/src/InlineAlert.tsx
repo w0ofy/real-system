@@ -6,7 +6,7 @@ import { Icon } from '@real-system/icon';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import type { AlertIntents, CommonAlertProps } from './types';
+import type { AlertStatus, CommonAlertProps } from './types';
 import { ICON_MAP, INTENT_COLOR_MAP } from './utils';
 
 type InlineAlertProps = {
@@ -16,16 +16,16 @@ type InlineAlertProps = {
   children: React.ReactNode;
 } & CommonAlertProps;
 
-const maybeWarning = (intent: AlertIntents) =>
-  intent === 'warning' ? '700' : '600';
+const maybeWarning = (status: AlertStatus) =>
+  status === 'warning' ? '700' : '600';
 
 const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
   function InlineAlert(
-    { children, intent = 'info', type = 'polite', ...restProps },
+    { children, status = 'info', type = 'polite', ...restProps },
     ref
   ) {
-    const iconColor = `${INTENT_COLOR_MAP[intent]}-500`;
-    const textColor = `${INTENT_COLOR_MAP[intent]}-${maybeWarning(intent)}`;
+    const iconColor = `${INTENT_COLOR_MAP[status]}-500`;
+    const textColor = `${INTENT_COLOR_MAP[status]}-${maybeWarning(status)}`;
     return (
       <Flex
         width="100%"
@@ -38,9 +38,9 @@ const InlineAlert = forwardRef<HTMLDivElement, InlineAlertProps>(
           <Icon
             size="md"
             solid
-            icon={ICON_MAP[intent]}
+            icon={ICON_MAP[status]}
             color={iconColor}
-            title={intent}
+            title={status}
           />
         </Flex>
         <AlertPrimitive type={type}>

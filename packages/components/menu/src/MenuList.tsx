@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitMenu } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
+import { MenuPrimitive } from '@real-system/menu-primitive';
 import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -30,14 +30,14 @@ const MenuList = forwardRef<HTMLDivElement, MenuListProps>(function MenuList(
 ) {
   const state = useMenuStateContext();
   return (
-    <AriakitMenu
+    <MenuPrimitive
       as={StyledBox}
       state={state}
       data-testid={makeTestId('menu-list')}
       {...restProps}
       ref={ref}>
       {children}
-    </AriakitMenu>
+    </MenuPrimitive>
   );
 });
 

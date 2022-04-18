@@ -4,7 +4,7 @@ import { Box } from '@real-system/box-primitive';
 import styled from '@real-system/styling-library';
 import { useTokens } from '@real-system/theme-library';
 
-import { INTENT_MAP, SIZE_MAP } from './constants';
+import { ICON_SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';
 import { IconProps, Icons, InternalIconProps } from './types';
 
@@ -35,7 +35,7 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
   );
   // eslint-disable-next-line prefer-const
   let [iconSize, iconColor] = useTokens({
-    sizes: SIZE_MAP[size],
+    sizes: ICON_SIZE_MAP[size],
     colors: `${colorScheme || 'gray'}-${maybeOrange(colorScheme)}`,
   });
 

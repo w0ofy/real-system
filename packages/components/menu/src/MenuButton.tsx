@@ -1,9 +1,9 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { AriakitMenuButton } from '@real-system/ariakit-library';
 import type { ButtonProps } from '@real-system/button';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
+import { MenuButtonPrimitive } from '@real-system/menu-primitive';
 import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
 
 import { useMenuStateContext } from './MenuContext';
@@ -41,7 +41,7 @@ const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
     }, [trailingArrow, leadingArrow]);
 
     return (
-      <AriakitMenuButton
+      <MenuButtonPrimitive
         as={Button}
         data-testid={makeTestId('menu-button')}
         state={state}
@@ -50,7 +50,7 @@ const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
         {...chevron}
         ref={ref}>
         {children}
-      </AriakitMenuButton>
+      </MenuButtonPrimitive>
     );
   }
 );

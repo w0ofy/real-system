@@ -1,12 +1,12 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitButton } from '@real-system/ariakit-library';
+import { ButtonPrimitive } from '@real-system/button-primitive';
 import styled, { RealSystemComponentProps } from '@real-system/styling-library';
 
 /**
  * @todo find a better way to merge base styles with Button component API styles i.e. _active style props; boxShadow
  */
-const StyledAriakitButton = styled(AriakitButton)<RealSystemComponentProps>({
+const StyledBaseButton = styled(ButtonPrimitive)({
   appearance: 'none',
   color: 'gray-500',
   background: 'none',
@@ -34,9 +34,9 @@ const StyledAriakitButton = styled(AriakitButton)<RealSystemComponentProps>({
 const BaseButton = forwardRef<HTMLButtonElement, RealSystemComponentProps>(
   function BaseButton({ children, ...restProps }, ref) {
     return (
-      <StyledAriakitButton {...restProps} ref={ref}>
+      <StyledBaseButton {...restProps} ref={ref}>
         {children}
-      </StyledAriakitButton>
+      </StyledBaseButton>
     );
   }
 );

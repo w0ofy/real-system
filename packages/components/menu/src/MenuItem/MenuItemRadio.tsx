@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
 
-import type { AriakitMenuItemRadioProps } from '@real-system/ariakit-library';
+import type { MenuItemRadioPrimitiveProps } from '@real-system/menu-primitive';
 import {
-  AriakitMenuItemCheck,
-  AriakitMenuItemRadio,
-} from '@real-system/ariakit-library';
+  MenuItemCheckPrimitive,
+  MenuItemRadioPrimitive,
+} from '@real-system/menu-primitive';
 import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -12,7 +12,7 @@ import type { CommonMenuProps, OmitMenuState } from '../types';
 
 import { BoxMenuItem } from './MenuItem';
 
-type MenuItemRadioProps = OmitMenuState<AriakitMenuItemRadioProps> &
+type MenuItemRadioProps = OmitMenuState<MenuItemRadioPrimitiveProps> &
   CommonMenuProps;
 
 const styleProps: StylishProps = {
@@ -29,7 +29,7 @@ const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
   ) {
     return (
       /** @ts-ignore `as` prop type conflicts */
-      <AriakitMenuItemRadio
+      <MenuItemRadioPrimitive
         as={BoxMenuItem}
         disabled={disabled}
         hideOnClick={hideOnClick}
@@ -40,9 +40,9 @@ const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
         {...styleProps}
         {...restProps}
         ref={ref}>
-        <AriakitMenuItemCheck />
+        <MenuItemCheckPrimitive />
         {children}
-      </AriakitMenuItemRadio>
+      </MenuItemRadioPrimitive>
     );
   }
 );

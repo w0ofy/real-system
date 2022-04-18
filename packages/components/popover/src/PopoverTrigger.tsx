@@ -1,6 +1,6 @@
 import React, { forwardRef, useCallback, useMemo } from 'react';
 
-import { AriakitPopoverDisclosure } from '@real-system/ariakit-library';
+import { PopoverDisclosurePrimitive } from '@real-system/popover-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import { usePopoverStateContext } from './PopoverContext';
@@ -55,7 +55,7 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
 
     return (
       /** @ts-ignore false negative type error: missing `as` prop */
-      <AriakitPopoverDisclosure
+      <PopoverDisclosurePrimitive
         state={state}
         data-testid={makeTestId('popover-disclosure')}
         {...restProps}
@@ -67,7 +67,7 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
             ...disclosure.props,
           })
         }
-      </AriakitPopoverDisclosure>
+      </PopoverDisclosurePrimitive>
     );
   }
 );

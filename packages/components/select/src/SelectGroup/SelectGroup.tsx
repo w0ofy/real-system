@@ -1,17 +1,17 @@
 import React from 'react';
 
-import type { AriakitSelectGroupProps } from '@real-system/ariakit-library';
-import { AriakitSelectGroup } from '@real-system/ariakit-library';
+import type { SelectGroupPrimitiveProps } from '@real-system/select-primitive';
+import { SelectGroupPrimitive } from '@real-system/select-primitive';
 import type { StylishProps } from '@real-system/styling-library';
 import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { OmitSelectPrivateProps } from '../types';
 
-type SelectGroupProps = OmitSelectPrivateProps<AriakitSelectGroupProps> &
+type SelectGroupProps = OmitSelectPrivateProps<SelectGroupPrimitiveProps> &
   StylishProps;
 
-const StyledGroup = styled(AriakitSelectGroup)<AriakitSelectGroupProps>({});
+const StyledGroup = styled(SelectGroupPrimitive)<SelectGroupPrimitiveProps>({});
 
 const SelectGroup = (props: SelectGroupProps) => {
   return (

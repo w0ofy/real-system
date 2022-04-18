@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { AriakitTooltipStateProps } from '@real-system/ariakit-library';
+import { TooltipStatePrimitiveProps } from '@real-system/tooltip-primitive';
 import type { RealSystemElementProps } from '@real-system/utils-library';
 
 type StateProps = Pick<
-  AriakitTooltipStateProps,
+  TooltipStatePrimitiveProps,
   'visible' | 'timeout' | 'placement' | 'gutter'
 >;
 type TooltipProps = {

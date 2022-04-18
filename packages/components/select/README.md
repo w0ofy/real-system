@@ -24,9 +24,50 @@ $ yarn add @real-system/select
 
 ### Code Example
 
-```typescript
-import { Select } from '@real-system/select';
+```jsx
+import {
+  Select,
+  SelectContainer,
+  SelectGroup,
+  SelectGroupLabel,
+  SelectItem,
+  SelectSeparator,
+} from '@real-system/select';
 
-...
+const DefaultSelect = (args) => {
+  return (
+    <SelectContainer {...args} disabled>
+      <Label>Select a fruit</Label>
+      <Select maxW="20rem">
+        <SelectItem value="Apple" />
+        <SelectItem value="Grape" disabled />
+        <SelectItem value="Melon" />
+      </Select>
+    </SelectContainer>
+  );
+};
+
+const SelctGroupExample = (args) => {
+  return (
+    <SelectContainer>
+      <Label>Select Groups</Label>
+      <Select maxW="20rem">
+        <SelectGroup>
+          <SelectGroupLabel>Fruits</SelectGroupLabel>
+          <SelectItem value="Apple" />
+          <SelectItem value="Grape" disabled />
+          <SelectItem value="Melon" />
+        </SelectGroup>
+        <SelectSeparator />
+        <SelectGroup>
+          <SelectGroupLabel>Vegatables</SelectGroupLabel>
+          <SelectItem value="Lettuce" />
+          <SelectItem value="Pepper" disabled />
+          <SelectItem value="Onion" />
+        </SelectGroup>
+      </Select>
+    </SelectContainer>
+  );
+};
 
 ```

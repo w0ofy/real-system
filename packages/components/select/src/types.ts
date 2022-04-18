@@ -1,12 +1,12 @@
 import {
-  AriakitSelectState,
-  AriakitSelectStateProps,
-} from '@real-system/ariakit-library';
+  SelectStatePrimitive,
+  SelectStatePrimitiveProps,
+} from '@real-system/select-primitive';
 import type { StylishProps } from '@real-system/styling-library';
-import { RealSystemElementProps } from '@real-system/utils-library';
+import type { RealSystemElementProps } from '@real-system/utils-library';
 
-type SelectState = AriakitSelectState;
-type SelectStateProps = AriakitSelectStateProps;
+type SelectState = SelectStatePrimitive;
+type SelectStateProps = SelectStatePrimitiveProps;
 type InternalSelectProps = { state: SelectState };
 
 type SelectFormStateProps = {

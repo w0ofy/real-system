@@ -1,17 +1,17 @@
 import React, { forwardRef } from 'react';
 
-import {
-  AriakitSelect,
-  AriakitSelectOptions,
-} from '@real-system/ariakit-library';
 import { BoxStyleProps } from '@real-system/box-primitive';
+import {
+  SelectPrimitive,
+  SelectPrimitiveOptions,
+} from '@real-system/select-primitive';
 import styled, { StylishProps } from '@real-system/styling-library';
 import { merge } from '@real-system/utils-library';
 
 import { useSelectStateContext } from './SelectContext';
 import { SelectPopover } from './SelectPopover';
 
-const StyledSelect = styled(AriakitSelect)<AriakitSelectOptions>({});
+const StyledSelect = styled(SelectPrimitive)<SelectPrimitiveOptions>({});
 
 const resetStyles = {
   bg: 'none',

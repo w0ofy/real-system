@@ -3760,10 +3760,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/button-primitive@^0.0.26, @real-system/button-primitive@workspace:packages/primitives/button-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/button-primitive@workspace:packages/primitives/button-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    concurrently: ^7.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/button@^0.0.34, @real-system/button@workspace:packages/components/button":
   version: 0.0.0-use.local
   resolution: "@real-system/button@workspace:packages/components/button"
   dependencies:
+    "@real-system/button-primitive": ^0.0.26
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/utils-library": ^0.0.15
@@ -3772,6 +3789,7 @@ __metadata:
     react-dom: ^18.0.0
     typescript: ^4.6.3
   peerDependencies:
+    "@real-system/button-primitive": ^0.0.26
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/utils-library": ^0.0.15
@@ -3827,6 +3845,7 @@ __metadata:
     "@real-system/badge": ^0.0.3
     "@real-system/box-primitive": ^0.0.16
     "@real-system/button": ^0.0.34
+    "@real-system/button-primitive": ^0.0.26
     "@real-system/checkbox": ^0.0.19
     "@real-system/dialog": ^0.0.26
     "@real-system/dialog-primitive": ^0.0.18
@@ -3836,10 +3855,13 @@ __metadata:
     "@real-system/input": ^0.0.32
     "@real-system/link": ^0.0.4
     "@real-system/menu": ^0.0.5
+    "@real-system/menu-primitive": ^0.0.0
     "@real-system/popover": ^0.0.9
     "@real-system/portal-primitive": ^0.0.7
     "@real-system/radio-group": ^0.0.12
+    "@real-system/select-primitive": ^0.0.0
     "@real-system/separator": ^0.0.1
+    "@real-system/separator-primitive": ^0.0.0
     "@real-system/spinner": ^0.0.31
     "@real-system/state-library": ^0.0.8
     "@real-system/styling-library": ^0.0.12
@@ -4028,15 +4050,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/menu-primitive@^0.0.0, @real-system/menu-primitive@workspace:packages/primitives/menu-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/menu-primitive@workspace:packages/primitives/menu-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    concurrently: ^7.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/menu@^0.0.5, @real-system/menu@workspace:packages/components/menu":
   version: 0.0.0-use.local
   resolution: "@real-system/menu@workspace:packages/components/menu"
   dependencies:
     "@real-system/animation-library": ^0.0.9
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
     "@real-system/button": ^0.0.34
     "@real-system/link": ^0.0.4
+    "@real-system/menu-primitive": ^0.0.0
     "@real-system/state-library": ^0.0.8
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
@@ -4047,14 +4085,30 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     "@real-system/animation-library": ^0.0.9
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
     "@real-system/button": ^0.0.34
     "@real-system/link": ^0.0.4
+    "@real-system/menu-primitive": ^0.0.0
     "@real-system/state-library": ^0.0.8
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/utils-library": ^0.0.15
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
+"@real-system/popover-primitive@^0.0.0, @real-system/popover-primitive@workspace:packages/primitives/popover-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/popover-primitive@workspace:packages/primitives/popover-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    concurrently: ^7.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.5
     react: ^18.0.0
     react-dom: ^18.0.0
   languageName: unknown
@@ -4065,10 +4119,10 @@ __metadata:
   resolution: "@real-system/popover@workspace:packages/components/popover"
   dependencies:
     "@real-system/animation-library": ^0.0.9
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
     "@real-system/button": ^0.0.34
     "@real-system/flex": ^0.0.26
+    "@real-system/popover-primitive": ^0.0.0
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/typography": ^0.0.33
@@ -4079,10 +4133,10 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     "@real-system/animation-library": ^0.0.9
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
     "@real-system/button": ^0.0.34
     "@real-system/flex": ^0.0.26
+    "@real-system/popover-primitive": ^0.0.0
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/typography": ^0.0.33
@@ -4139,12 +4193,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/select-primitive@^0.0.0, @real-system/select-primitive@workspace:packages/primitives/select-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/select-primitive@workspace:packages/primitives/select-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    concurrently: ^7.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/select@workspace:packages/components/select":
   version: 0.0.0-use.local
   resolution: "@real-system/select@workspace:packages/components/select"
   dependencies:
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
+    "@real-system/select-primitive": ^0.0.0
     "@real-system/state-library": ^0.0.8
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
@@ -4154,8 +4224,8 @@ __metadata:
     react-dom: ^18.0.0
     typescript: ^4.6.3
   peerDependencies:
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
+    "@real-system/select-primitive": ^0.0.0
     "@real-system/state-library": ^0.0.8
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
@@ -4165,12 +4235,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/separator-primitive@^0.0.0, @real-system/separator-primitive@workspace:packages/primitives/separator-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/separator-primitive@workspace:packages/primitives/separator-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    concurrently: ^7.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/separator@^0.0.1, @real-system/separator@workspace:packages/components/separator":
   version: 0.0.0-use.local
   resolution: "@real-system/separator@workspace:packages/components/separator"
   dependencies:
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
+    "@real-system/separator-primitive": ^0.0.0
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/utils-library": ^0.0.15
@@ -4179,8 +4265,8 @@ __metadata:
     react-dom: ^18.0.0
     typescript: ^4.6.3
   peerDependencies:
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
+    "@real-system/separator-primitive": ^0.0.0
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
     "@real-system/utils-library": ^0.0.15
@@ -4314,15 +4400,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/tooltip-primitive@^0.0.0, @real-system/tooltip-primitive@workspace:packages/primitives/tooltip-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/tooltip-primitive@workspace:packages/primitives/tooltip-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    concurrently: ^7.1.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.5
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/tooltip@^0.0.10, @real-system/tooltip@workspace:packages/components/tooltip":
   version: 0.0.0-use.local
   resolution: "@real-system/tooltip@workspace:packages/components/tooltip"
   dependencies:
     "@real-system/animation-library": ^0.0.9
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
+    "@real-system/tooltip-primitive": ^0.0.0
     "@real-system/typography": ^0.0.33
     "@real-system/utils-library": ^0.0.15
     concurrently: ^7.1.0
@@ -4331,10 +4433,10 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     "@real-system/animation-library": ^0.0.9
-    "@real-system/ariakit-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.16
     "@real-system/styling-library": ^0.0.12
     "@real-system/theme-library": ^0.0.18
+    "@real-system/tooltip-primitive": ^0.0.0
     "@real-system/typography": ^0.0.33
     "@real-system/utils-library": ^0.0.15
     react: ^18.0.0

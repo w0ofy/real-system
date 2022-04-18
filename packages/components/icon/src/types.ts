@@ -1,11 +1,7 @@
 import * as IconComponents from '@heroicons/react/outline';
 
 import type { BoxStyleProps } from '@real-system/box-primitive';
-import type {
-  ColorSchemes,
-  ThemeIntents,
-  ThemeSizes,
-} from '@real-system/theme-library';
+import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */
@@ -23,7 +19,6 @@ type Icons = RemoveSuffix<RawIcons, '-icon'>;
 
 /** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
 type IconValue = typeof IconComponents['AcademicCapIcon'];
-type IconIntent = Exclude<ThemeIntents, 'secondary' | 'disabled'>;
 
 type IconProps = {
   /**
@@ -51,7 +46,7 @@ type IconProps = {
 } & BoxStyleProps;
 
 /** private icon props, used for StyledIcon component */
-type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {
+type InternalIconProps = Omit<IconProps, 'icon' | 'size'> & {
   Icon: IconValue;
   size: any;
   color: any;
@@ -60,7 +55,6 @@ type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {
 export type {
   HeroIconNames,
   HeroIconSet,
-  IconIntent,
   IconProps,
   Icons,
   IconValue,

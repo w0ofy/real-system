@@ -9,6 +9,7 @@
 /badge
 /box-primitive
 /button
+/button-primitive
 /checkbox
 /dialog
 /dialog-primitive
@@ -18,10 +19,13 @@
 /input
 /link
 /menu
+/menu-primitive
 /popover
 /portal-primitive
 /radio-group
+/select-primitive
 /separator
+/separator-primitive
 /spinner
 /state-library
 /styling-library

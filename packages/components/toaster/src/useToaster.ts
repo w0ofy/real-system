@@ -91,19 +91,19 @@ const useToaster = function useToaster(): UseToasterReturnedProps {
   );
 
   const notify = useCallback(
-    (message, props = {}) => push(message, { ...props, intent: 'info' }),
+    (message, props = {}) => push(message, { ...props, status: 'info' }),
     [push]
   );
   const danger = useCallback(
-    (message, props = {}) => push(message, { ...props, intent: 'danger' }),
+    (message, props = {}) => push(message, { ...props, status: 'danger' }),
     [push]
   );
   const warning = useCallback(
-    (message, props = {}) => push(message, { ...props, intent: 'warning' }),
+    (message, props = {}) => push(message, { ...props, status: 'warning' }),
     [push]
   );
   const success = useCallback(
-    (message, props = {}) => push(message, { ...props, intent: 'success' }),
+    (message, props = {}) => push(message, { ...props, status: 'success' }),
     [push]
   );
 

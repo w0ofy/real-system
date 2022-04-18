@@ -1,17 +1,18 @@
 import React from 'react';
 
-import type { AriakitSelectSeparatorProps } from '@real-system/ariakit-library';
-import { AriakitSelectSeparator } from '@real-system/ariakit-library';
+import type { SelectSeparatorPrimitiveProps } from '@real-system/select-primitive';
+import { SelectSeparatorPrimitive } from '@real-system/select-primitive';
 import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { OmitSelectPrivateProps } from './types';
 
-type SelectSeparatorProps = OmitSelectPrivateProps<AriakitSelectSeparatorProps>;
+type SelectSeparatorProps =
+  OmitSelectPrivateProps<SelectSeparatorPrimitiveProps>;
 
 const StyledSeparator = styled(
-  AriakitSelectSeparator
-)<AriakitSelectSeparatorProps>({});
+  SelectSeparatorPrimitive
+)<SelectSeparatorPrimitiveProps>({});
 
 const SelectSeparator = (props: SelectSeparatorProps) => {
   return (

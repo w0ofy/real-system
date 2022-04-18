@@ -1,16 +1,16 @@
 import * as React from 'react';
 
-import type { AriakitMenuStateProps } from '@real-system/ariakit-library';
-import { useAriakitMenuState } from '@real-system/ariakit-library';
+import type { MenuStatePrimitiveProps } from '@real-system/menu-primitive';
+import { useMenuStatePrimitive } from '@real-system/menu-primitive';
 
 import { MenuContextProvider } from './MenuContext';
 
 type MenuProps = {
   children: React.ReactNode;
-} & Omit<AriakitMenuStateProps<any>, 'orientation'>;
+} & Omit<MenuStatePrimitiveProps<any>, 'orientation'>;
 /** @todo ^^ fix any param — this is supposed to be inferred from values prop — but there's currently a typing issue in ariakit */
 
-const isAutoPlacement = (placement: AriakitMenuStateProps['placement']) =>
+const isAutoPlacement = (placement: MenuStatePrimitiveProps['placement']) =>
   placement === 'auto' ||
   placement === 'auto-end' ||
   placement === 'auto-start';
@@ -27,7 +27,7 @@ const Menu = ({
   flip,
   ...restProps
 }: MenuProps) => {
-  const state = useAriakitMenuState({
+  const state = useMenuStatePrimitive({
     gutter: 4,
     placement,
     visible,

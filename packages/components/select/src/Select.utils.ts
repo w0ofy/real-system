@@ -1,4 +1,4 @@
-import { SelectProps } from './types';
+import type { SelectProps } from './types';
 
 const maybeAutoPlacements = (placement: SelectProps['placement'], flip) => {
   if (

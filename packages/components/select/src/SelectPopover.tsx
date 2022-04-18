@@ -1,13 +1,13 @@
 import React from 'react';
 
-import type { AriakitSelectPopoverProps } from '@real-system/ariakit-library';
-import { AriakitSelectPopover } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
+import type { SelectPopoverPrimitiveProps } from '@real-system/select-primitive';
+import { SelectPopoverPrimitive } from '@real-system/select-primitive';
 
 import { useSelectStateContext } from './SelectContext';
 import { OmitSelectPrivateProps } from './types';
 
-type SelectPopoverProps = OmitSelectPrivateProps<AriakitSelectPopoverProps>;
+type SelectPopoverProps = OmitSelectPrivateProps<SelectPopoverPrimitiveProps>;
 
 /**
  * @todo animate popover
@@ -16,7 +16,7 @@ const SelectPopover = (props: SelectPopoverProps) => {
   const state = useSelectStateContext();
 
   return (
-    <AriakitSelectPopover
+    <SelectPopoverPrimitive
       as={Box}
       zIndex="popover"
       display="flex"
@@ -29,7 +29,6 @@ const SelectPopover = (props: SelectPopoverProps) => {
       color="white"
       filter="popover"
       outline="none"
-      transition="box-shadow 150ms ease-in, border-color 150ms ease-in"
       overflow="auto"
       {...props}
       state={state}

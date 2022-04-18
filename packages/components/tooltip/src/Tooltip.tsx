@@ -2,14 +2,14 @@ import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
 
 import { useTransition } from '@real-system/animation-library';
 import { animated } from '@real-system/animation-library';
-import {
-  AriakitTooltip,
-  AriakitTooltipAnchor,
-  AriakitTooltipArrow,
-  useAriakitTooltipState,
-} from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
 import styled from '@real-system/styling-library';
+import {
+  TooltipAnchorPrimitive,
+  TooltipArrowPrimitive,
+  TooltipPrimitive,
+  useTooltipStatePrimitive,
+} from '@real-system/tooltip-primitive';
 import { Text } from '@real-system/typography';
 import {
   isReactText,
@@ -48,7 +48,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   const internalRef = useRef<HTMLElement>(null);
   const mergedRef = useMergedRef<HTMLElement>(ref, internalRef);
 
-  const state = useAriakitTooltipState({
+  const state = useTooltipStatePrimitive({
     placement,
     visible: !disabled && visible,
     gutter,
@@ -64,15 +64,15 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   const trigger = useMemo(() => {
     if (isReactText(children)) {
       return (
-        <AriakitTooltipAnchor as="span" state={state} ref={mergedRef}>
+        <TooltipAnchorPrimitive as="span" state={state} ref={mergedRef}>
           {children}
-        </AriakitTooltipAnchor>
+        </TooltipAnchorPrimitive>
       );
     }
     // casted type because if it is not ReactText it will be ReactElement
     const Child = children as React.ReactElement;
     return (
-      <AriakitTooltipAnchor
+      <TooltipAnchorPrimitive
         as="span"
         state={state}
         ref={mergedRef}
@@ -80,7 +80,7 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
         {(anchorProps) =>
           cloneElement(children as React.ReactElement, anchorProps)
         }
-      </AriakitTooltipAnchor>
+      </TooltipAnchorPrimitive>
     );
   }, [children, state, mergedRef]);
 
@@ -90,17 +90,17 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
       {transitions(
         (style, item) =>
           item && (
-            <AriakitTooltip
+            <TooltipPrimitive
               data-testid={makeTestId('tooltip')}
               {...restProps}
               state={state}
               as={StyledTooltip}
               style={style}>
-              {hideArrow ? null : <AriakitTooltipArrow state={state} />}
+              {hideArrow ? null : <TooltipArrowPrimitive state={state} />}
               <Text as="span" color="white">
                 {label}
               </Text>
-            </AriakitTooltip>
+            </TooltipPrimitive>
           )
       )}
     </>
