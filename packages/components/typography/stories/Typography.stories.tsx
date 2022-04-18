@@ -6,7 +6,7 @@ import { Flex } from '@real-system/flex';
 import { Text } from '@real-system/typography';
 
 export default {
-  title: 'Components/Text',
+  title: 'Components/Typography',
   component: Text,
   args: {
     children: 'The quick brown fox jumps over the lazy dog',

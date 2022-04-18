@@ -7,7 +7,7 @@ import type {
   RealSystemComponent,
   StyleObjectOrFn,
 } from './styled.types';
-import type { As, StyledDict, StyledObjUnion } from './styled.types.helpers';
+import type { As, StyledDict } from './styled.types.helpers';
 import { shouldForwardProp } from './styled.utils';
 
 type StyleResolverProps = CSSObject & {
@@ -39,21 +39,24 @@ const toCSSObject: ToCSSObject = (styles) => (props) => {
   return { ...styleProps, ...pseudoProps };
 };
 
-type StyledOptions = StyledObjUnion<{
+type StyledOptions = {
   label?: string;
   shouldForwardProp?(propName: PropertyKey): boolean;
   target?: string;
-}>;
+};
 
 function styled<T extends As>(component: T, options?: StyledOptions) {
   return function styledComponent<P extends StyledDict = StyledDict>(
+    /** @todo allow passing of multiple args */
     styles: StyleObjectOrFn<P>
   ) {
     const { ...styledOptions } = options ?? {};
-    options?.s;
+
+    /** @todo fix shouldForwardProp issue with passing of `as` prop, as well as others (e.g. see bug with Select and strict mode) 
     if (!styledOptions.shouldForwardProp) {
       styledOptions.shouldForwardProp = shouldForwardProp();
     }
+    */
 
     return _styled(
       component as React.ComponentType<any>,

@@ -21,6 +21,7 @@ const MenuItemCommand = forwardRef<HTMLSpanElement, MenuItemCommandProps>(
         lineHeight={2}
         letterSpacing="body"
         role="img"
+        alt={`⌘ + ${children}`}
         {...restProps}
         ref={ref}>
         ⌘{children}

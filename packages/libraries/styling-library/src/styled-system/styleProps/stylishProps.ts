@@ -22,7 +22,7 @@ const STYLISH_PROPS_MAP = STYLISH_PROPS.reduce(
     [c]: true,
   }),
   {}
-);
+) as Record<StylishPropNames, true>;
 
 const isStylishProp = (prop: any) => isStyleProp(prop) && isPseudoProp(prop);
 const isNotStylishProp = (prop: any) =>
@@ -33,8 +33,8 @@ const preventSpreadingStyleProps = makePropSpreader(isNotStylishProp);
 /**
  * Includes style props and pseudo style props
  */
-type StylishPropNames = StylePropNames & PseudoPropNames;
-type StylishProps = StyleProps & PseudoProps;
+type StylishPropNames = StylePropNames | PseudoPropNames;
+type StylishProps = StyleProps | PseudoProps;
 
 export type { StylishPropNames, StylishProps };
 export {

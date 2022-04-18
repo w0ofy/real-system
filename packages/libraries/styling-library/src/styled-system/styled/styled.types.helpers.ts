@@ -83,8 +83,6 @@ type ComponentWithAs<
 
 type StyledDict<T = any> = Record<PropertyKey, T>;
 
-type StyledObjUnion<T> = T & { [key: PropertyKey]: any };
-
 export type {
   As,
   ComponentWithAs,
@@ -94,5 +92,4 @@ export type {
   RecursiveCSSSelector,
   RecursivePseudo,
   StyledDict,
-  StyledObjUnion,
 };
