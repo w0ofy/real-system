@@ -3857,8 +3857,10 @@ __metadata:
     "@real-system/menu": ^0.0.5
     "@real-system/menu-primitive": ^0.0.0
     "@real-system/popover": ^0.0.9
+    "@real-system/popover-primitive": ^0.0.0
     "@real-system/portal-primitive": ^0.0.7
     "@real-system/radio-group": ^0.0.12
+    "@real-system/select": ^0.0.0
     "@real-system/select-primitive": ^0.0.0
     "@real-system/separator": ^0.0.1
     "@real-system/separator-primitive": ^0.0.0
@@ -3869,6 +3871,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.18
     "@real-system/toaster": ^0.0.17
     "@real-system/tooltip": ^0.0.10
+    "@real-system/tooltip-primitive": ^0.0.0
     "@real-system/truncate": ^0.0.11
     "@real-system/typography": ^0.0.33
     "@real-system/utils-library": ^0.0.15
@@ -4209,7 +4212,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/select@workspace:packages/components/select":
+"@real-system/select@^0.0.0, @real-system/select@workspace:packages/components/select":
   version: 0.0.0-use.local
   resolution: "@real-system/select@workspace:packages/components/select"
   dependencies:
@@ -19940,6 +19943,7 @@ __metadata:
     jest: ^27.5.1
     js-yaml: ^4.1.0
     lodash.debounce: ^4.0.8
+    minimist: ^1.2.6
     playroom: ^0.27.9
     precise-commits: ^1.0.2
     prettier: ^2.6.2
