@@ -10,6 +10,8 @@ type PropsOf<T extends As> = React.ComponentPropsWithoutRef<T>;
 type RealSystemProps = {
   /** data-testid DOM attribute for component. Useful when using react testing library or other testing tools */
   'data-testid'?: string;
+  /** pass a custom class name. Useful for when wrapping components with styled or need to use classic stylesheets. */
+  className?: string;
 };
 
 type InternalRealSystemProps = {

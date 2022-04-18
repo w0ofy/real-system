@@ -29,7 +29,7 @@ $ yarn add @real-system/styling-library
 ```jsx
 import styled from '@real-system/styling-library';
 
-const Block = styled.div`
+const Block = styled('div')`
   display: block;
 `;
 

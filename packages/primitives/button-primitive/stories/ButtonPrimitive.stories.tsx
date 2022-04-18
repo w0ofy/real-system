@@ -8,7 +8,6 @@ export default {
   component: ButtonPrimitive,
   args: {
     children: 'Button Primitive',
-    onClick: undefined,
   },
 } as Meta;
 

@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitMenuItem } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
-import { StylishProps } from '@real-system/styling-library';
+import { MenuItemPrimitive } from '@real-system/menu-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CommonMenuItemProps } from './MenuItem.types';
@@ -56,13 +56,13 @@ const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(
   ref
 ) {
   return (
-    <AriakitMenuItem
+    <MenuItemPrimitive
       as={BoxMenuItem}
       data-testid={makeTestId('menu-item')}
       {...restProps}
       ref={ref}>
       {children}
-    </AriakitMenuItem>
+    </MenuItemPrimitive>
   );
 });
 

@@ -1,1 +1,1 @@
-export { default as constate } from 'constate';
+export { constate } from './constate';

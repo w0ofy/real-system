@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import type { ButtonPrimitiveProps } from '@real-system/button-primitive';
+import type { RealSystemComponentProps } from '@real-system/styling-library';
 import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
 import type { RealSystemElementProps } from '@real-system/utils-library';
 
@@ -12,7 +12,7 @@ export type ButtonStates = 'disabled' | 'loading' | 'default';
 /**
  * @todo maybe add _expanded pseudo style prop ??? see chakra-ui for MenuButton example
  */
-export type ButtonProps = ButtonPrimitiveProps & {
+export type ButtonProps = RealSystemComponentProps & {
   /** sets the loading state of the buttons */
   loading?: boolean;
   /** inserts a leading icon */
@@ -23,6 +23,6 @@ export type ButtonProps = ButtonPrimitiveProps & {
   variant?: ButtonVariants;
   /** controls the size of the button */
   size?: ButtonSize;
-  /** sets color scheme of the button; color scheme is dictated by the `theme` object from `ThemeProvider` */
+  /** sets color scheme of the button; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
 } & RealSystemElementProps;

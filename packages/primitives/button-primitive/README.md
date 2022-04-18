@@ -1,5 +1,5 @@
 <h1 align="center">@real-system/button-primitive</h1>
-<p align="center">Button primitive component for real system.</p>
+<p align="center">Button primitive components for real system.</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/@real-system/button-primitive"><img src="https://badgen.net/npm/v/@real-system/button-primitive?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
 </p>
@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/a11y-library
+$ npm install react react-dom 
 # yarn
-$ yarn add react react-dom @real-system/a11y-library
+$ yarn add react react-dom 
 
 # install button-primitive
 
@@ -25,6 +25,7 @@ $ yarn add @real-system/button-primitive
 ### Code Example
 
 ```typescript
+import type { ButtonPrimitiveProps } from '@real-system/button-primitive';
 import { ButtonPrimitive } from '@real-system/button-primitive';
 
 ...

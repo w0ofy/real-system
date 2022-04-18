@@ -24,7 +24,6 @@ const keyedPackages = cachedPackages.reduce((acc, currentPackage) => {
   const packageJson = require(`${currentPackage.location}/package.json`);
 
   // If there's no main entrypoint, don't update the location path
-  // Note: the icons package doesn't have a main entrypoint
   if (packageJson['main:dev'] == null) {
     acc[currentPackage.name] = currentPackage;
   } else {
@@ -57,9 +56,7 @@ function customResolver(package, details) {
   if (package.includes('@real-system/')) {
     const [packageScope, packageName, packagePath] = getPackageParts(package);
 
-    // Retrieve the correct path
-
-    // if entry point/location specified in package import
+    // if entry-point/location is specified in package import
     if (packagePath.length > 0) {
       // Get the cached location of this package's "main" entrypoint (from packageJson)
       const keyedLocation =

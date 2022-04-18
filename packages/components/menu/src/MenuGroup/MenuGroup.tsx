@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { AriakitMenuGroup } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
+import { MenuGroupPrimitive } from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps } from '../types';
@@ -12,13 +12,13 @@ type MenuGroupProps = {
 
 const MenuGroup = ({ children, ...restProps }: MenuGroupProps) => {
   return (
-    <AriakitMenuGroup
+    <MenuGroupPrimitive
       as={Box}
       paddingTop={4}
       data-testid={makeTestId('menu-group')}
       {...restProps}>
       {children}
-    </AriakitMenuGroup>
+    </MenuGroupPrimitive>
   );
 };
 

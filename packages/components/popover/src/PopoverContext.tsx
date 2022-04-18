@@ -1,31 +1,31 @@
 import React, { useCallback } from 'react';
 
 import {
-  AriakitPopoverState,
-  AriakitPopoverStateProps,
-  useAriakitPopoverState,
-} from '@real-system/ariakit-library';
+  PopoverStatePrimitive,
+  PopoverStatePrimitiveProps,
+  usePopoverStatePrimitive,
+} from '@real-system/popover-primitive';
 import { constate } from '@real-system/state-library';
 
 type CustomPopoverState = {
   onHide?: () => void;
 };
 type PopoverContext = {
-  state: AriakitPopoverState;
+  state: PopoverStatePrimitive;
 };
 
 type PopoverContainerProps = Pick<
-  AriakitPopoverStateProps,
+  PopoverStatePrimitiveProps,
   'placement' | 'flip'
 > & {
   children: React.ReactNode;
 } & CustomPopoverState;
 
-const usePopover = ({ state }: PopoverContext): AriakitPopoverState => state;
+const usePopover = ({ state }: PopoverContext): PopoverStatePrimitive => state;
 
 const [PopoverContextProvider, usePopoverStateContext] = constate(usePopover);
 
-const ifAutoPlacements = (
+const maybeAutoPlacements = (
   placement: PopoverContainerProps['placement'],
   flip
 ) => {
@@ -45,10 +45,10 @@ const PopoverContainer = ({
   placement = 'auto',
   flip = true,
 }: PopoverContainerProps) => {
-  const { hide, ...restState } = useAriakitPopoverState({
+  const { hide, ...restState } = usePopoverStatePrimitive({
     placement,
     gutter: 2,
-    flip: ifAutoPlacements(placement, flip),
+    flip: maybeAutoPlacements(placement, flip),
   });
   const handleHide = useCallback(() => {
     onHide && onHide();

@@ -1,11 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ColorItem, ColorPalette } from '@storybook/addon-docs';
+import { ColorItem, ColorPalette as CP } from '@storybook/addon-docs';
 import debounce from 'lodash.debounce';
 
 import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
 import { Input } from '@real-system/input';
 import { themes, ThemeScales } from '@real-system/theme-library';
+
+const ColorPalette = CP as React.FC<React.PropsWithChildren<any>>;
 
 const useThemeTokens = (scale) => {
   const theme = useMemo(() => themes.realSystem, []);

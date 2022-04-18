@@ -13,7 +13,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
   const {
     message,
     onDismiss,
-    intent = 'info',
+    status = 'info',
     setFocus,
     description,
     ...restProps
@@ -31,7 +31,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
       <Alert
         shrink={0}
         boxShadow={1}
-        intent={intent}
+        status={status}
         description={description}
         onDismiss={onDismiss ? onDismiss : undefined}
         dismissRef={dismissRef}

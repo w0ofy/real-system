@@ -1,16 +1,16 @@
 import type { Icons } from '@real-system/icon';
 import type { ColorSchemes } from '@real-system/theme-library';
 
-import type { AlertIntents } from './types';
+import type { AlertStatus } from './types';
 
-const ICON_MAP: Record<AlertIntents, Icons> = {
+const ICON_MAP: Record<AlertStatus, Icons> = {
   info: 'information-circle',
   success: 'check-circle',
   danger: 'exclamation-circle',
   warning: 'exclamation-circle',
 };
 
-const INTENT_COLOR_MAP: Record<AlertIntents, ColorSchemes> = {
+const INTENT_COLOR_MAP: Record<AlertStatus, ColorSchemes> = {
   success: 'green',
   info: 'blue',
   warning: 'orange',

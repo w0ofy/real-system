@@ -30,7 +30,7 @@ export type Basis = ResponsiveValue<BasisOptions>;
 export type WrapOptions = boolean;
 export type Wrap = ResponsiveValue<WrapOptions>;
 
-export type FlexElementProps = {
+export type FlexComponentProps = {
   /**
    * renders children
    */
@@ -77,6 +77,6 @@ export type FlexElementProps = {
   space?: BoxProps['gap'];
 };
 
-type FlexProps = FlexElementProps & Omit<BoxProps, keyof FlexElementProps>;
+type FlexProps = FlexComponentProps & Omit<BoxProps, keyof FlexComponentProps>;
 
 export type { FlexProps };

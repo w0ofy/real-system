@@ -244,7 +244,6 @@ const ShowcaseTemplate = (args: ButtonProps) => (
 ShowcaseTemplate.defaultProps = {
   children: 'Button',
   variant: 'outline',
-  intent: 'neutral',
   marginRight: 10,
 };
 

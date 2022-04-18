@@ -1,7 +1,7 @@
 import * as IconComponents from '@heroicons/react/outline';
 
 import type { BoxStyleProps } from '@real-system/box-primitive';
-import type { ThemeIntents, ThemeSizes } from '@real-system/theme-library';
+import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */
@@ -19,7 +19,6 @@ type Icons = RemoveSuffix<RawIcons, '-icon'>;
 
 /** typeof an icon component (selected any icon, it doesn't matter. They should all have the same typing) */
 type IconValue = typeof IconComponents['AcademicCapIcon'];
-type IconIntent = Exclude<ThemeIntents, 'secondary' | 'disabled'>;
 
 type IconProps = {
   /**
@@ -31,13 +30,11 @@ type IconProps = {
    */
   size?: ThemeSizes;
   /**
-   * Controls the color of the icon. If an `intent` is not provided the color defaults to `currentColor`
-   */
-  intent?: IconIntent;
-  /**
-   * Overrides intent and can be used to customize the icon color beyond what intent provides i.e. a checkmark for Checkbox component
+   * Overrides colorScheme and can be used to customize the icon color beyond what colorScheme provides i.e. a checkmark for Checkbox component
    */
   color?: BoxStyleProps['color'];
+  /** sets color scheme of the icon; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
+  colorScheme?: ColorSchemes;
   /**
    * Controls solid or outline (default) icon style
    */
@@ -49,7 +46,7 @@ type IconProps = {
 } & BoxStyleProps;
 
 /** private icon props, used for StyledIcon component */
-type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {
+type InternalIconProps = Omit<IconProps, 'icon' | 'size'> & {
   Icon: IconValue;
   size: any;
   color: any;
@@ -58,7 +55,6 @@ type InternalIconProps = Omit<IconProps, 'icon' | 'size' | 'intent'> & {
 export type {
   HeroIconNames,
   HeroIconSet,
-  IconIntent,
   IconProps,
   Icons,
   IconValue,

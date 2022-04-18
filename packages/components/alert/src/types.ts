@@ -2,14 +2,14 @@ import type { AlertPrimitiveProps } from '@real-system/alert-primitive';
 import type { FlexProps } from '@real-system/flex';
 import type { ThemeStatuses } from '@real-system/theme-library';
 
-type AlertIntents = ThemeStatuses;
+type AlertStatus = ThemeStatuses;
 
 type CommonAlertProps = {
-  intent?: AlertIntents;
+  status?: AlertStatus;
   /**
    * Controls whether the assistive technology should read immediately ("assertive") or wait until the user is idle ("polite").
    * */
   type?: AlertPrimitiveProps['type'];
 } & Omit<FlexProps, 'as'>;
 
-export type { AlertIntents, CommonAlertProps };
+export type { AlertStatus, CommonAlertProps };

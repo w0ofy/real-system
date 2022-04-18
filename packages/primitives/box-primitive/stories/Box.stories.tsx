@@ -7,7 +7,8 @@ export default {
   title: 'Primitives/Box Primitive',
   component: Box,
   args: {
-    children: 'Box',
+    children:
+      'Box—use me as a building block for any kind of component. You can pass style props to me as well.',
   },
 } as Meta;
 

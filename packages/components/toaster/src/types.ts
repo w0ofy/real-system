@@ -12,9 +12,9 @@ type ToastProps = {
    */
   setFocus?: boolean;
   /**
-   * The intent of the alert
+   * The status of the alert
    */
-  intent?: AlertProps['intent'];
+  status?: AlertProps['status'];
 } & Pick<AlertProps, 'description' | 'onDismiss'> &
   FlexProps;
 
@@ -27,7 +27,7 @@ type ToasterToast = {
   timeOutId?: number;
 } & Pick<
   ToastProps,
-  'intent' | 'setFocus' | 'onDismiss' | 'message' | 'description'
+  'status' | 'setFocus' | 'onDismiss' | 'message' | 'description'
 >;
 
 type PushProps = Partial<Omit<ToasterToast, 'timeOutId' | 'message'>>;
@@ -40,19 +40,19 @@ type UseToasterReturnedProps = {
   /**
    * Method used to push a defualt toast (`info`) to the toast stack
    */
-  notify: (message: string, props?: Omit<PushProps, 'intent'>) => void;
+  notify: (message: string, props?: Omit<PushProps, 'status'>) => void;
   /**
    * Method used to push an `danger` toast to the toast stack
    */
-  danger: (message: string, props?: Omit<PushProps, 'intent'>) => void;
+  danger: (message: string, props?: Omit<PushProps, 'status'>) => void;
   /**
    * Method used to push a `warning` toast to the toast stack
    */
-  warning: (message: string, props?: Omit<PushProps, 'intent'>) => void;
+  warning: (message: string, props?: Omit<PushProps, 'status'>) => void;
   /**
    * Method used to push a `success` toast to the toast stack
    */
-  success: (message: string, props?: Omit<PushProps, 'intent'>) => void;
+  success: (message: string, props?: Omit<PushProps, 'status'>) => void;
   /**
    * Method used to remove a toast from the Toaster stack based on its `id`
    */

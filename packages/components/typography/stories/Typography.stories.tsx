@@ -56,12 +56,12 @@ export const Label = () => (
 export const HelpText = () => (
   <Box display="flex" flexDirection="column">
     <Text.HelpText id="help-text">Help text</Text.HelpText>
-    <Text.HelpText id="help-text-danger" intent="danger">
+    <Text.HelpText id="help-text-danger" status="danger">
       Danger help text
     </Text.HelpText>
     <Text.HelpText
       id="help-text-error"
-      intent="danger"
+      status="danger"
       errorText="Error help text">
       Danger help text
     </Text.HelpText>

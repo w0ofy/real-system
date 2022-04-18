@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
 
 import {
-  AriakitMenuItemCheck,
-  AriakitMenuItemCheckbox,
-  AriakitMenuItemCheckboxProps,
-} from '@real-system/ariakit-library';
+  MenuItemCheckboxPrimitive,
+  MenuItemCheckboxPrimitiveProps,
+  MenuItemCheckPrimitive,
+} from '@real-system/menu-primitive';
 import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -12,7 +12,7 @@ import type { CommonMenuProps, OmitMenuState } from '../types';
 
 import { BoxMenuItem } from './MenuItem';
 
-type MenuItemCheckboxProps = OmitMenuState<AriakitMenuItemCheckboxProps> &
+type MenuItemCheckboxProps = OmitMenuState<MenuItemCheckboxPrimitiveProps> &
   CommonMenuProps;
 
 const styleProps: StylishProps = {
@@ -29,7 +29,7 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
   ) {
     return (
       /** @ts-ignore `as` prop type conflicts */
-      <AriakitMenuItemCheckbox
+      <MenuItemCheckboxPrimitive
         as={BoxMenuItem}
         disabled={disabled}
         onClick={onClick}
@@ -39,9 +39,9 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
         {...styleProps}
         {...restProps}
         ref={ref}>
-        <AriakitMenuItemCheck />
+        <MenuItemCheckPrimitive />
         {children}
-      </AriakitMenuItemCheckbox>
+      </MenuItemCheckboxPrimitive>
     );
   }
 );

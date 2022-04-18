@@ -9,5 +9,6 @@ export * from './makeTestId';
 export { uid } from 'react-uid';
 export { merge };
 export * from './assertion';
+export * from './environment';
 export * from './object';
 export * from './responsive';

@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { AriakitPopoverDismiss } from '@real-system/ariakit-library';
 import { Button, ButtonProps } from '@real-system/button';
+import { PopoverDismissPrimitive } from '@real-system/popover-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import { usePopoverStateContext } from './PopoverContext';
@@ -27,14 +27,14 @@ const PopoverDismiss = forwardRef<HTMLButtonElement, PopoverDismissProps>(
     };
 
     return (
-      <AriakitPopoverDismiss
+      <PopoverDismissPrimitive
         state={state}
         as={Button}
         data-testid={makeTestId('popover-dismiss')}
         {...restProps}
         ref={ref}>
         {children}
-      </AriakitPopoverDismiss>
+      </PopoverDismissPrimitive>
     );
   }
 );

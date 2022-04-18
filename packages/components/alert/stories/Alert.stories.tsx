@@ -18,20 +18,20 @@ export default {
 
 export const Showcase = (args) => (
   <>
-    <Alert {...args} onDismiss={undefined} intent="info" marginBottom={8} />
-    <Alert {...args} onDismiss={undefined} intent="success" marginBottom={8} />
-    <Alert {...args} onDismiss={undefined} intent="warning" marginBottom={8} />
-    <Alert {...args} onDismiss={undefined} intent="danger" marginBottom={8} />
-    <RealInlineAlert {...args} intent="info" marginBottom={8}>
+    <Alert {...args} onDismiss={undefined} status="info" marginBottom={8} />
+    <Alert {...args} onDismiss={undefined} status="success" marginBottom={8} />
+    <Alert {...args} onDismiss={undefined} status="warning" marginBottom={8} />
+    <Alert {...args} onDismiss={undefined} status="danger" marginBottom={8} />
+    <RealInlineAlert {...args} status="info" marginBottom={8}>
       There are over 5000 integrations available
     </RealInlineAlert>
-    <RealInlineAlert {...args} intent="success" marginBottom={8}>
+    <RealInlineAlert {...args} status="success" marginBottom={8}>
       There are over 5000 integrations available
     </RealInlineAlert>
-    <RealInlineAlert {...args} intent="warning" marginBottom={8}>
+    <RealInlineAlert {...args} status="warning" marginBottom={8}>
       There are over 5000 integrations available
     </RealInlineAlert>
-    <RealInlineAlert {...args} intent="danger" marginBottom={8}>
+    <RealInlineAlert {...args} status="danger" marginBottom={8}>
       There are over 5000 integrations available
     </RealInlineAlert>
   </>

@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitMenuItem } from '@real-system/ariakit-library';
 import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
 import { EXTERNAL_LINK_PROPS } from '@real-system/link';
+import { MenuItemPrimitive } from '@real-system/menu-primitive';
 import { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -55,7 +55,7 @@ const MenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
   ) {
     const externalLinkProps = external ? EXTERNAL_LINK_PROPS : {};
     return (
-      <AriakitMenuItem
+      <MenuItemPrimitive
         {...externalLinkProps}
         data-testid={makeTestId('menu-item-link')}
         {...restProps}
@@ -72,7 +72,7 @@ const MenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
             marginLeft={2}
           />
         ) : null}
-      </AriakitMenuItem>
+      </MenuItemPrimitive>
     );
   }
 );

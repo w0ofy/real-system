@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitPopoverHeading } from '@real-system/ariakit-library';
+import { PopoverHeadingPrimitive } from '@real-system/popover-primitive';
 import { HeadingProps, Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -15,13 +15,13 @@ type PopoverHeadingProps = Omit<HeadingProps, 'as' | 'variant'>;
 const PopoverHeading = forwardRef<HTMLHeadingElement, PopoverHeadingProps>(
   function PopoverHeading({ children, ...restProps }, ref) {
     return (
-      <AriakitPopoverHeading
+      <PopoverHeadingPrimitive
         as={StyledHeading}
         data-testid={makeTestId('popover-heading')}
         {...restProps}
         ref={ref}>
         {children}
-      </AriakitPopoverHeading>
+      </PopoverHeadingPrimitive>
     );
   }
 );
