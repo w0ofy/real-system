@@ -1,13 +1,17 @@
 import type { StylishProps } from '@real-system/styling-library';
-import type { Dict, RealSystemElementProps } from '@real-system/utils-library';
+import type {
+  Dict,
+  PropUnion,
+  RealSystemElementProps,
+} from '@real-system/utils-library';
 
 type BoxStyleProps = StylishProps;
 
 /**
  * Real system Box specific props
  */
-type BoxComponentProps<GivenProps = Dict> = {
-  as?: keyof JSX.IntrinsicElements | React.FunctionComponent<GivenProps>;
+type BoxComponentProps = {
+  as?: keyof JSX.IntrinsicElements | React.FunctionComponent<Dict>;
   /** Typed as any because Box can be any HTML or SVG element */
   ref?: any;
 } & RealSystemElementProps;
@@ -23,8 +27,8 @@ type HTMLElementProps = Omit<
 /**
  * All box props
  */
-type BoxProps<GivenProps = Dict> = Partial<HTMLElementProps> &
-  BoxComponentProps<GivenProps> &
-  BoxStyleProps;
+type BoxProps = PropUnion<
+  Partial<HTMLElementProps & BoxComponentProps & BoxStyleProps>
+>;
 
 export type { BoxProps, BoxStyleProps };

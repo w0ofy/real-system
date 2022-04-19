@@ -39,24 +39,22 @@ const toCSSObject: ToCSSObject = (styles) => (props) => {
   return { ...styleProps, ...pseudoProps };
 };
 
-type StyledOptions = {
+type RealSystemStyledOptions = {
   label?: string;
   shouldForwardProp?(propName: PropertyKey): boolean;
   target?: string;
 };
 
-function styled<T extends As>(component: T, options?: StyledOptions) {
+function styled<T extends As>(component: T, options?: RealSystemStyledOptions) {
   return function styledComponent<P extends StyledDict = StyledDict>(
     /** @todo allow passing of multiple args */
     styles: StyleObjectOrFn<P>
   ) {
     const { ...styledOptions } = options ?? {};
 
-    /** @todo fix shouldForwardProp issue with passing of `as` prop, as well as others (e.g. see bug with Select and strict mode) 
     if (!styledOptions.shouldForwardProp) {
-      styledOptions.shouldForwardProp = shouldForwardProp();
+      styledOptions.shouldForwardProp = shouldForwardProp.ifNotStyleProp;
     }
-    */
 
     return _styled(
       component as React.ComponentType<any>,
@@ -65,5 +63,5 @@ function styled<T extends As>(component: T, options?: StyledOptions) {
   };
 }
 
-export type { StyledOptions };
+export type { RealSystemStyledOptions };
 export { styled };

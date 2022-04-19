@@ -20,7 +20,7 @@ import {
  */
 type CSSObject = RecursiveCSSObject<CSSWithMultiValues>;
 
-type CustomProps<P = StyledDict> = {
+type RealSystemCustomProps<P = StyledDict> = {
   /**
    * Override styles with sx
    */
@@ -41,7 +41,7 @@ type InternalRealSystemComponentProps = {
 };
 
 type RealSystemComponentProps<T extends As = any, P = StyledDict> = PropsOf<T> &
-  CustomProps<P> &
+  RealSystemCustomProps<P> &
   React.PropsWithChildren<P> &
   StylishProps;
 
@@ -49,7 +49,7 @@ type RealSystemComponentProps<T extends As = any, P = StyledDict> = PropsOf<T> &
  * @todo Do we need this? Or just RealSystemComponentProps?
  */
 type StyledComponentProps<P = StyledDict> = React.PropsWithChildren<P> &
-  CustomProps<P> &
+  RealSystemCustomProps<P> &
   StyledSystemProps;
 
 type RealSystemComponent<T extends As, P = StyledDict> = ComponentWithAs<
@@ -74,5 +74,6 @@ export type {
   InternalRealSystemComponentProps,
   RealSystemComponent,
   RealSystemComponentProps,
+  RealSystemCustomProps,
   StyleObjectOrFn,
 };

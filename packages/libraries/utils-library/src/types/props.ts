@@ -7,6 +7,8 @@ type As<Props = any> = React.ElementType<Props>;
  */
 type PropsOf<T extends As> = React.ComponentPropsWithoutRef<T>;
 
+type PropUnion<T> = T & { [key: string]: any };
+
 type RealSystemProps = {
   /** data-testid DOM attribute for component. Useful when using react testing library or other testing tools */
   'data-testid'?: string;
@@ -23,4 +25,10 @@ type RealSystemElementProps<T extends As = any> = T extends As
   ? PropsOf<T> & RealSystemProps
   : RealSystemProps;
 
-export type { As, InternalRealSystemProps, PropsOf, RealSystemElementProps };
+export type {
+  As,
+  InternalRealSystemProps,
+  PropsOf,
+  PropUnion,
+  RealSystemElementProps,
+};

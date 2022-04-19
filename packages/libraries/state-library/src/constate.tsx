@@ -1,5 +1,5 @@
 /** Props to Diego Haz https://github.com/diegohaz/constate/blob/master/src/index.tsx
- * Decided to customize his work in order to achieve proper `children` typing on Provider
+ * Decided to customize his work in order to achieve proper `children` typing on Provider (possibly React 18 issue)
  */
 import * as React from 'react';
 
