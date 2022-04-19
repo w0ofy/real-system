@@ -1,6 +1,11 @@
+import { css } from '@emotion/react';
 import _styled, { FunctionInterpolation } from '@emotion/styled';
 
-import { getPseudoProps, getStyleProps } from '../styleProps/index';
+import {
+  getPseudoProps,
+  getStyleProps,
+  isNotStylishProp,
+} from '../styleProps/index';
 
 import type {
   CSSObject,
@@ -8,7 +13,7 @@ import type {
   StyleObjectOrFn,
 } from './styled.types';
 import type { As, StyledDict } from './styled.types.helpers';
-import { shouldForwardProp } from './styled.utils';
+import { objectFilter, shouldForwardProp } from './styled.utils';
 
 type StyleResolverProps = CSSObject & {
   sx?: StyleObjectOrFn;
@@ -36,7 +41,12 @@ const toCSSObject: ToCSSObject = (styles) => (props) => {
   const { sx = {}, ...rest } = props;
   const styleProps = getStyleProps({ ...styles, ...rest, ...sx });
   const pseudoProps = getPseudoProps({ ...styles, ...rest, ...sx });
-  return { ...styleProps, ...pseudoProps };
+  const styledStyles = objectFilter({ ...styles }, (prop) =>
+    isNotStylishProp(prop)
+  );
+
+  console.log(styledStyles);
+  return { ...styledStyles, ...styleProps, ...pseudoProps };
 };
 
 type RealSystemStyledOptions = {

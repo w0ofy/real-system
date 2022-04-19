@@ -3,6 +3,8 @@ import memoize from '@emotion/memoize';
 
 import { STYLISH_PROPS_MAP } from '../styleProps/index';
 
+import { StyledDict } from './styled.types.helpers';
+
 const dataAttr = 'data-';
 const ariaAttr = 'aria-';
 
@@ -43,5 +45,27 @@ const ifNotStyleProp = makeShouldForwardProp();
 shouldForwardProp.ifNotStyleProp = ifNotStyleProp;
 shouldForwardProp.ifValidHTMLProp = ifValidHTMLProp;
 
+type FilterFn<T> = (value: any, key: string, object: T) => boolean;
+
+/**
+ * Returns the items of an object that meet the condition specified in a callback function.
+ *
+ * @param object the object to loop through
+ * @param fn The filter function
+ */
+const objectFilter = <T extends StyledDict>(object: T, fn: FilterFn<T>) => {
+  const result: StyledDict = {};
+
+  Object.keys(object).forEach((key) => {
+    const value = object[key];
+    const shouldPass = fn(value, key, object);
+    if (shouldPass) {
+      result[key] = value;
+    }
+  });
+
+  return result;
+};
+
 export type { ShouldForwardProp };
-export { shouldForwardProp };
+export { objectFilter, shouldForwardProp };
