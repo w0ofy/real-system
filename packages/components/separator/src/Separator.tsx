@@ -64,7 +64,7 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
   function Separator(
     {
       orientation = 'horizontal',
-      borderColor = 'gray-50',
+      borderColor = 'currentColor',
       borderWidth = '1px',
       borderStyle = 'solid',
       ...restProps
