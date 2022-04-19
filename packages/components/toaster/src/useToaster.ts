@@ -41,11 +41,7 @@ const useToaster = function useToaster(): UseToasterReturnedProps {
           if (toast.timeOutId) {
             window.clearTimeout(toast.timeOutId);
           }
-          if (toast.onDismiss) {
-            toast.onDismiss();
-          }
         }
-
         return toast.id !== id;
       })
     );

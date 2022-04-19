@@ -56,7 +56,7 @@ export const Showcase = (args) => {
             description: 'Contact customer support for assistance.',
             onDismiss: () => {
               // eslint-disable-next-line no-console
-              console.log('custom dismiss');
+              alert('The custom dismiss callback was called');
             },
           })
         }>
