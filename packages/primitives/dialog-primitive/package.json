@@ -1,6 +1,6 @@
 {
   "name": "@real-system/dialog-primitive",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Dialog primitive components for real system.",
   "status": "production",
   "main": "lib/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/box-primitive",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "A basic div with style props that should be used to build other components",
   "status": "production",
   "main": "lib/index.js",
@@ -32,9 +32,9 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/styling-library": "^0.0.12",
-    "@real-system/theme-library": "^0.0.18",
-    "@real-system/utils-library": "^0.0.15",
+    "@real-system/styling-library": "^0.0.13",
+    "@real-system/theme-library": "^0.0.19",
+    "@real-system/utils-library": "^0.0.16",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -42,9 +42,9 @@
     "deepmerge": "^4.2.2"
   },
   "devDependencies": {
-    "@real-system/styling-library": "^0.0.12",
-    "@real-system/theme-library": "^0.0.18",
-    "@real-system/utils-library": "^0.0.15",
+    "@real-system/styling-library": "^0.0.13",
+    "@real-system/theme-library": "^0.0.19",
+    "@real-system/utils-library": "^0.0.16",
     "concurrently": "^7.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
