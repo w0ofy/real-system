@@ -1,6 +1,6 @@
 {
   "name": "@real-system/spinner",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Real System Spinner component",
   "status": "production",
   "main": "lib/index.js",
@@ -32,16 +32,16 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box-primitive": "^0.0.16",
-    "@real-system/styling-library": "^0.0.12",
-    "@real-system/utils-library": "^0.0.15",
+    "@real-system/box-primitive": "^0.0.17",
+    "@real-system/styling-library": "^0.0.13",
+    "@real-system/utils-library": "^0.0.16",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@real-system/box-primitive": "^0.0.16",
-    "@real-system/styling-library": "^0.0.12",
-    "@real-system/utils-library": "^0.0.15",
+    "@real-system/box-primitive": "^0.0.17",
+    "@real-system/styling-library": "^0.0.13",
+    "@real-system/utils-library": "^0.0.16",
     "concurrently": "^7.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

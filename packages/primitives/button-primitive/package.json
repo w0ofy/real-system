@@ -1,6 +1,6 @@
 {
   "name": "@real-system/button-primitive",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Button primitive components for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/ariakit-library": "^0.0.5",
+    "@real-system/ariakit-library": "^0.0.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@real-system/ariakit-library": "^0.0.5",
+    "@real-system/ariakit-library": "^0.0.6",
     "concurrently": "^7.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
