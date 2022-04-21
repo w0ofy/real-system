@@ -38,6 +38,18 @@ export const Showcase = (args) => {
         Notify toaster with no timer
       </Button>
       <Button
+        marginBottom={4}
+        colorScheme="blue"
+        onClick={() =>
+          toaster.notify('Successfully installed Real System', {
+            description:
+              'You have now have full access to components that make sense.',
+            onLeave: () => alert('onLeave callback called.'),
+          })
+        }>
+        Notify toaster with onLeave
+      </Button>
+      <Button
         colorScheme="orange"
         marginBottom={4}
         onClick={() =>
@@ -60,7 +72,7 @@ export const Showcase = (args) => {
             },
           })
         }>
-        Danger toaster
+        Danger toaster with onDismiss
       </Button>
       <Button
         marginBottom={4}
@@ -73,7 +85,7 @@ export const Showcase = (args) => {
         }>
         Success toaster
       </Button>
-      <Toaster {...toaster} />
+      <Toaster state={toaster} />
     </Flex>
   );
 };

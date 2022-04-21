@@ -15,39 +15,81 @@ import { makeMdxParameters } from '/.storybook/utils';
 
 <br />
 
-### Style Props
+### Style Props & Styled Function
 
-Any `token` can be used with its associated `scale` by using a style prop. Style props are component props which names correlate to CSS properties.
-All style props can be used with longhand syntax and some props follow shorthand syntax.
+Any `token` can be used with its associated `scale` by using a style prop or wrapping a component/element in `styled`.
+Style props are component props which names correlate to CSS properties. All style props can be used with longhand
+syntax and some props follow shorthand syntax.
 
 ```jsx
 // style prop usage
-<Box padding={5} marginY={2} marginX={3} bgColor="white"></Box>
+import { Box } from '@real-system/box-primitive';
+
+const MyComponent = () => {
+  return <Box padding={5} marginY={2} marginX={3} bgColor="white"></Box>;
+};
+
+// styled usage
+import styled from '@real-system/styling-library';
+
+const MyBox = styled('div')({
+  margin: 2,
+  backgroundColor: 'white-50',
+});
+
+const MyComponent = () => {
+  // since the element was initialized with `styled`, you can now pass style props
+  return <MyBox padding={8}>...</MyBox>;
+};
 ```
 
 ### Getters
 
-If you want to use a `token` outside of style props, you can use the `getToken` style function or `useToken` hook.
-The [getToken](#gettoken) style function was built so tokens can be grabbed from components without requiring the use of style props.
+If you want to use a `token` outside of style props, you can use the `getToken` style function, but this function is not really necessary.
+[getToken](#gettoken) is exposed for rare edge cases or to create **helper functions** instead of **react hooks**; tokens can be grabbed from components without _requiring_ the use of style props.
+
+The `useToken` and `useTokens` hooks are the real keys to success.
 
 ```jsx
-import styled from '@real-system/styling-library';
-import { getToken, useTokens } from '@real-system/theme-library';
-import { Box } from '@real-system/box-primitive';
+// or use `useToken` (s) (although this isn't necessary — see Box example)
+import {
+  useToken,
+  useTokens,
+  useTheme,
+  getToken,
+} from '@real-system/theme-library';
 
-const StyledBox = styled(Box)`
-  margin: ${getToken(2, 'space')};
-  background-color: ${getToken('white')};
-`;
+// use `getToken`
+const getTextColor = (theme, dark) =>
+  getToken(dark ? 'gray-800' : 'gray-500')({ theme });
 
-// or
 const MyComponent = () => {
+  // maybe use `useTheme`
+  const theme = useTheme();
+  const textColor = getTextColor(theme);
+
+  // or simply use `useToken`(s)
   const [black, fivePixelsOrHalfRem] = useTokens({ colors: 'black', space: 5 });
+  const zIndex = useToken(2, 'zIndices');
+
   const styles = {
     backgroundColor: black,
+    color: textColor,
     margin: fivePixelsOrHalfRem,
+    zIndex,
   };
   return <div styles={styles}>...</div>;
+};
+
+// or use `Box`
+import { Box } from '@real-system/box-primitive';
+
+const MyComponent = () => {
+  return (
+    <Box backgroundColor="black-100" margin={5} zIndex={2}>
+      ...
+    </Box>
+  );
 };
 ```
 

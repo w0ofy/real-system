@@ -25,12 +25,15 @@ type ToasterToast = {
    */
   dismissAfter?: number | boolean;
   timeOutId?: number;
+  onLeave?: (timeOutId: number) => void;
 } & Pick<
   ToastProps,
   'status' | 'setFocus' | 'onDismiss' | 'message' | 'description'
 >;
 
 type PushProps = Partial<Omit<ToasterToast, 'timeOutId' | 'message'>>;
+type PushCallbackProps = Omit<PushProps, 'status'>;
+type PushCallback = (message: string, props?: PushCallbackProps) => void;
 
 type UseToasterReturnedProps = {
   /**
@@ -40,37 +43,40 @@ type UseToasterReturnedProps = {
   /**
    * Method used to push a defualt toast (`info`) to the toast stack
    */
-  notify: (message: string, props?: Omit<PushProps, 'status'>) => void;
+  notify: PushCallback;
   /**
    * Method used to push an `danger` toast to the toast stack
    */
-  danger: (message: string, props?: Omit<PushProps, 'status'>) => void;
+  danger: PushCallback;
   /**
    * Method used to push a `warning` toast to the toast stack
    */
-  warning: (message: string, props?: Omit<PushProps, 'status'>) => void;
+  warning: PushCallback;
   /**
    * Method used to push a `success` toast to the toast stack
    */
-  success: (message: string, props?: Omit<PushProps, 'status'>) => void;
+  success: PushCallback;
   /**
    * Method used to remove a toast from the Toaster stack based on its `id`
    */
   pop: (id: ToasterToast['id']) => void;
 };
 
-type ToasterProps = Pick<UseToasterReturnedProps, 'toasts' | 'pop'> & {
-  /** **DO NOT USE.** This is typed here so it's easier to spread `...toaster` props to the Toaster component */
-  danger: any;
-  /** **DO NOT USE.** This is typed here so it's easier to spread `...toaster` props to the Toaster component */
-  warning: any;
-  /** **DO NOT USE.** This is typed here so it's easier to spread `...toaster` props to the Toaster component */
-  success: any;
-  /** **DO NOT USE.** This is typed here so it's easier to spread `...toaster` props to the Toaster component */
-  notify: any;
+type ToasterProps = {
+  state: Pick<UseToasterReturnedProps, 'toasts' | 'pop'> & {
+    /** **DO NOT USE.** This is typed here so it's easier to spread `state={toaster}` props to the Toaster component */
+    danger?: PushCallback;
+    /** **DO NOT USE.** This is typed here so it's easier to spread `state={toaster}` props to the Toaster component */
+    warning?: PushCallback;
+    /** **DO NOT USE.** This is typed here so it's easier to pass `state={toaster}` props to the Toaster component */
+    success?: PushCallback;
+    /** **DO NOT USE.** This is typed here so it's easier to spread `state={toaster}` props to the Toaster component */
+    notify?: PushCallback;
+  };
 };
 
 export type {
+  PushCallback,
   PushProps,
   ToasterProps,
   ToasterToast,

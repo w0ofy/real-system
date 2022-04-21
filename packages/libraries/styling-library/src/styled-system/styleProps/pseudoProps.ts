@@ -45,15 +45,12 @@ type PseudoPropNames = keyof typeof pseudoPropsMap;
 type PseudoProps = {
   [key in PseudoPropNames]?: CSSObject;
 };
-// type PseudoProps = {
-//   [key in PseudoPropNames]?: Partial<
-//     Record<PseudoPropNames | StylePropNames, StyleProps>
-//   >;
-// };
 
-type Props = Record<string, any>;
+type PropUnion<T> = T & { [key: string]: any };
+type Props = PropUnion<{ theme: CSSPropsFromPseudoProps }>;
+type CSSPropsFromPseudoProps = ReturnType<ReturnType<typeof css>>;
 
-const getPseudoProps = (props: Props): ReturnType<typeof css> | Props => {
+const getPseudoProps = (props: Props): CSSPropsFromPseudoProps | Props => {
   const pseudos = Object.keys(props).filter((propName) =>
     propName.startsWith('_')
   ) as Array<PseudoPropNames>;
@@ -62,7 +59,7 @@ const getPseudoProps = (props: Props): ReturnType<typeof css> | Props => {
     return {};
   }
 
-  const pseudoStyles: Props = {};
+  const pseudoStyles: CSSPropsFromPseudoProps = {};
   pseudos.forEach((pseudoProp) => {
     if (pseudoPropsMap[pseudoProp] != null) {
       pseudoStyles[pseudoPropsMap[pseudoProp]] = props[pseudoProp];

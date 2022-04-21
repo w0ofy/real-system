@@ -1,6 +1,6 @@
 import TextareaAutosize from 'react-autosize-textarea';
 
-import styled, { css, getStyleProps } from '@real-system/styling-library';
+import styled from '@real-system/styling-library';
 import { majorScale } from '@real-system/theme-library';
 
 import { TextareaProps } from './types';
