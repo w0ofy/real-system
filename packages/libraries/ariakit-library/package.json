@@ -1,6 +1,6 @@
 {
   "name": "@real-system/ariakit-library",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Ariakit library for real system.",
   "status": "production",
   "main": "lib/index.js",

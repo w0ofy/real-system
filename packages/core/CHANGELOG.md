@@ -1,5 +1,53 @@
 # @real-system/core
 
+## 0.0.38
+
+### Patch Changes
+
+- [#384](https://github.com/bigwoof91/real-system/pull/384) [`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184) Thanks [@bigwoof91](https://github.com/bigwoof91)! - sx prop now works for any css property; separator default color is currentColor
+
+- Updated dependencies [[`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184), [`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184)]:
+  - @real-system/alert@0.0.20
+  - @real-system/aspect-ratio@0.0.7
+  - @real-system/badge@0.0.5
+  - @real-system/button@0.0.36
+  - @real-system/checkbox@0.0.21
+  - @real-system/dialog@0.0.28
+  - @real-system/field@0.0.13
+  - @real-system/flex@0.0.28
+  - @real-system/icon@0.0.35
+  - @real-system/input@0.0.34
+  - @real-system/link@0.0.6
+  - @real-system/menu@0.0.7
+  - @real-system/popover@0.0.11
+  - @real-system/radio-group@0.0.14
+  - @real-system/select@0.0.2
+  - @real-system/separator@0.0.3
+  - @real-system/spinner@0.0.33
+  - @real-system/textarea@0.0.18
+  - @real-system/toaster@0.0.19
+  - @real-system/tooltip@0.0.12
+  - @real-system/truncate@0.0.13
+  - @real-system/typography@0.0.35
+  - @real-system/visually-hidden@0.0.31
+  - @real-system/a11y-library@0.0.5
+  - @real-system/animation-library@0.0.11
+  - @real-system/ariakit-library@0.0.7
+  - @real-system/state-library@0.0.10
+  - @real-system/styling-library@0.0.14
+  - @real-system/theme-library@0.0.20
+  - @real-system/utils-library@0.0.17
+  - @real-system/alert-primitive@0.0.9
+  - @real-system/box-primitive@0.0.18
+  - @real-system/button-primitive@0.0.28
+  - @real-system/dialog-primitive@0.0.20
+  - @real-system/menu-primitive@0.0.2
+  - @real-system/popover-primitive@0.0.2
+  - @real-system/portal-primitive@0.0.9
+  - @real-system/select-primitive@0.0.2
+  - @real-system/separator-primitive@0.0.2
+  - @real-system/tooltip-primitive@0.0.2
+
 ## 0.0.37
 
 ### Patch Changes
