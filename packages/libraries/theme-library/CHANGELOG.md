@@ -1,5 +1,15 @@
 # @real-system/theme
 
+## 0.0.20
+
+### Patch Changes
+
+- [#384](https://github.com/bigwoof91/real-system/pull/384) [`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184) Thanks [@bigwoof91](https://github.com/bigwoof91)! - sx prop now works for any css property; separator default color is currentColor
+
+- Updated dependencies [[`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184)]:
+  - @real-system/styling-library@0.0.14
+  - @real-system/utils-library@0.0.17
+
 ## 0.0.19
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @real-system/popover
 
+## 0.0.11
+
+### Patch Changes
+
+- [#384](https://github.com/bigwoof91/real-system/pull/384) [`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184) Thanks [@bigwoof91](https://github.com/bigwoof91)! - sx prop now works for any css property; separator default color is currentColor
+
+- Updated dependencies [[`6c01ac6`](https://github.com/bigwoof91/real-system/commit/6c01ac63c7e88bdb724039e44c58fbfb84f2a184)]:
+  - @real-system/button@0.0.36
+  - @real-system/flex@0.0.28
+  - @real-system/typography@0.0.35
+  - @real-system/animation-library@0.0.11
+  - @real-system/styling-library@0.0.14
+  - @real-system/theme-library@0.0.20
+  - @real-system/utils-library@0.0.17
+  - @real-system/box-primitive@0.0.18
+  - @real-system/popover-primitive@0.0.2
+
 ## 0.0.10
 
 ### Patch Changes
