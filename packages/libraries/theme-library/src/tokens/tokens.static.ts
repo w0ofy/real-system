@@ -194,7 +194,6 @@ const letterSpacings = {
   code: '0.3px',
 };
 
-console.log(patchScale(11));
 const lineHeights = {
   'line-height-1': patchScale(5),
   'line-height-2': patchScale(6),

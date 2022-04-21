@@ -20,7 +20,7 @@ type StyleResolverProps = CSSObject & {
   theme: any;
 };
 
-type GetStyleObject = FunctionInterpolation<StyleResolverProps>;
+type GetCSSObject = FunctionInterpolation<StyleResolverProps>;
 
 /**
  * Style resolver function that manages how style props are merged
@@ -35,18 +35,17 @@ type GetStyleObject = FunctionInterpolation<StyleResolverProps>;
  * behaviors. Right now, the `sx` prop has the highest priority so the resolved
  * fontSize will be `40px`
  */
-type ToCSSObject = (styles: StyleObjectOrFn) => GetStyleObject;
+type ToCSSObject = (styles: StyleObjectOrFn) => GetCSSObject;
 
-const toCSSObject: ToCSSObject = (styles) => (props) => {
+const toCSSObject: ToCSSObject = (styledStyles) => (props) => {
   const { sx = {}, ...rest } = props;
-  const styleProps = getStyleProps({ ...styles, ...rest, ...sx });
-  const pseudoProps = getPseudoProps({ ...styles, ...rest, ...sx });
-  const styledStyles = objectFilter({ ...styles }, (prop) =>
-    isNotStylishProp(prop)
-  );
 
-  console.log(styledStyles);
-  return { ...styledStyles, ...styleProps, ...pseudoProps };
+  const allProps = { ...styledStyles, ...rest, ...sx };
+  const styleProps = getStyleProps(allProps);
+  const pseudoProps = getPseudoProps(allProps);
+  const styles = objectFilter({ ...styledStyles, ...sx }, isNotStylishProp);
+
+  return { ...styles, ...styleProps, ...pseudoProps };
 };
 
 type RealSystemStyledOptions = {

@@ -121,27 +121,35 @@ const theme = {
 Scales contain `tokens` aka design atoms. For example, `gray-50` is a token and it lives in the `colors` scale.
 
 Any `token` can be used with its associated `scale` by using a style prop. If you want to use a `token`
-outside of style props, you can use the `getToken` style function to make this easy. `getToken` is also
-"hookified" into `useToken` to make it easy to use tokens within in function components.
+outside of style props or components, you can use the `getToken` style function. But `getToken` is
+"hookified" into `useToken` to make it easy to use tokens within in function components. Real System's `styled`
+API is automagically hooked up to scales.
+
+See [Design Token](/docs/real-system-theming-token-system--page) docs for more details
 
 ```jsx
 // style prop usage
 <Box p={5} m={2} backgroundColor="white"></Box>;
 
-// `getToken` usage
-import { getToken, useTheme } from '@real-system/theme-library';
+// `styled` usage
+import styled from '@real-system/styling-library';
 
-const StyledBox = styled(Box)`
-  margin: ${getToken(2, 'space')};
-  background-color: ${getToken('white')};
-`;
+const StyledBox = styled(Box)({
+  margin: 2,
+  backgroundColor: 'white-50'
+})
 
-// `useTokens` usage
+// `useTokens` and `useToken` usage
+import { useTokens, useToken } from '@real-system/theme-library';
+
 const MyComponent = () => {
-  const [black, fivePixelsOrHalfRem] = useTokens({ colors: 'black', space: 5 });
+  const zIndex = useToken(1, 'zIndices')
+  const [black200, white200, fivePixelsOrHalfRem] = useTokens({ colors: 'black-200', colors: 'white-200' space: 5 });
   const styles = {
-    backgroundColor: black,
+    color: white200,
+    backgroundColor: black200,
     margin: fivePixelsOrHalfRem,
+    zIndex,
   };
   return <div styles={styles}>...</div>;
 };

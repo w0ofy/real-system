@@ -22,7 +22,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
 
   useEffect(() => {
     if (setFocus && dismissRef.current) {
-      dismissRef.current.focus({ preventScroll: true });
+      dismissRef.current?.focus({ preventScroll: true });
     }
   }, [setFocus]);
 

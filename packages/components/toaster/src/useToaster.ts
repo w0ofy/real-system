@@ -2,7 +2,12 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { uid } from '@real-system/utils-library';
 
-import type { PushProps, ToasterToast, UseToasterReturnedProps } from './types';
+import type {
+  PushCallback,
+  PushProps,
+  ToasterToast,
+  UseToasterReturnedProps,
+} from './types';
 
 const isValidInteger = (dismissAfter: unknown) =>
   dismissAfter != null && Number.isInteger(dismissAfter);
@@ -40,12 +45,9 @@ const useToaster = function useToaster(): UseToasterReturnedProps {
         if (toast.id === id) {
           if (toast.timeOutId) {
             window.clearTimeout(toast.timeOutId);
-          }
-          if (toast.onDismiss) {
-            toast.onDismiss();
+            toast.onLeave && toast.onLeave(toast.timeOutId);
           }
         }
-
         return toast.id !== id;
       })
     );
@@ -90,19 +92,19 @@ const useToaster = function useToaster(): UseToasterReturnedProps {
     [toasts]
   );
 
-  const notify = useCallback(
+  const notify: PushCallback = useCallback(
     (message, props = {}) => push(message, { ...props, status: 'info' }),
     [push]
   );
-  const danger = useCallback(
+  const danger: PushCallback = useCallback(
     (message, props = {}) => push(message, { ...props, status: 'danger' }),
     [push]
   );
-  const warning = useCallback(
+  const warning: PushCallback = useCallback(
     (message, props = {}) => push(message, { ...props, status: 'warning' }),
     [push]
   );
-  const success = useCallback(
+  const success: PushCallback = useCallback(
     (message, props = {}) => push(message, { ...props, status: 'success' }),
     [push]
   );
