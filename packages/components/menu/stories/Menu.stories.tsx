@@ -36,7 +36,7 @@ export default {
   },
 } as Meta;
 
-export const Default = (args) => (
+export const Default = () => (
   <Box height="24rem">
     <Menu>
       <MenuButton variant="minimal">
@@ -75,7 +75,7 @@ export const Default = (args) => (
   </Box>
 );
 
-export const MenuGroups = (args) => (
+export const MenuGroups = () => (
   <Box height="24rem">
     <Menu>
       <MenuButton variant="minimal">
@@ -103,7 +103,7 @@ export const MenuGroups = (args) => (
   </Box>
 );
 
-export const CheckboxMenu = (args) => {
+export const CheckboxMenu = () => {
   const [values, setValues] = useState({
     watching: ['issues'],
   });

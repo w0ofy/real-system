@@ -59,7 +59,7 @@ export const CheckboxGroup = (args) => {
   );
 };
 
-export const Indeterminate = (args) => {
+export const Indeterminate = () => {
   const [checkedItems, setCheckedItems] = React.useState(['associate']);
 
   const values = ['principle', 'staff', 'senior', 'mid', 'associate'];

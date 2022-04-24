@@ -35,4 +35,8 @@ module.exports = {
       isolatedModules: true,
     },
   },
+  watchPlugins: [
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
 };

@@ -23,7 +23,7 @@ export const Default = (args) => (
   </Box>
 );
 
-export const Showcase = (args) => (
+export const Showcase = () => (
   <Flex width="100%" vertical>
     <Flex vertical w="100%" borderColor="weak" gap={4} mb={4}>
       <Heading as="h2">Horizontal Separator for Content</Heading>

@@ -32,6 +32,7 @@ const useToaster = function useToaster(): UseToasterReturnedProps {
         }
       });
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const pop = (id: ToasterToast['id']): void => {
