@@ -31,12 +31,12 @@ type CreateShouldForwardProp = ReturnType<typeof makeShouldForwardProp>;
  * Function with attached methods for selecting certain kinds of props that should or should not be forwarded to a component's DOM Element.
  * @default ifNotStyleProp Forward all props except style props
  */
-interface ShouldForwardProp extends CreateShouldForwardProp {
+type ShouldForwardProp = CreateShouldForwardProp & {
   /** Forward all props except style props */
   ifNotStyleProp: typeof ifNotStyleProp;
   /** Only forward html-valid props, as defined in `@emotion/is-prop-valid`. `data-*` and `aria-*` are also forwarded. */
   ifValidHTMLProp: typeof ifValidHTMLProp;
-}
+};
 
 const shouldForwardProp = makeShouldForwardProp() as ShouldForwardProp;
 const ifValidHTMLProp = makeShouldForwardProp<true>(true);

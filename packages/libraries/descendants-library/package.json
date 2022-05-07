@@ -1,8 +1,9 @@
 {
-  "name": "@real-system/a11y-library",
-  "version": "0.0.5",
-  "description": "React aria library for real system.",
-  "status": "production",
+  "name": "@real-system/descendants-library",
+  "version": "0.0.0",
+  "description": "Descendant node element manager for real system.",
+  "status": "development",
+  "private": true,
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
   "module": "lib/index.esm.js",
@@ -10,6 +11,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "NODE_ENV=production node ./tools/build.js && yarn types",
+    "build:js": "NODE_ENV=production node ./tools/build.js",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
     "types": "tsc"
@@ -20,7 +22,7 @@
   },
   "keywords": [
     "real-system",
-    "react-aria"
+    "descendants-library"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -29,22 +31,19 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "react": "^18.0.0"
+    "@real-system/a11y-library": "^0.0.5",
+    "@real-system/state-library": "^0.0.10",
+    "@real-system/utils-library": "^0.0.17",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@real-system/a11y-library": "^0.0.5",
+    "@real-system/state-library": "^0.0.10",
+    "@real-system/utils-library": "^0.0.17",
     "concurrently": "^7.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typescript": "^4.6.3"
-  },
-  "dependencies": {
-    "@react-aria/checkbox": "^3.3.3",
-    "@react-aria/focus": "^3.5.4",
-    "@react-aria/interactions": "^3.8.3",
-    "@react-aria/radio": "^3.1.10",
-    "@react-stately/checkbox": "^3.0.6",
-    "@react-stately/radio": "^3.3.5",
-    "@react-stately/toggle": "^3.2.6",
-    "@react-types/checkbox": "^3.2.6",
-    "@react-types/radio": "^3.1.5",
-    "@react-types/shared": "^3.11.2"
   }
 }
