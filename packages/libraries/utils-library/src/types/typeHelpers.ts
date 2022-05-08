@@ -4,6 +4,10 @@ export type UnionStringArray<T extends Readonly<string[]>> = T[number];
 
 export type Func<T = any> = (...args: T[]) => any;
 
+export type FuncArguments<T extends Func> = T extends (...args: infer R) => any
+  ? R
+  : never;
+
 export type Dict<T = any> = Record<PropertyKey, T>;
 
 export type Booleanish = boolean | 'true' | 'false';

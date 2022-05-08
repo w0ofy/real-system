@@ -5,6 +5,9 @@ type UseInteractionsParams = {
   isDisabled?: boolean;
 };
 
+/**
+ * A hook that exposes props and flags for `focusWithin` `hover` and `press` interaction states.
+ */
 const useInteractions = ({ isDisabled }: UseInteractionsParams) => {
   const [isFocusedWithin, setFocusedWithin] = useState(false);
 

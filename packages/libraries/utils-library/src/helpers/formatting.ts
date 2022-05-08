@@ -1,5 +1,14 @@
-import { _logger } from '../private';
+import { _logger } from '../private/_logger';
 import type { KebabCase } from '../types/kebabCase';
+
+const capitalize = <T extends string = string>(str: string): T => {
+  if (!str || typeof str !== 'string') {
+    _logger.warn('utils/capitalize', 'capitalize requires a string argument');
+    return '' as T;
+  }
+  const lower = str.toLowerCase();
+  return (str.charAt(0).toUpperCase() + lower.slice(1)) as T;
+};
 
 const kebabCase = <S extends string>(str: S): KebabCase<S> => {
   if (!str || typeof str !== 'string') {
@@ -16,4 +25,4 @@ const kebabCase = <S extends string>(str: S): KebabCase<S> => {
     .toLowerCase() as KebabCase<S>;
 };
 
-export { kebabCase };
+export { capitalize, kebabCase };

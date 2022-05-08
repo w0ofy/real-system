@@ -61,6 +61,13 @@ function isNull(value: any): value is null {
   return value == null;
 }
 
+const REACT_TEXT = {
+  string: true,
+  number: true,
+};
+
+const isReactText = (value: any) => !!REACT_TEXT[typeof value];
+
 // String assertions
 function isString(value: any): value is string {
   return Object.prototype.toString.call(value) === '[object String]';
@@ -88,9 +95,11 @@ export {
   isFunction,
   isNotEmptyObject,
   isNotNumber,
+  isNull,
   isNumber,
   isNumeric,
   isObject,
+  isReactText,
   isRefObject,
   isString,
   isUndefined,

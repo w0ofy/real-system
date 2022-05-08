@@ -12,7 +12,7 @@ export type InputProps = Omit<InputBoxProps, 'children' | 'type'> & {
   placeholder?: string;
   required?: boolean;
   value?: string;
-  type: InputBoxTypes;
+  type?: InputBoxTypes;
   size?: never;
   style?: never;
   width?: never;

@@ -10,9 +10,7 @@ import {
 
 type AspectRatioOptions = {
   /**
-   * The aspect ratio of the container i.e.
-   *
-   * `21/9`, `16/9`, `9/16`, `4/3`, `1.85/1`
+   * The aspect ratio of the container i.e. `21/9`, `16/9`, `9/16`, `4/3`, `1.85/1`
    */
   ratio?: ResponsiveValue<number>;
   children?: React.ReactChild;

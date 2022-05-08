@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { Box } from '@real-system/box-primitive';
-import { useUID } from '@real-system/utils-library';
 
 import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';
@@ -30,7 +29,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
   ref
 ) {
   const sizeStyles = STYLES_BY_SIZE[size];
-  const titleId = useUID();
+  const titleId = React.useId();
   const isVisible = useDelay(delay);
   return (
     <Box

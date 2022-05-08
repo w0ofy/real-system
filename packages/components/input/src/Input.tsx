@@ -13,7 +13,7 @@ type TypeProps = {
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
-    type,
+    type = 'text',
     readOnly,
     disabled,
     error,

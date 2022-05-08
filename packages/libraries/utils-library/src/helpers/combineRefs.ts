@@ -1,25 +1,40 @@
-import { MutableRefObject, RefCallback } from 'react';
+import { _logger } from '../private';
 
-type Ref<T> = MutableRefObject<T | null> | RefCallback<T | null> | null;
-type Refs<T> = Ref<T>[];
+import { isFunction } from './assertion';
 
-function combineRefs<T>(...refs: Refs<T>): Ref<T> {
-  return function combinedRefCallback(el) {
-    for (let i = 0; i < refs.length; i++) {
-      const ref = refs[i];
+type ReactRef<T> =
+  | React.Ref<T>
+  | React.RefObject<T>
+  | React.MutableRefObject<T>;
 
-      if (typeof ref === 'function') {
-        ref(el);
-      } else if (typeof ref === 'object' && ref !== null && ref.current) {
-        ref.current = el;
-      } else if (ref === null) {
-        // No-op
-      } else {
-        console.warn(
-          '[react-combine-refs] Ref argument is neither an object with a .current property or a function. This is a no-op.'
-        );
-      }
-    }
+/**
+ * Assign a value to a ref callback or object
+ */
+function assignRef<T = any>(ref: ReactRef<T> | undefined, value: T) {
+  if (ref == null) return;
+
+  if (isFunction(ref)) {
+    ref(value);
+    return;
+  }
+
+  try {
+    // @ts-ignore
+    ref.current = value;
+  } catch (error) {
+    _logger.throw.error(
+      'utils',
+      `Cannot assign value '${value}' to ref '${ref}'`
+    );
+  }
+}
+
+/**
+ * Combine many React refs into a single ref fn
+ */
+function combineRefs<T>(...refs: (ReactRef<T> | undefined)[]) {
+  return (node: T | null) => {
+    refs.forEach((ref) => assignRef(ref, node));
   };
 }
 
