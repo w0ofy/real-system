@@ -22,7 +22,7 @@ export type InputBoxProps = {
   disabled?: boolean;
   error?: boolean;
   readOnly?: boolean;
-  type?: InputBoxTypes;
+  type: InputBoxTypes;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   addonProps?: Omit<AddonProps, 'children'>;

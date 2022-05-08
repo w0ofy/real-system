@@ -11,6 +11,7 @@
 /button
 /button-primitive
 /checkbox
+/descendants-library
 /dialog
 /dialog-primitive
 /field
@@ -20,6 +21,7 @@
 /link
 /menu
 /menu-primitive
+/pin-input
 /popover
 /popover-primitive
 /portal-primitive
