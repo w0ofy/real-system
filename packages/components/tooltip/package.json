@@ -38,7 +38,7 @@
     "@real-system/typography": "^0.0.35",
     "@real-system/utils-library": "^0.0.17",
     "react": "^18.1.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@real-system/animation-library": "^0.0.11",

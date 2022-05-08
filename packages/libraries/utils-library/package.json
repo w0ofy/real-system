@@ -32,7 +32,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.1.0"
   },
   "dependencies": {
     "chalk": "^4.1.2",

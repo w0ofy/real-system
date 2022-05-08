@@ -3930,7 +3930,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -3960,7 +3960,7 @@ __metadata:
     "@real-system/typography": ^0.0.35
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -3987,7 +3987,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4009,7 +4009,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4031,7 +4031,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4052,7 +4052,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4068,7 +4068,7 @@ __metadata:
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4090,7 +4090,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4122,7 +4122,7 @@ __metadata:
     "@real-system/utils-library": ^0.0.17
     "@real-system/visually-hidden": ^0.0.31
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4179,7 +4179,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4199,7 +4199,7 @@ __metadata:
     "@real-system/state-library": ^0.0.10
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4214,7 +4214,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4248,7 +4248,7 @@ __metadata:
     "@real-system/typography": ^0.0.35
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4274,7 +4274,7 @@ __metadata:
     "@real-system/typography": ^0.0.35
     "@real-system/utils": ^0.0.11
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4296,7 +4296,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4319,7 +4319,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4343,7 +4343,7 @@ __metadata:
     "@real-system/utils-library": ^0.0.17
     "@real-system/visually-hidden": ^0.0.31
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4367,7 +4367,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4383,7 +4383,7 @@ __metadata:
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4415,7 +4415,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4439,7 +4439,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4455,7 +4455,7 @@ __metadata:
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4487,7 +4487,7 @@ __metadata:
     "@real-system/typography": ^0.0.35
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4502,7 +4502,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4534,7 +4534,7 @@ __metadata:
     "@real-system/utils-library": ^0.0.17
     "@real-system/visually-hidden": ^0.0.31
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4550,7 +4550,7 @@ __metadata:
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4576,7 +4576,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4592,7 +4592,7 @@ __metadata:
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4616,7 +4616,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4636,7 +4636,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.14
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4671,7 +4671,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4696,7 +4696,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4714,7 +4714,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.14
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4742,7 +4742,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4758,7 +4758,7 @@ __metadata:
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4786,7 +4786,7 @@ __metadata:
     "@real-system/typography": ^0.0.35
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4808,7 +4808,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.20
     "@real-system/utils-library": ^0.0.17
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4830,7 +4830,7 @@ __metadata:
     "@real-system/utils-library": ^0.0.17
     "@real-system/visually-hidden": ^0.0.31
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4848,7 +4848,7 @@ __metadata:
     typescript: ^4.6.3
   peerDependencies:
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4882,7 +4882,7 @@ __metadata:
     "@real-system/box-primitive": 0.0.18
     "@real-system/styling-library": ^0.0.14
     react: ^18.1.0
-    react-dom: ^18.0.0
+    react-dom: ^18.1.0
   languageName: unknown
   linkType: soft
 

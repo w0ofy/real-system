@@ -37,7 +37,7 @@
     "@real-system/typography": "^0.0.35",
     "@real-system/utils": "^0.0.11",
     "react": "^18.1.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@real-system/box-primitive": "^0.0.18",
