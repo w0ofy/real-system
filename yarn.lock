@@ -3451,27 +3451,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reach/alert@npm:^0.16.0":
-  version: 0.16.0
-  resolution: "@reach/alert@npm:0.16.0"
+"@reach/alert@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@reach/alert@npm:0.17.0"
   dependencies:
-    "@reach/utils": 0.16.0
-    "@reach/visually-hidden": 0.16.0
+    "@reach/utils": 0.17.0
+    "@reach/visually-hidden": 0.17.0
     prop-types: ^15.7.2
     tslib: ^2.3.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 1f67c66dc71ef45f9f46e732309e5bc2d8acad4ea24d60705f8abc8771604509573339ec96cdd3ce81c64bfa922162bf02398cb0f9b9bf8c0231b35c5732024c
+  checksum: 5e0b53f3bf473aa20ce18e0f5808012488c298ca5cb182126f1e78197e385b0d2b990fd9ba139de7cd1a9fc0bc6ecec36b91a2cce8fb3ca99d5164a92cb39b14
   languageName: node
   linkType: hard
 
-"@reach/dialog@npm:^0.16.2":
-  version: 0.16.2
-  resolution: "@reach/dialog@npm:0.16.2"
+"@reach/dialog@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@reach/dialog@npm:0.17.0"
   dependencies:
-    "@reach/portal": 0.16.2
-    "@reach/utils": 0.16.0
+    "@reach/portal": 0.17.0
+    "@reach/utils": 0.17.0
     prop-types: ^15.7.2
     react-focus-lock: ^2.5.2
     react-remove-scroll: ^2.4.3
@@ -3479,47 +3479,47 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 1478ad3c4c0a86c30b02f4360fb06ead5b2e894c5e6ab96523970d45272298e2e31cb5278f861e4f92a90bcab0a30f4bac5572ab534f56529145619e7675497f
+  checksum: 720abec5376d8e8034b3ebbfbb98273cf00e46e72cb387e56bf966d1d230ad13ad2d37363d406c52a5af745cea51069987ab60142a5828b85297d128a9ec01c1
   languageName: node
   linkType: hard
 
-"@reach/portal@npm:0.16.2, @reach/portal@npm:^0.16.2":
-  version: 0.16.2
-  resolution: "@reach/portal@npm:0.16.2"
+"@reach/portal@npm:0.17.0, @reach/portal@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@reach/portal@npm:0.17.0"
   dependencies:
-    "@reach/utils": 0.16.0
+    "@reach/utils": 0.17.0
     tiny-warning: ^1.0.3
     tslib: ^2.3.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 7413dcd169cfb9854dd0d3a01f811ec19ef170558fcbd00118d676fc02c197d1c0bce1d1357508879d4775169561d103e13a8e4d74cc677eb0037cc7b04f7a1e
+  checksum: 2e5874cdfd021304d28b527a00d95da84ca98453a5211f816e26b974c2bd1b9837855989f8ab10eeeecfa384b34e21afab43f81dea784aca079aab94bf3f4755
   languageName: node
   linkType: hard
 
-"@reach/utils@npm:0.16.0":
-  version: 0.16.0
-  resolution: "@reach/utils@npm:0.16.0"
+"@reach/utils@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@reach/utils@npm:0.17.0"
   dependencies:
     tiny-warning: ^1.0.3
     tslib: ^2.3.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 36bc0eb41a71798eb6186b23de265ba709e51dae5bf214fb8505c66bb3f2e6a41bb2401457350436ba89ca9e3a50f93a04fe7c33d15648ce11e568a85622d770
+  checksum: b9ee31b5d07e7f204f3605be3fa45448c9817937a3364d894054c57de9113d417014019d21ad895aebf848a43c20988924d069ba926c0cb20d6f2e8654d7a11e
   languageName: node
   linkType: hard
 
-"@reach/visually-hidden@npm:0.16.0":
-  version: 0.16.0
-  resolution: "@reach/visually-hidden@npm:0.16.0"
+"@reach/visually-hidden@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@reach/visually-hidden@npm:0.17.0"
   dependencies:
     prop-types: ^15.7.2
     tslib: ^2.3.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: e2af8978857640dcf031e1942da397b15dfbddbd3bce2d406e923cd9947f07c8beb18e4ae399f4eea34e8f1390a2a8327a4220113a9682771f86ea32a9778c8b
+  checksum: 8b665ee5740dbd616bcd5b5dd5e3a3e5f2b3984819bb1dc20c5ec11690523c86eeb8b28254b193d5ac9261bc25341287229185bc0a4591e10182cc80ed2882bc
   languageName: node
   linkType: hard
 
@@ -3913,7 +3913,7 @@ __metadata:
     "@react-types/radio": ^3.1.5
     "@react-types/shared": ^3.11.2
     concurrently: ^7.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.0.0
   languageName: unknown
@@ -3923,11 +3923,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/alert-primitive@workspace:packages/primitives/alert-primitive"
   dependencies:
-    "@reach/alert": ^0.16.0
+    "@reach/alert": ^0.17.0
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -3949,7 +3949,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/alert-primitive": ^0.0.9
     "@real-system/button": ^0.0.36
@@ -3970,7 +3970,7 @@ __metadata:
   dependencies:
     concurrently: ^7.1.0
     react-spring: ^9.4.4
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.0.0
   languageName: unknown
@@ -3984,7 +3984,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4002,7 +4002,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4024,7 +4024,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4046,7 +4046,7 @@ __metadata:
     deepmerge: ^4.2.2
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/styling-library": ^0.0.14
     "@real-system/theme-library": ^0.0.20
@@ -4064,7 +4064,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
@@ -4083,7 +4083,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/button-primitive": ^0.0.28
     "@real-system/styling-library": ^0.0.14
@@ -4110,7 +4110,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.18
@@ -4176,7 +4176,7 @@ __metadata:
     "@real-system/visually-hidden": ^0.0.31
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4193,7 +4193,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.5
     "@real-system/state-library": ^0.0.10
@@ -4207,11 +4207,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/dialog-primitive@workspace:packages/primitives/dialog-primitive"
   dependencies:
-    "@reach/dialog": ^0.16.2
+    "@reach/dialog": ^0.17.0
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4235,7 +4235,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
     "@real-system/box-primitive": ^0.0.18
@@ -4265,7 +4265,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/flex": ^0.0.28
@@ -4289,7 +4289,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4312,7 +4312,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4335,7 +4335,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4359,7 +4359,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/icon": ^0.0.35
@@ -4379,7 +4379,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
@@ -4403,7 +4403,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
     "@real-system/box-primitive": ^0.0.18
@@ -4431,7 +4431,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.5
     "@real-system/state-library": ^0.0.10
@@ -4451,7 +4451,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
@@ -4475,7 +4475,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
     "@real-system/box-primitive": ^0.0.18
@@ -4495,11 +4495,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/portal-primitive@workspace:packages/primitives/portal-primitive"
   dependencies:
-    "@reach/portal": ^0.16.2
+    "@reach/portal": ^0.17.0
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4522,7 +4522,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.5
     "@real-system/box-primitive": ^0.0.18
@@ -4546,7 +4546,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
@@ -4567,7 +4567,7 @@ __metadata:
     concurrently: ^7.0.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/select-primitive": ^0.0.2
@@ -4588,7 +4588,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
@@ -4608,7 +4608,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/separator-primitive": ^0.0.2
@@ -4630,7 +4630,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4646,7 +4646,7 @@ __metadata:
   dependencies:
     concurrently: ^7.1.0
     constate: ^3.3.2
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.0.0
   languageName: unknown
@@ -4668,7 +4668,7 @@ __metadata:
     react: ^18.1.0
     react-dom: ^18.1.0
     styled-system: 5.1.5
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4688,7 +4688,7 @@ __metadata:
     react: ^18.1.0
     react-autosize-textarea: ^7.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/input": ^0.0.34
@@ -4709,7 +4709,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/styling-library": ^0.0.14
     "@real-system/utils-library": ^0.0.17
@@ -4732,7 +4732,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/alert": ^0.0.20
     "@real-system/animation-library": ^0.0.11
@@ -4754,7 +4754,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.7
     react: ^18.1.0
@@ -4776,7 +4776,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
     "@real-system/box-primitive": ^0.0.18
@@ -4801,7 +4801,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4823,7 +4823,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": ^0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -4845,7 +4845,7 @@ __metadata:
     react: ^18.1.0
     react-dom: ^18.1.0
     react-uid: ^2.3.1
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4877,7 +4877,7 @@ __metadata:
     concurrently: ^7.1.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: 4.6.4
   peerDependencies:
     "@real-system/box-primitive": 0.0.18
     "@real-system/styling-library": ^0.0.14
@@ -21768,7 +21768,7 @@ __metadata:
     storybook-addon-playroom: ^3.0.0
     terser: ^5.13.1
     ts-jest: ^28.0.1
-    typescript: ^4.6.4
+    typescript: 4.6.4
   languageName: unknown
   linkType: soft
 
@@ -24691,17 +24691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.3.2, typescript@npm:^4.4.3, typescript@npm:^4.6.3":
-  version: 4.6.3
-  resolution: "typescript@npm:4.6.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 255bb26c8cb846ca689dd1c3a56587af4f69055907aa2c154796ea28ee0dea871535b1c78f85a6212c77f2657843a269c3a742d09d81495b97b914bf7920415b
-  languageName: node
-  linkType: hard
-
-"typescript@npm:^4.6.4":
+"typescript@npm:4.6.4":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -24711,23 +24701,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.3.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
+"typescript@npm:^4.3.2, typescript@npm:^4.4.3":
   version: 4.6.3
-  resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=ddd1e8"
+  resolution: "typescript@npm:4.6.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: fe6bdc1afb2f145ddb7b0a3a31f96352209f6a5704d97f038414ea22ff9d8dd42f32cfb6652e30458d7d958d2d4e85de2df11c574899c6f750a6b3c0e90a3a76
+  checksum: 255bb26c8cb846ca689dd1c3a56587af4f69055907aa2c154796ea28ee0dea871535b1c78f85a6212c77f2657843a269c3a742d09d81495b97b914bf7920415b
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=ddd1e8"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 8cff08bf66d9ecfbf9fcc5edde04a5a7923e6cac3b21d99b4e9a06973bf5bd7f9a83ec7eed24129c1b9e13fd861de8c1070110d4b9ce9f18ab57c6999e9c9a6f
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.3.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
+  version: 4.6.3
+  resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=ddd1e8"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: fe6bdc1afb2f145ddb7b0a3a31f96352209f6a5704d97f038414ea22ff9d8dd42f32cfb6652e30458d7d958d2d4e85de2df11c574899c6f750a6b3c0e90a3a76
   languageName: node
   linkType: hard
 
