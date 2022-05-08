@@ -37,7 +37,7 @@
     "@real-system/styling-library": "^0.0.14",
     "@real-system/utils-library": "^0.0.17",
     "@real-system/visually-hidden": "^0.0.31",
-    "react": "^18.0.0",
+    "react": "^18.1.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
@@ -46,8 +46,8 @@
     "@real-system/utils-library": "^0.0.17",
     "@real-system/visually-hidden": "^0.0.31",
     "concurrently": "^7.1.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "typescript": "^4.6.3"
   }
 }

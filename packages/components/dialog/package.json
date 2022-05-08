@@ -39,7 +39,7 @@
     "@real-system/theme-library": "^0.0.20",
     "@real-system/typography": "^0.0.35",
     "@real-system/utils-library": "^0.0.17",
-    "react": "^18.0.0",
+    "react": "^18.1.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
@@ -54,8 +54,8 @@
     "@real-system/typography": "^0.0.35",
     "@real-system/utils-library": "^0.0.17",
     "concurrently": "^7.1.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "typescript": "^4.6.3"
   }
 }

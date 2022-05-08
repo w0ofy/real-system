@@ -15,6 +15,7 @@ export * from '@real-system/input';
 export * from '@real-system/link';
 export * from '@real-system/menu';
 export * from '@real-system/menu-primitive';
+export * from '@real-system/pin-input';
 export * from '@real-system/popover';
 export * from '@real-system/popover-primitive';
 export * from '@real-system/portal-primitive';
