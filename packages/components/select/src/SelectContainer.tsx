@@ -79,6 +79,7 @@ const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
       <Box
         display="flex"
         flexDirection="column"
+        width="100%"
         {...spreadStyleProps(restProps)}
         ref={ref}>
         <SelectContextProvider state={{ ...state, error }}>

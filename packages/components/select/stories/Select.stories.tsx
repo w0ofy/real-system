@@ -28,7 +28,7 @@ export const Default = (args) => {
     <SelectContainer {...args} disabled>
       <Label>Select a fruit</Label>
       <Select maxW="20rem">
-        <SelectItem value="Apple" />
+        <SelectItem value="Apple">Apple (child as label)</SelectItem>
         <SelectItem value="Grape" disabled />
         <SelectItem value="Melon" />
       </Select>
@@ -36,7 +36,7 @@ export const Default = (args) => {
   );
 };
 
-export const SelctGroup = (args) => {
+export const SelectGroupStory = (args) => {
   return (
     <SelectContainer>
       <Label>Select Groups</Label>
@@ -58,3 +58,5 @@ export const SelctGroup = (args) => {
     </SelectContainer>
   );
 };
+
+SelectGroupStory.storyName = 'Select Group';
