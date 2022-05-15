@@ -14,6 +14,13 @@ import { Label } from '@real-system/typography';
 export default {
   title: 'Components/Select',
   component: Select,
+  subcomponents: {
+    SelectContainer,
+    SelectGroup,
+    SelectGroupLabel,
+    SelectItem,
+    SelectSeparator,
+  },
 } as Meta;
 
 export const Default = (args) => {

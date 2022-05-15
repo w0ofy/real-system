@@ -9,6 +9,9 @@ type PropsOf<T extends As> = React.ComponentPropsWithoutRef<T>;
 
 type PropUnion<T> = T & { [key: string]: any };
 
+/**
+ * @deprecated use styling-library props
+ */
 type RealSystemProps = {
   /** data-testid DOM attribute for component. Useful when using react testing library or other testing tools */
   'data-testid'?: string;
@@ -16,11 +19,17 @@ type RealSystemProps = {
   className?: string;
 };
 
+/**
+ * @deprecated use styling-library props
+ */
 type InternalRealSystemProps = {
   /** real system data attribute for tracking component usage or other things */
   'data-real-system'?: string;
 };
 
+/**
+ * @deprecated use styling-library props
+ */
 type RealSystemElementProps<T extends As = any> = T extends As
   ? PropsOf<T> & RealSystemProps
   : RealSystemProps;

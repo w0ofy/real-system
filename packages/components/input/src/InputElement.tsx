@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { Box, BoxProps } from '@real-system/box-primitive';
+import { spreadStyleProps } from '@real-system/styling-library';
 
 import { InputProps } from './types';
 
@@ -52,7 +53,23 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'default' }}
         transition="0.25s all ease-out"
-        {...props}
+        {...spreadStyleProps(props, {
+          display: false,
+          width: false,
+          border: false,
+          borderRadius: false,
+          transition: false,
+          bgColor: false,
+          backgroundColor: false,
+          bg: false,
+          color: false,
+          borderColor: false,
+          boxShadow: false,
+          cursor: false,
+          _hover: false,
+          _focusWithin: false,
+          _active: false,
+        })}
       />
     );
   }

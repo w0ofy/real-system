@@ -7,11 +7,8 @@ import {
 } from '@real-system/select-primitive';
 import { spreadStyleProps } from '@real-system/styling-library';
 
-import { maybeAutoPlacements } from './Select.utils';
 import { SelectContextProvider } from './SelectContext';
-import { SelectProps } from './types';
-
-type SelectContainerProps = SelectProps;
+import { SelectContainerProps } from './types';
 
 const ACCEPTED_LABEL_NAMES = {
   Label: true,
@@ -69,7 +66,7 @@ const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
       placement,
       gutter: 2,
       sameWidth: true,
-      flip: maybeAutoPlacements(placement, flip),
+      flip,
       ...restProps,
     });
 

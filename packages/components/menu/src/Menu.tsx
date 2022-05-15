@@ -10,10 +10,9 @@ type MenuProps = {
 } & Omit<MenuStatePrimitiveProps<any>, 'orientation'>;
 /** @todo ^^ fix any param — this is supposed to be inferred from values prop — but there's currently a typing issue in ariakit */
 
-const isAutoPlacement = (placement: MenuStatePrimitiveProps['placement']) =>
-  placement === 'auto' ||
-  placement === 'auto-end' ||
-  placement === 'auto-start';
+/**
+ * @todo Currently, `orientation` prop is omitted. This is because we don't have "horizontal menus". Consider adding and API for this
+ */
 
 /**
  * Dropdown menu for the common dropdown menu button pattern.
@@ -24,7 +23,7 @@ const Menu = ({
   visible,
   values,
   defaultValues,
-  flip,
+  flip = true,
   ...restProps
 }: MenuProps) => {
   const state = useMenuStatePrimitive({
@@ -33,7 +32,7 @@ const Menu = ({
     visible,
     values,
     defaultValues,
-    flip: isAutoPlacement(placement) ? true : flip,
+    flip,
     ...restProps,
   });
   return <MenuContextProvider state={state}>{children}</MenuContextProvider>;

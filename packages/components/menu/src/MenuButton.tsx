@@ -4,7 +4,7 @@ import type { ButtonProps } from '@real-system/button';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { MenuButtonPrimitive } from '@real-system/menu-primitive';
-import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import { useMenuStateContext } from './MenuContext';
 
@@ -18,8 +18,7 @@ type MenuButtonProps = (
       leadingArrow?: boolean;
     }
 ) &
-  ButtonProps &
-  RealSystemElementProps;
+  ButtonProps;
 
 const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
   function MenuButton(
@@ -45,8 +44,7 @@ const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
         as={Button}
         data-testid={makeTestId('menu-button')}
         state={state}
-        // prop union is too complex. so, type casting as `unknown`
-        {...(restProps as unknown)}
+        {...restProps}
         {...chevron}
         ref={ref}>
         {children}

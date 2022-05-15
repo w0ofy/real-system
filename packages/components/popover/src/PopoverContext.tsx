@@ -25,30 +25,16 @@ const usePopover = ({ state }: PopoverContext): PopoverStatePrimitive => state;
 
 const [PopoverContextProvider, usePopoverStateContext] = constate(usePopover);
 
-const maybeAutoPlacements = (
-  placement: PopoverContainerProps['placement'],
-  flip
-) => {
-  if (
-    placement === 'auto' ||
-    placement === 'auto-end' ||
-    placement === 'auto-start'
-  ) {
-    return true;
-  }
-  return flip;
-};
-
 const PopoverContainer = ({
   children,
   onHide,
-  placement = 'auto',
+  placement = 'bottom-end',
   flip = true,
 }: PopoverContainerProps) => {
   const { hide, ...restState } = usePopoverStatePrimitive({
     placement,
     gutter: 2,
-    flip: maybeAutoPlacements(placement, flip),
+    flip,
   });
   const handleHide = useCallback(() => {
     onHide && onHide();

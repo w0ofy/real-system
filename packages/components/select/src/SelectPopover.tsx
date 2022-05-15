@@ -12,7 +12,7 @@ type SelectPopoverProps = OmitSelectPrivateProps<SelectPopoverPrimitiveProps>;
 /**
  * @todo animate popover
  */
-const SelectPopover = (props: SelectPopoverProps) => {
+const SelectPopover = ({ children, ...restProps }: SelectPopoverProps) => {
   const state = useSelectStateContext();
 
   return (
@@ -30,9 +30,10 @@ const SelectPopover = (props: SelectPopoverProps) => {
       filter="popover"
       outline="none"
       overflow="auto"
-      {...props}
-      state={state}
-    />
+      {...restProps}
+      state={state}>
+      {children}
+    </SelectPopoverPrimitive>
   );
 };
 

@@ -1,7 +1,10 @@
 import * as React from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import type { RealSystemElementProps } from '@real-system/utils-library';
+import {
+  preventSpreadingStyleProps,
+  RealSystemComponentProps,
+} from '@real-system/styling-library';
 import { makeTestId, merge } from '@real-system/utils-library';
 
 import { Addon, AddonProps } from './Addon';
@@ -26,7 +29,7 @@ export type InputBoxProps = {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   addonProps?: Omit<AddonProps, 'children'>;
-} & RealSystemElementProps;
+} & RealSystemComponentProps<'div'>;
 
 type InputBoxStates = 'readonly' | 'hidden' | 'disabled' | 'default' | 'error';
 
@@ -134,7 +137,23 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
         {...styles[state]}
         height="100%"
         data-testid={makeTestId('input-box')}
-        {...restProps}>
+        {...preventSpreadingStyleProps(restProps, {
+          display: true,
+          width: true,
+          border: true,
+          borderRadius: true,
+          transition: true,
+          bgColor: true,
+          backgroundColor: true,
+          bg: true,
+          color: true,
+          borderColor: true,
+          boxShadow: true,
+          cursor: true,
+          _hover: true,
+          _focusWithin: true,
+          _active: true,
+        })}>
         {prefix && (
           <Addon disabled={disabled} {...addonProps}>
             {prefix}

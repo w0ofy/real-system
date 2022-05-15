@@ -21,4 +21,5 @@ const PopoverDescription = forwardRef<
   );
 });
 
+export type { PopoverDescriptionProps };
 export { PopoverDescription };

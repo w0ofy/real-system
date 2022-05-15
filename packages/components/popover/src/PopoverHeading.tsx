@@ -26,4 +26,5 @@ const PopoverHeading = forwardRef<HTMLHeadingElement, PopoverHeadingProps>(
   }
 );
 
+export type { PopoverHeadingProps };
 export { PopoverHeading };

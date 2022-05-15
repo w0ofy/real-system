@@ -6,8 +6,9 @@ import { createDescendantContext } from '@real-system/descendants-library';
 import { Flex } from '@real-system/flex';
 import { Input as RealInput } from '@real-system/input';
 import { Heading } from '@real-system/typography';
+
 export default {
-  title: 'Librarys/Descendants',
+  title: 'Libraries/Descendants',
 } as Meta;
 
 const [DescendantsProvider, , useDescendants, useDescendant] =
@@ -31,8 +32,10 @@ function Input() {
   const [focused, setFocused] = React.useState(false);
   const { register, index, descendants } = useDescendant();
 
+  console.log(register);
   return (
     <RealInput
+      width="50px"
       type="number"
       id="real-input"
       textAlign="center"
@@ -40,6 +43,7 @@ function Input() {
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
       ref={register}
+      maxlength="1"
       onKeyDown={(event) => {
         if (event.key === 'ArrowRight') {
           descendants.next(index)?.node.focus();

@@ -13,7 +13,10 @@ const StyledGroupLabel = styled(
 
 type SelectGroupLabelProps = CommonSelectProps<SelectGroupLabelPrimitiveProps>;
 
-const SelectGroupLabel = (props: SelectGroupLabelProps) => {
+const SelectGroupLabel = ({
+  children,
+  ...restProps
+}: SelectGroupLabelProps) => {
   return (
     <StyledGroupLabel
       data-testid={makeTestId('select-group')}
@@ -26,8 +29,9 @@ const SelectGroupLabel = (props: SelectGroupLabelProps) => {
       ml={7}
       mb={4}
       cursor="text"
-      {...props}
-    />
+      {...restProps}>
+      {children}
+    </StyledGroupLabel>
   );
 };
 

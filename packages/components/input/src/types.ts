@@ -1,22 +1,26 @@
 import * as React from 'react';
 
-import type { BoxStyleProps } from '@real-system/box-primitive';
+import { RealSystemComponentProps } from '@real-system/styling-library';
 
-import { InputBoxProps, InputBoxTypes } from './InputBox';
+import { InputBoxProps } from './InputBox';
 
-export type InputProps = Omit<InputBoxProps, 'children' | 'type'> & {
-  id: string;
+export type InputProps = Partial<
+  Pick<
+    InputBoxProps,
+    | 'disabled'
+    | 'error'
+    | 'readOnly'
+    | 'type'
+    | 'prefix'
+    | 'suffix'
+    | 'addonProps'
+  >
+> & {
+  id?: string;
   suffix?: React.ReactNode;
   prefix?: React.ReactNode;
   name?: string;
   placeholder?: string;
   required?: boolean;
   value?: string;
-  type?: InputBoxTypes;
-  size?: never;
-  style?: never;
-  width?: never;
-  height?: never;
-  className?: never;
-} & BoxStyleProps &
-  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'color'>;
+} & RealSystemComponentProps<'input'>;

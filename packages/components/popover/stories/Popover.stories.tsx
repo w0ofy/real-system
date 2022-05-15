@@ -32,7 +32,7 @@ export default {
 export const Default = (args) => {
   return (
     <Flex padding={10} xAlignContent="center">
-      <PopoverContainer placement="auto">
+      <PopoverContainer placement="bottom">
         <PopoverButton variant="minimal">Open Popover</PopoverButton>
         <Popover
           hideCloseButton={args.hideCloseButton}
@@ -54,7 +54,7 @@ export const Default = (args) => {
 export const CustomTrigger = (args) => {
   return (
     <Flex padding={10} xAlignContent="center">
-      <PopoverContainer placement="auto">
+      <PopoverContainer placement="bottom">
         <PopoverTrigger>
           <Link as="div" showExternal>
             External Link

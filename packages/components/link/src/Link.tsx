@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react';
 
 import { Box, BoxProps } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
-import type { RealSystemElementProps } from '@real-system/utils-library';
 
 import { EXTERNAL_LINK_PROPS } from './link.constants';
 
@@ -17,8 +16,7 @@ type LinkProps = {
    * @default false (`true` if external is `true`)
    */
   showExternal?: boolean;
-} & Omit<RealSystemElementProps<'a'>, keyof BoxProps> &
-  Partial<BoxProps>;
+} & BoxProps<'a'>;
 
 /**
  * Links are accessible elements used primarily for navigation.

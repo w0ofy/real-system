@@ -1,29 +1,27 @@
 import React, { forwardRef } from 'react';
 
-import { FocusScope } from '@real-system/a11y-library';
 import { Box } from '@real-system/box-primitive';
-import type { RealSystemComponentProps } from '@real-system/styling-library';
 import {
-  preventSpreadingStyleProps,
+  RealSystemComponentProps,
   spreadStyleProps,
 } from '@real-system/styling-library';
+import { preventSpreadingStyleProps } from '@real-system/styling-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import type { UsePinInputProps } from './types';
 import {
+  PinInputContextProvider,
   PinInputDescendantsProvider,
-  PinInputProvider,
   usePinInput,
 } from './usePinInput';
 
-const FocusProvider = ({ children }) => {
-  return <FocusScope>{children}</FocusScope>;
-};
-
-const PinInputProviders = ({ children, ...restProps }) => {
+const PinInputProvider = ({ children, ...restProps }) => {
   const { descendants, ...context } = usePinInput(restProps);
   return (
     <PinInputDescendantsProvider value={descendants}>
-      <PinInputProvider value={context}>{children}</PinInputProvider>
+      <PinInputContextProvider value={context}>
+        {children}
+      </PinInputContextProvider>
     </PinInputDescendantsProvider>
   );
 };
@@ -31,16 +29,19 @@ const PinInputProviders = ({ children, ...restProps }) => {
 type PinInputProps = UsePinInputProps & RealSystemComponentProps<'div'>;
 
 const PinInput = forwardRef<HTMLDivElement, PinInputProps>(function PinInput(
-  { children, ...restProps },
+  { children, 'data-testid': dataTestid, ...restProps },
   ref
 ) {
   return (
-    <Box display="flex" gap={3} {...spreadStyleProps(restProps)} ref={ref}>
-      <FocusProvider>
-        <PinInputProviders {...preventSpreadingStyleProps(restProps)}>
-          {children}
-        </PinInputProviders>
-      </FocusProvider>
+    <Box
+      display="flex"
+      gap={3}
+      data-testid={dataTestid || makeTestId('pin-input')}
+      {...spreadStyleProps(restProps)}
+      ref={ref}>
+      <PinInputProvider {...preventSpreadingStyleProps(restProps)}>
+        {children}
+      </PinInputProvider>
     </Box>
   );
 });

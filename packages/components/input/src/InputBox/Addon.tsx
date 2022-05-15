@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 
 import { Box, BoxStyleProps } from '@real-system/box-primitive';
+import type { RealSystemComponentProps } from '@real-system/styling-library';
 import { majorScale } from '@real-system/theme-library';
-import type { RealSystemElementProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {
@@ -36,8 +36,7 @@ export type AddonProps = {
   children: NonNullable<React.ReactNode>;
   disabled?: boolean;
   isSuffix?: boolean;
-} & BoxStyleProps &
-  RealSystemElementProps;
+} & RealSystemComponentProps<'div'>;
 
 const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
   { children, disabled, isSuffix = false, ...restProps },

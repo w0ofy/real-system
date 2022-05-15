@@ -103,7 +103,7 @@ const makePaths = (pkgLocation) => {
           dynamicReplacers: [
             {
               slot: '__pkg_type__',
-              slotValue: type,
+              slotValue: type === 'Library' ? 'Librarie' : type,
             },
             {
               slot: '__peer_deps_list__',
