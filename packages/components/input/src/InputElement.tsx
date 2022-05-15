@@ -53,6 +53,15 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'default' }}
         transition="0.25s all ease-out"
+        aria-invalid={props['aria-invalid']}
+        aria-readonly={props.readOnly}
+        disabled={props.disabled}
+        id={props.id}
+        name={props.name}
+        placeholder={props.placeholder}
+        readOnly={props.readOnly}
+        required={props.required}
+        value={props.value}
         {...spreadStyleProps(props, {
           display: false,
           width: false,
