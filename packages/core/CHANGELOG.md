@@ -1,5 +1,49 @@
 # @real-system/core
 
+## 0.0.40
+
+### Patch Changes
+
+- [#417](https://github.com/bigwoof91/real-system/pull/417) [`06ea105`](https://github.com/bigwoof91/real-system/commit/06ea10530898cc2b7ffe57b85d127aaea54b093e) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Ability to spread style props on Field without-builtins + new element-proxy API
+
+- Updated dependencies [[`06ea105`](https://github.com/bigwoof91/real-system/commit/06ea10530898cc2b7ffe57b85d127aaea54b093e), [`e71ea39`](https://github.com/bigwoof91/real-system/commit/e71ea39fc41db70222319ea26ab682a5da6f9c59)]:
+  - @real-system/field@0.0.15
+  - @real-system/styling-library@0.0.16
+  - @real-system/elements-primitive@0.0.1
+  - @real-system/select@0.0.4
+  - @real-system/a11y-library@0.0.6
+  - @real-system/ariakit-library@0.0.9
+  - @real-system/alert@0.0.22
+  - @real-system/aspect-ratio@0.0.9
+  - @real-system/badge@0.0.7
+  - @real-system/button@0.0.38
+  - @real-system/checkbox@0.0.23
+  - @real-system/dialog@0.0.30
+  - @real-system/flex@0.0.30
+  - @real-system/icon@0.0.37
+  - @real-system/input@0.0.36
+  - @real-system/link@0.0.8
+  - @real-system/menu@0.0.9
+  - @real-system/pin-input@0.0.2
+  - @real-system/popover@0.0.13
+  - @real-system/radio-group@0.0.16
+  - @real-system/separator@0.0.5
+  - @real-system/spinner@0.0.35
+  - @real-system/textarea@0.0.20
+  - @real-system/toaster@0.0.21
+  - @real-system/tooltip@0.0.14
+  - @real-system/truncate@0.0.15
+  - @real-system/typography@0.0.37
+  - @real-system/visually-hidden@0.0.33
+  - @real-system/theme-library@0.0.22
+  - @real-system/box-primitive@0.0.20
+  - @real-system/button-primitive@0.0.30
+  - @real-system/menu-primitive@0.0.4
+  - @real-system/popover-primitive@0.0.4
+  - @real-system/select-primitive@0.0.4
+  - @real-system/separator-primitive@0.0.4
+  - @real-system/tooltip-primitive@0.0.4
+
 ## 0.0.39
 
 ### Patch Changes

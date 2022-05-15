@@ -1,5 +1,20 @@
 # @real-system/field
 
+## 0.0.15
+
+### Patch Changes
+
+- [#417](https://github.com/bigwoof91/real-system/pull/417) [`06ea105`](https://github.com/bigwoof91/real-system/commit/06ea10530898cc2b7ffe57b85d127aaea54b093e) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Ability to spread style props on Field without-builtins + new element-proxy API
+
+* [#415](https://github.com/bigwoof91/real-system/pull/415) [`e71ea39`](https://github.com/bigwoof91/real-system/commit/e71ea39fc41db70222319ea26ab682a5da6f9c59) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Upgrade ariakit and ally library dependencies"
+
+* Updated dependencies [[`06ea105`](https://github.com/bigwoof91/real-system/commit/06ea10530898cc2b7ffe57b85d127aaea54b093e)]:
+  - @real-system/styling-library@0.0.16
+  - @real-system/flex@0.0.30
+  - @real-system/typography@0.0.37
+  - @real-system/theme-library@0.0.22
+  - @real-system/box-primitive@0.0.20
+
 ## 0.0.14
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @real-system/input
 
+## 0.0.36
+
+### Patch Changes
+
+- Updated dependencies [[`06ea105`](https://github.com/bigwoof91/real-system/commit/06ea10530898cc2b7ffe57b85d127aaea54b093e)]:
+  - @real-system/styling-library@0.0.16
+  - @real-system/typography@0.0.37
+  - @real-system/visually-hidden@0.0.33
+  - @real-system/box-primitive@0.0.20
+
 ## 0.0.35
 
 ### Patch Changes
