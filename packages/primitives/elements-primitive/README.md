@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/styling-library @real-system/theme-library @real-system/utils-library
+$ npm install react react-dom @real-system/styling-library @real-system/theme-library
 # yarn
-$ yarn add react react-dom @real-system/styling-library @real-system/theme-library @real-system/utils-library
+$ yarn add react react-dom @real-system/styling-library @real-system/theme-library
 
 # install elements-primitive
 
@@ -25,8 +25,19 @@ $ yarn add @real-system/elements-primitive
 ### Code Example
 
 ```typescript
-import { real } from '@real-system/elements-primitive';
+import { real, RealElementPrimitiveProps } from '@real-system/elements-primitive';
 
-...
+const H1 = ({ children, ...styleProps }: RealElementPrimitiveProps) => {
+  return (
+    <real.h1
+      fontSize={4}
+      fontWeight={3}
+      lineHeight={4}
+      margin={0}
+      {...styleProps}>
+      {children}
+    </real.h1>
+  )
+}
 
 ```
