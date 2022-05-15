@@ -1,17 +1,18 @@
 import React, { forwardRef } from 'react';
 
-import { BoxStyleProps } from '@real-system/box-primitive';
-import {
-  SelectPrimitive,
-  SelectPrimitiveOptions,
-} from '@real-system/select-primitive';
-import styled, { StylishProps } from '@real-system/styling-library';
+import type { SelectPrimitiveOptions } from '@real-system/select-primitive';
+import { SelectPrimitive } from '@real-system/select-primitive';
+import type {
+  RealSystemComponentProps,
+  StylishProps,
+} from '@real-system/styling-library';
+import styled from '@real-system/styling-library';
 import { merge } from '@real-system/utils-library';
 
 import { useSelectStateContext } from './SelectContext';
 import { SelectPopover } from './SelectPopover';
 
-const StyledSelect = styled(SelectPrimitive)<SelectPrimitiveOptions>({});
+const StyledSelect = styled(SelectPrimitive)<SelectPrimitiveOptions>();
 
 const resetStyles = {
   bg: 'none',
@@ -75,7 +76,7 @@ const selectStyles: Record<'default' | 'error', StylishProps> = {
   }),
 };
 
-type SelectProps = BoxStyleProps & { children?: React.ReactNode };
+type SelectProps = RealSystemComponentProps;
 
 const Select = forwardRef<HTMLButtonElement, SelectProps>(function Select(
   { children, ...restProps },

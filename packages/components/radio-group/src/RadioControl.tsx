@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 
 import { UseInteractionsReturnValue } from '@real-system/a11y-library';
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Flex } from '@real-system/flex';
 
 type RadioControlProps = {
@@ -79,8 +79,7 @@ const RadioControl = ({
       boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}
       backgroundColor={backgroundColor()}
       transition={transition}>
-      <Box
-        as="span"
+      <real.span
         width={3}
         height={3}
         borderRadius="circle"

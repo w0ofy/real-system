@@ -5,7 +5,7 @@ import {
   useReducedMotion,
   useTransition,
 } from '@real-system/animation-library';
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { useToken } from '@real-system/theme-library';
 
 import { Toast } from './Toast';
@@ -15,7 +15,7 @@ import type { ToasterProps } from './types';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useToaster } from './useToaster';
 
-const AnimatedToast = animated(Box);
+const AnimatedToast = animated(real.div);
 
 interface ReturnTargetState {
   trigger: HTMLElement | null;

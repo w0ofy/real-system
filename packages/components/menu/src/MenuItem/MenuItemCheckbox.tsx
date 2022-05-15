@@ -10,7 +10,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from '../types';
 
-import { BoxMenuItem } from './MenuItem';
+import { RealMenuItem } from './MenuItem';
 
 type MenuItemCheckboxProps = OmitMenuState<MenuItemCheckboxPrimitiveProps> &
   CommonMenuProps;
@@ -28,9 +28,8 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
     ref
   ) {
     return (
-      /** @ts-ignore `as` prop type conflicts */
       <MenuItemCheckboxPrimitive
-        as={BoxMenuItem}
+        as={RealMenuItem}
         disabled={disabled}
         onClick={onClick}
         name={name}
@@ -39,8 +38,10 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
         {...styleProps}
         {...restProps}
         ref={ref}>
-        <MenuItemCheckPrimitive />
-        {children}
+        <>
+          <MenuItemCheckPrimitive />
+          {children}
+        </>
       </MenuItemCheckboxPrimitive>
     );
   }

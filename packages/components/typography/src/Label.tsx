@@ -1,10 +1,11 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 
 import { BaseText } from './BaseText';
 import { RequiredDot } from './RequiredDot';
-import { CommonTextProps } from './types';
+import type { CommonTextProps } from './types';
 
 export type LabelProps = {
   children?: React.ReactNode;
@@ -12,8 +13,8 @@ export type LabelProps = {
   as?: 'label' | 'legend';
   disabled?: boolean;
   required?: boolean;
-  containerProps?: BoxStyleProps;
-  textProps?: BoxStyleProps;
+  containerProps?: StylishProps;
+  textProps?: StylishProps;
 } & CommonTextProps;
 
 const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
@@ -51,8 +52,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
       cursor={dynamicStyles.cursor}
       {...restProps}
       ref={ref}>
-      <Box
-        as="span"
+      <real.span
         display="flex"
         alignItems="center"
         justifyContent="flex-start"
@@ -60,10 +60,8 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
         {required ? (
           <RequiredDot disabled={disabled} cursor={dynamicStyles.cursor} />
         ) : null}
-        <Box as="span" {...textProps}>
-          {children}
-        </Box>
-      </Box>
+        <real.span {...textProps}>{children}</real.span>
+      </real.span>
     </BaseText>
   );
 });

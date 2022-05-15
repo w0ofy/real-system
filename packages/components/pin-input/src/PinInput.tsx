@@ -1,10 +1,8 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
-import {
-  RealSystemComponentProps,
-  spreadStyleProps,
-} from '@real-system/styling-library';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
+import { spreadStyleProps } from '@real-system/styling-library';
 import { preventSpreadingStyleProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -26,14 +24,14 @@ const PinInputProvider = ({ children, ...restProps }) => {
   );
 };
 
-type PinInputProps = UsePinInputProps & RealSystemComponentProps<'div'>;
+type PinInputProps = UsePinInputProps & RealElementPrimitiveProps<'div'>;
 
 const PinInput = forwardRef<HTMLDivElement, PinInputProps>(function PinInput(
   { children, 'data-testid': dataTestid, ...restProps },
   ref
 ) {
   return (
-    <Box
+    <real.div
       display="flex"
       gap={3}
       data-testid={dataTestid || makeTestId('pin-input')}
@@ -42,7 +40,7 @@ const PinInput = forwardRef<HTMLDivElement, PinInputProps>(function PinInput(
       <PinInputProvider {...preventSpreadingStyleProps(restProps)}>
         {children}
       </PinInputProvider>
-    </Box>
+    </real.div>
   );
 });
 

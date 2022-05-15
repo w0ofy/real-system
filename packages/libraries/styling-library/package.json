@@ -41,7 +41,6 @@
     "@emotion/styled": "^11.8.1",
     "@types/styled-system": "5.1.15",
     "csstype": "^3.0.11",
-    "lodash.mergewith": "^4.6.2",
     "polished": "^4.2.2",
     "styled-system": "5.1.5"
   },

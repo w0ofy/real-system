@@ -1,9 +1,9 @@
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import {
   SelectStatePrimitive,
   SelectStatePrimitiveProps,
 } from '@real-system/select-primitive';
 import type { StylishProps } from '@real-system/styling-library';
-import type { RealSystemComponentProps } from '@real-system/styling-library';
 
 type SelectState = SelectStatePrimitive;
 type SelectStateProps = SelectStatePrimitiveProps;
@@ -15,7 +15,7 @@ type SelectFormStateProps = {
 
 /** Select Container component */
 type SelectContainerProps = SelectStateProps &
-  RealSystemComponentProps &
+  RealElementPrimitiveProps<'div'> &
   SelectFormStateProps;
 
 type OmitSelectPrivateProps<T> = Omit<T, 'state' | 'as'>;

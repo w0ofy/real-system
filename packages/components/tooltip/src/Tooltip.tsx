@@ -1,8 +1,6 @@
 import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
 
-import { useTransition } from '@real-system/animation-library';
-import { animated } from '@real-system/animation-library';
-import { Box } from '@real-system/box-primitive';
+import { animated, useTransition } from '@real-system/animation-library';
 import styled from '@real-system/styling-library';
 import {
   TooltipAnchorPrimitive,
@@ -20,7 +18,7 @@ import {
 import { TRANSITIONS_CONFIG } from './constants';
 import type { TooltipProps } from './types';
 
-const StyledTooltip = styled(animated(Box))({
+const StyledTooltip = styled(animated('div'))({
   zIndex: 'tooltip',
   pointerEvents: 'none',
   padding: 4,
@@ -32,7 +30,7 @@ const StyledTooltip = styled(animated(Box))({
   maxWidth: '30rem',
 });
 
-const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
+const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
   {
     label,
     children,
@@ -45,8 +43,8 @@ const Tooltip = forwardRef<HTMLElement, TooltipProps>(function Tooltip(
   },
   ref
 ) {
-  const internalRef = useRef<HTMLElement>(null);
-  const mergedRef = useMergedRef<HTMLElement>(ref, internalRef);
+  const internalRef = useRef<HTMLSpanElement>(null);
+  const mergedRef = useMergedRef<HTMLSpanElement>(ref, internalRef);
 
   const state = useTooltipStatePrimitive({
     placement,

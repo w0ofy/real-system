@@ -1,14 +1,15 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Box, BoxProps } from '@real-system/box-primitive';
 import { Button } from '@real-system/button';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
 import { makeTestId } from '@real-system/utils-library';
 
 import { useDialogContext } from './DialogContext';
 
-type DialogHeaderProps = BoxProps & {
+type DialogHeaderProps = RealElementPrimitiveProps<'div'> & {
   hideCloseButton?: boolean;
 };
 
@@ -23,8 +24,7 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
       [onDismiss]
     );
     return (
-      <Box
-        as="header"
+      <real.header
         borderBottom="weak"
         margin={0}
         flexShrink={0}
@@ -47,7 +47,7 @@ const DialogHeader = forwardRef<HTMLDivElement, DialogHeaderProps>(
             </Button>
           )}
         </Flex>
-      </Box>
+      </real.header>
     );
   }
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import type { SelectPopoverPrimitiveProps } from '@real-system/select-primitive';
 import { SelectPopoverPrimitive } from '@real-system/select-primitive';
 
@@ -17,7 +17,7 @@ const SelectPopover = ({ children, ...restProps }: SelectPopoverProps) => {
 
   return (
     <SelectPopoverPrimitive
-      as={Box}
+      as={real.div}
       zIndex="popover"
       display="flex"
       maxHeight="20rem"

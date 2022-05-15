@@ -1,13 +1,14 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Box, BoxProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 type Justify = 'start' | 'end';
 type DialogFooterActionsProps = {
   children: NonNullable<React.ReactNode>;
   justify?: Justify;
-} & BoxProps;
+} & RealElementPrimitiveProps<'div'>;
 
 const DialogFooterActions = forwardRef<
   HTMLDivElement,
@@ -15,8 +16,9 @@ const DialogFooterActions = forwardRef<
 >(function DialogFooterActions({ children, justify, ...restProps }, ref) {
   const count = React.Children.count(children);
   const isNotLast = useCallback((idx: number) => count !== idx + 1, [count]);
+
   return (
-    <Box
+    <real.div
       display="flex"
       justifyContent={justify === 'start' ? 'flex-start' : 'flex-end'}
       flexShrink={justify === 'start' ? undefined : 0}
@@ -27,9 +29,11 @@ const DialogFooterActions = forwardRef<
       data-testid={makeTestId('modal-footer-actions')}
       {...restProps}>
       {React.Children.map(children, (child, idx) => (
-        <Box marginRight={isNotLast(idx) ? 7 : undefined}>{child}</Box>
+        <real.div marginRight={isNotLast(idx) ? 7 : undefined}>
+          {child}
+        </real.div>
       ))}
-    </Box>
+    </real.div>
   );
 });
 

@@ -31,6 +31,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/button-primitive": "^0.0.30",
+    "@real-system/spinner": "0.0.35",
     "@real-system/styling-library": "^0.0.16",
     "@real-system/theme-library": "^0.0.22",
     "@real-system/utils-library": "^0.0.18",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@real-system/button-primitive": "^0.0.30",
+    "@real-system/spinner": "0.0.35",
     "@real-system/styling-library": "^0.0.16",
     "@real-system/theme-library": "^0.0.22",
     "@real-system/utils-library": "^0.0.18",

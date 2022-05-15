@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
 import styled, {
   RealSystemComponentProps,
   ResponsiveValue,
@@ -17,7 +16,7 @@ type AspectRatioOptions = {
 
 type AspectRatioProps = AspectRatioOptions & RealSystemComponentProps<'div'>;
 
-const StyledBox = styled(Box)({
+const StyledBox = styled('div')({
   '& > *:not(style)': {
     overflow: 'hidden',
     position: 'absolute',

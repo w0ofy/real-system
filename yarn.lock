@@ -14,7 +14,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:^7.13.10, @babel/cli@npm:^7.16.0":
+"@babel/cli@npm:^7.13.10":
   version: 7.17.6
   resolution: "@babel/cli@npm:7.17.6"
   dependencies:
@@ -116,7 +116,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.10, @babel/core@npm:^7.12.3, @babel/core@npm:^7.13.10, @babel/core@npm:^7.14.0, @babel/core@npm:^7.16.0, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.10, @babel/core@npm:^7.12.3, @babel/core@npm:^7.13.10, @babel/core@npm:^7.14.0, @babel/core@npm:^7.7.5":
   version: 7.17.9
   resolution: "@babel/core@npm:7.17.9"
   dependencies:
@@ -3660,134 +3660,134 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-spring/animated@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/animated@npm:9.4.4"
+"@react-spring/animated@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/animated@npm:9.4.5"
   dependencies:
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
-  checksum: 9f353dcece9239a3c93df06cd33587ddc397eb99d4c8fc4bbf704543b312fed99e3c11ae03f47c778c430645e6a1ff3a97e8b3d6031f602c1a40d8be93858431
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: e85c0bd65bd76e1c8ca830b22e31956401e29593cbc1df7560f5b77bd7b31acded61e1732717803cdfd993f30c2559ffbd6fb5f0d48b1c749323bee3597d7834
   languageName: node
   linkType: hard
 
-"@react-spring/core@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/core@npm:9.4.4"
+"@react-spring/core@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/core@npm:9.4.5"
   dependencies:
-    "@react-spring/animated": ~9.4.4
-    "@react-spring/rafz": ~9.4.4
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/animated": ~9.4.5
+    "@react-spring/rafz": ~9.4.5
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
-  checksum: d73d774d61b6e2b0e540bcddec05d38ca9d1f434b138a84a98e9c8069522ed5da033931d43c5781c4b2073de5a4f5b9267f4d93c6930d8ac45c3f4d85db0751f
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: e5aee7f68f15c9d5d6f230703d22cb34edb8aae3ba0d70c01847f7c78e47f9f8177f87c095aff5ed1b98c2a218238d5ec28f9bf451f3e13bfdad6e3170a60226
   languageName: node
   linkType: hard
 
-"@react-spring/konva@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/konva@npm:9.4.4"
+"@react-spring/konva@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/konva@npm:9.4.5"
   dependencies:
-    "@react-spring/animated": ~9.4.4
-    "@react-spring/core": ~9.4.4
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/animated": ~9.4.5
+    "@react-spring/core": ~9.4.5
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
     konva: ">=2.6"
-    react: ^16.8.0  || ^17.0.0
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-konva: ^16.8.0  || ^17.0.0
-  checksum: ba6bfc4091f2eb69984db7767d7176315a62b0438c755ce645fd1413b6dac3f5a7507fe9b114633d0a27f6d08e45fcf7ba0fcd249e109a467e08022933871f62
+  checksum: 9f8658dafe7d5b2f6532183851c169220766098017d3ffd10d0e35c542f931123aad6d239d498f08ae5a4bf15367c892b526367fc72f052f9f32567c6fdc3122
   languageName: node
   linkType: hard
 
-"@react-spring/native@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/native@npm:9.4.4"
+"@react-spring/native@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/native@npm:9.4.5"
   dependencies:
-    "@react-spring/animated": ~9.4.4
-    "@react-spring/core": ~9.4.4
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/animated": ~9.4.5
+    "@react-spring/core": ~9.4.5
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-native: ">=0.58"
-  checksum: 2daa5d49a6857e6da3372494707494e8dddec23f3138b04ff4f4e9064c7aa90caa64c1e43717458ebdaf169e86e060735726a4cfc8ca2eb140e772e4e8ad9035
+  checksum: 7e3e5d17e4b61024e4d1155be20c0d9a7ee38b893d4fc3cc64aacc331fb98344b4a2e4ca7d6eba5f43d528bbc81852f3dd6b8be0c3c14091f1021ca8c65edab0
   languageName: node
   linkType: hard
 
-"@react-spring/rafz@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/rafz@npm:9.4.4"
-  checksum: 5019d984509071b8e92d41f6e29455d141d957ce7e40eb11b55859a13425fe70fad448738d400a669cd62005c451b1f83740e0ff64084331e098e377e8e844aa
+"@react-spring/rafz@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/rafz@npm:9.4.5"
+  checksum: 0ac722881b107baf55338a0123bc889d88faca53f034eb6d26ebab3ae6e4dc1717654b09d0e6e5e9bf587c2ba182d6aae90ca22c833dc55024ee52d88f8579a2
   languageName: node
   linkType: hard
 
-"@react-spring/shared@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/shared@npm:9.4.4"
+"@react-spring/shared@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/shared@npm:9.4.5"
   dependencies:
-    "@react-spring/rafz": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/rafz": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
-  checksum: a15e51410b114b0e9c95e636aa07b8c2b415d1247e27e2e0d417e429b239e1c39fad1cb71e1015c8ffbc31fee76080abafc231c3c2ea5dc10961f27757abbd0d
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: 2f20e410c03166de19b2d668d6841d24778c37da3083d37fe70acfcf2cf0cb3bd4a5cf92d42f1590b9de5d0a6603dc75cf8c319c0089df4e713226364a204b51
   languageName: node
   linkType: hard
 
-"@react-spring/three@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/three@npm:9.4.4"
+"@react-spring/three@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/three@npm:9.4.5"
   dependencies:
-    "@react-spring/animated": ~9.4.4
-    "@react-spring/core": ~9.4.4
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/animated": ~9.4.5
+    "@react-spring/core": ~9.4.5
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
     "@react-three/fiber": ">=6.0"
-    react: ">=16.11"
+    react: ^16.11.0  || >=17.0.0 || >=18.0.0
     three: ">=0.126"
-  checksum: 46912fd5bac53786cde5d29d2ed9d708d094040ddaf2ac4722b1a8c0147bfc30cab3e1c3d5ae6b73ac9541823a48fdb9f2c5b9e38a47dc955c35982c23027d4e
+  checksum: 704e560c0d7df25db8aaf6ded0b9598b465370db3ec1704b784b6f36318ff8486fc399f5b3e9729ee0ef04958903f72d267bee48e9a1abb320a10a72273fcecc
   languageName: node
   linkType: hard
 
-"@react-spring/types@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/types@npm:9.4.4"
-  checksum: 67588de3410857e27e2300f7c28c45dbaf602a2328483e50ecf56a46776e455d2c5cbfcf1bbb555ad2fa796830ea6c01f1d2ec52bdc995119ec38bf98b9a2958
+"@react-spring/types@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/types@npm:9.4.5"
+  checksum: f8fecb54015de23899cc595d949e3676835e612d4dda05af470cab9ee20dd98c86ebca1c4ba75d2a9f63a4acba4b75febf6bab71da0b2e9556e6ff684b22f139
   languageName: node
   linkType: hard
 
-"@react-spring/web@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/web@npm:9.4.4"
+"@react-spring/web@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/web@npm:9.4.5"
   dependencies:
-    "@react-spring/animated": ~9.4.4
-    "@react-spring/core": ~9.4.4
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/animated": ~9.4.5
+    "@react-spring/core": ~9.4.5
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
-    react-dom: ^16.8.0  || ^17.0.0
-  checksum: 7ebe8b7b0e0468e39b8e627c059ea829af8d3f2a0c41068571e3c8526f07872d8c2e4dce6f9e89d6368f955e4cbd094af12180a340a4ae53924aeabbf0f589c6
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+    react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
+  checksum: 9d7eea4b8b0399c205743acade141679f3f729a64631f8480d44d14bb59781ea807977a4671cbe1d56e31389b69ef325ec975275446f08997f555f2981d220c8
   languageName: node
   linkType: hard
 
-"@react-spring/zdog@npm:~9.4.4":
-  version: 9.4.4
-  resolution: "@react-spring/zdog@npm:9.4.4"
+"@react-spring/zdog@npm:~9.4.5":
+  version: 9.4.5
+  resolution: "@react-spring/zdog@npm:9.4.5"
   dependencies:
-    "@react-spring/animated": ~9.4.4
-    "@react-spring/core": ~9.4.4
-    "@react-spring/shared": ~9.4.4
-    "@react-spring/types": ~9.4.4
+    "@react-spring/animated": ~9.4.5
+    "@react-spring/core": ~9.4.5
+    "@react-spring/shared": ~9.4.5
+    "@react-spring/types": ~9.4.5
   peerDependencies:
-    react: ^16.8.0  || ^17.0.0
-    react-dom: ^16.8.0  || ^17.0.0
+    react: ^16.8.0  || >=17.0.0 || >=18.0.0
+    react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-zdog: ">=1.0"
     zdog: ">=1.0"
-  checksum: 06a17545626a602851196c40fc836fc5d27749cdb1bea4cc92ab70d472910bd3d2ab0ae9dc8d881a520f0793ef8fb9360fb3c9ccfd9c41251840fc9ffe3928ac
+  checksum: b4b58b565c44a2c88b5be0862f97636ae3968c4b5a331660e21dbb084f9193d2a634991236e18204947d2486414d884421379bb910e9a99b3fa48564926ebca0
   languageName: node
   linkType: hard
 
@@ -3914,7 +3914,7 @@ __metadata:
     concurrently: ^7.2.0
     typescript: 4.6.4
   peerDependencies:
-    react: ^18.0.0
+    react: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -3968,10 +3968,10 @@ __metadata:
   resolution: "@real-system/animation-library@workspace:packages/libraries/animation-library"
   dependencies:
     concurrently: ^7.2.0
-    react-spring: ^9.4.4
+    react-spring: ^9.4.5
     typescript: 4.6.4
   peerDependencies:
-    react: ^18.0.0
+    react: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -3994,7 +3994,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/aspect-ratio@workspace:packages/components/aspect-ratio"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4003,7 +4002,6 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4016,7 +4014,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/badge@workspace:packages/components/badge"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4025,7 +4023,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4034,7 +4032,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/box-primitive@0.0.20, @real-system/box-primitive@^0.0.20, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
+"@real-system/box-primitive@^0.0.20, @real-system/box-primitive@workspace:packages/primitives/box-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/box-primitive@workspace:packages/primitives/box-primitive"
   dependencies:
@@ -4076,6 +4074,7 @@ __metadata:
   resolution: "@real-system/button@workspace:packages/components/button"
   dependencies:
     "@real-system/button-primitive": ^0.0.30
+    "@real-system/spinner": 0.0.35
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4085,6 +4084,7 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/button-primitive": ^0.0.30
+    "@real-system/spinner": 0.0.35
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4098,7 +4098,7 @@ __metadata:
   resolution: "@real-system/checkbox@workspace:packages/components/checkbox"
   dependencies:
     "@real-system/a11y-library": ^0.0.6
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/flex": ^0.0.30
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4112,7 +4112,7 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.6
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/flex": ^0.0.30
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4129,8 +4129,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/core@workspace:packages/core"
   dependencies:
-    "@babel/cli": ^7.16.0
-    "@babel/core": ^7.16.0
+    "@babel/cli": ^7.17.10
+    "@babel/core": ^7.17.10
     "@real-system/a11y-library": ^0.0.6
     "@real-system/alert": ^0.0.22
     "@real-system/alert-primitive": ^0.0.10
@@ -4221,9 +4221,9 @@ __metadata:
   resolution: "@real-system/dialog@workspace:packages/components/dialog"
   dependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/button": ^0.0.38
     "@real-system/dialog-primitive": ^0.0.21
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/flex": ^0.0.30
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4236,9 +4236,9 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/button": ^0.0.38
     "@real-system/dialog-primitive": ^0.0.21
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/flex": ^0.0.30
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4250,7 +4250,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/elements-primitive@^0.0.1, @real-system/elements-primitive@workspace:packages/primitives/elements-primitive":
+"@real-system/elements-primitive@0.0.1, @real-system/elements-primitive@^0.0.1, @real-system/elements-primitive@workspace:packages/primitives/elements-primitive":
   version: 0.0.0-use.local
   resolution: "@real-system/elements-primitive@workspace:packages/primitives/elements-primitive"
   dependencies:
@@ -4259,7 +4259,7 @@ __metadata:
     concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
-    typescript: ^4.6.3
+    typescript: ^4.6.4
   peerDependencies:
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4272,7 +4272,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/field@workspace:packages/components/field"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/flex": ^0.0.30
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4283,7 +4282,6 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/flex": ^0.0.30
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4298,7 +4296,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/flex@workspace:packages/components/flex"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4307,7 +4305,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4321,7 +4319,7 @@ __metadata:
   resolution: "@real-system/icon@workspace:packages/components/icon"
   dependencies:
     "@heroicons/react": ^1.0.6
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4330,7 +4328,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4343,7 +4341,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/input@workspace:packages/components/input"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/typography": ^0.0.37
     "@real-system/utils-library": ^0.0.18
@@ -4353,7 +4351,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/typography": ^0.0.37
     "@real-system/utils-library": ^0.0.18
@@ -4367,7 +4365,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/link@workspace:packages/components/link"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/icon": ^0.0.37
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4377,7 +4375,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/icon": ^0.0.37
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4408,8 +4406,8 @@ __metadata:
   resolution: "@real-system/menu@workspace:packages/components/menu"
   dependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/button": ^0.0.38
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/link": ^0.0.8
     "@real-system/menu-primitive": ^0.0.4
     "@real-system/state-library": ^0.0.10
@@ -4422,8 +4420,8 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/button": ^0.0.38
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/link": ^0.0.8
     "@real-system/menu-primitive": ^0.0.4
     "@real-system/state-library": ^0.0.10
@@ -4439,8 +4437,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/pin-input@workspace:packages/components/pin-input"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/descendants-library": ^0.0.1
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/input": ^0.0.36
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4451,8 +4449,8 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/descendants-library": ^0.0.1
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/input": ^0.0.36
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4484,7 +4482,6 @@ __metadata:
   resolution: "@real-system/popover@workspace:packages/components/popover"
   dependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/button": ^0.0.38
     "@real-system/flex": ^0.0.30
     "@real-system/popover-primitive": ^0.0.4
@@ -4498,7 +4495,6 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/button": ^0.0.38
     "@real-system/flex": ^0.0.30
     "@real-system/popover-primitive": ^0.0.4
@@ -4531,7 +4527,7 @@ __metadata:
   resolution: "@real-system/radio-group@workspace:packages/components/radio-group"
   dependencies:
     "@real-system/a11y-library": ^0.0.6
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/flex": ^0.0.30
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4545,7 +4541,7 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.6
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/flex": ^0.0.30
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4578,7 +4574,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/select@workspace:packages/components/select"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/select-primitive": ^0.0.4
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4589,7 +4585,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/select-primitive": ^0.0.4
     "@real-system/state-library": ^0.0.10
     "@real-system/styling-library": ^0.0.16
@@ -4620,7 +4616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/separator@workspace:packages/components/separator"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/separator-primitive": ^0.0.4
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4630,7 +4626,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/separator-primitive": ^0.0.4
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4640,11 +4636,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/spinner@^0.0.35, @real-system/spinner@workspace:packages/components/spinner":
+"@real-system/spinner@0.0.35, @real-system/spinner@^0.0.35, @real-system/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@real-system/spinner@workspace:packages/components/spinner"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/utils-library": ^0.0.18
     concurrently: ^7.2.0
@@ -4652,7 +4648,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/utils-library": ^0.0.18
     react: ^18.1.0
@@ -4668,7 +4664,7 @@ __metadata:
     constate: ^3.3.2
     typescript: 4.6.4
   peerDependencies:
-    react: ^18.0.0
+    react: ^18.1.0
   languageName: unknown
   linkType: soft
 
@@ -4683,7 +4679,6 @@ __metadata:
     "@types/styled-system": 5.1.15
     concurrently: ^7.2.0
     csstype: ^3.0.11
-    lodash.mergewith: ^4.6.2
     polished: ^4.2.2
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4699,7 +4694,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/textarea@workspace:packages/components/textarea"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/input": ^0.0.36
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4710,7 +4704,6 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/input": ^0.0.36
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4744,7 +4737,7 @@ __metadata:
   dependencies:
     "@real-system/alert": ^0.0.22
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/portal-primitive": ^0.0.10
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4756,7 +4749,7 @@ __metadata:
   peerDependencies:
     "@real-system/alert": ^0.0.22
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/portal-primitive": ^0.0.10
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
@@ -4787,7 +4780,6 @@ __metadata:
   resolution: "@real-system/tooltip@workspace:packages/components/tooltip"
   dependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/tooltip-primitive": ^0.0.4
@@ -4799,7 +4791,6 @@ __metadata:
     typescript: 4.6.4
   peerDependencies:
     "@real-system/animation-library": ^0.0.11
-    "@real-system/box-primitive": ^0.0.20
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/tooltip-primitive": ^0.0.4
@@ -4814,7 +4805,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/truncate@workspace:packages/components/truncate"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4823,7 +4814,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/theme-library": ^0.0.22
     "@real-system/utils-library": ^0.0.18
@@ -4836,7 +4827,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/typography@workspace:packages/components/typography"
   dependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/utils-library": ^0.0.18
     "@real-system/visually-hidden": ^0.0.33
@@ -4845,7 +4836,7 @@ __metadata:
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": ^0.0.20
+    "@real-system/elements-primitive": ^0.0.1
     "@real-system/styling-library": ^0.0.16
     "@real-system/utils-library": ^0.0.18
     "@real-system/visually-hidden": ^0.0.33
@@ -4892,15 +4883,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/visually-hidden@workspace:packages/components/visually-hidden"
   dependencies:
-    "@real-system/box-primitive": 0.0.20
+    "@real-system/elements-primitive": 0.0.1
     "@real-system/styling-library": ^0.0.16
+    "@real-system/theme-library": ^0.0.22
+    "@real-system/utils-library": ^0.0.18
     concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
   peerDependencies:
-    "@real-system/box-primitive": 0.0.20
+    "@real-system/elements-primitive": 0.0.1
     "@real-system/styling-library": ^0.0.16
+    "@real-system/theme-library": ^0.0.22
+    "@real-system/utils-library": ^0.0.18
     react: ^18.1.0
     react-dom: ^18.1.0
   languageName: unknown
@@ -8126,9 +8121,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/integration@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@vanilla-extract/integration@npm:4.0.0"
+"@vanilla-extract/integration@npm:^4.0.0, @vanilla-extract/integration@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@vanilla-extract/integration@npm:4.0.1"
   dependencies:
     "@vanilla-extract/css": ^1.6.8
     esbuild: ^0.11.16
@@ -8137,7 +8132,7 @@ __metadata:
     javascript-stringify: ^2.0.1
     lodash: ^4.17.21
     outdent: ^0.8.0
-  checksum: bea3f5fbb02d8c96a5be4a1d19f123d56e6d9ef539eb73f7434e04f61dadce38ef85f6c8c3bde445b60797086f10499f9b9620fa4ff7529d601817d5c117ef2c
+  checksum: 24a686193555cd6fcf56829c4485e3a9aa520a468c9c9567f965c8d2c5a34d0bdf9616e4d2b77299978d8db9abc930fbdf86c2dfe2bd7a1b1ea101826469a4ca
   languageName: node
   linkType: hard
 
@@ -8149,25 +8144,25 @@ __metadata:
   linkType: hard
 
 "@vanilla-extract/sprinkles@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@vanilla-extract/sprinkles@npm:1.4.0"
+  version: 1.4.1
+  resolution: "@vanilla-extract/sprinkles@npm:1.4.1"
   peerDependencies:
     "@vanilla-extract/css": ^1.0.0
-  checksum: c5c6087e8e7f5417b48791f4f951cf6eddaa4b3b80d986fa644e11f9dde57f2474b2c45bc079d2b9b35f4491a7195f985237f1be76059e3984bef409aad95dba
+  checksum: e72407ca6afad27c9e609ec3b23f8216c17374f40728ed8f8fc4decc0ea65216d9fb0f74daf31b846dffc7a90c0fe8f40a16d0b468c8f81a0600eea570a437bf
   languageName: node
   linkType: hard
 
 "@vanilla-extract/webpack-plugin@npm:^2.1.8":
-  version: 2.1.9
-  resolution: "@vanilla-extract/webpack-plugin@npm:2.1.9"
+  version: 2.1.10
+  resolution: "@vanilla-extract/webpack-plugin@npm:2.1.10"
   dependencies:
-    "@vanilla-extract/integration": ^4.0.0
+    "@vanilla-extract/integration": ^4.0.1
     chalk: ^4.1.1
     debug: ^4.3.1
     loader-utils: ^2.0.0
   peerDependencies:
     webpack: ^4.30.0 || ^5.20.2
-  checksum: 4f97bfe38e70d0676c6e8910a3da0b59e30737989c5b245c68dce69131358f0cbc82cec6ea1c16d232bcead405d275c0b290e6142ef5c1c46d2f019a3a633380
+  checksum: 1a4c926cb4bc6dfb6a0908cec682576f0a7776814f0a23db6b92f3aadfc315f7597ca3ed61c4690e841f68cab552512d20081f056edb70d652aef4b9d2df4b9b
   languageName: node
   linkType: hard
 
@@ -17797,13 +17792,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.mergewith@npm:^4.6.2":
-  version: 4.6.2
-  resolution: "lodash.mergewith@npm:4.6.2"
-  checksum: a6db2a9339752411f21b956908c404ec1e088e783a65c8b29e30ae5b3b6384f82517662d6f425cc97c2070b546cc2c7daaa8d33f78db7b6e9be06cd834abdeb8
-  languageName: node
-  linkType: hard
-
 "lodash.sortby@npm:^4.7.0":
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
@@ -21299,17 +21287,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-spring@npm:^9.4.4":
-  version: 9.4.4
-  resolution: "react-spring@npm:9.4.4"
+"react-spring@npm:^9.4.5":
+  version: 9.4.5
+  resolution: "react-spring@npm:9.4.5"
   dependencies:
-    "@react-spring/core": ~9.4.4
-    "@react-spring/konva": ~9.4.4
-    "@react-spring/native": ~9.4.4
-    "@react-spring/three": ~9.4.4
-    "@react-spring/web": ~9.4.4
-    "@react-spring/zdog": ~9.4.4
-  checksum: fb2b36580d61f3e70767635ffcdb5b3751a7f12c3c3a78171ad997076dfa032f2cf77cffc9befd13b8194934e083309906beae971a013d848cc46a702732a283
+    "@react-spring/core": ~9.4.5
+    "@react-spring/konva": ~9.4.5
+    "@react-spring/native": ~9.4.5
+    "@react-spring/three": ~9.4.5
+    "@react-spring/web": ~9.4.5
+    "@react-spring/zdog": ~9.4.5
+  checksum: 0bcf67cb0a1ddcf16f863418306060988c5a8fa3634d56818e4f8bda53fedba95071260c155a6614fbdd2ca9b987717283c5fcdda391678db99f83e412f75952
   languageName: node
   linkType: hard
 
@@ -24631,7 +24619,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.6.4, typescript@npm:^4.6.3":
+"typescript@npm:4.6.4, typescript@npm:^4.6.4":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -24651,7 +24639,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=ddd1e8"
   bin:

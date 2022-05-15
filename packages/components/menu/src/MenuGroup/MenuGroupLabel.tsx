@@ -1,16 +1,16 @@
 import * as React from 'react';
 
-import type { BoxProps } from '@real-system/box-primitive';
-import { Box } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { MenuGroupLabelPrimitive } from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-type MenuGroupLabelProps = Omit<BoxProps, 'as'>;
+type MenuGroupLabelProps = RealElementPrimitiveProps<'div'>;
 
 const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
   return (
     <MenuGroupLabelPrimitive
-      as={Box}
+      as={real.div}
       fontSize={1}
       fontWeight={5}
       lineHeight={1}

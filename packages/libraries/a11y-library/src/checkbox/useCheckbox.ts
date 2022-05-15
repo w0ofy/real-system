@@ -28,13 +28,13 @@ const restoreCheckboxProps = (
 };
 
 const useCheckbox: typeof useAriaCheckbox = (props, state, ref) => {
-  const restoreProps = restoreCheckboxProps(props);
-  return useAriaCheckbox(restoreProps, state, ref);
+  const restoredProps = restoreCheckboxProps(props);
+  return useAriaCheckbox(restoredProps, state, ref);
 };
 
 const useToggleState = (props: AriaCheckboxProps) => {
-  const restoreProps = restoreCheckboxProps(props);
-  return useAriaToggleState(restoreProps);
+  const restoredProps = restoreCheckboxProps(props);
+  return useAriaToggleState(restoredProps);
 };
 
 export { useCheckbox, useToggleState };

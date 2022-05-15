@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxProps } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 import { spreadStyleProps } from '@real-system/styling-library';
 
 import { InputProps } from './types';
@@ -9,7 +10,7 @@ const getCursor = ({
   disabled,
   readOnly,
   type,
-}: InputProps): BoxProps['cursor'] => {
+}: InputProps): StylishProps['cursor'] => {
   if ((type === 'date' || type === 'time') && !readOnly && !disabled) {
     return 'text';
   }
@@ -19,8 +20,7 @@ const getCursor = ({
 const InputElement = forwardRef<HTMLInputElement, InputProps>(
   function InputElement(props, ref) {
     return (
-      <Box
-        as="input"
+      <real.input
         appearance="none"
         display="block"
         width="100%"
@@ -70,7 +70,6 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
           transition: false,
           bgColor: false,
           backgroundColor: false,
-          bg: false,
           color: false,
           borderColor: false,
           boxShadow: false,

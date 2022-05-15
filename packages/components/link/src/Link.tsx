@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Icon } from '@real-system/icon';
 
 import { EXTERNAL_LINK_PROPS } from './link.constants';
@@ -16,7 +17,7 @@ type LinkProps = {
    * @default false (`true` if external is `true`)
    */
   showExternal?: boolean;
-} & BoxProps<'a'>;
+} & RealElementPrimitiveProps<'a'>;
 
 /**
  * Links are accessible elements used primarily for navigation.
@@ -30,8 +31,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 ) {
   const externalProps = external ? EXTERNAL_LINK_PROPS : {};
   return (
-    <Box
-      as="a"
+    <real.a
       fontSize={1}
       fontWeight={2}
       lineHeight={2}
@@ -66,7 +66,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
           marginLeft={2}
         />
       ) : null}
-    </Box>
+    </real.a>
   );
 });
 

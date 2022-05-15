@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/alert @real-system/animation-library @real-system/box-primitive @real-system/styling-library @real-system/theme-library @real-system/utils-library
+$ npm install react react-dom @real-system/alert @real-system/animation-library @real-system/elements-primitive @real-system/styling-library @real-system/theme-library @real-system/utils-library
 # yarn
-$ yarn add react react-dom @real-system/alert @real-system/animation-library @real-system/box-primitive @real-system/styling-library @real-system/theme-library @real-system/utils-library
+$ yarn add react react-dom @real-system/alert @real-system/animation-library @real-system/elements-primitive @real-system/styling-library @real-system/theme-library @real-system/utils-library
 
 # install toaster
 

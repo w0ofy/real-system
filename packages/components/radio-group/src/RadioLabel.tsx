@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 
 type RadioLabelProps = {
   children: React.ReactNode;
@@ -9,8 +9,7 @@ type RadioLabelProps = {
 
 const RadioLabel = ({ children, disabled }: RadioLabelProps) => {
   return (
-    <Box
-      as="span"
+    <real.span
       color={disabled ? 'gray-300' : 'gray-500'}
       fontFamily="body"
       fontSize={1}
@@ -18,7 +17,7 @@ const RadioLabel = ({ children, disabled }: RadioLabelProps) => {
       lineHeight={1}
       marginBottom={0}>
       {children}
-    </Box>
+    </real.span>
   );
 };
 

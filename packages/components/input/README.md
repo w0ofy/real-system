@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install @real-system/styling-library @real-system/box-primitive @real-system/utils-library react react-dom
+$ npm install @real-system/styling-library @real-system/elements-primitive @real-system/utils-library react react-dom
 # yarn
-$ yarn add @real-system/styling-library @real-system/box-primitive @real-system/utils-library react react-dom
+$ yarn add @real-system/styling-library @real-system/elements-primitive @real-system/utils-library react react-dom
 
 # install input
 

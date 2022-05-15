@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/ariakit-library @real-system/animation-library @real-system/box-primitive @real-system/button @real-system/styling-library @real-system/theme-library @real-system/flex @real-system/typography @real-system/utils-library
+$ npm install react react-dom @real-system/ariakit-library @real-system/animation-library @real-system/elements-primitive @real-system/button @real-system/styling-library @real-system/theme-library @real-system/flex @real-system/typography @real-system/utils-library
 # yarn
-$ yarn add react react-dom @real-system/ariakit-library @real-system/animation-library @real-system/box-primitive @real-system/button @real-system/styling-library @real-system/theme-library @real-system/flex @real-system/typography @real-system/utils-library
+$ yarn add react react-dom @real-system/ariakit-library @real-system/animation-library @real-system/elements-primitive @real-system/button @real-system/styling-library @real-system/theme-library @real-system/flex @real-system/typography @real-system/utils-library
 
 # install popover
 

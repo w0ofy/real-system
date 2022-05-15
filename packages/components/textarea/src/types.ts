@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { RealSystemElementProps } from '@real-system/utils-library';
+import { RealSystemElementProps } from '@real-system/styling-library';
 
-type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+type TextareaProps = RealSystemElementProps<'textarea'> & {
   disabled?: boolean;
   error?: boolean;
   height?: never;
@@ -16,6 +16,6 @@ type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   size?: never;
   style?: never;
   width?: never;
-} & RealSystemElementProps;
+};
 
 export type { TextareaProps };

@@ -1,10 +1,14 @@
 import * as React from 'react';
 
-import { Box } from '@real-system/box-primitive';
 import { MenuGroupPrimitive } from '@real-system/menu-primitive';
+import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps } from '../types';
+
+const StyledMenuGroup = styled('div')({
+  paddingTop: 4,
+});
 
 type MenuGroupProps = {
   children?: React.ReactNode;
@@ -13,8 +17,7 @@ type MenuGroupProps = {
 const MenuGroup = ({ children, ...restProps }: MenuGroupProps) => {
   return (
     <MenuGroupPrimitive
-      as={Box}
-      paddingTop={4}
+      as={StyledMenuGroup}
       data-testid={makeTestId('menu-group')}
       {...restProps}>
       {children}

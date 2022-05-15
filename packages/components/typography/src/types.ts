@@ -1,6 +1,6 @@
-import type { BoxProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 
-export type BaseTextProps = Omit<BoxProps, 'size'>;
+export type BaseTextProps = Omit<RealElementPrimitiveProps, 'size'>;
 export type CommonTextProps = Omit<BaseTextProps, 'as'>;
 
 export type TextAsTags = Extract<

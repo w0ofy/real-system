@@ -7,7 +7,7 @@ import {
   PopoverPrimitive,
   PopoverPrimitiveProps,
 } from '@real-system/popover-primitive';
-import type { RealSystemElementProps } from '@real-system/utils-library';
+import type { RealSystemElementProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { PopoverButton } from './PopoverButton';
@@ -17,7 +17,7 @@ import { PopoverDismiss } from './PopoverDismiss';
 import { PopoverHeading } from './PopoverHeading';
 
 type PopoverProps = Omit<PopoverPrimitiveProps, 'state' | 'as'> &
-  RealSystemElementProps & {
+  RealSystemElementProps<'div'> & {
     hideCloseButton?: boolean;
     hideArrow?: boolean;
   } & Omit<FlexProps, 'as'>;

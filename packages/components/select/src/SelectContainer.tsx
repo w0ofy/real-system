@@ -1,6 +1,6 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import {
   SelectLabelPrimitive,
   useSelectStatePrimitive,
@@ -76,7 +76,7 @@ const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
     );
 
     return (
-      <Box
+      <real.div
         display="flex"
         flexDirection="column"
         width="100%"
@@ -88,7 +88,7 @@ const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
             {validChildren ? validChildren : null}
           </>
         </SelectContextProvider>
-      </Box>
+      </real.div>
     );
   }
 );

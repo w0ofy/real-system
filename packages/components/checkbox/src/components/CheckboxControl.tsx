@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Icon } from '@real-system/icon';
 
 type CheckboxIconProps = {
@@ -85,8 +85,7 @@ const CheckboxControl = ({
   }, [isHovered, disabled, errorText, isSelected, isFocusedWithin]);
 
   return (
-    <Box
-      as="span"
+    <real.span
       width={8}
       height={8}
       marginRight={4}
@@ -102,7 +101,7 @@ const CheckboxControl = ({
         disabled={disabled}
         indeterminate={indeterminate}
       />
-    </Box>
+    </real.span>
   );
 };
 

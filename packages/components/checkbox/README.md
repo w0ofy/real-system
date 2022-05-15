@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/a11y-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/typography @real-system/utils-library
+$ npm install react react-dom @real-system/a11y-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/typography @real-system/utils-library @real-system/elements-primitive
 # yarn
-$ yarn add react react-dom @real-system/a11y-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/typography @real-system/utils-library
+$ yarn add react react-dom @real-system/a11y-library @real-system/state-library @real-system/styling-library @real-system/theme-library @real-system/typography @real-system/utils-library @real-system/elements-primitive
 
 # install checkbox
 

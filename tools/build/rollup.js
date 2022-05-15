@@ -1,4 +1,4 @@
-const rollup = require('rollup');
+const { rollup } = require('rollup');
 const { logger } = require('../utils');
 const { plugins } = require('./plugins');
 
@@ -13,7 +13,7 @@ async function build(packageJson) {
   const cjsOuputFile = packageJson.main;
   const packageEntryPoint = packageJson['main:dev'];
 
-  const bundle = await rollup.rollup({
+  const bundle = await rollup({
     input: packageEntryPoint,
     output: { sourcemap: true, exports: 'named' },
     plugins,

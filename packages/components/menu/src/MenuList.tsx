@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
 import { MenuPrimitive } from '@real-system/menu-primitive';
 import styled from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
@@ -8,7 +7,7 @@ import { makeTestId } from '@real-system/utils-library';
 import { useMenuStateContext } from './MenuContext';
 import type { CommonMenuProps } from './types';
 
-const StyledBox = styled(Box)({
+const StyledMenuList = styled('div')({
   py: 3,
   zIndex: 'dropdown',
   backgroundColor: 'white',
@@ -31,7 +30,7 @@ const MenuList = forwardRef<HTMLDivElement, MenuListProps>(function MenuList(
   const state = useMenuStateContext();
   return (
     <MenuPrimitive
-      as={StyledBox}
+      as={StyledMenuList}
       state={state}
       data-testid={makeTestId('menu-list')}
       {...restProps}

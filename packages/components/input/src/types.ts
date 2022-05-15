@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { RealSystemComponentProps } from '@real-system/styling-library';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 
 import { InputBoxProps } from './InputBox';
 
@@ -23,4 +23,4 @@ export type InputProps = Partial<
   placeholder?: string;
   required?: boolean;
   value?: string;
-} & RealSystemComponentProps<'input'>;
+} & RealElementPrimitiveProps<'input'>;

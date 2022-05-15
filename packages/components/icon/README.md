@@ -12,9 +12,9 @@
 # install peer dependencies
 
 # npm
-$ npm install --save @real-system/styling-library @real-system/theme-library @real-system/box-primitive react react-dom
+$ npm install --save @real-system/styling-library @real-system/theme-library @real-system/elements-primitive react react-dom
 # yarn
-$ yarn add @real-system/styling-library @real-system/theme-library @real-system/box-primitive react react-dom
+$ yarn add @real-system/styling-library @real-system/theme-library @real-system/elements-primitive react react-dom
 
 # install icon
 
