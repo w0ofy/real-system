@@ -4249,6 +4249,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/elements-primitive@workspace:packages/primitives/elements-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/elements-primitive@workspace:packages/primitives/elements-primitive"
+  dependencies:
+    "@real-system/styling-library": ^0.0.15
+    "@real-system/theme-library": ^0.0.21
+    "@real-system/utils-library": ^0.0.18
+    concurrently: ^7.1.0
+    react: ^18.1.0
+    react-dom: ^18.1.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/styling-library": ^0.0.15
+    "@real-system/theme-library": ^0.0.21
+    "@real-system/utils-library": ^0.0.18
+    react: ^18.1.0
+    react-dom: ^18.1.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/field@^0.0.14, @real-system/field@workspace:packages/components/field":
   version: 0.0.0-use.local
   resolution: "@real-system/field@workspace:packages/components/field"
@@ -24630,7 +24650,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.6.4":
+"typescript@npm:4.6.4, typescript@npm:^4.6.3":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -24650,7 +24670,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=ddd1e8"
   bin:

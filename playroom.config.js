@@ -9,20 +9,21 @@ module.exports = {
   scope: './.storybook/playroom/useScope.ts',
   snippets: './.storybook/playroom/snippets.json',
   frameComponent: './.storybook/playroom/FrameComponent.tsx',
-  typeScriptFiles: ['./src/**/*.{ts,tsx}', '!**/node_modules'],
+  typeScriptFiles: ['./src/**/*.{ts,tsx}'],
   widths: [375, 768, 960, 1024],
   webpackConfig: () => ({
     resolve: {
       plugins: [
         new DirectoryNamedWebpackPlugin({
           honorPackage: ['main:dev', 'main'],
+          exclude: /node_modules/,
         }),
       ],
     },
     module: {
       rules: [
         {
-          test: /\.tsx?$/,
+          test: /\.(ts|tsx)$/,
           include: __dirname,
           exclude: /node_modules/,
           use: {

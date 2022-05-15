@@ -37,19 +37,19 @@ export const WithError = () => (
   </Field>
 );
 
-export const StoryFieldGroup = () => (
+export const FieldGroupStory = () => (
   <form>
-    <FieldGroup marginBottom={8} width="220px">
-      <Field label="First name" labelFor="firstName" required>
+    <FieldGroup marginBottom={8} width="200px">
+      <Field label="First name" labelFor="firstName" width="100%" required>
         <Input type="text" id="firstName" />
       </Field>
-      <Field label="Last name" labelFor="lastName" required>
+      <Field label="Last name" labelFor="lastName" width="100%" required>
         <Input type="text" id="lastName" />
       </Field>
-      <Field label="Phone number" labelFor="phoneNumber">
+      <Field label="Phone number" width="100%" labelFor="phoneNumber">
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Field builtIns={false}>
+      <Field builtIns={false} width="100%">
         <SelectContainer>
           <Label>Engineering Level</Label>
           <Select>
@@ -67,21 +67,21 @@ export const StoryFieldGroup = () => (
   </form>
 );
 
-StoryFieldGroup.storyName = 'Field Group';
+FieldGroupStory.storyName = 'Field Group';
 
 export const InlineFieldGroup = () => (
   <form>
-    <FieldGroup inline marginBottom={8} width="60%">
-      <Field label="First name" labelFor="firstName" required>
+    <FieldGroup inline marginBottom={8} width="100%">
+      <Field label="First name" labelFor="firstName" width="20%" required>
         <Input type="text" id="firstName" />
       </Field>
-      <Field label="Last name" labelFor="lastName" required>
+      <Field label="Last name" labelFor="lastName" width="20%" required>
         <Input type="text" id="lastName" />
       </Field>
-      <Field label="Phone number" labelFor="phoneNumber">
+      <Field label="Phone number" labelFor="phoneNumber" width="20%">
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Field builtIns={false}>
+      <Field builtIns={false} width="20%">
         <SelectContainer>
           <Label>Engineering Level</Label>
           <Select>
@@ -101,26 +101,26 @@ export const InlineFieldGroup = () => (
 
 export const WithoutBuiltins = () => (
   <form>
-    <FieldGroup width="220px">
-      <Field builtIns={false}>
+    <FieldGroup width="200px">
+      <Field builtIns={false} width="100%">
         <Label htmlFor="firstName" required>
           First name
         </Label>
         <Input type="text" id="firstName" />
         <HelpText>Provide your first name</HelpText>
       </Field>
-      <Field builtIns={false}>
+      <Field builtIns={false} width="100%">
         <Label htmlFor="lastName" required>
           Last name
         </Label>
         <Input type="text" id="lastName" />
         <HelpText>Provide your last name</HelpText>
       </Field>
-      <Field builtIns={false}>
+      <Field builtIns={false} width="100%">
         <Label htmlFor="phoneNumber">Phone number</Label>
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Field builtIns={false}>
+      <Field builtIns={false} width="100%">
         <SelectContainer>
           <Label>Engineering Level</Label>
           <Select>

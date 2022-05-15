@@ -38,6 +38,7 @@
     "@real-system/descendants-library": "^0.0.1",
     "@real-system/dialog": "^0.0.29",
     "@real-system/dialog-primitive": "^0.0.21",
+    "@real-system/elements-primitive": "^0.0.0",
     "@real-system/field": "^0.0.14",
     "@real-system/flex": "^0.0.29",
     "@real-system/icon": "^0.0.36",
