@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.21
+
+### Patch Changes
+
+- [#401](https://github.com/bigwoof91/real-system/pull/401) [`9773221`](https://github.com/bigwoof91/real-system/commit/977322190f7d7d2f8f4c9b73d59e92535fe4dbd6) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add PinInput component and descendants-library
+
 ## 0.0.20
 
 ### Patch Changes
