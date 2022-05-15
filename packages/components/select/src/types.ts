@@ -3,7 +3,7 @@ import {
   SelectStatePrimitiveProps,
 } from '@real-system/select-primitive';
 import type { StylishProps } from '@real-system/styling-library';
-import type { RealSystemElementProps } from '@real-system/utils-library';
+import type { RealSystemComponentProps } from '@real-system/styling-library';
 
 type SelectState = SelectStatePrimitive;
 type SelectStateProps = SelectStatePrimitiveProps;
@@ -13,11 +13,9 @@ type SelectFormStateProps = {
   error?: boolean;
 };
 
-/** Select component */
-type SelectProps = SelectStateProps & {
-  children: React.ReactNode;
-} & StylishProps &
-  RealSystemElementProps &
+/** Select Container component */
+type SelectContainerProps = SelectStateProps &
+  RealSystemComponentProps &
   SelectFormStateProps;
 
 type OmitSelectPrivateProps<T> = Omit<T, 'state' | 'as'>;
@@ -28,7 +26,7 @@ export type {
   CommonSelectProps,
   InternalSelectProps,
   OmitSelectPrivateProps,
-  SelectProps,
+  SelectContainerProps,
   SelectState,
   SelectStateProps,
 };

@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import { useFocusManager } from '@real-system/a11y-library';
 import { createDescendantContext } from '@real-system/descendants-library';
 import { constate } from '@real-system/state-library';
 import {
@@ -50,7 +49,7 @@ type PinInputContext = {
  * -----------------------------------
  **/
 
-const [PinInputProvider, usePinInputContext] = constate(
+const [PinInputContextProvider, usePinInputContext] = constate(
   ({ value }: PinInputContext) => value
 );
 
@@ -76,14 +75,13 @@ const usePinInput = ({
   const uuid = React.useId();
   const id = idProp ?? `pin-input-${uuid}`;
 
-  const focusManager = useFocusManager();
   const descendants = usePinInputDescendants();
 
   const [moveFocus, setMoveFocus] = React.useState(true);
   const [focusedIndex, setFocusedIndex] = React.useState(-1);
 
   const [values, setValues] = useControllableState<string[]>({
-    defaultValue: toArray(defaultValue) || [],
+    defaultValue: toArray(defaultValue || value) || [],
     value: toArray(value),
     onChange: (values) => onChange?.(values.join('')),
   });
@@ -92,7 +90,7 @@ const usePinInput = ({
     if (autoFocus) {
       const first = descendants.first();
       if (first) {
-        focusManager.focusFirst({ from: first.node });
+        first.node.focus();
       }
     }
     // We don't want to listen for updates to `autoFocus` since it should only detect its initial value
@@ -103,12 +101,11 @@ const usePinInput = ({
     (index: number) => {
       if (!moveFocus || !manageFocus) return;
       const next = descendants.next(index, false);
-      const thisInput = descendants.item(index);
       if (next) {
-        focusManager.focusNext({ from: thisInput?.node });
+        next.node.focus();
       }
     },
-    [moveFocus, manageFocus, descendants, focusManager]
+    [moveFocus, manageFocus, descendants]
   );
 
   const setValue = React.useCallback(
@@ -138,9 +135,9 @@ const usePinInput = ({
     setValues(values);
     const first = descendants.first();
     if (first) {
-      focusManager.focusFirst();
+      first.node.focus();
     }
-  }, [descendants, focusManager, setValues]);
+  }, [descendants, setValues]);
 
   const getNextValue = React.useCallback(
     (value: string, eventValue: string) => {
@@ -205,10 +202,9 @@ const usePinInput = ({
         if (event.key === 'Backspace' && manageFocus) {
           if ((event.target as HTMLInputElement).value === '') {
             const prevInput = descendants.prev(index, false);
-            const thisInput = descendants.item(index);
             if (prevInput) {
               setValue('', index - 1);
-              focusManager.focusPrevious({ from: thisInput?.node });
+              prevInput.node.focus();
               setMoveFocus(true);
             }
           } else {
@@ -261,7 +257,6 @@ const usePinInput = ({
       descendants,
       onComplete,
       manageFocus,
-      focusManager,
     ]
   );
 
@@ -303,8 +298,8 @@ const usePinInputField = (
 
 export type { PinInputContext, UsePinInputFieldProps, UsePinInputReturn };
 export {
+  PinInputContextProvider,
   PinInputDescendantsProvider,
-  PinInputProvider,
   usePinInput,
   usePinInputContext,
   usePinInputDescendant,

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as CSS from 'csstype';
 
 import type { ResponsiveValue } from '../config/_types';
-import type { PseudoPropNames, StyleProps } from '../styleProps/index';
+import type { PseudoPropNames, StyleProps } from '../props';
 
 /**
  * CSSObject helpers
@@ -83,6 +83,14 @@ type ComponentWithAs<
 
 type StyledDict<T = any> = Record<PropertyKey, T>;
 
+type RenderProp<P = StyledDict> = (props: P) => React.ReactNode;
+
+type StyledChildren<T = any> =
+  | React.ReactNode
+  | RenderProp<React.HTMLAttributes<T> & React.RefAttributes<T>>;
+
+type StyledPropsWithChildren<P> = P & { children?: StyledChildren | undefined };
+
 export type {
   As,
   ComponentWithAs,
@@ -92,4 +100,5 @@ export type {
   RecursiveCSSSelector,
   RecursivePseudo,
   StyledDict,
+  StyledPropsWithChildren,
 };

@@ -9,6 +9,10 @@ export default {
   subcomponents: { PinInputField },
 } as Meta;
 
+/**
+ * @todo add docs for hook example
+ */
+
 export const Default = (args) => (
   <PinInput {...args}>
     <PinInputField />
@@ -26,3 +30,24 @@ export const Masked = () => (
     <PinInputField />
   </PinInput>
 );
+
+export const Controlled = () => {
+  const [value, setValue] = React.useState('');
+
+  const handleChange = (value: string) => {
+    setValue(value);
+  };
+
+  const handleComplete = (value: string) => {
+    console.log(value);
+  };
+
+  return (
+    <PinInput value={value} onChange={handleChange} onComplete={handleComplete}>
+      <PinInputField />
+      <PinInputField />
+      <PinInputField />
+      <PinInputField />
+    </PinInput>
+  );
+};

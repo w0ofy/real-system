@@ -1,11 +1,6 @@
-import { css } from '@emotion/react';
 import _styled, { FunctionInterpolation } from '@emotion/styled';
 
-import {
-  getPseudoProps,
-  getStyleProps,
-  isNotStylishProp,
-} from '../styleProps/index';
+import { getPseudoProps, getStyleProps, isNotStylishProp } from '../props';
 
 import type {
   CSSObject,

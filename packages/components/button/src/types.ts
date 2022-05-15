@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import type { RealSystemComponentProps } from '@real-system/styling-library';
 import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
-import type { RealSystemElementProps } from '@real-system/utils-library';
 
 export type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
 export type ButtonSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;
@@ -25,4 +24,4 @@ export type ButtonProps = RealSystemComponentProps & {
   size?: ButtonSize;
   /** sets color scheme of the button; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
-} & RealSystemElementProps;
+};

@@ -1,6 +1,6 @@
 /**
  * Kudos to chakra-ui https://github.com/chakra-ui/chakra-ui/tree/next/packages/descendant
- * This code is a slightly-modified version of that package source code.
+ * This code is a slightly-modified version of their own.
  */
 import React, { RefCallback, useRef, useState } from 'react';
 
@@ -26,10 +26,12 @@ function useDescendants<T extends HTMLElement = HTMLElement, K = Obj>() {
   return descendants.current;
 }
 
-export type UseDescendantsReturn = ReturnType<typeof useDescendants>;
+export type DescendantContext = {
+  value: ReturnType<typeof useDescendants>;
+};
 
 const [DescendantsContextProvider, useDescendantsContext] = constate(
-  (descendants: { value: UseDescendantsReturn }) => descendants.value
+  (descendants: DescendantContext) => descendants.value
 );
 
 /**
@@ -70,6 +72,11 @@ function useDescendant<T extends HTMLElement = HTMLElement, K = Obj>(
   };
 }
 
+type ContextProviderType<
+  T extends HTMLElement = HTMLElement,
+  K = Obj
+> = React.Provider<DescendantsManager<T, K>>;
+
 /**
  * Function to provide strongly-typed versions of the descendants context provider and hooks.
  */
@@ -77,8 +84,9 @@ export function createDescendantContext<
   T extends HTMLElement = HTMLElement,
   K = Obj
 >() {
-  type ContextProviderType = React.Provider<DescendantsManager<T, K>>;
-  const ContextProvider = cast<ContextProviderType>(DescendantsContextProvider);
+  const ContextProvider = cast<ContextProviderType<T, K>>(
+    DescendantsContextProvider
+  );
 
   const _useDescendantsContext = () =>
     cast<DescendantsManager<T, K>>(useDescendantsContext());

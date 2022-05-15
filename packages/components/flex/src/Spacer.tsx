@@ -2,9 +2,9 @@ import React, { forwardRef } from 'react';
 
 import type { BoxProps } from '@real-system/box-primitive';
 import { Box } from '@real-system/box-primitive';
-import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
+import { makeTestId } from '@real-system/utils-library';
 
-type FlexSpacerProps = RealSystemElementProps<'div'> & BoxProps;
+type FlexSpacerProps = BoxProps;
 
 /**
  * A flex spacer that expands along the major axis of its containing flex layout.

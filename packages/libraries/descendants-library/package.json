@@ -30,14 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/a11y-library": "^0.0.5",
     "@real-system/state-library": "^0.0.10",
     "@real-system/utils-library": "^0.0.17",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/a11y-library": "^0.0.5",
     "@real-system/state-library": "^0.0.10",
     "@real-system/utils-library": "^0.0.17",
     "concurrently": "^7.1.0",

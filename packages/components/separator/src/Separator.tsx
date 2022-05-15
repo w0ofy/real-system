@@ -5,13 +5,16 @@ import {
   SeparatorPrimitive,
   SeparatorPrimitiveProps,
 } from '@real-system/separator-primitive';
-import type { BorderProps, StylishProps } from '@real-system/styling-library';
+import type {
+  BorderProps,
+  RealSystemComponentProps,
+  StylishProps,
+} from '@real-system/styling-library';
 import styled from '@real-system/styling-library';
-import { makeTestId, RealSystemElementProps } from '@real-system/utils-library';
+import { makeTestId } from '@real-system/utils-library';
 
 type SeparatorProps = Pick<SeparatorPrimitiveProps, 'orientation'> &
-  RealSystemElementProps &
-  Omit<BoxStyleProps, keyof BorderProps> & {
+  Omit<RealSystemComponentProps, keyof BorderProps> & {
     /**
      * Controls the width of the separator (`borderWidth` CSS property) — intelligently applies the border width to the correct border e.g. `borderLeftWidth` or `borderBottomWidth`
      *

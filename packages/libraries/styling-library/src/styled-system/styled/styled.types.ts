@@ -1,10 +1,4 @@
-import * as React from 'react';
-
-import type {
-  PseudoProps,
-  StyleProps,
-  StylishProps,
-} from '../styleProps/index';
+import type { StylishProps } from '../props';
 
 import {
   As,
@@ -13,6 +7,7 @@ import {
   PropsOf,
   RecursiveCSSObject,
   StyledDict,
+  StyledPropsWithChildren,
 } from './styled.types.helpers';
 
 /**
@@ -42,15 +37,15 @@ type InternalRealSystemComponentProps = {
 
 type RealSystemComponentProps<T extends As = any, P = StyledDict> = PropsOf<T> &
   RealSystemCustomProps<P> &
-  React.PropsWithChildren<P> &
+  StyledPropsWithChildren<P> &
   StylishProps;
 
 /**
  * @todo Do we need this? Or just RealSystemComponentProps?
  */
-type StyledComponentProps<P = StyledDict> = React.PropsWithChildren<P> &
+type StyledComponentProps<P = StyledDict> = StyledPropsWithChildren<P> &
   RealSystemCustomProps<P> &
-  StyledSystemProps;
+  StylishProps;
 
 type RealSystemComponent<T extends As, P = StyledDict> = ComponentWithAs<
   T,
@@ -61,13 +56,7 @@ type FunctionCSSInterpolation<P = StyledDict> = {
   (props: P): CSSObject;
 };
 
-// type PseudoProps = {
-//   [K in keyof Pseudos]?: CSSObject;
-// };
-
 type StyleObjectOrFn<P = StyledDict> = CSSObject | FunctionCSSInterpolation<P>;
-
-type StyledSystemProps = StyleProps & PseudoProps;
 
 export type {
   CSSObject,

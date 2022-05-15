@@ -39,4 +39,5 @@ const PopoverDismiss = forwardRef<HTMLButtonElement, PopoverDismissProps>(
   }
 );
 
+export type { PopoverDismissProps };
 export { PopoverDismiss };

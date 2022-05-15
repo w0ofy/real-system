@@ -14,7 +14,7 @@ const StyledSeparator = styled(
   SelectSeparatorPrimitive
 )<SelectSeparatorPrimitiveProps>({});
 
-const SelectSeparator = (props: SelectSeparatorProps) => {
+const SelectSeparator = ({ children, ...restProps }: SelectSeparatorProps) => {
   return (
     <StyledSeparator
       width="100%"
@@ -23,8 +23,9 @@ const SelectSeparator = (props: SelectSeparatorProps) => {
       border="none"
       borderTop="weak"
       data-testid={makeTestId('select-separator')}
-      {...props}
-    />
+      {...restProps}>
+      {children}
+    </StyledSeparator>
   );
 };
 

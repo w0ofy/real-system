@@ -54,7 +54,6 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
     const disclosure = useMemo(() => children, [children]);
 
     return (
-      /** @ts-ignore false negative type error: missing `as` prop */
       <PopoverDisclosurePrimitive
         state={state}
         data-testid={makeTestId('popover-disclosure')}

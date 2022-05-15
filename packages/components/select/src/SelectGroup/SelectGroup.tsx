@@ -11,15 +11,16 @@ import type { OmitSelectPrivateProps } from '../types';
 type SelectGroupProps = OmitSelectPrivateProps<SelectGroupPrimitiveProps> &
   StylishProps;
 
-const StyledGroup = styled(SelectGroupPrimitive)<SelectGroupPrimitiveProps>({});
+const StyledSelectGroup = styled(SelectGroupPrimitive)<SelectGroupProps>({});
 
-const SelectGroup = (props: SelectGroupProps) => {
+const SelectGroup = ({ children, ...restProps }: SelectGroupProps) => {
   return (
-    <StyledGroup
+    <StyledSelectGroup
       paddingTop={4}
       data-testid={makeTestId('select-group')}
-      {...props}
-    />
+      {...restProps}>
+      {children}
+    </StyledSelectGroup>
   );
 };
 

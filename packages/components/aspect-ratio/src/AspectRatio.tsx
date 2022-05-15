@@ -1,12 +1,11 @@
 import React, { forwardRef } from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import styled, { ResponsiveValue } from '@real-system/styling-library';
-import {
-  makeTestId,
-  mapResponsive,
-  RealSystemElementProps,
-} from '@real-system/utils-library';
+import { Box } from '@real-system/box-primitive';
+import styled, {
+  RealSystemComponentProps,
+  ResponsiveValue,
+} from '@real-system/styling-library';
+import { makeTestId, mapResponsive } from '@real-system/utils-library';
 
 type AspectRatioOptions = {
   /**
@@ -16,9 +15,7 @@ type AspectRatioOptions = {
   children?: React.ReactChild;
 };
 
-type AspectRatioProps = BoxStyleProps &
-  AspectRatioOptions &
-  RealSystemElementProps;
+type AspectRatioProps = AspectRatioOptions & RealSystemComponentProps<'div'>;
 
 const StyledBox = styled(Box)({
   '& > *:not(style)': {

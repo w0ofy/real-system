@@ -113,6 +113,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/libraries/descendants-library
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/components/dialog
     schedule:
       interval: weekly
@@ -178,6 +186,14 @@ updates:
       - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/primitives/menu-primitive
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
+    directory: /packages/components/pin-input
     schedule:
       interval: weekly
     labels:

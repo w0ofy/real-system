@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/a11y-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/state-library
+$ npm install react react-dom @real-system/descendants-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/state-library
 # yarn
-$ yarn add react react-dom @real-system/a11y-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/state-library
+$ yarn add react react-dom @real-system/descendants-library @real-system/styling-library @real-system/theme-library @real-system/utils-library @real-system/state-library
 
 # install pin-input
 

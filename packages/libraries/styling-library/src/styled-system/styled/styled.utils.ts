@@ -1,7 +1,7 @@
 import emotionValid from '@emotion/is-prop-valid';
 import memoize from '@emotion/memoize';
 
-import { STYLISH_PROPS_MAP } from '../styleProps/index';
+import { STYLISH_PROPS_MAP } from '../props';
 
 import { StyledDict } from './styled.types.helpers';
 

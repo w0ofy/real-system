@@ -42,7 +42,7 @@ const useControllableState = <T>(props: UseControllableStateProps<T>) => {
   const onChangeProp = useCallbackRef(onChange);
   const shouldUpdateProp = useCallbackRef(shouldUpdate);
 
-  const [valueState, setValue] = React.useState(defaultValue as T);
+  const [valueState, setValueState] = React.useState(defaultValue as T);
 
   const isControlled = valueProp !== undefined;
   const value = isControlled ? (valueProp as T) : valueState;
@@ -56,7 +56,7 @@ const useControllableState = <T>(props: UseControllableStateProps<T>) => {
       }
 
       if (!isControlled) {
-        setValue(nextValue);
+        setValueState(nextValue);
       }
 
       onChangeProp(nextValue);
