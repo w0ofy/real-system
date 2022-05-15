@@ -1,6 +1,6 @@
 {
   "name": "@real-system/icon",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "icon component for real system",
   "status": "production",
   "main": "lib/index.js",
@@ -30,10 +30,10 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box-primitive": "^0.0.18",
-    "@real-system/styling-library": "^0.0.14",
-    "@real-system/theme-library": "^0.0.20",
-    "@real-system/utils-library": "^0.0.17",
+    "@real-system/box-primitive": "^0.0.19",
+    "@real-system/styling-library": "^0.0.15",
+    "@real-system/theme-library": "^0.0.21",
+    "@real-system/utils-library": "^0.0.18",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -41,10 +41,10 @@
     "@heroicons/react": "^1.0.6"
   },
   "devDependencies": {
-    "@real-system/box-primitive": "^0.0.18",
-    "@real-system/styling-library": "^0.0.14",
-    "@real-system/theme-library": "^0.0.20",
-    "@real-system/utils-library": "^0.0.17",
+    "@real-system/box-primitive": "^0.0.19",
+    "@real-system/styling-library": "^0.0.15",
+    "@real-system/theme-library": "^0.0.21",
+    "@real-system/utils-library": "^0.0.18",
     "concurrently": "^7.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

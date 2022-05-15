@@ -1,5 +1,21 @@
 # @real-system/alert
 
+## 0.0.21
+
+### Patch Changes
+
+- [#401](https://github.com/bigwoof91/real-system/pull/401) [`9773221`](https://github.com/bigwoof91/real-system/commit/977322190f7d7d2f8f4c9b73d59e92535fe4dbd6) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add PinInput component and descendants-library
+
+- Updated dependencies [[`9773221`](https://github.com/bigwoof91/real-system/commit/977322190f7d7d2f8f4c9b73d59e92535fe4dbd6), [`1e298f0`](https://github.com/bigwoof91/real-system/commit/1e298f03f2527f3a28aa1acb451085e4973c3d03)]:
+  - @real-system/button@0.0.37
+  - @real-system/flex@0.0.29
+  - @real-system/icon@0.0.36
+  - @real-system/typography@0.0.36
+  - @real-system/styling-library@0.0.15
+  - @real-system/theme-library@0.0.21
+  - @real-system/utils-library@0.0.18
+  - @real-system/alert-primitive@0.0.10
+
 ## 0.0.20
 
 ### Patch Changes
