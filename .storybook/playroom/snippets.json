@@ -1,5 +1,10 @@
 [
   {
+    "group": "real elements",
+    "name": "Div",
+    "code": "<real.div fontWeight={3} fontSize={2}>A Real Element Primitive</real.div>"
+  },
+  {
     "group": "Box",
     "name": "Default",
     "code": "<Box></Box>"

@@ -38,7 +38,7 @@
   "devDependencies": {
     "@real-system/state-library": "^0.0.10",
     "@real-system/utils-library": "^0.0.18",
-    "concurrently": "^7.1.0",
+    "concurrently": "^7.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "typescript": "4.6.4"

@@ -3911,7 +3911,7 @@ __metadata:
     "@react-types/checkbox": ^3.2.7
     "@react-types/radio": ^3.1.6
     "@react-types/shared": ^3.12.0
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     typescript: 4.6.4
   peerDependencies:
     react: ^18.0.0
@@ -3923,7 +3923,7 @@ __metadata:
   resolution: "@real-system/alert-primitive@workspace:packages/primitives/alert-primitive"
   dependencies:
     "@reach/alert": ^0.17.0
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -3945,7 +3945,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.21
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -3967,7 +3967,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/animation-library@workspace:packages/libraries/animation-library"
   dependencies:
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react-spring: ^9.4.4
     typescript: 4.6.4
   peerDependencies:
@@ -3980,7 +3980,7 @@ __metadata:
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
     ariakit: 2.0.0-next.26
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -3998,7 +3998,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4020,7 +4020,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4041,7 +4041,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     deepmerge: ^4.2.2
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4060,7 +4060,7 @@ __metadata:
   resolution: "@real-system/button-primitive@workspace:packages/primitives/button-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.8
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4079,7 +4079,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4106,7 +4106,7 @@ __metadata:
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
     "@real-system/visually-hidden": ^0.0.32
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4145,6 +4145,7 @@ __metadata:
     "@real-system/descendants-library": ^0.0.1
     "@real-system/dialog": ^0.0.29
     "@real-system/dialog-primitive": ^0.0.21
+    "@real-system/elements-primitive": ^0.0.0
     "@real-system/field": ^0.0.14
     "@real-system/flex": ^0.0.29
     "@real-system/icon": ^0.0.36
@@ -4188,7 +4189,7 @@ __metadata:
   dependencies:
     "@real-system/state-library": ^0.0.10
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4205,7 +4206,7 @@ __metadata:
   resolution: "@real-system/dialog-primitive@workspace:packages/primitives/dialog-primitive"
   dependencies:
     "@reach/dialog": ^0.17.0
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4229,7 +4230,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.21
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4249,6 +4250,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/elements-primitive@^0.0.0, @real-system/elements-primitive@workspace:packages/primitives/elements-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/elements-primitive@workspace:packages/primitives/elements-primitive"
+  dependencies:
+    "@real-system/styling-library": ^0.0.15
+    "@real-system/theme-library": ^0.0.21
+    concurrently: ^7.2.0
+    react: ^18.1.0
+    react-dom: ^18.1.0
+    typescript: ^4.6.3
+  peerDependencies:
+    "@real-system/styling-library": ^0.0.15
+    "@real-system/theme-library": ^0.0.21
+    react: ^18.1.0
+    react-dom: ^18.1.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/field@^0.0.14, @real-system/field@workspace:packages/components/field":
   version: 0.0.0-use.local
   resolution: "@real-system/field@workspace:packages/components/field"
@@ -4259,7 +4278,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.21
     "@real-system/typography": ^0.0.36
     "@real-system/utils": ^0.0.11
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4283,7 +4302,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4306,7 +4325,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4329,7 +4348,7 @@ __metadata:
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
     "@real-system/visually-hidden": ^0.0.32
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4353,7 +4372,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4373,7 +4392,7 @@ __metadata:
   resolution: "@real-system/menu-primitive@workspace:packages/primitives/menu-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.8
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4397,7 +4416,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4427,7 +4446,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4449,7 +4468,7 @@ __metadata:
   resolution: "@real-system/popover-primitive@workspace:packages/primitives/popover-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.8
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4473,7 +4492,7 @@ __metadata:
     "@real-system/theme-library": ^0.0.21
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4497,7 +4516,7 @@ __metadata:
   resolution: "@real-system/portal-primitive@workspace:packages/primitives/portal-primitive"
   dependencies:
     "@reach/portal": ^0.17.0
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4520,7 +4539,7 @@ __metadata:
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
     "@real-system/visually-hidden": ^0.0.32
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4544,7 +4563,7 @@ __metadata:
   resolution: "@real-system/select-primitive@workspace:packages/primitives/select-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.8
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4565,7 +4584,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.0.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4586,7 +4605,7 @@ __metadata:
   resolution: "@real-system/separator-primitive@workspace:packages/primitives/separator-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.8
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4606,7 +4625,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4628,7 +4647,7 @@ __metadata:
     "@real-system/box-primitive": ^0.0.19
     "@real-system/styling-library": ^0.0.15
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4645,7 +4664,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/state-library@workspace:packages/libraries/state-library"
   dependencies:
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     constate: ^3.3.2
     typescript: 4.6.4
   peerDependencies:
@@ -4662,7 +4681,7 @@ __metadata:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
     "@types/styled-system": 5.1.15
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     csstype: ^3.0.11
     lodash.mergewith: ^4.6.2
     polished: ^4.2.2
@@ -4685,7 +4704,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-autosize-textarea: ^7.1.0
     react-dom: ^18.1.0
@@ -4707,7 +4726,7 @@ __metadata:
   dependencies:
     "@real-system/styling-library": ^0.0.15
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4730,7 +4749,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4752,7 +4771,7 @@ __metadata:
   resolution: "@real-system/tooltip-primitive@workspace:packages/primitives/tooltip-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.8
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4774,7 +4793,7 @@ __metadata:
     "@real-system/tooltip-primitive": ^0.0.3
     "@real-system/typography": ^0.0.36
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4799,7 +4818,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/theme-library": ^0.0.21
     "@real-system/utils-library": ^0.0.18
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4821,7 +4840,7 @@ __metadata:
     "@real-system/styling-library": ^0.0.15
     "@real-system/utils-library": ^0.0.18
     "@real-system/visually-hidden": ^0.0.32
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -4840,7 +4859,7 @@ __metadata:
   resolution: "@real-system/utils-library@workspace:packages/libraries/utils-library"
   dependencies:
     chalk: ^4.1.2
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     deepmerge: ^4.2.2
     lodash.get: ^4.4.2
     react: ^18.1.0
@@ -4875,7 +4894,7 @@ __metadata:
   dependencies:
     "@real-system/box-primitive": 0.0.19
     "@real-system/styling-library": ^0.0.15
-    concurrently: ^7.1.0
+    concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
     typescript: 4.6.4
@@ -11042,24 +11061,6 @@ __metadata:
     readable-stream: ^2.2.2
     typedarray: ^0.0.6
   checksum: 1ef77032cb4459dcd5187bd710d6fc962b067b64ec6a505810de3d2b8cc0605638551b42f8ec91edf6fcd26141b32ef19ad749239b58fae3aba99187adc32285
-  languageName: node
-  linkType: hard
-
-"concurrently@npm:^7.0.0, concurrently@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "concurrently@npm:7.1.0"
-  dependencies:
-    chalk: ^4.1.0
-    date-fns: ^2.16.1
-    lodash: ^4.17.21
-    rxjs: ^6.6.3
-    spawn-command: ^0.0.2-1
-    supports-color: ^8.1.0
-    tree-kill: ^1.2.2
-    yargs: ^16.2.0
-  bin:
-    concurrently: dist/bin/concurrently.js
-  checksum: 723996afc73af7ea914a03726c75b63be6ce83f0825b0bc54de0568ba89490e217ca88523f251fe1e5c30ee2780572dce830b530ef35e435e64c1f94cfd4e4af
   languageName: node
   linkType: hard
 
@@ -24630,7 +24631,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.6.4":
+"typescript@npm:4.6.4, typescript@npm:^4.6.3":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -24650,7 +24651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=ddd1e8"
   bin:

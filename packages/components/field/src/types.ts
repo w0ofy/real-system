@@ -1,7 +1,7 @@
 import type { FlexProps } from '@real-system/flex';
 import type { HelpTextProps, LabelProps } from '@real-system/typography';
 
-type CommonProps = Omit<FlexProps, 'htmlFor' | 'vertical'>;
+type CommonProps = FlexProps;
 
 type NoBuiltInProps = {
   /** Disables opinionated props and favors passing components as children (e.g. `Label`, `HelpText`) as children.

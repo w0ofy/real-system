@@ -46,7 +46,11 @@ const Field = ({
         {hasHelpText && <HelpText errorText={errorText}>{helpText}</HelpText>}
       </Flex>
     );
-  return <Flex vertical>{children}</Flex>;
+  return (
+    <Flex vertical {...restProps}>
+      {children}
+    </Flex>
+  );
 };
 
 export type { FieldProps };
