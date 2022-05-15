@@ -1,6 +1,6 @@
 {
   "name": "@real-system/separator-primitive",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Separator primitive component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/ariakit-library": "^0.0.8",
+    "@real-system/ariakit-library": "^0.0.9",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/ariakit-library": "^0.0.8",
+    "@real-system/ariakit-library": "^0.0.9",
     "concurrently": "^7.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

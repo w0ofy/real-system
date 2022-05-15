@@ -1,6 +1,6 @@
 {
   "name": "@real-system/elements-primitive",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Element primitives with style props for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,14 +30,14 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/styling-library": "^0.0.15",
-    "@real-system/theme-library": "^0.0.21",
+    "@real-system/styling-library": "^0.0.16",
+    "@real-system/theme-library": "^0.0.22",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/styling-library": "^0.0.15",
-    "@real-system/theme-library": "^0.0.21",
+    "@real-system/styling-library": "^0.0.16",
+    "@real-system/theme-library": "^0.0.22",
     "concurrently": "^7.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

@@ -1,5 +1,11 @@
 # @real-system/ariakit-library
 
+## 0.0.9
+
+### Patch Changes
+
+- [#415](https://github.com/bigwoof91/real-system/pull/415) [`e71ea39`](https://github.com/bigwoof91/real-system/commit/e71ea39fc41db70222319ea26ab682a5da6f9c59) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Upgrade ariakit and ally library dependencies"
+
 ## 0.0.8
 
 ### Patch Changes
