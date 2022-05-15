@@ -4,6 +4,7 @@ import { Meta } from '@storybook/react';
 import { Button } from '@real-system/button';
 import { Field, FieldGroup } from '@real-system/field';
 import { Input } from '@real-system/input';
+import { Select, SelectContainer, SelectItem } from '@real-system/select';
 import { HelpText, Label } from '@real-system/typography';
 
 export default {
@@ -38,8 +39,8 @@ export const WithError = () => (
 
 export const StoryFieldGroup = () => (
   <form>
-    <FieldGroup marginBottom={8}>
-      <Field inline label="First name" labelFor="firstName" required>
+    <FieldGroup marginBottom={8} width="220px">
+      <Field label="First name" labelFor="firstName" required>
         <Input type="text" id="firstName" />
       </Field>
       <Field label="Last name" labelFor="lastName" required>
@@ -47,6 +48,17 @@ export const StoryFieldGroup = () => (
       </Field>
       <Field label="Phone number" labelFor="phoneNumber">
         <Input type="tel" id="phoneNumber" />
+      </Field>
+      <Field builtIns={false}>
+        <SelectContainer>
+          <Label>Engineering Level</Label>
+          <Select>
+            <SelectItem value="L1">L1 (Associate)</SelectItem>
+            <SelectItem value="L2">L2 (Mid)</SelectItem>
+            <SelectItem value="L3">L3 (Senior)</SelectItem>
+            <SelectItem value="L4">L4 (Staff)</SelectItem>
+          </Select>
+        </SelectContainer>
       </Field>
     </FieldGroup>
     <Button type="reset" variant="fill">
@@ -59,8 +71,8 @@ StoryFieldGroup.storyName = 'Field Group';
 
 export const InlineFieldGroup = () => (
   <form>
-    <FieldGroup inline marginBottom={8}>
-      <Field inline label="First name" labelFor="firstName" required>
+    <FieldGroup inline marginBottom={8} width="60%">
+      <Field label="First name" labelFor="firstName" required>
         <Input type="text" id="firstName" />
       </Field>
       <Field label="Last name" labelFor="lastName" required>
@@ -68,6 +80,17 @@ export const InlineFieldGroup = () => (
       </Field>
       <Field label="Phone number" labelFor="phoneNumber">
         <Input type="tel" id="phoneNumber" />
+      </Field>
+      <Field builtIns={false}>
+        <SelectContainer>
+          <Label>Engineering Level</Label>
+          <Select>
+            <SelectItem value="L1">L1 (Associate)</SelectItem>
+            <SelectItem value="L2">L2 (Mid)</SelectItem>
+            <SelectItem value="L3">L3 (Senior)</SelectItem>
+            <SelectItem value="L4">L4 (Staff)</SelectItem>
+          </Select>
+        </SelectContainer>
       </Field>
     </FieldGroup>
     <Button type="reset" variant="fill">
@@ -78,7 +101,7 @@ export const InlineFieldGroup = () => (
 
 export const WithoutBuiltins = () => (
   <form>
-    <FieldGroup>
+    <FieldGroup width="220px">
       <Field builtIns={false}>
         <Label htmlFor="firstName" required>
           First name
@@ -96,6 +119,17 @@ export const WithoutBuiltins = () => (
       <Field builtIns={false}>
         <Label htmlFor="phoneNumber">Phone number</Label>
         <Input type="tel" id="phoneNumber" />
+      </Field>
+      <Field builtIns={false}>
+        <SelectContainer>
+          <Label>Engineering Level</Label>
+          <Select>
+            <SelectItem value="L1">L1 (Associate)</SelectItem>
+            <SelectItem value="L2">L2 (Mid)</SelectItem>
+            <SelectItem value="L3">L3 (Senior)</SelectItem>
+            <SelectItem value="L4">L4 (Staff)</SelectItem>
+          </Select>
+        </SelectContainer>
       </Field>
       <Button type="reset" variant="fill">
         Submit

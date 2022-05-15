@@ -36,15 +36,15 @@
     "typescript": "4.6.4"
   },
   "dependencies": {
-    "@react-aria/checkbox": "^3.3.3",
-    "@react-aria/focus": "^3.5.4",
-    "@react-aria/interactions": "^3.8.3",
-    "@react-aria/radio": "^3.1.10",
-    "@react-stately/checkbox": "^3.0.6",
-    "@react-stately/radio": "^3.3.5",
-    "@react-stately/toggle": "^3.2.6",
-    "@react-types/checkbox": "^3.2.6",
-    "@react-types/radio": "^3.1.5",
-    "@react-types/shared": "^3.11.2"
+    "@react-aria/checkbox": "^3.3.4",
+    "@react-aria/focus": "^3.5.5",
+    "@react-aria/interactions": "^3.8.4",
+    "@react-aria/radio": "^3.1.11",
+    "@react-stately/checkbox": "^3.0.7",
+    "@react-stately/radio": "^3.3.6",
+    "@react-stately/toggle": "^3.2.7",
+    "@react-types/checkbox": "^3.2.7",
+    "@react-types/radio": "^3.1.6",
+    "@react-types/shared": "^3.12.0"
   }
 }
