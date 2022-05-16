@@ -1,0 +1,14 @@
+diff --git a/src/utils/componentsToHints.ts b/src/utils/componentsToHints.ts
+index 57a3c2b4fec3ea8dfb0a5a4b9b64b88ecb02035c..1962e647967931d30d54d430160ca94caad1c6d8 100644
+--- a/src/utils/componentsToHints.ts
++++ b/src/utils/componentsToHints.ts
+@@ -23,7 +23,8 @@ export default (components: PlayroomProps['components']) => {
+         };
+       }
+ 
+-      const parsedPropTypes = parsePropTypes(components[componentName]);
++      const props = typeof components[componentName] !== 'object' ? {} :components[componentName];
++      const parsedPropTypes = parsePropTypes(props);
+       const filteredPropTypes = omit(parsedPropTypes, 'children');
+       const propNames = Object.keys(filteredPropTypes);
+ 

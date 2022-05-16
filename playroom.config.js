@@ -9,7 +9,7 @@ module.exports = {
   scope: './.storybook/playroom/useScope.ts',
   snippets: './.storybook/playroom/snippets.json',
   frameComponent: './.storybook/playroom/FrameComponent.tsx',
-  typeScriptFiles: ['./src/**/*.{ts,tsx}'],
+  typeScriptFiles: ['./src/**/*.{ts,tsx}', '!**/node_modules'],
   widths: [375, 768, 960, 1024],
   webpackConfig: () => ({
     resolve: {
