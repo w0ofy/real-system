@@ -1,5 +1,18 @@
 # @real-system/alert
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies [[`add18ce`](https://github.com/bigwoof91/real-system/commit/add18cec71b88b565f0506e06c62cdcb2a03c613)]:
+  - @real-system/button@0.0.39
+  - @real-system/flex@0.0.31
+  - @real-system/icon@0.0.38
+  - @real-system/typography@0.0.38
+  - @real-system/styling-library@0.0.17
+  - @real-system/utils-library@0.0.19
+  - @real-system/theme-library@0.0.23
+
 ## 0.0.22
 
 ### Patch Changes
