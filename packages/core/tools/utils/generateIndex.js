@@ -14,9 +14,8 @@ const getIndexOutput = async () => {
   pkgList
     // only output components and primitives - libraries require unbaralled exports in order to be accessed (this avoids named-export conflicts)
     .filter((pkg) => !pkg.location.includes('/libraries/'))
-    .map((pkg) => pkg.name)
     .forEach((pkg) => {
-      output = `${output}export * from '${pkg}';\n`;
+      output = `${output}export * from '${pkg.name}';\n`;
     });
   return output;
 };
