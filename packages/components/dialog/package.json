@@ -30,9 +30,9 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/animation-library": "^0.0.11",
-    "@real-system/box-primitive": "^0.0.20",
     "@real-system/button": "^0.0.38",
     "@real-system/dialog-primitive": "^0.0.21",
+    "@real-system/elements-primitive": "^0.0.1",
     "@real-system/flex": "^0.0.30",
     "@real-system/state-library": "^0.0.10",
     "@real-system/styling-library": "^0.0.16",
@@ -44,9 +44,9 @@
   },
   "devDependencies": {
     "@real-system/animation-library": "^0.0.11",
-    "@real-system/box-primitive": "^0.0.20",
     "@real-system/button": "^0.0.38",
     "@real-system/dialog-primitive": "^0.0.21",
+    "@real-system/elements-primitive": "^0.0.1",
     "@real-system/flex": "^0.0.30",
     "@real-system/state-library": "^0.0.10",
     "@real-system/styling-library": "^0.0.16",

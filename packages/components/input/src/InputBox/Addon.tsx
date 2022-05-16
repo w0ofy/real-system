@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box-primitive';
-import type { RealSystemComponentProps } from '@real-system/styling-library';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 import { majorScale } from '@real-system/theme-library';
 import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {
-  let styles: BoxStyleProps = {
+  let styles: StylishProps = {
     borderBottomLeftRadius: 4,
     borderTopLeftRadius: 4,
     borderRight: 1,
@@ -36,7 +37,7 @@ export type AddonProps = {
   children: NonNullable<React.ReactNode>;
   disabled?: boolean;
   isSuffix?: boolean;
-} & RealSystemComponentProps<'div'>;
+} & RealElementPrimitiveProps<'div'>;
 
 const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
   { children, disabled, isSuffix = false, ...restProps },
@@ -51,7 +52,7 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
   if (children == null) return null;
 
   return (
-    <Box
+    <real.div
       data-testid={makeTestId('input-box-addon')}
       display="flex"
       justifyContent="center"
@@ -64,7 +65,7 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
       {...restProps}
       ref={ref}>
       {children}
-    </Box>
+    </real.div>
   );
 });
 

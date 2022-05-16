@@ -1,20 +1,19 @@
 import React, { forwardRef } from 'react';
 
-import type { BoxProps } from '@real-system/box-primitive';
-import { Box } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-type MenuItemCommandProps = Omit<BoxProps, 'as'>;
+type MenuItemCommandProps = RealElementPrimitiveProps<'span'>;
 
 const MenuItemCommand = forwardRef<HTMLSpanElement, MenuItemCommandProps>(
   function MenuItemCommand({ children, ...restProps }, ref) {
     return (
-      <Box
+      <real.span
         margin={0}
         marginLeft="auto"
         marginRight={0}
         data-testid={makeTestId('menu-item-icon')}
-        as="span"
         color="gray-400"
         fontSize={1}
         fontWeight={2}
@@ -24,8 +23,8 @@ const MenuItemCommand = forwardRef<HTMLSpanElement, MenuItemCommandProps>(
         alt={`⌘ + ${children}`}
         {...restProps}
         ref={ref}>
-        ⌘{children}
-      </Box>
+        <>⌘{children}</>
+      </real.span>
     );
   }
 );

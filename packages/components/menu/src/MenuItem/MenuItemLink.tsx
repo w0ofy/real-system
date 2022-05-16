@@ -39,7 +39,7 @@ const menuLinkStyles: StylishProps = {
 };
 
 const BoxMenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
-  function BoxMenuItem({ children, ...restProps }, ref) {
+  function BoxMenuItemLink({ children, ...restProps }, ref) {
     return (
       <Box {...menuLinkStyles} {...restProps} as="a" ref={ref}>
         {children}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
+import type { RealSystemElementProps } from '@real-system/styling-library';
 import { TooltipStatePrimitiveProps } from '@real-system/tooltip-primitive';
-import type { RealSystemElementProps } from '@real-system/utils-library';
 
 type StateProps = Pick<
   TooltipStatePrimitiveProps,
@@ -17,6 +17,6 @@ type TooltipProps = {
    */
   hideArrow?: boolean;
 } & Partial<StateProps> &
-  RealSystemElementProps;
+  RealSystemElementProps<'span'>;
 
 export type { TooltipProps };

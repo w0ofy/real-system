@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/box-primitive": "^0.0.20",
+    "@real-system/elements-primitive": "^0.0.1",
     "@real-system/select-primitive": "^0.0.4",
     "@real-system/state-library": "^0.0.10",
     "@real-system/styling-library": "^0.0.16",
@@ -40,7 +40,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/box-primitive": "^0.0.20",
+    "@real-system/elements-primitive": "^0.0.1",
     "@real-system/select-primitive": "^0.0.4",
     "@real-system/state-library": "^0.0.10",
     "@real-system/styling-library": "^0.0.16",

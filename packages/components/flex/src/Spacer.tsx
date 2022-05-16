@@ -1,22 +1,21 @@
 import React, { forwardRef } from 'react';
 
-import type { BoxProps } from '@real-system/box-primitive';
-import { Box } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-type FlexSpacerProps = BoxProps;
+type FlexSpacerProps = RealElementPrimitiveProps<'div'>;
 
 /**
- * A flex spacer that expands along the major axis of its containing flex layout.
- * It renders a `div` by default, and takes up any available space.
- *
+ * A flex spacer that expands along the major axis of its containing `Flex` layout.
+ * It renders a `div` and takes up any available space.
  */
 const FlexSpacer = forwardRef<HTMLElement, FlexSpacerProps>(function FlexSpacer(
   props,
   ref
 ) {
   return (
-    <Box
+    <real.div
       flex="1"
       justifySelf="stretch"
       alignSelf="stretch"

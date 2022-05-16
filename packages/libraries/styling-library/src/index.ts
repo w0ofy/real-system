@@ -1,5 +1,3 @@
-import { styled } from './styled-system/index';
-
 export type {
   ThemeProviderProps as PrimitiveThemeProviderProps,
   GlobalProps as StylingGlobalsProps,
@@ -15,11 +13,7 @@ export {
 export * as polished from 'polished';
 
 /**
- * styled, css and token utilities
- */
-export default styled;
-
-/**
- * real system style props
+ * real system styled-system - includes `styled` named export
  */
 export * from './styled-system';
+export { styled as default } from './styled-system';

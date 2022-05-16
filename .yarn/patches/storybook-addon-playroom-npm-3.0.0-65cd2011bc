@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index 19112f83750d14f4cac4fa1f42bf05279acaf299..1db0b48b171e4a09666916c0901df72ef01f3d2e 100644
+--- a/package.json
++++ b/package.json
+@@ -75,7 +75,7 @@
+     "global": "^4.4.0",
+     "global-jsdom": "^8.4.0",
+     "jsdom": "^19.0.0",
+-    "playroom": "^0.27.0",
++    "playroom": "patch:playroom@npm:0.27.9#.yarn/patches/playroom-npm-0.27.9-67281c093a",
+     "plur": "^4.0.0",
+     "react": "^16.8.0",
+     "react-dom": "^16.8.0",

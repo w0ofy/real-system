@@ -1,4 +1,4 @@
-import type { BoxProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import type { ResponsiveValue } from '@real-system/styling-library';
 
 export type Display = 'flex' | 'inline-flex';
@@ -74,9 +74,10 @@ export type FlexComponentProps = {
   /**
    * alias for `gap` css property
    */
-  space?: BoxProps['gap'];
+  space?: RealElementPrimitiveProps['gap'];
 };
 
-type FlexProps = FlexComponentProps & Omit<BoxProps, keyof FlexComponentProps>;
+type FlexProps = FlexComponentProps &
+  Omit<RealElementPrimitiveProps, keyof FlexComponentProps>;
 
 export type { FlexProps };

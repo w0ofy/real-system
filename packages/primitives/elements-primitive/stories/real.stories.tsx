@@ -11,15 +11,12 @@ import { Text } from '@real-system/typography';
 export default {
   title: 'Primitives/Elements Primitive',
   component: real.div,
-  argTypes: {
-    as: { name: 'element', control: { type: 'select' } },
-  },
 } as Meta;
 
 const Template: RealElementPrimitive = (args: RealElementPrimitiveProps) => {
   return (
-    <real.div padding={8} {...args}>
-      <Text.Code variant>real.div</Text.Code>
+    <real.div padding={8} {...args} backgroundColor="gray-50">
+      <Text.Code colorScheme="blue">real.div</Text.Code>
     </real.div>
   );
 };

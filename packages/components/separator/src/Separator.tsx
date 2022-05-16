@@ -1,36 +1,32 @@
 import * as React from 'react';
 
-import { BoxStyleProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import {
   SeparatorPrimitive,
   SeparatorPrimitiveProps,
 } from '@real-system/separator-primitive';
-import type {
-  BorderProps,
-  RealSystemComponentProps,
-  StylishProps,
-} from '@real-system/styling-library';
-import styled from '@real-system/styling-library';
+import type { BorderProps, StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 type SeparatorProps = Pick<SeparatorPrimitiveProps, 'orientation'> &
-  Omit<RealSystemComponentProps, keyof BorderProps> & {
+  Omit<RealElementPrimitiveProps, keyof BorderProps> & {
     /**
      * Controls the width of the separator (`borderWidth` CSS property) — intelligently applies the border width to the correct border e.g. `borderLeftWidth` or `borderBottomWidth`
      *
      */
-    borderWidth?: BoxStyleProps['borderWidth'];
+    borderWidth?: RealElementPrimitiveProps['borderWidth'];
     /**
      * Controls the style of the separator ('borderStyle' CSS property)
      */
-    borderStyle?: BoxStyleProps['borderStyle'];
+    borderStyle?: RealElementPrimitiveProps['borderStyle'];
     /**
      * Controls the color of the separator ('borderColor' CSS property)
      */
-    borderColor?: BoxStyleProps['borderStyle'];
+    borderColor?: RealElementPrimitiveProps['borderColor'];
   };
 
-const StyledHR = styled('hr')({});
+const RealHR = real.hr;
 
 type DividerStyles = {
   vertical: StylishProps;
@@ -82,7 +78,7 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
 
     return (
       <SeparatorPrimitive
-        as={StyledHR}
+        as={RealHR}
         data-testid={makeTestId('separator')}
         borderWidth={0}
         {...dividerStyles[orientation]}

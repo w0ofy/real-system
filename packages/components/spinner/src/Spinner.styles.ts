@@ -1,6 +1,6 @@
-import { BoxStyleProps } from '@real-system/box-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 import styled, { keyframes } from '@real-system/styling-library';
-import { ThemeSizes } from '@real-system/theme-library';
+import type { ThemeSizes } from '@real-system/theme-library';
 
 import { circleCircumference } from './constants';
 
@@ -45,7 +45,7 @@ const WheelCircle = styled('circle')<SVGCircleElementProps>({
     `1.5s ease-out infinite both ${circleKeyframes}` as unknown as string,
 });
 
-const STYLES_BY_SIZE: Record<ThemeSizes, BoxStyleProps> = {
+const STYLES_BY_SIZE: Record<ThemeSizes, StylishProps> = {
   xxs: {
     size: 'spinner-xxs',
     borderWidth: 6,

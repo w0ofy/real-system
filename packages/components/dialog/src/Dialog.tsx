@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
 import { useTransition } from '@real-system/animation-library';
-import type { BoxStyleProps } from '@real-system/box-primitive';
 import type { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { DialogContent, DialogOverlay } from './components';
@@ -16,7 +16,7 @@ const useTransitionProps = {
 };
 
 type DialogProps = DialogState &
-  BoxStyleProps &
+  StylishProps &
   Pick<DialogOverlayPrimitiveProps, 'allowPinchZoom' | 'initialFocusRef'> & {
     /**
      * (a11y) Label for the dialog i.e. `id` of the Dialog's heading (e.g. `DialogHeading` component)
@@ -27,7 +27,7 @@ type DialogProps = DialogState &
      */
     children: NonNullable<React.ReactNode>;
     testId?: string;
-    overlayProps?: BoxStyleProps & { className?: string };
+    overlayProps?: StylishProps & { className?: string };
   };
 
 const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(

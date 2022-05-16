@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { MenuItemPrimitive } from '@real-system/menu-primitive';
 import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
@@ -41,12 +41,12 @@ const menuItemStyles: StylishProps = {
   _disabled: { backgroundColor: 'none', color: 'gray-300' },
 };
 
-const BoxMenuItem = forwardRef<HTMLDivElement, MenuItemProps>(
-  function BoxMenuItem({ children, ...restProps }, ref) {
+const RealMenuItem = forwardRef<HTMLDivElement, MenuItemProps>(
+  function RealMenuItem({ children, ...restProps }, ref) {
     return (
-      <Box {...menuItemStyles} {...restProps} ref={ref}>
+      <real.div {...menuItemStyles} {...restProps} ref={ref}>
         {children}
-      </Box>
+      </real.div>
     );
   }
 );
@@ -57,7 +57,7 @@ const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(
 ) {
   return (
     <MenuItemPrimitive
-      as={BoxMenuItem}
+      as={RealMenuItem}
       data-testid={makeTestId('menu-item')}
       {...restProps}
       ref={ref}>
@@ -67,4 +67,4 @@ const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(
 });
 
 export type { MenuItemProps };
-export { BoxMenuItem, MenuItem, menuItemStyles };
+export { MenuItem, menuItemStyles, RealMenuItem };

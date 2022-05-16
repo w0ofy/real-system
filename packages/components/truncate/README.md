@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/box-primitive @real-system/styling-library @real-system/theme-library
+$ npm install react react-dom @real-system/elements-primitive @real-system/styling-library @real-system/theme-library
 # yarn
-$ yarn add react react-dom @real-system/box-primitive @real-system/styling-library @real-system/theme-library
+$ yarn add react react-dom @real-system/elements-primitive @real-system/styling-library @real-system/theme-library
 
 # install truncate
 
@@ -25,17 +25,17 @@ $ yarn add @real-system/truncate
 ### Code Example
 
 ```typescript
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Truncate } from '@real-system/truncate';
 import { Text } from '@real-system/typography';
 
 const MyComponent = (args) => (
-  <Box maxWidth="8rem">
+  <real.div maxWidth="8rem">
     <Text>
       <Truncate title="Some extremely long text to truncate">
         Some extremely long text to truncate
       </Truncate>
     </Text>
-  </Box>
+  </real.div>
 );
 ```

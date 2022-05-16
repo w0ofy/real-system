@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 type TruncateProps = Omit<
@@ -14,18 +14,17 @@ type TruncateProps = Omit<
 const Truncate = React.forwardRef<HTMLSpanElement, TruncateProps>(
   function Truncate({ children, ...restProps }, ref) {
     return (
-      <Box
+      <real.span
         data-testid={makeTestId('truncate')}
         {...restProps}
         ref={ref}
-        as="span"
         display="inline-block"
         maxWidth="100%"
         overflow="hidden"
         textOverflow="ellipsis"
         whiteSpace="nowrap">
         {children}
-      </Box>
+      </real.span>
     );
   }
 );

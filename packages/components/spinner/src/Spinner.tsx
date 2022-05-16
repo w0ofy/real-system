@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 
 import { circleCircumference, circleGeometry } from './constants';
 import { useDelay } from './hooks';
@@ -32,7 +32,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
   const titleId = React.useId();
   const isVisible = useDelay(delay);
   return (
-    <Box
+    <real.span
       as={as}
       display={display}
       {...restProps}
@@ -66,7 +66,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(function Spinner(
           />
         </SvgGroup>
       </SpinnerSVG>
-    </Box>
+    </real.span>
   );
 });
 

@@ -1,6 +1,5 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box-primitive';
 import { Icon } from '@real-system/icon';
 import type {
   ColorSchemes,
@@ -57,16 +56,16 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
       {...restProps}
       ref={ref}>
       {!hideErrorIcon && errorText && (
-        <Box>
+        <div>
           <Icon
             icon="exclamation-circle"
             solid
             colorScheme={colorScheme}
             marginRight={2}
           />
-        </Box>
+        </div>
       )}
-      <Box as="span">{errorText ? errorText : children}</Box>
+      <span>{errorText ? errorText : children}</span>
     </BaseText>
   );
 });

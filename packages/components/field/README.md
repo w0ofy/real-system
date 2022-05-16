@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/box-primitive @real-system/flex @real-system/styling-library @real-system/theme-library @real-system/typography
+$ npm install react react-dom @real-system/flex @real-system/styling-library @real-system/theme-library @real-system/typography
 # yarn
-$ yarn add react react-dom @real-system/box-primitive @real-system/flex @real-system/styling-library @real-system/theme-library @real-system/typography
+$ yarn add react react-dom @real-system/flex @real-system/styling-library @real-system/theme-library @real-system/typography
 
 # install field
 

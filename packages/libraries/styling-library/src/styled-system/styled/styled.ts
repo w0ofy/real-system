@@ -51,8 +51,8 @@ type RealSystemStyledOptions = {
 
 function styled<T extends As>(component: T, options?: RealSystemStyledOptions) {
   return function styledComponent<P extends StyledDict = StyledDict>(
-    /** @todo allow passing of multiple args */
-    styles: StyleObjectOrFn<P>
+    /** @todo allow passing of multiple args/string literal */
+    styles: StyleObjectOrFn<P> = {}
   ) {
     const { ...styledOptions } = options ?? {};
 

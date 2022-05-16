@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 
 import { BaseTextProps } from './types';
 
@@ -21,9 +21,9 @@ const BaseText = forwardRef<HTMLElement, BaseTextProps>(function Text(
   ref
 ) {
   return (
-    <Box ref={ref} {...baseStyles} {...restProps}>
+    <real.div {...baseStyles} {...restProps} ref={ref}>
       {children}
-    </Box>
+    </real.div>
   );
 });
 

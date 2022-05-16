@@ -5,10 +5,10 @@ import {
 } from '@real-system/dialog-primitive';
 import styled, { StyleProps } from '@real-system/styling-library';
 import { majorScale } from '@real-system/theme-library';
-import type { AnyPropUnion } from '@real-system/utils-library';
+import type { PropUnion } from '@real-system/utils-library';
 
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
-  AnyPropUnion<StyleProps>
+  PropUnion<StyleProps>
 >({
   position: 'fixed',
   height: '100%',
@@ -24,7 +24,7 @@ const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
 });
 
 const DialogContent = styled(animated(DialogContentPrimitive))<
-  AnyPropUnion<StyleProps>
+  PropUnion<StyleProps>
 >({
   position: 'relative',
   boxShadow: 'dialog',

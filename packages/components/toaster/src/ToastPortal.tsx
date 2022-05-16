@@ -1,20 +1,20 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { PortalPrimitive } from '@real-system/portal-primitive';
+import type { RealSystemElementProps } from '@real-system/styling-library';
 import { preventSpreadingStyleProps } from '@real-system/styling-library';
-import type { RealSystemElementProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
 type ToastPortalProps = {
   children: NonNullable<React.ReactNode>;
-} & RealSystemElementProps;
+} & RealSystemElementProps<'div'>;
 
 const ToastPortal = forwardRef<HTMLDivElement, ToastPortalProps>(
   function ToastPortal({ children, ...restProps }, ref) {
     return (
       <PortalPrimitive>
-        <Box
+        <real.div
           data-testid={makeTestId('toast-portal-container')}
           {...preventSpreadingStyleProps(restProps)}
           position="fixed"
@@ -23,7 +23,7 @@ const ToastPortal = forwardRef<HTMLDivElement, ToastPortalProps>(
           zIndex="toast"
           ref={ref}>
           {children}
-        </Box>
+        </real.div>
       </PortalPrimitive>
     );
   }

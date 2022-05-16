@@ -15,6 +15,18 @@ import {
  */
 type CSSObject = RecursiveCSSObject<CSSWithMultiValues>;
 
+type StaticProps = {
+  /** data-testid DOM attribute for component. Useful when using @testing-library or other testing tools */
+  'data-testid'?: string;
+  /** pass a custom class name. Useful for when wrapping components with styled or need to use classic stylesheets. */
+  className?: string;
+};
+
+type RealSystemElementProps<T extends As = any> =
+  T extends keyof JSX.IntrinsicElements
+    ? PropsOf<T> & StaticProps
+    : StaticProps;
+
 type RealSystemCustomProps<P = StyledDict> = {
   /**
    * Override styles with sx
@@ -24,11 +36,7 @@ type RealSystemCustomProps<P = StyledDict> = {
    * The element's ref
    */
   ref?: any;
-  /** data-testid DOM attribute for component. Useful when using @testing-library or other testing tools */
-  'data-testid'?: string;
-  /** pass a custom class name. Useful for when wrapping components with styled or need to use classic stylesheets. */
-  className?: string;
-};
+} & StaticProps;
 
 type InternalRealSystemComponentProps = {
   /** real system data attribute for tracking component usage and things */
@@ -64,5 +72,6 @@ export type {
   RealSystemComponent,
   RealSystemComponentProps,
   RealSystemCustomProps,
+  RealSystemElementProps,
   StyleObjectOrFn,
 };

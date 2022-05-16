@@ -20,9 +20,6 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     { children, disabled, error, prefix, suffix, readOnly, ...props },
     ref
   ) {
-    // size, height and width should never get passed down
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { size, height, width, ...restProps } = props;
     return (
       <InputBox
         disabled={disabled}
@@ -34,8 +31,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         data-testid={makeTestId('text-area-input-box')}>
         <TextareaElement
           data-testid={makeTestId('text-area')}
-          {...preventSpreadingStyleProps(restProps)}
-          async
+          // size, height and width should never get passed down
+          {...preventSpreadingStyleProps(props)}
           aria-invalid={error}
           aria-readonly={readOnly}
           disabled={disabled}

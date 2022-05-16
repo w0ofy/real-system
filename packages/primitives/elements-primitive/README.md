@@ -25,7 +25,7 @@ $ yarn add @real-system/elements-primitive
 ### Code Example
 
 ```typescript
-import { real, RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import {real, RealElementPrimitiveProps } from '@real-system/elements-primitive';
 
 const H1 = ({ children, ...styleProps }: RealElementPrimitiveProps) => {
   return (

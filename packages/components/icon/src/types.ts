@@ -1,6 +1,6 @@
 import * as IconComponents from '@heroicons/react/outline';
 
-import type { BoxStyleProps } from '@real-system/box-primitive';
+import type { StylishProps } from '@real-system/styling-library';
 import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
@@ -32,7 +32,7 @@ type IconProps = {
   /**
    * Overrides colorScheme and can be used to customize the icon color beyond what colorScheme provides i.e. a checkmark for Checkbox component
    */
-  color?: BoxStyleProps['color'];
+  color?: StylishProps['color'];
   /** sets color scheme of the icon; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
   /**
@@ -43,7 +43,7 @@ type IconProps = {
    * Sets the title of the svg
    */
   title?: string;
-} & BoxStyleProps;
+} & StylishProps;
 
 /** private icon props, used for StyledIcon component */
 type InternalIconProps = Omit<IconProps, 'icon' | 'size'> & {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styling-library';
 import { makeTestId } from '@real-system/utils-library';
 
@@ -19,13 +19,10 @@ const BADGE_SIZES: Record<BadgeSize, string | number> = {
  * @example <Badge size="sm" colorScheme="purple">New</Badge>
  * @todo Up next: Add variants
  */
-const Badge = ({
-  children,
-  colorScheme = 'gray',
-  size = 'md',
-  fontSize,
-  ...restProps
-}: BadgeProps) => {
+const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
+  { children, colorScheme = 'gray', size = 'md', fontSize, ...restProps },
+  ref
+) {
   const colorProps: StylishProps = {
     bgColor: `${colorScheme}-100`,
     color: `${colorScheme}-700`,
@@ -33,7 +30,7 @@ const Badge = ({
   const badgeSize = fontSize || BADGE_SIZES[size];
 
   return (
-    <Box
+    <real.span
       textTransform="uppercase"
       fontSize={badgeSize}
       lineHeight={badgeSize}
@@ -46,10 +43,10 @@ const Badge = ({
       data-testid={makeTestId('badge')}
       {...colorProps}
       {...restProps}
-      as="span">
+      ref={ref}>
       {children}
-    </Box>
+    </real.span>
   );
-};
+});
 
 export { Badge };

@@ -1,6 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box, BoxProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { FlexProps } from './types';
@@ -16,7 +17,9 @@ import {
   yAlignContentToProps,
 } from './utils';
 
-const getFlexProps = (props: FlexProps): Partial<BoxProps> => ({
+const getFlexProps = (
+  props: FlexProps
+): Partial<RealElementPrimitiveProps> => ({
   flexGrow: getGrow(props),
   flexShrink: getShrink(props),
   flexBasis: getBasis(props),
@@ -76,14 +79,14 @@ const Flex = forwardRef<HTMLElement, FlexProps>(function Flex(
   );
 
   return (
-    <Box
+    <real.div
       data-testid={makeTestId('flex')}
       display={display}
       {...flexProps}
       {...restProps}
       ref={ref}>
       {children}
-    </Box>
+    </real.div>
   );
 });
 

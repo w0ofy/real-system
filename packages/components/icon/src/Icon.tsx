@@ -1,6 +1,6 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import styled from '@real-system/styling-library';
 import { useTokens } from '@real-system/theme-library';
 
@@ -48,9 +48,8 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
   }
 
   return (
-    <Box
+    <real.span
       ref={ref}
-      as="span"
       display="flex"
       flexShrink={0}
       flexGrow={0}
@@ -59,7 +58,7 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
       title={title}
       {...restProps}>
       <StyledIcon Icon={Icon} size={iconSize} color={iconColor} />
-    </Box>
+    </real.span>
   );
 });
 

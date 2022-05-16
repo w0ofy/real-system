@@ -1,37 +1,35 @@
 import * as React from 'react';
 
-import type { BoxProps } from '@real-system/box-primitive';
-import { Box } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 export type RequiredDotProps = {
   disabled: boolean | undefined;
-} & BoxProps;
+} & RealElementPrimitiveProps<'span'>;
 
 const RequiredDot = ({
   disabled = false,
   ...restProps
 }: RequiredDotProps): React.ReactElement => {
   return (
-    <Box
-      as="span"
+    <real.span
       display="flex"
       alignItems="center"
       justifyContent="center"
       height="icon-xs"
       marginRight={2}
       cursor={disabled ? 'default' : 'default'}>
-      <Box
+      <real.span
         {...restProps}
-        as="span"
         borderRadius="circle"
         display="block"
         height="4px"
         width="4px"
         bgColor={disabled ? 'red-200' : 'red-400'}>
         <VisuallyHidden>Required: </VisuallyHidden>
-      </Box>
-    </Box>
+      </real.span>
+    </real.span>
   );
 };
 

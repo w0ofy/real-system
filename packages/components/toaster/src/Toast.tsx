@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 import { Alert } from '@real-system/alert';
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { ToastProps } from './types';
@@ -27,7 +27,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
   }, [setFocus]);
 
   return (
-    <Box ref={ref} data-testid={makeTestId('toast')} {...restProps}>
+    <real.div ref={ref} data-testid={makeTestId('toast')}>
       <Alert
         shrink={0}
         boxShadow={1}
@@ -36,10 +36,11 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(function Toast(
         onDismiss={onDismiss ? onDismiss : undefined}
         dismissRef={dismissRef}
         pointerEvents="all"
-        width="40rem">
+        width="40rem"
+        {...restProps}>
         {message}
       </Alert>
-    </Box>
+    </real.div>
   );
 });
 

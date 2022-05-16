@@ -1,9 +1,10 @@
 import * as React from 'react';
 
-import { Box, BoxStyleProps } from '@real-system/box-primitive';
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import {
   preventSpreadingStyleProps,
-  RealSystemComponentProps,
+  StylishProps,
 } from '@real-system/styling-library';
 import { makeTestId, merge } from '@real-system/utils-library';
 
@@ -29,11 +30,11 @@ export type InputBoxProps = {
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
   addonProps?: Omit<AddonProps, 'children'>;
-} & RealSystemComponentProps<'div'>;
+} & RealElementPrimitiveProps<'div'>;
 
 type InputBoxStates = 'readonly' | 'hidden' | 'disabled' | 'default' | 'error';
 
-const baseStyles: BoxStyleProps = {
+const baseStyles: StylishProps = {
   display: 'flex',
   width: '100%',
   border: '1px solid',
@@ -48,7 +49,7 @@ const baseStyles: BoxStyleProps = {
   _active: { boxShadow: 'none' },
 };
 
-const styles: Record<InputBoxStates, BoxStyleProps> = {
+const styles: Record<InputBoxStates, StylishProps> = {
   default: merge(baseStyles, {
     color: 'gray-500',
     borderColor: 'gray-200',
@@ -132,7 +133,7 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
     }
 
     return (
-      <Box
+      <real.div
         ref={ref}
         {...styles[state]}
         height="100%"
@@ -145,7 +146,6 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
           transition: true,
           bgColor: true,
           backgroundColor: true,
-          bg: true,
           color: true,
           borderColor: true,
           boxShadow: true,
@@ -165,7 +165,7 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
             {suffix}
           </Addon>
         )}
-      </Box>
+      </real.div>
     );
   }
 );
