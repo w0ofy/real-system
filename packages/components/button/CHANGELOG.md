@@ -1,5 +1,17 @@
 # @real-system/button
 
+## 0.0.39
+
+### Patch Changes
+
+- [#420](https://github.com/bigwoof91/real-system/pull/420) [`add18ce`](https://github.com/bigwoof91/real-system/commit/add18cec71b88b565f0506e06c62cdcb2a03c613) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Using elements-primitive instead of Box internally
+
+- Updated dependencies [[`add18ce`](https://github.com/bigwoof91/real-system/commit/add18cec71b88b565f0506e06c62cdcb2a03c613)]:
+  - @real-system/spinner@0.0.36
+  - @real-system/styling-library@0.0.17
+  - @real-system/utils-library@0.0.19
+  - @real-system/theme-library@0.0.23
+
 ## 0.0.38
 
 ### Patch Changes

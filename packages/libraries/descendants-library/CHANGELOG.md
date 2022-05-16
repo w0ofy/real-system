@@ -1,5 +1,12 @@
 # @real-system/descendants-library
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`add18ce`](https://github.com/bigwoof91/real-system/commit/add18cec71b88b565f0506e06c62cdcb2a03c613)]:
+  - @real-system/utils-library@0.0.19
+
 ## 0.0.1
 
 ### Patch Changes

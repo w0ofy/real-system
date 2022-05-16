@@ -1,5 +1,11 @@
 # @real-system/utils
 
+## 0.0.19
+
+### Patch Changes
+
+- [#420](https://github.com/bigwoof91/real-system/pull/420) [`add18ce`](https://github.com/bigwoof91/real-system/commit/add18cec71b88b565f0506e06c62cdcb2a03c613) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Using elements-primitive instead of Box internally
+
 ## 0.0.18
 
 ### Patch Changes
