@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Box } from '@real-system/box-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Icon } from '@real-system/icon';
 import { EXTERNAL_LINK_PROPS } from '@real-system/link';
 import { MenuItemPrimitive } from '@real-system/menu-primitive';
@@ -41,9 +41,9 @@ const menuLinkStyles: StylishProps = {
 const BoxMenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
   function BoxMenuItemLink({ children, ...restProps }, ref) {
     return (
-      <Box {...menuLinkStyles} {...restProps} as="a" ref={ref}>
+      <real.a {...menuLinkStyles} {...restProps} ref={ref}>
         {children}
-      </Box>
+      </real.a>
     );
   }
 );

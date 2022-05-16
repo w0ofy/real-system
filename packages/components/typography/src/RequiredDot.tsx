@@ -23,7 +23,6 @@ const RequiredDot = ({
       cursor={disabled ? 'default' : cursor}>
       <real.span
         {...restProps}
-        as="span"
         borderRadius="circle"
         display="block"
         height="4px"
