@@ -45,7 +45,7 @@ const toCSSObject: ToCSSObject = (styledStyles) => (props) => {
 
 type RealSystemStyledOptions = {
   label?: string;
-  shouldForwardProp?(propName: PropertyKey): boolean;
+  shouldForwardProp?(propName: string): boolean;
   target?: string;
 };
 

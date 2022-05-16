@@ -4,6 +4,7 @@ import styled, {
   RealSystemComponentProps,
   RealSystemStyledOptions,
   StyledDict,
+  StylishProps,
 } from '@real-system/styling-library';
 
 type RealElements = {
@@ -29,7 +30,7 @@ function elements() {
      * const RealComponent = real(Component)
      */
     apply(target, thisArg, argArray: [DOMElements, RealSystemStyledOptions]) {
-      return styled(...argArray);
+      return styled(...argArray)({});
     },
     /**
      * @example
