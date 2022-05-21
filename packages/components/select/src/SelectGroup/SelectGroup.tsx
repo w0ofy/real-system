@@ -2,8 +2,8 @@ import React from 'react';
 
 import type { SelectGroupPrimitiveProps } from '@real-system/select-primitive';
 import { SelectGroupPrimitive } from '@real-system/select-primitive';
-import type { StylishProps } from '@real-system/styling-library';
-import styled from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { OmitSelectPrivateProps } from '../types';

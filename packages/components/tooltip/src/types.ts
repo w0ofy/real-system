@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import type { RealSystemElementProps } from '@real-system/styling-library';
+import type { RealSystemElementProps } from '@real-system/styled-library';
 import { TooltipStatePrimitiveProps } from '@real-system/tooltip-primitive';
 
 type StateProps = Pick<

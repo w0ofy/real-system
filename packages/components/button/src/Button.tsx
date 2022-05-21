@@ -1,7 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { Spinner } from '@real-system/spinner';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { BaseButton } from './BaseButton';

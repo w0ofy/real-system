@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import { real } from '@real-system/elements-primitive';
 import { MenuItemPrimitive } from '@real-system/menu-primitive';
-import type { StylishProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CommonMenuItemProps } from './MenuItem.types';

@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import { useTransition } from '@real-system/animation-library';
 import type { DialogOverlayPrimitiveProps } from '@real-system/dialog-primitive';
-import type { StylishProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { DialogContent, DialogOverlay } from './components';

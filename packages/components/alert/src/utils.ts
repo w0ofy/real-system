@@ -1,5 +1,5 @@
 import type { Icons } from '@real-system/icon';
-import type { ColorSchemes } from '@real-system/theme-library';
+import type { ColorSchemes } from '@real-system/styled-library';
 
 import type { AlertStatus } from './types';
 

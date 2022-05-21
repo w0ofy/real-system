@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import { real } from '@real-system/elements-primitive';
-import type { StylishProps } from '@real-system/styling-library';
-import { majorScale } from '@real-system/theme-library';
+import type { StylishProps } from '@real-system/styled-library';
+import { majorScale } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {

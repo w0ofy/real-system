@@ -1,4 +1,4 @@
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 /**
  * `Box` primitive component. Used to create all elements in Real System. Use `Box` to create custom components on top of Real System components.
  *

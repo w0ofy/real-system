@@ -1,5 +1,5 @@
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
-import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
+import type { ColorSchemes, ThemeSizes } from '@real-system/styled-library';
 
 type BadgeSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;
 

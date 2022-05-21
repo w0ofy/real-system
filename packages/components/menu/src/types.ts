@@ -1,4 +1,4 @@
-import type { RealSystemComponentProps } from '@real-system/styling-library';
+import type { RealSystemComponentProps } from '@real-system/styled-library';
 
 type CommonMenuProps = RealSystemComponentProps<any>;
 type OmitMenuState<Props> = Omit<Props, 'state'>;

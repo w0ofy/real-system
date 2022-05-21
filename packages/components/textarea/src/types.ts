@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { RealSystemElementProps } from '@real-system/styling-library';
+import { RealSystemElementProps } from '@real-system/styled-library';
 
 type TextareaProps = RealSystemElementProps<'textarea'> & {
   disabled?: boolean;

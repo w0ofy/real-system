@@ -5,8 +5,8 @@ import { SelectPrimitive } from '@real-system/select-primitive';
 import type {
   RealSystemComponentProps,
   StylishProps,
-} from '@real-system/styling-library';
-import styled from '@real-system/styling-library';
+} from '@real-system/styled-library';
+import styled from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
 import { useSelectStateContext } from './SelectContext';

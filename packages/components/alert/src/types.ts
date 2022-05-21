@@ -1,6 +1,6 @@
 import type { AlertPrimitiveProps } from '@real-system/alert-primitive';
 import type { FlexProps } from '@real-system/flex';
-import type { ThemeStatuses } from '@real-system/theme-library';
+import type { ThemeStatuses } from '@real-system/styled-library';
 
 type AlertStatus = ThemeStatuses;
 

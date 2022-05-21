@@ -2,8 +2,8 @@ import React, { forwardRef } from 'react';
 
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import { real } from '@real-system/elements-primitive';
-import { spreadStyleProps } from '@real-system/styling-library';
-import { preventSpreadingStyleProps } from '@real-system/styling-library';
+import { spreadStyleProps } from '@real-system/styled-library';
+import { preventSpreadingStyleProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { UsePinInputProps } from './types';

@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import type { MenuSeparatorPrimitiveProps } from '@real-system/menu-primitive';
 import { MenuSeparatorPrimitive } from '@real-system/menu-primitive';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from './types';

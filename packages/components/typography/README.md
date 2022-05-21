@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install @real-system/styling-library @real-system/elements-primitive @real-system/utils-library react react-dom
+$ npm install @real-system/styled-library @real-system/elements-primitive @real-system/utils-library react react-dom
 # yarn
-$ yarn add @real-system/styling-library @real-system/elements-primitive @real-system/utils-library react react-dom
+$ yarn add @real-system/styled-library @real-system/elements-primitive @real-system/utils-library react react-dom
 
 # install typography
 
@@ -25,7 +25,7 @@ $ yarn add @real-system/typography
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 import { Typography } from '@real-system/typography';
 
 /** can also import Heading separately like this

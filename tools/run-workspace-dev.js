@@ -84,8 +84,7 @@ const getAdditionalScripts = () => {
  *    yarn workspace @real-system/box-primitive dev
  *    yarn workspace @real-system/button dev
  *    yarn workspace @real-system/input dev
- *    yarn workspace @real-system/styling-library dev
- *    yarn workspace @real-system/theme-library dev
+ *    yarn workspace @real-system/styled-library dev
  *    yarn workspace @real-system/utils-library dev
  *    yarn:storybook
  *    yarn:playroom

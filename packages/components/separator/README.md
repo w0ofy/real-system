@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/ariakit-library @real-system/styling-library @real-system/theme-library @real-system/elements-primitive
+$ npm install react react-dom @real-system/ariakit-library @real-system/styled-library @real-system/elements-primitive
 # yarn
-$ yarn add react react-dom @real-system/ariakit-library @real-system/styling-library @real-system/theme-library @real-system/elements-primitive
+$ yarn add react react-dom @real-system/ariakit-library @real-system/styled-library @real-system/elements-primitive
 
 # install separator
 

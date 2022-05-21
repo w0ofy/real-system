@@ -12,9 +12,9 @@
 # install peer dependencies
 
 # npm
-$ npm install --save @real-system/styling-library @real-system/theme-library @real-system/elements-primitive react react-dom
+$ npm install --save @real-system/styled-library @real-system/elements-primitive react react-dom
 # yarn
-$ yarn add @real-system/styling-library @real-system/theme-library @real-system/elements-primitive react react-dom
+$ yarn add @real-system/styled-library @real-system/elements-primitive react react-dom
 
 # install icon
 
@@ -27,7 +27,7 @@ $ yarn add @real-system/icon
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 import { Button } from '@real-system/icon';
 
 const MyComponent = () => {

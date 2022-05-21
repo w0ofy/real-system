@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { SelectSeparatorPrimitiveProps } from '@real-system/select-primitive';
 import { SelectSeparatorPrimitive } from '@real-system/select-primitive';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { OmitSelectPrivateProps } from './types';

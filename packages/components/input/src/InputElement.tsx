@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import type { StylishProps } from '@real-system/styling-library';
-import { spreadStyleProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
+import { spreadStyleProps } from '@real-system/styled-library';
 
 import { InputProps } from './types';
 

@@ -2,8 +2,8 @@ import React, { forwardRef } from 'react';
 
 import { real } from '@real-system/elements-primitive';
 import { PortalPrimitive } from '@real-system/portal-primitive';
-import type { RealSystemElementProps } from '@real-system/styling-library';
-import { preventSpreadingStyleProps } from '@real-system/styling-library';
+import type { RealSystemElementProps } from '@real-system/styled-library';
+import { preventSpreadingStyleProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 type ToastPortalProps = {

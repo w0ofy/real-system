@@ -5,7 +5,7 @@ import styled, {
   RealSystemStyledOptions,
   StyledDict,
   StylishProps,
-} from '@real-system/styling-library';
+} from '@real-system/styled-library';
 
 type RealElements = {
   <T extends As, P = Record<string, any>>(

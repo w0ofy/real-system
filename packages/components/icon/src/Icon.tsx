@@ -1,8 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import styled from '@real-system/styling-library';
-import { useTokens } from '@real-system/theme-library';
+import styled, { useTokens } from '@real-system/styled-library';
 
 import { ICON_SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';

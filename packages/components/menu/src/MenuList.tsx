@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { MenuPrimitive } from '@real-system/menu-primitive';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { useMenuStateContext } from './MenuContext';

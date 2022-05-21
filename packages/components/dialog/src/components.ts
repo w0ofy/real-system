@@ -3,8 +3,8 @@ import {
   DialogContentPrimitive,
   DialogOverlayPrimitive,
 } from '@real-system/dialog-primitive';
-import styled, { StyleProps } from '@real-system/styling-library';
-import { majorScale } from '@real-system/theme-library';
+import type { StyleProps } from '@real-system/styled-library';
+import styled, { majorScale } from '@real-system/styled-library';
 import type { PropUnion } from '@real-system/utils-library';
 
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))<
