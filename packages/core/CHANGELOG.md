@@ -1,5 +1,41 @@
 # @real-system/core
 
+## 0.0.42
+
+### Patch Changes
+
+- [#425](https://github.com/bigwoof91/real-system/pull/425) [`3968511`](https://github.com/bigwoof91/real-system/commit/3968511d5fc4c85caa3894ff2037b905127bd329) Thanks [@bigwoof91](https://github.com/bigwoof91)! - replace theme-library and styling-library with styled-library; 1 merged library to handle system styles + shouldForwardProp argument type changed from PropertyKey to string + upgrade project deps and fix DialogAction ref
+
+- Updated dependencies [[`3968511`](https://github.com/bigwoof91/real-system/commit/3968511d5fc4c85caa3894ff2037b905127bd329)]:
+  - @real-system/alert@0.0.24
+  - @real-system/aspect-ratio@0.0.11
+  - @real-system/badge@0.0.9
+  - @real-system/button@0.0.40
+  - @real-system/checkbox@0.0.25
+  - @real-system/dialog@0.0.32
+  - @real-system/field@0.0.17
+  - @real-system/flex@0.0.32
+  - @real-system/icon@0.0.39
+  - @real-system/input@0.0.38
+  - @real-system/link@0.0.10
+  - @real-system/menu@0.0.11
+  - @real-system/pin-input@0.0.4
+  - @real-system/popover@0.0.15
+  - @real-system/radio-group@0.0.18
+  - @real-system/select@0.0.6
+  - @real-system/separator@0.0.7
+  - @real-system/spinner@0.0.37
+  - @real-system/textarea@0.0.22
+  - @real-system/toaster@0.0.23
+  - @real-system/tooltip@0.0.16
+  - @real-system/truncate@0.0.17
+  - @real-system/typography@0.0.39
+  - @real-system/visually-hidden@0.0.35
+  - @real-system/styled-library@0.0.1
+  - @real-system/box-primitive@0.0.22
+  - @real-system/dialog-primitive@0.0.22
+  - @real-system/elements-primitive@0.0.3
+
 ## 0.0.41
 
 ### Patch Changes
