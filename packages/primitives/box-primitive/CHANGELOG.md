@@ -1,5 +1,12 @@
 # @real-system/box
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies [[`bd0cd42`](https://github.com/bigwoof91/real-system/commit/bd0cd423ace7df2ee07c3176a98cee5cfd15000f)]:
+  - @real-system/styled-library@0.0.2
+
 ## 0.0.22
 
 ### Patch Changes

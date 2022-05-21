@@ -1,5 +1,15 @@
 # @real-system/button
 
+## 0.0.41
+
+### Patch Changes
+
+- [#428](https://github.com/bigwoof91/real-system/pull/428) [`bd0cd42`](https://github.com/bigwoof91/real-system/commit/bd0cd423ace7df2ee07c3176a98cee5cfd15000f) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add baseStyles to styled-fn StyledOptions
+
+- Updated dependencies [[`bd0cd42`](https://github.com/bigwoof91/real-system/commit/bd0cd423ace7df2ee07c3176a98cee5cfd15000f)]:
+  - @real-system/styled-library@0.0.2
+  - @real-system/spinner@0.0.38
+
 ## 0.0.40
 
 ### Patch Changes
