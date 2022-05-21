@@ -30,4 +30,4 @@
 '@real-system/elements-primitive': patch
 ---
 
-replace theme-library and styling-library with styled-library; 1 merged library to handle system styles
+replace theme-library and styling-library with styled-library; 1 merged library to handle system styles + shouldForwardProp argument type changed from PropertyKey to string + upgrade project deps and fix DialogAction ref
