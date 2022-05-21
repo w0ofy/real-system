@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 
 import { real, RealElementPrimitiveProps } from '../src/elements';
 

@@ -2,7 +2,7 @@ import type {
   As,
   RealSystemComponentProps,
   StylishProps,
-} from '@real-system/styling-library';
+} from '@real-system/styled-library';
 
 type BoxStyleProps = StylishProps;
 

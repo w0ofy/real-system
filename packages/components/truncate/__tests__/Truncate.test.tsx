@@ -3,7 +3,7 @@ import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { Box } from '@real-system/box-primitive';
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 import { Text } from '@real-system/typography';
 
 import { Truncate } from '../src/Truncate';

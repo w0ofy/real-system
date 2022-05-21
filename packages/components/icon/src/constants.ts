@@ -1,4 +1,4 @@
-import type { SizeTokens, ThemeSizes } from '@real-system/theme-library';
+import type { SizeTokens, ThemeSizes } from '@real-system/styled-library';
 
 const ICON_SIZE_MAP: Record<ThemeSizes, SizeTokens> = {
   xxs: 'icon-xxs',

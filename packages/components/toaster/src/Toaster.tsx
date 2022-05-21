@@ -6,7 +6,7 @@ import {
   useTransition,
 } from '@real-system/animation-library';
 import { real } from '@real-system/elements-primitive';
-import { useToken } from '@real-system/theme-library';
+import { useToken } from '@real-system/styled-library';
 
 import { Toast } from './Toast';
 import { ToastPortal } from './ToastPortal';

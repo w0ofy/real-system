@@ -1,5 +1,5 @@
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
-import type { ResponsiveValue } from '@real-system/styling-library';
+import type { ResponsiveValue } from '@real-system/styled-library';
 
 export type Display = 'flex' | 'inline-flex';
 export type VerticalAlignOptions =

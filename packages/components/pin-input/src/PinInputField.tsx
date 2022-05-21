@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
 import { InputBox } from '@real-system/input';
-import type { RealSystemComponentProps } from '@real-system/styling-library';
-import styled from '@real-system/styling-library';
+import type { RealSystemComponentProps } from '@real-system/styled-library';
+import styled from '@real-system/styled-library';
 
 import { usePinInputField } from './usePinInput';
 

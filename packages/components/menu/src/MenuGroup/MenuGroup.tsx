@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { MenuGroupPrimitive } from '@real-system/menu-primitive';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps } from '../types';

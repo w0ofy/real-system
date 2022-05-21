@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import type { StylishProps } from '@real-system/styling-library';
-import type { ColorSchemes } from '@real-system/theme-library';
+import type { ColorSchemes, StylishProps } from '@real-system/styled-library';
 
 import { BaseText } from './BaseText';
 import type { CommonTextProps } from './types';

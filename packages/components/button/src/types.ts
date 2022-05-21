@@ -1,7 +1,10 @@
 import * as React from 'react';
 
-import type { RealSystemComponentProps } from '@real-system/styling-library';
-import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
+import type {
+  ColorSchemes,
+  RealSystemComponentProps,
+  ThemeSizes,
+} from '@real-system/styled-library';
 
 export type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
 export type ButtonSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;

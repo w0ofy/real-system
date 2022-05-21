@@ -7,8 +7,7 @@ import {
   DialogContentPrimitive,
   DialogOverlayPrimitive,
 } from '@real-system/dialog-primitive';
-import styled from '@real-system/styling-library';
-import { majorScale } from '@real-system/theme-library';
+import styled, { majorScale } from '@real-system/styled-library';
 import { Text } from '@real-system/typography';
 
 const DialogOverlay = styled(animated(DialogOverlayPrimitive))({

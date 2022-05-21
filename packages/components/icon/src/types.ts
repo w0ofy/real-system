@@ -1,7 +1,10 @@
 import * as IconComponents from '@heroicons/react/outline';
 
-import type { StylishProps } from '@real-system/styling-library';
-import type { ColorSchemes, ThemeSizes } from '@real-system/theme-library';
+import type {
+  ColorSchemes,
+  StylishProps,
+  ThemeSizes,
+} from '@real-system/styled-library';
 import type { KebabCase, RemoveSuffix } from '@real-system/utils-library';
 
 /** Hero Icon types */

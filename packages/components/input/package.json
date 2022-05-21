@@ -33,7 +33,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/elements-primitive": "^0.0.2",
-    "@real-system/styling-library": "^0.0.17",
+    "@real-system/styled-library": "^0.0.0",
     "@real-system/typography": "^0.0.38",
     "@real-system/utils-library": "^0.0.19",
     "@real-system/visually-hidden": "^0.0.34",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@real-system/elements-primitive": "^0.0.2",
-    "@real-system/styling-library": "^0.0.17",
+    "@real-system/styled-library": "^0.0.0",
     "@real-system/typography": "^0.0.38",
     "@real-system/utils-library": "^0.0.19",
     "@real-system/visually-hidden": "^0.0.34",

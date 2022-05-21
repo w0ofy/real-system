@@ -5,7 +5,7 @@ import {
   MenuItemCheckPrimitive,
   MenuItemRadioPrimitive,
 } from '@real-system/menu-primitive';
-import type { StylishProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from '../types';

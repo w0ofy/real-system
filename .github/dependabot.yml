@@ -289,7 +289,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/libraries/styling-library
+    directory: /packages/libraries/styled-library
     schedule:
       interval: weekly
     labels:
@@ -298,14 +298,6 @@ updates:
       - 'area: repo'
   - package-ecosystem: npm
     directory: /packages/components/textarea
-    schedule:
-      interval: weekly
-    labels:
-      - 'area: infra'
-      - 'area: security'
-      - 'area: repo'
-  - package-ecosystem: npm
-    directory: /packages/libraries/theme-library
     schedule:
       interval: weekly
     labels:

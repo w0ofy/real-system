@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/elements-primitive @real-system/button @real-system/dialog-primitive @real-system/styling-library @real-system/theme-library
+$ npm install react react-dom @real-system/elements-primitive @real-system/button @real-system/dialog-primitive @real-system/styled-library
 # yarn
-$ yarn add react react-dom @real-system/elements-primitive @real-system/button @real-system/dialog-primitive @real-system/styling-library @real-system/theme-library
+$ yarn add react react-dom @real-system/elements-primitive @real-system/button @real-system/dialog-primitive @real-system/styled-library
 
 # install dialog
 

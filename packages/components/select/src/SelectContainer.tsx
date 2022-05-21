@@ -5,7 +5,7 @@ import {
   SelectLabelPrimitive,
   useSelectStatePrimitive,
 } from '@real-system/select-primitive';
-import { spreadStyleProps } from '@real-system/styling-library';
+import { spreadStyleProps } from '@real-system/styled-library';
 
 import { SelectContextProvider } from './SelectContext';
 import { SelectContainerProps } from './types';

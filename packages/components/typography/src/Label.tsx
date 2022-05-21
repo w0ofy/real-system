@@ -1,7 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import type { StylishProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
 
 import { BaseText } from './BaseText';
 import { RequiredDot } from './RequiredDot';

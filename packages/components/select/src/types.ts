@@ -3,7 +3,7 @@ import {
   SelectStatePrimitive,
   SelectStatePrimitiveProps,
 } from '@real-system/select-primitive';
-import type { StylishProps } from '@real-system/styling-library';
+import type { StylishProps } from '@real-system/styled-library';
 
 type SelectState = SelectStatePrimitive;
 type SelectStateProps = SelectStatePrimitiveProps;

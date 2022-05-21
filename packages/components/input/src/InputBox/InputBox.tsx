@@ -5,7 +5,7 @@ import { real } from '@real-system/elements-primitive';
 import {
   preventSpreadingStyleProps,
   StylishProps,
-} from '@real-system/styling-library';
+} from '@real-system/styled-library';
 import { makeTestId, merge } from '@real-system/utils-library';
 
 import { Addon, AddonProps } from './Addon';

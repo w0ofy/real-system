@@ -5,7 +5,7 @@ import type {
   ColorSchemes,
   ColorTokens,
   ThemeStatuses,
-} from '@real-system/theme-library';
+} from '@real-system/styled-library';
 
 import { BaseText } from './BaseText';
 import type { CommonTextProps } from './types';

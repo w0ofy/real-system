@@ -12,9 +12,9 @@
 # install peer dependencies
 
 # npm
-$ npm install --save @real-system/styling-library @real-system/elements-primitive react react-dom
+$ npm install --save @real-system/styled-library @real-system/elements-primitive react react-dom
 # yarn
-$ yarn add @real-system/styling-library @real-system/elements-primitive react react-dom
+$ yarn add @real-system/styled-library @real-system/elements-primitive react react-dom
 
 # install visually-hidden
 
@@ -27,7 +27,7 @@ $ yarn add @real-system/visually-hidden
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 const MyComponent = () => {

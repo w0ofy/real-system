@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { SelectGroupLabelPrimitiveProps } from '@real-system/select-primitive';
 import { SelectGroupLabelPrimitive } from '@real-system/select-primitive';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CommonSelectProps } from '../types';

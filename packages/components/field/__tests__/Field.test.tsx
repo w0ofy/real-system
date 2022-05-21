@@ -3,7 +3,7 @@ import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { Input } from '@real-system/input';
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 
 import { Field, FieldProps } from '../src/Field';
 import { FieldGroup } from '../src/FieldGroup';

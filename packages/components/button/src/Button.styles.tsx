@@ -1,5 +1,5 @@
-import type { StylishProps } from '@real-system/styling-library';
-import { majorScale } from '@real-system/theme-library';
+import type { StylishProps } from '@real-system/styled-library';
+import { majorScale } from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
 import type { ButtonProps, ButtonSize } from './types';

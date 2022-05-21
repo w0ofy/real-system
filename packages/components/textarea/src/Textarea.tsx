@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { InputBox } from '@real-system/input';
-import { preventSpreadingStyleProps } from '@real-system/styling-library';
+import { preventSpreadingStyleProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { TextareaElement } from './TextareaElement';

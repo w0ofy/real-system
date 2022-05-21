@@ -1,7 +1,7 @@
 import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
 
 import { animated, useTransition } from '@real-system/animation-library';
-import styled from '@real-system/styling-library';
+import styled from '@real-system/styled-library';
 import {
   TooltipAnchorPrimitive,
   TooltipArrowPrimitive,

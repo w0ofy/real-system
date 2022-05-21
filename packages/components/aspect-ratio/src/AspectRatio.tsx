@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 import styled, {
   RealSystemComponentProps,
   ResponsiveValue,
-} from '@real-system/styling-library';
+} from '@real-system/styled-library';
 import { makeTestId, mapResponsive } from '@real-system/utils-library';
 
 type AspectRatioOptions = {

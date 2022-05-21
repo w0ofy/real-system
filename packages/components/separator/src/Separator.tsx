@@ -6,7 +6,7 @@ import {
   SeparatorPrimitive,
   SeparatorPrimitiveProps,
 } from '@real-system/separator-primitive';
-import type { BorderProps, StylishProps } from '@real-system/styling-library';
+import type { BorderProps, StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 type SeparatorProps = Pick<SeparatorPrimitiveProps, 'orientation'> &

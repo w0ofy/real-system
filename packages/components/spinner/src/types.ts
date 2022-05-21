@@ -1,5 +1,5 @@
 import { BoxProps } from '@real-system/box-primitive';
-import { ColorTokens, ThemeSizes } from '@real-system/theme-library';
+import type { ColorTokens, ThemeSizes } from '@real-system/styled-library';
 
 export type SpinnerProps = {
   title?: string;

@@ -1,6 +1,5 @@
-import type { StylishProps } from '@real-system/styling-library';
-import styled, { keyframes } from '@real-system/styling-library';
-import type { ThemeSizes } from '@real-system/theme-library';
+import type { StylishProps, ThemeSizes } from '@real-system/styled-library';
+import styled, { keyframes } from '@real-system/styled-library';
 
 import { circleCircumference } from './constants';
 

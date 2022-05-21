@@ -7,7 +7,7 @@ import {
   PopoverPrimitive,
   PopoverPrimitiveProps,
 } from '@real-system/popover-primitive';
-import type { RealSystemElementProps } from '@real-system/styling-library';
+import type { RealSystemElementProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { PopoverButton } from './PopoverButton';

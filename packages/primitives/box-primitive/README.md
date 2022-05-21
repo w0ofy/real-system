@@ -12,9 +12,9 @@
 # install peer dependencies
 
 # npm
-$ npm install --save @real-system/styling-library react react-dom
+$ npm install --save @real-system/styled-library react react-dom
 # yarn
-$ yarn add @real-system/styling-library react react-dom
+$ yarn add @real-system/styled-library react react-dom
 
 # install box
 
@@ -27,7 +27,7 @@ $ yarn add @real-system/box-primitive
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/theme-library';
+import { ThemeProvider } from '@real-system/styled-library';
 import { Box, BoxAs } from '@real-system/box-primitive';
 
 const Aside = BoxAs('aside');
