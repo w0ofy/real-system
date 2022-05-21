@@ -4,7 +4,6 @@ import styled, {
   RealSystemComponentProps,
   RealSystemStyledOptions,
   StyledDict,
-  StylishProps,
 } from '@real-system/styled-library';
 
 type RealElements = {
@@ -27,10 +26,11 @@ function elements() {
     /**
      * @example
      * const Div = real("div")
+     * const Div = real("div")
      * const RealComponent = real(Component)
      */
-    apply(target, thisArg, argArray: [DOMElements, RealSystemStyledOptions]) {
-      return styled(...argArray)({});
+    apply(_target, _thisArg, argArray: [DOMElements, RealSystemStyledOptions]) {
+      return styled(...argArray)();
     },
     /**
      * @example
@@ -38,7 +38,7 @@ function elements() {
      */
     get(_, element: DOMElements) {
       if (!cache.has(element)) {
-        cache.set(element, styled(element)({}));
+        cache.set(element, styled(element)());
       }
       return cache.get(element);
     },

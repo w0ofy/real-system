@@ -20,7 +20,7 @@ const PROPS_TO_BLOCK = {
 const isPropValid = (prop: string) =>
   emotionValid(prop) || prop.includes(dataAttr) || prop.includes(ariaAttr);
 
-export const makeShouldForwardProp = <T = boolean>(strict?: T) => {
+const makeShouldForwardProp = <T extends boolean>(strict?: T) => {
   if (strict) return memoize((prop: string) => isPropValid(prop));
   return memoize((prop: string) => !PROPS_TO_BLOCK[prop]);
 };
@@ -29,20 +29,20 @@ type CreateShouldForwardProp = ReturnType<typeof makeShouldForwardProp>;
 
 /**
  * Function with attached methods for selecting certain kinds of props that should or should not be forwarded to a component's DOM Element.
- * @default ifNotStyleProp Forward all props except style props
+ * @default ifNotStylishProp Forward all props except stylish props
  */
 type ShouldForwardProp = CreateShouldForwardProp & {
-  /** Forward all props except style props */
-  ifNotStyleProp: typeof ifNotStyleProp;
+  /** Forward all props stylish style props */
+  ifNotStylishProp: typeof ifNotStylishProp;
   /** Only forward html-valid props, as defined in `@emotion/is-prop-valid`. `data-*` and `aria-*` are also forwarded. */
   ifValidHTMLProp: typeof ifValidHTMLProp;
 };
 
 const shouldForwardProp = makeShouldForwardProp() as ShouldForwardProp;
-const ifValidHTMLProp = makeShouldForwardProp<true>(true);
-const ifNotStyleProp = makeShouldForwardProp();
+const ifValidHTMLProp = makeShouldForwardProp(true);
+const ifNotStylishProp = makeShouldForwardProp();
 
-shouldForwardProp.ifNotStyleProp = ifNotStyleProp;
+shouldForwardProp.ifNotStylishProp = ifNotStylishProp;
 shouldForwardProp.ifValidHTMLProp = ifValidHTMLProp;
 
 type FilterFn<T> = (value: any, key: string, object: T) => boolean;
