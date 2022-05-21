@@ -10,7 +10,7 @@ import { Text } from '@real-system/typography';
 
 export default {
   title: 'Primitives/Elements Primitive',
-  component: real.div,
+  component: real('div'),
 } as Meta;
 
 const Template: RealElementPrimitive = (args: RealElementPrimitiveProps) => {

@@ -59,8 +59,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     () => buttonState === 'loading' && variant !== 'floating',
     [buttonState, variant]
   );
-  const showDisabled = buttonState !== 'default';
-
   const buttonStyles = useMemo(
     () =>
       buttonStylesConfig[variant]({
@@ -71,10 +69,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     [variant, size, colorScheme, isLoading]
   );
 
+  const isLoadingOrDisabled = buttonState !== 'default';
+
   return (
     <BaseButton
       data-testid={makeTestId('button')}
-      disabled={showDisabled}
+      disabled={isLoadingOrDisabled}
       {...buttonStyles}
       {...restProps}
       ref={ref}>

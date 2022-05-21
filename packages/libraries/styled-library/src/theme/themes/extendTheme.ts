@@ -24,7 +24,7 @@ const extendTheme = (theme: InitialTheme, overrides: Overrides) => {
   const initialTheme = getInitialTheme(theme);
 
   if (typeof overrides === 'function') {
-    return merge(initialTheme, overrides(initialTheme['colors']));
+    return merge(initialTheme, overrides(initialTheme.colors));
   }
   return merge(initialTheme, overrides);
 };

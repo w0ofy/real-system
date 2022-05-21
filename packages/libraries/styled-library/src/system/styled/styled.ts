@@ -30,12 +30,15 @@ type GetCSSObject = FunctionInterpolation<StyleResolverProps>;
  * behaviors. Right now, the `sx` prop has the highest priority so the resolved
  * fontSize will be `40px`
  */
-type ToCSSObject = (styles: StyleObjectOrFn) => GetCSSObject;
+type ToCSSObject = (
+  styles: StyleObjectOrFn,
+  baseStyles?: StyleObjectOrFn
+) => GetCSSObject;
 
-const toCSSObject: ToCSSObject = (styledStyles) => (props) => {
+const toCSSObject: ToCSSObject = (styledStyles, baseStyles) => (props) => {
   const { sx = {}, ...rest } = props;
 
-  const allProps = { ...styledStyles, ...rest, ...sx };
+  const allProps = { ...baseStyles, ...styledStyles, ...rest, ...sx };
   const styleProps = getStyleProps(allProps);
   const pseudoProps = getPseudoProps(allProps);
   const styles = objectFilter({ ...styledStyles, ...sx }, isNotStylishProp);
@@ -45,25 +48,28 @@ const toCSSObject: ToCSSObject = (styledStyles) => (props) => {
 
 type RealSystemStyledOptions = {
   label?: string;
+  /** Utility only forwarding specific props to the DOM element itself. By default will forward all props except `StylishProps` */
   shouldForwardProp?(propName: string): boolean;
+  /** The elements base styles. Useful for reusing a `CreateStyledComponent` instead of reusing the `Component` itself */
+  baseStyles?: StyleObjectOrFn;
   target?: string;
 };
 
 function styled<T extends As>(component: T, options?: RealSystemStyledOptions) {
-  return function styledComponent<P extends StyledDict = StyledDict>(
+  return function createStyledComponent<P extends StyledDict = StyledDict>(
     /** @todo allow passing of multiple args/string literal */
     styles: StyleObjectOrFn<P> = {}
   ) {
-    const { ...styledOptions } = options ?? {};
+    const { baseStyles, ...styledOptions } = options ?? {};
 
     if (!styledOptions.shouldForwardProp) {
-      styledOptions.shouldForwardProp = shouldForwardProp.ifNotStyleProp;
+      styledOptions.shouldForwardProp = shouldForwardProp.ifNotStylishProp;
     }
 
     return _styled(
       component as React.ComponentType<any>,
       styledOptions
-    )(toCSSObject(styles)) as RealSystemComponent<T, P>;
+    )(toCSSObject(styles, baseStyles)) as RealSystemComponent<T, P>;
   };
 }
 
