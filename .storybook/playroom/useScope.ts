@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTheme } from '../../packages/libraries/theme-library/src/index';
+import { useTheme } from '../../packages/libraries/styled-library/src/index';
 import { real } from '../../packages/primitives/elements-primitive/src/index';
 
 function makeState() {
