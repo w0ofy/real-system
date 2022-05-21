@@ -4,7 +4,7 @@ import { withPerformance } from 'storybook-addon-performance';
 import {
   themes,
   ThemeProvider,
-} from '../packages/libraries/theme-library/src/index';
+} from '../packages/libraries/styled-library/src/index';
 
 const isProduction = process.env.NODE_ENV === 'production';
 

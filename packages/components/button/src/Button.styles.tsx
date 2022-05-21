@@ -35,7 +35,7 @@ const getCursorStyle = (loading) =>
 type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
 
 /**
- * @todo modularize this kind of function in theme-library
+ * @todo modularize this kind of function in styled-library
  */
 const maybeOrange = (colorScheme: Params['colorScheme']) =>
   colorScheme === 'orange' ? '700' : '600';
