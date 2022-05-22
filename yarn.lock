@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 5
+  version: 6
   cacheKey: 8
 
 "@ampproject/remapping@npm:^2.1.0":
@@ -3642,7 +3642,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
-    ariakit: 2.0.0-next.26
+    ariakit: 2.0.0-next.27
     concurrently: ^7.2.0
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -4459,7 +4459,7 @@ __metadata:
     lodash.get: ^4.4.2
     react: ^18.1.0
     react-dom: ^18.1.0
-    react-uid: ^2.3.1
+    react-uid: ^2.3.2
     typescript: 4.6.4
   peerDependencies:
     react: ^18.1.0
@@ -7708,16 +7708,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-next.26":
-  version: 2.0.0-next.26
-  resolution: "ariakit@npm:2.0.0-next.26"
+"ariakit@npm:2.0.0-next.27":
+  version: 2.0.0-next.27
+  resolution: "ariakit@npm:2.0.0-next.27"
   dependencies:
     "@floating-ui/dom": 0.5.0
     ariakit-utils: 0.17.0-next.18
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 2b80200b120acab7d87ee63c53b15412d9497e1a8217d8bbde9d9b9a5d4192886eaf0923d4f841e248e1a32d0c7ba781a6631c0966c721b014babd6ec6606f21
+  checksum: 83e0f1d716095fc50c08d01e28119858e04443e94a946ce628d44787a115da867de72992757de7de63102d46a25fd36f96ca0e47e1f951a47278c49184d5625b
   languageName: node
   linkType: hard
 
@@ -19692,7 +19692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-uid@npm:^2.3.1":
+"react-uid@npm:^2.3.1, react-uid@npm:^2.3.2":
   version: 2.3.2
   resolution: "react-uid@npm:2.3.2"
   dependencies:
@@ -22939,11 +22939,11 @@ __metadata:
 
 "typescript@patch:typescript@4.6.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
-  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=ddd1e8"
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=7ad353"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 8cff08bf66d9ecfbf9fcc5edde04a5a7923e6cac3b21d99b4e9a06973bf5bd7f9a83ec7eed24129c1b9e13fd861de8c1070110d4b9ce9f18ab57c6999e9c9a6f
+  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
   languageName: node
   linkType: hard
 
