@@ -4,11 +4,6 @@
 <a href="https://www.npmjs.com/package/@real-system/styled-library"><img src="https://badgen.net/npm/v/@real-system/styled-library?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
 </p>
 
-## Disclaimer
-
-This is the only Real System library that is not suffixed with `-library`. Why? This 
-
-
 ## Usage
 
 ```bash
@@ -19,7 +14,7 @@ $ npm install react react-dom
 # yarn
 $ yarn add react react-dom 
 
-# install styled-system
+# install styled-library
 
 # npm
 $ npm install @real-system/styled-library @real-system/utils-library

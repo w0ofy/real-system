@@ -109,7 +109,6 @@ $ git push origin <branch_name>
 Real System uses the following projects which drive the majority of component compositions and patterns.
 
 - [ariakit](https://github.com/ariakit/ariakit)
-- [styled system](https://styled-system.com/)
 - [@emotion/react](https://emotion.sh/docs/@emotion/react)
 - [@emotion/styled](https://emotion.sh/docs/@emotion/styled)
 

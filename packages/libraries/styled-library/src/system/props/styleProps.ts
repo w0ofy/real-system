@@ -1,5 +1,3 @@
-import { system } from 'styled-system';
-
 import type {
   AnimationProps,
   BackgroundProps,
@@ -18,8 +16,6 @@ import type {
   TypographyProps,
 } from '../config';
 import { styleProps } from '../config';
-
-const getStyleProps = system(styleProps);
 
 type StylePropNames = keyof StyleProps;
 
@@ -44,4 +40,4 @@ export type {
   TransformProps,
   TypographyProps,
 };
-export { getStyleProps, isNotStyleProp, isStyleProp, STYLE_PROPS };
+export { isNotStyleProp, isStyleProp, STYLE_PROPS };

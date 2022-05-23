@@ -3,6 +3,11 @@
  * @see https://raw.githubusercontent.com/styled-system/styled-system/master/packages/css/src/index.js
  */
 
+import type { Obj } from '@real-system/utils-library';
+
+import type { ThemeScales } from '../../theme';
+import { pseudoProps } from '../props/pseudoProps';
+
 import {
   aliases,
   cssGet,
@@ -12,31 +17,34 @@ import {
   transforms,
 } from './css.utils';
 
-const defaultTheme = {
+const defaultTheme: Partial<Record<ThemeScales, (number | string)[] | Obj>> = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
 };
 
 /**
- * A recursive styleFn for mapping real system style-props
+ * A recursive styleFn for mapping real system stylish-props
  * to their respective CSS properties and theme scale values.
  */
 const css = (args) => (props) => {
-  const theme = { ...defaultTheme, ...(props.theme || props) };
-  let result = {};
-  const obj = typeof args === 'function' ? args(theme) : args;
-  const styles = responsive(obj)(theme);
+  const theme = {
+    ...defaultTheme,
+    ...(props?.theme || props || {}),
+  };
+  const result = {};
+  let styles = typeof args === 'function' ? args(theme) : args;
+  styles = responsive(styles)(theme);
 
-  for (const key in styles) {
+  for (let key in styles) {
     const x = styles[key];
     const val = typeof x === 'function' ? x(theme) : x;
 
-    if (key === 'variant') {
-      const variant = css(cssGet(theme, val))(theme);
-      result = { ...result, ...variant };
-      continue;
+    // if pseudo prop, rename key to appropriate selector
+    if (key in pseudoProps) {
+      key = pseudoProps[key];
     }
 
+    // if nested css, recursively run css on the value
     if (val && typeof val === 'object') {
       result[key] = css(val)(theme);
       continue;
@@ -56,12 +64,9 @@ const css = (args) => (props) => {
 
     // if the style prop has multiple css properties, assign the value to each one of them
     if (multiples[prop]) {
-      const dirs = multiples[prop];
-
-      for (let i = 0; i < dirs.length; i++) {
-        result[dirs[i]] = value;
-      }
+      multiples[prop].forEach((cssProperty) => (result[cssProperty] = value));
     } else {
+      // else just assign the css property its value
       result[prop] = value;
     }
   }

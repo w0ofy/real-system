@@ -10,5 +10,6 @@ export * from './assertion';
 export * from './environment';
 export * from './function';
 export * from './object';
+export * from './react';
 export * from './responsive';
 export * from './type';
