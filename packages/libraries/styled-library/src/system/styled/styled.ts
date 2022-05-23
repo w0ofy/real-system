@@ -1,6 +1,10 @@
 import _styled, { FunctionInterpolation } from '@emotion/styled';
 
-import { getPseudoProps, getStyleProps, isNotStylishProp } from '../props';
+import { runIfFn } from '@real-system/utils-library';
+
+import { ThemeShape } from '../../theme';
+import { css } from '../cssFn';
+import { isStylishProp } from '../props';
 
 import type {
   CSSObject,
@@ -12,7 +16,7 @@ import { objectFilter, shouldForwardProp } from './styled.utils';
 
 type StyleResolverProps = CSSObject & {
   sx?: StyleObjectOrFn;
-  theme: any;
+  theme: ThemeShape;
 };
 
 type GetCSSObject = FunctionInterpolation<StyleResolverProps>;
@@ -38,12 +42,18 @@ type ToCSSObject = (
 const toCSSObject: ToCSSObject = (styledStyles, baseStyles) => (props) => {
   const { sx = {}, ...rest } = props;
 
-  const allProps = { ...baseStyles, ...styledStyles, ...rest, ...sx };
-  const styleProps = getStyleProps(allProps);
-  const pseudoProps = getPseudoProps(allProps);
-  const styles = objectFilter({ ...styledStyles, ...sx }, isNotStylishProp);
+  const finalBaseStyles = runIfFn(baseStyles, props);
+  const finalStyledStyles = runIfFn(styledStyles, props);
+  const finalStyleProps = objectFilter(rest, isStylishProp);
 
-  return { ...styles, ...styleProps, ...pseudoProps };
+  const finalStyles = {
+    ...finalBaseStyles,
+    ...finalStyledStyles,
+    ...finalStyleProps,
+    ...sx,
+  };
+
+  return css(finalStyles)(props);
 };
 
 type RealSystemStyledOptions = {

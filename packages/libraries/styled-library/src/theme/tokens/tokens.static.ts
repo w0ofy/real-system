@@ -130,7 +130,7 @@ const zIndices = {
 const radii = {
   none: 0,
   xxs: '0.5px',
-  xs: '1px',
+  xs: '0.75px',
   sm: patchScale(1),
   md: patchScale(2),
   lg: patchScale(4),

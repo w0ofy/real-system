@@ -19,7 +19,6 @@ module.exports = {
       reportFiles: ['packages/**/*.{ts,tsx}'],
     },
     reactDocgen: 'react-docgen-typescript',
-    // these options will include styled-system props
     reactDocgenTypescriptOptions: {
       skipPropsWithoutDoc: false,
       shouldExtractLiteralValuesFromEnum: true,

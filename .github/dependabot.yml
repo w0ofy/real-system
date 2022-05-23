@@ -281,6 +281,14 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
+    directory: /packages/components/stack
+    schedule:
+      interval: weekly
+    labels:
+      - 'area: infra'
+      - 'area: security'
+      - 'area: repo'
+  - package-ecosystem: npm
     directory: /packages/libraries/state-library
     schedule:
       interval: weekly

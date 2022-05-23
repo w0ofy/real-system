@@ -15,24 +15,25 @@ const PROPS = Object.keys(styleProps);
 /**
  * Style props that are aliases for a CSS property
  */
-const aliases = PROPS.reduce((obj, p) => {
-  // if property exists, it's an alias for a CSS property
-  if (styleProps[p]?.property) {
+const aliases = PROPS.reduce((props, prop) => {
+  // if .property exists, it's an alias for a CSS property
+  if (styleProps[prop]?.property) {
     return {
-      ...obj,
-      [p]: styleProps[p]?.property,
+      ...props,
+      [prop]: styleProps[prop]?.property,
     };
   }
-  // if property is a boolean, it's definitely a CSS property
-  if (typeof styleProps[p] === 'boolean') {
+  // if property is true, it's definitely a CSS property
+  if (styleProps[prop] === true) {
     return {
-      ...obj,
-      p,
+      ...props,
+      prop,
     };
   }
-  // else, just return the accumulator object
+  console.log(prop);
+  // else, just return the accumulator
   return {
-    ...obj,
+    ...props,
   };
 }, {});
 
@@ -82,6 +83,13 @@ const transforms = [
   'marginLeft',
   'marginX',
   'marginY',
+  'm',
+  'mx',
+  'my',
+  'mt',
+  'mr',
+  'mb',
+  'ml',
   'top',
   'bottom',
   'left',

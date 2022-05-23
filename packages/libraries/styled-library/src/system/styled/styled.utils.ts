@@ -45,7 +45,7 @@ const ifNotStylishProp = makeShouldForwardProp();
 shouldForwardProp.ifNotStylishProp = ifNotStylishProp;
 shouldForwardProp.ifValidHTMLProp = ifValidHTMLProp;
 
-type FilterFn<T> = (value: any, key: string, object: T) => boolean;
+type FilterFn<T> = (key: string) => boolean;
 
 /**
  * Returns the items of an object that meet the condition specified in a callback function.
@@ -58,7 +58,7 @@ const objectFilter = <T extends StyledDict>(object: T, fn: FilterFn<T>) => {
 
   Object.keys(object).forEach((key) => {
     const value = object[key];
-    const shouldPass = fn(value, key, object);
+    const shouldPass = fn(key);
     if (shouldPass) {
       result[key] = value;
     }

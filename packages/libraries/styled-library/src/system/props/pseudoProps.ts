@@ -1,7 +1,6 @@
-import { css } from '../cssFn';
 import type { CSSObject } from '../styled/styled.types';
 
-const pseudoPropsMap = {
+const pseudoProps = {
   __moz_focus_inner: '&::-moz-focus-inner',
   __webkit_calendar_picker_indicator_hover:
     '&::-webkit-calendar-picker-indicator:hover',
@@ -41,37 +40,14 @@ const pseudoPropsMap = {
   _visited: '&:visited',
 };
 
-type PseudoPropNames = keyof typeof pseudoPropsMap;
+type PseudoPropNames = keyof typeof pseudoProps;
 type PseudoProps = {
   [key in PseudoPropNames]?: CSSObject;
 };
 
-type PropUnion<T> = T & { [key: string]: any };
-type Props = PropUnion<{ theme: CSSPropsFromPseudoProps }>;
-type CSSPropsFromPseudoProps = ReturnType<ReturnType<typeof css>>;
-
-const getPseudoProps = (props: Props): CSSPropsFromPseudoProps | Props => {
-  const pseudos = Object.keys(props).filter((propName) =>
-    propName.startsWith('_')
-  ) as Array<PseudoPropNames>;
-
-  if (pseudos.length === 0) {
-    return {};
-  }
-
-  const pseudoStyles: CSSPropsFromPseudoProps = {};
-  pseudos.forEach((pseudoProp) => {
-    if (pseudoPropsMap[pseudoProp] != null) {
-      pseudoStyles[pseudoPropsMap[pseudoProp]] = props[pseudoProp];
-    }
-  });
-
-  return css(pseudoStyles)(props);
-};
-
-const PSEUDO_PROPS = Object.keys(pseudoPropsMap) as PseudoPropNames[];
-const isPseudoProp = (prop: PropertyKey) => !!pseudoPropsMap[prop];
-const isNotPseudoProp = (prop: PropertyKey) => !pseudoPropsMap[prop];
+const PSEUDO_PROPS = Object.keys(pseudoProps) as PseudoPropNames[];
+const isPseudoProp = (prop: PropertyKey) => !!pseudoProps[prop];
+const isNotPseudoProp = (prop: PropertyKey) => !pseudoProps[prop];
 
 export type { PseudoPropNames, PseudoProps };
-export { getPseudoProps, isNotPseudoProp, isPseudoProp, PSEUDO_PROPS };
+export { isNotPseudoProp, isPseudoProp, PSEUDO_PROPS, pseudoProps };

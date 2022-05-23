@@ -21,7 +21,10 @@ export interface TextComponent
   Code: typeof Code;
 }
 
-// @ts-expect-error Heading (component) property is defined on the fn object after this is defined
+/**
+ * Typography component for real system
+ */
+// @ts-expect-error Text component properties are defined on the fn object after this is defined
 const Text: TextComponent = forwardRef<
   HTMLParagraphElement | HTMLSpanElement,
   TextProps
