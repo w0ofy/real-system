@@ -72,11 +72,19 @@ const spaceProps: StylePropConfig<SpaceProps> = {
     property: 'marginInlineStart',
     scale: STYLE_PROP_SCALES.space,
   },
+  marginStart: {
+    property: 'marginInlineStart',
+    scale: STYLE_PROP_SCALES.space,
+  },
   ms: {
     property: 'marginInlineStart',
     scale: STYLE_PROP_SCALES.space,
   },
   marginInlineEnd: {
+    property: 'marginInlineEnd',
+    scale: STYLE_PROP_SCALES.space,
+  },
+  marginEnd: {
     property: 'marginInlineEnd',
     scale: STYLE_PROP_SCALES.space,
   },
@@ -152,11 +160,19 @@ const spaceProps: StylePropConfig<SpaceProps> = {
     property: 'paddingInlineStart',
     scale: STYLE_PROP_SCALES.space,
   },
+  paddingStart: {
+    property: 'paddingInlineStart',
+    scale: STYLE_PROP_SCALES.space,
+  },
   ps: {
     property: 'paddingInlineStart',
     scale: STYLE_PROP_SCALES.space,
   },
   paddingInlineEnd: {
+    property: 'paddingInlineEnd',
+    scale: STYLE_PROP_SCALES.space,
+  },
+  paddingEnd: {
     property: 'paddingInlineEnd',
     scale: STYLE_PROP_SCALES.space,
   },
@@ -184,8 +200,10 @@ type SpaceProps = {
   marginInline?: Token<CSS.MarginInline, 'space'>;
   mInline?: Token<CSS.MarginInline, 'space'>;
   marginInlineStart?: Token<CSS.MarginInlineStart, 'space'>;
+  marginStart?: Token<CSS.MarginInlineStart, 'space'>;
   ms?: Token<CSS.MarginInlineStart, 'space'>;
   marginInlineEnd?: Token<CSS.MarginInlineEnd, 'space'>;
+  marginEnd?: Token<CSS.MarginInlineEnd, 'space'>;
   me?: Token<CSS.MarginInlineEnd, 'space'>;
   padding?: Token<CSS.Padding, 'space'>;
   p?: Token<CSS.Padding, 'space'>;
@@ -204,8 +222,10 @@ type SpaceProps = {
   paddingInline?: Token<CSS.PaddingInline, 'space'>;
   pInline?: Token<CSS.PaddingInline, 'space'>;
   paddingInlineStart?: Token<CSS.PaddingInlineStart, 'space'>;
+  paddingStart?: Token<CSS.PaddingInlineStart, 'space'>;
   ps?: Token<CSS.PaddingInlineStart, 'space'>;
   paddingInlineEnd?: Token<CSS.PaddingInlineEnd, 'space'>;
+  paddingEnd?: Token<CSS.PaddingInlineEnd, 'space'>;
   pe?: Token<CSS.PaddingInlineEnd, 'space'>;
 };
 

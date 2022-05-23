@@ -1,37 +1,32 @@
 import { ResponsiveValue, StylishProps } from '@real-system/styled-library';
 
-type StackDirection = ResponsiveValue<
+type StackOrientation = ResponsiveValue<
   'row' | 'column' | 'row-reverse' | 'column-reverse'
 >;
 
 type StackOptions = {
   /**
    * Shorthand for `alignItems` style prop
-   * @type StylishProps["alignItems"]
    */
   align?: StylishProps['alignItems'];
   /**
    * Shorthand for `justifyContent` style prop
-   * @type StylishProps["justifyContent"]
    */
   justify?: StylishProps['justifyContent'];
   /**
    * Shorthand for `flexWrap` style prop
-   * @type StylishProps["flexWrap"]
    */
   wrap?: StylishProps['flexWrap'];
   /**
    * The space between each stack item
-   * @type StylishProps["margin"]
    */
   spacing?: StylishProps['margin'];
   /**
-   * The direction to stack the items.
+   * The orientation (or direction) in which the items are stacked
    */
-  direction?: StackDirection;
+  orientation?: StackOrientation;
   /**
    * If `true`, each stack item will show a divider
-   * @type React.ReactElement
    */
   divider?: React.ReactElement;
   /**
@@ -45,4 +40,4 @@ type StackOptions = {
   inline?: boolean;
 };
 
-export type { StackDirection, StackOptions };
+export type { StackOptions, StackOrientation };

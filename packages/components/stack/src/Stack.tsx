@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import { real } from '@real-system/elements-primitive';
 import { RealSystemComponentProps } from '@real-system/styled-library';
-import { getValidChildren } from '@real-system/utils-library';
+import { getValidChildren, makeTestId } from '@real-system/utils-library';
 
-import type { StackDirection, StackOptions } from './Stack.types';
+import type { StackOptions, StackOrientation } from './Stack.types';
 import { getDividerStyles, getStackStyles, selector } from './Stack.utils';
 import { StackDivider } from './StackDivider';
 import { StackItem } from './StackItem';
@@ -17,45 +17,43 @@ export type StackProps = Omit<
 
 export interface StackComponent
   extends React.ForwardRefExoticComponent<StackProps> {
-  Horizontal: typeof HStack;
-  Vertical: typeof VStack;
+  Horizontal: typeof HorizontalStack;
+  Vertical: typeof VerticalStack;
   Divider: typeof StackDivider;
   Item: typeof StackItem;
 }
 
 /**
- * Stacks help you easily create flexible and automatically distributed layouts
+ * `Stack`s help you easily create flexible and automatically distributed layouts.
  *
- * You can stack elements in the horizontal or vertical direction,
- * and apply a space or/and divider between each element.
+ * You can stack elements in a horizontal or vertical orientation, and apply a space and/or divider between each element.
  */
 // @ts-expect-error Stack (component) properties iare defined on the fn object after this is defined
 const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
   function Stack(props, ref) {
     const {
       inline,
-      direction: directionProp,
+      orientation: orientationProp,
       align,
       justify,
       spacing = '0.5rem',
       wrap,
       children,
       divider,
-      className,
       containChildren,
       ...rest
     } = props;
 
-    const direction = inline ? 'row' : directionProp ?? 'column';
+    const orientation = inline ? 'row' : orientationProp ?? 'column';
 
     const styles = React.useMemo(
-      () => getStackStyles({ direction, spacing }),
-      [direction, spacing]
+      () => getStackStyles({ orientation, spacing }),
+      [orientation, spacing]
     );
 
     const dividerStyle = React.useMemo(
-      () => getDividerStyles({ spacing, direction }),
-      [spacing, direction]
+      () => getDividerStyles({ spacing, orientation }),
+      [spacing, orientation]
     );
 
     const hasDivider = !!divider;
@@ -76,7 +74,7 @@ const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
 
           const clonedDivider = React.cloneElement(
             divider as React.ReactElement<any>,
-            { sx: dividerStyle }
+            { sx: { ...(divider?.props?.sx || {}), ...dividerStyle } }
           );
 
           const _divider = isLast ? null : clonedDivider;
@@ -97,8 +95,8 @@ const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
         justifyContent={justify}
         flexDirection={styles.flexDirection}
         flexWrap={wrap}
-        className={className}
         sx={hasDivider ? {} : { [selector]: styles[selector] }}
+        data-testid={makeTestId('stack')}
         {...rest}>
         {clones}
       </real.div>
@@ -106,24 +104,38 @@ const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
   }
 );
 
-const HStack = React.forwardRef<HTMLDivElement, StackProps>(function Horiontal(
-  props,
-  ref
-) {
-  return <Stack align="center" {...props} direction="row" ref={ref} />;
-});
+const HorizontalStack = React.forwardRef<HTMLDivElement, StackProps>(
+  function HorizontalStack(props, ref) {
+    return (
+      <Stack
+        align="center"
+        data-testid={makeTestId('horizontal-stack')}
+        {...props}
+        orientation="row"
+        ref={ref}
+      />
+    );
+  }
+);
 
-const VStack = React.forwardRef<HTMLDivElement, StackProps>(function Vertical(
-  props,
-  ref
-) {
-  return <Stack align="center" {...props} direction="column" ref={ref} />;
-});
+const VerticalStack = React.forwardRef<HTMLDivElement, StackProps>(
+  function VerticalStack(props, ref) {
+    return (
+      <Stack
+        align="center"
+        data-testid={makeTestId('vertical-stack')}
+        {...props}
+        orientation="column"
+        ref={ref}
+      />
+    );
+  }
+);
 
-Stack.Horizontal = HStack;
-Stack.Vertical = VStack;
+Stack.Horizontal = HorizontalStack;
+Stack.Vertical = VerticalStack;
 Stack.Item = StackItem;
 Stack.Divider = StackDivider;
 
-export type { StackDirection };
+export type { StackOrientation };
 export { Stack };

@@ -1,3 +1,5 @@
+import type { Dict } from '@real-system/utils-library';
+
 import type { StylishProps } from '../props';
 
 import {
@@ -6,7 +8,6 @@ import {
   CSSWithMultiValues,
   PropsOf,
   RecursiveCSSObject,
-  StyledDict,
   StyledPropsWithChildren,
 } from './styled.types.helpers';
 
@@ -27,7 +28,7 @@ type RealSystemElementProps<T extends As = any> =
     ? PropsOf<T> & StaticProps
     : StaticProps;
 
-type RealSystemCustomProps<P = StyledDict> = {
+type RealSystemCustomProps<P = Dict> = {
   /**
    * Override styles with sx
    */
@@ -43,7 +44,7 @@ type InternalRealSystemComponentProps = {
   'data-real-system'?: string;
 };
 
-type RealSystemComponentProps<T extends As = any, P = StyledDict> = PropsOf<T> &
+type RealSystemComponentProps<T extends As = any, P = Dict> = PropsOf<T> &
   RealSystemCustomProps<P> &
   StyledPropsWithChildren<P> &
   StylishProps;
@@ -51,20 +52,20 @@ type RealSystemComponentProps<T extends As = any, P = StyledDict> = PropsOf<T> &
 /**
  * @todo Do we need this? Or just RealSystemComponentProps?
  */
-type StyledComponentProps<P = StyledDict> = StyledPropsWithChildren<P> &
+type StyledComponentProps<P = Dict> = StyledPropsWithChildren<P> &
   RealSystemCustomProps<P> &
   StylishProps;
 
-type RealSystemComponent<T extends As, P = StyledDict> = ComponentWithAs<
+type RealSystemComponent<T extends As, P = Dict> = ComponentWithAs<
   T,
   StyledComponentProps<P>
 >;
 
-type FunctionCSSInterpolation<P = StyledDict> = {
+type FunctionCSSInterpolation<P = Dict> = {
   (props: P): CSSObject;
 };
 
-type StyleObjectOrFn<P = StyledDict> = CSSObject | FunctionCSSInterpolation<P>;
+type StyleObjectOrFn<P = Dict> = CSSObject | FunctionCSSInterpolation<P>;
 
 export type {
   CSSObject,
