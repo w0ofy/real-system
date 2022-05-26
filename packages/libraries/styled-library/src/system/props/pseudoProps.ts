@@ -38,6 +38,7 @@ const pseudoProps = {
   _selected_hover: '&[aria-selected=true]:hover',
   _selected: '&[aria-selected=true]',
   _visited: '&:visited',
+  _nested_owl_without_style: '& > *:not(style) ~ *:not(style)',
 };
 
 type PseudoPropNames = keyof typeof pseudoProps;

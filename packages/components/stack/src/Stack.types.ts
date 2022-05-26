@@ -1,6 +1,6 @@
 import { ResponsiveValue, StylishProps } from '@real-system/styled-library';
 
-type StackOrientation = ResponsiveValue<
+type StackDirection = ResponsiveValue<
   'row' | 'column' | 'row-reverse' | 'column-reverse'
 >;
 
@@ -22,13 +22,14 @@ type StackOptions = {
    */
   spacing?: StylishProps['margin'];
   /**
-   * The orientation (or direction) in which the items are stacked
+   * The direction in which the items are stacked.
+   * A limited shorthand for `flexDirection` style prop
    */
-  orientation?: StackOrientation;
+  direction?: StackDirection;
   /**
-   * If `true`, each stack item will show a divider
+   * If `true`, each stack item will show a separator
    */
-  divider?: React.ReactElement;
+  separator?: React.ReactElement;
   /**
    * If `true`, the children will be wrapped in a `Box` with
    * `display: inline-block`, and the `Box` will take the spacing props
@@ -36,8 +37,9 @@ type StackOptions = {
   containChildren?: boolean;
   /**
    * If `true` the items will be stacked horizontally.
+   * This is a shortcut to `direction="row"` and will override `direction` prop
    */
   inline?: boolean;
 };
 
-export type { StackOptions, StackOrientation };
+export type { StackDirection, StackOptions };

@@ -30,7 +30,11 @@ type RealSystemElementProps<T extends As = any> =
 
 type RealSystemCustomProps<P = Dict> = {
   /**
-   * Override styles with sx
+   * Lowest-priority styles. Use to set baseline styles. Also useful for media queries
+   */
+  __css?: StyleObjectOrFn<P>;
+  /**
+   * Highest-priority styles. Use `sx` to override styles
    */
   sx?: StyleObjectOrFn<P>;
   /**

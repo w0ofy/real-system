@@ -3,6 +3,7 @@ import type { StylePropScaleNames } from '../../system/config/_types';
 import { borders, colors, filters, shadows } from './tokens.dynamic';
 import {
   borderWidths,
+  breakpoints,
   fonts,
   fontSizes,
   fontWeights,
@@ -45,6 +46,7 @@ export type ShadowTokens = keyof ReturnType<typeof shadows>;
 
 // static tokens
 export type BorderWidthTokens = keyof typeof borderWidths;
+export type BreakpointTokens = keyof typeof breakpoints;
 export type FontTokens = keyof typeof fonts;
 export type FontSizeTokens = keyof typeof fontSizes;
 export type FontWeightTokens = keyof typeof fontWeights;
@@ -58,6 +60,7 @@ export type ZIndexTokens = keyof typeof zIndices;
 // all token typings
 export type ThemeTokens =
   | BorderWidthTokens
+  | BreakpointTokens
   | FontTokens
   | FontSizeTokens
   | FontWeightTokens

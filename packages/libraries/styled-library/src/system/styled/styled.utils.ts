@@ -14,6 +14,7 @@ const { width, height, ...restStyleProps } = STYLISH_PROPS_MAP;
 const PROPS_TO_BLOCK = {
   as: true,
   sx: true,
+  __css: true,
   ...restStyleProps,
 };
 

@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box-primitive';
 import { Separator } from '@real-system/separator';
-import { Stack, StackDivider } from '@real-system/stack';
+import { Stack, StackSeparator } from '@real-system/stack';
 import { Heading, Text } from '@real-system/typography';
 
 export default {
@@ -11,7 +11,7 @@ export default {
   component: Stack,
 } as Meta;
 
-export const Vertical = () => (
+export const Default = () => (
   <Stack spacing={4}>
     <span>
       <Text>ooooooo</Text>
@@ -25,38 +25,36 @@ export const Vertical = () => (
   </Stack>
 );
 
-export const WithCustomDivider = () => (
-  <div>
-    <Stack spacing="12px">
-      <Box>
-        <Text>1</Text>
-      </Box>
-      <Box>
-        <Text>2</Text>
-      </Box>
-      <Box>
-        <Text>3</Text>
-      </Box>
-    </Stack>
+export const VerticalStack = () => (
+  <Stack.Vertical spacing={4}>
+    <span>
+      <Text>ooooooo</Text>
+    </span>
+    <span>
+      <Text>ahhhhh</Text>
+    </span>
+    <span>
+      <Text>Woah!</Text>
+    </span>
+  </Stack.Vertical>
+);
 
-    <Stack
-      spacing="40px"
-      divider={<Separator sx={{ borderColor: 'red-200' }} />}>
-      <Box>
-        <Text>1</Text>
-      </Box>
-      <Box>
-        <Text>2</Text>
-      </Box>
-      <Box>
-        <Text>3</Text>
-      </Box>
-    </Stack>
-  </div>
+export const HorizontalStack = () => (
+  <Stack.Horizontal spacing={4}>
+    <span>
+      <Text>ooooooo</Text>
+    </span>
+    <span>
+      <Text>ahhhhh</Text>
+    </span>
+    <span>
+      <Text>Woah!</Text>
+    </span>
+  </Stack.Horizontal>
 );
 
 export const Inline = () => (
-  <Stack w="100%" bgColor="blue-500" orientation="row">
+  <Stack w="100%" bgColor="blue-500" inline>
     <Box size="40px" bgColor="white" borderRadius="xl" />
     <Box size="40px" bgColor="white" borderRadius="xl" />
     <Box size="40px" bgColor="white" borderRadius="xl" />
@@ -64,7 +62,7 @@ export const Inline = () => (
 );
 
 export const Contained = () => (
-  <Stack w="100%" bgColor="blue-500" orientation="row">
+  <Stack w="100%" bgColor="blue-500" inline>
     <Box size="40px" bgColor="white" borderRadius="xl" />
     <Box size="40px" bgColor="white" borderRadius="xl" />
     <Box size="40px" bgColor="white" borderRadius="xl" />
@@ -72,24 +70,35 @@ export const Contained = () => (
 );
 
 export const Responsive = () => (
-  <Stack orientation={['column', 'row']} spacing="40px" w="100%">
-    <div>
+  <Stack direction={['column', 'row', 'row']} spacing="40px" w="100%">
+    <Stack.Item>
       <Text>1</Text>
-    </div>
-    <div>
+    </Stack.Item>
+    <Stack.Item>
       <Text>2</Text>
-    </div>
-    <div>
+    </Stack.Item>
+    <Stack.Item>
       <Text>3</Text>
-    </div>
+    </Stack.Item>
   </Stack>
 );
 
-export const WithResponsiveDivider = () => (
+export const ResponsiveSpacingAndDirection = () => (
+  <Stack
+    spacing={['10px', '60px']}
+    separator={<StackSeparator borderColor="gray-200" />}
+    direction={['column', 'row']}>
+    <Box bgColor="red-500">First</Box>
+    <Box bgColor="blue-500">Second</Box>
+    <Box bgColor="yellow-500">Third</Box>
+  </Stack>
+);
+
+export const ResponseWithSeparator = () => (
   <Stack
     mt={10}
-    orientation={['column', 'row']}
-    divider={<StackDivider borderColor="green-500" />}
+    direction={['column', 'row']}
+    separator={<StackSeparator borderColor="gray-200" />}
     spacing={4}>
     <Box flex="1" w={['100%', '40px']} h="40px" bgColor="yellow-200">
       <Text>1</Text>
@@ -101,34 +110,6 @@ export const WithResponsiveDivider = () => (
       <Text>3</Text>
     </Box>
   </Stack>
-);
-
-export const WithDivider = () => (
-  <>
-    <Stack divider={<StackDivider />} spacing={4}>
-      <Box size="40px" bgColor="yellow-200">
-        <Text>1</Text>
-      </Box>
-      <Box size="40px" bgColor="tomato">
-        <Text>2</Text>
-      </Box>
-      <Box size="40px" bgColor="pink-100">
-        <Text>3</Text>
-      </Box>
-    </Stack>
-
-    <Stack mt={10} orientation="row" divider={<StackDivider />} spacing={4}>
-      <Box size="40px" bgColor="yellow-200">
-        <Text>1</Text>
-      </Box>
-      <Box size="40px" bgColor="tomato">
-        <Text>2</Text>
-      </Box>
-      <Box size="40px" bgColor="pink-100">
-        <Text>3</Text>
-      </Box>
-    </Stack>
-  </>
 );
 
 function Feature({ title, children, ...rest }: any) {
@@ -149,7 +130,7 @@ function Feature({ title, children, ...rest }: any) {
 }
 
 export const WithContent = () => (
-  <Stack orientation="row" spacing={8}>
+  <Stack direction="row" spacing={8}>
     <Feature title="Estimate effort">
       Over-estimate and under-promise so you can always over-deliver.
     </Feature>
@@ -160,37 +141,15 @@ export const WithContent = () => (
   </Stack>
 );
 
-export const WrappingChildren = () => (
-  <Stack shouldWrapChildren>
-    <Box>foo</Box>
-    <Box>bar</Box>
-    <Box>baz</Box>
-  </Stack>
-);
-
-export const WithResponsiveSpacingAndDirection = () => (
-  <Stack
-    spacing={['10px', '60px']}
-    divider={<StackDivider borderColor="gray-200" />}
-    orientation={['column', 'row']}>
-    <Box bgColor="red-500">First</Box>
-    <Box bgColor="blue-500">Second</Box>
-    <Box bgColor="yellow-500">Third</Box>
-  </Stack>
-);
-
-export const WithCustomBorderColor = () => (
-  <Stack
-    orientation={{ base: 'column', md: 'row' }}
-    divider={<StackDivider borderColor={{ base: 'gray-200', md: 'red-300' }} />}
-    spacing={4}>
-    <Box w="40px" flexShrink={0} h="40px" bgColor="yellow-200">
+export const WithCustomSeparator = () => (
+  <Stack spacing="40px" separator={<Separator borderColor="red-200" />}>
+    <Box>
       <Text>1</Text>
     </Box>
-    <Box w="40px" flexShrink={0} h="40px" bgColor="tomato">
+    <Box>
       <Text>2</Text>
     </Box>
-    <Box w="40px" flexShrink={0} h="40px" bgColor="pink-100">
+    <Box>
       <Text>3</Text>
     </Box>
   </Stack>

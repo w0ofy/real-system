@@ -3,13 +3,14 @@ import * as React from 'react';
 import { real } from '@real-system/elements-primitive';
 import { RealSystemComponentProps } from '@real-system/styled-library';
 
-type StackDividerProps = RealSystemComponentProps<'div'>;
+type StackSeparatorProps = RealSystemComponentProps<'div'>;
 
-const StackDivider = React.forwardRef<HTMLDivElement, StackDividerProps>(
-  function StackDivider(props) {
+const StackSeparator = React.forwardRef<HTMLDivElement, StackSeparatorProps>(
+  function StackSeparator(props) {
     return (
       <real.div
         borderWidth="0"
+        borderStyle="solid"
         alignSelf="stretch"
         borderColor="inherit"
         width="auto"
@@ -20,5 +21,5 @@ const StackDivider = React.forwardRef<HTMLDivElement, StackDividerProps>(
   }
 );
 
-export type { StackDividerProps };
-export { StackDivider };
+export type { StackSeparatorProps };
+export { StackSeparator };

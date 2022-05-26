@@ -4,10 +4,10 @@ import { real } from '@real-system/elements-primitive';
 import { RealSystemComponentProps } from '@real-system/styled-library';
 import { getValidChildren, makeTestId } from '@real-system/utils-library';
 
-import type { StackOptions, StackOrientation } from './Stack.types';
-import { getDividerStyles, getStackStyles, selector } from './Stack.utils';
-import { StackDivider } from './StackDivider';
+import type { StackDirection, StackOptions } from './Stack.types';
+import { getSeparatorStyles, getStackStyles, selector } from './Stack.utils';
 import { StackItem } from './StackItem';
+import { StackSeparator } from './StackSeparator';
 
 export type StackProps = Omit<
   RealSystemComponentProps<'div'>,
@@ -19,45 +19,45 @@ export interface StackComponent
   extends React.ForwardRefExoticComponent<StackProps> {
   Horizontal: typeof HorizontalStack;
   Vertical: typeof VerticalStack;
-  Divider: typeof StackDivider;
+  Separator: typeof StackSeparator;
   Item: typeof StackItem;
 }
 
 /**
  * `Stack`s help you easily create flexible and automatically distributed layouts.
  *
- * You can stack elements in a horizontal or vertical orientation, and apply a space and/or divider between each element.
+ * You can stack elements in a horizontal or vertical direction, and apply a space and/or separator between each element.
  */
 // @ts-expect-error Stack (component) properties iare defined on the fn object after this is defined
 const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
   function Stack(props, ref) {
     const {
       inline,
-      orientation: orientationProp,
+      direction: directionProp,
       align,
       justify,
       spacing = '0.5rem',
       wrap,
       children,
-      divider,
+      separator,
       containChildren,
       ...rest
     } = props;
 
-    const orientation = inline ? 'row' : orientationProp ?? 'column';
+    const direction = inline ? 'row' : directionProp ?? 'column';
 
     const styles = React.useMemo(
-      () => getStackStyles({ orientation, spacing }),
-      [orientation, spacing]
+      () => getStackStyles({ direction, spacing }),
+      [direction, spacing]
     );
 
-    const dividerStyle = React.useMemo(
-      () => getDividerStyles({ spacing, orientation }),
-      [spacing, orientation]
+    const separatorStyle = React.useMemo(
+      () => getSeparatorStyles({ spacing, direction }),
+      [spacing, direction]
     );
 
-    const hasDivider = !!divider;
-    const shouldUseChildren = !containChildren && !hasDivider;
+    const hasSeparator = !!separator;
+    const shouldUseChildren = !containChildren && !hasSeparator;
 
     const validChildren = getValidChildren(children);
 
@@ -70,22 +70,32 @@ const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
           const wrappedChild = <StackItem key={key}>{child}</StackItem>;
           const _child = containChildren ? wrappedChild : child;
 
-          if (!hasDivider) return _child;
+          if (!hasSeparator) return _child;
 
-          const clonedDivider = React.cloneElement(
-            divider as React.ReactElement<any>,
-            { sx: { ...(divider?.props?.sx || {}), ...dividerStyle } }
+          const clonedSeparator = React.cloneElement(
+            separator as React.ReactElement<any>,
+            { __css: { ...(separator?.props?.sx || {}), ...separatorStyle } }
           );
 
-          const _divider = isLast ? null : clonedDivider;
+          const _separator = isLast ? null : clonedSeparator;
 
           return (
             <React.Fragment key={key}>
               {_child}
-              {_divider}
+              {_separator}
             </React.Fragment>
           );
         });
+
+    const maybeHasSeparatorStyles = React.useMemo(
+      () =>
+        hasSeparator
+          ? {}
+          : {
+              [selector]: styles[selector],
+            },
+      [hasSeparator, styles]
+    );
 
     return (
       <real.div
@@ -93,9 +103,9 @@ const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
         display="flex"
         alignItems={align}
         justifyContent={justify}
-        flexDirection={styles.flexDirection}
         flexWrap={wrap}
-        sx={hasDivider ? {} : { [selector]: styles[selector] }}
+        flexDirection={styles.flexDirection}
+        __css={maybeHasSeparatorStyles}
         data-testid={makeTestId('stack')}
         {...rest}>
         {clones}
@@ -111,7 +121,7 @@ const HorizontalStack = React.forwardRef<HTMLDivElement, StackProps>(
         align="center"
         data-testid={makeTestId('horizontal-stack')}
         {...props}
-        orientation="row"
+        direction="row"
         ref={ref}
       />
     );
@@ -125,7 +135,7 @@ const VerticalStack = React.forwardRef<HTMLDivElement, StackProps>(
         align="center"
         data-testid={makeTestId('vertical-stack')}
         {...props}
-        orientation="column"
+        direction="column"
         ref={ref}
       />
     );
@@ -135,7 +145,7 @@ const VerticalStack = React.forwardRef<HTMLDivElement, StackProps>(
 Stack.Horizontal = HorizontalStack;
 Stack.Vertical = VerticalStack;
 Stack.Item = StackItem;
-Stack.Divider = StackDivider;
+Stack.Separator = StackSeparator;
 
-export type { StackOrientation };
+export type { StackDirection };
 export { Stack };

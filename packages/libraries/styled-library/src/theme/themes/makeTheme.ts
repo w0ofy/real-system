@@ -4,6 +4,7 @@ import { Palette, palettes } from '../palettes';
 import {
   borders,
   borderWidths,
+  breakpoints,
   colors,
   filters,
   fonts,
@@ -32,6 +33,7 @@ const makeTheme = (palette: Palette = palettes.realSystem) => {
     borders: makeTokenScale(borders(colorTokens)),
     shadows: makeTokenScale(shadows(colorTokens)),
     // scales that DON'T require color tokens
+    breakpoints: makeTokenScale(breakpoints),
     fonts: makeTokenScale(fonts),
     fontSizes: makeTokenScale(fontSizes),
     fontWeights: makeTokenScale(fontWeights),

@@ -1,7 +1,7 @@
 import { ResponsiveValue, StylishProps } from '@real-system/styled-library';
 import { mapResponsive } from '@real-system/utils-library';
 
-export type StackOrientation = ResponsiveValue<
+export type StackDirection = ResponsiveValue<
   'row' | 'column' | 'row-reverse' | 'column-reverse'
 >;
 
@@ -9,13 +9,13 @@ export const selector = '& > *:not(style) ~ *:not(style)';
 
 interface Options {
   spacing: StylishProps['margin'];
-  orientation: StackOrientation;
+  direction: StackDirection;
 }
 
 export function getStackStyles(options: Options) {
-  const { spacing, orientation } = options;
+  const { spacing, direction } = options;
 
-  const orientationStyles = {
+  const directionStyles = {
     column: {
       marginTop: spacing,
       marginEnd: 0,
@@ -43,18 +43,18 @@ export function getStackStyles(options: Options) {
   };
 
   return {
-    flexDirection: orientation,
+    flexDirection: direction,
     [selector]: mapResponsive(
-      orientation,
-      (value: keyof typeof orientationStyles) => orientationStyles[value]
+      direction,
+      (value: keyof typeof directionStyles) => directionStyles[value]
     ),
   };
 }
 
-export function getDividerStyles(options: Options) {
-  const { spacing, orientation } = options;
+export function getSeparatorStyles(options: Options) {
+  const { spacing, direction } = options;
 
-  const dividerStyles = {
+  const separatorStyles = {
     column: {
       my: spacing,
       mx: 0,
@@ -83,8 +83,8 @@ export function getDividerStyles(options: Options) {
 
   return {
     '&': mapResponsive(
-      orientation,
-      (value: keyof typeof dividerStyles) => dividerStyles[value]
+      direction,
+      (value: keyof typeof separatorStyles) => separatorStyles[value]
     ),
   };
 }

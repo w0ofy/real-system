@@ -20,6 +20,7 @@ import {
 } from './styled.utils';
 
 type StyleResolverProps = CSSObject & {
+  __css?: StyleObjectOrFn;
   sx?: StyleObjectOrFn;
   theme: ThemeShape;
 };
@@ -34,7 +35,7 @@ type ToCSSObject = (
  * Style resolver function that manages how style props are merged
  * in combination with other possible ways of defining styles.
  *
- * For example, take a component defined this way:
+ * For example:
  * ```jsx
  * <Box fontSize="24px" sx={{ fontSize: "40px" }}></Box>
  * ```
@@ -43,22 +44,25 @@ type ToCSSObject = (
  * behaviors. Right now, the `sx` prop has the highest priority so the resolved
  * fontSize will be `40px`
  */
-const toCSSObject: ToCSSObject = (styledStyles, baseStyles) => (props) => {
-  const { sx = {}, ...rest } = props;
+const toCSSObject: ToCSSObject =
+  (styledStyles = {}, baseStyles = {}) =>
+  (props) => {
+    const { sx = {}, __css = {}, ...rest } = props;
 
-  const finalBaseStyles = runIfFn(baseStyles, props);
-  const finalStyledStyles = runIfFn(styledStyles, props);
-  const finalStyleProps = objectFilter(rest, isStylishProp);
+    const finalBaseStyles = runIfFn(baseStyles, props);
+    const finalStyledStyles = runIfFn(styledStyles, props);
+    const finalStyleProps = objectFilter(rest, isStylishProp);
 
-  const finalStyles = {
-    ...finalBaseStyles,
-    ...finalStyledStyles,
-    ...filterUndefined(finalStyleProps),
-    ...sx,
+    const finalStyles = {
+      ...__css,
+      ...finalBaseStyles,
+      ...finalStyledStyles,
+      ...filterUndefined(finalStyleProps),
+      ...sx,
+    };
+
+    return css(finalStyles)(props);
   };
-
-  return css(finalStyles)(props);
-};
 
 type RealSystemStyledOptions = {
   label?: string;
