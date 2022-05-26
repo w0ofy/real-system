@@ -1,5 +1,12 @@
 # @real-system/tooltip-primitive
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`2df59b2`](https://github.com/bigwoof91/real-system/commit/2df59b2c89cc8f0d37065cd1115d1bef99b77aef)]:
+  - @real-system/ariakit-library@0.0.10
+
 ## 0.0.4
 
 ### Patch Changes

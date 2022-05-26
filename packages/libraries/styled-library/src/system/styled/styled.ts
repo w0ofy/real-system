@@ -49,12 +49,13 @@ const toCSSObject: ToCSSObject =
   (props) => {
     const { sx = {}, __css = {}, ...rest } = props;
 
+    const finalCSS = runIfFn(__css, props);
     const finalBaseStyles = runIfFn(baseStyles, props);
     const finalStyledStyles = runIfFn(styledStyles, props);
     const finalStyleProps = objectFilter(rest, isStylishProp);
 
     const finalStyles = {
-      ...__css,
+      ...finalCSS,
       ...finalBaseStyles,
       ...finalStyledStyles,
       ...filterUndefined(finalStyleProps),

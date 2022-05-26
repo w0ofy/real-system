@@ -1,7 +1,10 @@
 import * as React from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import { RealSystemComponentProps } from '@real-system/styled-library';
+import type {
+  CSSObject,
+  RealSystemComponentProps,
+} from '@real-system/styled-library';
 import { getValidChildren, makeTestId } from '@real-system/utils-library';
 
 import type { StackDirection, StackOptions } from './Stack.types';
@@ -95,7 +98,7 @@ const Stack: StackComponent = React.forwardRef<HTMLDivElement, StackProps>(
               [selector]: styles[selector],
             },
       [hasSeparator, styles]
-    );
+    ) as CSSObject;
 
     return (
       <real.div
