@@ -1,3 +1,3 @@
 export * from './Stack';
-export * from './StackDivider';
 export * from './StackItem';
+export * from './StackSeparator';

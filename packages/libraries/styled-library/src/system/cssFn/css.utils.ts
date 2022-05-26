@@ -1,3 +1,9 @@
+import {
+  isObject,
+  isUndefinedOrNull,
+  runIfFn,
+} from '@real-system/utils-library';
+
 import { styleProps } from '../config';
 
 const cssGet = (obj, key, fallback?: any) => {
@@ -8,7 +14,7 @@ const cssGet = (obj, key, fallback?: any) => {
   return obj === undefined ? fallback : obj;
 };
 
-const defaultBreakpoints = [40, 52, 64].map((n) => n + 'em');
+const defaultBreakpoints = ['30em', '48em', '62em', '80em', '96em'];
 
 const PROPS = Object.keys(styleProps);
 
@@ -30,7 +36,6 @@ const aliases = PROPS.reduce((props, prop) => {
       prop,
     };
   }
-  console.log(prop);
   // else, just return the accumulator
   return {
     ...props,
@@ -73,7 +78,7 @@ const positiveOrNegative = (scale, value) => {
 };
 
 /** A map like `{ [styleProp]: transformFn }`
- * with the CSS properties thast should be transformable to negative values i.e. `marginLeft={-50}`
+ * with the CSS properties thast should be transformable to negative/destructive token values i.e. `marginLeft={-50}`
  * */
 const transforms = [
   'margin',
@@ -81,11 +86,7 @@ const transforms = [
   'marginRight',
   'marginBottom',
   'marginLeft',
-  'marginX',
-  'marginY',
   'm',
-  'mx',
-  'my',
   'mt',
   'mr',
   'mb',
@@ -104,29 +105,39 @@ const transforms = [
 
 const responsive = (styles) => (theme) => {
   const next = {};
-  const breakpoints = cssGet(theme, 'breakpoints', defaultBreakpoints);
+  let breakpoints = cssGet(theme, 'breakpoints', defaultBreakpoints);
+  if (isObject(breakpoints)) {
+    breakpoints = Object.values(breakpoints);
+  }
   const mediaQueries = [
+    // `null` allows the first value to be the default top-level css (outside of a media query). could use max-width, but... no need
     null,
+    // the rest a min-widths
     ...breakpoints.map((n) => `@media screen and (min-width: ${n})`),
   ];
 
   for (const key in styles) {
-    const value =
-      typeof styles[key] === 'function' ? styles[key](theme) : styles[key];
+    const value = runIfFn(styles[key], theme);
 
-    if (value == null) continue;
+    // if value is 'undefined' or 'null', continue
+    if (isUndefinedOrNull(value)) continue;
+
     if (!Array.isArray(value)) {
       next[key] = value;
       continue;
     }
-    for (let i = 0; i < value.slice(0, mediaQueries.length).length; i++) {
-      const media = mediaQueries[i];
+
+    // constrain the values-array to the breakpoints-array length
+    const queries = value.slice(0, mediaQueries.length).length;
+
+    for (let i = 0; i < queries; i++) {
+      const media = mediaQueries?.[i];
       if (!media) {
         next[key] = value[i];
         continue;
       }
       next[media] = next[media] || {};
-      if (value[i] == null) continue;
+      if (isUndefinedOrNull(value[i])) continue;
       next[media][key] = value[i];
     }
   }

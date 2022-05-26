@@ -10,9 +10,9 @@
 # install peer dependencies
 
 # npm
-$ npm install react react-dom @real-system/styled-library @real-system/utils-library
+$ npm install react react-dom @real-system/elements-primitive @real-system/styled-library @real-system/utils-library
 # yarn
-$ yarn add react react-dom @real-system/styled-library @real-system/utils-library
+$ yarn add react react-dom @real-system/elements-primitive @real-system/styled-library @real-system/utils-library
 
 # install stack
 
@@ -24,9 +24,31 @@ $ yarn add @real-system/stack
 
 ### Code Example
 
-```typescript
-import { Stack } from '@real-system/stack';
+```jsx
+import { Stack, StackItem, StackSeparator } from '@real-system/stack';
+import { Separator } from '@real-system/separator'; // <-- `yarn add @real-system/separator`
 
-...
+const MyComponent = () => {
+  return (
+    <>
+      Vertical Stack Approaches
+      <Stack separator={<StackSeparator />}>
+        <Stack.Item>Vertical<Stack.Item>
+        <StackItem>Stack<StackItem>
+      </Stack>
+      Will align-center that stack items
+      <Stack.Vertical>...</Stack.Vertical>
+
+      Horizontal Stack Approaches
+      <Stack inline>Horizontal Stack</Stack>
+      <Stack direction="row">...</Stack>
+      <Stack.Horizontal>...</Stack.Horizontal>
+
+      Custom Separator
+      Will align-center that stack items
+      <Stack separator={<Separator borderColor="red-200" />}>Custom Separator</Stack>
+    </>
+  )
+}
 
 ```

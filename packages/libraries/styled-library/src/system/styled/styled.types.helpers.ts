@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as CSS from 'csstype';
 
+import type { Dict } from '@real-system/utils-library';
+
 import type { ResponsiveValue } from '../config/_types';
 import type { PseudoPropNames, StyleProps } from '../props';
-
 /**
  * CSSObject helpers
  */
@@ -20,7 +21,7 @@ type CSSPropertiesWithoutColor = Omit<CSS.Properties, 'color'>;
 type CSSProperties = CSSPropertiesWithoutColor &
   Omit<StyleProps, keyof CSSPropertiesWithoutColor>;
 
-type ThemeThunk<T> = T | ((theme: StyledDict) => T);
+type ThemeThunk<T> = T | ((theme: Dict) => T);
 
 type PropertyValue<K extends keyof CSSProperties> = ThemeThunk<
   ResponsiveValue<boolean | number | string | CSSProperties[K]>
@@ -47,24 +48,21 @@ type OmitCommonProps<
 > = Omit<Target, 'transition' | 'as' | 'color' | OmitAdditionalProps>;
 
 type RightJoinProps<
-  SourceProps extends StyledDict = StyledDict,
-  OverrideProps extends StyledDict = StyledDict
+  SourceProps extends Dict = Dict,
+  OverrideProps extends Dict = Dict
 > = OmitCommonProps<SourceProps, keyof OverrideProps> & OverrideProps;
 
 type MergeWithAs<
-  ComponentProps extends StyledDict,
-  AsProps extends StyledDict,
-  AdditionalProps extends StyledDict = StyledDict,
+  ComponentProps extends Dict,
+  AsProps extends Dict,
+  AdditionalProps extends Dict = Dict,
   AsComponent extends As = As
 > = RightJoinProps<ComponentProps, AdditionalProps> &
   RightJoinProps<AsProps, AdditionalProps> & {
     as?: AsComponent;
   };
 
-type ComponentWithAs<
-  Component extends As,
-  Props extends StyledDict = StyledDict
-> = {
+type ComponentWithAs<Component extends As, Props extends Dict = Dict> = {
   <AsComponent extends As = Component>(
     props: MergeWithAs<
       React.ComponentProps<Component>,
@@ -81,9 +79,7 @@ type ComponentWithAs<
   id?: string;
 };
 
-type StyledDict<T = any> = Record<PropertyKey, T>;
-
-type RenderProp<P = StyledDict> = (props: P) => React.ReactNode;
+type RenderProp<P = Dict> = (props: P) => React.ReactNode;
 
 type StyledChildren<T = any> =
   | React.ReactNode
@@ -95,10 +91,10 @@ export type {
   As,
   ComponentWithAs,
   CSSWithMultiValues,
+  Dict,
   PropsOf,
   RecursiveCSSObject,
   RecursiveCSSSelector,
   RecursivePseudo,
-  StyledDict,
   StyledPropsWithChildren,
 };

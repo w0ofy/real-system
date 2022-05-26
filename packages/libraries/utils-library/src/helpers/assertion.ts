@@ -39,6 +39,10 @@ function isUndefined(value: any): value is undefined {
   return typeof value === 'undefined' || value === undefined;
 }
 
+function isUndefinedOrNull(value: any): value is null | undefined {
+  return isUndefined(value) || value == null;
+}
+
 // Object assertions
 function isObject(value: any): value is Dict {
   const type = typeof value;
@@ -103,4 +107,5 @@ export {
   isRefObject,
   isString,
   isUndefined,
+  isUndefinedOrNull,
 };

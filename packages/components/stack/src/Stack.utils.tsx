@@ -22,7 +22,12 @@ export function getStackStyles(options: Options) {
       marginBottom: 0,
       marginStart: 0,
     },
-    row: { marginTop: 0, marginEnd: 0, marginBottom: 0, marginStart: spacing },
+    row: {
+      marginTop: 0,
+      marginEnd: 0,
+      marginBottom: 0,
+      marginStart: spacing,
+    },
     'column-reverse': {
       marginTop: 0,
       marginEnd: 0,
@@ -46,10 +51,10 @@ export function getStackStyles(options: Options) {
   };
 }
 
-export function getDividerStyles(options: Options) {
+export function getSeparatorStyles(options: Options) {
   const { spacing, direction } = options;
 
-  const dividerStyles = {
+  const separatorStyles = {
     column: {
       my: spacing,
       mx: 0,
@@ -79,7 +84,7 @@ export function getDividerStyles(options: Options) {
   return {
     '&': mapResponsive(
       direction,
-      (value: keyof typeof dividerStyles) => dividerStyles[value]
+      (value: keyof typeof separatorStyles) => separatorStyles[value]
     ),
   };
 }

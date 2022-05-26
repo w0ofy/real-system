@@ -1,9 +1,9 @@
 import emotionValid from '@emotion/is-prop-valid';
 import memoize from '@emotion/memoize';
 
-import { STYLISH_PROPS_MAP } from '../props';
+import type { Dict } from '@real-system/utils-library';
 
-import { StyledDict } from './styled.types.helpers';
+import { STYLISH_PROPS_MAP } from '../props';
 
 const dataAttr = 'data-';
 const ariaAttr = 'aria-';
@@ -14,6 +14,7 @@ const { width, height, ...restStyleProps } = STYLISH_PROPS_MAP;
 const PROPS_TO_BLOCK = {
   as: true,
   sx: true,
+  __css: true,
   ...restStyleProps,
 };
 
@@ -53,8 +54,8 @@ type FilterFn<T> = (key: string) => boolean;
  * @param object the object to loop through
  * @param fn The filter function
  */
-const objectFilter = <T extends StyledDict>(object: T, fn: FilterFn<T>) => {
-  const result: StyledDict = {};
+const objectFilter = <T extends Dict>(object: T, fn: FilterFn<T>) => {
+  const result: Dict = {};
 
   Object.keys(object).forEach((key) => {
     const value = object[key];
@@ -67,5 +68,8 @@ const objectFilter = <T extends StyledDict>(object: T, fn: FilterFn<T>) => {
   return result;
 };
 
+const filterUndefined = (object: Dict) =>
+  objectFilter(object, (val) => val !== null && val !== undefined);
+
 export type { ShouldForwardProp };
-export { objectFilter, shouldForwardProp };
+export { filterUndefined, objectFilter, shouldForwardProp };

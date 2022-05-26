@@ -56,6 +56,7 @@
     "@real-system/separator": "^0.0.8",
     "@real-system/separator-primitive": "^0.0.4",
     "@real-system/spinner": "^0.0.38",
+    "@real-system/stack": "^0.0.0",
     "@real-system/state-library": "^0.0.10",
     "@real-system/styled-library": "^0.0.2",
     "@real-system/textarea": "^0.0.23",
