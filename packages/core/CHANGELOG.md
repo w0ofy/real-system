@@ -1,5 +1,50 @@
 # @real-system/core
 
+## 0.0.44
+
+### Patch Changes
+
+- [`be9259a`](https://github.com/bigwoof91/real-system/commit/be9259a4f8f5715680bfd3e6917906be17bf2b3e) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Removed styled-system and added Stack component API
+
+- Updated dependencies [[`be9259a`](https://github.com/bigwoof91/real-system/commit/be9259a4f8f5715680bfd3e6917906be17bf2b3e), [`2df59b2`](https://github.com/bigwoof91/real-system/commit/2df59b2c89cc8f0d37065cd1115d1bef99b77aef), [`69b881a`](https://github.com/bigwoof91/real-system/commit/69b881a3556c7353fbc1fdf2586767e5fe0a8801)]:
+  - @real-system/stack@0.0.1
+  - @real-system/typography@0.0.41
+  - @real-system/styled-library@0.0.3
+  - @real-system/utils-library@0.0.20
+  - @real-system/ariakit-library@0.0.10
+  - @real-system/elements-primitive@0.0.5
+  - @real-system/alert@0.0.26
+  - @real-system/checkbox@0.0.27
+  - @real-system/dialog@0.0.34
+  - @real-system/field@0.0.19
+  - @real-system/input@0.0.40
+  - @real-system/popover@0.0.17
+  - @real-system/radio-group@0.0.20
+  - @real-system/tooltip@0.0.18
+  - @real-system/aspect-ratio@0.0.13
+  - @real-system/badge@0.0.11
+  - @real-system/button@0.0.42
+  - @real-system/flex@0.0.34
+  - @real-system/icon@0.0.41
+  - @real-system/link@0.0.12
+  - @real-system/menu@0.0.13
+  - @real-system/pin-input@0.0.6
+  - @real-system/select@0.0.8
+  - @real-system/separator@0.0.9
+  - @real-system/spinner@0.0.39
+  - @real-system/textarea@0.0.24
+  - @real-system/toaster@0.0.25
+  - @real-system/truncate@0.0.19
+  - @real-system/visually-hidden@0.0.37
+  - @real-system/box-primitive@0.0.24
+  - @real-system/descendants-library@0.0.3
+  - @real-system/button-primitive@0.0.31
+  - @real-system/menu-primitive@0.0.5
+  - @real-system/popover-primitive@0.0.5
+  - @real-system/select-primitive@0.0.5
+  - @real-system/separator-primitive@0.0.5
+  - @real-system/tooltip-primitive@0.0.5
+
 ## 0.0.43
 
 ### Patch Changes
