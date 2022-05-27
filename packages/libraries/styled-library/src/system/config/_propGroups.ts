@@ -33,17 +33,17 @@ const TransformProps = mapProps(transformProps);
 const TypographyProps = mapProps(typographyProps);
 
 const STYLE_PROP_GROUPS = {
-  AnimationProps,
-  BackgroundProps,
-  BorderProps,
-  ColorProps,
-  EffectProps,
-  InteractivityProps,
-  LayoutProps,
-  MiscellaneousProps,
-  SpaceProps,
-  TransformProps,
-  TypographyProps,
+  spaceProps: SpaceProps,
+  animationProps: AnimationProps,
+  backgroundProps: BackgroundProps,
+  borderProps: BorderProps,
+  colorProps: ColorProps,
+  effectProps: EffectProps,
+  interactivityProps: InteractivityProps,
+  layoutProps: LayoutProps,
+  miscellaneousProps: MiscellaneousProps,
+  transformProps: TransformProps,
+  typographyProps: TypographyProps,
 };
 
 type StylePropGroupNames = keyof typeof STYLE_PROP_GROUPS;

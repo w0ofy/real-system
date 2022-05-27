@@ -52,7 +52,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
         size="md"
         solid
         icon={ICON_MAP[status]}
-        textColor={iconColor}
+        color={iconColor}
         marginRight={5}
         title={`${status} ${children ? ': ' + children : ''}`}
       />

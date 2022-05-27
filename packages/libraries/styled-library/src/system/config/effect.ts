@@ -12,7 +12,13 @@ const effectProps: StylePropConfig<EffectProps> = {
 };
 
 type EffectProps = {
+  /**
+   * The CSS `boxShadow` property
+   */
   boxShadow?: Token<CSS.BoxShadow, 'shadows'>;
+  /**
+   * The CSS `opacity` property
+   */
   opacity?: Token<CSS.Opacity>;
 };
 

@@ -4,7 +4,6 @@ import { STYLE_PROP_SCALES } from './_constants';
 import type { StylePropConfig, Token } from './_types';
 
 const miscellaneousProps: StylePropConfig<MiscellaneousProps> = {
-  clip: true,
   // SVGs
   stroke: {
     property: 'stroke',
@@ -31,10 +30,12 @@ const miscellaneousProps: StylePropConfig<MiscellaneousProps> = {
   listStyleImage: true,
   fillOpacity: true,
   fillRule: true,
+  // img
+  objectFit: true,
+  objectPosition: true,
 };
 
 type MiscellaneousProps = {
-  clip?: Token<CSS.Clip>;
   // SVGs
   stroke?: Token<CSS.Stroke, 'colors'>;
   strokeDasharray?: Token<CSS.StrokeDasharray>;
@@ -52,6 +53,9 @@ type MiscellaneousProps = {
   listStyleImage?: Token<CSS.ListStyleImage>;
   fillOpacity?: Token<CSS.FillOpacity>;
   fillRule?: Token<CSS.FillRule>;
+  // img
+  objectFit?: Token<CSS.ObjectFit>;
+  objectPosition?: Token<CSS.ObjectPosition>;
 };
 
 export type { MiscellaneousProps };

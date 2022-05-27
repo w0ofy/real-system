@@ -56,8 +56,6 @@ type ResponsiveArray<T> = Array<T | null>;
 type ResponsiveObject<T> = Partial<Record<string, T>>;
 type ResponsiveValue<T> = T | ResponsiveArray<T> | ResponsiveObject<T>;
 
-type Length = string | 0 | (number & {});
-
 type Union<T> = T | (string & {});
 
 type Token<
@@ -68,7 +66,6 @@ type Token<
   : ResponsiveValue<CSSType>;
 
 export type {
-  Length,
   ResponsiveValue,
   StylePropConfig,
   StylePropScaleNames,
