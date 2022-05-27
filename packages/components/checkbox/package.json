@@ -49,9 +49,9 @@
     "@real-system/typography": "^0.0.41",
     "@real-system/utils-library": "^0.0.20",
     "@real-system/visually-hidden": "^0.0.37",
-    "concurrently": "^7.2.0",
+    "concurrently": "^7.2.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "typescript": "4.6.4"
+    "typescript": "4.7.2"
   }
 }

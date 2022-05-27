@@ -32,8 +32,8 @@
     "react": "^18.1.0"
   },
   "devDependencies": {
-    "concurrently": "^7.2.0",
-    "typescript": "4.6.4"
+    "concurrently": "^7.2.1",
+    "typescript": "4.7.2"
   },
   "dependencies": {
     "constate": "^3.3.2"

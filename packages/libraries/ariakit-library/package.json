@@ -34,12 +34,12 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "concurrently": "^7.2.0",
+    "concurrently": "^7.2.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "typescript": "4.6.4"
+    "typescript": "4.7.2"
   },
   "dependencies": {
-    "ariakit": "2.0.0-next.27"
+    "ariakit": "2.0.0-next.28"
   }
 }

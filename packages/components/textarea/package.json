@@ -40,10 +40,10 @@
     "@real-system/input": "^0.0.40",
     "@real-system/styled-library": "^0.0.3",
     "@real-system/utils-library": "^0.0.20",
-    "concurrently": "^7.2.0",
+    "concurrently": "^7.2.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "typescript": "4.6.4"
+    "typescript": "4.7.2"
   },
   "dependencies": {
     "react-autosize-textarea": "^7.1.0"
