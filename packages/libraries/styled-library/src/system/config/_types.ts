@@ -48,6 +48,7 @@ type StylePropScales = {
   sizes: string | (number & {});
   space: string | (number & {});
   zIndices: string | (number & {});
+  breakpoints: string | (number & {});
 };
 
 type StylePropScaleNames = keyof StylePropScales;

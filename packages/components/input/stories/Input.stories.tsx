@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { Input as RealInput } from '@real-system/input';

@@ -24,7 +24,7 @@ const safelySpreadBoxStyleProps = (props) =>
   preventSpreadingStyleProps(props, propConfig);
 
 const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(
-  { children, dataTestid, ...props },
+  { children, 'data-testid': dataTestid, ...props },
   ref
 ) {
   return (
@@ -37,4 +37,4 @@ const Box = forwardRef<HTMLOrSVGElement, BoxProps>(function Box(
   );
 });
 
-export { Box };
+export { Box, safelySpreadBoxStyleProps };

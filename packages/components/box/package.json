@@ -1,7 +1,7 @@
 {
-  "name": "@real-system/box-primitive",
-  "version": "0.0.24",
-  "description": "A basic div with style props that should be used to build other components",
+  "name": "@real-system/box",
+  "version": "0.0.15",
+  "description": "A flexible div for building layouts in Real System.",
   "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
@@ -22,8 +22,7 @@
   "keywords": [
     "real-system",
     "box",
-    "box-primitive",
-    "primitive"
+    "layout"
   ],
   "author": "Mike Wolf",
   "license": "MIT",
@@ -36,9 +35,6 @@
     "@real-system/utils-library": "^0.0.20",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
-  },
-  "dependencies": {
-    "deepmerge": "^4.2.2"
   },
   "devDependencies": {
     "@real-system/styled-library": "^0.0.3",

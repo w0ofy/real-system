@@ -8,6 +8,7 @@ import type {
   LayoutProps,
   MiscellaneousProps,
   SpaceProps,
+  StylePropNames,
   /** all style types */
   StyleProps,
   /** style prop scale names */
@@ -16,8 +17,6 @@ import type {
   TypographyProps,
 } from '../config';
 import { styleProps } from '../config';
-
-type StylePropNames = keyof StyleProps;
 
 const STYLE_PROPS = Object.keys(styleProps) as StylePropNames[];
 

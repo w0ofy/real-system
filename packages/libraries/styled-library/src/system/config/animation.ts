@@ -27,35 +27,35 @@ type AnimationProps = {
    */
   animation?: Token<CSS.Animation>;
   /**
-   * The CSS `animationDelay` property
+   * The CSS `animation-delay` property
    */
   animationDelay?: Token<CSS.AnimationDelay>;
   /**
-   * The CSS `animationDirection` property
+   * The CSS `animation-direction` property
    */
   animationDirection?: Token<CSS.AnimationDirection>;
   /**
-   * The CSS `animationDuration` property
+   * The CSS `animation-durations` property
    */
   animationDuration?: Token<CSS.AnimationDuration>;
   /**
-   * The CSS `animationFillMode` property
+   * The CSS `animation-fill-mode` property
    */
   animationFillMode?: Token<CSS.AnimationFillMode>;
   /**
-   * The CSS `animationIterationCount` property
+   * The CSS `animation-iteration-count` property
    */
   animationIterationCount?: Token<CSS.AnimationIterationCount>;
   /**
-   * The CSS `animationName` property
+   * The CSS `animation-name` property
    */
   animationName?: Token<CSS.AnimationName>;
   /**
-   * The CSS `animationPlayState` property
+   * The CSS `animation-play-state` property
    */
   animationPlayState?: Token<CSS.AnimationPlayState>;
   /**
-   * The CSS `animationTimingFunction` property
+   * The CSS `animation-timing-function` property
    */
   animationTimingFunction?: Token<CSS.AnimationTimingFunction>;
   /**
@@ -70,7 +70,6 @@ type AnimationProps = {
    * The CSS `transition-duration` property
    */
   transitionDuration?: Token<string>;
-
   /**
    * The CSS `transition-property` property
    */
@@ -80,7 +79,7 @@ type AnimationProps = {
    */
   transitionTimingFunction?: Token<CSS.TransitionTimingFunction>;
   /**
-   * The CSS `userSelect` property
+   * The CSS `user-celect` property
    */
   userSelect?: Token<CSS.UserSelect>;
   /**

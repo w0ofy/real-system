@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { ColorItem, ColorPalette as CP } from '@storybook/addon-docs';
 import debounce from 'lodash.debounce';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { Icon } from '@real-system/icon';
 import { Input } from '@real-system/input';
 import { themes, ThemeScales } from '@real-system/styled-library';

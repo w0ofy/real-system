@@ -6,7 +6,7 @@
 import type { Dict, Obj } from '@real-system/utils-library';
 
 import type { ThemeScales } from '../../theme/tokens/types';
-import { pseudoProps } from '../props/pseudoProps';
+import { pseudoProps } from '../config';
 
 import {
   aliases,
@@ -20,6 +20,7 @@ import {
 const defaultTheme: Partial<Record<ThemeScales, (number | string)[] | Obj>> = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  breakpoints: ['30em', '48em', '62em', '80em', '96em'],
 };
 
 /**

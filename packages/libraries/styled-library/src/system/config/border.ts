@@ -101,11 +101,11 @@ type BorderProps = {
    */
   border?: Token<CSS.Border, 'borders'>;
   /**
-   * The CSS `borderTop` property
+   * The CSS `border-top` property
    */
   borderTop?: Token<CSS.BorderTop, 'borders'>;
   /**
-   * The CSS `borderRight` property
+   * The CSS `border-right` property
    */
   borderRight?: Token<CSS.BorderRight, 'borders'>;
   /**
@@ -113,96 +113,91 @@ type BorderProps = {
    */
   borderBottom?: Token<CSS.BorderBottom, 'borders'>;
   /**
-   * The CSS `borderLeft` property
+   * The CSS `border-left` property
    */
   borderLeft?: Token<CSS.BorderLeft, 'borders'>;
-
   /**
-   * The CSS `borderColor` property
+   * The CSS `border-color` property
    */
   borderColor?: Token<CSS.BorderColor, 'colors'>;
   /**
-   * The CSS `borderTopColor` property
+   * The CSS `border-top-color` property
    */
   borderTopColor?: Token<CSS.BorderTopColor, 'colors'>;
   /**
-   * The CSS `borderRightColor` property
+   * The CSS `border-right-color` property
    */
   borderRightColor?: Token<CSS.BorderRightColor, 'colors'>;
   /**
-   * The CSS `borderBottomColor` property
+   * The CSS `border-bottom-color` property
    */
   borderBottomColor?: Token<CSS.BorderBottomColor, 'colors'>;
   /**
-   * The CSS `borderLeftColor` property
+   * The CSS `border-left-color` property
    */
   borderLeftColor?: Token<CSS.BorderLeftColor, 'colors'>;
-
   /**
-   * The CSS `borderRadius` property
+   * The CSS `border-radius` property
    */
   borderRadius?: Token<CSS.BorderRadius, 'radii'>;
   /**
-   * The CSS `borderTopLeftRadius` property
+   * The CSS `border-top-left-radius` property
    */
   borderTopLeftRadius?: Token<CSS.BorderTopLeftRadius, 'radii'>;
   /**
-   * The CSS `borederTopRightRadius` property
+   * The CSS `border-top-right-radius` property
    */
   borderTopRightRadius?: Token<CSS.BorderTopRightRadius, 'radii'>;
   /**
-   * The CSS `borderBottomLeftRadius` property
+   * The CSS `border-bottom-left-radius` property
    */
   borderBottomLeftRadius?: Token<CSS.BorderBottomLeftRadius, 'radii'>;
   /**
-   * The CSS `borderBottomRightRadius` property
+   * The CSS `border-bottom-right-radius` property
    */
   borderBottomRightRadius?: Token<CSS.BorderBottomRightRadius, 'radii'>;
-
   /**
-   * The CSS `borderWidth` property
+   * The CSS `border-width` property
    */
   borderWidth?: Token<CSS.BorderWidth, 'borderWidths'>;
   /**
-   * The CSS `borderTopWidth` property
+   * The CSS `border-top-width` property
    */
   borderTopWidth?: Token<CSS.BorderTopWidth, 'borderWidths'>;
   /**
-   * The CSS `borderRightWidth` property
+   * The CSS `border-right-width` property
    */
   borderRightWidth?: Token<CSS.BorderRightWidth, 'borderWidths'>;
   /**
-   * The CSS `borderLeftWidth` property
+   * The CSS `border-left-width` property
    */
   borderLeftWidth?: Token<CSS.BorderLeftWidth, 'borderWidths'>;
   /**
-   * The CSS `borderBottomWidth` property
+   * The CSS `border-bottom-width` property
    */
   borderBottomWidth?: Token<CSS.BorderBottomWidth, 'borderWidths'>;
-
   /**
-   * The CSS `borderStyle` property
+   * The CSS `border-style` property
    */
   borderStyle?: Token<CSS.BorderStyle>;
   /**
-   * The CSS `borderRightStyle` property
+   * The CSS `border-right-style` property
    */
   borderRightStyle?: Token<CSS.BorderRightStyle>;
   /**
-   * The CSS `borderBottomStyle` property
+   * The CSS `border-bottom-style` property
    */
   borderBottomStyle?: Token<CSS.BorderBottomStyle>;
   /**
-   * The CSS `borderLeftStyle` property
+   * The CSS `border-left-style` property
    */
   borderLeftStyle?: Token<CSS.BorderLeftStyle>;
   /**
-   * The CSS `borderTopStyle` property
+   * The CSS `border-top-style` property
    */
   borderTopStyle?: Token<CSS.BorderTopStyle>;
-
   /**
-   * The CSS `borderSpacing` property
+   * The CSS `border-spacing` property
    */
   borderSpacing?: Token<CSS.BorderSpacing>;
 };

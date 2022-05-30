@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { Separator } from '@real-system/separator';
 import { Stack, StackSeparator } from '@real-system/stack';
 import { Heading, Text } from '@real-system/typography';

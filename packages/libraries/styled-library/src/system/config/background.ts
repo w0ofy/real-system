@@ -42,7 +42,7 @@ type BackgroundProps = {
    */
   bgImage?: Token<CSS.BackgroundImage, 'colors'>;
   /**
-   * The renamed shorthand for CSS `backgroundImage` property
+   * The shorthand for CSS `backgroundImage` property
    */
   bgGradient?: Token<CSS.BackgroundImage, 'colors'>;
   /**

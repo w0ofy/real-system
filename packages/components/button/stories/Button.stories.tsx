@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { Button, ButtonProps } from '@real-system/button';
 import { Icon, ICONS_LIST } from '@real-system/icon';
 import { Heading } from '@real-system/typography';
