@@ -9,8 +9,7 @@ import { usePinInputField } from './usePinInput';
 const StyledInput = styled('input')({
   appearance: 'none',
   display: 'block',
-  height: 16,
-  width: 16,
+  size: 'control',
   padding: 0,
   margin: 0,
   fontFamily: 'inherit',

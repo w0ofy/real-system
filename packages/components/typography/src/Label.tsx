@@ -44,7 +44,6 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
       display="block"
       padding={0}
       margin={0}
-      marginBottom={2}
       fontScale="label"
       fontWeight="label"
       color={dynamicStyles.color}

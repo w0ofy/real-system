@@ -280,16 +280,6 @@ export const FloatingButton = ({
   </Container>
 );
 
-export const IconButton = (args) => (
-  <Container>
-    <Row>
-      <Button {...args}>
-        <Icon icon={'cog'} />
-      </Button>
-    </Row>
-  </Container>
-);
-
 export const Sizes = (args) => (
   <Stack.Horizontal spacing={8}>
     <Button size="sm" variant="fill" colorScheme="blue">
@@ -302,6 +292,16 @@ export const Sizes = (args) => (
       Large
     </Button>
   </Stack.Horizontal>
+);
+
+export const IconButton = (args) => (
+  <Container>
+    <Row>
+      <Button {...args}>
+        <Icon icon={'cog'} />
+      </Button>
+    </Row>
+  </Container>
 );
 
 IconButton.argTypes = {

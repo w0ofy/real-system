@@ -38,11 +38,7 @@ const RadioGroup: RadioGroupComponent = forwardRef<
         {...labelProps}>
         {label}
       </Label>
-      {helpText && (
-        <HelpText marginTop={0} marginBottom={6}>
-          {helpText}
-        </HelpText>
-      )}
+      {helpText && <HelpText marginBottom={6}>{helpText}</HelpText>}
       <Flex vertical={orientation === 'vertical' ? true : false}>
         <RadioGroupContextProvider state={{ ...state, orientation, errorText }}>
           {children}
