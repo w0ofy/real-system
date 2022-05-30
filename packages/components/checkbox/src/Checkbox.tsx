@@ -26,13 +26,13 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
     mergedRef as React.RefObject<HTMLInputElement>
   );
 
-  const { errorText } = props;
+  const { errorText, helpText } = props;
   const disabled = props.disabled || props.readonly;
 
   return (
     <CheckboxWrapper
       disabled={disabled}
-      helpText={props.helpText}
+      helpText={helpText}
       errorText={errorText}
       {...interactionProps}>
       <VisuallyHidden as="div">

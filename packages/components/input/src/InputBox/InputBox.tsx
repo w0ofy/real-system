@@ -71,7 +71,7 @@ const styles: Record<InputBoxStates, StylishProps> = {
     cursor: 'default',
   }),
   readonly: merge(baseStyles, {
-    color: 'gray-300',
+    color: 'gray-400',
     bgColor: 'gray-50',
     borderColor: 'gray-200',
     _hover: { borderColor: 'gray-300' },

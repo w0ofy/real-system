@@ -45,7 +45,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
         return {
           ...maybeCanSelectAll,
           _notLast: { marginBottom: 5 },
-          _notFirst: { marginLeft: state.canSelectAll ? 10 : 4 },
+          _notFirst: { marginLeft: state.canSelectAll ? 11 : 4 },
         };
       }
       return {

@@ -28,10 +28,10 @@ const makeScaleUtil = (
   multiplier: number,
   { origin, format = 'rem', destructive }: MakeScaleUtilOptions
 ) => {
-  if (!Number.isInteger(size)) {
+  if (!Number.isInteger(size) && size % 1 > 0.5) {
     _logger.throw.type(
       `utils/${origin}`,
-      `${size} is not an integer. 'majorScale' only accepts integers as an argument.`
+      `${size} is not an integer or modulus of 0.5. '${origin}' only accepts integers as an argument.`
     );
   }
 

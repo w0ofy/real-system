@@ -8,12 +8,12 @@ import { useMenuStateContext } from './MenuContext';
 import type { CommonMenuProps } from './types';
 
 const StyledMenuList = styled('div')({
-  py: 3,
+  py: 4,
   zIndex: 'dropdown',
   backgroundColor: 'white',
   boxShadow: 'menu',
   borderRadius: 4,
-  width: '15rem',
+  width: 'auto',
   minWidth: '15rem',
   maxWidth: '22rem',
   outline: 'none',

@@ -14,7 +14,7 @@ const TextareaElement = styled(TextareaAutosize)<TextareaProps>({
   color: 'inherit',
   display: 'block',
   fontFamily: 'inherit',
-  fontSize: 1,
+  fontSize: 'input',
   fontWeight: 3,
   lineHeight: 1,
   maxHeight: majorScale(30),

@@ -45,9 +45,8 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
       padding={0}
       margin={0}
       marginBottom={2}
-      fontSize={1}
-      fontWeight={5}
-      lineHeight={1}
+      fontScale="label"
+      fontWeight="label"
       color={dynamicStyles.color}
       cursor={dynamicStyles.cursor}
       {...restProps}

@@ -5,6 +5,7 @@ import { Meta } from '@storybook/react';
 import { Box } from '@real-system/box';
 import { Button, ButtonProps } from '@real-system/button';
 import { Icon, ICONS_LIST } from '@real-system/icon';
+import { Stack } from '@real-system/stack';
 import { Heading } from '@real-system/typography';
 import { capitalize } from '@real-system/utils-library';
 
@@ -287,6 +288,20 @@ export const IconButton = (args) => (
       </Button>
     </Row>
   </Container>
+);
+
+export const Sizes = (args) => (
+  <Stack.Horizontal spacing={8}>
+    <Button size="sm" variant="fill" colorScheme="blue">
+      Small
+    </Button>
+    <Button size="md" variant="fill" colorScheme="blue">
+      Medium (default)
+    </Button>
+    <Button size="lg" variant="fill" colorScheme="blue">
+      Large
+    </Button>
+  </Stack.Horizontal>
 );
 
 IconButton.argTypes = {

@@ -45,7 +45,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         {props.label}
       </Label>
       {helpText && (
-        <HelpText marginTop={0} marginBottom={6}>
+        <HelpText marginTop={0} marginBottom={7}>
           {helpText}
         </HelpText>
       )}

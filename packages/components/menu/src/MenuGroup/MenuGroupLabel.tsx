@@ -11,10 +11,9 @@ const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
   return (
     <MenuGroupLabelPrimitive
       as={real.div}
-      fontSize={1}
-      fontWeight={5}
-      lineHeight={1}
-      letterSpacing="body"
+      fontScale="label"
+      fontWeight="bold"
+      letterSpacing="label"
       color="gray-500"
       margin={0}
       marginLeft={7}

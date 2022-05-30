@@ -15,10 +15,8 @@ const MenuItemCommand = forwardRef<HTMLSpanElement, MenuItemCommandProps>(
         marginRight={0}
         data-testid={makeTestId('menu-item-icon')}
         color="gray-400"
-        fontSize={1}
-        fontWeight={2}
-        lineHeight={2}
-        letterSpacing="body"
+        fontScale="help"
+        fontWeight="help"
         role="img"
         alt={`⌘ + ${children}`}
         {...restProps}
