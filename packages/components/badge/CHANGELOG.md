@@ -1,5 +1,13 @@
 # @real-system/badge
 
+## 0.0.13
+
+### Patch Changes
+
+- Updated dependencies [[`7fbdc9d`](https://github.com/bigwoof91/real-system/commit/7fbdc9d01bfe1354332e328cbb6231cab40a1cef)]:
+  - @real-system/styled-library@0.0.5
+  - @real-system/elements-primitive@0.0.7
+
 ## 0.0.12
 
 ### Patch Changes

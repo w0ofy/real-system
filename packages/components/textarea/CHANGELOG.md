@@ -1,5 +1,15 @@
 # @real-system/textarea
 
+## 0.0.26
+
+### Patch Changes
+
+- [#437](https://github.com/bigwoof91/real-system/pull/437) [`7fbdc9d`](https://github.com/bigwoof91/real-system/commit/7fbdc9d01bfe1354332e328cbb6231cab40a1cef) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add box-sizing to all real elements + size up typography and spacing
+
+- Updated dependencies [[`7fbdc9d`](https://github.com/bigwoof91/real-system/commit/7fbdc9d01bfe1354332e328cbb6231cab40a1cef)]:
+  - @real-system/input@0.0.42
+  - @real-system/styled-library@0.0.5
+
 ## 0.0.25
 
 ### Patch Changes

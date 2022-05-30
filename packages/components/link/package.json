@@ -1,6 +1,6 @@
 {
   "name": "@real-system/link",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Link component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,17 +30,17 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/elements-primitive": "^0.0.6",
-    "@real-system/icon": "^0.0.42",
-    "@real-system/styled-library": "^0.0.4",
+    "@real-system/elements-primitive": "^0.0.7",
+    "@real-system/icon": "^0.0.43",
+    "@real-system/styled-library": "^0.0.5",
     "@real-system/utils-library": "^0.0.20",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/elements-primitive": "^0.0.6",
-    "@real-system/icon": "^0.0.42",
-    "@real-system/styled-library": "^0.0.4",
+    "@real-system/elements-primitive": "^0.0.7",
+    "@real-system/icon": "^0.0.43",
+    "@real-system/styled-library": "^0.0.5",
     "@real-system/utils-library": "^0.0.20",
     "concurrently": "^7.2.1",
     "react": "^18.1.0",
