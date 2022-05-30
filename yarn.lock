@@ -3693,21 +3693,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/box@npm:^0.0.0":
-  version: 0.0.0
-  resolution: "@real-system/box@npm:0.0.0"
-  dependencies:
-    csstype: ^3.0.9
-    deepmerge: ^4.2.2
-  peerDependencies:
-    "@real-system/styling": ^0.0.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  checksum: 43640293d8641f03bc2b4b28637dffa2cd23201eb8e442b2b3f3bb766bd96a84d5d0e6367c2edb7d39406e8df9dfe5f9e2aa148319cb5a599155cfefb662bd72
-  languageName: node
-  linkType: hard
-
-"@real-system/box@workspace:packages/components/box":
+"@real-system/box@^0.0.15, @real-system/box@workspace:packages/components/box":
   version: 0.0.0-use.local
   resolution: "@real-system/box@workspace:packages/components/box"
   dependencies:
@@ -3806,7 +3792,7 @@ __metadata:
     "@real-system/ariakit-library": ^0.0.10
     "@real-system/aspect-ratio": ^0.0.13
     "@real-system/badge": ^0.0.11
-    "@real-system/box": ^0.0.0
+    "@real-system/box": ^0.0.15
     "@real-system/button": ^0.0.42
     "@real-system/button-primitive": ^0.0.31
     "@real-system/checkbox": ^0.0.27
@@ -10139,7 +10125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2, csstype@npm:^3.0.6, csstype@npm:^3.0.9, csstype@npm:^3.1.0":
+"csstype@npm:^3.0.2, csstype@npm:^3.0.6, csstype@npm:^3.1.0":
   version: 3.1.0
   resolution: "csstype@npm:3.1.0"
   checksum: 644e986cefab86525f0b674a06889cfdbb1f117e5b7d1ce0fc55b0423ecc58807a1ea42ecc75c4f18999d14fc42d1d255f84662a45003a52bb5840e977eb2ffd
