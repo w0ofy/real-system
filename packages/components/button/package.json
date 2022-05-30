@@ -1,6 +1,6 @@
 {
   "name": "@real-system/button",
-  "version": "0.0.43",
+  "version": "0.0.44",
   "description": "Real System Button component",
   "status": "production",
   "main": "lib/index.js",
@@ -31,16 +31,16 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/button-primitive": "^0.0.31",
-    "@real-system/spinner": "0.0.40",
-    "@real-system/styled-library": "^0.0.4",
+    "@real-system/spinner": "0.0.41",
+    "@real-system/styled-library": "^0.0.5",
     "@real-system/utils-library": "^0.0.20",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@real-system/button-primitive": "^0.0.31",
-    "@real-system/spinner": "0.0.40",
-    "@real-system/styled-library": "^0.0.4",
+    "@real-system/spinner": "0.0.41",
+    "@real-system/styled-library": "^0.0.5",
     "@real-system/utils-library": "^0.0.20",
     "concurrently": "^7.2.1",
     "react": "^18.1.0",

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/typography",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "Real System Typography components",
   "status": "production",
   "main": "lib/index.js",
@@ -33,18 +33,18 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/elements-primitive": "^0.0.6",
-    "@real-system/styled-library": "^0.0.4",
+    "@real-system/elements-primitive": "^0.0.7",
+    "@real-system/styled-library": "^0.0.5",
     "@real-system/utils-library": "^0.0.20",
-    "@real-system/visually-hidden": "^0.0.38",
+    "@real-system/visually-hidden": "^0.0.39",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/elements-primitive": "^0.0.6",
-    "@real-system/styled-library": "^0.0.4",
+    "@real-system/elements-primitive": "^0.0.7",
+    "@real-system/styled-library": "^0.0.5",
     "@real-system/utils-library": "^0.0.20",
-    "@real-system/visually-hidden": "^0.0.38",
+    "@real-system/visually-hidden": "^0.0.39",
     "concurrently": "^7.2.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
