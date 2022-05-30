@@ -18,7 +18,7 @@ const CheckboxIcon = ({
   return (
     <Icon
       icon={indeterminate ? 'minus' : 'check'}
-      size="sm"
+      size="xs"
       solid
       color={
         isSelected
