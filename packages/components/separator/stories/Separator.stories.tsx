@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { Flex } from '@real-system/flex';
 import { Link } from '@real-system/link';
 import { Separator } from '@real-system/separator';

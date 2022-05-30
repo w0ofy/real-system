@@ -1,3 +1,15 @@
+/**
+ * Prop groups
+ */
+import type { StylePropGroupNames } from './_propGroups';
+import { STYLE_PROP_GROUPS } from './_propGroups';
+/**
+ * Theme-related things
+ */
+import type { ResponsiveValue, StylePropScaleNames } from './_types';
+/**
+ * Props
+ */
 import type { AnimationProps } from './animation';
 import { animationProps } from './animation';
 import type { BackgroundProps } from './background';
@@ -14,6 +26,8 @@ import type { LayoutProps } from './layout';
 import { layoutProps } from './layout';
 import type { MiscellaneousProps } from './miscellaneous';
 import { miscellaneousProps } from './miscellaneous';
+import type { PseudoPropNames, PseudoProps } from './pseudo';
+import { pseudoProps } from './pseudo';
 import type { SpaceProps } from './space';
 import { spaceProps } from './space';
 import type { TransformProps } from './transform';
@@ -47,7 +61,9 @@ type StyleProps = AnimationProps &
   TransformProps &
   TypographyProps;
 
-export { styleProps };
+type StylePropNames = keyof StyleProps;
+
+export { pseudoProps, STYLE_PROP_GROUPS, styleProps };
 export type {
   AnimationProps,
   BackgroundProps,
@@ -57,8 +73,14 @@ export type {
   InteractivityProps,
   LayoutProps,
   MiscellaneousProps,
+  PseudoPropNames,
+  PseudoProps,
+  ResponsiveValue,
   SpaceProps,
+  StylePropGroupNames,
+  StylePropNames,
   StyleProps,
+  StylePropScaleNames,
   TransformProps,
   TypographyProps,
 };

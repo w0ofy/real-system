@@ -31,7 +31,7 @@
     "@real-system/ariakit-library": "^0.0.10",
     "@real-system/aspect-ratio": "^0.0.13",
     "@real-system/badge": "^0.0.11",
-    "@real-system/box-primitive": "^0.0.24",
+    "@real-system/box": "^0.0.15",
     "@real-system/button": "^0.0.42",
     "@real-system/button-primitive": "^0.0.31",
     "@real-system/checkbox": "^0.0.27",

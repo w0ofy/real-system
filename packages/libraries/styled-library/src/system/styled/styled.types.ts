@@ -7,6 +7,7 @@ import {
   ComponentWithAs,
   CSSWithMultiValues,
   PropsOf,
+  RealSystemChildrenProp,
   RecursiveCSSObject,
   StyledPropsWithChildren,
 } from './styled.types.helpers';
@@ -17,16 +18,16 @@ import {
 type CSSObject = RecursiveCSSObject<CSSWithMultiValues>;
 
 type StaticProps = {
-  /** data-testid DOM attribute for component. Useful when using @testing-library or other testing tools */
+  /** `data-testid` DOM attribute for component. Useful when using @testing-library or other testing tools */
   'data-testid'?: string;
-  /** pass a custom class name. Useful for when wrapping components with styled or need to use classic stylesheets. */
+  /** Pass a custom class name. Also useful for when wrapping components with styled or need to use classic css or stylesheets. */
   className?: string;
 };
 
 type RealSystemElementProps<T extends As = any> =
   T extends keyof JSX.IntrinsicElements
-    ? PropsOf<T> & StaticProps
-    : StaticProps;
+    ? PropsOf<T> & StaticProps & RealSystemChildrenProp
+    : StaticProps & RealSystemChildrenProp;
 
 type RealSystemCustomProps<P = Dict> = {
   /**

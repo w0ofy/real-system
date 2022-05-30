@@ -48,6 +48,7 @@ type StylePropScales = {
   sizes: string | (number & {});
   space: string | (number & {});
   zIndices: string | (number & {});
+  breakpoints: string | (number & {});
 };
 
 type StylePropScaleNames = keyof StylePropScales;
@@ -55,8 +56,6 @@ type StylePropScaleNames = keyof StylePropScales;
 type ResponsiveArray<T> = Array<T | null>;
 type ResponsiveObject<T> = Partial<Record<string, T>>;
 type ResponsiveValue<T> = T | ResponsiveArray<T> | ResponsiveObject<T>;
-
-type Length = string | 0 | (number & {});
 
 type Union<T> = T | (string & {});
 
@@ -68,7 +67,6 @@ type Token<
   : ResponsiveValue<CSSType>;
 
 export type {
-  Length,
   ResponsiveValue,
   StylePropConfig,
   StylePropScaleNames,

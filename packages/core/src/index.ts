@@ -2,7 +2,7 @@ export * from '@real-system/alert';
 export * from '@real-system/alert-primitive';
 export * from '@real-system/aspect-ratio';
 export * from '@real-system/badge';
-export * from '@real-system/box-primitive';
+export * from '@real-system/box';
 export * from '@real-system/button';
 export * from '@real-system/button-primitive';
 export * from '@real-system/checkbox';

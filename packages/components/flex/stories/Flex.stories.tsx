@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { Flex, FlexProps } from '@real-system/flex';
 import { Text } from '@real-system/typography';
 

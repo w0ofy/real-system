@@ -183,49 +183,181 @@ const spaceProps: StylePropConfig<SpaceProps> = {
 };
 
 type SpaceProps = {
+  /**
+   * The CSS `margin` property
+   */
   margin?: Token<CSS.Margin, 'space'>;
+  /**
+   * The shorthand for CSS `margin` property
+   */
   m?: Token<CSS.Margin, 'space'>;
+  /**
+   * The shorthand to apply CSS `margin-inline-start` and `margin-inline-end` properties
+   */
   marginX?: Token<CSS.Margin, 'space'>;
+  /**
+   * The super shorthand to apply CSS `margin-inline-start` and `margin-inline-end` properties
+   */
   mx?: Token<CSS.Margin, 'space'>;
+  /**
+   * The shorthand to apply CSS `margin-top` and `margin-bottom` properties
+   */
   marginY?: Token<CSS.Margin, 'space'>;
+  /**
+   * The super shorthand to apply CSS `margin-top` and `margin-bottom` properties
+   */
   my?: Token<CSS.Margin, 'space'>;
+  /**
+   * The CSS `margin-top` property
+   */
   marginTop?: Token<CSS.MarginTop, 'space'>;
+  /**
+   * The shorthand for CSS `margin-top` property
+   */
   mt?: Token<CSS.MarginTop, 'space'>;
+  /**
+   * The CSS `margin-right` property
+   */
   marginRight?: Token<CSS.MarginRight, 'space'>;
+  /**
+   * The shorthand for CSS `margin-right` property
+   */
   mr?: Token<CSS.MarginRight, 'space'>;
+  /**
+   * The CSS `margin-bottom` property
+   */
   marginBottom?: Token<CSS.MarginBottom, 'space'>;
+  /**
+   * The shorthand for CSS `margin-right` property
+   */
   mb?: Token<CSS.MarginBottom, 'space'>;
+  /**
+   * The CSS `margin-left` property
+   */
   marginLeft?: Token<CSS.MarginLeft, 'space'>;
+  /**
+   * The shorthand for CSS `margin-left` property
+   */
   ml?: Token<CSS.MarginLeft, 'space'>;
+  /**
+   * The CSS `margin-inline` property
+   */
   marginInline?: Token<CSS.MarginInline, 'space'>;
+  /**
+   * The shorthand for CSS `margin-inline` property
+   */
   mInline?: Token<CSS.MarginInline, 'space'>;
+  /**
+   * The CSS `margin-inline-start` property
+   */
   marginInlineStart?: Token<CSS.MarginInlineStart, 'space'>;
+  /**
+   * The shorthand for CSS `margin-inline-start` property
+   */
   marginStart?: Token<CSS.MarginInlineStart, 'space'>;
+  /**
+   * The super shorthand for CSS `margin-inline-start` property
+   */
   ms?: Token<CSS.MarginInlineStart, 'space'>;
+  /**
+   * The CSS `margin-inline-end` property
+   */
   marginInlineEnd?: Token<CSS.MarginInlineEnd, 'space'>;
+  /**
+   * The shorthand for CSS `margin-inline-end` property
+   */
   marginEnd?: Token<CSS.MarginInlineEnd, 'space'>;
+  /**
+   * The super shorthand for CSS `margin-inline-end` property
+   */
   me?: Token<CSS.MarginInlineEnd, 'space'>;
+  /**
+   * The CSS `padding` property
+   */
   padding?: Token<CSS.Padding, 'space'>;
+  /**
+   * The shorthand for CSS `padding` property
+   */
   p?: Token<CSS.Padding, 'space'>;
+  /**
+   * The shorthand to apply CSS `padding-left` and `padding-right` properties
+   */
   paddingX?: Token<CSS.Padding, 'space'>;
+  /**
+   * The super shorthand to apply CSS `padding-left` and `padding-right` properties
+   */
   px?: Token<CSS.Padding, 'space'>;
+  /**
+   * The shorthand to apply CSS `padding-top` and `padding-bottom` properties
+   */
   paddingY?: Token<CSS.Padding, 'space'>;
+  /**
+   * The super shorthand to apply CSS `padding-top` and `padding-bottom` properties
+   */
   py?: Token<CSS.Padding, 'space'>;
+  /**
+   * The CSS `padding-top` property
+   */
   paddingTop?: Token<CSS.PaddingTop, 'space'>;
+  /**
+   * The shorthand for CSS `padding-top` property
+   */
   pt?: Token<CSS.PaddingTop, 'space'>;
+  /**
+   * The CSS `padding-right` property
+   */
   paddingRight?: Token<CSS.PaddingRight, 'space'>;
+  /**
+   * The shorthand for CSS `padding-right` property
+   */
   pr?: Token<CSS.PaddingRight, 'space'>;
+  /**
+   * The CSS `padding-bottom` property
+   */
   paddingBottom?: Token<CSS.PaddingBottom, 'space'>;
+  /**
+   * The shorthand for CSS `padding-bottom` property
+   */
   pb?: Token<CSS.PaddingBottom, 'space'>;
+  /**
+   * The CSS `padding-left` property
+   */
   paddingLeft?: Token<CSS.PaddingLeft, 'space'>;
+  /**
+   * The shorthand for CSS `padding-left` property
+   */
   pl?: Token<CSS.PaddingLeft, 'space'>;
+  /**
+   * The CSS `padding-inline` property
+   */
   paddingInline?: Token<CSS.PaddingInline, 'space'>;
+  /**
+   * The shorthand CSS `padding-inline` property
+   */
   pInline?: Token<CSS.PaddingInline, 'space'>;
+  /**
+   * The CSS `padding-inline-start` property
+   */
   paddingInlineStart?: Token<CSS.PaddingInlineStart, 'space'>;
+  /**
+   * The shorthand for CSS `padding-inline-start` property
+   */
   paddingStart?: Token<CSS.PaddingInlineStart, 'space'>;
+  /**
+   * The super shorthand for CSS `padding-inline-start` property
+   */
   ps?: Token<CSS.PaddingInlineStart, 'space'>;
+  /**
+   * The CSS `padding-inline-end` property
+   */
   paddingInlineEnd?: Token<CSS.PaddingInlineEnd, 'space'>;
+  /**
+   * The shorthand for CSS `padding-inline-end` property
+   */
   paddingEnd?: Token<CSS.PaddingInlineEnd, 'space'>;
+  /**
+   * The super shorthand for CSS `padding-inline-end` property
+   */
   pe?: Token<CSS.PaddingInlineEnd, 'space'>;
 };
 

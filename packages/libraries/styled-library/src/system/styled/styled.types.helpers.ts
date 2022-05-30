@@ -85,7 +85,10 @@ type StyledChildren<T = any> =
   | React.ReactNode
   | RenderProp<React.HTMLAttributes<T> & React.RefAttributes<T>>;
 
-type StyledPropsWithChildren<P> = P & { children?: StyledChildren | undefined };
+type RealSystemChildren = StyledChildren | undefined;
+type RealSystemChildrenProp = { children?: RealSystemChildren };
+
+type StyledPropsWithChildren<P> = P & RealSystemChildrenProp;
 
 export type {
   As,
@@ -93,6 +96,7 @@ export type {
   CSSWithMultiValues,
   Dict,
   PropsOf,
+  RealSystemChildrenProp,
   RecursiveCSSObject,
   RecursiveCSSSelector,
   RecursivePseudo,

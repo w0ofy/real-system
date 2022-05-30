@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 import { ThemeProvider } from '@real-system/styled-library';
 import { Text } from '@real-system/typography';
 

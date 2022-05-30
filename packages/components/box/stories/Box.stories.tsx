@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box-primitive';
+import { Box } from '@real-system/box';
 
 export default {
-  title: 'Primitives/Box Primitive',
+  title: 'Layout/Box',
   component: Box,
   args: {
     children:
-      'Box—use me as a building block for any kind of component. You can pass style props to me as well.',
+      'Box. use me for building layouts, wrappers and containers for other components. You can pass style props to me as well.',
   },
 } as Meta;
 

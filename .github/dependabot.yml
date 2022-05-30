@@ -73,7 +73,7 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/primitives/box-primitive
+    directory: /packages/components/box
     schedule:
       interval: weekly
     labels:

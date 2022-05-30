@@ -4,8 +4,12 @@ import { STYLE_PROP_SCALES } from './_constants';
 import type { StylePropConfig, Token } from './_types';
 
 const colorProps: StylePropConfig<ColorProps> = {
-  textColor: {
-    property: 'color',
+  backgroundColor: {
+    property: 'backgroundColor',
+    scale: STYLE_PROP_SCALES.colors,
+  },
+  bgColor: {
+    property: 'backgroundColor',
     scale: STYLE_PROP_SCALES.colors,
   },
   foreground: {
@@ -23,9 +27,25 @@ const colorProps: StylePropConfig<ColorProps> = {
 };
 
 type ColorProps = {
+  /**
+   * The CSS `backgroundColor` property
+   */
+  backgroundColor?: Token<CSS.BackgroundColor, 'colors'>;
+  /**
+   * The CSS `backgroundColor` property
+   */
+  bgColor?: Token<CSS.BackgroundColor, 'colors'>;
+  /**
+   * The CSS `border-color` and `color` properties
+   */
   foreground?: Token<CSS.Color, 'colors'>;
-  textColor?: Token<CSS.Color, 'colors'>;
+  /**
+   * The CSS `color` property
+   */
   color?: Token<CSS.Color, 'colors'>;
+  /**
+   * The CSS `fill` property
+   */
   fill?: Token<CSS.Fill, 'colors'>;
 };
 

@@ -22,14 +22,41 @@ const interactivityProps: StylePropConfig<InteractivityProps> = {
 };
 
 type InteractivityProps = {
+  /**
+   * The CSS `appearance` property
+   */
   appearance?: Token<CSS.Appearance>;
+  /**
+   * The CSS `outline` property
+   */
   outline?: Token<CSS.Outline>;
+  /**
+   * The CSS `outlineColor` property
+   */
   outlineColor?: Token<CSS.OutlineColor>;
+  /**
+   * The CSS `outlineWidth` property
+   */
   outlineWidth?: Token<CSS.OutlineWidth>;
+  /**
+   * The CSS `outlineOffset` property
+   */
   outlineOffset?: Token<CSS.OutlineOffset>;
+  /**
+   * The CSS `outlineStyle` property
+   */
   outlineStyle?: Token<CSS.OutlineStyle>;
+  /**
+   * The CSS `cursor` property
+   */
   cursor?: Token<CSS.Cursor>;
+  /**
+   * The CSS `pointerEvents` property
+   */
   pointerEvents?: Token<CSS.PointerEvents>;
+  /**
+   * The CSS `resize` property
+   */
   resize?: Token<CSS.Resize, 'space'>;
 };
 

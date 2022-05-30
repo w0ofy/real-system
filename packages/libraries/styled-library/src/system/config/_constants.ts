@@ -15,6 +15,7 @@ const STYLE_PROP_SCALES: Record<StylePropScaleNames, StylePropScaleNames> = {
   sizes: 'sizes',
   space: 'space',
   zIndices: 'zIndices',
+  breakpoints: 'breakpoints',
 };
 
 export { STYLE_PROP_SCALES };
