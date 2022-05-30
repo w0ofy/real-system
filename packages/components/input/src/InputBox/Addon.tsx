@@ -3,7 +3,6 @@ import React, { useMemo } from 'react';
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
-import { majorScale } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 const makePositionalStyles = (isSuffix = false) => {
@@ -57,8 +56,7 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height={16}
-      lineHeight={majorScale(4)}
+      height="control"
       paddingX={4}
       {...positionalStyles}
       {...colorStyles}

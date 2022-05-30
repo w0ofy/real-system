@@ -25,9 +25,9 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         display="block"
         width="100%"
         height="control"
-        paddingX={6}
+        paddingX={5}
+        paddingY={0}
         margin={0}
-        fontFamily="inherit"
         fontScale="input"
         fontWeight="input"
         backgroundColor="transparent"
@@ -42,7 +42,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         _placeholder={{
           color: 'gray-200',
           transition: '150ms all ease-in',
-          fontWeight: 'input',
+          fontWeight: 'placeholder',
         }}
         _hover_placeholder={{
           color: 'gray-300',
