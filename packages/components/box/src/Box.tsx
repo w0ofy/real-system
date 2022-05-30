@@ -9,8 +9,14 @@ import { makeTestId } from '@real-system/utils-library';
 import { StyledBox } from './Box.styles';
 import type { BoxProps } from './types';
 
-const { layoutProps, spaceProps, colorProps, backgroundProps, borderProps } =
-  STYLE_PROP_GROUPS;
+const {
+  layoutProps,
+  spaceProps,
+  colorProps,
+  backgroundProps,
+  borderProps,
+  typographyProps,
+} = STYLE_PROP_GROUPS;
 
 const propConfig = Object.keys({
   ...layoutProps,
@@ -18,6 +24,7 @@ const propConfig = Object.keys({
   ...colorProps,
   ...backgroundProps,
   ...borderProps,
+  ...typographyProps,
 }).reduce((a, b) => ({ ...a, [b]: true }), {});
 
 const safelySpreadBoxStyleProps = (props) =>

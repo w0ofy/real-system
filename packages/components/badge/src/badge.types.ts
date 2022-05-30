@@ -7,6 +7,6 @@ type BadgeProps = {
   colorScheme?: ColorSchemes;
   /** Sets badge to a standard size. Use `fontSize` prop for more granular control over size of the badge */
   size?: BadgeSize;
-} & RealElementPrimitiveProps<'span'>;
+} & Omit<RealElementPrimitiveProps<'span'>, 'size'>;
 
 export type { BadgeProps, BadgeSize };
