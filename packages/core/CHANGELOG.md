@@ -1,5 +1,41 @@
 # @real-system/core
 
+## 0.0.45
+
+### Patch Changes
+
+- [#435](https://github.com/bigwoof91/real-system/pull/435) [`52b7b2a`](https://github.com/bigwoof91/real-system/commit/52b7b2a6f7962ed3e4e428e4d896310ed97ee0ae) Thanks [@bigwoof91](https://github.com/bigwoof91)! - rename box-primitive pkg back to box and constrain style props
+
+- Updated dependencies [[`52b7b2a`](https://github.com/bigwoof91/real-system/commit/52b7b2a6f7962ed3e4e428e4d896310ed97ee0ae)]:
+  - @real-system/alert@0.0.27
+  - @real-system/box@0.0.16
+  - @real-system/button@0.0.43
+  - @real-system/checkbox@0.0.28
+  - @real-system/flex@0.0.35
+  - @real-system/icon@0.0.42
+  - @real-system/input@0.0.41
+  - @real-system/menu@0.0.14
+  - @real-system/separator@0.0.10
+  - @real-system/spinner@0.0.40
+  - @real-system/stack@0.0.2
+  - @real-system/tooltip@0.0.19
+  - @real-system/truncate@0.0.20
+  - @real-system/typography@0.0.42
+  - @real-system/styled-library@0.0.4
+  - @real-system/toaster@0.0.26
+  - @real-system/dialog@0.0.35
+  - @real-system/popover@0.0.18
+  - @real-system/field@0.0.20
+  - @real-system/radio-group@0.0.21
+  - @real-system/link@0.0.13
+  - @real-system/pin-input@0.0.7
+  - @real-system/textarea@0.0.25
+  - @real-system/aspect-ratio@0.0.14
+  - @real-system/badge@0.0.12
+  - @real-system/select@0.0.9
+  - @real-system/visually-hidden@0.0.38
+  - @real-system/elements-primitive@0.0.6
+
 ## 0.0.44
 
 ### Patch Changes

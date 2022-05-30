@@ -1,5 +1,18 @@
 # @real-system/checkbox
 
+## 0.0.28
+
+### Patch Changes
+
+- [#435](https://github.com/bigwoof91/real-system/pull/435) [`52b7b2a`](https://github.com/bigwoof91/real-system/commit/52b7b2a6f7962ed3e4e428e4d896310ed97ee0ae) Thanks [@bigwoof91](https://github.com/bigwoof91)! - rename box-primitive pkg back to box and constrain style props
+
+- Updated dependencies [[`52b7b2a`](https://github.com/bigwoof91/real-system/commit/52b7b2a6f7962ed3e4e428e4d896310ed97ee0ae)]:
+  - @real-system/flex@0.0.35
+  - @real-system/typography@0.0.42
+  - @real-system/styled-library@0.0.4
+  - @real-system/visually-hidden@0.0.38
+  - @real-system/elements-primitive@0.0.6
+
 ## 0.0.27
 
 ### Patch Changes

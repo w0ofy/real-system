@@ -1,6 +1,6 @@
 {
   "name": "@real-system/stack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Stack component that distributes layouts for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/elements-primitive": "^0.0.5",
-    "@real-system/styled-library": "^0.0.3",
+    "@real-system/elements-primitive": "^0.0.6",
+    "@real-system/styled-library": "^0.0.4",
     "@real-system/utils-library": "^0.0.20",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@real-system/elements-primitive": "^0.0.5",
-    "@real-system/styled-library": "^0.0.3",
+    "@real-system/elements-primitive": "^0.0.6",
+    "@real-system/styled-library": "^0.0.4",
     "@real-system/utils-library": "^0.0.20",
     "concurrently": "^7.2.1",
     "react": "^18.1.0",
