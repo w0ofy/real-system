@@ -1,29 +1,23 @@
 import type { StylishProps } from '@real-system/styled-library';
-import { majorScale } from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
 import type { ButtonProps, ButtonSize } from './types';
 
 const sizes: Record<ButtonSize, StylishProps> = {
   sm: {
-    padding: 4,
-    fontSize: 1,
-    height: majorScale(3),
-    lineHeight: majorScale(3),
+    paddingX: 5,
+    fontScale: 'button-sm',
+    height: 'control-sm',
   },
   md: {
     paddingX: 6,
-    paddingY: 4,
-    height: majorScale(4),
-    lineHeight: majorScale(4),
-    fontSize: 1,
+    height: 'control',
+    fontScale: 'button',
   },
   lg: {
-    paddingX: 7,
-    paddingY: 4,
-    fontSize: 2,
-    height: majorScale(5),
-    lineHeight: majorScale(5),
+    paddingX: 8,
+    fontScale: 'button-lg',
+    height: 'control-lg',
   },
 };
 

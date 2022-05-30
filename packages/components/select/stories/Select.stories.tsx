@@ -28,7 +28,7 @@ export const Default = (args) => {
     <SelectContainer {...args} disabled>
       <Label>Select a fruit</Label>
       <Select maxW="20rem">
-        <SelectItem value="Apple">Apple (child as label)</SelectItem>
+        <SelectItem value="Apple">Apple</SelectItem>
         <SelectItem value="Grape" disabled />
         <SelectItem value="Melon" />
       </Select>

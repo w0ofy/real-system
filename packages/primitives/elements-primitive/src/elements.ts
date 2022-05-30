@@ -30,7 +30,7 @@ function elements() {
      * const RealComponent = real(Component)
      */
     apply(_target, _thisArg, argArray: [DOMElements, RealSystemStyledOptions]) {
-      return styled(...argArray)();
+      return styled(...argArray)({ boxSizing: 'border-box' });
     },
     /**
      * @example
@@ -38,7 +38,7 @@ function elements() {
      */
     get(_, element: DOMElements) {
       if (!cache.has(element)) {
-        cache.set(element, styled(element)());
+        cache.set(element, styled(element)({ boxSizing: 'border-box' }));
       }
       return cache.get(element);
     },

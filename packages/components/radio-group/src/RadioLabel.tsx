@@ -12,9 +12,8 @@ const RadioLabel = ({ children, disabled }: RadioLabelProps) => {
     <real.span
       color={disabled ? 'gray-300' : 'gray-500'}
       fontFamily="body"
-      fontSize={1}
+      fontScale="body"
       fontWeight={3}
-      lineHeight={1}
       marginBottom={0}>
       {children}
     </real.span>

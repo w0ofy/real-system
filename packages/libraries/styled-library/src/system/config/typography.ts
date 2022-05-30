@@ -24,6 +24,10 @@ const typographyProps: StylePropConfig<TypographyProps> = {
     property: 'letterSpacing',
     scale: STYLE_PROP_SCALES.letterSpacings,
   },
+  fontScale: {
+    properties: ['fontSize', 'lineHeight'],
+    scale: STYLE_PROP_SCALES.fontSizes,
+  },
   textAlign: true,
   fontStyle: true,
   whiteSpace: true,
@@ -42,6 +46,10 @@ type TypographyProps = {
   fontWeight?: Token<CSS.FontWeight, 'fontWeights'>;
   lineHeight?: Token<CSS.LineHeight, 'lineHeights'>;
   letterSpacing?: Token<CSS.LetterSpacing, 'letterSpacings'>;
+  /**
+   * The shorthand to apply CSS `line-height` and `font-size` properties
+   */
+  fontScale?: Token<CSS.FontSize, 'fontSizes'>;
   textAlign?: Token<CSS.TextAlign>;
   fontStyle?: Token<CSS.FontStyle>;
   whiteSpace?: Token<CSS.WhiteSpace>;

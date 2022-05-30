@@ -25,7 +25,7 @@ const SelectPopover = ({ children, ...restProps }: SelectPopoverProps) => {
       borderRadius={4}
       border="weak"
       bgColor="white"
-      py={3}
+      py={4}
       color="white"
       filter="popover"
       outline="none"

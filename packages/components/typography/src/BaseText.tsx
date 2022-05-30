@@ -4,16 +4,13 @@ import { real } from '@real-system/elements-primitive';
 
 import { BaseTextProps } from './types';
 
-// Omits potential clashes from our style props with HTMLAttributes (i.e. color)
-
 const baseStyles = {
   color: 'gray-800',
-  fontSize: 1,
-  fontWeight: 2,
-  lineHeight: 4,
-  margin: 0,
+  fontScale: 'body',
+  fontWeight: 'body',
   letterSpacing: 'body',
   fontFamily: 'body',
+  margin: 0,
 };
 
 const BaseText = forwardRef<HTMLElement, BaseTextProps>(function Text(

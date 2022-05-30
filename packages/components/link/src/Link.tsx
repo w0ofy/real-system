@@ -32,7 +32,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const externalProps = external ? EXTERNAL_LINK_PROPS : {};
   return (
     <real.a
-      fontSize={1}
+      fontSize="link"
       fontWeight={2}
       lineHeight={2}
       margin={0}

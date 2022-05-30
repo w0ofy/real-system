@@ -18,9 +18,9 @@ const StyledBaseButton = styled(ButtonPrimitive)({
   borderRadius: 4,
   transition:
     'background-color 150ms ease-out, box-shadow 150ms ease-in, color 150ms ease-out',
-  fontSize: 1,
+  fontScale: 'button',
   fontFamily: 'body',
-  fontWeight: 3,
+  fontWeight: 'button',
   textDecoration: 'none',
   position: 'relative',
   margin: 0,

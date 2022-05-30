@@ -12,14 +12,14 @@ type MenuItemProps = CommonMenuItemProps;
 const menuItemStyles: StylishProps = {
   transition: 'background-color 150ms ease-out, color 150ms ease-out',
   paddingX: 7,
-  paddingY: 3,
+  paddingY: 5,
   display: 'inline-flex',
   alignItems: 'center',
   width: '100%',
   color: 'gray-500',
-  fontSize: 1,
-  fontWeight: 3,
-  lineHeight: 4,
+  fontScale: 'menu-item',
+  fontWeight: 'menu-item',
+  letterSpacing: 'menu-item',
   textDecoration: 'none',
   cursor: 'pointer',
   _hover: {
