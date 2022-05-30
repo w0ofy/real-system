@@ -27,6 +27,7 @@ const StyledInput = styled('input')({
   _placeholder: {
     color: 'gray-200',
     transition: '150ms all ease-in',
+    fontWeight: 'placeholder',
   },
   _hover_placeholder: {
     color: 'gray-300',
