@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import { Box } from '@real-system/box';
 import {
   Checkbox,
-  CheckboxGroup as RealCheckboxGroup,
+  CheckboxGroup,
   CheckboxGroupItem,
   useIndeterminate,
 } from '@real-system/checkbox';
@@ -12,7 +12,7 @@ import {
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
-  subcomponents: { CheckboxGroup: RealCheckboxGroup, CheckboxGroupItem },
+  subcomponents: { CheckboxGroup: CheckboxGroup, CheckboxGroupItem },
   args: {
     children: 'Give this user "Owner" permissions',
   },
@@ -34,10 +34,10 @@ export const Default = (args) => (
   />
 );
 
-export const CheckboxGroup = (args) => {
+export const CheckboxGroupStory = (args) => {
   return (
     <Box display="block" width="34rem">
-      <RealCheckboxGroup
+      <CheckboxGroup
         label="What engineering level is the new team member?"
         defaultValue={['associate']}
         helpText="Select at least 1 level for the new engineer"
@@ -54,29 +54,32 @@ export const CheckboxGroup = (args) => {
         <CheckboxGroupItem value="associate" disabled>
           Associate
         </CheckboxGroupItem>
-      </RealCheckboxGroup>
+      </CheckboxGroup>
     </Box>
   );
 };
 
+CheckboxGroupStory.storyName = 'Checkbox Group';
+
 export const Indeterminate = () => {
   const [checkedItems, setCheckedItems] = React.useState(['associate']);
 
+  const indeterminateValue = 'all';
   const values = ['principle', 'staff', 'senior', 'mid', 'associate'];
   const { indeterminateProps, checkBoxGroupProps } = useIndeterminate({
     values,
-    indeterminateValue: 'all',
+    indeterminateValue,
     checkedItems,
     setCheckedItems,
   });
 
   return (
-    <RealCheckboxGroup
+    <CheckboxGroup
       label="What engineering level is the new team member?"
       value={checkedItems}
       helpText="Select at least 1 level for the new engineer"
       {...checkBoxGroupProps}>
-      <CheckboxGroupItem value="all" {...indeterminateProps}>
+      <CheckboxGroupItem value={indeterminateValue} {...indeterminateProps}>
         All
       </CheckboxGroupItem>
       <CheckboxGroupItem value={values[0]}>Principle</CheckboxGroupItem>
@@ -84,6 +87,6 @@ export const Indeterminate = () => {
       <CheckboxGroupItem value={values[2]}>Senior</CheckboxGroupItem>
       <CheckboxGroupItem value={values[3]}>Mid</CheckboxGroupItem>
       <CheckboxGroupItem value={values[4]}>Associate</CheckboxGroupItem>
-    </RealCheckboxGroup>
+    </CheckboxGroup>
   );
 };

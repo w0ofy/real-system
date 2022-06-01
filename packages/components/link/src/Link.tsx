@@ -22,7 +22,7 @@ type LinkProps = {
 /**
  * Links are accessible elements used primarily for navigation.
  *
- * Capable of integrating with routing libraries like
+ * `Link` is capable of integrating with routing libraries like
  * React Router, Reach Router and Next.js Link.
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(

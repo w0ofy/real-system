@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  ThemeContext as EmotionThemeContext,
+  ThemeContext,
   ThemeProvider as EmotionThemeProvider,
   ThemeProviderProps as EmotionThemeProviderProps,
 } from '@emotion/react';
@@ -16,7 +16,7 @@ type ThemeProviderProps = {
 const ThemeProvider = ({
   children,
   theme = themes.realSystem,
-}: ThemeProviderProps): React.ReactElement => {
+}: ThemeProviderProps) => {
   return (
     <EmotionThemeProvider theme={theme}>
       <>
@@ -26,8 +26,6 @@ const ThemeProvider = ({
     </EmotionThemeProvider>
   );
 };
-
-const ThemeContext = EmotionThemeContext;
 
 export type { ThemeProviderProps };
 export { ThemeContext, ThemeProvider };
