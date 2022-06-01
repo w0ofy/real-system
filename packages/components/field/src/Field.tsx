@@ -36,6 +36,7 @@ const Field = ({
         vertical
         xAlignContent="left"
         data-testid={makeTestId('field')}
+        gap={2}
         {...restProps}>
         {label && (
           <Label htmlFor={labelFor} required={required} whiteSpace="nowrap">
@@ -43,11 +44,15 @@ const Field = ({
           </Label>
         )}
         {children}
-        {hasHelpText && <HelpText errorText={errorText}>{helpText}</HelpText>}
+        {hasHelpText && (
+          <HelpText marginTop={2} errorText={errorText}>
+            {helpText}
+          </HelpText>
+        )}
       </Flex>
     );
   return (
-    <Flex vertical {...restProps}>
+    <Flex vertical gap={2} {...restProps}>
       {children}
     </Flex>
   );

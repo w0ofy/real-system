@@ -65,6 +65,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         {...spreadStyleProps(props, {
           display: false,
           width: false,
+          height: false,
           border: false,
           borderRadius: false,
           transition: false,

@@ -39,6 +39,7 @@ const baseStyles: StylishProps = {
   fontScale: 'input',
   fontWeight: 'input',
   transition: 'box-shadow 150ms ease-in, border-color 150ms ease-in',
+  boxSizing: 'border-box',
   _hover: {},
   _focusWithin: {},
   _active: { boxShadow: 'none' },

@@ -44,11 +44,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         {...labelProps}>
         {props.label}
       </Label>
-      {helpText && (
-        <HelpText marginTop={0} marginBottom={7}>
-          {helpText}
-        </HelpText>
-      )}
+      {helpText && <HelpText marginBottom={7}>{helpText}</HelpText>}
       <Flex
         vertical={orientation === 'vertical' ? true : false}
         xAlignContent="left"

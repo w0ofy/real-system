@@ -28,7 +28,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         prefix={prefix}
         readOnly={readOnly}
         addonProps={addonProps}
-        data-testid={makeTestId('text-area-input-box')}>
+        data-testid={makeTestId('text-area-input-box')}
+        height="100%">
         <TextareaElement
           data-testid={makeTestId('text-area')}
           // size, height and width should never get passed down

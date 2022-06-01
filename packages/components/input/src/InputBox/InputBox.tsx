@@ -37,6 +37,7 @@ type InputBoxStates = 'readonly' | 'hidden' | 'disabled' | 'default' | 'error';
 const baseStyles: StylishProps = {
   display: 'flex',
   width: '100%',
+  height: 'control',
   border: '1px solid',
   borderRadius: 4,
   transition: 'box-shadow 150ms ease-in, border-color 150ms ease-in',
@@ -136,10 +137,10 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
       <real.div
         ref={ref}
         {...styles[state]}
-        height="100%"
         data-testid={makeTestId('input-box')}
         {...preventSpreadingStyleProps(restProps, {
           display: true,
+          height: true,
           width: true,
           border: true,
           borderRadius: true,

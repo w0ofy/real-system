@@ -56,7 +56,7 @@ const Addon = React.forwardRef<HTMLDivElement, AddonProps>(function Addon(
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height="control"
+      height="auto"
       paddingX={4}
       {...positionalStyles}
       {...colorStyles}
