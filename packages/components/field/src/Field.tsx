@@ -44,11 +44,7 @@ const Field = ({
           </Label>
         )}
         {children}
-        {hasHelpText && (
-          <HelpText marginTop={2} errorText={errorText}>
-            {helpText}
-          </HelpText>
-        )}
+        {hasHelpText && <HelpText errorText={errorText}>{helpText}</HelpText>}
       </Flex>
     );
   return (
