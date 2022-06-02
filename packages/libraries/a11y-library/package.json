@@ -42,7 +42,7 @@
     "@react-aria/radio": "^3.1.11",
     "@react-stately/checkbox": "^3.0.7",
     "@react-stately/radio": "^3.3.6",
-    "@react-stately/toggle": "^3.2.7",
+    "@react-stately/toggle": "^3.3.0",
     "@react-types/checkbox": "^3.2.7",
     "@react-types/radio": "^3.1.6",
     "@react-types/shared": "^3.12.0"
