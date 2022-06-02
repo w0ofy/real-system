@@ -1,5 +1,14 @@
 # @real-system/popover
 
+## 0.0.20
+
+### Patch Changes
+
+- Updated dependencies [[`1925bc1`](https://github.com/bigwoof91/real-system/commit/1925bc1dc3a357c683208df183a92a9363fd5bd8)]:
+  - @real-system/button@0.0.45
+  - @real-system/typography@0.0.44
+  - @real-system/popover-primitive@0.0.6
+
 ## 0.0.19
 
 ### Patch Changes

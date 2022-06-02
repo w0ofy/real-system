@@ -1,5 +1,12 @@
 # @real-system/textarea
 
+## 0.0.27
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/input@0.0.43
+
 ## 0.0.26
 
 ### Patch Changes

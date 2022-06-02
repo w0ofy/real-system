@@ -1,6 +1,6 @@
 {
   "name": "@real-system/input",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "Real System input component",
   "status": "production",
   "main": "lib/index.js",
@@ -34,7 +34,7 @@
   "peerDependencies": {
     "@real-system/elements-primitive": "^0.0.7",
     "@real-system/styled-library": "^0.0.5",
-    "@real-system/typography": "^0.0.43",
+    "@real-system/typography": "^0.0.44",
     "@real-system/utils-library": "^0.0.20",
     "@real-system/visually-hidden": "^0.0.39",
     "react": "^18.1.0",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@real-system/elements-primitive": "^0.0.7",
     "@real-system/styled-library": "^0.0.5",
-    "@real-system/typography": "^0.0.43",
+    "@real-system/typography": "^0.0.44",
     "@real-system/utils-library": "^0.0.20",
     "@real-system/visually-hidden": "^0.0.39",
     "concurrently": "^7.2.1",

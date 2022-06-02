@@ -1,5 +1,12 @@
 # @real-system/toaster
 
+## 0.0.28
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/alert@0.0.29
+
 ## 0.0.27
 
 ### Patch Changes

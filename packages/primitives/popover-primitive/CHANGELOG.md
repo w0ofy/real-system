@@ -1,5 +1,12 @@
 # @real-system/popover-primitive
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [[`2aada1e`](https://github.com/bigwoof91/real-system/commit/2aada1ec51ace549d740a686b72dad2dc615944f)]:
+  - @real-system/ariakit-library@0.0.11
+
 ## 0.0.5
 
 ### Patch Changes
