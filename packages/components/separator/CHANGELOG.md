@@ -1,5 +1,12 @@
 # @real-system/separator
 
+## 0.0.12
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/separator-primitive@0.0.6
+
 ## 0.0.11
 
 ### Patch Changes

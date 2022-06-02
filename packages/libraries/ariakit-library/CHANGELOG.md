@@ -1,5 +1,11 @@
 # @real-system/ariakit-library
 
+## 0.0.11
+
+### Patch Changes
+
+- [`2aada1e`](https://github.com/bigwoof91/real-system/commit/2aada1ec51ace549d740a686b72dad2dc615944f) - Upgrade ariakit from next.28 to next.29
+
 ## 0.0.10
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @real-system/pin-input
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/input@0.0.43
+
 ## 0.0.8
 
 ### Patch Changes
