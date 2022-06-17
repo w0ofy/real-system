@@ -31,8 +31,8 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/utils-library": "^0.0.20",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.1.2",
@@ -44,9 +44,9 @@
   },
   "devDependencies": {
     "@real-system/utils-library": "^0.0.20",
-    "concurrently": "^7.2.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "typescript": "4.7.2"
+    "concurrently": "^7.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
   }
 }

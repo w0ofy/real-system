@@ -1,9 +1,9 @@
 import { uid } from 'react-uid';
 import merge from 'deepmerge';
 
-export * from './combineRefs';
 export * from './dom';
 export * from './formatting';
+export * from './mergeRefs';
 export * from './testing';
 export { merge, uid };
 export * from './assertion';

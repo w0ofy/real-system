@@ -1,4 +1,4 @@
-import { Dict } from '../types';
+import { Dict, Func } from '../types';
 
 // Number assertions
 function isNumber(value: any): value is number {
@@ -25,8 +25,7 @@ function isEmptyArray(value: any) {
 }
 
 // Function assertions
-// eslint-disable-next-line @typescript-eslint/ban-types
-function isFunction<T extends Function = Function>(value: any): value is T {
+function isFunction<T extends Func = Func>(value: any): value is T {
   return typeof value === 'function';
 }
 

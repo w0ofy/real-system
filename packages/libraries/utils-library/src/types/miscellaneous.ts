@@ -22,7 +22,7 @@ type StringUnionWithString<T> = T | (string & {});
 
 type Obj<T = any> = Record<string, T>;
 
-type ObjUnion<T> = T & { [key: string]: any };
+type ObjUnion<T> = T & Obj;
 
 type PropUnion<T> = ObjUnion<T>;
 

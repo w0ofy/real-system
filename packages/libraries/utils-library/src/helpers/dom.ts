@@ -23,4 +23,45 @@ const isElement = (el: any): el is HTMLElement =>
 const getOwnerDocument = (node?: Element | null): Document =>
   isElement(node) ? node.ownerDocument ?? document : document;
 
-export { canUseDOM, getOwnerDocument, isElement, isHTMLElement };
+type EventKeys =
+  | 'ArrowDown'
+  | 'ArrowUp'
+  | 'ArrowLeft'
+  | 'ArrowRight'
+  | 'Enter'
+  | 'Space'
+  | 'Tab'
+  | 'Backspace'
+  | 'Control'
+  | 'Meta'
+  | 'Home'
+  | 'End'
+  | 'PageDown'
+  | 'PageUp'
+  | 'Delete'
+  | 'Escape'
+  | ' '
+  | 'Shift';
+
+/**
+ * Get the normalized event key across all browsers
+ */
+function normalizeEventKey(event: Pick<KeyboardEvent, 'key' | 'keyCode'>) {
+  const { key, keyCode } = event;
+
+  const isArrowKey =
+    keyCode >= 37 && keyCode <= 40 && key.indexOf('Arrow') !== 0;
+
+  const eventKey = isArrowKey ? `Arrow${key}` : key;
+
+  return eventKey as EventKeys;
+}
+
+export type { EventKeys };
+export {
+  canUseDOM,
+  getOwnerDocument,
+  isElement,
+  isHTMLElement,
+  normalizeEventKey,
+};

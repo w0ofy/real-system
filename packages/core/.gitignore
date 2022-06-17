@@ -1,6 +1,7 @@
 # Automatically generated from "yarn generate-packages"
 /lib
 /a11y-library
+/accordion
 /alert
 /alert-primitive
 /animation-library
@@ -14,6 +15,8 @@
 /descendants-library
 /dialog
 /dialog-primitive
+/disclosure
+/disclosure-primitive
 /elements-primitive
 /field
 /flex

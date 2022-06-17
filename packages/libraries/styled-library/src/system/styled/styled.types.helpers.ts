@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as CSS from 'csstype';
 
-import type { Dict } from '@real-system/utils-library';
+import type { Dict, PropUnion } from '@real-system/utils-library';
 
 import type { ResponsiveValue } from '../config/_types';
 import type { PseudoPropNames, StyleProps } from '../props';
@@ -83,7 +83,7 @@ type RenderProp<P = Dict> = (props: P) => React.ReactNode;
 
 type StyledChildren<T = any> =
   | React.ReactNode
-  | RenderProp<React.HTMLAttributes<T> & React.RefAttributes<T>>;
+  | RenderProp<PropUnion<React.HTMLAttributes<T> & React.RefAttributes<T>>>;
 
 type RealSystemChildren = StyledChildren | undefined;
 type RealSystemChildrenProp = { children?: RealSystemChildren };
@@ -100,5 +100,6 @@ export type {
   RecursiveCSSObject,
   RecursiveCSSSelector,
   RecursivePseudo,
+  RenderProp,
   StyledPropsWithChildren,
 };

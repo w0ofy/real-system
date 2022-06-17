@@ -7,7 +7,7 @@ import React, { RefCallback, useRef, useState } from 'react';
 import { constate } from '@real-system/state-library';
 import {
   cast,
-  combineRefs,
+  mergeRefs,
   Obj,
   useSafeLayoutEffect,
 } from '@real-system/utils-library';
@@ -68,7 +68,7 @@ function useDescendant<T extends HTMLElement = HTMLElement, K = Obj>(
     descendants,
     index,
     enabledIndex: descendants.enabledIndexOf(ref.current),
-    register: combineRefs(refCallback, ref),
+    register: mergeRefs(refCallback, ref),
   };
 }
 

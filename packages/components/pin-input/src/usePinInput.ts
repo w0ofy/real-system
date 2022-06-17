@@ -4,7 +4,7 @@ import { createDescendantContext } from '@real-system/descendants-library';
 import { constate } from '@real-system/state-library';
 import {
   callAllHandlers,
-  combineRefs,
+  mergeRefs,
   useControllableState,
 } from '@real-system/utils-library';
 
@@ -289,7 +289,7 @@ const usePinInputField = (
 
   const inputProps = getInputProps({
     ...props,
-    ref: combineRefs(register, ref),
+    ref: mergeRefs(register, ref),
     index,
   });
 
