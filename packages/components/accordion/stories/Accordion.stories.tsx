@@ -8,7 +8,7 @@ import {
   DisclosureHeading,
   DisclosureToggle,
   DisclosureTrigger,
-} from '@real-system/Disclosure';
+} from '@real-system/disclosure';
 
 export default {
   title: 'Components/Accordion',

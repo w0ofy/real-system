@@ -5,7 +5,7 @@ import {
   Disclosure,
   DisclosureContent,
   DisclosureToggle,
-} from '@real-system/Disclosure';
+} from '@real-system/disclosure';
 import { real } from '@real-system/elements-primitive';
 
 export default {
