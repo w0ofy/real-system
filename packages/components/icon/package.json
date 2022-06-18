@@ -1,6 +1,6 @@
 {
   "name": "@real-system/icon",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "description": "icon component for real system",
   "status": "production",
   "main": "lib/index.js",
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/elements-primitive": "^0.0.8",
-    "@real-system/styled-library": "^0.0.6",
+    "@real-system/elements-primitive": "^0.0.9",
+    "@real-system/styled-library": "^0.0.7",
     "@real-system/utils-library": "^0.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -40,8 +40,8 @@
     "@heroicons/react": "^1.0.6"
   },
   "devDependencies": {
-    "@real-system/elements-primitive": "^0.0.8",
-    "@real-system/styled-library": "^0.0.6",
+    "@real-system/elements-primitive": "^0.0.9",
+    "@real-system/styled-library": "^0.0.7",
     "@real-system/utils-library": "^0.0.21",
     "concurrently": "^7.2.2",
     "react": "^18.2.0",
