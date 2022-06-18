@@ -1,5 +1,14 @@
 # @real-system/typography
 
+## 0.0.46
+
+### Patch Changes
+
+- Updated dependencies [[`ef8da0f`](https://github.com/bigwoof91/real-system/commit/ef8da0f7fb3bac4ee4d5ed7fc58788c0d9fd0dfe)]:
+  - @real-system/styled-library@0.0.7
+  - @real-system/visually-hidden@0.0.41
+  - @real-system/elements-primitive@0.0.9
+
 ## 0.0.45
 
 ### Patch Changes

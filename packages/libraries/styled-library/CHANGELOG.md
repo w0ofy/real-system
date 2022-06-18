@@ -1,5 +1,11 @@
 # @real-system/styled-library
 
+## 0.0.7
+
+### Patch Changes
+
+- [#504](https://github.com/bigwoof91/real-system/pull/504) [`ef8da0f`](https://github.com/bigwoof91/real-system/commit/ef8da0f7fb3bac4ee4d5ed7fc58788c0d9fd0dfe) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Minor bump emotion from 11.8.x to 11.9.x
+
 ## 0.0.6
 
 ### Patch Changes
