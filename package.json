@@ -55,7 +55,7 @@
     "build:core": "yarn workspace @real-system/core run build",
     "build:pkg": "node tools/build-package.js",
     "build:playroom": "playroom build",
-    "build:storybook": "build-storybook -o ./storybook -c .storybook && yarn build:playroom",
+    "build:storybook": "build-storybook -o ./storybook -c .storybook -s .storybook/static && yarn build:playroom",
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
     "dev": "node ./tools/run-workspace-dev --select=true --with=yarn:storybook,yarn:playroom",

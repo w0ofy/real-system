@@ -36,15 +36,16 @@ module.exports = {
       }),
     ];
 
-    config.resolve.plugins = [...config.resolve.plugins, ...customPlugins];
+    config.resolve.plugins = [
+      ...(config.resolve.plugins || []),
+      ...customPlugins,
+    ];
     config.resolve.alias = {
-      ...config.resolve.alias,
+      ...(config.resolve.alias || {}),
       '@emotion/core': '@emotion/react',
       '@emotion/styled': '@emotion/styled',
       'emotion-theming': '@emotion/react',
     };
-
-    console.table(config.resolve.alias);
 
     return config;
   },
