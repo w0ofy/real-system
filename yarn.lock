@@ -2406,19 +2406,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/core@npm:^0.7.2":
-  version: 0.7.2
-  resolution: "@floating-ui/core@npm:0.7.2"
-  checksum: 3c25d52b8944d38ba0045580d03f6b7bf03b95aab3dfa90f18f147a43f6d1dbac6ef6f5056bdd0bb7e70f9e39fd3f8b401bae1cab3862f60be8aa0e4190ecb23
+"@floating-ui/core@npm:^0.7.3":
+  version: 0.7.3
+  resolution: "@floating-ui/core@npm:0.7.3"
+  checksum: f48f9fb0d19dcbe7a68c38e8de7fabb11f0c0e6e0ef215ae60b5004900bacb1386e7b89cb377d91a90ff7d147ea1f06c2905136ecf34dea162d9696d8f448d5f
   languageName: node
   linkType: hard
 
-"@floating-ui/dom@npm:0.5.2":
-  version: 0.5.2
-  resolution: "@floating-ui/dom@npm:0.5.2"
+"@floating-ui/dom@npm:0.5.3":
+  version: 0.5.3
+  resolution: "@floating-ui/dom@npm:0.5.3"
   dependencies:
-    "@floating-ui/core": ^0.7.2
-  checksum: ff0897abed2e97a8d134b4dd8fa5309553eda3c25dbc2dbe8f7564b3eeac93d21d9334ae7c1ba1f1e5442ed119d82d2ce6935cd4ff607da1c0c6a913c493f5fc
+    "@floating-ui/core": ^0.7.3
+  checksum: 1c74f48c2baff45db24403028f5936f7121cf2daf27d912be2d5796910ccf8290e53ef41873a862ef527a4274b195085e4c5c59911dae7cc638e71a95bc45aca
   languageName: node
   linkType: hard
 
@@ -3768,7 +3768,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
-    ariakit: 2.0.0-next.29
+    ariakit: 2.0.0-next.30
     concurrently: ^7.2.2
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -8540,25 +8540,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit-utils@npm:0.17.0-next.20":
-  version: 0.17.0-next.20
-  resolution: "ariakit-utils@npm:0.17.0-next.20"
+"ariakit-utils@npm:0.17.0-next.21":
+  version: 0.17.0-next.21
+  resolution: "ariakit-utils@npm:0.17.0-next.21"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
-  checksum: df53d6826a8cec8dd872e557a25afdc1c863e174bbb024319e1f3b9403220191a2d8926f6d3d6e7dd5d630dac2b790984574abd3b7c93ca0ac12ff1b76b368e1
+  checksum: d6c9b2eb4af3209ac045cec7c6f04e0522ec5e3754f09ba8a5742094138eef65cfdbfdde014e8125d794a537b14e53d615867384021f2b61047177257f94d301
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-next.29":
-  version: 2.0.0-next.29
-  resolution: "ariakit@npm:2.0.0-next.29"
+"ariakit@npm:2.0.0-next.30":
+  version: 2.0.0-next.30
+  resolution: "ariakit@npm:2.0.0-next.30"
   dependencies:
-    "@floating-ui/dom": 0.5.2
-    ariakit-utils: 0.17.0-next.20
+    "@floating-ui/dom": 0.5.3
+    ariakit-utils: 0.17.0-next.21
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 01ad877bc94ea6678498c129a26156aca759896a8e2839209ec6d21a0a61d4444c9200ad24dded38ed2531b34eff555e70d3f3fb5fe20a254f16f39d433e5c59
+  checksum: c2ebce59b893b43ab65a30fb47c397c4cef6f4c625fd4323825ccc7c08e7ab5eadce08df3842aa691f0cb0b7e34420e03d6910f8ee666f0eb8a64314cb8406c7
   languageName: node
   linkType: hard
 
