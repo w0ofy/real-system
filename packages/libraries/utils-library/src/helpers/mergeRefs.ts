@@ -32,10 +32,10 @@ function assignRef<T = any>(ref: ReactRef<T> | undefined, value: T) {
 /**
  * Combine many React refs into a single ref fn
  */
-function combineRefs<T>(...refs: (ReactRef<T> | undefined)[]) {
+function mergeRefs<T>(...refs: (ReactRef<T> | undefined)[]) {
   return (node: T | null) => {
     refs.forEach((ref) => assignRef(ref, node));
   };
 }
 
-export { combineRefs };
+export { mergeRefs };

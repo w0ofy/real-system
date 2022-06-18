@@ -1,9 +1,19 @@
-import type { AnimatedProps, UseTransitionProps } from 'react-spring';
-import { animated, config, useTransition } from 'react-spring';
+import type {
+  AnimatedProps,
+  UseSpringProps,
+  UseTransitionProps,
+} from 'react-spring';
+import {
+  animated,
+  config,
+  useSpring,
+  useSpringRef,
+  useTransition,
+} from 'react-spring';
 
 /** library tools */
-export type { AnimatedProps, UseTransitionProps };
-export { animated, config, useTransition };
+export type { AnimatedProps, UseSpringProps, UseTransitionProps };
+export { animated, config, useSpring, useSpringRef, useTransition };
 
 /** maintained by us */
 export * from './useReducedMotion';

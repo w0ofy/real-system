@@ -1,3 +1,4 @@
+export * from '@real-system/accordion';
 export * from '@real-system/alert';
 export * from '@real-system/alert-primitive';
 export * from '@real-system/aspect-ratio';
@@ -8,6 +9,8 @@ export * from '@real-system/button-primitive';
 export * from '@real-system/checkbox';
 export * from '@real-system/dialog';
 export * from '@real-system/dialog-primitive';
+export * from '@real-system/disclosure';
+export * from '@real-system/disclosure-primitive';
 export * from '@real-system/elements-primitive';
 export * from '@real-system/field';
 export * from '@real-system/flex';

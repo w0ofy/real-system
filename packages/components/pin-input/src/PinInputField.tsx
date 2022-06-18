@@ -25,7 +25,7 @@ const StyledInput = styled('input')({
   resize: 'none',
   _placeholder: {
     color: 'gray-200',
-    transition: '150ms all ease-in',
+    transition: 'all 0.15s ease-in',
     fontWeight: 'placeholder',
   },
   _hover_placeholder: {
@@ -36,7 +36,7 @@ const StyledInput = styled('input')({
   },
   _focus: { outline: 'none' },
   _disabled: { cursor: 'default' },
-  transition: '0.25s all ease-out',
+  transition: 'all 0.2s ease-out',
 });
 
 type PinInputFieldProps = RealSystemComponentProps<'input'>;
