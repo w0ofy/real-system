@@ -28,7 +28,7 @@ Components are deemed components if they are elemental and can be composed with 
 
 ---
 
-## **Core**
+### **Core**
 
 Core is the culmination of all the above packages and provides consumers with the entire Real System library. Core is automatically generated based on the packages co-located in `components/`, `libraries/` and `primitives/`. Contributors shouldn't generally modify Core's `src/` directory. From time to time, Core's `tools/` may need updating.
 
