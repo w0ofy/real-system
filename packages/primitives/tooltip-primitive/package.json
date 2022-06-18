@@ -1,6 +1,6 @@
 {
   "name": "@real-system/tooltip-primitive",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Tooltip primitive components for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/ariakit-library": "^0.0.11",
+    "@real-system/ariakit-library": "^0.0.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/ariakit-library": "^0.0.11",
+    "@real-system/ariakit-library": "^0.0.12",
     "concurrently": "^7.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
