@@ -4,7 +4,7 @@
 <a href="https://www.npmjs.com/package/@real-system/button-primitive"><img src="https://badgen.net/npm/v/@real-system/button-primitive?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
 </p>
 
-## Usage
+## Installation
 
 ```bash
 # install peer dependencies

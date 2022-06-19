@@ -4,7 +4,7 @@
 <a href="https://www.npmjs.com/package/@real-system/ariakit-library"><img src="https://badgen.net/npm/v/@real-system/ariakit-library?label=&icon=npm&color=blue" alt="npm version" height="18"/></a>
 </p>
 
-## Usage
+## Installation
 
 ```bash
 # install peer dependencies

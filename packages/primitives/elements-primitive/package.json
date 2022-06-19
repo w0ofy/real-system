@@ -1,7 +1,7 @@
 {
   "name": "@real-system/elements-primitive",
   "version": "0.0.9",
-  "description": "Element primitives with style props for real system.",
+  "description": "Element primitives with built-in style props for real system.",
   "status": "production",
   "main": "lib/index.js",
   "main:dev": "src/index.ts",
