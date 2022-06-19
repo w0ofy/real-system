@@ -10,7 +10,11 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-viewport',
     'storybook-addon-playroom',
+    '@storybook/addon-interactions',
   ],
+  features: {
+    interactionsDebugger: true,
+  },
   typescript: {
     // enable type checking
     check: true,

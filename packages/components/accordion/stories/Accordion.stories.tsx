@@ -74,7 +74,7 @@ export const AllowMultiple = (args) => (
   </Accordion>
 );
 
-export const DefaultExapnded = (args) => (
+export const DefaultExpanded = (args) => (
   <Accordion {...args} defaultExpanded={{ 1: true }}>
     <AccordionItem />
     <AccordionItem />

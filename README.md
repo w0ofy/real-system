@@ -1,51 +1,58 @@
+<h1 align="center"><img src="assets/rs-icon.png" width="20px"  /> Real System</h1>
+
+<p align="center">**A react design system that is easily extendable and ready-to-theme.**</p>
+
 <p align="center">
-<img src="assets/animated-logo.gif" width="350px"  />
-</p>
-<p align="center">A react component system that is easily extendable and ready-to-theme.</p>
-<p align="center">
-<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
-<a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=@realsystem/core&color=blue" alt="npm version" height="18"/></a>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a> <a href="https://www.npmjs.com/package/@real-system/core"><img src="https://badgen.net/npm/v/@real-system/core?label=@realsystem/core&color=blue" alt="npm version" height="18"/></a>
 </p>
 
-<p align="center"><strong>⚠️⚠️⚠️ CONSUMER CAUTION ⚠️⚠️⚠️</strong></p>
-<p align="center"><strong>Under heavy development. API breaking changes will likely occur upon every patch release until a major release cut.</strong></p>
+---
 
-#### **The entire library can be installed via [@real-system/core](packages/core)**
+<h2 align="center">⚠️ CONSUMER CAUTION ⚠️</h2>
+
+<p align="center">Real System is under heavy development. API breaking changes will likely occur upon every release until a major release cut.</p>
+
+---
+
+## Getting Started
+
+### **The entire library can be installed via [@real-system/core](packages/core)**
 
 - It is recommended that every component be imported by accessing subfolders e.g. `@real-system/core/button`. This resolves the need to treeshake `@real-system/core` at compile time. Real System's `libraries` can only be exported from core subfolders e.g. `@real-system/core/styling-library`. This is intentional - libraries have many exports which have ambiguous name clashes with many component-module exports.
 
-#### **Every component is its own package via `@real-system/<name-of-pkg>`** ([components](packages/components), [libraries](packages/libraries), [primitives](packages/primitives))
+### **Every component is its own package via `@real-system/<name-of-pkg>`** ([components](packages/components), [libraries](packages/libraries), [primitives](packages/primitives))
 
 - This supports a superior DX. Imagine a product team simply wants to use the Real System `Button`... we don't want teams to have to install the **_entire_** library, which delays automation pipelines and local development, only to use 1 component. Additionally, if you have `core` installed and only want to upgrade 1 component versus the entire `core`, you can independently install the package you want to upgrade.
 
 <hr />
 
-# Installation
+## Installation
 
-```bash
-# install peer dependencies
 
-# npm
+```sh
+# 1. Install peer dependencies
+
 $ npm install react react-dom
-# yarn
+
+# or
 $ yarn add react react-dom
 
-# install core
+# 2. Install core package
 
-# npm
 $ npm install @real-system/core
-# yarn
+
+# or
 $ yarn add @real-system/core
 
 # or install individual packages (remember, some packages peer-depend on other real system packages)
 
-# npm
 $ npm install @real-system/styled-library @real-system/utils-library @real-system/button
-# yarn
+
+# or
 $ yarn add @real-system/styled-library @real-system/utils-library @real-system/button
 ```
 
-# Usage
+## Usage
 
 ```jsx
 import { ThemeProvider } from '@real-system/core/theme-library';
@@ -68,7 +75,7 @@ const MyComponent = () => {
 };
 ```
 
-# Local Dev
+## Local Dev
 
 Some notes before you begin.
 
@@ -106,7 +113,7 @@ $ git push origin <branch_name>
 
 ## Under the hood
 
-Real System uses the following projects which drive the majority of component compositions and patterns.
+Real System uses the following projects which drive the majority of component composition patterns.
 
 - [ariakit](https://github.com/ariakit/ariakit)
 - [@emotion/react](https://emotion.sh/docs/@emotion/react)
