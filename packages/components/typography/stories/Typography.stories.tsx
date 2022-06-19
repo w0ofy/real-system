@@ -8,6 +8,13 @@ import { Text } from '@real-system/typography';
 export default {
   title: 'Components/Typography',
   component: Text,
+  subcomponents: {
+    Heading: Text.Heading,
+    HelpText: Text.HelpText,
+    Label: Text.Label,
+    Code: Text.Code,
+    Truncate: Text.Truncate,
+  },
   args: {
     children: 'The quick brown fox jumps over the lazy dog',
   },
@@ -95,4 +102,12 @@ export const Code = () => (
       </Text.Code>
     </Flex>
   </Flex>
+);
+
+export const TruncateText = (args) => (
+  <Box maxWidth="17rem">
+    <Text>
+      <Text.Truncate {...args} />
+    </Text>
+  </Box>
 );

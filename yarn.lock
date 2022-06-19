@@ -4070,7 +4070,6 @@ __metadata:
     "@real-system/toaster": ^0.0.30
     "@real-system/tooltip": ^0.0.23
     "@real-system/tooltip-primitive": ^0.0.7
-    "@real-system/truncate": ^0.0.23
     "@real-system/typography": ^0.0.46
     "@real-system/utils-library": ^0.0.21
     "@real-system/visually-hidden": ^0.0.41
@@ -4713,26 +4712,6 @@ __metadata:
     "@real-system/styled-library": ^0.0.7
     "@real-system/tooltip-primitive": ^0.0.7
     "@real-system/typography": ^0.0.46
-    "@real-system/utils-library": ^0.0.21
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@real-system/truncate@^0.0.23, @real-system/truncate@workspace:packages/components/truncate":
-  version: 0.0.0-use.local
-  resolution: "@real-system/truncate@workspace:packages/components/truncate"
-  dependencies:
-    "@real-system/elements-primitive": ^0.0.9
-    "@real-system/styled-library": ^0.0.7
-    "@real-system/utils-library": ^0.0.21
-    concurrently: ^7.2.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    typescript: ^4.7.4
-  peerDependencies:
-    "@real-system/elements-primitive": ^0.0.9
-    "@real-system/styled-library": ^0.0.7
     "@real-system/utils-library": ^0.0.21
     react: ^18.2.0
     react-dom: ^18.2.0
