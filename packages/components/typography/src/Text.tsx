@@ -5,6 +5,7 @@ import { Code } from './Code';
 import { Heading } from './Heading';
 import { HelpText } from './HelpText';
 import { Label } from './Label';
+import { Truncate } from './Truncate';
 import { CommonTextProps, TextAsTags } from './types';
 
 export type TextProps = {
@@ -19,6 +20,7 @@ export interface TextComponent
   Label: typeof Label;
   HelpText: typeof HelpText;
   Code: typeof Code;
+  Truncate: typeof Truncate;
 }
 
 /**
@@ -48,5 +50,6 @@ Text.Heading = Heading;
 Text.Label = Label;
 Text.HelpText = HelpText;
 Text.Code = Code;
+Text.Truncate = Truncate;
 
 export { Text };

@@ -4,3 +4,4 @@ export * from './Heading';
 export * from './HelpText';
 export * from './Label';
 export * from './Text';
+export * from './Truncate';
