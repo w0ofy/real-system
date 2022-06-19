@@ -23,7 +23,9 @@ export const Showcase = (args) => {
   return (
     <Box width="27rem">
       <Container>
-        <Label htmlFor="input">Text (default)</Label>
+        <Label mb={4} htmlFor="input">
+          Text (default)
+        </Label>
         <RealInput
           id="input"
           name="email-address"
@@ -32,7 +34,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-1">Email</Label>
+        <Label mb={4} htmlFor="input-1">
+          Email
+        </Label>
         <RealInput
           type="email"
           id="input-1"
@@ -42,7 +46,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-2">Number</Label>
+        <Label mb={4} htmlFor="input-2">
+          Number
+        </Label>
         <RealInput
           type="number"
           id="input-2"
@@ -52,7 +58,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-3">With prefix</Label>
+        <Label mb={4} htmlFor="input-3">
+          With prefix
+        </Label>
         <RealInput
           type="email"
           id="input-3"
@@ -63,7 +71,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-4">With suffix</Label>
+        <Label mb={4} htmlFor="input-4">
+          With suffix
+        </Label>
         <RealInput
           type="email"
           id="input-4"
@@ -78,7 +88,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-5">Password with Readonly</Label>
+        <Label mb={4} htmlFor="input-5">
+          Password with Readonly
+        </Label>
         <RealInput
           readOnly
           type="password"
@@ -94,7 +106,7 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-6" disabled>
+        <Label mb={4} htmlFor="input-6" disabled>
           Disabled
         </Label>
         <RealInput
@@ -131,7 +143,9 @@ export const Composition = (args) => {
   return (
     <Box width="27rem">
       <Container>
-        <Label htmlFor="input-1">Email (required)</Label>
+        <Label mb={4} htmlFor="input-1">
+          Email (required)
+        </Label>
         <RealInput
           type="email"
           id="input-1"
@@ -142,7 +156,7 @@ export const Composition = (args) => {
         <HelpText>Use your personal email address.</HelpText>
       </Container>
       <Container>
-        <Label htmlFor="input" required>
+        <Label mb={4} htmlFor="input" required>
           Email (required with error)
         </Label>
         <RealInput
@@ -166,7 +180,9 @@ export const Composition = (args) => {
         </HelpText>
       </Container>
       <Container>
-        <Label htmlFor="input-2">Email (prefix)</Label>
+        <Label mb={4} htmlFor="input-2">
+          Email (prefix)
+        </Label>
         <RealInput
           type="email"
           id="input-2"
@@ -177,7 +193,9 @@ export const Composition = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-3">Email (suffix)</Label>
+        <Label mb={4} htmlFor="input-3">
+          Email (suffix)
+        </Label>
         <RealInput
           type="email"
           id="input-3"
@@ -192,7 +210,9 @@ export const Composition = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-4">Email (readonly)</Label>
+        <Label mb={4} htmlFor="input-4">
+          Email (readonly)
+        </Label>
         <RealInput
           readOnly
           type="email"
@@ -218,7 +238,7 @@ export const Composition = (args) => {
         />
       </Container>
       <Container>
-        <Label htmlFor="input-5" disabled>
+        <Label mb={4} htmlFor="input-5" disabled>
           Email (disabled)
         </Label>
         <RealInput
