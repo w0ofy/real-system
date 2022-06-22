@@ -15,16 +15,16 @@ const defaultStyles: StylishProps = {
   boxSizing: 'border-box',
   overflow: 'hidden',
   borderBottom: '1px solid',
-  borderColor: 'gray-100',
+  borderColor: 'transparent',
   height: 0,
-  transition: 'height .25s ease-in-out',
+  transition: 'height .25s ease, border-color .25s ease',
 };
 
 const containedStyles: StylishProps = {
   ...defaultStyles,
   borderWidth: '1px',
   borderStyle: 'solid',
-  borderColor: 'gray-100',
+  borderColor: 'transparent',
   borderTopWidth: 0,
   borderBottomLeftRadius: 4,
   borderBottomRightRadius: 4,
@@ -43,8 +43,9 @@ const DisclosureContent = React.forwardRef<
     return {
       _enter: {
         height: `${blockSize}px`,
+        borderColor: 'gray-100',
       },
-      _leave: { height: 0 },
+      _leave: { height: 0, borderColor: 'transparent' },
     };
   }, [blockSize]);
 

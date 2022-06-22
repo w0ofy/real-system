@@ -11,12 +11,12 @@ type AspectRatioOptions = {
    * The aspect ratio of the container i.e. `21/9`, `16/9`, `9/16`, `4/3`, `1.85/1`
    */
   ratio?: ResponsiveValue<number>;
-  children?: React.ReactChild;
+  children?: React.ReactNode;
 };
 
 type AspectRatioProps = AspectRatioOptions & RealSystemComponentProps<'div'>;
 
-const StyledBox = styled('div')({
+const StyledDiv = styled('div')({
   '& > *:not(style)': {
     overflow: 'hidden',
     position: 'absolute',
@@ -46,7 +46,7 @@ const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
     const child = React.Children.only(children);
 
     return (
-      <StyledBox
+      <StyledDiv
         ref={ref}
         position="relative"
         _before={{
@@ -58,7 +58,7 @@ const AspectRatio = forwardRef<HTMLDivElement, AspectRatioProps>(
         data-testid={makeTestId('aspect-ratio')}
         {...restProps}>
         {child}
-      </StyledBox>
+      </StyledDiv>
     );
   }
 );
