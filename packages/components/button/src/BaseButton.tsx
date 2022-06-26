@@ -3,26 +3,24 @@ import React, { forwardRef } from 'react';
 import { ButtonPrimitive } from '@real-system/button-primitive';
 import styled, { RealSystemComponentProps } from '@real-system/styled-library';
 
-/**
- * @todo find a better way to merge base styles with Button component API styles i.e. _active style props; boxShadow
- */
 const StyledBaseButton = styled(ButtonPrimitive)({
   appearance: 'none',
-  color: 'gray-500',
-  background: 'none',
+  position: 'relative',
   display: 'inline-flex',
   flexWrap: 'nowrap',
   alignItems: 'center',
   justifyContent: 'center',
+  whiteSpace: 'nowrap',
   border: 1,
   borderRadius: 4,
-  transition:
-    'background-color 200ms ease-out, box-shadow 200ms ease-in, border-color 200ms ease-in, color 200ms ease-out',
+  color: 'gray-500',
+  background: 'none',
   fontScale: 'button',
   fontFamily: 'body',
   fontWeight: 'button',
   textDecoration: 'none',
-  position: 'relative',
+  transition:
+    'background-color 200ms ease-out, box-shadow 200ms ease-in, border-color 200ms ease-in, color 200ms ease-out',
   margin: 0,
   cursor: 'pointer',
   _hover: {},

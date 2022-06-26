@@ -29,6 +29,8 @@ type PropUnion<T> = ObjUnion<T>;
 type RequireSome<T extends Obj, S extends keyof T> = Omit<T, S> &
   Required<Pick<T, S>>;
 
+type OmitAndJoinProps<T extends Obj, S extends Obj> = Omit<T, keyof S> & S;
+
 export type {
   Booleanish,
   Dict,
@@ -37,6 +39,7 @@ export type {
   Merge,
   Obj,
   ObjUnion,
+  OmitAndJoinProps,
   PropUnion,
   RequireSome,
   StringOrNumber,

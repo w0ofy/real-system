@@ -10,6 +10,7 @@ import { isStylishProp } from '../props';
 import type {
   CSSObject,
   RealSystemComponent,
+  StyledComponentProps,
   StyleObjectOrFn,
 } from './styled.types';
 import type { As } from './styled.types.helpers';
@@ -77,7 +78,7 @@ type RealSystemStyledOptions = {
 function styled<T extends As>(component: T, options?: RealSystemStyledOptions) {
   return function createStyledComponent<P extends Dict = Dict>(
     /** @todo allow passing of multiple args/string literal */
-    styles: StyleObjectOrFn<P> = {}
+    styles: StyleObjectOrFn<StyledComponentProps<P>> = {}
   ) {
     const { baseStyles, ...styledOptions } = options ?? {};
 

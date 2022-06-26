@@ -12,9 +12,9 @@ type DisclosureContext = {
   state: DisclosureState;
 } & CustomProps;
 
-const [DisclosureContextProvider, useDisclosureStateContext] = constate(
+const [DisclosureContextProvider, useDisclosureContext] = constate(
   (props: DisclosureContext) => props
 );
 
 export type { DisclosureContext, DisclosureState, DisclosureStateProps };
-export { DisclosureContextProvider, useDisclosureStateContext };
+export { DisclosureContextProvider, useDisclosureContext };

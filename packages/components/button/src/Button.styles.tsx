@@ -1,7 +1,7 @@
 import type { StylishProps } from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
-import type { ButtonProps, ButtonSize } from './types';
+import type { ButtonProps, ButtonSize } from './Button.model';
 
 const sizes: Record<ButtonSize, StylishProps> = {
   xxs: {
@@ -43,10 +43,7 @@ const sizes: Record<ButtonSize, StylishProps> = {
 
 const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
 
-const getCursorStyle = (loading) =>
-  loading ? { cursor: 'wait' } : { cursor: 'default' };
-
-type Params = Required<Pick<ButtonProps, 'size' | 'loading' | 'colorScheme'>>;
+type Params = Required<Pick<ButtonProps, 'size' | 'colorScheme'>>;
 
 /**
  * @todo modularize this kind of function in styled-library
@@ -62,7 +59,7 @@ const ifGray = (
  * @todo lighten fill variant if color scheme is gray
  */
 const buttonStylesConfig = {
-  floating: ({ size, loading, colorScheme }: Params) =>
+  floating: ({ size, colorScheme }: Params) =>
     mergeStyles(size, {
       padding: 0,
       height: 'auto',
@@ -80,11 +77,10 @@ const buttonStylesConfig = {
         color: `${colorScheme}-800`,
       },
       _disabled: {
-        ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
       },
     }),
-  minimal: ({ size, colorScheme, loading }: Params) =>
+  minimal: ({ size, colorScheme }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${maybeOrange(colorScheme)}`,
       backgroundColor: 'transparent',
@@ -101,12 +97,11 @@ const buttonStylesConfig = {
         backgroundColor: `${colorScheme}-100`,
       },
       _disabled: {
-        ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         backgroundColor: `${colorScheme}-50`,
       },
     }),
-  fill: ({ size, colorScheme, loading }: Params) =>
+  fill: ({ size, colorScheme }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${ifGray(colorScheme, '200', '500')}-readable`,
       backgroundColor: `${colorScheme}-${ifGray(colorScheme, '100', '500')}`,
@@ -121,12 +116,11 @@ const buttonStylesConfig = {
         backgroundColor: `${colorScheme}-${ifGray(colorScheme, '300', '700')}`,
       },
       _disabled: {
-        ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         backgroundColor: `${colorScheme}-50`,
       },
     }),
-  outline: ({ size, colorScheme, loading }: Params) =>
+  outline: ({ size, colorScheme }: Params) =>
     mergeStyles(size, {
       color: `${colorScheme}-${maybeOrange(colorScheme)}`,
       backgroundColor: 'transparent',
@@ -145,7 +139,6 @@ const buttonStylesConfig = {
         borderColor: `${colorScheme}-500`,
       },
       _disabled: {
-        ...getCursorStyle(loading),
         color: `${colorScheme}-300`,
         borderColor: `${colorScheme}-200`,
       },
