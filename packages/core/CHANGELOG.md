@@ -1,5 +1,58 @@
 # @real-system/core
 
+## 0.0.51
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
+- Updated dependencies [[`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42)]:
+  - @real-system/accordion@0.0.4
+  - @real-system/alert@0.0.33
+  - @real-system/aspect-ratio@0.0.19
+  - @real-system/badge@0.0.17
+  - @real-system/box@0.0.21
+  - @real-system/button@0.0.49
+  - @real-system/checkbox@0.0.34
+  - @real-system/dialog@0.0.41
+  - @real-system/disclosure@0.0.4
+  - @real-system/field@0.0.26
+  - @real-system/flex@0.0.40
+  - @real-system/icon@0.0.47
+  - @real-system/input@0.0.47
+  - @real-system/link@0.0.18
+  - @real-system/menu@0.0.20
+  - @real-system/pin-input@0.0.13
+  - @real-system/popover@0.0.24
+  - @real-system/radio-group@0.0.27
+  - @real-system/select@0.0.15
+  - @real-system/separator@0.0.16
+  - @real-system/spinner@0.0.45
+  - @real-system/stack@0.0.7
+  - @real-system/textarea@0.0.31
+  - @real-system/toaster@0.0.32
+  - @real-system/tooltip@0.0.25
+  - @real-system/typography@0.0.48
+  - @real-system/visually-hidden@0.0.43
+  - @real-system/a11y-library@0.0.9
+  - @real-system/animation-library@0.0.14
+  - @real-system/ariakit-library@0.0.14
+  - @real-system/descendants-library@0.0.6
+  - @real-system/state-library@0.0.13
+  - @real-system/styled-library@0.0.9
+  - @real-system/utils-library@0.0.23
+  - @real-system/alert-primitive@0.0.13
+  - @real-system/button-primitive@0.0.35
+  - @real-system/dialog-primitive@0.0.25
+  - @real-system/disclosure-primitive@0.0.3
+  - @real-system/elements-primitive@0.0.11
+  - @real-system/menu-primitive@0.0.9
+  - @real-system/popover-primitive@0.0.9
+  - @real-system/portal-primitive@0.0.13
+  - @real-system/select-primitive@0.0.9
+  - @real-system/separator-primitive@0.0.9
+  - @real-system/tooltip-primitive@0.0.9
+
 ## 0.0.50
 
 ### Patch Changes

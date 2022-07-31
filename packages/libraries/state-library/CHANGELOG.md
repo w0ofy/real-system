@@ -1,5 +1,11 @@
 # @real-system/state
 
+## 0.0.13
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
 ## 0.0.12
 
 ### Patch Changes

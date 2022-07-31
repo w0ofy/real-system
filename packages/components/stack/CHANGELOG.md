@@ -1,5 +1,16 @@
 # @real-system/stack
 
+## 0.0.7
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
+- Updated dependencies [[`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42)]:
+  - @real-system/styled-library@0.0.9
+  - @real-system/utils-library@0.0.23
+  - @real-system/elements-primitive@0.0.11
+
 ## 0.0.6
 
 ### Patch Changes

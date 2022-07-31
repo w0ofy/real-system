@@ -1,5 +1,14 @@
 # @real-system/disclosure-primitive
 
+## 0.0.3
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
+- Updated dependencies [[`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42)]:
+  - @real-system/ariakit-library@0.0.14
+
 ## 0.0.2
 
 ### Patch Changes

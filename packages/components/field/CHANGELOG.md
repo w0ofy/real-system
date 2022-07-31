@@ -1,5 +1,16 @@
 # @real-system/field
 
+## 0.0.26
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
+- Updated dependencies [[`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42)]:
+  - @real-system/flex@0.0.40
+  - @real-system/typography@0.0.48
+  - @real-system/styled-library@0.0.9
+
 ## 0.0.25
 
 ### Patch Changes
