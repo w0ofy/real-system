@@ -1,5 +1,22 @@
 # @real-system/dialog
 
+## 0.0.41
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
+- Updated dependencies [[`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42)]:
+  - @real-system/button@0.0.49
+  - @real-system/flex@0.0.40
+  - @real-system/typography@0.0.48
+  - @real-system/animation-library@0.0.14
+  - @real-system/state-library@0.0.13
+  - @real-system/styled-library@0.0.9
+  - @real-system/utils-library@0.0.23
+  - @real-system/dialog-primitive@0.0.25
+  - @real-system/elements-primitive@0.0.11
+
 ## 0.0.40
 
 ### Patch Changes

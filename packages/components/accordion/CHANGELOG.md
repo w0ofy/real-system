@@ -1,5 +1,17 @@
 # @real-system/accordion
 
+## 0.0.4
+
+### Patch Changes
+
+- [`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix preventGlobals prop in theme provider
+
+- Updated dependencies [[`0480c6f`](https://github.com/bigwoof91/real-system/commit/0480c6ff0b88a1aa63e572fadf43c55378697f42)]:
+  - @real-system/disclosure@0.0.4
+  - @real-system/a11y-library@0.0.9
+  - @real-system/styled-library@0.0.9
+  - @real-system/utils-library@0.0.23
+
 ## 0.0.3
 
 ### Patch Changes

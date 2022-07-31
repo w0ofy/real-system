@@ -1,6 +1,6 @@
 {
   "name": "@real-system/aspect-ratio",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Aspect ratio component for real system used for sizing media e g image video map.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,14 +30,14 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/styled-library": "^0.0.8",
-    "@real-system/utils-library": "^0.0.22",
+    "@real-system/styled-library": "^0.0.9",
+    "@real-system/utils-library": "^0.0.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/styled-library": "^0.0.8",
-    "@real-system/utils-library": "^0.0.22",
+    "@real-system/styled-library": "^0.0.9",
+    "@real-system/utils-library": "^0.0.23",
     "concurrently": "^7.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
