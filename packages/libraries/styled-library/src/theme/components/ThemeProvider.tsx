@@ -11,16 +11,18 @@ import { GlobalStyles } from './GlobalStyles';
 
 type ThemeProviderProps = {
   theme?: ExtendableThemeShape;
+  preventGlobals?: boolean;
 } & Pick<EmotionThemeProviderProps, 'children'>;
 
 const ThemeProvider = ({
   children,
   theme = themes.realSystem,
+  preventGlobals,
 }: ThemeProviderProps) => {
   return (
     <EmotionThemeProvider theme={theme}>
       <>
-        <GlobalStyles />
+        {preventGlobals && <GlobalStyles />}
         {children}
       </>
     </EmotionThemeProvider>
