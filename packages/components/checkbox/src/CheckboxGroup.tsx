@@ -1,66 +1,44 @@
-import React, { forwardRef } from 'react';
+import * as React from 'react';
 
-import {
-  useCheckboxGroup,
-  useCheckboxGroupState,
-} from '@real-system/a11y-library';
-import { Flex } from '@real-system/flex';
-import { HelpText, Label } from '@real-system/typography';
-import { makeTestId } from '@real-system/utils-library';
+import { CheckboxGroupPrimitive } from '@real-system/checkbox-primitive';
+import { real } from '@real-system/elements-primitive';
+import type { RealSystemChildrenProp } from '@real-system/styled-library';
 
-import { CheckboxGroupContextProvider } from './CheckboxContext';
-import { CheckboxGroupItem } from './CheckboxGroupItem';
-import { CheckboxGroupProps } from './types';
+import { CheckboxGroupProvider } from './Checkbox.context';
+import type { SetCheckboxValue } from './Checkbox.model';
+import type { TreeStateOptions } from './useTreeState';
+import { useTreeState } from './useTreeState';
 
-export interface CheckboxGroupComponent
-  extends React.ForwardRefExoticComponent<CheckboxGroupProps> {
-  Item: typeof CheckboxGroupItem;
-}
+type CheckboxGroupProps = RealSystemChildrenProp & {
+  onChange?: SetCheckboxValue;
+} & Omit<TreeStateOptions, 'setValue'>;
 
-/**
- * @description CheckboxGroup component.
- */
-// @ts-expect-error Item (component) property is defined on the fn object after this is defined
-const CheckboxGroup: CheckboxGroupComponent = forwardRef<
-  HTMLDivElement,
-  CheckboxGroupProps
->(function CheckboxGroup(props, ref) {
-  const state = useCheckboxGroupState(props);
-  const { groupProps, labelProps } = useCheckboxGroup(props, state);
-  const { children, helpText, errorText, required, canSelectAll, orientation } =
-    props;
-
+const CheckboxGroup = ({
+  value,
+  children,
+  onChange,
+  defaultValue = [],
+  items,
+  required = false,
+}: CheckboxGroupProps) => {
+  const state = useTreeState({
+    items,
+    setValue: onChange,
+    defaultValue,
+    value,
+  });
   return (
-    <Flex
-      vertical
-      {...groupProps}
-      data-testid={makeTestId('checkbox-group')}
-      ref={ref}>
-      <Label
-        as="legend"
-        marginBottom={helpText ? 2 : 6}
-        required={required}
-        cursor="default"
-        {...labelProps}>
-        {props.label}
-      </Label>
-      {helpText && <HelpText marginBottom={7}>{helpText}</HelpText>}
-      <Flex
-        vertical={orientation === 'vertical' ? true : false}
-        xAlignContent="left"
-        yAlignContent={orientation === 'vertical' ? 'top' : 'center'}>
-        <CheckboxGroupContextProvider
-          state={{ ...state, errorText, canSelectAll, orientation }}>
-          {children}
-        </CheckboxGroupContextProvider>
-      </Flex>
-      {errorText && <HelpText errorText={errorText} marginBottom={8} />}
-    </Flex>
+    <CheckboxGroupProvider value={{ ...state, required }}>
+      <CheckboxGroupPrimitive
+        as={real.div}
+        display="flex"
+        flexDirection="column"
+        gap={4}
+        sx={{ '& > span[data-real-system="checkbox"]': { marginLeft: 4 } }}>
+        {children}
+      </CheckboxGroupPrimitive>
+    </CheckboxGroupProvider>
   );
-});
+};
 
-CheckboxGroup.Item = CheckboxGroupItem;
-CheckboxGroup.defaultProps = { orientation: 'vertical' };
-
-export type { CheckboxGroupProps };
 export { CheckboxGroup };

@@ -1,92 +1,136 @@
 import * as React from 'react';
+import { action } from '@storybook/addon-actions';
 import { Meta } from '@storybook/react';
 
-import { Box } from '@real-system/box';
-import {
-  Checkbox,
-  CheckboxGroup,
-  CheckboxGroupItem,
-  useIndeterminate,
-} from '@real-system/checkbox';
+import { Checkbox } from '@real-system/checkbox';
 
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
-  subcomponents: { CheckboxGroup: CheckboxGroup, CheckboxGroupItem },
+  subcomponents: {
+    CheckboxGroup: Checkbox.Group,
+    CheckboxGroupLabel: Checkbox.GroupLabel,
+    CheckboxTree: Checkbox.Tree,
+  },
   args: {
     children: 'Give this user "Owner" permissions',
   },
   argTypes: {
-    errorText: { type: 'string' },
-    helpText: { type: 'string' },
-    checked: { type: 'boolean' },
     required: { type: 'boolean' },
-    readonly: { type: 'boolean' },
-    indeterminate: { type: 'boolean' },
-    disabled: { type: 'boolean' },
   },
 } as Meta;
 
-export const Default = (args) => (
-  <Checkbox
-    helpText="Determines if the user has permission to add, edit and delete other users"
-    {...args}
-  />
-);
+export const Default = () => {
+  return <Checkbox>I agree to Real System's terms and conditions</Checkbox>;
+};
 
-export const CheckboxGroupStory = (args) => {
+export const WithHelperText = () => {
   return (
-    <Box display="block" width="34rem">
-      <CheckboxGroup
-        label="What engineering level is the new team member?"
-        defaultValue={['associate']}
-        helpText="Select at least 1 level for the new engineer"
-        {...args}>
-        <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
-        <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
-        <CheckboxGroupItem value="staff">Staff</CheckboxGroupItem>
-        <CheckboxGroupItem value="senior" disabled>
-          Senior
-        </CheckboxGroupItem>
-        <CheckboxGroupItem value="mid" disabled>
-          Mid
-        </CheckboxGroupItem>
-        <CheckboxGroupItem value="associate" disabled>
-          Associate
-        </CheckboxGroupItem>
-      </CheckboxGroup>
-    </Box>
+    <Checkbox helperText="Not to worry, there's no fine print">
+      I agree to Real System's terms and conditions
+    </Checkbox>
+  );
+};
+
+export const CheckboxGroupStory = () => {
+  const [value, setValue] = React.useState<string[]>([]);
+  const items = ['apple', 'pear', 'grape', 'honeydew'];
+  return (
+    <Checkbox.Group
+      items={items}
+      value={value}
+      onChange={(val) => setValue(val)}>
+      <Checkbox.GroupLabel>Choose your favorite fruits</Checkbox.GroupLabel>
+      <Checkbox value={items[0]} helperText="yummy">
+        Apple
+      </Checkbox>
+      <Checkbox value={items[1]} helperText="yummier">
+        Pear
+      </Checkbox>
+      <Checkbox value={items[2]} helperText="yummyier-er">
+        Grape
+      </Checkbox>
+      <Checkbox value={items[3]} helperText="yummiest">
+        Honeydew
+      </Checkbox>
+    </Checkbox.Group>
   );
 };
 
 CheckboxGroupStory.storyName = 'Checkbox Group';
 
-export const Indeterminate = () => {
-  const [checkedItems, setCheckedItems] = React.useState(['associate']);
-
-  const indeterminateValue = 'all';
-  const values = ['principle', 'staff', 'senior', 'mid', 'associate'];
-  const { indeterminateProps, checkBoxGroupProps } = useIndeterminate({
-    values,
-    indeterminateValue,
-    checkedItems,
-    setCheckedItems,
-  });
+export const Indeterminate = (args) => {
+  const items = ['principle', 'staff', 'senior', 'mid', 'associate'];
 
   return (
-    <CheckboxGroup
-      label="What engineering level is the new team member?"
+    <Checkbox.Group items={items} required>
+      <Checkbox.GroupLabel helperText="Select at least 1 level to describe your engineering team">
+        What level of engineering does your team include?
+      </Checkbox.GroupLabel>
+      <Checkbox indeterminate>All</Checkbox>
+      <Checkbox value={items[0]}>Principle</Checkbox>
+      <Checkbox value={items[1]}>Staff</Checkbox>
+      <Checkbox value={items[2]}>Senior</Checkbox>
+      <Checkbox value={items[3]}>Mid</Checkbox>
+      <Checkbox value={items[4]}>Associate</Checkbox>
+    </Checkbox.Group>
+  );
+};
+
+export const IndeterminateTree = (args) => {
+  const [checkedItems, setCheckedItems] = React.useState(['associate']);
+
+  const items = ['principle', 'staff', 'senior', 'mid', 'associate'];
+
+  const handleOnChange = (value) => {
+    action('onChange', { clearOnStoryChange: true });
+    setCheckedItems(value);
+  };
+  return (
+    <Checkbox.Group
+      items={items}
+      onChange={handleOnChange}
       value={checkedItems}
-      helpText="Select at least 1 level for the new engineer"
-      {...checkBoxGroupProps}>
-      <CheckboxGroupItem value={indeterminateValue} {...indeterminateProps}>
-        All
-      </CheckboxGroupItem>
-      <CheckboxGroupItem value={values[0]}>Principle</CheckboxGroupItem>
-      <CheckboxGroupItem value={values[1]}>Staff</CheckboxGroupItem>
-      <CheckboxGroupItem value={values[2]}>Senior</CheckboxGroupItem>
-      <CheckboxGroupItem value={values[3]}>Mid</CheckboxGroupItem>
-      <CheckboxGroupItem value={values[4]}>Associate</CheckboxGroupItem>
-    </CheckboxGroup>
+      defaultValue={['associate']}
+      {...args}>
+      <Checkbox.GroupLabel
+        helperText="Select at least 1 level to describe your engineering team
+">
+        What level of engineering does your team include?
+      </Checkbox.GroupLabel>
+      <Checkbox.Tree>
+        <Checkbox indeterminate>All</Checkbox>
+        <Checkbox value={items[0]}>Principle</Checkbox>
+        <Checkbox value={items[1]}>Staff</Checkbox>
+        <Checkbox value={items[2]}>Senior</Checkbox>
+        <Checkbox value={items[3]}>Mid</Checkbox>
+        <Checkbox value={items[4]}>Associate</Checkbox>
+      </Checkbox.Tree>
+    </Checkbox.Group>
+  );
+};
+
+export const IndeterminateControlled = (args) => {
+  const [checkedItems, setCheckedItems] = React.useState(['associate']);
+
+  const items = ['principle', 'staff', 'senior', 'mid', 'associate'];
+
+  return (
+    <Checkbox.Group
+      items={items}
+      onChange={setCheckedItems}
+      value={checkedItems}
+      defaultValue={['associate']}
+      {...args}>
+      <Checkbox.GroupLabel helperText="Select at least 1 level to describe your engineering team">
+        What level of engineering does your team include?
+      </Checkbox.GroupLabel>
+      <Checkbox indeterminate>All</Checkbox>
+      <Checkbox value={items[0]}>Principle</Checkbox>
+      <Checkbox value={items[1]}>Staff</Checkbox>
+      <Checkbox value={items[2]}>Senior</Checkbox>
+      <Checkbox value={items[3]}>Mid</Checkbox>
+      <Checkbox value={items[4]}>Associate</Checkbox>
+    </Checkbox.Group>
   );
 };

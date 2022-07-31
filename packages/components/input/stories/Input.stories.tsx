@@ -5,7 +5,7 @@ import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { Input as RealInput } from '@real-system/input';
-import { HelpText, Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Input',
@@ -23,9 +23,9 @@ export const Showcase = (args) => {
   return (
     <Box width="27rem">
       <Container>
-        <Label mb={4} htmlFor="input">
+        <Text.Label mb={4} htmlFor="input">
           Text (default)
-        </Label>
+        </Text.Label>
         <RealInput
           id="input"
           name="email-address"
@@ -34,9 +34,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-1">
+        <Text.Label mb={4} htmlFor="input-1">
           Email
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input-1"
@@ -46,9 +46,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-2">
+        <Text.Label mb={4} htmlFor="input-2">
           Number
-        </Label>
+        </Text.Label>
         <RealInput
           type="number"
           id="input-2"
@@ -58,9 +58,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-3">
+        <Text.Label mb={4} htmlFor="input-3">
           With prefix
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input-3"
@@ -71,9 +71,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-4">
+        <Text.Label mb={4} htmlFor="input-4">
           With suffix
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input-4"
@@ -88,9 +88,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-5">
+        <Text.Label mb={4} htmlFor="input-5">
           Password with Readonly
-        </Label>
+        </Text.Label>
         <RealInput
           readOnly
           type="password"
@@ -106,9 +106,9 @@ export const Showcase = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-6" disabled>
+        <Text.Label mb={4} htmlFor="input-6" disabled>
           Disabled
-        </Label>
+        </Text.Label>
         <RealInput
           disabled
           id="input-6"
@@ -143,9 +143,9 @@ export const Composition = (args) => {
   return (
     <Box width="27rem">
       <Container>
-        <Label mb={4} htmlFor="input-1">
+        <Text.Label mb={4} htmlFor="input-1">
           Email (required)
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input-1"
@@ -153,22 +153,22 @@ export const Composition = (args) => {
           placeholder="personal@realsystem.com"
           {...args}
         />
-        <HelpText>Use your personal email address.</HelpText>
+        <Text.HelperText>Use your personal email address.</Text.HelperText>
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input" required>
+        <Text.Label mb={4} htmlFor="input" required>
           Email (required with error)
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input"
           name="email-address"
           placeholder="personal@realsystem.com"
           onChange={(e) => setValue(e.target.value)}
-          error={isEmpty || isNotEmail}
+          invalid={isEmpty || isNotEmail}
           {...args}
         />
-        <HelpText
+        <Text.HelperText
           errorText={
             isEmpty
               ? 'Field is required'
@@ -177,12 +177,12 @@ export const Composition = (args) => {
               : ''
           }>
           Use your personal email address.
-        </HelpText>
+        </Text.HelperText>
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-2">
+        <Text.Label mb={4} htmlFor="input-2">
           Email (prefix)
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input-2"
@@ -193,9 +193,9 @@ export const Composition = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-3">
+        <Text.Label mb={4} htmlFor="input-3">
           Email (suffix)
-        </Label>
+        </Text.Label>
         <RealInput
           type="email"
           id="input-3"
@@ -210,9 +210,9 @@ export const Composition = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-4">
+        <Text.Label mb={4} htmlFor="input-4">
           Email (readonly)
-        </Label>
+        </Text.Label>
         <RealInput
           readOnly
           type="email"
@@ -238,9 +238,9 @@ export const Composition = (args) => {
         />
       </Container>
       <Container>
-        <Label mb={4} htmlFor="input-5" disabled>
+        <Text.Label mb={4} htmlFor="input-5" disabled>
           Email (disabled)
-        </Label>
+        </Text.Label>
         <RealInput
           disabled
           type="email"

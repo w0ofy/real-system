@@ -7,6 +7,7 @@ export * from '@real-system/box';
 export * from '@real-system/button';
 export * from '@real-system/button-primitive';
 export * from '@real-system/checkbox';
+export * from '@real-system/checkbox-primitive';
 export * from '@real-system/dialog';
 export * from '@real-system/dialog-primitive';
 export * from '@real-system/disclosure';

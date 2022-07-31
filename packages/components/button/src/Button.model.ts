@@ -7,8 +7,8 @@ import type {
 } from '@real-system/styled-library';
 import type { OmitAndJoinProps } from '@real-system/utils-library';
 
-export type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
-export type ButtonSize = Extract<
+type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
+type ButtonSize = Extract<
   ThemeSizes,
   'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 >;

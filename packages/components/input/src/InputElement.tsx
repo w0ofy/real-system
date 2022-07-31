@@ -9,7 +9,7 @@ import { InputProps } from './types';
 const getCursor = ({
   disabled,
   readOnly,
-  type,
+  type = 'text',
 }: InputProps): StylishProps['cursor'] => {
   if ((type === 'date' || type === 'time') && !readOnly && !disabled) {
     return 'text';
@@ -21,6 +21,17 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
   function InputElement(props, ref) {
     return (
       <real.input
+        aria-invalid={props.invalid}
+        aria-readonly={props.readOnly}
+        aria-required={props.required}
+        disabled={props.disabled}
+        id={props.id}
+        name={props.name}
+        placeholder={props.placeholder}
+        readOnly={props.readOnly}
+        required={props.required}
+        value={props.value}
+        ref={ref}
         appearance="none"
         display="block"
         width="100%"
@@ -39,7 +50,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         cursor={getCursor(props)}
         outline="none"
         resize="none"
-        ref={ref}
+        transition="0.25s all ease-out"
         _placeholder={{
           color: 'gray-200',
           transition: '150ms all ease-in',
@@ -53,16 +64,6 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         }}
         _focus={{ outline: 'none' }}
         _disabled={{ cursor: 'default' }}
-        transition="0.25s all ease-out"
-        aria-invalid={props['aria-invalid']}
-        aria-readonly={props.readOnly}
-        disabled={props.disabled}
-        id={props.id}
-        name={props.name}
-        placeholder={props.placeholder}
-        readOnly={props.readOnly}
-        required={props.required}
-        value={props.value}
         {...spreadStyleProps(props, {
           display: false,
           width: false,

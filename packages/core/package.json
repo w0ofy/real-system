@@ -36,6 +36,7 @@
     "@real-system/button": "^0.0.50",
     "@real-system/button-primitive": "^0.0.36",
     "@real-system/checkbox": "^0.0.35",
+    "@real-system/checkbox-primitive": "^0.0.0",
     "@real-system/descendants-library": "^0.0.7",
     "@real-system/dialog": "^0.0.42",
     "@real-system/dialog-primitive": "^0.0.26",

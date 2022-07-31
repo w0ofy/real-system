@@ -6,8 +6,7 @@ import { Input } from '@real-system/input';
 import { ThemeProvider } from '@real-system/styled-library';
 
 import { Field, FieldProps } from '../src/Field';
-import { FieldGroup } from '../src/FieldGroup';
-import { FieldGroupProps } from '../src/types';
+import { FieldGroupProps } from '../src/Field.components';
 
 const FieldComponent = (props: FieldProps) => (
   <ThemeProvider theme={TEST_THEME}>
@@ -46,8 +45,7 @@ describe('Field', () => {
   });
   it('renders without builtins', () => {
     render(
-      // @ts-expect-error Testing that the props don't render their associated components
-      <FieldComponent builtIns={false} label="Bad label" helpText={helpText}>
+      <FieldComponent label="Bad label" helpText={helpText}>
         <label htmlFor="input">Good label</label>
         <input id="input" />
       </FieldComponent>
@@ -60,9 +58,9 @@ describe('Field', () => {
 
 const FieldGroupComponent = (props: FieldGroupProps) => (
   <ThemeProvider theme={TEST_THEME}>
-    <FieldGroup {...props}>
+    <Field.Group {...props}>
       <Field />
-    </FieldGroup>
+    </Field.Group>
   </ThemeProvider>
 );
 

@@ -24,7 +24,7 @@ export type InputBoxTypes =
 export type InputBoxProps = {
   children: NonNullable<React.ReactNode>;
   disabled?: boolean;
-  error?: boolean;
+  invalid?: boolean;
   readOnly?: boolean;
   type: InputBoxTypes;
   prefix?: React.ReactNode;
@@ -32,7 +32,12 @@ export type InputBoxProps = {
   addonProps?: Omit<AddonProps, 'children'>;
 } & RealElementPrimitiveProps<'div'>;
 
-type InputBoxStates = 'readonly' | 'hidden' | 'disabled' | 'default' | 'error';
+type InputBoxStates =
+  | 'readonly'
+  | 'hidden'
+  | 'disabled'
+  | 'default'
+  | 'invalid';
 
 const baseStyles: StylishProps = {
   display: 'flex',
@@ -84,7 +89,7 @@ const styles: Record<InputBoxStates, StylishProps> = {
     },
     _active: { borderColor: 'gray-300' },
   }),
-  error: merge(baseStyles, {
+  invalid: merge(baseStyles, {
     borderColor: 'red-500',
     _hover: { borderColor: 'red-600' },
     _focusWithin: {
@@ -108,7 +113,7 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
   (
     {
       disabled,
-      error = false,
+      invalid = false,
       readOnly,
       children,
       type,
@@ -121,14 +126,14 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
   ) => {
     const isHidden = type === 'hidden';
     const isDisabled = disabled && !isHidden;
-    const isDanger = error && !isHidden;
+    const isDanger = invalid && !isHidden;
     const isReadOnly = readOnly && !isHidden;
     let state: InputBoxStates = 'default';
 
     if (isDisabled) {
       state = 'disabled';
     } else if (isDanger) {
-      state = 'error';
+      state = 'invalid';
     } else if (isReadOnly) {
       state = 'readonly';
     } else if (isHidden) {

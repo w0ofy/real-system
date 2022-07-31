@@ -19,7 +19,7 @@ const RequiredDot = ({
       justifyContent="center"
       height="icon-xs"
       marginRight={2}
-      cursor={disabled ? 'default' : 'default'}>
+      cursor="default">
       <real.span
         {...restProps}
         borderRadius="circle"

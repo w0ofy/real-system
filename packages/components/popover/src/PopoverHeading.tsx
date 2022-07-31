@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
 
 import { PopoverHeadingPrimitive } from '@real-system/popover-primitive';
-import { HeadingProps, Text } from '@real-system/typography';
+import type { HeadingProps } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 const StyledHeading = forwardRef<HTMLHeadingElement, HeadingProps>(

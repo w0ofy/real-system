@@ -1,3 +1,3 @@
 export * from './CheckboxControl';
 export * from './CheckboxLabel';
-export * from './CheckboxWrapper';
+export * from './RequiredDot';

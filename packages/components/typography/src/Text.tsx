@@ -3,22 +3,21 @@ import React, { forwardRef } from 'react';
 import { BaseText } from './BaseText';
 import { Code } from './Code';
 import { Heading } from './Heading';
-import { HelpText } from './HelpText';
+import { HelperText } from './HelperText';
 import { Label } from './Label';
 import { Truncate } from './Truncate';
 import { CommonTextProps, TextAsTags } from './types';
 
-export type TextProps = {
+type TextProps = {
   children?: React.ReactNode;
   inline?: boolean;
   as?: TextAsTags;
 } & CommonTextProps;
 
-export interface TextComponent
-  extends React.ForwardRefExoticComponent<TextProps> {
+interface TextComponent extends React.ForwardRefExoticComponent<TextProps> {
   Heading: typeof Heading;
   Label: typeof Label;
-  HelpText: typeof HelpText;
+  HelperText: typeof HelperText;
   Code: typeof Code;
   Truncate: typeof Truncate;
 }
@@ -48,8 +47,9 @@ const Text: TextComponent = forwardRef<
 
 Text.Heading = Heading;
 Text.Label = Label;
-Text.HelpText = HelpText;
+Text.HelperText = HelperText;
 Text.Code = Code;
 Text.Truncate = Truncate;
 
+export type { TextComponent, TextProps };
 export { Text };

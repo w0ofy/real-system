@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import { Box } from '@real-system/box';
 import { Separator } from '@real-system/separator';
 import { Stack, StackSeparator } from '@real-system/stack';
-import { Heading, Text } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Layout/Stack',
@@ -121,7 +121,7 @@ function Feature({ title, children, ...rest }: any) {
       flex="1"
       borderRadius="md"
       {...rest}>
-      <Heading size="h3">{title}</Heading>
+      <Text.Heading size="h3">{title}</Text.Heading>
       <Text mt={7} fontSize="h5" lineHeight="h4">
         {children}
       </Text>

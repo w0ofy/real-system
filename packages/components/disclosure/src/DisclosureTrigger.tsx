@@ -82,7 +82,7 @@ const DisclosureTrigger = ({
   hideToggleIcon,
   ...restProps
 }: DisclosureTriggerProps) => {
-  const { state, ...restContext } = useDisclosureStateContext();
+  const { state, ...restContext } = useDisclosureContext();
   const { open } = state;
 
   return (

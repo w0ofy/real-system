@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 import { useRadioGroup, useRadioGroupState } from '@real-system/a11y-library';
 import { Flex } from '@real-system/flex';
-import { HelpText, Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { Radio } from './Radio';
@@ -30,21 +30,28 @@ const RadioGroup: RadioGroupComponent = forwardRef<
       {...radioGroupProps}
       data-testid={makeTestId('checkbox-group')}
       ref={ref}>
-      <Label
+      <Text.Label
         as="legend"
         required={required}
         marginBottom={helpText ? 2 : 6}
         cursor="default"
         {...labelProps}>
         {label}
-      </Label>
-      {helpText && <HelpText marginBottom={6}>{helpText}</HelpText>}
+      </Text.Label>
+      {helpText && (
+        <Text.HelperText marginBottom={6}>{helpText}</Text.HelperText>
+      )}
       <Flex vertical={orientation === 'vertical' ? true : false}>
         <RadioGroupContextProvider state={{ ...state, orientation, errorText }}>
           {children}
         </RadioGroupContextProvider>
       </Flex>
-      {errorText && <HelpText errorText={errorText} marginBottom={8} />}
+      {errorText && (
+        <Text.HelperText
+          invalid={{ stauts: true, message: errorText }}
+          marginBottom={8}
+        />
+      )}
     </Flex>
   );
 });

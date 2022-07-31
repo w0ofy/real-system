@@ -21,11 +21,11 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
   {
     children,
     as = 'label',
-    disabled,
-    required,
     textProps,
     containerProps,
     cursor = 'pointer',
+    required,
+    disabled,
     ...restProps
   },
   ref

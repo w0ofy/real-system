@@ -1,31 +1,24 @@
 import React, { useMemo } from 'react';
 
 import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
+import { CheckboxPrimitiveProps } from '@real-system/checkbox-primitive';
 import { real } from '@real-system/elements-primitive';
 import { Icon } from '@real-system/icon';
 
 type CheckboxIconProps = {
-  isSelected: boolean;
+  checked?: boolean;
   disabled?: boolean;
-  indeterminate: boolean | undefined;
+  mixed: boolean | undefined;
 };
 
-const CheckboxIcon = ({
-  isSelected,
-  disabled,
-  indeterminate,
-}: CheckboxIconProps) => {
+const CheckboxIcon = ({ checked, disabled, mixed }: CheckboxIconProps) => {
   return (
     <Icon
-      icon={indeterminate ? 'minus' : 'check'}
-      size="xs"
+      icon={mixed ? 'minus' : 'check'}
+      size="sm"
       solid
       color={
-        isSelected
-          ? disabled
-            ? 'gray-400'
-            : 'blue-500-readable'
-          : 'transparent'
+        checked ? (disabled ? 'gray-400' : 'blue-500-readable') : 'transparent'
       }
     />
   );
@@ -33,10 +26,9 @@ const CheckboxIcon = ({
 
 type CheckboxControlProps = {
   disabled?: boolean;
-  isSelected: boolean;
-  indeterminate?: boolean;
+  checked?: CheckboxPrimitiveProps['checked'];
   errorText?: string;
-} & UseInteractionsReturnValue;
+} & Omit<UseInteractionsReturnValue, 'interactionProps'>;
 
 const transition =
   'box-shadow 150ms ease-in, background-color 150ms ease-in, border-color 100ms ease-in';
@@ -48,25 +40,24 @@ const getErrorColor = (isHovered: boolean) =>
 
 const CheckboxControl = ({
   disabled,
-  isSelected,
   isHovered,
   isPressed,
   isFocusedWithin,
   errorText,
-  indeterminate,
+  checked,
 }: CheckboxControlProps) => {
   const backgroundColor = useMemo(() => {
     const defaultColor = 'blue-500-readable';
 
     if (disabled) return 'gray-50';
-    if (isSelected) {
+    if (checked) {
       if (errorText) {
         return getErrorColor(isHovered);
       }
       return getSelectedColor(isHovered);
     }
     return defaultColor;
-  }, [disabled, isSelected, errorText, isHovered]);
+  }, [disabled, checked, errorText, isHovered]);
 
   const borderColor = useMemo(() => {
     const defaultColor = isHovered ? 'gray-300' : 'gray-200';
@@ -75,20 +66,20 @@ const CheckboxControl = ({
     if (errorText) {
       return getErrorColor(isHovered);
     }
-    if (isSelected) {
+    if (checked) {
       return getSelectedColor(isHovered);
     }
     if (isFocusedWithin) {
       return 'gray-200';
     }
     return defaultColor;
-  }, [isHovered, disabled, errorText, isSelected, isFocusedWithin]);
+  }, [isHovered, disabled, errorText, checked, isFocusedWithin]);
 
   return (
     <real.span
-      width={8}
-      height={8}
-      marginRight={5}
+      width={9}
+      height={9}
+      marginRight={6}
       borderStyle="solid"
       borderWidth={1}
       backgroundColor={backgroundColor}
@@ -97,9 +88,9 @@ const CheckboxControl = ({
       transition={transition}
       boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}>
       <CheckboxIcon
-        isSelected={isSelected}
+        checked={!!checked}
         disabled={disabled}
-        indeterminate={indeterminate}
+        mixed={checked === 'mixed'}
       />
     </real.span>
   );

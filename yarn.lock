@@ -5346,12 +5346,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@real-system/checkbox-primitive@^0.0.0, @real-system/checkbox-primitive@workspace:packages/primitives/checkbox-primitive":
+  version: 0.0.0-use.local
+  resolution: "@real-system/checkbox-primitive@workspace:packages/primitives/checkbox-primitive"
+  dependencies:
+    "@real-system/ariakit-library": ^0.0.15
+    concurrently: ^7.3.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    typescript: 4.7.4
+  peerDependencies:
+    "@real-system/ariakit-library": ^0.0.15
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
 "@real-system/checkbox@^0.0.35, @real-system/checkbox@workspace:packages/components/checkbox":
   version: 0.0.0-use.local
   resolution: "@real-system/checkbox@workspace:packages/components/checkbox"
   dependencies:
     "@real-system/a11y-library": ^0.0.10
+    "@real-system/ariakit-library": ^0.0.15
+    "@real-system/checkbox-primitive": ^0.0.0
     "@real-system/elements-primitive": ^0.0.12
+    "@real-system/field": ^0.0.27
     "@real-system/flex": ^0.0.41
     "@real-system/state-library": ^0.0.14
     "@real-system/styled-library": ^0.0.10
@@ -5364,7 +5383,10 @@ __metadata:
     typescript: ^4.7.4
   peerDependencies:
     "@real-system/a11y-library": ^0.0.10
+    "@real-system/ariakit-library": ^0.0.15
+    "@real-system/checkbox-primitive": ^0.0.0
     "@real-system/elements-primitive": ^0.0.12
+    "@real-system/field": ^0.0.27
     "@real-system/flex": ^0.0.41
     "@real-system/state-library": ^0.0.14
     "@real-system/styled-library": ^0.0.10
@@ -5561,11 +5583,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/field@^0.0.27, @real-system/field@workspace:packages/components/field":
+"@real-system/field@0.0.27, @real-system/field@^0.0.27, @real-system/field@workspace:packages/components/field":
   version: 0.0.0-use.local
   resolution: "@real-system/field@workspace:packages/components/field"
   dependencies:
     "@real-system/flex": ^0.0.41
+    "@real-system/state-library": 0.0.14
     "@real-system/styled-library": ^0.0.10
     "@real-system/typography": ^0.0.49
     "@real-system/utils": ^0.0.11
@@ -5575,6 +5598,7 @@ __metadata:
     typescript: ^4.7.4
   peerDependencies:
     "@real-system/flex": ^0.0.41
+    "@real-system/state-library": 0.0.14
     "@real-system/styled-library": ^0.0.10
     "@real-system/typography": ^0.0.49
     "@real-system/utils": ^0.0.11
@@ -5629,6 +5653,7 @@ __metadata:
   resolution: "@real-system/input@workspace:packages/components/input"
   dependencies:
     "@real-system/elements-primitive": ^0.0.12
+    "@real-system/field": 0.0.27
     "@real-system/styled-library": ^0.0.10
     "@real-system/typography": ^0.0.49
     "@real-system/utils-library": ^0.0.24
@@ -5639,6 +5664,7 @@ __metadata:
     typescript: ^4.7.4
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.12
+    "@real-system/field": 0.0.27
     "@real-system/styled-library": ^0.0.10
     "@real-system/typography": ^0.0.49
     "@real-system/utils-library": ^0.0.24
@@ -25674,6 +25700,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:4.7.4, typescript@npm:^4.7.4":
+  version: 4.7.4
+  resolution: "typescript@npm:4.7.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^4.3.2, typescript@npm:^4.6.4":
   version: 4.7.2
   resolution: "typescript@npm:4.7.2"
@@ -25684,13 +25720,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.7.4":
+"typescript@patch:typescript@4.7.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@npm:4.7.4"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
+  checksum: 9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
   languageName: node
   linkType: hard
 
@@ -25701,16 +25737,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 7e2b9a9f4a70fb7616f1b0d986977f8e34a74f046202fa7f24fdee79589598277810fa216b3776c20c0683a9235872c73be34fdb93f67f98c1efaca40999422f
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
-  version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
   languageName: node
   linkType: hard
 

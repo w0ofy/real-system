@@ -1,7 +1,6 @@
-export * from './BaseText';
-export * from './Code';
-export * from './Heading';
-export * from './HelpText';
-export * from './Label';
+export type { CodeProps } from './Code';
+export type { HeadingProps } from './Heading';
+export type { HelperTextProps, InvalidConfigProp } from './HelperText';
+export type { LabelProps } from './Label';
 export * from './Text';
-export * from './Truncate';
+export type { TruncateProps } from './Truncate';

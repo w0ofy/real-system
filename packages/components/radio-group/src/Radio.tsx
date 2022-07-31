@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 import { useInteractions, useRadio } from '@real-system/a11y-library';
 import { Flex } from '@real-system/flex';
-import { Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
@@ -25,21 +25,22 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
-  const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
-    useInteractions({ isDisabled: disabled });
+  const { interactionProps, ...restInteractions } = useInteractions({
+    disabled,
+  });
 
   const isSelected = state.selectedValue === value;
   const isVertical = state.orientation === 'vertical' ? true : false;
 
   return (
-    <Label
+    <Text.Label
       display="inline-flex"
       disabled={disabled}
       mb={2}
       _notLast={isVertical ? { marginBottom: 5 } : { marginRight: 5 }}
-      {...hoverProps}
-      {...pressProps}
-      {...focusWithinProps}>
+      {...interactionProps}
+      {...interactionProps}
+      {...interactionProps}>
       <Flex as="span" xAlignContent="center" yAlignContent="center">
         <VisuallyHidden>
           <input {...inputProps} ref={mergedRef} />
@@ -52,7 +53,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
         />
         <RadioLabel disabled={disabled}>{children}</RadioLabel>
       </Flex>
-    </Label>
+    </Text.Label>
   );
 });
 

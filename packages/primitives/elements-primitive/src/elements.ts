@@ -4,7 +4,7 @@ import styled, {
   RealSystemComponentProps,
   RealSystemStyledOptions,
 } from '@real-system/styled-library';
-import type { Dict } from '@real-system/utils-library';
+import type { Obj } from '@real-system/utils-library';
 
 type RealElements = {
   <T extends As, P = Record<string, any>>(
@@ -16,7 +16,7 @@ type RealElements = {
 type DOMElements = keyof JSX.IntrinsicElements;
 
 export type HTMLRealElements = {
-  [Tag in DOMElements]: RealSystemComponent<Tag, Dict>;
+  [Tag in DOMElements]: RealSystemComponent<Tag, Obj>;
 };
 
 function elements() {
@@ -29,8 +29,8 @@ function elements() {
      * const Div = real("div")
      * const RealComponent = real(Component)
      */
-    apply(_target, _thisArg, argArray: [DOMElements, RealSystemStyledOptions]) {
-      return styled(...argArray)({ boxSizing: 'border-box' });
+    apply(_target, _thisArg, args: [DOMElements, RealSystemStyledOptions]) {
+      return styled(...args)({ boxSizing: 'border-box' });
     },
     /**
      * @example
@@ -50,14 +50,14 @@ const real = elements();
 /**
  * The return type of a real element e.g. `real.div`
  */
-type RealElementPrimitive<T extends As = any, P = Dict> = RealSystemComponent<
+type RealElementPrimitive<T extends As = any, P = Obj> = RealSystemComponent<
   T,
   P
 >;
 
 type RealElementPrimitiveProps<
   T extends As = any,
-  P = Dict
+  P = Obj
 > = RealSystemComponentProps<T, P>;
 
 export type { RealElementPrimitive, RealElementPrimitiveProps };

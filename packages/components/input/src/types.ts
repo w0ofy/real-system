@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 
 import { InputBoxProps } from './InputBox';
@@ -8,7 +6,7 @@ export type InputProps = Partial<
   Pick<
     InputBoxProps,
     | 'disabled'
-    | 'error'
+    | 'invalid'
     | 'readOnly'
     | 'type'
     | 'prefix'
@@ -17,8 +15,6 @@ export type InputProps = Partial<
   >
 > & {
   id?: string;
-  suffix?: React.ReactNode;
-  prefix?: React.ReactNode;
   name?: string;
   placeholder?: string;
   required?: boolean;

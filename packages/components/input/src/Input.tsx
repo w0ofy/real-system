@@ -1,7 +1,6 @@
-/**
- * @todo figure out safe way to pass style props
- */
 import React, { forwardRef } from 'react';
+
+import { useFieldControl } from '@real-system/field';
 
 import { InputBox, InputBoxTypes } from './InputBox';
 import { InputElement } from './InputElement';
@@ -14,25 +13,15 @@ type InputTypeProps = {
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
-  {
-    type = 'text',
-    readOnly,
-    disabled,
-    error,
-    suffix,
-    prefix,
-    placeholder,
-    id,
-    value,
-    required,
-    name,
-    ...restProps
-  },
+  { type = 'text', suffix, prefix, placeholder, id, value, name, ...restProps },
   ref
 ) {
+  const { readOnly, disabled, invalid, required } = useFieldControl(restProps);
+
   const inputTypeProps: InputTypeProps = { type };
 
   if (type === 'number') {
+    /** provides a more stable expereince across browsers */
     inputTypeProps.type = 'text';
     inputTypeProps.inputmode = 'numeric';
     inputTypeProps.pattern = '[0-9]*';
@@ -40,26 +29,24 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
 
   return (
     <InputBox
+      type={type}
       disabled={disabled}
-      error={error}
+      invalid={invalid.status}
+      readOnly={readOnly}
       suffix={suffix}
       prefix={prefix}
-      readOnly={readOnly}
-      type={type}
       {...restProps}>
       <InputElement
-        aria-invalid={error}
-        aria-readonly={readOnly}
+        required={required}
+        readOnly={readOnly}
         disabled={disabled}
         id={id}
         name={name}
         placeholder={placeholder}
-        readOnly={readOnly}
-        required={required}
         value={value}
         ref={ref}
-        {...restProps}
         {...inputTypeProps}
+        {...restProps}
       />
     </InputBox>
   );
