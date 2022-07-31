@@ -22,7 +22,7 @@ const ThemeProvider = ({
   return (
     <EmotionThemeProvider theme={theme}>
       <>
-        {preventGlobals && <GlobalStyles />}
+        {!preventGlobals && <GlobalStyles />}
         {children}
       </>
     </EmotionThemeProvider>
