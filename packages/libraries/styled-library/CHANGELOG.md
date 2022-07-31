@@ -1,5 +1,14 @@
 # @real-system/styled-library
 
+## 0.0.8
+
+### Patch Changes
+
+- [`e8c0377a`](https://github.com/bigwoof91/real-system/commit/e8c0377a88a094f2e4a49060f6cab123dd96a571) - ability to prevent styling globals
+
+- Updated dependencies [[`e8c0377a`](https://github.com/bigwoof91/real-system/commit/e8c0377a88a094f2e4a49060f6cab123dd96a571)]:
+  - @real-system/utils-library@0.0.22
+
 ## 0.0.7
 
 ### Patch Changes

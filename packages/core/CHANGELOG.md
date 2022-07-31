@@ -1,5 +1,60 @@
 # @real-system/core
 
+## 0.0.50
+
+### Patch Changes
+
+- [`e8c0377a`](https://github.com/bigwoof91/real-system/commit/e8c0377a88a094f2e4a49060f6cab123dd96a571) - ability to prevent styling globals
+
+* [#508](https://github.com/bigwoof91/real-system/pull/508) [`255b7c57`](https://github.com/bigwoof91/real-system/commit/255b7c575f4f6367d459795b782746b14a799173) Thanks [@bigwoof91](https://github.com/bigwoof91)! - remove truncate pkg and add to typography pkg
+
+* Updated dependencies [[`e8c0377a`](https://github.com/bigwoof91/real-system/commit/e8c0377a88a094f2e4a49060f6cab123dd96a571), [`255b7c57`](https://github.com/bigwoof91/real-system/commit/255b7c575f4f6367d459795b782746b14a799173)]:
+  - @real-system/accordion@0.0.3
+  - @real-system/alert@0.0.32
+  - @real-system/aspect-ratio@0.0.18
+  - @real-system/badge@0.0.16
+  - @real-system/box@0.0.20
+  - @real-system/button@0.0.48
+  - @real-system/checkbox@0.0.33
+  - @real-system/dialog@0.0.40
+  - @real-system/disclosure@0.0.3
+  - @real-system/field@0.0.25
+  - @real-system/flex@0.0.39
+  - @real-system/icon@0.0.46
+  - @real-system/input@0.0.46
+  - @real-system/link@0.0.17
+  - @real-system/menu@0.0.19
+  - @real-system/pin-input@0.0.12
+  - @real-system/popover@0.0.23
+  - @real-system/radio-group@0.0.26
+  - @real-system/select@0.0.14
+  - @real-system/separator@0.0.15
+  - @real-system/spinner@0.0.44
+  - @real-system/stack@0.0.6
+  - @real-system/textarea@0.0.30
+  - @real-system/toaster@0.0.31
+  - @real-system/tooltip@0.0.24
+  - @real-system/typography@0.0.47
+  - @real-system/visually-hidden@0.0.42
+  - @real-system/a11y-library@0.0.8
+  - @real-system/animation-library@0.0.13
+  - @real-system/ariakit-library@0.0.13
+  - @real-system/descendants-library@0.0.5
+  - @real-system/state-library@0.0.12
+  - @real-system/styled-library@0.0.8
+  - @real-system/utils-library@0.0.22
+  - @real-system/alert-primitive@0.0.12
+  - @real-system/button-primitive@0.0.34
+  - @real-system/dialog-primitive@0.0.24
+  - @real-system/disclosure-primitive@0.0.2
+  - @real-system/elements-primitive@0.0.10
+  - @real-system/menu-primitive@0.0.8
+  - @real-system/popover-primitive@0.0.8
+  - @real-system/portal-primitive@0.0.12
+  - @real-system/select-primitive@0.0.8
+  - @real-system/separator-primitive@0.0.8
+  - @real-system/tooltip-primitive@0.0.8
+
 ## 0.0.49
 
 ### Patch Changes

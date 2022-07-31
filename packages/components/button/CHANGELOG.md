@@ -1,5 +1,19 @@
 # @real-system/button
 
+## 0.0.48
+
+### Patch Changes
+
+- [`e8c0377a`](https://github.com/bigwoof91/real-system/commit/e8c0377a88a094f2e4a49060f6cab123dd96a571) - ability to prevent styling globals
+
+* [#508](https://github.com/bigwoof91/real-system/pull/508) [`255b7c57`](https://github.com/bigwoof91/real-system/commit/255b7c575f4f6367d459795b782746b14a799173) Thanks [@bigwoof91](https://github.com/bigwoof91)! - remove truncate pkg and add to typography pkg
+
+* Updated dependencies [[`e8c0377a`](https://github.com/bigwoof91/real-system/commit/e8c0377a88a094f2e4a49060f6cab123dd96a571)]:
+  - @real-system/spinner@0.0.44
+  - @real-system/styled-library@0.0.8
+  - @real-system/utils-library@0.0.22
+  - @real-system/button-primitive@0.0.34
+
 ## 0.0.47
 
 ### Patch Changes

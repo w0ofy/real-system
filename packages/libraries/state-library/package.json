@@ -1,6 +1,6 @@
 {
   "name": "@real-system/state-library",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "State library for real system.",
   "status": "production",
   "main": "lib/index.js",
