@@ -51,10 +51,7 @@
     },
     {
       "files": ["*.mdx"],
-      "extends": ["plugin:mdx/recommended"],
-      "settings": {
-        "mdx/code-blocks": false
-      }
+      "extends": ["plugin:mdx/recommended"]
     },
     {
       "files": ["*.test.ts", "*.test.tsx"],
