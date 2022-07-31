@@ -58,10 +58,7 @@
     },
     {
       "files": ["*.test.ts", "*.test.tsx"],
-      "extends": [
-        "plugin:testing-library/react",
-        "plugin:jest/recommended"
-      ]
+      "extends": ["plugin:testing-library/react", "plugin:jest/recommended"]
     }
   ],
   "rules": {

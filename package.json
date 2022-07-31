@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "___________QUALITY___________": "code quality and maintenance",
-    "lint": "eslint \"packages/**/*.{ts,tsx,mdx}\"",
+    "lint": "eslint \"packages/**/*.{ts,tsx}\"",
     "lint:fix": "yarn lint --fix",
     "precise-commits": "precise-commits",
     "pkgs:check": "manypkg check",
