@@ -5,7 +5,7 @@ import { TooltipStatePrimitiveProps } from '@real-system/tooltip-primitive';
 
 type StateProps = Pick<
   TooltipStatePrimitiveProps,
-  'visible' | 'timeout' | 'placement' | 'gutter'
+  'open' | 'timeout' | 'placement' | 'gutter'
 >;
 type TooltipProps = {
   children: React.ReactNode;

@@ -54,8 +54,8 @@ const AccordionItems = ({
 
   const disclosureItems = React.Children.map(children, (child, index) =>
     React.cloneElement(child as React.ReactElement, {
-      visible: disclosures.get(index),
-      setVisible: makeOnClick(index),
+      open: disclosures.get(index),
+      setOpen: makeOnClick(index),
       onKeyDown,
       contained,
     })

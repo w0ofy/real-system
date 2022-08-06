@@ -19,7 +19,6 @@ type DisclosureProps = {
 const Disclosure = ({
   children: childrenProp,
   contained = false,
-  bordered,
   ...restProps
 }: DisclosureProps) => {
   const state = useDisclosureStatePrimitive({
@@ -29,16 +28,13 @@ const Disclosure = ({
   const children = React.useMemo(() => {
     if (isFunction(childrenProp)) {
       const childrenFn = childrenProp as Func;
-      return childrenFn({ state, contained, bordered });
+      return childrenFn({ state, contained });
     }
     return childrenProp;
-  }, [childrenProp, state, contained, bordered]);
+  }, [childrenProp, state, contained]);
 
   return (
-    <DisclosureContextProvider
-      state={state}
-      contained={contained}
-      bordered={bordered as never}>
+    <DisclosureContextProvider state={state} contained={contained}>
       <real.div
         data-testid={makeTestId('disclosure')}
         _firstAndNotOnly={{
