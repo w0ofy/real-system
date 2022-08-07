@@ -1,5 +1,13 @@
 # @real-system/styled-library
 
+## 0.0.11
+
+### Patch Changes
+
+- [#534](https://github.com/bigwoof91/real-system/pull/534) [`1c1d1ab4`](https://github.com/bigwoof91/real-system/commit/1c1d1ab427014cea899a2926093cf1a1ecc1c3a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add more badge sizes
+
+* [#536](https://github.com/bigwoof91/real-system/pull/536) [`3c71d782`](https://github.com/bigwoof91/real-system/commit/3c71d7825e72118340996e13af867f91a814f7eb) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade react-spring
+
 ## 0.0.10
 
 ### Patch Changes

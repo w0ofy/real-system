@@ -1,5 +1,13 @@
 # @real-system/textarea
 
+## 0.0.33
+
+### Patch Changes
+
+- Updated dependencies [[`1c1d1ab4`](https://github.com/bigwoof91/real-system/commit/1c1d1ab427014cea899a2926093cf1a1ecc1c3a5), [`3c71d782`](https://github.com/bigwoof91/real-system/commit/3c71d7825e72118340996e13af867f91a814f7eb)]:
+  - @real-system/styled-library@0.0.11
+  - @real-system/input@0.0.49
+
 ## 0.0.32
 
 ### Patch Changes
