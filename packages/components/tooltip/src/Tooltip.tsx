@@ -36,7 +36,7 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
     children,
     placement,
     disabled,
-    visible,
+    open,
     hideArrow = false,
     gutter = 2,
     ...restProps
@@ -48,15 +48,12 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
 
   const state = useTooltipStatePrimitive({
     placement,
-    visible: !disabled && visible,
+    open: !disabled && open,
     gutter,
     ...restProps,
   });
-  const isVisible = useMemo(
-    () => !disabled && state.visible,
-    [disabled, state.visible]
-  );
-  const transitions = useTransition(isVisible, TRANSITIONS_CONFIG);
+  const isOpen = useMemo(() => !disabled && state.open, [disabled, state.open]);
+  const transitions = useTransition(isOpen, TRANSITIONS_CONFIG);
 
   // create the trigger if children is number, text or element
   const trigger = useMemo(() => {

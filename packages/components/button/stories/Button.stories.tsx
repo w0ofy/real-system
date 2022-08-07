@@ -42,6 +42,12 @@ export const Default = (args) => (
 
 export const Sizes = (args) => (
   <Stack.Horizontal spacing={8}>
+    <Button variant="fill" colorScheme="blue" {...args} size="xxs">
+      Extra extra small
+    </Button>
+    <Button variant="fill" colorScheme="blue" {...args} size="xs">
+      Extra small
+    </Button>
     <Button variant="fill" colorScheme="blue" {...args} size="sm">
       Small
     </Button>
@@ -51,13 +57,19 @@ export const Sizes = (args) => (
     <Button variant="fill" colorScheme="blue" {...args} size="lg">
       Large
     </Button>
+    <Button variant="fill" colorScheme="blue" {...args} size="xl">
+      Extra large
+    </Button>
+    <Button variant="fill" colorScheme="blue" {...args} size="xxl">
+      Extra Exta Large
+    </Button>
   </Stack.Horizontal>
 );
 
 export const IconButton = (args) => (
   <Stack.Horizontal spacing={8}>
     <Button {...args}>
-      <Icon icon={'cog'} />
+      <Icon icon={args.icon || 'cog'} />
     </Button>
   </Stack.Horizontal>
 );

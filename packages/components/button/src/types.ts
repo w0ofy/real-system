@@ -7,7 +7,10 @@ import type {
 } from '@real-system/styled-library';
 
 export type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
-export type ButtonSize = Extract<ThemeSizes, 'sm' | 'md' | 'lg'>;
+export type ButtonSize = Extract<
+  ThemeSizes,
+  'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
+>;
 
 export type ButtonStates = 'disabled' | 'loading' | 'default';
 

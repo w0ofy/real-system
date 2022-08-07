@@ -4,9 +4,7 @@ import type {
 } from '@real-system/disclosure-primitive';
 import { constate } from '@real-system/state-library';
 
-type CustomProps =
-  | { contained?: boolean; bordered?: never }
-  | { contained?: never; bordered?: boolean };
+type CustomProps = { contained?: boolean };
 
 type DisclosureState = DisclosureStatePrimitive;
 type DisclosureStateProps = DisclosureStatePrimitiveProps & CustomProps;

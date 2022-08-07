@@ -20,7 +20,7 @@ type MenuProps = {
 const Menu = ({
   children,
   placement = 'bottom-end',
-  visible,
+  open,
   values,
   defaultValues,
   flip = true,
@@ -29,7 +29,7 @@ const Menu = ({
   const state = useMenuStatePrimitive({
     gutter: 4,
     placement,
-    visible,
+    open,
     values,
     defaultValues,
     flip,

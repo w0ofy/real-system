@@ -73,7 +73,7 @@ const DisclosureTrigger = ({
   ...restProps
 }: DisclosureTriggerProps) => {
   const { state, ...restContext } = useDisclosureStateContext();
-  const { visible } = state;
+  const { open } = state;
 
   return (
     <DisclosurePrimitive
@@ -87,7 +87,7 @@ const DisclosureTrigger = ({
         {!hideToggleIcon && (
           <Icon
             icon="chevron-right"
-            transform={visible ? 'rotate(90deg)' : 'rotate(0deg)'}
+            transform={open ? 'rotate(90deg)' : 'rotate(0deg)'}
             transition="transform .2s ease-in-out"
             mr={4}
             size="sm"

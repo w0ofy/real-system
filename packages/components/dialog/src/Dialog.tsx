@@ -48,8 +48,8 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   return (
     <DialogContextProvider state={{ onDismiss, isOpen }}>
       {transition(
-        (styles, isVisible) =>
-          isVisible && (
+        (styles, isOpen) =>
+          isOpen && (
             <DialogOverlay
               style={{ opacity: styles.opacity }}
               onDismiss={onDismiss}

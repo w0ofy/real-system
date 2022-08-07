@@ -46,7 +46,7 @@
     "@real-system/portal-primitive": "^0.0.13",
     "@real-system/styled-library": "^0.0.9",
     "@real-system/utils-library": "^0.0.23",
-    "concurrently": "^7.2.2",
+    "concurrently": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.7.4"

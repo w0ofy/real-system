@@ -30,6 +30,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         margin={0}
         fontScale="input"
         fontWeight="input"
+        lineHeight="control"
         backgroundColor="transparent"
         border="none"
         borderRadius={4}

@@ -4,6 +4,16 @@ import { merge } from '@real-system/utils-library';
 import type { ButtonProps, ButtonSize } from './types';
 
 const sizes: Record<ButtonSize, StylishProps> = {
+  xxs: {
+    paddingX: 3,
+    fontScale: 'button-xxs',
+    height: 'control-xxs',
+  },
+  xs: {
+    paddingX: 4,
+    fontScale: 'button-xs',
+    height: 'control-xs',
+  },
   sm: {
     paddingX: 5,
     fontScale: 'button-sm',
@@ -11,13 +21,23 @@ const sizes: Record<ButtonSize, StylishProps> = {
   },
   md: {
     paddingX: 6,
-    height: 'control',
     fontScale: 'button',
+    height: 'control',
   },
   lg: {
-    paddingX: 8,
+    paddingX: 9,
     fontScale: 'button-lg',
     height: 'control-lg',
+  },
+  xl: {
+    paddingX: 11,
+    fontScale: 'button-xl',
+    height: 'control-xl',
+  },
+  xxl: {
+    paddingX: 13,
+    fontScale: 'button-xxl',
+    height: 'control-xxl',
   },
 };
 
