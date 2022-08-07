@@ -1,5 +1,19 @@
 # @real-system/disclosure
 
+## 0.0.5
+
+### Patch Changes
+
+- [#529](https://github.com/bigwoof91/real-system/pull/529) [`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade internal deps and ariakit.next props
+
+- Updated dependencies [[`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5)]:
+  - @real-system/icon@0.0.48
+  - @real-system/state-library@0.0.14
+  - @real-system/styled-library@0.0.10
+  - @real-system/utils-library@0.0.24
+  - @real-system/disclosure-primitive@0.0.4
+  - @real-system/elements-primitive@0.0.12
+
 ## 0.0.4
 
 ### Patch Changes

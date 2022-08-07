@@ -1,5 +1,17 @@
 # @real-system/button
 
+## 0.0.50
+
+### Patch Changes
+
+- [#529](https://github.com/bigwoof91/real-system/pull/529) [`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade internal deps and ariakit.next props
+
+- Updated dependencies [[`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5)]:
+  - @real-system/spinner@0.0.46
+  - @real-system/styled-library@0.0.10
+  - @real-system/utils-library@0.0.24
+  - @real-system/button-primitive@0.0.36
+
 ## 0.0.49
 
 ### Patch Changes
