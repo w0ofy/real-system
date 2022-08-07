@@ -32,6 +32,9 @@ export const Default = (args) => {
 export const Sizes = (args) => {
   return (
     <Flex gap={3} yAlignContent="center">
+      <Badge {...args} colorScheme="pink" size="xs">
+        Extra Small
+      </Badge>{' '}
       <Badge {...args} colorScheme="pink" size="sm">
         Small
       </Badge>
@@ -40,6 +43,9 @@ export const Sizes = (args) => {
       </Badge>
       <Badge {...args} colorScheme="cyan" size="lg">
         Large
+      </Badge>
+      <Badge {...args} colorScheme="cyan" size="xl">
+        Extra large
       </Badge>
       <Badge {...args} colorScheme="cyan" fontSize={3}>
         Custom

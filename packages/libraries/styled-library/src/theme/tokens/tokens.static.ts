@@ -1,8 +1,9 @@
-import { patchScale } from '../sizeUtils';
-
 /**
- ** Tokens that don't require palette
+ * -------------------------------------
+ *   Tokens that don't require palette
+ * -------------------------------------
  **/
+import { patchScale } from '../sizeUtils';
 
 const space = {
   'space-0': '0',
@@ -176,9 +177,11 @@ const fontSizes = {
   'select-item': patchScale(7),
   input: patchScale(7),
   placeholder: patchScale(7),
-  'badge-sm': patchScale(6.5),
-  badge: patchScale(7),
-  'badge-lg': patchScale(8),
+  'badge-xs': patchScale(5),
+  'badge-sm': patchScale(5.5),
+  badge: patchScale(6),
+  'badge-lg': patchScale(6.5),
+  'badge-xl': patchScale(7),
   label: patchScale(6.5),
   link: patchScale(7),
   help: patchScale(6.5),
@@ -216,9 +219,11 @@ const lineHeights = {
   input: patchScale(7),
   control: patchScale(18),
   placeholder: patchScale(7),
-  'badge-sm': patchScale(6),
-  badge: patchScale(7),
-  'badge-lg': patchScale(8),
+  'badge-xs': patchScale(5),
+  'badge-sm': patchScale(5.5),
+  badge: patchScale(6),
+  'badge-lg': patchScale(6.5),
+  'badge-xl': patchScale(7),
   label: patchScale(6.5),
   help: patchScale(6.5),
   link: patchScale(7),
@@ -251,9 +256,11 @@ const letterSpacings = {
   'select-item': '0.25px',
   input: '0.25px',
   placeholder: '0.25px',
+  'badge-xs': 0,
   'badge-sm': 0,
   badge: 0,
   'badge-lg': 0,
+  'badge-xl': 0,
   label: '0.25px',
   help: '0.25px',
   link: '0.25px',
@@ -287,9 +294,11 @@ const fontWeights = {
   'select-item': 400,
   input: 500,
   placeholder: 400,
+  'badge-xs': 500,
   'badge-sm': 500,
   badge: 500,
   'badge-lg': 500,
+  'badge-xl': 500,
   label: 600,
   help: 400,
   link: 400,
