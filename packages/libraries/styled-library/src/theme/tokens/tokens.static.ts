@@ -214,6 +214,7 @@ const lineHeights = {
   'menu-item': patchScale(7),
   'select-item': patchScale(7),
   input: patchScale(7),
+  control: patchScale(18),
   placeholder: patchScale(7),
   'badge-sm': patchScale(6),
   badge: patchScale(7),
