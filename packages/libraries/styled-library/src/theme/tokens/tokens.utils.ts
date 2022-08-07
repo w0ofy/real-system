@@ -4,7 +4,7 @@ import type { AddSuffix } from '@real-system/utils-library';
 
 import { ColorSchemes, Palette, palettes } from '../palettes';
 
-type ColorHardness =
+type ColorSteps =
   | '50'
   | '100'
   | '200'
@@ -16,8 +16,8 @@ type ColorHardness =
   | '800'
   | '900'
   | '950';
-type ReadableSuffixes = AddSuffix<ColorHardness, '-readable'>;
-type ColorTokenSuffixes = ColorHardness | ReadableSuffixes;
+type ReadableSuffixes = AddSuffix<ColorSteps, '-readable'>;
+type ColorTokenSuffixes = ColorSteps | ReadableSuffixes;
 
 type MakeColorRangeReturnValue<T extends ColorSchemes> = Record<
   `${T}-${ColorTokenSuffixes}`,
