@@ -4,12 +4,14 @@ import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import type { BadgeProps, BadgeSize } from './badge.types';
+import type { BadgeProps, BadgeSize } from './badge.model';
 
 const BADGE_SIZES: Record<BadgeSize, string | number> = {
+  xs: 'badge-xs',
   sm: 'badge-sm',
   md: 'badge',
   lg: 'badge-lg',
+  xl: 'badge-xl',
 };
 
 /**
