@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.26
+
+### Patch Changes
+
+- [#529](https://github.com/bigwoof91/real-system/pull/529) [`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade internal deps and ariakit.next props
+
 ## 0.0.25
 
 ### Patch Changes

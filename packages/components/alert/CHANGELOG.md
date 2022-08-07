@@ -1,5 +1,20 @@
 # @real-system/alert
 
+## 0.0.34
+
+### Patch Changes
+
+- [#529](https://github.com/bigwoof91/real-system/pull/529) [`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade internal deps and ariakit.next props
+
+- Updated dependencies [[`579b46a`](https://github.com/bigwoof91/real-system/commit/579b46a906026174894ebc7045ca03218ae5a5a5)]:
+  - @real-system/button@0.0.50
+  - @real-system/flex@0.0.41
+  - @real-system/icon@0.0.48
+  - @real-system/typography@0.0.49
+  - @real-system/styled-library@0.0.10
+  - @real-system/utils-library@0.0.24
+  - @real-system/alert-primitive@0.0.14
+
 ## 0.0.33
 
 ### Patch Changes
