@@ -1,5 +1,11 @@
 # @real-system/animation
 
+## 0.0.15
+
+### Patch Changes
+
+- [#536](https://github.com/bigwoof91/real-system/pull/536) [`3c71d782`](https://github.com/bigwoof91/real-system/commit/3c71d7825e72118340996e13af867f91a814f7eb) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade react-spring
+
 ## 0.0.14
 
 ### Patch Changes
