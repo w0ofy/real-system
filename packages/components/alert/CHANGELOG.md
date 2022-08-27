@@ -1,5 +1,20 @@
 # @real-system/alert
 
+## 0.0.36
+
+### Patch Changes
+
+- [#549](https://github.com/bigwoof91/real-system/pull/549) [`9be6e5d8`](https://github.com/bigwoof91/real-system/commit/9be6e5d805f11c7a6fedb230f79f94b02dfb3c39) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade deps + change platform to node for builds
+
+- Updated dependencies [[`9be6e5d8`](https://github.com/bigwoof91/real-system/commit/9be6e5d805f11c7a6fedb230f79f94b02dfb3c39)]:
+  - @real-system/button@0.0.52
+  - @real-system/flex@0.0.43
+  - @real-system/icon@0.0.50
+  - @real-system/typography@0.0.51
+  - @real-system/styled-library@0.0.12
+  - @real-system/utils-library@0.0.25
+  - @real-system/alert-primitive@0.0.15
+
 ## 0.0.35
 
 ### Patch Changes
