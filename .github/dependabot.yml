@@ -361,14 +361,6 @@ updates:
       - 'area: security'
       - 'area: repo'
   - package-ecosystem: npm
-    directory: /packages/components/truncate
-    schedule:
-      interval: weekly
-    labels:
-      - 'area: infra'
-      - 'area: security'
-      - 'area: repo'
-  - package-ecosystem: npm
     directory: /packages/components/typography
     schedule:
       interval: weekly

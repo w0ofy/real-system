@@ -6,7 +6,7 @@ const baseEsbuildConfig = {
   mainFields: ['module', 'main'],
   platform: 'node',
   bundle: true,
-  target: ['es2015', 'chrome60', 'firefox60', 'safari11', 'edge18', 'node12'],
+  target: ['es2015', 'chrome66', 'firefox58', 'safari11', 'edge79', 'node12'],
   minify: false,
   define: {
     'process.env.NODE_ENV': `"${ENV}"`,
@@ -38,16 +38,14 @@ const getExternalDeps = (packageJson = {}) => {
  * @param {object} overrides {format: 'cjs' | 'esm'}
  * @returns {object}
  */
-const makeEsbuildConfig = (pkgJson, overrides = { format: 'cjs' }) => {
-  getExternalDeps;
+const makeEsbuildConfig = (pkgJson, { format } = { format: 'cjs' }) => {
   return {
     ...baseEsbuildConfig,
     entryPoints: [pkgJson['main:dev']],
     watch: watch(pkgJson),
     external: getExternalDeps(pkgJson),
-    format: 'cjs',
-    outfile: overrides.format === 'cjs' ? pkgJson.main : pkgJson.module,
-    ...overrides,
+    format,
+    outfile: format === 'cjs' ? pkgJson.main : pkgJson.module,
   };
 };
 

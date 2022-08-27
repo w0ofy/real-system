@@ -10,11 +10,12 @@ const { ENV } = require('../utils');
 const plugins = [
   esbuild({
     color: true,
-    target: ['es2015', 'chrome60', 'firefox60', 'safari11', 'edge18', 'node12'],
+    target: ['es2015', 'chrome66', 'firefox58', 'safari11', 'edge79', 'node12'],
     minify: true,
     define: {
       'process.env.NODE_ENV': `"${ENV}"`,
     },
+    platform: 'node',
     treeShaking: true,
   }),
   del({ targets: 'lib', runOnce: true }),
