@@ -1,5 +1,14 @@
 # @real-system/tooltip-primitive
 
+## 0.0.11
+
+### Patch Changes
+
+- [#549](https://github.com/bigwoof91/real-system/pull/549) [`9be6e5d8`](https://github.com/bigwoof91/real-system/commit/9be6e5d805f11c7a6fedb230f79f94b02dfb3c39) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade deps + change platform to node for builds
+
+- Updated dependencies [[`9be6e5d8`](https://github.com/bigwoof91/real-system/commit/9be6e5d805f11c7a6fedb230f79f94b02dfb3c39)]:
+  - @real-system/ariakit-library@0.0.16
+
 ## 0.0.10
 
 ### Patch Changes

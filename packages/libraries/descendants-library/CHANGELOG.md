@@ -1,5 +1,15 @@
 # @real-system/descendants-library
 
+## 0.0.8
+
+### Patch Changes
+
+- [#549](https://github.com/bigwoof91/real-system/pull/549) [`9be6e5d8`](https://github.com/bigwoof91/real-system/commit/9be6e5d805f11c7a6fedb230f79f94b02dfb3c39) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade deps + change platform to node for builds
+
+- Updated dependencies [[`9be6e5d8`](https://github.com/bigwoof91/real-system/commit/9be6e5d805f11c7a6fedb230f79f94b02dfb3c39)]:
+  - @real-system/state-library@0.0.15
+  - @real-system/utils-library@0.0.25
+
 ## 0.0.7
 
 ### Patch Changes
