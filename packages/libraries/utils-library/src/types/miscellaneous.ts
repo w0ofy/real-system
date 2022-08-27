@@ -22,6 +22,8 @@ type StringUnionWithString<T> = T | (string & {});
 
 type Obj<T = any> = Record<string, T>;
 
+type AnyObj = Record<any, any>;
+
 type ObjUnion<T> = T & Obj;
 
 type PropUnion<T> = ObjUnion<T>;
@@ -30,6 +32,7 @@ type RequireSome<T extends Obj, S extends keyof T> = Omit<T, S> &
   Required<Pick<T, S>>;
 
 export type {
+  AnyObj,
   Booleanish,
   Dict,
   Func,

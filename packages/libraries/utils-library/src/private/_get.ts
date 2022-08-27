@@ -9,7 +9,7 @@ type Get<T = any> = {
 
 const _get: Get = lodashGet;
 
-const _getOneOf = <S = Dict, F = any>(
+const _getOneOf = <S extends Record<any, any> = Dict, F = any>(
   obj: S,
   accessors: string[],
   fallback?: F

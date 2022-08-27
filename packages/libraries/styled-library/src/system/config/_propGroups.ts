@@ -10,7 +10,7 @@ import { spaceProps } from './space';
 import { transformProps } from './transform';
 import { typographyProps } from './typography';
 
-const mapProps = <T>(props: T) => {
+const mapProps = <T extends Record<any, any>>(props: T) => {
   return Object.keys(props).reduce(
     (a, b) => ({
       ...a,

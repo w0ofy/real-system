@@ -6,6 +6,7 @@ import React, { RefCallback, useRef, useState } from 'react';
 
 import { constate } from '@real-system/state-library';
 import {
+  AnyObj,
   cast,
   mergeRefs,
   Obj,
@@ -18,7 +19,10 @@ import { DescendantOptions, DescendantsManager } from './descendant';
  * @internal
  * React hook that initializes the DescendantsManager
  */
-function useDescendants<T extends HTMLElement = HTMLElement, K = Obj>() {
+function useDescendants<
+  T extends HTMLElement = HTMLElement,
+  K extends AnyObj = Obj
+>() {
   const descendants = useRef(new DescendantsManager<T, K>());
   useSafeLayoutEffect(() => {
     return () => descendants.current.destroy();
@@ -74,7 +78,7 @@ function useDescendant<T extends HTMLElement = HTMLElement, K = Obj>(
 
 type ContextProviderType<
   T extends HTMLElement = HTMLElement,
-  K = Obj
+  K extends AnyObj = Obj
 > = React.Provider<DescendantsManager<T, K>>;
 
 /**
@@ -82,7 +86,7 @@ type ContextProviderType<
  */
 export function createDescendantContext<
   T extends HTMLElement = HTMLElement,
-  K = Obj
+  K extends AnyObj = Obj
 >() {
   const ContextProvider = cast<ContextProviderType<T, K>>(
     DescendantsContextProvider
