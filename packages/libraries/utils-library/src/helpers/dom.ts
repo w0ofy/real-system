@@ -1,8 +1,8 @@
 const canUseDOM = (): boolean =>
   !!(
     typeof window !== 'undefined' &&
-    window.document &&
-    window.document.createElement
+    window?.document &&
+    window?.document?.createElement
   );
 
 const isHTMLElement = (el: any): el is HTMLElement => {

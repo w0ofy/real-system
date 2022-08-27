@@ -3,7 +3,7 @@ name: Tests
 on:
   pull_request:
     paths:
-        - "packages/**"
+      - 'packages/**'
     types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
@@ -36,10 +36,10 @@ jobs:
         with:
           node-version: 12.x
 
-      - uses: zahnster/compressed-size-action@2.4.2
+      - uses: preactjs/compressed-size-action@v2
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          build-script: "build:js"
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          build-script: 'build:js'
           # only check commonjs files
-          pattern: "**/lib/**/*.js"
-          exclude: "{**/*.map,**/node_modules/**}"
+          pattern: '**/lib/**/*.js'
+          exclude: '{**/*.map,**/node_modules/**}'
