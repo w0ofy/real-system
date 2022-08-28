@@ -12,7 +12,7 @@ const getPackagesToProductionize = async () => {
   const { pkgList } = await getWorkspacesInfo({ hasProdStatus: false });
 
   if (pkgList.length < 1) {
-    return undefined;
+    return;
   }
 
   const choices = pkgList.map((pkg) => ({

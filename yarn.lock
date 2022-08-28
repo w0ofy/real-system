@@ -22,7 +22,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:^7.13.10, @babel/cli@npm:^7.17.10":
+"@babel/cli@npm:^7.13.10":
   version: 7.17.10
   resolution: "@babel/cli@npm:7.17.10"
   dependencies:
@@ -132,7 +132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.10, @babel/core@npm:^7.12.3, @babel/core@npm:^7.13.10, @babel/core@npm:^7.14.0, @babel/core@npm:^7.18.0, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.6, @babel/core@npm:^7.12.10, @babel/core@npm:^7.12.3, @babel/core@npm:^7.13.10, @babel/core@npm:^7.14.0, @babel/core@npm:^7.7.5":
   version: 7.18.2
   resolution: "@babel/core@npm:7.18.2"
   dependencies:
@@ -5467,8 +5467,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/core@workspace:packages/core"
   dependencies:
-    "@babel/cli": ^7.17.10
-    "@babel/core": ^7.18.0
+    "@babel/cli": ^7.18.10
+    "@babel/core": ^7.18.13
     "@real-system/a11y-library": ^0.0.11
     "@real-system/accordion": ^0.0.7
     "@real-system/alert": ^0.0.36
