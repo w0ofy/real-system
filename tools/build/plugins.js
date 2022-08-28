@@ -7,16 +7,20 @@ const filesize = require('rollup-plugin-filesize');
 const peerDepsExternal = require('rollup-plugin-peer-deps-external');
 const { ENV } = require('../utils');
 
-const plugins = [
+const makePlugins = (format = 'cjs') => [
   esbuild({
     color: true,
-    target: ['es2015', 'chrome66', 'firefox58', 'safari11', 'edge79', 'node12'],
+    target: ['chrome66', 'firefox58', 'safari11', 'edge79', 'node12'],
     minify: true,
     define: {
       'process.env.NODE_ENV': `"${ENV}"`,
     },
     platform: 'node',
     treeShaking: true,
+    minifyIdentifiers: false,
+    minifySyntax: true,
+    minifyWhitespace: true,
+    format,
   }),
   del({ targets: 'lib', runOnce: true }),
   peerDepsExternal(),
@@ -26,4 +30,4 @@ const plugins = [
   filesize({ theme: 'light' }),
 ];
 
-module.exports = { plugins };
+module.exports = { makePlugins };

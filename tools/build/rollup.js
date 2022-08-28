@@ -1,6 +1,6 @@
 const { rollup } = require('rollup');
 const { logger } = require('../utils');
-const { plugins } = require('./plugins');
+const { makePlugins } = require('./plugins');
 
 const globals = {
   react: 'React',
@@ -13,30 +13,41 @@ async function build(packageJson) {
   const cjsOuputFile = packageJson.main;
   const packageEntryPoint = packageJson['main:dev'];
 
-  const bundle = await rollup({
+  const esmBundle = await rollup({
     input: packageEntryPoint,
     output: { sourcemap: true, exports: 'named' },
-    plugins,
+    plugins: makePlugins('esm'),
   });
+  const cjsBundle = await rollup({
+    input: packageEntryPoint,
+    output: { sourcemap: true, exports: 'named' },
+    plugins: makePlugins('cjs'),
+  });
+
   logger.info('-------------------------');
   logger.job(packageName);
-  await bundle.write({
+
+  await esmBundle.write({
     name: packageName,
-    format: 'es',
+    format: 'esm',
     globals,
     file: esmOutputFile,
   });
 
-  await bundle.write({
+  await cjsBundle.write({
     name: packageName,
     format: 'cjs',
     globals,
     file: cjsOuputFile,
   });
+
   logger.info('-------------------------\n');
 
-  // closes the bundle
-  await bundle.close();
+  // closes the esm bundle
+  await esmBundle.close();
+
+  // closes the cjs bundle
+  await cjsBundle.close();
 }
 
 module.exports = { build, globals };
