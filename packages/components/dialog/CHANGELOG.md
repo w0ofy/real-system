@@ -1,5 +1,22 @@
 # @real-system/dialog
 
+## 0.0.45
+
+### Patch Changes
+
+- [#560](https://github.com/bigwoof91/real-system/pull/560) [`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Remove emotion css babel preset
+
+- Updated dependencies [[`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd)]:
+  - @real-system/button@0.0.53
+  - @real-system/flex@0.0.44
+  - @real-system/typography@0.0.52
+  - @real-system/animation-library@0.0.17
+  - @real-system/state-library@0.0.16
+  - @real-system/styled-library@0.0.13
+  - @real-system/utils-library@0.0.26
+  - @real-system/dialog-primitive@0.0.28
+  - @real-system/elements-primitive@0.0.15
+
 ## 0.0.44
 
 ### Patch Changes

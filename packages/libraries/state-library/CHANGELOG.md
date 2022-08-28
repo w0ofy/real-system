@@ -1,5 +1,11 @@
 # @real-system/state
 
+## 0.0.16
+
+### Patch Changes
+
+- [#560](https://github.com/bigwoof91/real-system/pull/560) [`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Remove emotion css babel preset
+
 ## 0.0.15
 
 ### Patch Changes

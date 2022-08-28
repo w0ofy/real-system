@@ -1,5 +1,14 @@
 # @real-system/tooltip-primitive
 
+## 0.0.12
+
+### Patch Changes
+
+- [#560](https://github.com/bigwoof91/real-system/pull/560) [`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Remove emotion css babel preset
+
+- Updated dependencies [[`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd)]:
+  - @real-system/ariakit-library@0.0.17
+
 ## 0.0.11
 
 ### Patch Changes
