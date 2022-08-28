@@ -1,5 +1,19 @@
 # @real-system/disclosure
 
+## 0.0.8
+
+### Patch Changes
+
+- [#560](https://github.com/bigwoof91/real-system/pull/560) [`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Remove emotion css babel preset
+
+- Updated dependencies [[`d903bea8`](https://github.com/bigwoof91/real-system/commit/d903bea8518f0c98691b7be94faeefb6f4c419dd)]:
+  - @real-system/icon@0.0.51
+  - @real-system/state-library@0.0.16
+  - @real-system/styled-library@0.0.13
+  - @real-system/utils-library@0.0.26
+  - @real-system/disclosure-primitive@0.0.6
+  - @real-system/elements-primitive@0.0.15
+
 ## 0.0.7
 
 ### Patch Changes
