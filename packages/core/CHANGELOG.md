@@ -1,5 +1,11 @@
 # @real-system/core
 
+## 0.0.55
+
+### Patch Changes
+
+- [#558](https://github.com/bigwoof91/real-system/pull/558) [`ba5de13d`](https://github.com/bigwoof91/real-system/commit/ba5de13d56e07e2819b5711a1df499fcfcf2efa1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add emotion-css-babel preset
+
 ## 0.0.54
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/core",
-  "version": "0.0.54",
+  "version": "0.0.55",
   "status": "production",
   "description": "Contains all the packages from Real System.",
   "repository": {
