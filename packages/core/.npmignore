@@ -4,3 +4,4 @@ stories
 tsconfig.json
 babel.config.js
 __tests__
+node_modules
