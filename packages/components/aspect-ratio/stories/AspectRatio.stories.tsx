@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { AspectRatio } from '@real-system/aspect-ratio';
+import { real } from '@real-system/elements-primitive';
 
 // @ts-ignore due to lack of declaration file for gifs
 import img from '../../../../assets/animated-logo.gif';
@@ -13,7 +14,7 @@ export default {
 
 export const Image = () => (
   <AspectRatio maxWidth="400px" ratio={4 / 3}>
-    <img src={img} alt="naruto" object-fit="cover" />
+    <real.img src={img} alt="naruto" objectFit="cover" />
   </AspectRatio>
 );
 

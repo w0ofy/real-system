@@ -1,6 +1,6 @@
 {
   "name": "@real-system/styled-library",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Styled system for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@emotion/use-insertion-effect-with-fallbacks": "1.0.0",
-    "@real-system/utils-library": "^0.0.27",
+    "@real-system/utils-library": "^0.0.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@emotion/use-insertion-effect-with-fallbacks": "1.0.0",
-    "@real-system/utils-library": "^0.0.27",
+    "@real-system/utils-library": "^0.0.28",
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
