@@ -38,7 +38,7 @@
     "@emotion/is-prop-valid": "^1.2.0",
     "@emotion/memoize": "^0.8.0",
     "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
+    "@emotion/styled": "^11.10.4",
     "csstype": "^3.1.0",
     "polished": "^4.2.2"
   },
