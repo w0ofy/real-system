@@ -1,6 +1,4 @@
-import * as React from 'react';
-
-import { useSafeLayoutEffect } from './useSafeLayoutEffect';
+import { useCallback, useEffect, useRef } from 'react';
 
 /**
  * Persist any value between renders but keeps it up to date when or if it changes.
@@ -9,15 +7,15 @@ import { useSafeLayoutEffect } from './useSafeLayoutEffect';
  * @param deps the function dependency list
  */
 export function useCallbackRef<T extends (...args: any[]) => any>(
-  fn: T | undefined,
+  callback: T | undefined,
   deps: React.DependencyList = []
-): T {
-  const ref = React.useRef(fn);
+) {
+  const callbackRef = useRef(callback);
 
-  useSafeLayoutEffect(() => {
-    ref.current = fn;
+  useEffect(() => {
+    callbackRef.current = callback;
   });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  return React.useCallback(((...args) => ref.current?.(...args)) as T, deps);
+  return useCallback(((...args) => callbackRef.current?.(...args)) as T, deps);
 }
