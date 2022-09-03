@@ -1,5 +1,14 @@
 # @real-system/menu-primitive
 
+## 0.0.14
+
+### Patch Changes
+
+- [#573](https://github.com/bigwoof91/real-system/pull/573) [`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fixing bundle
+
+- Updated dependencies [[`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5)]:
+  - @real-system/ariakit-library@0.0.19
+
 ## 0.0.13
 
 ### Patch Changes

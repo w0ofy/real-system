@@ -1,5 +1,17 @@
 # @real-system/link
 
+## 0.0.24
+
+### Patch Changes
+
+- [#573](https://github.com/bigwoof91/real-system/pull/573) [`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fixing bundle
+
+- Updated dependencies [[`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5), [`fb8956de`](https://github.com/bigwoof91/real-system/commit/fb8956de0124f769ec5865b0832a49bfa703276a)]:
+  - @real-system/icon@0.0.53
+  - @real-system/styled-library@0.0.15
+  - @real-system/utils-library@0.0.28
+  - @real-system/elements-primitive@0.0.17
+
 ## 0.0.23
 
 ### Patch Changes

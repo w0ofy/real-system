@@ -1,5 +1,11 @@
 # @real-system/alert-primitive
 
+## 0.0.17
+
+### Patch Changes
+
+- [#573](https://github.com/bigwoof91/real-system/pull/573) [`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fixing bundle
+
 ## 0.0.16
 
 ### Patch Changes
