@@ -1,6 +1,6 @@
 {
   "name": "@real-system/menu-primitive",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Menu primitive components for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/ariakit-library": "^0.0.17",
+    "@real-system/ariakit-library": "^0.0.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/ariakit-library": "^0.0.17",
+    "@real-system/ariakit-library": "^0.0.18",
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

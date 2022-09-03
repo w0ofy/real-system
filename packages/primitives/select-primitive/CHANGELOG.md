@@ -1,5 +1,12 @@
 # @real-system/select-primitive
 
+## 0.0.13
+
+### Patch Changes
+
+- Updated dependencies [[`acb97819`](https://github.com/bigwoof91/real-system/commit/acb978198eb190c5f4a057fb2e22da746b8ebccc)]:
+  - @real-system/ariakit-library@0.0.18
+
 ## 0.0.12
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @real-system/pin-input
 
+## 0.0.18
+
+### Patch Changes
+
+- Updated dependencies [[`acb97819`](https://github.com/bigwoof91/real-system/commit/acb978198eb190c5f4a057fb2e22da746b8ebccc)]:
+  - @real-system/utils-library@0.0.27
+  - @real-system/input@0.0.52
+  - @real-system/descendants-library@0.0.10
+  - @real-system/styled-library@0.0.14
+  - @real-system/elements-primitive@0.0.16
+
 ## 0.0.17
 
 ### Patch Changes

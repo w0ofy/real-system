@@ -1,5 +1,11 @@
 # @real-system/ariakit-library
 
+## 0.0.18
+
+### Patch Changes
+
+- [#565](https://github.com/bigwoof91/real-system/pull/565) [`acb97819`](https://github.com/bigwoof91/real-system/commit/acb978198eb190c5f4a057fb2e22da746b8ebccc) Thanks [@bigwoof91](https://github.com/bigwoof91)! - bumping ariakit and fixing useSafeLayoutEffect noop
+
 ## 0.0.17
 
 ### Patch Changes

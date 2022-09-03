@@ -1,5 +1,13 @@
 # @real-system/aspect-ratio
 
+## 0.0.24
+
+### Patch Changes
+
+- Updated dependencies [[`acb97819`](https://github.com/bigwoof91/real-system/commit/acb978198eb190c5f4a057fb2e22da746b8ebccc)]:
+  - @real-system/utils-library@0.0.27
+  - @real-system/styled-library@0.0.14
+
 ## 0.0.23
 
 ### Patch Changes
