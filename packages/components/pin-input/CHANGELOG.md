@@ -1,5 +1,21 @@
 # @real-system/pin-input
 
+## 0.0.19
+
+### Patch Changes
+
+- [#573](https://github.com/bigwoof91/real-system/pull/573) [`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fixing bundle
+
+- [#576](https://github.com/bigwoof91/real-system/pull/576) [`fb8956de`](https://github.com/bigwoof91/real-system/commit/fb8956de0124f769ec5865b0832a49bfa703276a) Thanks [@bigwoof91](https://github.com/bigwoof91)! - bundling with babel macros and emotion-css-preset
+
+- Updated dependencies [[`d0b06055`](https://github.com/bigwoof91/real-system/commit/d0b06055500952bb71b78d4f0c7076e86691bda5), [`fb8956de`](https://github.com/bigwoof91/real-system/commit/fb8956de0124f769ec5865b0832a49bfa703276a)]:
+  - @real-system/input@0.0.53
+  - @real-system/descendants-library@0.0.11
+  - @real-system/state-library@0.0.17
+  - @real-system/styled-library@0.0.15
+  - @real-system/utils-library@0.0.28
+  - @real-system/elements-primitive@0.0.17
+
 ## 0.0.18
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/field",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Field wrapper component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,17 +30,17 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/flex": "^0.0.45",
-    "@real-system/styled-library": "^0.0.14",
-    "@real-system/typography": "^0.0.53",
+    "@real-system/flex": "^0.0.46",
+    "@real-system/styled-library": "^0.0.15",
+    "@real-system/typography": "^0.0.54",
     "@real-system/utils": "^0.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/flex": "^0.0.45",
-    "@real-system/styled-library": "^0.0.14",
-    "@real-system/typography": "^0.0.53",
+    "@real-system/flex": "^0.0.46",
+    "@real-system/styled-library": "^0.0.15",
+    "@real-system/typography": "^0.0.54",
     "@real-system/utils": "^0.0.11",
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
