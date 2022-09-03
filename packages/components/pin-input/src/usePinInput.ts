@@ -6,6 +6,7 @@ import {
   callAllHandlers,
   mergeRefs,
   useControllableState,
+  useUID,
 } from '@real-system/utils-library';
 
 import type {
@@ -72,7 +73,7 @@ const usePinInput = ({
   type = 'number',
   mask,
 }: UsePinInputProps = {}) => {
-  const uuid = React.useId();
+  const uuid = useUID();
   const id = idProp ?? `pin-input-${uuid}`;
 
   const descendants = usePinInputDescendants();

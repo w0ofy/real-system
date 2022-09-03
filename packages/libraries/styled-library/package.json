@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
+    "@emotion/use-insertion-effect-with-fallbacks": "1.0.0",
     "@real-system/utils-library": "^0.0.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -37,12 +38,13 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.0",
     "@emotion/memoize": "^0.8.0",
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "csstype": "^3.1.0",
     "polished": "^4.2.2"
   },
   "devDependencies": {
+    "@emotion/use-insertion-effect-with-fallbacks": "1.0.0",
     "@real-system/utils-library": "^0.0.27",
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
