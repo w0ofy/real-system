@@ -1,5 +1,14 @@
 # @real-system/field
 
+## 0.0.31
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/flex@0.0.45
+  - @real-system/typography@0.0.53
+  - @real-system/styled-library@0.0.14
+
 ## 0.0.30
 
 ### Patch Changes
