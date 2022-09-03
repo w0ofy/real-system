@@ -34,8 +34,8 @@
     "@real-system/styled-library": "^0.0.14",
     "@real-system/typography": "^0.0.53",
     "@real-system/utils": "^0.0.11",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@real-system/flex": "^0.0.45",
@@ -43,8 +43,8 @@
     "@real-system/typography": "^0.0.53",
     "@real-system/utils": "^0.0.11",
     "concurrently": "^7.3.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^4.8.2"
   }
 }

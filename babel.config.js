@@ -1,4 +1,4 @@
-const presets = [
+const makePresets = (isDev) => [
   [
     '@babel/preset-env',
     {
@@ -13,9 +13,19 @@ const presets = [
   ],
   '@babel/preset-react',
   '@babel/preset-typescript',
+  [
+    '@emotion/babel-preset-css-prop',
+    {
+      sourceMap: isDev,
+      autoLabel: 'dev-only',
+      labelFormat: '[local]',
+      cssPropOptimization: !isDev,
+    },
+  ],
 ];
 
 const makePlugins = (isDev) => [
+  'macros',
   [
     '@babel/plugin-proposal-class-properties',
     {
@@ -43,17 +53,17 @@ module.exports = {
   env: {
     // used for bundling storybook
     production: {
-      presets,
+      presets: makePresets(true),
       plugins: makePlugins(true),
     },
     // used for compiling core
     release: {
-      presets,
+      presets: makePresets(false),
       plugins: makePlugins(false),
     },
     // used for storybook / development
     development: {
-      presets,
+      presets: makePresets(true),
       plugins: makePlugins(true),
     },
   },

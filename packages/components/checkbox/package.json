@@ -37,8 +37,8 @@
     "@real-system/typography": "^0.0.53",
     "@real-system/utils-library": "^0.0.27",
     "@real-system/visually-hidden": "^0.0.48",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@real-system/a11y-library": "^0.0.12",
@@ -50,8 +50,8 @@
     "@real-system/utils-library": "^0.0.27",
     "@real-system/visually-hidden": "^0.0.48",
     "concurrently": "^7.3.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^4.8.2"
   }
 }

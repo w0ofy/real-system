@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "concurrently": "^7.3.0",
