@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import chalk from 'chalk';
 
 const _makeNewLine = (condition = false) => (condition ? '\n' : '');
 _makeNewLine.ifLast = (list = [], index = list.length - 1) =>
@@ -18,29 +17,25 @@ type _Logger = {
     syntax: (origin: string, ...any: any[]) => ReturnType<typeof SyntaxError>;
   };
   br: typeof _makeNewLine;
-} & {
-  [key in keyof typeof chalk]?: any;
 };
-
 /**
- * @const _logger a light wrapper around console.log with chalk for real system logging
+ * @const _logger a light wrapper around console.log for real system logging
  */
 /** @ts-ignore */
 const _logger: _Logger = (origin, ...args) =>
   console.log(`real-system[${origin}]`, ...args);
 
 Object.assign(_logger, {
-  ...chalk,
   table: (origin: string, ...args: any[]) =>
-    console.table(chalk.gray(`real-system[${origin}]`, ...args)),
+    console.table(`real-system[${origin}]`, ...args),
   info: (origin: string, ...args: any[]) =>
-    console.info(chalk.blue(`real-system[${origin}]`, ...args)),
+    console.info(`real-system[${origin}]`, ...args),
   warn: (origin: string, ...args: any[]) =>
-    console.warn(chalk.yellow(`real-system[${origin}]`, ...args)),
+    console.warn(`real-system[${origin}]`, ...args),
   error: (origin: string, ...args: any[]) =>
-    console.error(chalk.red.bold.underline(`real-system[${origin}]`, ...args)),
+    console.error(`real-system[${origin}]`, ...args),
   debug: (origin: string, ...args: any[]) =>
-    console.debug(chalk.gray(`real-system[${origin}]`, ...args)),
+    console.debug(`real-system[${origin}]`, ...args),
   br: _makeNewLine,
   throw: {
     error: (origin: string, message: string) => {

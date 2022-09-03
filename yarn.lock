@@ -3708,14 +3708,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.10.0":
-  version: 11.10.0
-  resolution: "@emotion/react@npm:11.10.0"
+"@emotion/react@npm:^11.10.4":
+  version: 11.10.4
+  resolution: "@emotion/react@npm:11.10.4"
   dependencies:
     "@babel/runtime": ^7.18.3
     "@emotion/babel-plugin": ^11.10.0
     "@emotion/cache": ^11.10.0
     "@emotion/serialize": ^1.1.0
+    "@emotion/use-insertion-effect-with-fallbacks": ^1.0.0
     "@emotion/utils": ^1.2.0
     "@emotion/weak-memoize": ^0.3.0
     hoist-non-react-statics: ^3.3.1
@@ -3727,7 +3728,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 6d692e43ff53fd3b87d4a000a9aec2ef080d66a0ebb7d0b9529c46d1e6bc1ac8a27c7dd74c27a8274ec1df1e3c960b78c035fca5d8a901a48eda445c6163b33b
+  checksum: 7555f6a1840c71d841386be2ec98ebfd6399923bd6a61247c7b07283f9a056f57e83c4fdd9ea7a7fcc3d88e5e04bb03168b4f0557934bcd501c88af4db16e1e0
   languageName: node
   linkType: hard
 
@@ -3751,14 +3752,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.10.0":
-  version: 11.10.0
-  resolution: "@emotion/styled@npm:11.10.0"
+"@emotion/styled@npm:^11.10.4":
+  version: 11.10.4
+  resolution: "@emotion/styled@npm:11.10.4"
   dependencies:
     "@babel/runtime": ^7.18.3
     "@emotion/babel-plugin": ^11.10.0
     "@emotion/is-prop-valid": ^1.2.0
     "@emotion/serialize": ^1.1.0
+    "@emotion/use-insertion-effect-with-fallbacks": ^1.0.0
     "@emotion/utils": ^1.2.0
   peerDependencies:
     "@babel/core": ^7.0.0
@@ -3769,7 +3771,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: f2a3e9798f807713d12771320cde9c2fa17ea6f008da605055496bd3522d81c120321240c8a1dae49c7272fea11361e1f47938ee069f678038b6836820c01243
+  checksum: d56cbf48f30c5a36d618adf2c4d7d9440b5059373a96964fa2a6e832ce9b9ae8cee11b5292b444264b3acbfdd6a8f6c9050e197a35c8dea7e9b9cc78f55ac31c
   languageName: node
   linkType: hard
 
@@ -3791,6 +3793,15 @@ __metadata:
   version: 0.8.0
   resolution: "@emotion/unitless@npm:0.8.0"
   checksum: 176141117ed23c0eb6e53a054a69c63e17ae532ec4210907a20b2208f91771821835f1c63dd2ec63e30e22fcc984026d7f933773ee6526dd038e0850919fae7a
+  languageName: node
+  linkType: hard
+
+"@emotion/use-insertion-effect-with-fallbacks@npm:1.0.0, @emotion/use-insertion-effect-with-fallbacks@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@emotion/use-insertion-effect-with-fallbacks@npm:1.0.0"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 4f06a3b48258c832aa8022a262572061a31ff078d377e9164cccc99951309d70f4466e774fe704461b2f8715007a82ed625a54a5c7a127c89017d3ce3187d4f1
   languageName: node
   linkType: hard
 
@@ -5195,7 +5206,7 @@ __metadata:
     concurrently: ^7.3.0
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
+    react: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5208,16 +5219,16 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/a11y-library": ^0.0.12
     "@real-system/disclosure": ^0.0.9
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5227,12 +5238,12 @@ __metadata:
   dependencies:
     "@reach/alert": ^0.17.0
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5248,8 +5259,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/alert-primitive": ^0.0.16
@@ -5259,8 +5270,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5272,7 +5283,7 @@ __metadata:
     react-spring: ^9.5.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
+    react: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5282,12 +5293,12 @@ __metadata:
   dependencies:
     ariakit: 2.0.0-next.40
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5298,14 +5309,14 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5317,15 +5328,15 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5336,14 +5347,14 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5353,13 +5364,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5372,16 +5383,16 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/button-primitive": ^0.0.39
     "@real-system/spinner": 0.0.50
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5398,8 +5409,8 @@ __metadata:
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/a11y-library": ^0.0.12
@@ -5410,8 +5421,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5466,12 +5477,12 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5482,14 +5493,14 @@ __metadata:
     "@real-system/state-library": ^0.0.16
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/state-library": ^0.0.16
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5499,12 +5510,12 @@ __metadata:
   dependencies:
     "@reach/dialog": ^0.17.0
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5522,8 +5533,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/animation-library": ^0.0.17
@@ -5535,8 +5546,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5546,13 +5557,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5567,8 +5578,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/disclosure-primitive": ^0.0.7
@@ -5577,8 +5588,8 @@ __metadata:
     "@real-system/state-library": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5589,14 +5600,14 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5609,16 +5620,16 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils": ^0.0.11
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/flex": ^0.0.45
     "@real-system/styled-library": ^0.0.14
     "@real-system/typography": ^0.0.53
     "@real-system/utils": ^0.0.11
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5630,15 +5641,15 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5651,15 +5662,15 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5673,8 +5684,8 @@ __metadata:
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
@@ -5682,8 +5693,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5696,16 +5707,16 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/icon": ^0.0.52
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5715,13 +5726,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5738,8 +5749,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/animation-library": ^0.0.17
@@ -5750,8 +5761,8 @@ __metadata:
     "@real-system/state-library": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5766,8 +5777,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/descendants-library": ^0.0.10
@@ -5776,8 +5787,8 @@ __metadata:
     "@real-system/state-library": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5787,13 +5798,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5810,8 +5821,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/animation-library": ^0.0.17
@@ -5822,8 +5833,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5833,12 +5844,12 @@ __metadata:
   dependencies:
     "@reach/portal": ^0.17.0
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5855,8 +5866,8 @@ __metadata:
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/a11y-library": ^0.0.12
@@ -5867,8 +5878,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5878,13 +5889,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5898,8 +5909,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
@@ -5907,8 +5918,8 @@ __metadata:
     "@real-system/state-library": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5918,13 +5929,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5937,16 +5948,16 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/separator-primitive": ^0.0.13
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5958,15 +5969,15 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5978,15 +5989,15 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -5998,7 +6009,7 @@ __metadata:
     constate: ^3.3.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
+    react: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6008,19 +6019,21 @@ __metadata:
   dependencies:
     "@emotion/is-prop-valid": ^1.2.0
     "@emotion/memoize": ^0.8.0
-    "@emotion/react": ^11.10.0
-    "@emotion/styled": ^11.10.0
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.10.4
+    "@emotion/use-insertion-effect-with-fallbacks": 1.0.0
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
     csstype: ^3.1.0
     polished: ^4.2.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
+    "@emotion/use-insertion-effect-with-fallbacks": 1.0.0
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6032,16 +6045,16 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
+    react: ^17.0.2
     react-autosize-textarea: ^7.1.0
-    react-dom: ^18.2.0
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/input": ^0.0.52
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6056,8 +6069,8 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/alert": ^0.0.38
@@ -6066,8 +6079,8 @@ __metadata:
     "@real-system/portal-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6077,13 +6090,13 @@ __metadata:
   dependencies:
     "@real-system/ariakit-library": ^0.0.18
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/ariakit-library": ^0.0.18
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6097,8 +6110,8 @@ __metadata:
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/animation-library": ^0.0.17
@@ -6106,8 +6119,8 @@ __metadata:
     "@real-system/tooltip-primitive": ^0.0.13
     "@real-system/typography": ^0.0.53
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6120,16 +6133,16 @@ __metadata:
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     "@real-system/visually-hidden": ^0.0.48
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6137,17 +6150,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/utils-library@workspace:packages/libraries/utils-library"
   dependencies:
-    chalk: ^4.1.2
     concurrently: ^7.3.0
     deepmerge: ^4.2.2
     lodash.get: ^4.4.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     react-uid: ^2.3.2
     typescript: ^4.8.2
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -6175,15 +6187,15 @@ __metadata:
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
     concurrently: ^7.3.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": 0.0.16
     "@real-system/styled-library": ^0.0.14
     "@real-system/utils-library": ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -9042,12 +9054,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.6":
-  version: 18.0.6
-  resolution: "@types/react-dom@npm:18.0.6"
+"@types/react-dom@npm:^17.0.17":
+  version: 17.0.17
+  resolution: "@types/react-dom@npm:17.0.17"
   dependencies:
-    "@types/react": "*"
-  checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
+    "@types/react": ^17
+  checksum: 23caf98aa03e968811560f92a2c8f451694253ebe16b670929b24eaf0e7fa62ba549abe9db0ac028a9d8a9086acd6ab9c6c773f163fa21224845edbc00ba6232
   languageName: node
   linkType: hard
 
@@ -9060,23 +9072,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-test-renderer@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "@types/react-test-renderer@npm:18.0.0"
+"@types/react-test-renderer@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "@types/react-test-renderer@npm:17.0.2"
   dependencies:
-    "@types/react": "*"
-  checksum: 6afc938a1d7618d88ab8793e251f0bd5981bf3f08c1b600f74df3f8800b92589ea534dc6dcb7c8d683893fcc740bf8d7843a42bf2dae59785cfe88f004bd7b0b
+    "@types/react": ^17
+  checksum: 0be325798b6b38cc31fbb11f2f1e1a5578cc3b23eddf1ddd1ab58ccf50966e8f779383084d8bc3a7db3108ad815af8fbae5c0f54329a88d52200e01547d85c33
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.18":
-  version: 18.0.18
-  resolution: "@types/react@npm:18.0.18"
+"@types/react@npm:^17.0.49":
+  version: 17.0.49
+  resolution: "@types/react@npm:17.0.49"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 6d72d35ab3eecf382a5e0f225923f5a2c753045fce02e4e29713f36c99a24f0f770666a49dde96167f37c86271f93339d1b7e2b8969d011b137a9ebd24ee6806
+  checksum: e2e8001bb16fdf52dc92dbc2f64c8e49b1c6ab5d5da4725c0f27e3d925939e42b835554fecc306ca6b0951801eb784288b63c924bd703834662bbaccf89cb68a
   languageName: node
   linkType: hard
 
@@ -22201,15 +22213,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react-dom@npm:18.2.0"
+"react-dom@npm:17.0.2":
+  version: 17.0.2
+  resolution: "react-dom@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
-    scheduler: ^0.23.0
+    object-assign: ^4.1.1
+    scheduler: ^0.20.2
   peerDependencies:
-    react: ^18.2.0
-  checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+    react: 17.0.2
+  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
   languageName: node
   linkType: hard
 
@@ -22285,7 +22298,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:17.0.2, react-is@npm:^17.0.1":
+"react-is@npm:17.0.2, react-is@npm:^17.0.1, react-is@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
@@ -22303,13 +22316,6 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
-  languageName: node
-  linkType: hard
-
-"react-is@npm:^18.2.0":
-  version: 18.2.0
-  resolution: "react-is@npm:18.2.0"
-  checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
   languageName: node
   linkType: hard
 
@@ -22362,7 +22368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-shallow-renderer@npm:^16.15.0":
+"react-shallow-renderer@npm:^16.13.1":
   version: 16.15.0
   resolution: "react-shallow-renderer@npm:16.15.0"
   dependencies:
@@ -22432,16 +22438,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:^18.2.0":
-  version: 18.2.0
-  resolution: "react-test-renderer@npm:18.2.0"
+"react-test-renderer@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-test-renderer@npm:17.0.2"
   dependencies:
-    react-is: ^18.2.0
-    react-shallow-renderer: ^16.15.0
-    scheduler: ^0.23.0
+    object-assign: ^4.1.1
+    react-is: ^17.0.2
+    react-shallow-renderer: ^16.13.1
+    scheduler: ^0.20.2
   peerDependencies:
-    react: ^18.2.0
-  checksum: 6b6980ced93fa2b72662d5e4ab3b4896833586940047ce52ca9aca801e5432adf05fcbe28289b0af3ce6a2a7c590974e25dcc8aa43d0de658bfe8bbcd686f958
+    react: 17.0.2
+  checksum: e6b5c6ed2a0bde2c34f1ab9523ff9bc4c141a271daf730d6b852374e83acc0155d58ab71a318251e953ebfa65b8bebb9c5dce3eba1ccfcbef7cc4e1e8261c401
   languageName: node
   linkType: hard
 
@@ -22532,12 +22539,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
+"react@npm:17.0.2":
+  version: 17.0.2
+  resolution: "react@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
+    object-assign: ^4.1.1
+  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 
@@ -22693,9 +22701,9 @@ __metadata:
     "@testing-library/user-event": ^14.4.3
     "@types/jest": ^28.1.8
     "@types/node": ^18.7.14
-    "@types/react": ^18.0.18
-    "@types/react-dom": ^18.0.6
-    "@types/react-test-renderer": ^18.0.0
+    "@types/react": ^17.0.49
+    "@types/react-dom": ^17.0.17
+    "@types/react-test-renderer": ^17.0.2
     "@typescript-eslint/eslint-plugin": ^5.36.1
     "@typescript-eslint/parser": ^5.36.1
     addon-screen-reader: ^1.8.6
@@ -22732,9 +22740,9 @@ __metadata:
     playroom: 0.28.0
     precise-commits: ^1.0.2
     prettier: ^2.7.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-test-renderer: ^18.2.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-test-renderer: ^17.0.2
     rimraf: ^3.0.2
     rollup: ^2.79.0
     rollup-plugin-delete: ^2.0.0
@@ -23568,12 +23576,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.0":
-  version: 0.23.0
-  resolution: "scheduler@npm:0.23.0"
+"scheduler@npm:^0.20.2":
+  version: 0.20.2
+  resolution: "scheduler@npm:0.20.2"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
+    object-assign: ^4.1.1
+  checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
   languageName: node
   linkType: hard
 
