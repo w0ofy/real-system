@@ -1,6 +1,6 @@
 const { rollup } = require('rollup');
 const { logger } = require('../utils');
-const { makePlugins } = require('./plugins');
+const { plugins } = require('./plugins');
 
 const globals = {
   react: 'React',
@@ -16,12 +16,12 @@ async function build(packageJson) {
   const esmBundle = await rollup({
     input: packageEntryPoint,
     output: { sourcemap: true, exports: 'named' },
-    plugins: makePlugins('esm'),
+    plugins: plugins,
   });
   const cjsBundle = await rollup({
     input: packageEntryPoint,
     output: { sourcemap: true, exports: 'named' },
-    plugins: makePlugins('cjs'),
+    plugins: plugins,
   });
 
   logger.info('-------------------------');
