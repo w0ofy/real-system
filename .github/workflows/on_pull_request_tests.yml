@@ -42,4 +42,4 @@ jobs:
           build-script: 'build:js'
           # only check commonjs files
           pattern: '**/lib/**/*.js'
-          exclude: '{**/*.map,**/node_modules/**}'
+          exclude: '{**/*.map,**/node_modules/**,**/*.debug.js}'
