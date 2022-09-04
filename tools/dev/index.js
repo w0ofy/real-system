@@ -1,9 +1,7 @@
 const { dev } = require('./esbuild');
-const { makeEsbuildConfig } = require('./makeEsbuildConfig');
 
 module.exports = dev;
 /**
- * so things can be imported like `const dev = require('.../dev')` and used like `dev.plugins` or `dev.globals`
+ * so things can be imported like `const dev = require('.../dev')` and used like `dev.dev`
  */
 exports = module.exports;
-exports.makeEsbuildConfig = makeEsbuildConfig;
