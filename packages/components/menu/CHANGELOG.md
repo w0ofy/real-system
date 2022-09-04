@@ -1,5 +1,15 @@
 # @real-system/menu
 
+## 0.0.27
+
+### Patch Changes
+
+- Updated dependencies [[`9971a68e`](https://github.com/bigwoof91/real-system/commit/9971a68e69552dd7e7f375fcf622e10bf44814e4)]:
+  - @real-system/styled-library@0.0.16
+  - @real-system/button@0.0.56
+  - @real-system/link@0.0.25
+  - @real-system/elements-primitive@0.0.18
+
 ## 0.0.26
 
 ### Patch Changes
