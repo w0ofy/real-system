@@ -1,5 +1,11 @@
 # @real-system/styled-library
 
+## 0.0.16
+
+### Patch Changes
+
+- [#578](https://github.com/bigwoof91/real-system/pull/578) [`9971a68e`](https://github.com/bigwoof91/real-system/commit/9971a68e69552dd7e7f375fcf622e10bf44814e4) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Bundling packages with esbuild instead of rollup-esbuild
+
 ## 0.0.15
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/textarea",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "description": "Textarea component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,15 +30,15 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/input": "^0.0.53",
-    "@real-system/styled-library": "^0.0.15",
+    "@real-system/input": "^0.0.54",
+    "@real-system/styled-library": "^0.0.16",
     "@real-system/utils-library": "^0.0.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/input": "^0.0.53",
-    "@real-system/styled-library": "^0.0.15",
+    "@real-system/input": "^0.0.54",
+    "@real-system/styled-library": "^0.0.16",
     "@real-system/utils-library": "^0.0.28",
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
