@@ -17,7 +17,7 @@ const FieldComponent = (props: FieldProps) => (
 
 const inputId = 'name';
 const helpText = 'Your name';
-const errorText = 'Name is required';
+const invalid = { status: false, message: 'error' };
 const FieldInput = () => <Input id={inputId} type="text" />;
 
 describe('Field', () => {
@@ -29,20 +29,20 @@ describe('Field', () => {
     );
     expect(screen.getByLabelText('Name')).toBeTruthy();
     expect(screen.getByText(helpText)).toBeTruthy();
-    expect(screen.queryByText(errorText)).toBeFalsy();
+    expect(screen.queryByText(invalid.message)).toBeFalsy();
 
     rerender(
       <FieldComponent
         label="Name"
         labelFor={inputId}
         helpText={helpText}
-        errorText={errorText}>
+        invalid={{ ...invalid, status: true }}>
         <FieldInput />
       </FieldComponent>
     );
 
     expect(screen.queryByText(helpText)).toBeFalsy();
-    expect(screen.getByText(errorText)).toBeTruthy();
+    expect(screen.getByText(invalid.message)).toBeTruthy();
   });
   it('renders without builtins', () => {
     render(

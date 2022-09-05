@@ -5,7 +5,7 @@ import { Button } from '@real-system/button';
 import { Field, FieldGroup } from '@real-system/field';
 import { Input } from '@real-system/input';
 import { Select, SelectContainer, SelectItem } from '@real-system/select';
-import { HelpText, Label } from '@real-system/typography';
+import { HelperText, Label } from '@real-system/typography';
 
 export default {
   title: 'Components/Field',
@@ -31,7 +31,7 @@ export const WithError = () => (
     label="First name"
     labelFor="firstName"
     helpText="Provide your first name"
-    errorText="This field is required"
+    invalid={{ status: true, message: 'This field is required' }}
     required>
     <Input type="text" id="firstName" error />
   </Field>
@@ -107,14 +107,14 @@ export const WithoutBuiltins = () => (
           First name
         </Label>
         <Input type="text" id="firstName" />
-        <HelpText>Provide your first name</HelpText>
+        <HelperText>Provide your first name</HelperText>
       </Field>
       <Field builtIns={false} width="100%">
         <Label htmlFor="lastName" required>
           Last name
         </Label>
         <Input type="text" id="lastName" />
-        <HelpText>Provide your last name</HelpText>
+        <HelperText>Provide your last name</HelperText>
       </Field>
       <Field builtIns={false} width="100%">
         <Label htmlFor="phoneNumber">Phone number</Label>

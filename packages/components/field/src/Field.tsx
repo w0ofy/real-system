@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 import { Flex } from '@real-system/flex';
-import { HelpText, Label } from '@real-system/typography';
+import { HelperText, Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import type { FieldProps } from './types';
@@ -12,23 +12,23 @@ import type { FieldProps } from './types';
  */
 
 /**
- * @description A flex wrapper composed of `Label`, `HelpText` and whatever field **input** is passed as a child.
+ * @description A flex wrapper composed of `Label`, `HelperText` and whatever field **input** is passed as a child.
  * `Field` simplifies the work of composing field **inputs** together. `Field` should *not* be used with **controls** like
  * `RadioGroup` or `CheckboxGroup` — it is meant to be used with inputs only.
  */
 const Field = ({
   builtIns = true,
   children,
-  errorText,
+  invalid,
   helpText,
   label,
   labelFor,
   required,
   ...restProps
 }: FieldProps) => {
-  const hasHelpText = useMemo(
-    () => !!helpText || !!errorText,
-    [helpText, errorText]
+  const hasHelperText = useMemo(
+    () => !!helpText || !!invalid,
+    [helpText, invalid]
   );
   if (builtIns)
     return (
@@ -44,7 +44,7 @@ const Field = ({
           </Label>
         )}
         {children}
-        {hasHelpText && <HelpText errorText={errorText}>{helpText}</HelpText>}
+        {hasHelperText && <HelperText invalid={invalid}>{helpText}</HelperText>}
       </Flex>
     );
   return (

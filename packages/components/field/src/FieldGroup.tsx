@@ -6,7 +6,7 @@ import { makeTestId } from '@real-system/utils-library';
 import type { FieldGroupProps, FieldProps } from './types';
 
 /**
- * @description A flex wrapper composed of `Label`, `HelpText` and whatever field **input** is passed as a child.
+ * @description A flex wrapper composed of `Label`, `HelperText` and whatever field **input** is passed as a child.
  * `Field` simplifies the work of composing field **inputs** together. `Field` should *not* be used with **controls** like
  * `RadioGroup` or `CheckboxGroup` — it is meant to be used with inputs only.
  */

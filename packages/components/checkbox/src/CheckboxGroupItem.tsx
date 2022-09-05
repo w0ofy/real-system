@@ -68,7 +68,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
           disabled={disabled}
           isSelected={isSelected}
           indeterminate={props.indeterminate}
-          errorText={state.errorText}
+          isInvalid={state?.invalid?.status}
           {...interactionProps}
         />
         <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>

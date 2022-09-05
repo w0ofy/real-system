@@ -45,7 +45,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
           <input {...inputProps} ref={mergedRef} />
         </VisuallyHidden>
         <RadioControl
-          errorText={state.errorText}
+          isInvalid={state.invalid?.status}
           disabled={disabled}
           isSelected={isSelected}
           {...restInteractions}

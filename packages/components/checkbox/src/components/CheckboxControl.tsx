@@ -35,7 +35,7 @@ type CheckboxControlProps = {
   disabled?: boolean;
   isSelected: boolean;
   indeterminate?: boolean;
-  errorText?: string;
+  isInvalid?: boolean;
 } & UseInteractionsReturnValue;
 
 const transition =
@@ -52,7 +52,7 @@ const CheckboxControl = ({
   isHovered,
   isPressed,
   isFocusedWithin,
-  errorText,
+  isInvalid,
   indeterminate,
 }: CheckboxControlProps) => {
   const backgroundColor = useMemo(() => {
@@ -60,19 +60,19 @@ const CheckboxControl = ({
 
     if (disabled) return 'gray-50';
     if (isSelected) {
-      if (errorText) {
+      if (isInvalid) {
         return getErrorColor(isHovered);
       }
       return getSelectedColor(isHovered);
     }
     return defaultColor;
-  }, [disabled, isSelected, errorText, isHovered]);
+  }, [disabled, isSelected, isInvalid, isHovered]);
 
   const borderColor = useMemo(() => {
     const defaultColor = isHovered ? 'gray-300' : 'gray-200';
 
     if (disabled) return 'gray-200';
-    if (errorText) {
+    if (isInvalid) {
       return getErrorColor(isHovered);
     }
     if (isSelected) {
@@ -82,7 +82,7 @@ const CheckboxControl = ({
       return 'gray-200';
     }
     return defaultColor;
-  }, [isHovered, disabled, errorText, isSelected, isFocusedWithin]);
+  }, [isHovered, disabled, isInvalid, isSelected, isFocusedWithin]);
 
   return (
     <real.span
@@ -93,7 +93,7 @@ const CheckboxControl = ({
       borderWidth={1}
       backgroundColor={backgroundColor}
       borderColor={borderColor}
-      borderRadius={4}
+      borderRadius={3}
       transition={transition}
       boxShadow={!isPressed && isFocusedWithin ? 'focus-outline' : 'none'}>
       <CheckboxIcon

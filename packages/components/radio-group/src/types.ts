@@ -7,11 +7,12 @@ import type {
   AriaRadioGroupProps,
   AriaRadioProps,
 } from '@real-system/a11y-library';
+import type { InvalidConfig } from '@real-system/typography';
 
 type CustomProps = {
   disabled?: boolean;
   helpText?: string;
-  errorText?: string;
+  invalid?: InvalidConfig;
 };
 
 /** Radio */
