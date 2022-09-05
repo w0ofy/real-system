@@ -5173,6 +5173,7 @@ __metadata:
     "@react-types/radio": ^3.2.3
     "@react-types/shared": ^3.14.1
     concurrently: ^7.3.0
+    react: ^18.2.0
     typescript: ^4.8.2
   peerDependencies:
     react: ^18.2.0
@@ -5249,6 +5250,7 @@ __metadata:
   resolution: "@real-system/animation-library@workspace:packages/libraries/animation-library"
   dependencies:
     concurrently: ^7.3.0
+    react: ^18.2.0
     react-spring: ^9.5.2
     typescript: ^4.8.2
   peerDependencies:
@@ -5976,6 +5978,7 @@ __metadata:
   dependencies:
     concurrently: ^7.3.0
     constate: ^3.3.2
+    react: ^18.2.0
     typescript: ^4.8.2
   peerDependencies:
     react: ^18.2.0

@@ -44,7 +44,6 @@
     "polished": "^4.2.2"
   },
   "devDependencies": {
-    "@emotion/use-insertion-effect-with-fallbacks": "^1.0.0",
     "@real-system/utils-library": "^0.0.28",
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
