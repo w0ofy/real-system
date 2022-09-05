@@ -79,5 +79,6 @@ export type {
   RealSystemComponentProps,
   RealSystemCustomProps,
   RealSystemElementProps,
+  StyledComponentProps,
   StyleObjectOrFn,
 };

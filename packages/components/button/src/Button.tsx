@@ -5,8 +5,8 @@ import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { BaseButton } from './BaseButton';
+import { ButtonProps, ButtonStates } from './Button.model';
 import { buttonStylesConfig } from './Button.styles';
-import { ButtonProps, ButtonStates } from './types';
 
 const getButtonState = (
   disabled?: boolean,

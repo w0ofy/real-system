@@ -6,18 +6,15 @@ import type {
   ThemeSizes,
 } from '@real-system/styled-library';
 
-export type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
-export type ButtonSize = Extract<
+type ButtonVariants = 'outline' | 'fill' | 'minimal' | 'floating';
+type ButtonSize = Extract<
   ThemeSizes,
   'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 >;
 
-export type ButtonStates = 'disabled' | 'loading' | 'default';
+type ButtonStates = 'disabled' | 'loading' | 'default';
 
-/**
- * @todo maybe add _expanded pseudo style prop ??? see chakra-ui for MenuButton example
- */
-export type ButtonProps = RealSystemComponentProps & {
+type ButtonProps = RealSystemComponentProps & {
   /** sets the loading state of the buttons */
   loading?: boolean;
   /** inserts a leading icon */
@@ -31,3 +28,5 @@ export type ButtonProps = RealSystemComponentProps & {
   /** sets color scheme of the button; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
   colorScheme?: ColorSchemes;
 };
+
+export type { ButtonProps, ButtonSize, ButtonStates, ButtonVariants };

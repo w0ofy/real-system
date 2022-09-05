@@ -1,7 +1,7 @@
 import type { StylishProps } from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
-import type { ButtonProps, ButtonSize } from './types';
+import type { ButtonProps, ButtonSize } from './Button.model';
 
 const sizes: Record<ButtonSize, StylishProps> = {
   xxs: {

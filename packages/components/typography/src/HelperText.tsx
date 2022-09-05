@@ -100,8 +100,8 @@ const HelperText = forwardRef<HTMLSpanElement, HelperTextProps>(
         alignItems="center"
         padding={0}
         margin={0}
-        fontScale="help"
-        fontWeight="help"
+        fontScale="helper"
+        fontWeight="helper"
         color={LABEL_COLORS[colorScheme]}
         {...restProps}
         ref={ref}>
