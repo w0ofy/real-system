@@ -3,12 +3,13 @@ import type {
   AriaCheckboxGroupProps,
   AriaCheckboxProps,
 } from '@real-system/a11y-library';
+import type { InvalidConfig } from '@real-system/typography';
 
 /** should match keys of values in RenamedCheckboxProps */
 
 type CustomProps = {
   helpText?: string;
-  errorText?: string;
+  invalid?: InvalidConfig;
 };
 
 type CheckboxProps = AriaCheckboxProps & CustomProps;

@@ -9,7 +9,7 @@ import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
-import { CheckboxProps } from './types';
+import type { CheckboxProps } from './types';
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   props,
@@ -26,14 +26,14 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
     mergedRef as React.RefObject<HTMLInputElement>
   );
 
-  const { errorText, helpText } = props;
+  const { invalid, helpText } = props;
   const disabled = props.disabled || props.readonly;
 
   return (
     <CheckboxWrapper
       disabled={disabled}
       helpText={helpText}
-      errorText={errorText}
+      invalid={invalid}
       {...interactionProps}>
       <VisuallyHidden as="div">
         <input {...inputProps} ref={mergedRef} />
@@ -42,7 +42,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         disabled={disabled}
         isSelected={state.isSelected}
         indeterminate={props.indeterminate}
-        errorText={errorText}
+        isInvalid={invalid?.status}
         {...interactionProps}
       />
       <CheckboxLabel disabled={disabled} required={props.required}>

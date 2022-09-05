@@ -15,9 +15,9 @@ export default {
   subcomponents: { CheckboxGroup: CheckboxGroup, CheckboxGroupItem },
   args: {
     children: 'Give this user "Owner" permissions',
+    invalid: { status: false, message: "There's an error here" },
   },
   argTypes: {
-    errorText: { type: 'string' },
     helpText: { type: 'string' },
     checked: { type: 'boolean' },
     required: { type: 'boolean' },
@@ -61,7 +61,7 @@ export const CheckboxGroupStory = (args) => {
 
 CheckboxGroupStory.storyName = 'Checkbox Group';
 
-export const Indeterminate = () => {
+export const Indeterminate = (args) => {
   const [checkedItems, setCheckedItems] = React.useState(['associate']);
 
   const indeterminateValue = 'all';
@@ -78,6 +78,7 @@ export const Indeterminate = () => {
       label="What engineering level is the new team member?"
       value={checkedItems}
       helpText="Select at least 1 level for the new engineer"
+      {...args}
       {...checkBoxGroupProps}>
       <CheckboxGroupItem value={indeterminateValue} {...indeterminateProps}>
         All

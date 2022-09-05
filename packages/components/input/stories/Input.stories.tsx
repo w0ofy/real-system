@@ -5,7 +5,7 @@ import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { Input as RealInput } from '@real-system/input';
-import { HelpText, Label } from '@real-system/typography';
+import { HelperText, Label } from '@real-system/typography';
 
 export default {
   title: 'Components/Input',
@@ -153,7 +153,7 @@ export const Composition = (args) => {
           placeholder="personal@realsystem.com"
           {...args}
         />
-        <HelpText>Use your personal email address.</HelpText>
+        <HelperText>Use your personal email address.</HelperText>
       </Container>
       <Container>
         <Label mb={4} htmlFor="input" required>
@@ -168,16 +168,13 @@ export const Composition = (args) => {
           error={isEmpty || isNotEmail}
           {...args}
         />
-        <HelpText
-          errorText={
-            isEmpty
-              ? 'Field is required'
-              : isNotEmail
-              ? 'Must be a valid email'
-              : ''
-          }>
+        <HelperText
+          invalid={{
+            stauts: isEmpty || isNotEmail,
+            message: isEmpty ? 'Field is required' : 'Must be a valid email',
+          }}>
           Use your personal email address.
-        </HelpText>
+        </HelperText>
       </Container>
       <Container>
         <Label mb={4} htmlFor="input-2">

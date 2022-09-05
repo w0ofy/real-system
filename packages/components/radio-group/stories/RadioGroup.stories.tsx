@@ -7,10 +7,15 @@ export default {
   title: 'Components/Radio Group',
   component: RadioGroup,
   subcomponents: { Radio: RadioGroup.Radio },
-  args: { helpText: 'Choose your single most favorite pet' },
+  args: {
+    helpText: 'Choose your single most favorite pet',
+    invalid: { status: false, message: "There's an error here" },
+  },
   argTypes: {
     helpText: { type: 'string' },
-    errorText: { type: 'string' },
+    invalid: {
+      control: 'object',
+    },
   },
 } as Meta;
 

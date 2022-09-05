@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 import { useRadioGroup, useRadioGroupState } from '@real-system/a11y-library';
 import { Flex } from '@real-system/flex';
-import { HelpText, Label } from '@real-system/typography';
+import { HelperText, Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { Radio } from './Radio';
@@ -22,7 +22,7 @@ const RadioGroup: RadioGroupComponent = forwardRef<
 >(function RadioGroup(props, ref) {
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
-  const { errorText, label, helpText, required, children, orientation } = props;
+  const { invalid, label, helpText, required, children, orientation } = props;
 
   return (
     <Flex
@@ -38,13 +38,13 @@ const RadioGroup: RadioGroupComponent = forwardRef<
         {...labelProps}>
         {label}
       </Label>
-      {helpText && <HelpText marginBottom={6}>{helpText}</HelpText>}
+      {helpText && <HelperText marginBottom={6}>{helpText}</HelperText>}
       <Flex vertical={orientation === 'vertical' ? true : false}>
-        <RadioGroupContextProvider state={{ ...state, orientation, errorText }}>
+        <RadioGroupContextProvider state={{ ...state, orientation, invalid }}>
           {children}
         </RadioGroupContextProvider>
       </Flex>
-      {errorText && <HelpText errorText={errorText} marginBottom={8} />}
+      {invalid && <HelperText invalid={invalid} marginBottom={8} mt={2} />}
     </Flex>
   );
 });
