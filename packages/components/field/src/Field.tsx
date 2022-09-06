@@ -1,58 +1,56 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
+import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
-import { HelperText, Label } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import type { FieldProps } from './types';
+import { FieldControlOptions, FieldProvider } from './Field.context';
+import { FieldGroup } from './FieldGroup';
+import { FieldHelperText } from './FieldHelperText';
+import { FieldLabel } from './FieldLabel';
 
+type FieldProps = FlexProps & FieldControlOptions;
 /**
  *
  * @todo possibly add FieldControl and FieldGroupControl for easy-to-use field context
  */
 
+export interface FieldComponent
+  extends React.ForwardRefExoticComponent<FieldProps> {
+  Label: typeof FieldLabel;
+  HelperText: typeof FieldHelperText;
+  Group: typeof FieldGroup;
+}
+
 /**
- * @description A flex wrapper composed of `Label`, `HelperText` and whatever field **input** is passed as a child.
- * `Field` simplifies the work of composing field **inputs** together. `Field` should *not* be used with **controls** like
- * `RadioGroup` or `CheckboxGroup` — it is meant to be used with inputs only.
+ * @description A flex-ible field context wrapper for field children.
  */
-const Field = ({
-  builtIns = true,
-  children,
-  invalid,
-  helpText,
-  label,
-  labelFor,
-  required,
-  ...restProps
-}: FieldProps) => {
-  const hasHelperText = useMemo(
-    () => !!helpText || !!invalid,
-    [helpText, invalid]
-  );
-  if (builtIns)
+// @ts-expect-error Field component properties are defined on the fn object after this is defined
+const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
+  function Field(
+    { children, invalid, required, disabled, id, readOnly, ...restProps },
+    ref
+  ) {
     return (
-      <Flex
-        vertical
-        xAlignContent="left"
-        data-testid={makeTestId('field')}
-        gap={2}
-        {...restProps}>
-        {label && (
-          <Label htmlFor={labelFor} required={required} whiteSpace="nowrap">
-            {label}
-          </Label>
-        )}
-        {children}
-        {hasHelperText && <HelperText invalid={invalid}>{helpText}</HelperText>}
-      </Flex>
+      <FieldProvider
+        value={{ invalid: invalid!, required, disabled, id: id!, readOnly }}>
+        <Flex
+          vertical
+          xAlignContent="left"
+          data-testid={makeTestId('field')}
+          gap={2}
+          ref={ref}
+          {...restProps}>
+          {children}
+        </Flex>
+      </FieldProvider>
     );
-  return (
-    <Flex vertical gap={2} {...restProps}>
-      {children}
-    </Flex>
-  );
-};
+  }
+);
+
+Field.Group = FieldGroup;
+Field.HelperText = FieldHelperText;
+Field.Label = FieldLabel;
 
 export type { FieldProps };
 export { Field };

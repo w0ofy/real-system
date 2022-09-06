@@ -5,7 +5,7 @@ import { Meta } from '@storybook/react';
 import { createDescendantContext } from '@real-system/descendants-library';
 import { Flex } from '@real-system/flex';
 import { Input as RealInput } from '@real-system/input';
-import { Heading } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Libraries/Descendants',
@@ -59,9 +59,9 @@ function Input() {
 export const WithNumberInput = () => {
   return (
     <>
-      <Heading size="h4" mb={12}>
+      <Text.Heading size="h4" mb={12}>
         Use arrow-right and arrow-left to navigate inputs
-      </Heading>
+      </Text.Heading>
       <NumberInput>
         <Input />
         <Input />

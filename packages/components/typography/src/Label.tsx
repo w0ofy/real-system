@@ -5,7 +5,7 @@ import type { StylishProps } from '@real-system/styled-library';
 
 import { BaseText } from './BaseText';
 import { RequiredDot } from './RequiredDot';
-import type { CommonTextProps } from './types';
+import type { CommonTextProps } from './Text.model';
 
 export type LabelProps = {
   children?: React.ReactNode;

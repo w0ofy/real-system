@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
 
+import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import { real } from '@real-system/elements-primitive';
 
-import { BaseTextProps } from './types';
+type BaseTextProps = Omit<RealElementPrimitiveProps, 'size'>;
 
 const baseStyles = {
   color: 'gray-800',

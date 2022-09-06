@@ -45,7 +45,7 @@ export const CopyInputText = (args) => {
         name="email-address"
         value="personal@realsystem.com"
         suffix={
-          <Tooltip {...args} visible={copied} hideArrow gutter={4}>
+          <Tooltip {...args} open={copied} hideArrow gutter={4}>
             <Button
               size="sm"
               variant="floating"

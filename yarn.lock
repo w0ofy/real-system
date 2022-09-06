@@ -5650,6 +5650,7 @@ __metadata:
   resolution: "@real-system/input@workspace:packages/components/input"
   dependencies:
     "@real-system/elements-primitive": ^0.0.18
+    "@real-system/field": ^0.0.33
     "@real-system/styled-library": ^0.0.16
     "@real-system/typography": ^0.0.55
     "@real-system/utils-library": ^0.0.28
@@ -5660,6 +5661,7 @@ __metadata:
     typescript: ^4.8.2
   peerDependencies:
     "@real-system/elements-primitive": ^0.0.18
+    "@real-system/field": ^0.0.33
     "@real-system/styled-library": ^0.0.16
     "@real-system/typography": ^0.0.55
     "@real-system/utils-library": ^0.0.28

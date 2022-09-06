@@ -4,7 +4,7 @@ import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
 import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
 import type { InvalidConfig } from '@real-system/typography';
-import { HelperText, Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 type CheckboxWrapperProps = {
   children: React.ReactNode;
@@ -31,7 +31,7 @@ const CheckboxWrapper = forwardRef<
 ) {
   return (
     <Flex inline vertical {...restProps}>
-      <Label
+      <Text.Label
         display="inline-flex"
         ref={ref}
         disabled={disabled}
@@ -41,11 +41,11 @@ const CheckboxWrapper = forwardRef<
         <Flex as="span" xAlignContent="center" yAlignContent="center">
           {children}
         </Flex>
-      </Label>
+      </Text.Label>
       {(helpText || invalid) && (
-        <HelperText mt={2} marginLeft={12} invalid={invalid}>
+        <Text.HelperText mt={2} marginLeft={12} invalid={invalid}>
           {helpText}
-        </HelperText>
+        </Text.HelperText>
       )}
     </Flex>
   );

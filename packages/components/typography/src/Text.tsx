@@ -5,8 +5,13 @@ import { Code } from './Code';
 import { Heading } from './Heading';
 import { HelperText } from './HelperText';
 import { Label } from './Label';
+import type { CommonTextProps } from './Text.model';
 import { Truncate } from './Truncate';
-import { CommonTextProps, TextAsTags } from './types';
+
+type TextAsTags = Extract<
+  keyof JSX.IntrinsicElements,
+  'p' | 'span' | 'div' | 'label'
+>;
 
 export type TextProps = {
   children?: React.ReactNode;
@@ -16,10 +21,11 @@ export type TextProps = {
 
 export interface TextComponent
   extends React.ForwardRefExoticComponent<TextProps> {
-  Heading: typeof Heading;
-  Label: typeof Label;
-  HelperText: typeof HelperText;
+  Base: typeof BaseText;
   Code: typeof Code;
+  Heading: typeof Heading;
+  HelperText: typeof HelperText;
+  Label: typeof Label;
   Truncate: typeof Truncate;
 }
 
@@ -46,10 +52,11 @@ const Text: TextComponent = forwardRef<
   );
 });
 
-Text.Heading = Heading;
-Text.Label = Label;
-Text.HelperText = HelperText;
+Text.Base = BaseText;
 Text.Code = Code;
+Text.Heading = Heading;
+Text.HelperText = HelperText;
+Text.Label = Label;
 Text.Truncate = Truncate;
 
 export { Text };

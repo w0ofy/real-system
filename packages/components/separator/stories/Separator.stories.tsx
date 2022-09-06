@@ -5,7 +5,7 @@ import { Box } from '@real-system/box';
 import { Flex } from '@real-system/flex';
 import { Link } from '@real-system/link';
 import { Separator } from '@real-system/separator';
-import { Heading, Text } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Separator',
@@ -26,7 +26,7 @@ export const Default = (args) => (
 export const Showcase = () => (
   <Flex width="100%" vertical>
     <Flex vertical w="100%" borderColor="weak" gap={4} mb={4}>
-      <Heading as="h2">Horizontal Separator for Content</Heading>
+      <Text.Heading as="h2">Horizontal Separator for Content</Text.Heading>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -37,7 +37,7 @@ export const Showcase = () => (
         mollit anim id est laborum.
       </Text>
       <Separator orientation="horizontal" />
-      <Heading as="h2">It's Very Easy to Use</Heading>
+      <Text.Heading as="h2">It's Very Easy to Use</Text.Heading>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

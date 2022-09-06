@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { BaseText } from './BaseText';
-import type { CommonTextProps, HeadingAsTags, HeadingElement } from './types';
+import type { CommonTextProps } from './Text.model';
 
 const stylesConfig = {
   h1: {
@@ -47,6 +47,23 @@ const stylesConfig = {
     color: 'gray-600',
   },
 };
+
+type HeadingAsTags =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'div'
+  | 'label'
+  | 'span'
+  | 'header';
+type HeadingElement =
+  | HTMLDivElement
+  | HTMLHeadingElement
+  | HTMLSpanElement
+  | HTMLLabelElement;
 
 type HeadingProps = {
   children?: React.ReactNode;

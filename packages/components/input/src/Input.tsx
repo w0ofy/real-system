@@ -3,6 +3,9 @@
  */
 import React, { forwardRef } from 'react';
 
+import { useField } from '@real-system/field';
+import { FieldControl } from '@real-system/field';
+
 import { InputBox, InputBoxTypes } from './InputBox';
 import { InputElement } from './InputElement';
 import { InputProps } from './types';
@@ -16,20 +19,34 @@ type InputTypeProps = {
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
     type = 'text',
-    readOnly,
-    disabled,
-    error,
+    readOnly: readOnlyProp,
+    disabled: disabledProp,
     suffix,
     prefix,
     placeholder,
-    id,
+    id: idProp,
     value,
-    required,
+    required: requiredProp,
+    invalid,
     name,
     ...restProps
   },
   ref
 ) {
+  const {
+    invalid: { status: error },
+    required,
+    disabled,
+    readOnly,
+    id,
+  } = useField({
+    invalid,
+    required: requiredProp,
+    disabled: disabledProp,
+    readOnly: readOnlyProp,
+    id: idProp,
+  });
+
   const inputTypeProps: InputTypeProps = { type };
 
   if (type === 'number') {

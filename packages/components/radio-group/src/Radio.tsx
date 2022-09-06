@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 import { useInteractions, useRadio } from '@real-system/a11y-library';
 import { Flex } from '@real-system/flex';
-import { Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
@@ -32,7 +32,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
   const isVertical = state.orientation === 'vertical' ? true : false;
 
   return (
-    <Label
+    <Text.Label
       display="inline-flex"
       disabled={disabled}
       mb={2}
@@ -52,7 +52,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
         />
         <RadioLabel disabled={disabled}>{children}</RadioLabel>
       </Flex>
-    </Label>
+    </Text.Label>
   );
 });
 

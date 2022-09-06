@@ -1,7 +1,7 @@
 import React, { forwardRef, useMemo } from 'react';
 
+import { real } from '@real-system/elements-primitive';
 import { Spinner } from '@real-system/spinner';
-import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { BaseButton } from './BaseButton';
@@ -20,17 +20,6 @@ const getButtonState = (
   }
   return 'default';
 };
-
-type LabelProps = {
-  marginLeft: number | string;
-  marginRight: number | string;
-};
-
-const Label = styled('span')<LabelProps>((props) => ({
-  marginLeft: props.marginLeft,
-  marginRight: props.marginRight,
-  whiteSpace: 'nowrap',
-}));
 
 const getLabelMarginX = (hasIcon: unknown) => (hasIcon ? 5 : 0);
 
@@ -79,11 +68,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       {...restProps}
       ref={ref}>
       {leadingIcon ? leadingIcon : null}
-      <Label
+      <real.span
+        whiteSpace="nowrap"
         marginLeft={getLabelMarginX(leadingIcon)}
         marginRight={getLabelMarginX(trailingIcon)}>
         {isLoading ? <Spinner size="sm" color="gray-300" /> : children}
-      </Label>
+      </real.span>
       {trailingIcon ? trailingIcon : null}
     </BaseButton>
   );

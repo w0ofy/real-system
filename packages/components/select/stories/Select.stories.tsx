@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectSeparator,
 } from '@real-system/select';
-import { Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Select',
@@ -26,7 +26,7 @@ export default {
 export const Default = (args) => {
   return (
     <SelectContainer {...args} disabled>
-      <Label>Select a fruit</Label>
+      <Text.Label>Select a fruit</Text.Label>
       <Select maxW="20rem">
         <SelectItem value="Apple">Apple</SelectItem>
         <SelectItem value="Grape" disabled />
@@ -39,7 +39,7 @@ export const Default = (args) => {
 export const SelectGroupStory = (args) => {
   return (
     <SelectContainer>
-      <Label>Select Groups</Label>
+      <Text.Label>Select Groups</Text.Label>
       <Select maxW="20rem">
         <SelectGroup>
           <SelectGroupLabel>Fruits</SelectGroupLabel>

@@ -2,44 +2,44 @@ import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Button } from '@real-system/button';
-import { Field, FieldGroup } from '@real-system/field';
+import { Field } from '@real-system/field';
 import { Input } from '@real-system/input';
 import { Select, SelectContainer, SelectItem } from '@real-system/select';
-import { HelperText, Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Field',
   component: Field,
-  subcomponents: { FieldGroup },
+  subcomponents: {
+    FieldGroup: Field.Group,
+    FieldLabel: Field.Label,
+    FieldHelperText: Field.HelperText,
+  },
 } as Meta;
 
 export const Default = (args) => (
-  <Field
-    inline
-    label="First name"
-    labelFor="firstName"
-    helpText="Provide your first name"
-    required
-    {...args}>
-    <Input type="text" id="firstName" />
+  <Field inline id="first-name" required {...args}>
+    <Field.Label>First name</Field.Label>
+    <Input type="text" id="first-name" />
+    <Field.HelperText>Provide your first name</Field.HelperText>
   </Field>
 );
 
 export const WithError = () => (
   <Field
+    id="first-name"
     inline
-    label="First name"
-    labelFor="firstName"
-    helpText="Provide your first name"
     invalid={{ status: true, message: 'This field is required' }}
     required>
-    <Input type="text" id="firstName" error />
+    <Field.Label>First name</Field.Label>
+    <Input type="text" id="first-name" error />
+    <Field.HelperText>Provide your first name</Field.HelperText>
   </Field>
 );
 
 export const FieldGroupStory = () => (
   <form>
-    <FieldGroup marginBottom={8} width="200px">
+    <Field.Group marginBottom={8} width="200px">
       <Field label="First name" labelFor="firstName" width="100%" required>
         <Input type="text" id="firstName" />
       </Field>
@@ -51,7 +51,7 @@ export const FieldGroupStory = () => (
       </Field>
       <Field builtIns={false} width="100%">
         <SelectContainer>
-          <Label>Engineering Level</Label>
+          <Text.Label>Engineering Level</Text.Label>
           <Select>
             <SelectItem value="L1">L1 (Associate)</SelectItem>
             <SelectItem value="L2">L2 (Mid)</SelectItem>
@@ -60,7 +60,7 @@ export const FieldGroupStory = () => (
           </Select>
         </SelectContainer>
       </Field>
-    </FieldGroup>
+    </Field.Group>
     <Button type="reset" variant="fill">
       Submit
     </Button>
@@ -71,7 +71,7 @@ FieldGroupStory.storyName = 'Field Group';
 
 export const InlineFieldGroup = () => (
   <form>
-    <FieldGroup inline marginBottom={8} width="100%">
+    <Field.Group inline marginBottom={8} width="100%">
       <Field label="First name" labelFor="firstName" width="20%" required>
         <Input type="text" id="firstName" />
       </Field>
@@ -83,7 +83,7 @@ export const InlineFieldGroup = () => (
       </Field>
       <Field builtIns={false} width="20%">
         <SelectContainer>
-          <Label>Engineering Level</Label>
+          <Text.Label>Engineering Level</Text.Label>
           <Select>
             <SelectItem value="L1">L1 (Associate)</SelectItem>
             <SelectItem value="L2">L2 (Mid)</SelectItem>
@@ -92,7 +92,7 @@ export const InlineFieldGroup = () => (
           </Select>
         </SelectContainer>
       </Field>
-    </FieldGroup>
+    </Field.Group>
     <Button type="reset" variant="fill">
       Submit
     </Button>
@@ -101,28 +101,28 @@ export const InlineFieldGroup = () => (
 
 export const WithoutBuiltins = () => (
   <form>
-    <FieldGroup width="200px">
+    <Field.Group width="200px">
       <Field builtIns={false} width="100%">
-        <Label htmlFor="firstName" required>
+        <Text.Label htmlFor="firstName" required>
           First name
-        </Label>
+        </Text.Label>
         <Input type="text" id="firstName" />
-        <HelperText>Provide your first name</HelperText>
+        <Text.HelperText>Provide your first name</Text.HelperText>
       </Field>
       <Field builtIns={false} width="100%">
-        <Label htmlFor="lastName" required>
+        <Text.Label htmlFor="lastName" required>
           Last name
-        </Label>
+        </Text.Label>
         <Input type="text" id="lastName" />
-        <HelperText>Provide your last name</HelperText>
+        <Text.HelperText>Provide your last name</Text.HelperText>
       </Field>
       <Field builtIns={false} width="100%">
-        <Label htmlFor="phoneNumber">Phone number</Label>
+        <Text.Label htmlFor="phoneNumber">Phone number</Text.Label>
         <Input type="tel" id="phoneNumber" />
       </Field>
       <Field builtIns={false} width="100%">
         <SelectContainer>
-          <Label>Engineering Level</Label>
+          <Text.Label>Engineering Level</Text.Label>
           <Select>
             <SelectItem value="L1">L1 (Associate)</SelectItem>
             <SelectItem value="L2">L2 (Mid)</SelectItem>
@@ -134,7 +134,7 @@ export const WithoutBuiltins = () => (
       <Button type="reset" variant="fill">
         Submit
       </Button>
-    </FieldGroup>
+    </Field.Group>
   </form>
 );
 

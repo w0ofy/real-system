@@ -5,7 +5,7 @@ import type { ColorSchemes, ColorTokens } from '@real-system/styled-library';
 import { isUndefinedOrNull } from '@real-system/utils-library';
 
 import { BaseText } from './BaseText';
-import type { CommonTextProps } from './types';
+import type { CommonTextProps } from './Text.model';
 
 export type InvalidConfig = {
   status: boolean;

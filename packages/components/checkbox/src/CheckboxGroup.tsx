@@ -5,7 +5,7 @@ import {
   useCheckboxGroupState,
 } from '@real-system/a11y-library';
 import { Flex } from '@real-system/flex';
-import { HelperText, Label } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CheckboxGroupContextProvider } from './CheckboxContext';
@@ -36,15 +36,17 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
       {...groupProps}
       data-testid={makeTestId('checkbox-group')}
       ref={ref}>
-      <Label
+      <Text.Label
         as="legend"
         marginBottom={helpText ? 2 : 6}
         required={required}
         cursor="default"
         {...labelProps}>
         {props.label}
-      </Label>
-      {helpText && <HelperText marginBottom={7}>{helpText}</HelperText>}
+      </Text.Label>
+      {helpText && (
+        <Text.HelperText marginBottom={7}>{helpText}</Text.HelperText>
+      )}
       <Flex
         vertical={orientation === 'vertical' ? true : false}
         xAlignContent="left"
@@ -55,7 +57,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         </CheckboxGroupContextProvider>
       </Flex>
       {invalid && (
-        <HelperText
+        <Text.HelperText
           mt={3}
           ml={canSelectAll ? 11 : 4}
           invalid={invalid}

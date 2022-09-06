@@ -46,7 +46,6 @@ describe('Field', () => {
   });
   it('renders without builtins', () => {
     render(
-      // @ts-expect-error Testing that the props don't render their associated components
       <FieldComponent builtIns={false} label="Bad label" helpText={helpText}>
         <label htmlFor="input">Good label</label>
         <input id="input" />

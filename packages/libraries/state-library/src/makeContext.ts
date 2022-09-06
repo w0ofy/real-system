@@ -21,14 +21,17 @@ type MakeContextReturn<T> = [React.Provider<T>, () => T, React.Context<T>];
 /**
  * Creates a named context, provider, and hook.
  */
-function makeContext<ContextType>(options: MakeContextOptions) {
+function makeContext<ContextType>(
+  options: MakeContextOptions,
+  fallback: any = undefined
+) {
   const {
     strict = true,
     errorMessage = 'makeContext: `context` is undefined. Seems you forgot to wrap component within the Provider',
     name,
   } = options;
 
-  const Context = React.createContext<ContextType | undefined>(undefined);
+  const Context = React.createContext<ContextType | undefined>(fallback);
 
   Context.displayName = name;
 

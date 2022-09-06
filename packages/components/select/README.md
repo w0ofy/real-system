@@ -33,11 +33,12 @@ import {
   SelectItem,
   SelectSeparator,
 } from '@real-system/select';
+import { Text } from '@real-system/typography';
 
 const DefaultSelect = (args) => {
   return (
     <SelectContainer {...args} disabled>
-      <Label>Select a fruit</Label>
+      <Text.Label>Select a fruit</Text.Label>
       <Select maxW="20rem">
         <SelectItem value="Apple" />
         <SelectItem value="Grape" disabled />
@@ -50,7 +51,7 @@ const DefaultSelect = (args) => {
 const SelctGroupExample = (args) => {
   return (
     <SelectContainer>
-      <Label>Select Groups</Label>
+      <Text.Label>Select Groups</Text.Label>
       <Select maxW="20rem">
         <SelectGroup>
           <SelectGroupLabel>Fruits</SelectGroupLabel>
@@ -69,5 +70,4 @@ const SelctGroupExample = (args) => {
     </SelectContainer>
   );
 };
-
 ```
