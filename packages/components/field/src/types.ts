@@ -17,7 +17,7 @@ type NoBuiltInProps = {
   /** `for` attribute for label element */
   labelFor?: never;
   invalid?: never;
-  helpText?: never;
+  helperText?: never;
   required?: never;
 } & CommonProps;
 
@@ -45,7 +45,7 @@ type BuiltInProps = {
   builtIns?: true;
   /** Displays error text for the field. Overrides help text if it is a truthy value */
   invalid?: InvalidConfig;
-  helpText?: HelperTextProps['children'];
+  helperText?: HelperTextProps['children'];
   required?: LabelProps['required'];
 } & CommonProps &
   ConditionalLabel;

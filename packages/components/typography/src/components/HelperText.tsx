@@ -4,8 +4,9 @@ import { Icon } from '@real-system/icon';
 import type { ColorSchemes, ColorTokens } from '@real-system/styled-library';
 import { isUndefinedOrNull } from '@real-system/utils-library';
 
+import type { CommonTextProps } from '../Text.model';
+
 import { BaseText } from './BaseText';
-import type { CommonTextProps } from './Text.model';
 
 export type InvalidConfig = {
   status: boolean;

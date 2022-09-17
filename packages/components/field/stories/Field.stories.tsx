@@ -13,7 +13,7 @@ export default {
   subcomponents: {
     FieldGroup: Field.Group,
     FieldLabel: Field.Label,
-    FieldHelperText: Field.HelperText,
+    FieldHelper: Field.HelperText,
   },
 } as Meta;
 
@@ -107,14 +107,14 @@ export const WithoutBuiltins = () => (
           First name
         </Text.Label>
         <Input type="text" id="firstName" />
-        <Text.HelperText>Provide your first name</Text.HelperText>
+        <Text.Helper>Provide your first name</Text.Helper>
       </Field>
       <Field builtIns={false} width="100%">
         <Text.Label htmlFor="lastName" required>
           Last name
         </Text.Label>
         <Input type="text" id="lastName" />
-        <Text.HelperText>Provide your last name</Text.HelperText>
+        <Text.Helper>Provide your last name</Text.Helper>
       </Field>
       <Field builtIns={false} width="100%">
         <Text.Label htmlFor="phoneNumber">Phone number</Text.Label>

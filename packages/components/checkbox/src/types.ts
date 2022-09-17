@@ -8,7 +8,7 @@ import type { InvalidConfig } from '@real-system/typography';
 /** should match keys of values in RenamedCheckboxProps */
 
 type CustomProps = {
-  helpText?: string;
+  helperText?: string;
   invalid?: InvalidConfig;
 };
 

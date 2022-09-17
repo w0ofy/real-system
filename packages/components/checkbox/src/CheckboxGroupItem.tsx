@@ -23,9 +23,9 @@ const canSelectAllStyles = {
 
 const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
   function CheckboxGroupItem(props, ref) {
-    const { children, helpText, value, disabled: isDisabled } = props;
+    const { children, helperText, value, disabled: disabledProp } = props;
 
-    const interactionProps = useInteractions({ isDisabled });
+    const interactionProps = useInteractions({ disabled: disabledProp });
     const state = useCheckboxGroupContext();
     const internalRef = useRef<HTMLInputElement>(null);
     const mergedRef = useMergedRef(internalRef, ref);
@@ -57,7 +57,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
     return (
       <CheckboxWrapper
         disabled={disabled}
-        helpText={helpText}
+        helperText={helperText}
         marginLeft={4}
         {...dynamicStyles}
         {...interactionProps}>

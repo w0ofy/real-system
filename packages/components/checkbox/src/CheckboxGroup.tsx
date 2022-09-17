@@ -27,7 +27,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
 >(function CheckboxGroup(props, ref) {
   const state = useCheckboxGroupState(props);
   const { groupProps, labelProps } = useCheckboxGroup(props, state);
-  const { children, helpText, invalid, required, canSelectAll, orientation } =
+  const { children, helperText, invalid, required, canSelectAll, orientation } =
     props;
 
   return (
@@ -38,15 +38,13 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
       ref={ref}>
       <Text.Label
         as="legend"
-        marginBottom={helpText ? 2 : 6}
+        marginBottom={helperText ? 2 : 6}
         required={required}
         cursor="default"
         {...labelProps}>
         {props.label}
       </Text.Label>
-      {helpText && (
-        <Text.HelperText marginBottom={7}>{helpText}</Text.HelperText>
-      )}
+      {helperText && <Text.Helper marginBottom={7}>{helperText}</Text.Helper>}
       <Flex
         vertical={orientation === 'vertical' ? true : false}
         xAlignContent="left"
@@ -57,7 +55,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         </CheckboxGroupContextProvider>
       </Flex>
       {invalid && (
-        <Text.HelperText
+        <Text.Helper
           mt={3}
           ml={canSelectAll ? 11 : 4}
           invalid={invalid}

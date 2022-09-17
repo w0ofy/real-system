@@ -18,7 +18,7 @@ export default {
     invalid: { status: false, message: "There's an error here" },
   },
   argTypes: {
-    helpText: { type: 'string' },
+    helperText: { type: 'string' },
     checked: { type: 'boolean' },
     required: { type: 'boolean' },
     readonly: { type: 'boolean' },
@@ -29,7 +29,7 @@ export default {
 
 export const Default = (args) => (
   <Checkbox
-    helpText="Determines if the user has permission to add, edit and delete other users"
+    helperText="Determines if the user has permission to add, edit and delete other users"
     {...args}
   />
 );
@@ -40,7 +40,7 @@ export const CheckboxGroupStory = (args) => {
       <CheckboxGroup
         label="What engineering level is the new team member?"
         defaultValue={['associate']}
-        helpText="Select at least 1 level for the new engineer"
+        helperText="Select at least 1 level for the new engineer"
         {...args}>
         <CheckboxGroupItem value="architect">Architect</CheckboxGroupItem>
         <CheckboxGroupItem value="principle">Principle</CheckboxGroupItem>
@@ -77,7 +77,7 @@ export const Indeterminate = (args) => {
     <CheckboxGroup
       label="What engineering level is the new team member?"
       value={checkedItems}
-      helpText="Select at least 1 level for the new engineer"
+      helperText="Select at least 1 level for the new engineer"
       {...args}
       {...checkBoxGroupProps}>
       <CheckboxGroupItem value={indeterminateValue} {...indeterminateProps}>

@@ -5,9 +5,9 @@ import { real } from '@real-system/elements-primitive';
 import { Flex } from '@real-system/flex';
 
 type RadioControlProps = {
-  disabled?: boolean;
-  isSelected: boolean;
+  isDisabled?: boolean;
   isInvalid?: boolean;
+  isSelected: boolean;
 } & Pick<
   UseInteractionsReturnValue,
   'isPressed' | 'isFocusedWithin' | 'isHovered'
@@ -23,7 +23,7 @@ const getErrorColor = (isHovered: boolean) =>
   isHovered ? 'red-600' : 'red-500';
 
 const RadioControl = ({
-  disabled,
+  isDisabled,
   isSelected,
   isHovered,
   isPressed,
@@ -34,7 +34,7 @@ const RadioControl = ({
     (isDot = false) => {
       const defaultColor = 'blue-500-readable';
 
-      if (disabled) return 'gray-50';
+      if (isDisabled) return 'gray-50';
       if (isSelected && !isDot) {
         const selectedColor = getSelectedColor(isHovered);
 
@@ -46,13 +46,13 @@ const RadioControl = ({
       }
       return defaultColor;
     },
-    [disabled, isSelected, isInvalid, isHovered]
+    [isDisabled, isSelected, isInvalid, isHovered]
   );
 
   const borderColor = useMemo(() => {
     const defaultColor = isHovered ? 'gray-300' : 'gray-200';
 
-    if (disabled) return 'gray-200';
+    if (isDisabled) return 'gray-200';
     if (isInvalid) {
       return getErrorColor(isHovered);
     }
@@ -64,7 +64,7 @@ const RadioControl = ({
     }
 
     return defaultColor;
-  }, [isHovered, disabled, isInvalid, isSelected, isFocusedWithin]);
+  }, [isHovered, isDisabled, isInvalid, isSelected, isFocusedWithin]);
 
   return (
     <Flex

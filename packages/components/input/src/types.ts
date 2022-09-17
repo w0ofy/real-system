@@ -8,11 +8,10 @@ import { InputBoxProps } from './InputBox';
 export type InputProps = Partial<
   Pick<InputBoxProps, 'type' | 'prefix' | 'suffix' | 'addonProps'>
 > & {
-  id?: string;
   suffix?: React.ReactNode;
   prefix?: React.ReactNode;
   name?: string;
   placeholder?: string;
   value?: string;
 } & RealElementPrimitiveProps<'input'> &
-  FieldControl;
+  Partial<FieldControl>;

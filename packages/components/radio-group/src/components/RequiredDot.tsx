@@ -4,7 +4,7 @@ import type { RealElementPrimitiveProps } from '@real-system/elements-primitive'
 import { real } from '@real-system/elements-primitive';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
-export type RequiredDotProps = {
+type RequiredDotProps = {
   disabled: boolean | undefined;
 } & RealElementPrimitiveProps<'span'>;
 

@@ -11,7 +11,7 @@ type TextareaProps = RealSystemElementProps<'textarea'> & {
   prefix?: React.ReactNode;
   name?: string;
   placeholder?: string;
-  readOnly?: boolean;
+  readonly?: boolean;
   required?: boolean;
   size?: never;
   style?: never;

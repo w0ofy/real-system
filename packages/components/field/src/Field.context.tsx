@@ -7,9 +7,11 @@ import { isObject, isUndefined, Obj, useUID } from '@real-system/utils-library';
 type FieldControl = {
   invalid: InvalidConfig;
   required?: boolean;
-  readOnly?: boolean;
+  readonly?: boolean;
   disabled?: boolean;
   id: string;
+  labelProps: Obj;
+  inputProps: Obj;
 };
 
 const defaultInvalid = { status: false };
@@ -25,18 +27,21 @@ const [FieldProvider, useFieldContext] = makeContext<FieldControl>(
 type FieldControlOptions<P extends Obj = Obj> = {
   invalid?: InvalidConfig;
   required?: boolean;
-  readOnly?: boolean;
+  readonly?: boolean;
   disabled?: boolean;
   id?: string;
+  labelProps?: Obj;
+  inputProps?: Obj;
 } & P;
 
 /**
  * Abstraction hook for using `FieldControlContext`
  */
-const useField = <P extends Obj = Record<string, any>>(
+const useField = <P extends Obj = Obj>(
   options?: FieldControlOptions<P>
 ): FieldControl => {
-  const { invalid, required, readOnly, disabled, id } = options || {};
+  const { invalid, required, readonly, disabled, id, inputProps, labelProps } =
+    options || {};
   const context = useFieldContext();
   const uid = useUID();
 
@@ -55,9 +60,11 @@ const useField = <P extends Obj = Record<string, any>>(
       hideIcon,
     },
     required: isUndefined(required) ? context?.required : required,
-    readOnly: isUndefined(readOnly) ? context?.readOnly : readOnly,
+    readonly: isUndefined(readonly) ? context?.readonly : readonly,
     disabled: isUndefined(disabled) ? context?.disabled : disabled,
     id: id || uid,
+    labelProps: labelProps || {},
+    inputProps: inputProps || {},
   };
 };
 

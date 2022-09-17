@@ -8,10 +8,10 @@ import { InputProps } from './types';
 
 const getCursor = ({
   disabled,
-  readOnly,
+  readonly,
   type,
 }: InputProps): StylishProps['cursor'] => {
-  if ((type === 'date' || type === 'time') && !readOnly && !disabled) {
+  if ((type === 'date' || type === 'time') && !readonly && !disabled) {
     return 'text';
   }
   return 'auto';
@@ -55,12 +55,12 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         _disabled={{ cursor: 'default' }}
         transition="0.25s all ease-out"
         aria-invalid={props['aria-invalid']}
-        aria-readonly={props.readOnly}
+        aria-readonly={props.readonly}
         disabled={props.disabled}
         id={props.id}
         name={props.name}
         placeholder={props.placeholder}
-        readOnly={props.readOnly}
+        readonly={props.readonly}
         required={props.required}
         value={props.value}
         {...spreadStyleProps(props, {

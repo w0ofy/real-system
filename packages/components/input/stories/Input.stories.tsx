@@ -93,7 +93,7 @@ export const Showcase = (args) => {
           Password with Readonly
         </Text.Label>
         <RealInput
-          readOnly
+          readonly
           type="password"
           id="input-5"
           name="email-address"
@@ -154,9 +154,9 @@ export const Composition = (args) => {
           placeholder="personal@realsystem.com"
           {...args}
         />
-        <Text.HelperText mt={2}>
+        <Text.Helper mt={2}>
           Be sure this is your personal email address
-        </Text.HelperText>
+        </Text.Helper>
       </Container>
       <Container>
         <Field
@@ -216,7 +216,7 @@ export const Composition = (args) => {
           Email (readonly)
         </Text.Label>
         <RealInput
-          readOnly
+          readonly
           type="email"
           id="input-4"
           name="email-address"

@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react';
 
+import type { CommonTextProps } from '../Text.model';
+
 import { BaseText } from './BaseText';
-import type { CommonTextProps } from './Text.model';
 
 const stylesConfig = {
   h1: {
@@ -90,5 +91,5 @@ const Heading = forwardRef<HeadingElement, HeadingProps>(function Heading(
   );
 });
 
-export type { HeadingProps };
+export type { HeadingAsTags, HeadingProps };
 export { Heading };

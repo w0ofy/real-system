@@ -32,6 +32,7 @@
   "peerDependencies": {
     "@real-system/a11y-library": "^0.0.13",
     "@real-system/elements-primitive": "^0.0.18",
+    "@real-system/field": "^0.0.33",
     "@real-system/flex": "^0.0.47",
     "@real-system/state-library": "^0.0.17",
     "@real-system/styled-library": "^0.0.16",
@@ -44,6 +45,7 @@
   "devDependencies": {
     "@real-system/a11y-library": "^0.0.13",
     "@real-system/elements-primitive": "^0.0.18",
+    "@real-system/field": "^0.0.33",
     "@real-system/flex": "^0.0.47",
     "@real-system/state-library": "^0.0.17",
     "@real-system/styled-library": "^0.0.16",

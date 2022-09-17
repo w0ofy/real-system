@@ -1,25 +1,26 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react';
 
 import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
 import { makeTestId } from '@real-system/utils-library';
 
+import {
+  FieldErrorText,
+  FieldGroup,
+  FieldHelperText,
+  FieldLabel,
+} from './components';
 import { FieldControlOptions, FieldProvider } from './Field.context';
-import { FieldGroup } from './FieldGroup';
-import { FieldHelperText } from './FieldHelperText';
-import { FieldLabel } from './FieldLabel';
 
 type FieldProps = FlexProps & FieldControlOptions;
-/**
- *
- * @todo possibly add FieldControl and FieldGroupControl for easy-to-use field context
- */
 
 export interface FieldComponent
   extends React.ForwardRefExoticComponent<FieldProps> {
   Label: typeof FieldLabel;
   HelperText: typeof FieldHelperText;
   Group: typeof FieldGroup;
+  ErrorText: typeof FieldErrorText;
 }
 
 /**
@@ -28,12 +29,30 @@ export interface FieldComponent
 // @ts-expect-error Field component properties are defined on the fn object after this is defined
 const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
   function Field(
-    { children, invalid, required, disabled, id, readOnly, ...restProps },
+    {
+      children,
+      invalid,
+      required,
+      disabled,
+      id,
+      readonly,
+      labelProps,
+      inputProps,
+      ...restProps
+    },
     ref
   ) {
     return (
       <FieldProvider
-        value={{ invalid: invalid!, required, disabled, id: id!, readOnly }}>
+        value={{
+          invalid: invalid!,
+          required,
+          disabled,
+          id: id!,
+          readonly,
+          labelProps: labelProps!,
+          inputProps: inputProps!,
+        }}>
         <Flex
           vertical
           xAlignContent="left"
@@ -51,6 +70,7 @@ const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
 Field.Group = FieldGroup;
 Field.HelperText = FieldHelperText;
 Field.Label = FieldLabel;
+Field.ErrorText = FieldErrorText;
 
 export type { FieldProps };
 export { Field };

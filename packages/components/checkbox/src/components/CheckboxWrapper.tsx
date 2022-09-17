@@ -9,7 +9,7 @@ import { Text } from '@real-system/typography';
 type CheckboxWrapperProps = {
   children: React.ReactNode;
   disabled?: boolean;
-  helpText?: string;
+  helperText?: string;
   invalid?: InvalidConfig;
 } & UseInteractionsReturnValue;
 
@@ -23,7 +23,7 @@ const CheckboxWrapper = forwardRef<
     hoverProps,
     pressProps,
     focusWithinProps,
-    helpText,
+    helperText,
     invalid,
     ...restProps
   },
@@ -42,10 +42,10 @@ const CheckboxWrapper = forwardRef<
           {children}
         </Flex>
       </Text.Label>
-      {(helpText || invalid) && (
-        <Text.HelperText mt={2} marginLeft={12} invalid={invalid}>
-          {helpText}
-        </Text.HelperText>
+      {(helperText || invalid) && (
+        <Text.Helper mt={2} marginLeft={12} invalid={invalid}>
+          {helperText}
+        </Text.Helper>
       )}
     </Flex>
   );

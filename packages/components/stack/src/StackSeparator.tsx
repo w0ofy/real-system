@@ -6,7 +6,7 @@ import { RealSystemComponentProps } from '@real-system/styled-library';
 type StackSeparatorProps = RealSystemComponentProps<'div'>;
 
 const StackSeparator = React.forwardRef<HTMLDivElement, StackSeparatorProps>(
-  function StackSeparator(props) {
+  function StackSeparator(props, ref) {
     return (
       <real.div
         borderWidth="0"
@@ -16,6 +16,7 @@ const StackSeparator = React.forwardRef<HTMLDivElement, StackSeparatorProps>(
         width="auto"
         height="auto"
         {...props}
+        ref={ref}
       />
     );
   }

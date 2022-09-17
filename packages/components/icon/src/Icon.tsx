@@ -48,14 +48,14 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
 
   return (
     <real.span
-      ref={ref}
       display="flex"
       flexShrink={0}
       flexGrow={0}
       width={iconSize}
       height={iconSize}
       title={title}
-      {...restProps}>
+      {...restProps}
+      ref={ref}>
       <StyledIcon Icon={Icon} size={iconSize} color={iconColor} />
     </real.span>
   );

@@ -1,17 +1,15 @@
 import React, { forwardRef } from 'react';
 
-import { BaseText } from './BaseText';
-import { Code } from './Code';
-import { Heading } from './Heading';
-import { HelperText } from './HelperText';
-import { Label } from './Label';
-import type { CommonTextProps } from './Text.model';
-import { Truncate } from './Truncate';
-
-type TextAsTags = Extract<
-  keyof JSX.IntrinsicElements,
-  'p' | 'span' | 'div' | 'label'
->;
+import {
+  BaseText,
+  Code,
+  DangerText,
+  Heading,
+  HelperText,
+  Label,
+  Truncate,
+} from './components';
+import type { CommonTextProps, TextAsTags } from './Text.model';
 
 export type TextProps = {
   children?: React.ReactNode;
@@ -24,9 +22,10 @@ export interface TextComponent
   Base: typeof BaseText;
   Code: typeof Code;
   Heading: typeof Heading;
-  HelperText: typeof HelperText;
+  Helper: typeof HelperText;
   Label: typeof Label;
   Truncate: typeof Truncate;
+  Error: typeof DangerText;
 }
 
 /**
@@ -54,8 +53,9 @@ const Text: TextComponent = forwardRef<
 
 Text.Base = BaseText;
 Text.Code = Code;
+Text.Error = DangerText;
 Text.Heading = Heading;
-Text.HelperText = HelperText;
+Text.Helper = HelperText;
 Text.Label = Label;
 Text.Truncate = Truncate;
 

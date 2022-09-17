@@ -2,8 +2,9 @@ import React, { forwardRef } from 'react';
 
 import type { ColorSchemes, StylishProps } from '@real-system/styled-library';
 
+import type { CommonTextProps } from '../Text.model';
+
 import { BaseText } from './BaseText';
-import type { CommonTextProps } from './Text.model';
 
 type CodeProps = {
   children?: React.ReactNode;

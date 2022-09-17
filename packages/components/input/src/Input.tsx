@@ -4,7 +4,6 @@
 import React, { forwardRef } from 'react';
 
 import { useField } from '@real-system/field';
-import { FieldControl } from '@real-system/field';
 
 import { InputBox, InputBoxTypes } from './InputBox';
 import { InputElement } from './InputElement';
@@ -18,16 +17,18 @@ type InputTypeProps = {
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
-    type = 'text',
-    readOnly: readOnlyProp,
+    // field props
+    readonly: readonlyProp,
     disabled: disabledProp,
+    id: idProp,
+    required: requiredProp,
+    invalid: invalidProp,
+    // input props
+    type = 'text',
     suffix,
     prefix,
     placeholder,
-    id: idProp,
     value,
-    required: requiredProp,
-    invalid,
     name,
     ...restProps
   },
@@ -37,13 +38,13 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     invalid: { status: error },
     required,
     disabled,
-    readOnly,
+    readonly,
     id,
   } = useField({
-    invalid,
+    invalid: invalidProp,
     required: requiredProp,
     disabled: disabledProp,
-    readOnly: readOnlyProp,
+    readonly: readonlyProp,
     id: idProp,
   });
 
@@ -61,17 +62,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
       error={error}
       suffix={suffix}
       prefix={prefix}
-      readOnly={readOnly}
+      readonly={readonly}
       type={type}
       {...restProps}>
       <InputElement
         aria-invalid={error}
-        aria-readonly={readOnly}
+        aria-readonly={readonly}
         disabled={disabled}
         id={id}
         name={name}
         placeholder={placeholder}
-        readOnly={readOnly}
+        readonly={readonly}
         required={required}
         value={value}
         ref={ref}

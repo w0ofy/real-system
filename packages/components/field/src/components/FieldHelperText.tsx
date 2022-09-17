@@ -4,29 +4,23 @@ import type { HelperTextProps, InvalidConfig } from '@real-system/typography';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import { useFieldContext } from './Field.context';
-
 type FieldHelperTextProps = Omit<
   HelperTextProps,
   'invalid' | 'hideInvalidIcon'
-> & {
-  invalid?: InvalidConfig;
-};
+>;
 
 /**
- * @description An modified `Text.HelperText` for `Field` components.
+ * @description An modified `Text.Helper` for `Field` components.
  */
 const FieldHelperText = React.forwardRef<HTMLSpanElement, FieldHelperTextProps>(
-  function FieldHelperText({ children, ...restProps }) {
-    const { invalid } = useFieldContext();
-
+  function FieldHelperText({ children, ...restProps }, ref) {
     return (
-      <Text.HelperText
+      <Text.Helper
         testId={makeTestId('field-helper-text')}
-        invalid={invalid}
-        {...restProps}>
+        {...restProps}
+        ref={ref}>
         {children}
-      </Text.HelperText>
+      </Text.Helper>
     );
   }
 );

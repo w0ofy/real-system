@@ -2,13 +2,13 @@ import * as React from 'react';
 import { forwardRef } from 'react';
 
 import { useRadioGroup, useRadioGroupState } from '@real-system/a11y-library';
+import { useField } from '@real-system/field';
 import { Flex } from '@real-system/flex';
-import { Text } from '@real-system/typography';
-import { makeTestId } from '@real-system/utils-library';
+import { isFunction, makeTestId } from '@real-system/utils-library';
 
 import { Radio } from './Radio';
-import { RadioGroupContextProvider } from './RadioContext';
-import type { RadioGroupProps } from './types';
+import { RadioGroupContextProvider } from './Radio.context';
+import type { RadioGroupProps } from './RadioGroup.model';
 
 export interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<RadioGroupProps> {
@@ -20,33 +20,23 @@ const RadioGroup: RadioGroupComponent = forwardRef<
   HTMLDivElement,
   RadioGroupProps
 >(function RadioGroup(props, ref) {
+  const { children, orientation } = props;
+
   const state = useRadioGroupState(props);
   const { radioGroupProps, labelProps } = useRadioGroup(props, state);
-  const { invalid, label, helpText, required, children, orientation } = props;
 
+  const { invalid } = useField({ labelProps });
   return (
     <Flex
-      vertical
+      vertical={orientation === 'vertical' ? true : false}
+      data-testid={makeTestId('radio-group')}
       {...radioGroupProps}
-      data-testid={makeTestId('checkbox-group')}
       ref={ref}>
-      <Text.Label
-        as="legend"
-        required={required}
-        marginBottom={helpText ? 2 : 6}
-        cursor="default"
-        {...labelProps}>
-        {label}
-      </Text.Label>
-      {helpText && (
-        <Text.HelperText marginBottom={6}>{helpText}</Text.HelperText>
-      )}
-      <Flex vertical={orientation === 'vertical' ? true : false}>
-        <RadioGroupContextProvider state={{ ...state, orientation, invalid }}>
-          {children}
-        </RadioGroupContextProvider>
-      </Flex>
-      {invalid && <Text.HelperText invalid={invalid} marginBottom={8} mt={2} />}
+      <RadioGroupContextProvider state={{ ...state, orientation, invalid }}>
+        {isFunction(children)
+          ? children({ labelProps, ...state, orientation, invalid })
+          : children}
+      </RadioGroupContextProvider>
     </Flex>
   );
 });
