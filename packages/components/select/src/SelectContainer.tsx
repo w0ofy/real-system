@@ -12,7 +12,6 @@ import { SelectContainerProps } from './types';
 
 const ACCEPTED_LABEL_NAMES = {
   Label: true,
-  SelectLabel: true,
 };
 
 const makeValidChildren = (children, state) => {
@@ -48,8 +47,8 @@ const makeValidChildren = (children, state) => {
 
 /**
  * The container and context provider for `Select` components.
- * When using or nesting a `label` inside `SelectContainer`, be sure the component's `displayName` is `Label` or `SelectLabel`.
- * If the `displayName` is not either of those, the label will not get rendered.
+ * When using or nesting a `label` inside `SelectContainer`, be sure the component's `displayName` is `Label`.
+ * If the `displayName` is not `Label`, the label will not render.
  */
 const SelectContainer = forwardRef<HTMLDivElement, SelectContainerProps>(
   function SelectContainer(

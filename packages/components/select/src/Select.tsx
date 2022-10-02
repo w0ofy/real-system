@@ -9,8 +9,12 @@ import type {
 import styled from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
+import { SelectContainer } from './SelectContainer';
 import { useSelectStateContext } from './SelectContext';
+import { SelectGroup, SelectGroupLabel } from './SelectGroup';
+import { SelectItem } from './SelectItem';
 import { SelectPopover } from './SelectPopover';
+import { SelectSeparator } from './SelectSeparator';
 
 const StyledSelect = styled(SelectPrimitive)<SelectPrimitiveOptions>();
 
@@ -78,20 +82,37 @@ const selectStyles: Record<'default' | 'error', StylishProps> = {
 
 type SelectProps = RealSystemComponentProps;
 
-const Select = forwardRef<HTMLButtonElement, SelectProps>(function Select(
-  { children, ...restProps },
-  ref
-) {
-  const state = useSelectStateContext();
-  const styles = state.error ? selectStyles['error'] : selectStyles['default'];
+export interface SelectComponent
+  extends React.ForwardRefExoticComponent<SelectProps> {
+  Container: typeof SelectContainer;
+  Item: typeof SelectItem;
+  Separator: typeof SelectSeparator;
+  Group: typeof SelectGroup;
+  GroupLabel: typeof SelectGroupLabel;
+}
 
-  return (
-    <>
-      <StyledSelect {...styles} state={state} ref={ref} {...restProps} />
-      <SelectPopover>{children}</SelectPopover>
-    </>
-  );
-});
+// @ts-expect-error Select component properties are defined on the fn object after this is defined
+const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
+  function Select({ children, ...restProps }, ref) {
+    const state = useSelectStateContext();
+    const styles = state.error
+      ? selectStyles['error']
+      : selectStyles['default'];
+
+    return (
+      <>
+        <StyledSelect {...styles} state={state} ref={ref} {...restProps} />
+        <SelectPopover>{children}</SelectPopover>
+      </>
+    );
+  }
+);
+
+Select.Container = SelectContainer;
+Select.Item = SelectItem;
+Select.Separator = SelectSeparator;
+Select.Group = SelectGroup;
+Select.GroupLabel = SelectGroupLabel;
 
 export type { SelectProps };
 export { Select };
