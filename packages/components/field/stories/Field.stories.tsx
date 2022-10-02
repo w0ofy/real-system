@@ -13,7 +13,9 @@ export default {
   subcomponents: {
     FieldGroup: Field.Group,
     FieldLabel: Field.Label,
-    FieldHelper: Field.HelperText,
+    FieldHelpText: Field.Help,
+    FieldErrorText: Field.Error,
+    FieldWarningText: Field.Warning,
   },
 } as Meta;
 
@@ -21,7 +23,7 @@ export const Default = (args) => (
   <Field inline id="first-name" required {...args}>
     <Field.Label>First name</Field.Label>
     <Input type="text" id="first-name" />
-    <Field.HelperText>Provide your first name</Field.HelperText>
+    <Field.Help>Provide your first name</Field.Help>
   </Field>
 );
 
@@ -32,24 +34,24 @@ export const WithError = () => (
     invalid={{ status: true, message: 'This field is required' }}
     required>
     <Field.Label>First name</Field.Label>
-    <Input type="text" id="first-name" error />
-    <Field.HelperText>Provide your first name</Field.HelperText>
+    <Input type="text" id="first-name" />
+    <Field.Help>Provide your first name</Field.Help>
   </Field>
 );
 
 export const FieldGroupStory = () => (
   <form>
     <Field.Group marginBottom={8} width="200px">
-      <Field label="First name" labelFor="firstName" width="100%" required>
+      <Field label="First name" labelFor="first-name" width="100%" required>
         <Input type="text" id="firstName" />
       </Field>
-      <Field label="Last name" labelFor="lastName" width="100%" required>
+      <Field label="Last name" labelFor="last-name" width="100%" required>
         <Input type="text" id="lastName" />
       </Field>
-      <Field label="Phone number" width="100%" labelFor="phoneNumber">
+      <Field label="Phone number" width="100%" id="phone-number">
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Field builtIns={false} width="100%">
+      <Field width="100%">
         <SelectContainer>
           <Text.Label>Engineering Level</Text.Label>
           <Select>
@@ -72,16 +74,16 @@ FieldGroupStory.storyName = 'Field Group';
 export const InlineFieldGroup = () => (
   <form>
     <Field.Group inline marginBottom={8} width="100%">
-      <Field label="First name" labelFor="firstName" width="20%" required>
+      <Field label="First name" id="firstName" width="20%" required>
         <Input type="text" id="firstName" />
       </Field>
-      <Field label="Last name" labelFor="lastName" width="20%" required>
+      <Field label="Last name" id="lastName" width="20%" required>
         <Input type="text" id="lastName" />
       </Field>
-      <Field label="Phone number" labelFor="phoneNumber" width="20%">
+      <Field label="Phone number" id="phoneNumber" width="20%">
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Field builtIns={false} width="20%">
+      <Field width="20%">
         <SelectContainer>
           <Text.Label>Engineering Level</Text.Label>
           <Select>
@@ -102,25 +104,25 @@ export const InlineFieldGroup = () => (
 export const WithoutBuiltins = () => (
   <form>
     <Field.Group width="200px">
-      <Field builtIns={false} width="100%">
+      <Field width="100%">
         <Text.Label htmlFor="firstName" required>
           First name
         </Text.Label>
         <Input type="text" id="firstName" />
-        <Text.Helper>Provide your first name</Text.Helper>
+        <Text.Help>Provide your first name</Text.Help>
       </Field>
-      <Field builtIns={false} width="100%">
+      <Field width="100%">
         <Text.Label htmlFor="lastName" required>
           Last name
         </Text.Label>
         <Input type="text" id="lastName" />
-        <Text.Helper>Provide your last name</Text.Helper>
+        <Text.Help>Provide your last name</Text.Help>
       </Field>
-      <Field builtIns={false} width="100%">
+      <Field width="100%">
         <Text.Label htmlFor="phoneNumber">Phone number</Text.Label>
         <Input type="tel" id="phoneNumber" />
       </Field>
-      <Field builtIns={false} width="100%">
+      <Field width="100%">
         <SelectContainer>
           <Text.Label>Engineering Level</Text.Label>
           <Select>

@@ -1,9 +1,8 @@
 export type {
   BaseTextProps,
   CodeProps,
-  DangerTextProps,
   HeadingProps,
-  HelperTextProps,
+  HelpTextProps,
   InvalidConfig,
   LabelProps,
   TruncateProps,

@@ -8,19 +8,23 @@ import { makeTestId } from '@real-system/utils-library';
 import {
   FieldErrorText,
   FieldGroup,
-  FieldHelperText,
+  FieldHelpText,
   FieldLabel,
+  FieldWarningText,
 } from './components';
-import { FieldControlOptions, FieldProvider } from './Field.context';
+import { FieldControlOptions, FieldControlProvider } from './FieldControl';
 
-type FieldProps = FlexProps & FieldControlOptions;
+type FieldProps = Omit<FlexProps, 'children'> &
+  FieldControlOptions &
+  Pick<FlexProps, 'children'>;
 
 export interface FieldComponent
   extends React.ForwardRefExoticComponent<FieldProps> {
   Label: typeof FieldLabel;
-  HelperText: typeof FieldHelperText;
+  Help: typeof FieldHelpText;
   Group: typeof FieldGroup;
-  ErrorText: typeof FieldErrorText;
+  Error: typeof FieldErrorText;
+  Warning: typeof FieldWarningText;
 }
 
 /**
@@ -28,31 +32,27 @@ export interface FieldComponent
  */
 // @ts-expect-error Field component properties are defined on the fn object after this is defined
 const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
-  function Field(
-    {
+  function Field(props, ref) {
+    const {
       children,
-      invalid,
+      validation = {},
       required,
-      disabled,
       id,
-      readonly,
-      labelProps,
-      inputProps,
+      label,
+      helpText,
       ...restProps
-    },
-    ref
-  ) {
+    } = props;
+    const fieldControl = {
+      validation,
+      required,
+      helpText,
+      id,
+      label,
+    };
+
+    console.log(id);
     return (
-      <FieldProvider
-        value={{
-          invalid: invalid!,
-          required,
-          disabled,
-          id: id!,
-          readonly,
-          labelProps: labelProps!,
-          inputProps: inputProps!,
-        }}>
+      <FieldControlProvider {...fieldControl}>
         <Flex
           vertical
           xAlignContent="left"
@@ -62,15 +62,16 @@ const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
           {...restProps}>
           {children}
         </Flex>
-      </FieldProvider>
+      </FieldControlProvider>
     );
   }
 );
 
 Field.Group = FieldGroup;
-Field.HelperText = FieldHelperText;
+Field.Help = FieldHelpText;
 Field.Label = FieldLabel;
-Field.ErrorText = FieldErrorText;
+Field.Error = FieldErrorText;
+Field.Warning = FieldErrorText;
 
 export type { FieldProps };
 export { Field };

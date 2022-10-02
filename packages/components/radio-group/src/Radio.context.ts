@@ -1,18 +1,19 @@
 import type {
-  AriaRadioGroupProps,
   AriaRadioGroupState,
+  AriaRadioLabelProps,
 } from '@real-system/a11y-library';
+import type { FieldControlValidation } from '@real-system/field';
 import { constate } from '@real-system/state-library';
-import type { InvalidConfig } from '@real-system/typography';
 
 export type RadioGroupContext = {
   state: AriaRadioGroupState & {
-    orientation: AriaRadioGroupProps['orientation'];
-    invalid?: InvalidConfig;
-  };
+    labelProps: AriaRadioLabelProps;
+  } & Pick<FieldControlValidation, 'hasError'>;
 };
 
 const useRadioGroup = ({ state }: RadioGroupContext) => state;
 
-export const [RadioGroupContextProvider, useRadioGroupContext] =
+const [RadioGroupContextProvider, useRadioGroupStateContext] =
   constate(useRadioGroup);
+
+export { RadioGroupContextProvider, useRadioGroupStateContext };

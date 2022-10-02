@@ -1,8 +1,8 @@
 import type { FieldControlValidation } from '@real-system/field';
 
 type CustomProps = {
-  disabled?: boolean;
-  hasError?: FieldControlValidation['hasError'];
+  helpText?: string;
+  validation?: FieldControlValidation;
 };
 
 export type { CustomProps };

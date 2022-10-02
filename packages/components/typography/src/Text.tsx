@@ -3,9 +3,8 @@ import React, { forwardRef } from 'react';
 import {
   BaseText,
   Code,
-  DangerText,
   Heading,
-  HelperText,
+  HelpText,
   Label,
   Truncate,
 } from './components';
@@ -22,10 +21,9 @@ export interface TextComponent
   Base: typeof BaseText;
   Code: typeof Code;
   Heading: typeof Heading;
-  Helper: typeof HelperText;
+  Help: typeof HelpText;
   Label: typeof Label;
   Truncate: typeof Truncate;
-  Error: typeof DangerText;
 }
 
 /**
@@ -53,9 +51,8 @@ const Text: TextComponent = forwardRef<
 
 Text.Base = BaseText;
 Text.Code = Code;
-Text.Error = DangerText;
 Text.Heading = Heading;
-Text.Helper = HelperText;
+Text.Help = HelpText;
 Text.Label = Label;
 Text.Truncate = Truncate;
 

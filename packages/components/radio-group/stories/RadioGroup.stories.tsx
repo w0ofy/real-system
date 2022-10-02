@@ -12,12 +12,12 @@ export default {
   subcomponents: { Radio: RadioGroup.Radio },
   args: {
     required: false,
-    helperText: 'Choose your single most favorite pet',
+    helpText: 'Choose your single most favorite pet',
     invalid: { status: false, message: "There's an error here" },
   },
   argTypes: {
     required: { type: 'boolean' },
-    helperText: { type: 'string' },
+    helpText: { type: 'string' },
     invalid: {
       control: 'object',
     },
@@ -26,13 +26,17 @@ export default {
 
 export const Default = (args) => (
   <>
-    <Stack.Vertical align="left" spacing={0} mb={6} {...args}>
-      <Text.Label as="legend" mb={2} htmlFor="radio-group">
+    <Stack.Vertical align="left" spacing={0} mb={6}>
+      <Text.Label
+        as="legend"
+        mb={2}
+        htmlFor="radio-group"
+        required={args.required}>
         Favorite Pet
       </Text.Label>
-      <Text.Helper>{args.helperText}</Text.Helper>
+      <Text.Help>{args.helpText}</Text.Help>
     </Stack.Vertical>
-    <RadioGroup id="radio-group">
+    <RadioGroup id="radio-group" {...args}>
       <RadioGroup.Radio value="dog">Dog</RadioGroup.Radio>
       <RadioGroup.Radio value="cat">Cat</RadioGroup.Radio>
       <RadioGroup.Radio value="fish">Fish</RadioGroup.Radio>
@@ -49,33 +53,52 @@ export const Inline = (args) => (
       <Text.Label as="legend" mb={2} htmlFor="inline-radio-group">
         Favorite Pet
       </Text.Label>
-      <Text.Helper>{args.helperText}</Text.Helper>
+      <Text.Help>{args.helpText}</Text.Help>
     </Stack.Vertical>
     <RadioGroup orientation="horizontal" {...args} id="inline-radio-group">
       <RadioGroup.Radio value="dog">Dog</RadioGroup.Radio>
       <RadioGroup.Radio value="cat">Cat</RadioGroup.Radio>
       <RadioGroup.Radio value="fish">Fish</RadioGroup.Radio>
-      <RadioGroup.Radio value="hamster" disabled>
-        Hamster
-      </RadioGroup.Radio>
+      <RadioGroup.Radio value="hamster">Hamster</RadioGroup.Radio>
     </RadioGroup>
   </>
 );
 
-export const FieldRadioGroup = (args) => (
-  <Field id="favorite-pet-radio-group" {...args}>
+export const DisabledRadioGroup = (args) => (
+  <RadioGroup disabled {...args}>
+    <Text.Label as="legend" mb={2}>
+      Favorite Pet
+    </Text.Label>
+    <Field.Help mb={6}>{args.helpText}</Field.Help>
+    <RadioGroup.Radio value="dog">Dog</RadioGroup.Radio>
+    <RadioGroup.Radio value="cat">Cat</RadioGroup.Radio>
+    <RadioGroup.Radio value="fish">Fish</RadioGroup.Radio>
+    <RadioGroup.Radio value="hamster" disabled>
+      Hamster
+    </RadioGroup.Radio>
+  </RadioGroup>
+);
+
+export const RadioGroupWithField = (args) => (
+  <Field
+    id="favorite-pet-radio-group"
+    label="Favorite Pet"
+    {...args}
+    validation={{ hasError: false, errorMessage: 'There is an error' }}>
+    <Stack mb={5}>
+      <Field.Label as="legend" />
+      <Field.Help>{args.helpText}</Field.Help>
+    </Stack>
     <RadioGroup>
-      <Field.Label as="legend" mb={2}>
-        Favorite Pet
-      </Field.Label>
-      <Field.HelperText mb={6}>{args.helperText}</Field.HelperText>
-      <RadioGroup.Radio value="dog">Dog</RadioGroup.Radio>
-      <RadioGroup.Radio value="cat">Cat</RadioGroup.Radio>
-      <RadioGroup.Radio value="fish">Fish</RadioGroup.Radio>
-      <RadioGroup.Radio value="hamster" disabled>
-        Hamster
-      </RadioGroup.Radio>
-      <Field.ErrorText mt={2} />
+      <Stack>
+        <RadioGroup.Radio value="dog">Dog</RadioGroup.Radio>
+        <RadioGroup.Radio value="cat">Cat</RadioGroup.Radio>
+        <RadioGroup.Radio value="fish">Fish</RadioGroup.Radio>
+        <RadioGroup.Radio value="hamster" disabled>
+          Hamster
+        </RadioGroup.Radio>
+      </Stack>
+      <Field.Error mt={2} />
     </RadioGroup>
   </Field>
 );

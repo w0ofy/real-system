@@ -4,7 +4,7 @@ export {
   useCheckboxGroupIsDisabled,
   useCheckboxGroupItemIsSelected,
   useCheckboxGroupValue,
-} from './CheckboxContext';
+} from './Checkbox.context';
 export * from './CheckboxGroup';
-export * from './CheckboxGroupItem';
+export type { CheckboxGroupItemProps } from './CheckboxGroupItem';
 export * from './useIndeterminate';

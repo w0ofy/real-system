@@ -3,11 +3,11 @@
  */
 import React, { forwardRef } from 'react';
 
-import { useField } from '@real-system/field';
+import { useFieldControl } from '@real-system/field';
 
+import { InputProps } from './Input.model';
 import { InputBox, InputBoxTypes } from './InputBox';
 import { InputElement } from './InputElement';
-import { InputProps } from './types';
 
 type InputTypeProps = {
   type: InputBoxTypes;
@@ -22,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     disabled: disabledProp,
     id: idProp,
     required: requiredProp,
-    invalid: invalidProp,
+    hasError,
     // input props
     type = 'text',
     suffix,
@@ -34,19 +34,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   },
   ref
 ) {
-  const {
-    invalid: { status: error },
-    required,
-    disabled,
-    readonly,
-    id,
-  } = useField({
-    invalid: invalidProp,
-    required: requiredProp,
-    disabled: disabledProp,
-    readonly: readonlyProp,
-    id: idProp,
-  });
+  const { disabled, validation, readonly, required, inputProps, id } =
+    useFieldControl({
+      readonly: readonlyProp,
+      disabled: disabledProp,
+      required: requiredProp,
+      validation: { hasError },
+      id: idProp,
+    });
 
   const inputTypeProps: InputTypeProps = { type };
 
@@ -59,14 +54,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   return (
     <InputBox
       disabled={disabled}
-      error={error}
+      error={validation.hasError}
       suffix={suffix}
       prefix={prefix}
       readonly={readonly}
       type={type}
       {...restProps}>
       <InputElement
-        aria-invalid={error}
+        aria-invalid={validation.hasError}
         aria-readonly={readonly}
         disabled={disabled}
         id={id}
@@ -78,6 +73,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         ref={ref}
         {...restProps}
         {...inputTypeProps}
+        {...inputProps}
       />
     </InputBox>
   );

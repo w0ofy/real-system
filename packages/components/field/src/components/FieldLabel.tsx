@@ -4,27 +4,27 @@ import type { LabelProps } from '@real-system/typography';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import { useFieldContext } from '../Field.context';
+import { useFieldControl } from '../FieldControl';
 
 type FieldLabelProps = LabelProps;
 
 /**
+ * @name Field.Label
  * @description An modified `Text.Label` for `Field` components.
  */
 const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
   function FieldLabel({ children, ...restProps }, ref) {
-    const { id, required, labelProps } = useFieldContext();
+    const { labelProps, required, label } = useFieldControl();
 
     return (
       <Text.Label
         testId={makeTestId('field-label')}
-        htmlFor={id}
         required={required}
         whiteSpace="nowrap"
-        {...labelProps}
         {...restProps}
+        {...labelProps}
         ref={ref}>
-        {children}
+        {label || children}
       </Text.Label>
     );
   }

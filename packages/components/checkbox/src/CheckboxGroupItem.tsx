@@ -1,6 +1,7 @@
 import React, { forwardRef, useMemo, useRef } from 'react';
 
 import {
+  AriaCheckboxGroupItemProps,
   useCheckboxGroupItem,
   useInteractions,
 } from '@real-system/a11y-library';
@@ -8,9 +9,11 @@ import type { FlexProps } from '@real-system/flex';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
-import { useCheckboxGroupContext } from './CheckboxContext';
+import { useCheckboxGroupContext } from './Checkbox.context';
+import { CustomProps } from './Checkbox.model';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
-import { CheckboxGroupItemProps } from './types';
+
+type CheckboxGroupItemProps = AriaCheckboxGroupItemProps & CustomProps;
 
 const canSelectAllStyles = {
   _first: {
@@ -23,7 +26,7 @@ const canSelectAllStyles = {
 
 const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
   function CheckboxGroupItem(props, ref) {
-    const { children, helperText, value, disabled: disabledProp } = props;
+    const { children, helpText, value, disabled: disabledProp } = props;
 
     const interactionProps = useInteractions({ disabled: disabledProp });
     const state = useCheckboxGroupContext();
@@ -57,7 +60,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
     return (
       <CheckboxWrapper
         disabled={disabled}
-        helperText={helperText}
+        helpText={helpText}
         marginLeft={4}
         {...dynamicStyles}
         {...interactionProps}>
@@ -68,7 +71,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
           disabled={disabled}
           isSelected={isSelected}
           indeterminate={props.indeterminate}
-          isInvalid={state?.invalid?.status}
+          isInvalid={state?.validation?.hasError}
           {...interactionProps}
         />
         <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>

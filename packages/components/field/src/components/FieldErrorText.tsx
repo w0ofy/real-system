@@ -1,33 +1,33 @@
 import React from 'react';
 
-import type { DangerTextProps, InvalidConfig } from '@real-system/typography';
+import type { HelpTextProps, InvalidConfig } from '@real-system/typography';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import { useFieldContext } from '../Field.context';
+import { useFieldControl } from '../FieldControl';
 
-type FieldErrorTextProps = Omit<
-  DangerTextProps,
-  'invalid' | 'hideInvalidIcon'
-> & {
+type FieldErrorTextProps = Omit<HelpTextProps, 'hideIcon'> & {
   invalid?: InvalidConfig;
 };
 
 /**
- * @description An modified `Text.Error` for `Field` components.
+ * @name Field.ErrorText
+ * @description A modified `Text.Help` for `Field` components.
  */
 const FieldErrorText = React.forwardRef<HTMLSpanElement, FieldErrorTextProps>(
   function FieldErrorText({ children, ...restProps }, ref) {
-    const { invalid } = useFieldContext();
+    const { validation } = useFieldControl();
 
-    if (!invalid?.status) return null;
+    if (!validation?.hasError) return null;
+
     return (
-      <Text.Error
-        testId={makeTestId('field-helper-text')}
+      <Text.Help
+        testId={makeTestId('field-error-text')}
+        variant="danger"
         {...restProps}
         ref={ref}>
-        {children || invalid?.message}
-      </Text.Error>
+        {validation?.errorMessage || children}
+      </Text.Help>
     );
   }
 );
