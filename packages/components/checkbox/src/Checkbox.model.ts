@@ -1,8 +1,8 @@
-import type { FieldControlValidation } from '@real-system/field';
+import type { ValidationProps } from '@real-system/utils-library';
 
+/** @todo do we need this? */
 type CustomProps = {
   helpText?: string;
-  validation?: FieldControlValidation;
-};
+} & Pick<ValidationProps, 'hasError'>;
 
 export type { CustomProps };

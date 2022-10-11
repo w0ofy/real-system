@@ -37,37 +37,31 @@ import { Text } from '@real-system/typography';
 
 const DefaultSelect = (args) => {
   return (
-    <SelectContainer {...args} disabled>
-      <Text.Label>Select a fruit</Text.Label>
-      <Select maxW="20rem">
-        <SelectItem value="Apple" />
-        <SelectItem value="Grape" disabled />
-        <SelectItem value="Melon" />
-      </Select>
-    </SelectContainer>
+    <Select label="Select a fruit" maxW="20rem">
+      <SelectItem value="Apple" />
+      <SelectItem value="Grape" disabled />
+      <SelectItem value="Melon" />
+    </Select>
   );
 };
 
 const SelctGroupExample = (args) => {
   return (
-    <SelectContainer>
-      <Text.Label>Select Groups</Text.Label>
-      <Select maxW="20rem">
-        <SelectGroup>
-          <SelectGroupLabel>Fruits</SelectGroupLabel>
-          <SelectItem value="Apple" />
-          <SelectItem value="Grape" disabled />
-          <SelectItem value="Melon" />
-        </SelectGroup>
-        <SelectSeparator />
-        <SelectGroup>
-          <SelectGroupLabel>Vegatables</SelectGroupLabel>
-          <SelectItem value="Lettuce" />
-          <SelectItem value="Pepper" disabled />
-          <SelectItem value="Onion" />
-        </SelectGroup>
-      </Select>
-    </SelectContainer>
+    <Select label="Select a fruit" maxW="20rem">
+      <SelectGroup>
+        <SelectGroupLabel>Fruits</SelectGroupLabel>
+        <SelectItem value="Apple" />
+        <SelectItem value="Grape" disabled />
+        <SelectItem value="Melon" />
+      </SelectGroup>
+      <SelectSeparator />
+      <SelectGroup>
+        <SelectGroupLabel>Vegatables</SelectGroupLabel>
+        <SelectItem value="Lettuce" />
+        <SelectItem value="Pepper" disabled />
+        <SelectItem value="Onion" />
+      </SelectGroup>
+    </Select>
   );
 };
 ```

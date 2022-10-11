@@ -10,7 +10,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from '../types';
 
-import { RealMenuItem } from './MenuItem';
+import { MenuItemWrapper } from './MenuItem';
 
 type MenuItemCheckboxProps = OmitMenuState<MenuItemCheckboxPrimitiveProps> &
   CommonMenuProps;
@@ -29,7 +29,7 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
   ) {
     return (
       <MenuItemCheckboxPrimitive
-        as={RealMenuItem}
+        as={MenuItemWrapper}
         disabled={disabled}
         onClick={onClick}
         name={name}

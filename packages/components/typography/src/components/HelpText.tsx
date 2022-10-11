@@ -66,7 +66,7 @@ const HelpText = forwardRef<HTMLSpanElement, HelpTextProps>(function HelpText(
         };
       case 'warning':
         return {
-          colorScheme: 'red',
+          colorScheme: 'orange',
           text: children,
           hideIcon: hideIconProp,
         };

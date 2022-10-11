@@ -4,7 +4,7 @@ import { RealSystemElementProps } from '@real-system/styled-library';
 
 type TextareaProps = RealSystemElementProps<'textarea'> & {
   disabled?: boolean;
-  error?: boolean;
+  hasError?: boolean;
   height?: never;
   id?: string;
   suffix?: React.ReactNode;

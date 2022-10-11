@@ -24,7 +24,7 @@ export type InputBoxTypes =
 export type InputBoxProps = {
   children: NonNullable<React.ReactNode>;
   disabled?: boolean;
-  error?: boolean;
+  hasError?: boolean;
   readonly?: boolean;
   type: InputBoxTypes;
   prefix?: React.ReactNode;
@@ -108,7 +108,7 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
   (
     {
       disabled,
-      error = false,
+      hasError = false,
       readonly,
       children,
       type,
@@ -119,20 +119,19 @@ const InputBox = React.forwardRef<HTMLDivElement, InputBoxProps>(
     },
     ref
   ) => {
-    const isHidden = type === 'hidden';
-    const isDisabled = disabled && !isHidden;
-    const isDanger = error && !isHidden;
-    const isReadOnly = readonly && !isHidden;
+    const isDisabled = disabled;
+    const isDanger = hasError;
+    const isReadOnly = readonly;
     let state: InputBoxStates = 'default';
 
-    if (isDisabled) {
+    if (type === 'hidden') {
+      state = 'hidden';
+    } else if (isDisabled) {
       state = 'disabled';
     } else if (isDanger) {
       state = 'error';
     } else if (isReadOnly) {
       state = 'readonly';
-    } else if (isHidden) {
-      state = 'hidden';
     }
 
     return (

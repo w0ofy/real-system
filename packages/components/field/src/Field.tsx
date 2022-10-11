@@ -14,9 +14,7 @@ import {
 } from './components';
 import { FieldControlOptions, FieldControlProvider } from './FieldControl';
 
-type FieldProps = Omit<FlexProps, 'children'> &
-  FieldControlOptions &
-  Pick<FlexProps, 'children'>;
+type FieldProps = FlexProps & FieldControlOptions & { as?: 'fieldset' | 'div' };
 
 export interface FieldComponent
   extends React.ForwardRefExoticComponent<FieldProps> {
@@ -28,29 +26,34 @@ export interface FieldComponent
 }
 
 /**
- * @description A flex-ible field context wrapper for field children.
+ * @deprecated DO NOT USE — Under heavy construction
+ * @todo API design
  */
 // @ts-expect-error Field component properties are defined on the fn object after this is defined
 const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
   function Field(props, ref) {
     const {
       children,
-      validation = {},
       required,
       id,
       label,
       helpText,
+      hasError,
+      warningMessage,
+      errorMessage,
+      as = 'div',
       ...restProps
     } = props;
     const fieldControl = {
-      validation,
       required,
       helpText,
       id,
       label,
+      hasError,
+      warningMessage,
+      errorMessage,
     };
 
-    console.log(id);
     return (
       <FieldControlProvider {...fieldControl}>
         <Flex
@@ -59,6 +62,8 @@ const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
           data-testid={makeTestId('field')}
           gap={2}
           ref={ref}
+          role="group"
+          as={as}
           {...restProps}>
           {children}
         </Flex>

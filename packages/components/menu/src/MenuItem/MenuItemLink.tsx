@@ -4,10 +4,10 @@ import { real } from '@real-system/elements-primitive';
 import { Icon } from '@real-system/icon';
 import { EXTERNAL_LINK_PROPS } from '@real-system/link';
 import { MenuItemPrimitive } from '@real-system/menu-primitive';
-import { StylishProps } from '@real-system/styled-library';
+import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { menuItemStyles } from './MenuItem';
+import { menuItemStyles } from './MenuItem.style';
 import { CommonMenuItemProps } from './MenuItem.types';
 
 type MenuItemLinkProps = {

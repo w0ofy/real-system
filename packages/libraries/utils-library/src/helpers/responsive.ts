@@ -1,4 +1,4 @@
-import { Dict } from '../types';
+import type { Dict } from '../types';
 
 import { isArray, isObject } from './assertion';
 import { objectKeys } from './object';

@@ -1,15 +1,18 @@
 import type { MenuStatePrimitive } from '@real-system/menu-primitive';
-import { constate } from '@real-system/state-library';
+import { makeContext } from '@real-system/state-library';
 
-type MenuState = MenuStatePrimitive;
+declare type Values = Record<
+  string,
+  string | boolean | number | Array<string | number>
+>;
 
-type MenuContext = {
-  state: MenuState;
-};
+type MenuState<V extends Values = Values> = MenuStatePrimitive<V>;
 
-const [MenuContextProvider, useMenuStateContext] = constate(
-  ({ state }: MenuContext) => state
-);
+const [MenuContextProvider, useMenuStateContext] = makeContext<
+  MenuState<Values>
+>({
+  name: 'MenuContext',
+});
 
-export type { MenuState };
+export type { MenuState, Values };
 export { MenuContextProvider, useMenuStateContext };

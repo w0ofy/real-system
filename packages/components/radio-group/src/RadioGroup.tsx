@@ -1,28 +1,24 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 
-import type { AriaRadioGroupProps } from '@real-system/a11y-library';
+import type { AriakitRadioStateProps } from '@real-system/ariakit-library';
 import {
   AriakitRadioGroup,
   useAriakitRadioState,
 } from '@real-system/ariakit-library';
-import { real } from '@real-system/elements-primitive';
-import { useFieldControl } from '@real-system/field';
-import type { RealSystemChildrenProp } from '@real-system/styled-library';
-import { isFunction, makeTestId } from '@real-system/utils-library';
+import type { ValidationProps } from '@real-system/utils-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import { Radio } from './Radio';
 import { RadioGroupContextProvider } from './Radio.context';
-import type { CustomProps } from './RadioGroup.model';
 
-type CustomRadioGroupProps = {
-  readonly?: boolean;
-  required?: boolean;
-} & RealSystemChildrenProp;
-
-type RadioGroupProps = Omit<AriaRadioGroupProps, 'orientation'> &
-  CustomProps &
-  CustomRadioGroupProps;
+type RadioGroupProps = {
+  children?: React.ReactNode;
+  onChange?: AriakitRadioStateProps['setValue'];
+  name?: string;
+  id?: string;
+} & Pick<ValidationProps, 'hasError' | 'disabled'> &
+  Pick<AriakitRadioStateProps, 'value' | 'defaultValue'>;
 
 interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<RadioGroupProps> {
@@ -33,31 +29,28 @@ interface RadioGroupComponent
 const RadioGroup: RadioGroupComponent = forwardRef<
   HTMLDivElement,
   RadioGroupProps
->(function RadioGroup(props, ref) {
-  const { children, hasError: hasErrorProp } = props;
-
-  const field = useFieldControl({ validation: { hasError: hasErrorProp } });
-
-  const radio = useAriakitRadioState();
+>(function RadioGroup(
+  { children, hasError, disabled, onChange, value, defaultValue, id, name },
+  ref
+) {
+  const radio = useAriakitRadioState({
+    setValue: onChange,
+    defaultValue,
+    value,
+  });
 
   return (
     <AriakitRadioGroup
       data-testid={makeTestId('radio-group')}
       state={radio}
-      {...field.inputProps}
+      id={id}
       ref={ref}>
       <RadioGroupContextProvider
-        state={{
-          ...radio,
-          labelProps: field.labelProps,
-          hasError: field.validation.hasError,
-        }}>
-        {isFunction(children)
-          ? children({
-              labelProps: field.labelProps,
-              hasError: field.validation.hasError,
-            })
-          : children}
+        {...radio}
+        name={name}
+        disabled={disabled}
+        hasError={hasError}>
+        {children}
       </RadioGroupContextProvider>
     </AriakitRadioGroup>
   );

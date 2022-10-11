@@ -16,9 +16,9 @@ type FieldErrorTextProps = Omit<HelpTextProps, 'hideIcon'> & {
  */
 const FieldErrorText = React.forwardRef<HTMLSpanElement, FieldErrorTextProps>(
   function FieldErrorText({ children, ...restProps }, ref) {
-    const { validation } = useFieldControl();
+    const { hasError, errorMessage } = useFieldControl();
 
-    if (!validation?.hasError) return null;
+    if (!hasError) return null;
 
     return (
       <Text.Help
@@ -26,7 +26,7 @@ const FieldErrorText = React.forwardRef<HTMLSpanElement, FieldErrorTextProps>(
         variant="danger"
         {...restProps}
         ref={ref}>
-        {validation?.errorMessage || children}
+        {errorMessage || children}
       </Text.Help>
     );
   }

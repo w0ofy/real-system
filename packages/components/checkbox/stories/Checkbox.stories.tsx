@@ -17,7 +17,6 @@ export default {
   },
   args: {
     children: 'Give this user "Owner" permissions',
-    invalid: { status: false, message: "There's an error here" },
   },
   argTypes: {
     helpText: { type: 'string' },
@@ -25,6 +24,7 @@ export default {
     required: { type: 'boolean' },
     readonly: { type: 'boolean' },
     indeterminate: { type: 'boolean' },
+    hasError: { type: 'boolean' },
     disabled: { type: 'boolean' },
   },
 } as Meta;

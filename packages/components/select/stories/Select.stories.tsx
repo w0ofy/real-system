@@ -1,61 +1,47 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import {
-  Select,
-  SelectContainer,
-  SelectGroup,
-  SelectGroupLabel,
-  SelectItem,
-  SelectSeparator,
-} from '@real-system/select';
-import { Text } from '@real-system/typography';
+import { Select } from '@real-system/select';
 
 export default {
   title: 'Components/Select',
   component: Select,
   subcomponents: {
-    SelectContainer,
-    SelectGroup,
-    SelectGroupLabel,
-    SelectItem,
-    SelectSeparator,
+    Select,
+    Group: Select.Group,
+    GroupLabel: Select.GroupLabel,
+    Item: Select.Item,
+    Separator: Select.Separator,
   },
 } as Meta;
 
 export const Default = (args) => {
   return (
-    <SelectContainer {...args} disabled>
-      <Text.Label>Select a fruit</Text.Label>
-      <Select maxW="20rem">
-        <SelectItem value="Apple">Apple</SelectItem>
-        <SelectItem value="Grape" disabled />
-        <SelectItem value="Melon" />
-      </Select>
-    </SelectContainer>
+    <Select {...args} label="Select a fruit" disabled maxW="22rem">
+      <Select.Item value="Apple">Apple</Select.Item>
+      <Select.Item value="Grape" disabled />
+      <Select.Item value="Melon" />
+    </Select>
   );
 };
 
 export const SelectGroupStory = (args) => {
   return (
-    <SelectContainer>
-      <Text.Label>Select Groups</Text.Label>
-      <Select maxW="20rem">
-        <SelectGroup>
-          <SelectGroupLabel>Fruits</SelectGroupLabel>
-          <SelectItem value="Apple" />
-          <SelectItem value="Grape" disabled />
-          <SelectItem value="Melon" />
-        </SelectGroup>
-        <SelectSeparator />
-        <SelectGroup>
-          <SelectGroupLabel>Vegatables</SelectGroupLabel>
-          <SelectItem value="Cucumber" />
-          <SelectItem value="Pepper" disabled />
-          <SelectItem value="Onion" />
-        </SelectGroup>
-      </Select>
-    </SelectContainer>
+    <Select maxW="20rem" label="Select a fruit">
+      <Select.Group>
+        <Select.GroupLabel>Fruits</Select.GroupLabel>
+        <Select.Item value="Apple" />
+        <Select.Item value="Grape" disabled />
+        <Select.Item value="Melon" />
+      </Select.Group>
+      <Select.Separator />
+      <Select.Group>
+        <Select.GroupLabel>Vegatables</Select.GroupLabel>
+        <Select.Item value="Cucumber" />
+        <Select.Item value="Pepper" disabled />
+        <Select.Item value="Onion" />
+      </Select.Group>
+    </Select>
   );
 };
 

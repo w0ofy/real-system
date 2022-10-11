@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import {
   animated,
-  useReducedMotion,
+  usePrefersReducedMotion,
   useTransition,
 } from '@real-system/animation-library';
 import { real } from '@real-system/elements-primitive';
@@ -53,7 +53,7 @@ const Toaster = function Toaster({ state }: ToasterProps) {
   const [returnTarget, setReturnTarget] = useState<ReturnTargetState>({
     trigger: null,
   });
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion();
   const marginBottom = useToken(4, 'space');
 
   const transitions = useTransition(toasts, {

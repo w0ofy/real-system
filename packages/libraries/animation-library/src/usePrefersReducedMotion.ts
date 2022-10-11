@@ -1,5 +1,5 @@
 // Kudos to:
-// https://github.com/twilio-labs/paste/blob/main/packages/paste-libraries/animation/src/useReducedMotion.tsx
+// https://github.com/twilio-labs/paste/blob/main/packages/paste-libraries/animation/src/usePrefersReducedMotion.tsx
 // https://joshwcomeau.com/react/prefers-reduced-motion/#the-hook
 import { useEffect, useState } from 'react';
 
@@ -36,12 +36,12 @@ const getMediaQueryList = (): {
   return window.matchMedia(REDUCE_QUERY);
 };
 
-function useReducedMotion(): boolean {
+function usePrefersReducedMotion(): boolean {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(
     getMediaQueryList().matches
   );
 
-  useEffect((): (() => void) => {
+  useEffect(() => {
     const mediaQueryList = getMediaQueryList();
 
     const handleChange = (): void => {
@@ -57,4 +57,4 @@ function useReducedMotion(): boolean {
   return prefersReducedMotion;
 }
 
-export { useReducedMotion };
+export { usePrefersReducedMotion };

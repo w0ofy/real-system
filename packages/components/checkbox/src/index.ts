@@ -8,3 +8,7 @@ export {
 export * from './CheckboxGroup';
 export type { CheckboxGroupItemProps } from './CheckboxGroupItem';
 export * from './useIndeterminate';
+
+/**
+ * @todo create obj component api
+ */

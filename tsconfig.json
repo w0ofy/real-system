@@ -34,6 +34,7 @@
     "esModuleInterop": true
   },
   "watchOptions": {
+    "fallbackPolling": "dynamicpriority",
     "excludeDirectories": [
       "node_modules",
       "**/node_modules",
@@ -45,6 +46,7 @@
       ".github",
       ".storybook",
       "storybook",
+      "**/stories",
       ".vscode",
       "packages/core"
     ]

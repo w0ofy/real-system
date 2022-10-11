@@ -5,16 +5,18 @@ import {
   useCheckboxGroup,
   useCheckboxGroupState,
 } from '@real-system/a11y-library';
-import { useFieldControl } from '@real-system/field';
 import { Flex } from '@real-system/flex';
 import { Text } from '@real-system/typography';
+import type { ValidationProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CheckboxGroupContextProvider } from './Checkbox.context';
 import { CustomProps } from './Checkbox.model';
 import { CheckboxGroupItem } from './CheckboxGroupItem';
 
-type CheckboxGroupProps = AriaCheckboxGroupProps & CustomProps;
+type CheckboxGroupProps = AriaCheckboxGroupProps &
+  CustomProps &
+  Omit<ValidationProps, 'warningMessage'>;
 
 export interface CheckboxGroupComponent
   extends React.ForwardRefExoticComponent<CheckboxGroupProps> {
@@ -22,8 +24,10 @@ export interface CheckboxGroupComponent
 }
 
 /**
- * @todo break out label api + integrate field api
  * @description CheckboxGroup component.
+ *
+ * @todo ??? remove flex and orientation; improve example on how to wrap with `Stack` or `Flex` or whatever
+ * @todo ??? use ariakit library
  */
 // @ts-expect-error Item (component) property is defined on the fn object after this is defined
 const CheckboxGroup: CheckboxGroupComponent = forwardRef<
@@ -34,19 +38,14 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
   const { groupProps, labelProps } = useCheckboxGroup(props, state);
   const {
     children,
-    helpText: helpTextProp,
-    validation: validationProp,
-    required: requiredProp,
+    helpText,
+    required,
+    hasError,
     canSelectAll,
     orientation,
+    errorMessage,
+    label,
   } = props;
-
-  const { validation, helpText, required } = useFieldControl({
-    labelProps,
-    validation: validationProp,
-    helpText: helpTextProp,
-    required: requiredProp,
-  });
 
   return (
     <Flex
@@ -60,7 +59,7 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         required={required}
         cursor="default"
         {...labelProps}>
-        {props.label}
+        {label}
       </Text.Label>
       {helpText && <Text.Help marginBottom={7}>{helpText}</Text.Help>}
       <Flex
@@ -68,17 +67,22 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         xAlignContent="left"
         yAlignContent={orientation === 'vertical' ? 'top' : 'center'}>
         <CheckboxGroupContextProvider
-          state={{ ...state, validation, canSelectAll, orientation }}>
+          state={{
+            ...state,
+            canSelectAll,
+            orientation,
+            hasError,
+          }}>
           {children}
         </CheckboxGroupContextProvider>
       </Flex>
-      {validation.hasError && validation.errorMessage && (
+      {hasError && errorMessage && (
         <Text.Help
           mt={3}
           ml={canSelectAll ? 11 : 4}
           variant="danger"
           marginBottom={8}>
-          {validation.errorMessage}
+          {errorMessage}
         </Text.Help>
       )}
     </Flex>

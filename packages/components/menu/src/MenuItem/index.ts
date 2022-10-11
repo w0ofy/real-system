@@ -1,6 +1,6 @@
 export * from './MenuItem';
-export * from './MenuItemCheckbox';
-export * from './MenuItemCommand';
-export * from './MenuItemIcon';
-export * from './MenuItemLink';
-export * from './MenuItemRadio';
+export type { MenuItemCheckboxProps } from './MenuItemCheckbox';
+export type { MenuItemCommandProps } from './MenuItemCommand';
+export type { MenuItemIconProps } from './MenuItemIcon';
+export type { MenuItemLinkProps } from './MenuItemLink';
+export type { MenuItemRadioProps } from './MenuItemRadio';

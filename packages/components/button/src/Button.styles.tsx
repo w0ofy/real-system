@@ -41,7 +41,8 @@ const sizes: Record<ButtonSize, StylishProps> = {
   },
 };
 
-const mergeStyles = (size: ButtonSize, styles) => merge(sizes[size], styles);
+const mergeStyles = (size: ButtonSize, styles) =>
+  merge<StylishProps>(sizes[size], styles);
 
 const getCursorStyle = (loading) =>
   loading ? { cursor: 'wait' } : { cursor: 'default' };
@@ -58,6 +59,7 @@ const ifGray = (
   thenValue: string,
   elseValue: string
 ) => (colorScheme === 'gray' ? thenValue : elseValue);
+
 /**
  * @todo lighten fill variant if color scheme is gray
  */

@@ -8,14 +8,10 @@ import { useLabel } from '@real-system/a11y-library';
 import { makeContext } from '@real-system/state-library';
 import { PropUnion } from '@real-system/utils-library';
 
-type FieldControlValidation = {
+type FieldControlOptions = {
   hasError?: boolean;
   warningMessage?: React.ReactNode;
   errorMessage?: React.ReactNode;
-};
-
-type FieldControlOptions = {
-  validation?: FieldControlValidation;
   required?: boolean;
   helpText?: React.ReactNode;
   readonly?: boolean;
@@ -28,8 +24,7 @@ type FieldControlValue = {
     Pick<FieldControlValue, 'required'>;
   inputProps?: UseLabelReturnValue['fieldProps'] &
     Pick<FieldControlValue, 'required' | 'readonly' | 'disabled'>;
-} & Omit<FieldControlOptions, 'validation'> &
-  Required<Pick<FieldControlOptions, 'validation'>>;
+} & FieldControlOptions;
 
 type FieldControlProviderType = (props: FieldControlValue) => JSX.Element;
 type UseField = (
@@ -43,17 +38,20 @@ const makeFieldControlProvider = (
     children,
     required,
     id: idProp,
-    validation = {},
     label,
     helpText,
     readonly,
     disabled,
+    hasError,
+    warningMessage,
+    errorMessage,
     'aria-label': ariaLabel,
   }: FieldControlOptions & { children?: React.ReactNode }) {
+    const uniqueLabel = label || idProp + '-label';
     const labelConfig = useLabel({
       id: idProp,
-      label: label || idProp + '-label',
-      'aria-label': ariaLabel || label,
+      label: uniqueLabel,
+      'aria-label': ariaLabel || uniqueLabel,
     });
 
     return (
@@ -73,10 +71,12 @@ const makeFieldControlProvider = (
           label,
           id: labelConfig.fieldProps.id,
           required,
-          validation,
           helpText,
           disabled,
           readonly,
+          hasError,
+          warningMessage,
+          errorMessage,
         }}>
         {children}
       </FieldContextProvider>
@@ -102,7 +102,6 @@ const makeFieldControlHook =
         ...labelFactory.fieldProps,
         required: fallbacks?.required,
       },
-      validation: {},
       ...fallbacks,
       ...context,
     };
@@ -129,5 +128,5 @@ const makeFieldControlContext = (): [FieldControlProviderType, UseField] => {
  */
 const [FieldControlProvider, useFieldControl] = makeFieldControlContext();
 
-export type { FieldControlOptions, FieldControlValidation, FieldControlValue };
+export type { FieldControlOptions, FieldControlValue };
 export { FieldControlProvider, makeFieldControlContext, useFieldControl };

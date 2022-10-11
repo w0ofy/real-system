@@ -1,4 +1,4 @@
-import { Dict } from '@real-system/utils-library';
+import type { Dict } from '@real-system/utils-library';
 
 const makeTokenScale = <T extends Dict = Dict<unknown>>(
   scale: T

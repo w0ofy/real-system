@@ -2,15 +2,14 @@ import type {
   AriaCheckboxGroupProps,
   AriaCheckboxGroupState,
 } from '@real-system/a11y-library';
-import type { FieldControlValidation } from '@real-system/field';
 import { constate } from '@real-system/state-library';
+import type { ValidationProps } from '@real-system/utils-library';
 
 export type CheckboxGroupContext = {
   state: AriaCheckboxGroupState & {
     canSelectAll: boolean | undefined;
     orientation: AriaCheckboxGroupProps['orientation'];
-    validation: FieldControlValidation;
-  };
+  } & Pick<ValidationProps, 'hasError'>;
 };
 
 const useCheckboxGroup = ({ state }: CheckboxGroupContext) => state;

@@ -11,7 +11,7 @@ type SelectItemProps = OmitSelectPrivateProps<SelectItemPrimitiveProps>;
 const StyledItem = styled(SelectItemPrimitive)<SelectItemPrimitiveProps>({});
 
 const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(
-  function SelectItem(props, ref) {
+  function SelectItem({ children, ...restProps }, ref) {
     return (
       <StyledItem
         outline="none"
@@ -30,9 +30,10 @@ const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(
         _focusVisible={{ bgColor: 'gray-50', color: 'gray-600' }}
         _active={{ bgColor: 'gray-100', color: 'gray-700' }}
         _disabled={{ backgroundColor: 'none', color: 'gray-300' }}
-        {...props}
-        ref={ref}
-      />
+        {...restProps}
+        ref={ref}>
+        {children || restProps.value}
+      </StyledItem>
     );
   }
 );

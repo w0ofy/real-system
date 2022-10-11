@@ -18,7 +18,7 @@ const FieldWarningText = React.forwardRef<
   HTMLSpanElement,
   FieldWarningTextProps
 >(function FieldWarnText({ children, ...restProps }, ref) {
-  const { validation } = useFieldControl();
+  const { warningMessage } = useFieldControl();
 
   return (
     <Text.Help
@@ -26,7 +26,7 @@ const FieldWarningText = React.forwardRef<
       variant="warning"
       {...restProps}
       ref={ref}>
-      {validation?.warningMessage || children}
+      {warningMessage || children}
     </Text.Help>
   );
 });

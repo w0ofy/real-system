@@ -26,18 +26,27 @@ $ yarn add @real-system/typography
 
 ```jsx
 import { ThemeProvider } from '@real-system/styled-library';
-import { Typography } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 
-/** can also import Heading separately like this
- * import { Heading } from '@real-system/typography';
- */
 const MyComponent = () => {
   return (
     <ThemeProvider>
-      <Text.Heading as="h1">Heading 1</Typography>
-      <Typography>Body text...</Typography>
+      <Text>Body text</Text>
+      <Text.Base>Base (low-level) text</Text.Base>
+      <Text.Code>Code text</Text.Code>
+      <Text.Heading as="h2" size="h1">
+        Heading text
+      </Text.Heading>
+      <Text.Help>Help text</Text.Help>
+      <Text.Help variant="danger">Danger text</Text.Help>
+      <Text.Help variant="warning">Warning text</Text.Help>
+      <Text.Label>Label text</Text.Label>
+      <Text width="50px">
+        <Text.Truncate as="h1">
+          Truncate long text to fit container
+        </Text.Truncate>
+      </Text>
     </ThemeProvider>
-  )
-}
-
+  );
+};
 ```

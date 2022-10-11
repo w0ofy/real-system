@@ -1,8 +1,8 @@
 export {
   Radio as AriakitRadio,
   RadioGroup as AriakitRadioGroup,
-  RadioGroupOptions as AriakitRadioGroupOptions,
-  RadioOptions as AriakitRadioOptions,
+  RadioGroupProps as AriakitRadioGroupProps,
+  RadioProps as AriakitRadioProps,
   RadioState as AriakitRadioState,
   RadioStateProps as AriakitRadioStateProps,
   useRadio as useAriakitRadio,

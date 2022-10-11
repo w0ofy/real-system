@@ -1,6 +1,6 @@
 import lodashGet from 'lodash.get';
 
-import { Dict } from '../types';
+import type { Dict } from '../types';
 
 type Get<T = any> = {
   (obj: Record<any, any>, path: string[] | string, fallback?: T): T;

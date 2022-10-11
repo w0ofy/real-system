@@ -6,6 +6,8 @@ import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps } from '../types';
 
+import { MenuGroupLabel } from './MenuGroupLabel';
+
 const StyledMenuGroup = styled('div')({
   paddingTop: 4,
 });
@@ -14,7 +16,16 @@ type MenuGroupProps = {
   children?: React.ReactNode;
 } & CommonMenuProps;
 
-const MenuGroup = ({ children, ...restProps }: MenuGroupProps) => {
+export interface MenuGroupComponent
+  extends React.ForwardRefExoticComponent<MenuGroupProps> {
+  Label: typeof MenuGroupLabel;
+}
+
+// @ts-ignore MenuGroup properties are defined below
+const MenuGroup: MenuGroupComponent = ({
+  children,
+  ...restProps
+}: MenuGroupProps) => {
   return (
     <MenuGroupPrimitive
       as={StyledMenuGroup}
@@ -24,6 +35,8 @@ const MenuGroup = ({ children, ...restProps }: MenuGroupProps) => {
     </MenuGroupPrimitive>
   );
 };
+
+MenuGroup.Label = MenuGroupLabel;
 
 export type { MenuGroupProps };
 export { MenuGroup };

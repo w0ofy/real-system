@@ -94,7 +94,6 @@ export type {
   As,
   ComponentWithAs,
   CSSWithMultiValues,
-  Dict,
   PropsOf,
   RealSystemChildrenProp,
   RecursiveCSSObject,

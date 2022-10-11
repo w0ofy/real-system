@@ -3,9 +3,7 @@
  */
 import React, { forwardRef } from 'react';
 
-import { useFieldControl } from '@real-system/field';
-
-import { InputProps } from './Input.model';
+import type { InputProps } from './Input.model';
 import { InputBox, InputBoxTypes } from './InputBox';
 import { InputElement } from './InputElement';
 
@@ -18,10 +16,10 @@ type InputTypeProps = {
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
     // field props
-    readonly: readonlyProp,
-    disabled: disabledProp,
-    id: idProp,
-    required: requiredProp,
+    readonly,
+    disabled,
+    id,
+    required,
     hasError,
     // input props
     type = 'text',
@@ -34,15 +32,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   },
   ref
 ) {
-  const { disabled, validation, readonly, required, inputProps, id } =
-    useFieldControl({
-      readonly: readonlyProp,
-      disabled: disabledProp,
-      required: requiredProp,
-      validation: { hasError },
-      id: idProp,
-    });
-
   const inputTypeProps: InputTypeProps = { type };
 
   if (type === 'number') {
@@ -54,14 +43,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   return (
     <InputBox
       disabled={disabled}
-      error={validation.hasError}
+      hasError={hasError}
       suffix={suffix}
       prefix={prefix}
       readonly={readonly}
       type={type}
       {...restProps}>
       <InputElement
-        aria-invalid={validation.hasError}
+        aria-invalid={hasError}
         aria-readonly={readonly}
         disabled={disabled}
         id={id}
@@ -73,7 +62,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         ref={ref}
         {...restProps}
         {...inputTypeProps}
-        {...inputProps}
       />
     </InputBox>
   );

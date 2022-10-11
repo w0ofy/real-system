@@ -4,11 +4,11 @@ import { Meta } from '@storybook/react';
 import { Button } from '@real-system/button';
 import { Field } from '@real-system/field';
 import { Input } from '@real-system/input';
-import { Select, SelectContainer, SelectItem } from '@real-system/select';
+import { Select } from '@real-system/select';
 import { Text } from '@real-system/typography';
 
 export default {
-  title: 'Components/Field',
+  title: 'WIP/Components/Field',
   component: Field,
   subcomponents: {
     FieldGroup: Field.Group,
@@ -52,15 +52,12 @@ export const FieldGroupStory = () => (
         <Input type="tel" id="phoneNumber" />
       </Field>
       <Field width="100%">
-        <SelectContainer>
-          <Text.Label>Engineering Level</Text.Label>
-          <Select>
-            <SelectItem value="L1">L1 (Associate)</SelectItem>
-            <SelectItem value="L2">L2 (Mid)</SelectItem>
-            <SelectItem value="L3">L3 (Senior)</SelectItem>
-            <SelectItem value="L4">L4 (Staff)</SelectItem>
-          </Select>
-        </SelectContainer>
+        <Select label="Engineering Level">
+          <Select.Item value="L1">L1 (Associate)</Select.Item>
+          <Select.Item value="L2">L2 (Mid)</Select.Item>
+          <Select.Item value="L3">L3 (Senior)</Select.Item>
+          <Select.Item value="L4">L4 (Staff)</Select.Item>
+        </Select>
       </Field>
     </Field.Group>
     <Button type="reset" variant="fill">
@@ -84,15 +81,15 @@ export const InlineFieldGroup = () => (
         <Input type="tel" id="phoneNumber" />
       </Field>
       <Field width="20%">
-        <SelectContainer>
+        <Select>
           <Text.Label>Engineering Level</Text.Label>
           <Select>
-            <SelectItem value="L1">L1 (Associate)</SelectItem>
-            <SelectItem value="L2">L2 (Mid)</SelectItem>
-            <SelectItem value="L3">L3 (Senior)</SelectItem>
-            <SelectItem value="L4">L4 (Staff)</SelectItem>
+            <Select.Item value="L1">L1 (Associate)</Select.Item>
+            <Select.Item value="L2">L2 (Mid)</Select.Item>
+            <Select.Item value="L3">L3 (Senior)</Select.Item>
+            <Select.Item value="L4">L4 (Staff)</Select.Item>
           </Select>
-        </SelectContainer>
+        </Select>
       </Field>
     </Field.Group>
     <Button type="reset" variant="fill">
@@ -123,15 +120,15 @@ export const WithoutBuiltins = () => (
         <Input type="tel" id="phoneNumber" />
       </Field>
       <Field width="100%">
-        <SelectContainer>
+        <Select>
           <Text.Label>Engineering Level</Text.Label>
           <Select>
-            <SelectItem value="L1">L1 (Associate)</SelectItem>
-            <SelectItem value="L2">L2 (Mid)</SelectItem>
-            <SelectItem value="L3">L3 (Senior)</SelectItem>
-            <SelectItem value="L4">L4 (Staff)</SelectItem>
+            <Select.Item value="L1">L1 (Associate)</Select.Item>
+            <Select.Item value="L2">L2 (Mid)</Select.Item>
+            <Select.Item value="L3">L3 (Senior)</Select.Item>
+            <Select.Item value="L4">L4 (Staff)</Select.Item>
           </Select>
-        </SelectContainer>
+        </Select>
       </Field>
       <Button type="reset" variant="fill">
         Submit

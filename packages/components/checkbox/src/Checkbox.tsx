@@ -12,7 +12,11 @@ import { VisuallyHidden } from '@real-system/visually-hidden';
 import type { CustomProps } from './Checkbox.model';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
 
-type CheckboxProps = AriaCheckboxProps & CustomProps;
+type CheckboxProps = Pick<
+  AriaCheckboxProps,
+  'required' | 'disabled' | 'indeterminate' | 'children'
+> &
+  CustomProps;
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   props,
@@ -24,19 +28,19 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   const mergedRef = useMergedRef(internalRef, ref);
 
   const { inputProps } = useCheckbox(
-    props,
+    props as AriaCheckboxProps,
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
 
-  const { validation, helpText } = props;
-  const disabled = props.disabled || props.readonly;
+  const { hasError, helpText, required, disabled, indeterminate, children } =
+    props;
 
   return (
     <CheckboxWrapper
       disabled={disabled}
       helpText={helpText}
-      invalid={validation}
+      hasError={hasError}
       {...interactionProps}>
       <VisuallyHidden as="div">
         <input {...inputProps} ref={mergedRef} />
@@ -44,12 +48,12 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
       <CheckboxControl
         disabled={disabled}
         isSelected={state.isSelected}
-        indeterminate={props.indeterminate}
-        isInvalid={validation?.hasError}
+        indeterminate={indeterminate}
+        isInvalid={hasError}
         {...interactionProps}
       />
-      <CheckboxLabel disabled={disabled} required={props.required}>
-        {props.children}
+      <CheckboxLabel disabled={disabled} required={required}>
+        {children}
       </CheckboxLabel>
     </CheckboxWrapper>
   );

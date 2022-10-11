@@ -31,8 +31,8 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/a11y-library": "^0.0.13",
+    "@real-system/ariakit-library": "^0.0.19",
     "@real-system/elements-primitive": "^0.0.18",
-    "@real-system/field": "^0.0.33",
     "@real-system/flex": "^0.0.47",
     "@real-system/state-library": "^0.0.17",
     "@real-system/styled-library": "^0.0.16",
@@ -44,8 +44,8 @@
   },
   "devDependencies": {
     "@real-system/a11y-library": "^0.0.13",
+    "@real-system/ariakit-library": "^0.0.19",
     "@real-system/elements-primitive": "^0.0.18",
-    "@real-system/field": "^0.0.33",
     "@real-system/flex": "^0.0.47",
     "@real-system/state-library": "^0.0.17",
     "@real-system/styled-library": "^0.0.16",
@@ -55,6 +55,6 @@
     "concurrently": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.4"
   }
 }

@@ -10,7 +10,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import type { CommonMenuProps, OmitMenuState } from '../types';
 
-import { RealMenuItem } from './MenuItem';
+import { MenuItemWrapper } from './MenuItem';
 
 type MenuItemRadioProps = OmitMenuState<MenuItemRadioPrimitiveProps> &
   CommonMenuProps;
@@ -30,7 +30,7 @@ const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
     return (
       /** @ts-ignore `as` prop type conflicts */
       <MenuItemRadioPrimitive
-        as={RealMenuItem}
+        as={MenuItemWrapper}
         disabled={disabled}
         hideOnClick={hideOnClick}
         onClick={onClick}

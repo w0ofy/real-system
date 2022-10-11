@@ -3,16 +3,17 @@ import React, { forwardRef } from 'react';
 import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
 import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
-import type { InvalidConfig } from '@real-system/typography';
 import { Text } from '@real-system/typography';
+import type { ValidationProps } from '@real-system/utils-library';
 
 type CheckboxWrapperProps = {
   children: React.ReactNode;
   disabled?: boolean;
   helpText?: string;
-  invalid?: InvalidConfig;
-} & UseInteractionsReturnValue;
+} & UseInteractionsReturnValue &
+  Pick<ValidationProps, 'hasError'>;
 
+/** @todo error message */
 const CheckboxWrapper = forwardRef<
   HTMLLabelElement,
   CheckboxWrapperProps & FlexProps
@@ -24,7 +25,7 @@ const CheckboxWrapper = forwardRef<
     pressProps,
     focusWithinProps,
     helpText,
-    invalid,
+    hasError,
     ...restProps
   },
   ref
@@ -42,8 +43,11 @@ const CheckboxWrapper = forwardRef<
           {children}
         </Flex>
       </Text.Label>
-      {(helpText || invalid) && (
-        <Text.Help mt={2} marginLeft={12} invalid={invalid}>
+      {(helpText || hasError) && (
+        <Text.Help
+          mt={2}
+          marginLeft={12}
+          variant={hasError ? 'danger' : 'default'}>
           {helpText}
         </Text.Help>
       )}
