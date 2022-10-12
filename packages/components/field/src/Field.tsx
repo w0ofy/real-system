@@ -1,56 +1,82 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react';
 
 import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
 import { makeTestId } from '@real-system/utils-library';
 
-import { FieldControlOptions, FieldProvider } from './Field.context';
-import { FieldGroup } from './FieldGroup';
-import { FieldHelperText } from './FieldHelperText';
-import { FieldLabel } from './FieldLabel';
+import {
+  FieldErrorText,
+  FieldGroup,
+  FieldHelpText,
+  FieldLabel,
+  FieldWarningText,
+} from './components';
+import { FieldControlOptions, FieldControlProvider } from './FieldControl';
 
-type FieldProps = FlexProps & FieldControlOptions;
-/**
- *
- * @todo possibly add FieldControl and FieldGroupControl for easy-to-use field context
- */
+type FieldProps = FlexProps & FieldControlOptions & { as?: 'fieldset' | 'div' };
 
 export interface FieldComponent
   extends React.ForwardRefExoticComponent<FieldProps> {
   Label: typeof FieldLabel;
-  HelperText: typeof FieldHelperText;
+  Help: typeof FieldHelpText;
   Group: typeof FieldGroup;
+  Error: typeof FieldErrorText;
+  Warning: typeof FieldWarningText;
 }
 
 /**
- * @description A flex-ible field context wrapper for field children.
+ * @deprecated DO NOT USE — Under heavy construction
+ * @todo API design
  */
 // @ts-expect-error Field component properties are defined on the fn object after this is defined
 const Field: FieldComponent = React.forwardRef<HTMLDivElement, FieldProps>(
-  function Field(
-    { children, invalid, required, disabled, id, readOnly, ...restProps },
-    ref
-  ) {
+  function Field(props, ref) {
+    const {
+      children,
+      required,
+      id,
+      label,
+      helpText,
+      hasError,
+      warningMessage,
+      errorMessage,
+      as = 'div',
+      ...restProps
+    } = props;
+    const fieldControl = {
+      required,
+      helpText,
+      id,
+      label,
+      hasError,
+      warningMessage,
+      errorMessage,
+    };
+
     return (
-      <FieldProvider
-        value={{ invalid: invalid!, required, disabled, id: id!, readOnly }}>
+      <FieldControlProvider {...fieldControl}>
         <Flex
           vertical
           xAlignContent="left"
           data-testid={makeTestId('field')}
           gap={2}
           ref={ref}
+          role="group"
+          as={as}
           {...restProps}>
           {children}
         </Flex>
-      </FieldProvider>
+      </FieldControlProvider>
     );
   }
 );
 
 Field.Group = FieldGroup;
-Field.HelperText = FieldHelperText;
+Field.Help = FieldHelpText;
 Field.Label = FieldLabel;
+Field.Error = FieldErrorText;
+Field.Warning = FieldErrorText;
 
 export type { FieldProps };
 export { Field };

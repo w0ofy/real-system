@@ -1,22 +1,27 @@
 import React, { forwardRef } from 'react';
 
-import type { SelectPrimitiveOptions } from '@real-system/select-primitive';
-import { SelectPrimitive } from '@real-system/select-primitive';
-import type {
-  RealSystemComponentProps,
-  StylishProps,
-} from '@real-system/styled-library';
-import styled from '@real-system/styled-library';
+import { real } from '@real-system/elements-primitive';
+import {
+  SelectPrimitiveOptions,
+  useSelectStatePrimitive,
+} from '@real-system/select-primitive';
+import {
+  SelectLabelPrimitive,
+  SelectPrimitive,
+} from '@real-system/select-primitive';
+import type { StylishProps } from '@real-system/styled-library';
+import styled, { spreadStyleProps } from '@real-system/styled-library';
+import { Text } from '@real-system/typography';
 import { merge } from '@real-system/utils-library';
 
-import { SelectContainer } from './SelectContainer';
-import { useSelectStateContext } from './SelectContext';
+import { SelectContextProvider } from './SelectContext';
 import { SelectGroup, SelectGroupLabel } from './SelectGroup';
 import { SelectItem } from './SelectItem';
 import { SelectPopover } from './SelectPopover';
 import { SelectSeparator } from './SelectSeparator';
+import type { SelectProps } from './types';
 
-const StyledSelect = styled(SelectPrimitive)<SelectPrimitiveOptions>();
+const StyledSelectInput = styled(SelectPrimitive)<SelectPrimitiveOptions>();
 
 const resetStyles = {
   bg: 'none',
@@ -49,7 +54,7 @@ const baseStyles: StylishProps = {
   _active: { boxShadow: 'none' },
 };
 
-const selectStyles: Record<'default' | 'error', StylishProps> = {
+const selectStyles: Record<'default' | 'danger', StylishProps> = {
   default: merge(baseStyles, {
     borderColor: 'gray-200',
     _hover: {
@@ -69,7 +74,7 @@ const selectStyles: Record<'default' | 'error', StylishProps> = {
       cursor: 'default',
     },
   }),
-  error: merge(baseStyles, {
+  danger: merge(baseStyles, {
     borderColor: 'red-500',
     _hover: { borderColor: 'red-600' },
     _focusWithin: {
@@ -80,11 +85,8 @@ const selectStyles: Record<'default' | 'error', StylishProps> = {
   }),
 };
 
-type SelectProps = RealSystemComponentProps;
-
 export interface SelectComponent
   extends React.ForwardRefExoticComponent<SelectProps> {
-  Container: typeof SelectContainer;
   Item: typeof SelectItem;
   Separator: typeof SelectSeparator;
   Group: typeof SelectGroup;
@@ -93,22 +95,60 @@ export interface SelectComponent
 
 // @ts-expect-error Select component properties are defined on the fn object after this is defined
 const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
-  function Select({ children, ...restProps }, ref) {
-    const state = useSelectStateContext();
-    const styles = state.error
-      ? selectStyles['error']
-      : selectStyles['default'];
+  function Select(
+    {
+      children,
+      placement = 'bottom',
+      flip = true,
+      hasError = false,
+      label,
+      disabled,
+      onChange,
+      required,
+      ...restProps
+    },
+    ref
+  ) {
+    const state = useSelectStatePrimitive({
+      placement,
+      gutter: 2,
+      sameWidth: true,
+      flip,
+      setValue: onChange,
+      ...restProps,
+    });
+    const styles = hasError ? selectStyles['danger'] : selectStyles['default'];
 
     return (
-      <>
-        <StyledSelect {...styles} state={state} ref={ref} {...restProps} />
-        <SelectPopover>{children}</SelectPopover>
-      </>
+      <real.div
+        display="flex"
+        flexDirection="column"
+        width="100%"
+        gap={2}
+        {...spreadStyleProps(restProps)}>
+        <SelectContextProvider state={{ ...state, hasError }}>
+          <>
+            <SelectLabelPrimitive
+              as={Text.Label}
+              state={state}
+              disabled={disabled}
+              required={required}>
+              {label}
+            </SelectLabelPrimitive>
+            <StyledSelectInput
+              {...styles}
+              state={state}
+              disabled={disabled}
+              ref={ref}
+            />
+            <SelectPopover>{children}</SelectPopover>
+          </>
+        </SelectContextProvider>
+      </real.div>
     );
   }
 );
 
-Select.Container = SelectContainer;
 Select.Item = SelectItem;
 Select.Separator = SelectSeparator;
 Select.Group = SelectGroup;

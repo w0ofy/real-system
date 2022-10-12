@@ -13,7 +13,14 @@ import { AccordionItems } from './AccordionItems';
  */
 const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
   function Accordion(
-    { children, contained, allowMultiple, allowToggle, ...restProps },
+    {
+      children,
+      contained,
+      allowMultiple,
+      allowToggle,
+      defaultExpanded,
+      ...restProps
+    },
     ref
   ) {
     return (
@@ -28,7 +35,8 @@ const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
           <AccordionItems
             contained={contained}
             allowMultiple={allowMultiple}
-            allowToggle={allowToggle}>
+            allowToggle={allowToggle}
+            defaultExpanded={defaultExpanded}>
             {children}
           </AccordionItems>
         </FocusScope>

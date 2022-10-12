@@ -1,6 +1,10 @@
 import { useRadio as useAriaRadio } from '@react-aria/radio';
 
-import { AriaRadioProps, RestoredAriaRadioProps } from './types';
+import {
+  AriaRadioGroupState,
+  AriaRadioProps,
+  RestoredAriaRadioProps,
+} from './types';
 
 const restoreRadioProps = (props: AriaRadioProps): RestoredAriaRadioProps => {
   const { disabled, ...reactAriaAndCustomProps } = props;
@@ -11,13 +15,13 @@ const restoreRadioProps = (props: AriaRadioProps): RestoredAriaRadioProps => {
   };
 };
 
-const useRadio: typeof useAriaRadio = (props, state, ref) => {
+const useRadio = (
+  props: AriaRadioProps,
+  state: AriaRadioGroupState,
+  ref: React.RefObject<HTMLInputElement>
+) => {
   const restoredProps = restoreRadioProps(props);
-  return useAriaRadio(
-    restoredProps,
-    state,
-    ref as React.RefObject<HTMLInputElement>
-  );
+  return useAriaRadio(restoredProps, state, ref);
 };
 
 export { useRadio };

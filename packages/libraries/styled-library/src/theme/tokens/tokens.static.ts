@@ -184,7 +184,7 @@ const fontSizes = {
   'badge-xl': patchScale(7),
   label: patchScale(6.5),
   link: patchScale(7),
-  helper: patchScale(6.5),
+  help: patchScale(6.5),
   h1: patchScale(17),
   h2: patchScale(13),
   h3: patchScale(11),
@@ -225,7 +225,7 @@ const lineHeights = {
   'badge-lg': patchScale(6.5),
   'badge-xl': patchScale(7),
   label: patchScale(6.5),
-  helper: patchScale(6.5),
+  help: patchScale(6.5),
   link: patchScale(7),
   h1: patchScale(17),
   h2: patchScale(13),
@@ -262,7 +262,7 @@ const letterSpacings = {
   'badge-lg': 0,
   'badge-xl': 0,
   label: '0.25px',
-  helper: '0.25px',
+  help: '0.25px',
   link: '0.25px',
   h1: '0.3px',
   h2: '0.3px',
@@ -300,7 +300,7 @@ const fontWeights = {
   'badge-lg': 500,
   'badge-xl': 500,
   label: 600,
-  helper: 400,
+  help: 400,
   link: 400,
   h1: 700,
   h2: 700,
@@ -311,7 +311,7 @@ const fontWeights = {
 };
 
 const defaultFontFamily =
-  '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif';
+  'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";';
 const monoFontFamily =
   'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace';
 

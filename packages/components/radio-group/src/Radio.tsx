@@ -1,57 +1,63 @@
 import React, { useRef } from 'react';
 import { forwardRef } from 'react';
 
-import { useInteractions, useRadio } from '@real-system/a11y-library';
-import { Flex } from '@real-system/flex';
+import { useInteractions } from '@real-system/a11y-library';
+import type { AriakitRadioProps } from '@real-system/ariakit-library';
+import { AriakitRadio } from '@real-system/ariakit-library';
 import { Text } from '@real-system/typography';
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
-import { useRadioGroupContext } from './RadioContext';
-import { RadioControl } from './RadioControl';
-import { RadioLabel } from './RadioLabel';
-import { RadioProps } from './types';
+import { RadioControl, RadioLabel } from './components';
+import { useRadioGroupStateContext } from './Radio.context';
 
+/** Radio */
+type RadioProps = AriakitRadioProps;
+
+/**
+ * @description `Radio` component for `RadioGroup`.
+ * @todo remove a11y library usage
+ */
 const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
-  props,
+  { value, disabled: disabledProp, children, ...restProps },
   ref
 ) {
-  const { value, disabled, children } = props;
-  const state = useRadioGroupContext();
+  const state = useRadioGroupStateContext();
+
+  const disabled = state.disabled || disabledProp;
+
+  const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
+    useInteractions({ disabled });
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
-  const { inputProps } = useRadio(
-    props,
-    state,
-    mergedRef as React.RefObject<HTMLInputElement>
-  );
-  const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
-    useInteractions({ isDisabled: disabled });
-
-  const isSelected = state.selectedValue === value;
-  const isVertical = state.orientation === 'vertical' ? true : false;
 
   return (
     <Text.Label
       display="inline-flex"
       disabled={disabled}
-      mb={2}
-      _notLast={isVertical ? { marginBottom: 5 } : { marginRight: 5 }}
       {...hoverProps}
       {...pressProps}
       {...focusWithinProps}>
-      <Flex as="span" xAlignContent="center" yAlignContent="center">
-        <VisuallyHidden>
-          <input {...inputProps} ref={mergedRef} />
-        </VisuallyHidden>
-        <RadioControl
-          isInvalid={state.invalid?.status}
+      <VisuallyHidden>
+        <AriakitRadio
+          ref={mergedRef}
+          value={value}
           disabled={disabled}
-          isSelected={isSelected}
-          {...restInteractions}
+          name={state.name}
+          {...restProps}
         />
-        <RadioLabel disabled={disabled}>{children}</RadioLabel>
-      </Flex>
+      </VisuallyHidden>
+      <RadioLabel disabled={disabled}>
+        <>
+          <RadioControl
+            isInvalid={state.hasError}
+            isDisabled={disabled}
+            isSelected={state.value === value}
+            {...restInteractions}
+          />
+          {children}
+        </>
+      </RadioLabel>
     </Text.Label>
   );
 });

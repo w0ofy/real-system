@@ -3,9 +3,10 @@ import React, { forwardRef, useMemo } from 'react';
 import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 
+import type { CommonTextProps } from '../Text.model';
+
 import { BaseText } from './BaseText';
 import { RequiredDot } from './RequiredDot';
-import type { CommonTextProps } from './Text.model';
 
 export type LabelProps = {
   children?: React.ReactNode;
@@ -17,6 +18,9 @@ export type LabelProps = {
   textProps?: StylishProps;
 } & CommonTextProps;
 
+/**
+ * @todo refactor `containerProps`?
+ */
 const Label = forwardRef<HTMLLabelElement, LabelProps>(function Label(
   {
     children,

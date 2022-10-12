@@ -1,6 +1,7 @@
 import React, { forwardRef, useRef } from 'react';
 
 import {
+  AriaCheckboxProps,
   useCheckbox,
   useInteractions,
   useToggleState,
@@ -8,32 +9,38 @@ import {
 import { useMergedRef } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
+import type { CustomProps } from './Checkbox.model';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
-import type { CheckboxProps } from './types';
+
+type CheckboxProps = Pick<
+  AriaCheckboxProps,
+  'required' | 'disabled' | 'indeterminate' | 'children'
+> &
+  CustomProps;
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   props,
   ref
 ) {
-  const interactionProps = useInteractions({ isDisabled: props.disabled });
+  const interactionProps = useInteractions({ disabled: props.disabled });
   const state = useToggleState(props);
   const internalRef = useRef<HTMLInputElement>(null);
   const mergedRef = useMergedRef(internalRef, ref);
 
   const { inputProps } = useCheckbox(
-    props,
+    props as AriaCheckboxProps,
     state,
     mergedRef as React.RefObject<HTMLInputElement>
   );
 
-  const { invalid, helpText } = props;
-  const disabled = props.disabled || props.readonly;
+  const { hasError, helpText, required, disabled, indeterminate, children } =
+    props;
 
   return (
     <CheckboxWrapper
       disabled={disabled}
       helpText={helpText}
-      invalid={invalid}
+      hasError={hasError}
       {...interactionProps}>
       <VisuallyHidden as="div">
         <input {...inputProps} ref={mergedRef} />
@@ -41,12 +48,12 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
       <CheckboxControl
         disabled={disabled}
         isSelected={state.isSelected}
-        indeterminate={props.indeterminate}
-        isInvalid={invalid?.status}
+        indeterminate={indeterminate}
+        isInvalid={hasError}
         {...interactionProps}
       />
-      <CheckboxLabel disabled={disabled} required={props.required}>
-        {props.children}
+      <CheckboxLabel disabled={disabled} required={required}>
+        {children}
       </CheckboxLabel>
     </CheckboxWrapper>
   );

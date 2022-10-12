@@ -44,7 +44,7 @@ const pseudoProps = {
   _odd: '&:nth-of-type(odd)',
   _placeholder: '&::placeholder',
   _pressed: '&[aria-pressed=true]',
-  _readOnly: '&[aria-readonly=true], &[readonly]',
+  _readonly: '&[aria-readonly=true], &[readonly]',
   _selected_focus: '&[aria-selected=true]:focus',
   _selected_focusVisible: '&[aria-selected=true]:focus-visible',
   _selected_hover: '&[aria-selected=true]:hover',

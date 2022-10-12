@@ -1,5 +1,8 @@
 import { useRadioGroup as useAriaRadioGroup } from '@react-aria/radio';
-import { useRadioGroupState as useAriaRadioGroupState } from '@react-stately/radio';
+import {
+  RadioGroupState,
+  useRadioGroupState as useAriaRadioGroupState,
+} from '@react-stately/radio';
 
 import { AriaRadioGroupProps, RestoredAriaRadioGroupProps } from './types';
 
@@ -21,9 +24,12 @@ const useRadioGroupState = (props) => {
   return useAriaRadioGroupState(restoredProps);
 };
 
-const useRadioGroup: typeof useAriaRadioGroup = (props, state) => {
+const useRadioGroup = (props: AriaRadioGroupProps, state: RadioGroupState) => {
   const restoredProps = restoreRadioGroupProps(props);
   return useAriaRadioGroup(restoredProps, state);
 };
 
+type AriaRadioLabelProps = ReturnType<typeof useRadioGroup>['labelProps'];
+
+export type { AriaRadioLabelProps };
 export { useRadioGroup, useRadioGroupState };

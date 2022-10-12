@@ -3,7 +3,6 @@ import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
-import { Field } from '@real-system/field';
 import { Icon } from '@real-system/icon';
 import { Input as RealInput } from '@real-system/input';
 import { Text } from '@real-system/typography';
@@ -93,7 +92,7 @@ export const Showcase = (args) => {
           Password with Readonly
         </Text.Label>
         <RealInput
-          readOnly
+          readonly
           type="password"
           id="input-5"
           name="email-address"
@@ -144,7 +143,7 @@ export const Composition = (args) => {
   return (
     <Box width="27rem">
       <Container>
-        <Text.Label mb={4} htmlFor="input-1">
+        <Text.Label mb={4} htmlFor="input-1" required>
           Email (required)
         </Text.Label>
         <RealInput
@@ -154,32 +153,21 @@ export const Composition = (args) => {
           placeholder="personal@realsystem.com"
           {...args}
         />
-        <Text.HelperText mt={2}>
-          Be sure this is your personal email address
-        </Text.HelperText>
+        <Text.Help mt={2}>Use your personal email address</Text.Help>
       </Container>
       <Container>
-        <Field
-          id="input"
-          required
-          invalid={{
-            status: isEmpty || isNotEmail,
-            message: isEmpty ? 'Field is required' : 'Must be a valid email',
-          }}>
-          <Field.Label mb={4} htmlFor="input">
-            Email Field (required with error)
-          </Field.Label>
-          <RealInput
-            type="email"
-            name="email-address"
-            placeholder="personal@realsystem.com"
-            onChange={(e) => setValue(e.target.value)}
-            {...args}
-          />
-          <Field.HelperText>
-            Be sure this is your personal email address
-          </Field.HelperText>
-        </Field>
+        <Text.Label mb={4} htmlFor="input" required>
+          Email Field (required with error)
+        </Text.Label>
+        <RealInput
+          type="email"
+          name="email-address"
+          placeholder="personal@realsystem.com"
+          onChange={(e) => setValue(e.target.value)}
+          hasError={isEmpty || isNotEmail}
+          {...args}
+        />
+        <Text.Help mt={2}>Use your personal email address</Text.Help>
       </Container>
       <Container>
         <Text.Label mb={4} htmlFor="input-2">
@@ -216,7 +204,7 @@ export const Composition = (args) => {
           Email (readonly)
         </Text.Label>
         <RealInput
-          readOnly
+          readonly
           type="email"
           id="input-4"
           name="email-address"

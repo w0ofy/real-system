@@ -26,9 +26,9 @@ function makeContext<ContextType>(
   fallback: any = undefined
 ) {
   const {
-    strict = true,
-    errorMessage = 'makeContext: `context` is undefined. Seems you forgot to wrap component within the Provider',
     name,
+    errorMessage = `'${name}' is undefined. Seems you forgot to wrap the component with the Context Provider`,
+    strict = true,
   } = options;
 
   const Context = React.createContext<ContextType | undefined>(fallback);

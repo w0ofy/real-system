@@ -3,6 +3,7 @@ import type {
   AriaRadioGroupProps as OriginalAriaRadioGroupProps,
   AriaRadioProps as OriginalAriaRadioProps,
 } from '@react-types/radio';
+
 type RenamedRadioProps = {
   disabled?: OriginalAriaRadioProps['isDisabled'];
 };

@@ -1,3 +1,3 @@
 export * from './Stack';
 export * from './StackItem';
-export * from './StackSeparator';
+export type { StackSeparatorProps } from './StackSeparator';

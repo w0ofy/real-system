@@ -12,10 +12,10 @@ runs:
       with:
         fetch-depth: 0
 
-    - name: Setup nodejs
+    - name: Setup nodejs 16.16.0
       uses: actions/setup-node@master
       with:
-        node-version: 12.x
+        node-version: 16.16.0
 
     - name: Get yarn cache directory path
       shell: bash

@@ -2,23 +2,23 @@ import { useState } from 'react';
 import { useFocusWithin, useHover, usePress } from '@react-aria/interactions';
 
 type UseInteractionsParams = {
-  isDisabled?: boolean;
+  disabled?: boolean;
 };
 
 /**
  * A hook that exposes props and flags for `focusWithin` `hover` and `press` interaction states.
  */
-const useInteractions = ({ isDisabled }: UseInteractionsParams) => {
+const useInteractions = ({ disabled }: UseInteractionsParams) => {
   const [isFocusedWithin, setFocusedWithin] = useState(false);
 
   const { focusWithinProps } = useFocusWithin({
-    isDisabled: isDisabled,
+    isDisabled: disabled,
     onFocusWithinChange: (isFocusedWithin) => setFocusedWithin(isFocusedWithin),
   });
   const { pressProps, isPressed } = usePress({
-    isDisabled: isDisabled,
+    isDisabled: disabled,
   });
-  const { hoverProps, isHovered } = useHover({ isDisabled: isDisabled });
+  const { hoverProps, isHovered } = useHover({ isDisabled: disabled });
 
   return {
     hoverProps,

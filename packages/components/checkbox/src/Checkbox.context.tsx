@@ -3,14 +3,13 @@ import type {
   AriaCheckboxGroupState,
 } from '@real-system/a11y-library';
 import { constate } from '@real-system/state-library';
-import type { InvalidConfig } from '@real-system/typography';
+import type { ValidationProps } from '@real-system/utils-library';
 
 export type CheckboxGroupContext = {
   state: AriaCheckboxGroupState & {
     canSelectAll: boolean | undefined;
     orientation: AriaCheckboxGroupProps['orientation'];
-    invalid?: InvalidConfig;
-  };
+  } & Pick<ValidationProps, 'hasError'>;
 };
 
 const useCheckboxGroup = ({ state }: CheckboxGroupContext) => state;

@@ -6,15 +6,22 @@ import type { RenderProp } from '@real-system/styled-library';
 import type { Func } from '@real-system/utils-library';
 import { isFunction, makeTestId } from '@real-system/utils-library';
 
+import { DisclosureContent } from './DisclosureContent';
 import type {
   DisclosureContext,
   DisclosureStateProps,
 } from './DisclosureContext';
 import { DisclosureContextProvider } from './DisclosureContext';
+import { DisclosureHeading } from './DisclosureHeading';
+import { DisclosureToggle } from './DisclosureToggle';
+import { DisclosureTrigger } from './DisclosureTrigger';
 
 type DisclosureProps = {
   children: RenderProp<DisclosureContext> | React.ReactNode;
-} & DisclosureStateProps;
+} & Omit<DisclosureStateProps, 'animated'>;
+
+const TRIGGER_CSS_SELECTOR =
+  '& > [data-disclosure-trigger], & > [data-disclosure-content]';
 
 const Disclosure = ({
   children: childrenProp,
@@ -38,13 +45,13 @@ const Disclosure = ({
       <real.div
         data-testid={makeTestId('disclosure')}
         _firstAndNotOnly={{
-          '& > [data-disclosure-heading] > [data-disclosure-trigger]': {
+          [TRIGGER_CSS_SELECTOR]: {
             borderBottomLeftRadius: 0,
             borderBottomRightRadius: 0,
           },
         }}
         _notFirstOrLast={{
-          '& > [data-disclosure-heading] > [data-disclosure-trigger]': {
+          [TRIGGER_CSS_SELECTOR]: {
             borderTop: 0,
             borderBottomLeftRadius: 0,
             borderBottomRightRadius: 0,
@@ -53,7 +60,7 @@ const Disclosure = ({
           },
         }}
         _lastAndNotOnly={{
-          '& > [data-disclosure-heading] > [data-disclosure-trigger]': {
+          [TRIGGER_CSS_SELECTOR]: {
             borderTop: 0,
             borderTopLeftRadius: 0,
             borderTopRightRadius: 0,
@@ -64,6 +71,14 @@ const Disclosure = ({
       </real.div>
     </DisclosureContextProvider>
   );
+};
+
+Disclosure.Content = DisclosureContent;
+Disclosure.Heading = DisclosureHeading;
+Disclosure.Toggle = DisclosureToggle;
+Disclosure.Primitives = {
+  Heading: DisclosureHeading,
+  Trigger: DisclosureTrigger,
 };
 
 export type { DisclosureProps };

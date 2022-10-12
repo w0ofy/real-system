@@ -45,6 +45,7 @@
       ".github",
       ".storybook",
       "storybook",
+      "**/stories",
       ".vscode",
       "packages/core"
     ]

@@ -1,23 +1,26 @@
 import * as React from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import type { RealSystemComponentProps } from '@real-system/styled-library';
+import type {
+  RealSystemComponentProps,
+  ResponsiveValue,
+} from '@real-system/styled-library';
 
 type DisclosureHeadingAsTags = 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-type DisclosureHeadingProps = RealSystemComponentProps<'div'> & {
+type DisclosureHeadingProps = Omit<RealSystemComponentProps<'div'>, 'size'> & {
   as?: DisclosureHeadingAsTags;
-  size?: DisclosureHeadingAsTags;
+  size?: ResponsiveValue<DisclosureHeadingAsTags | 'button'>;
 };
 
 const DisclosureHeading = ({
   children,
   as = 'h2',
-  size,
+  size = 'button',
   ...restProps
 }: DisclosureHeadingProps) => {
   const SpecifiedHeading = real[as];
-  const fontScale = size || 'button';
+  const fontScale = size;
 
   return (
     <SpecifiedHeading

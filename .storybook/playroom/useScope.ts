@@ -9,6 +9,6 @@ function makeState() {
 
 export default () => ({
   theme: useTheme(),
-  local: makeState(),
+  state: makeState(),
   real: real,
 });

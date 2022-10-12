@@ -48,7 +48,7 @@ type UsePinInputProps = {
   /**
    * If `true`, the pin input fields will persist an `aria-invalid` attribute
    */
-  invalid?: boolean;
+  hasError?: boolean;
   /**
    * The type of values the pin-input should allow
    */

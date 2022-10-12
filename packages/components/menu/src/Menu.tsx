@@ -1,42 +1,62 @@
 import * as React from 'react';
 
-import type { MenuStatePrimitiveProps } from '@real-system/menu-primitive';
+import type {
+  MenuStatePrimitive,
+  MenuStatePrimitiveProps,
+} from '@real-system/menu-primitive';
 import { useMenuStatePrimitive } from '@real-system/menu-primitive';
 
+import { MenuGroup } from './MenuGroup/index';
+import { MenuItem } from './MenuItem/index';
+import { MenuButton } from './MenuButton';
+import type { Values } from './MenuContext';
 import { MenuContextProvider } from './MenuContext';
+import { MenuList } from './MenuList';
+import { MenuSeparator } from './MenuSeparator';
 
-type MenuProps = {
+/**
+ * @todo reset all component api props to `setValue` instead of renaming???
+ */
+type MenuProps<V extends Values = Values> = {
   children: React.ReactNode;
-} & Omit<MenuStatePrimitiveProps<any>, 'orientation'>;
-/** @todo ^^ fix any param — this is supposed to be inferred from values prop — but there's currently a typing issue in ariakit */
+  onSelect?: MenuStatePrimitiveProps<V>['setValues'];
+} & Omit<MenuStatePrimitiveProps<V>, 'orientation'>;
 
 /**
- * @todo Currently, `orientation` prop is omitted. This is because we don't have "horizontal menus". Consider adding and API for this
+ * @description Dropdown menu for the common dropdown menu button pattern.
  */
-
-/**
- * Dropdown menu for the common dropdown menu button pattern.
- */
-const Menu = ({
+function Menu<V extends Values = Values>({
   children,
   placement = 'bottom-end',
   open,
   values,
   defaultValues,
   flip = true,
+  onSelect,
   ...restProps
-}: MenuProps) => {
-  const state = useMenuStatePrimitive({
+}: MenuProps<V>) {
+  const state = useMenuStatePrimitive<V>({
     gutter: 4,
     placement,
     open,
     values,
     defaultValues,
     flip,
+    setValues: onSelect,
     ...restProps,
   });
-  return <MenuContextProvider state={state}>{children}</MenuContextProvider>;
-};
+  return (
+    <MenuContextProvider value={state as unknown as MenuStatePrimitive}>
+      <>{children}</>
+    </MenuContextProvider>
+  );
+}
+
+Menu.Button = MenuButton;
+Menu.Group = MenuGroup;
+Menu.Item = MenuItem;
+Menu.List = MenuList;
+Menu.Separator = MenuSeparator;
 
 export type { MenuProps };
 export { Menu };

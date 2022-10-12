@@ -1,16 +1,26 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 
-import { useRadioGroup, useRadioGroupState } from '@real-system/a11y-library';
-import { Flex } from '@real-system/flex';
-import { Text } from '@real-system/typography';
+import type { AriakitRadioStateProps } from '@real-system/ariakit-library';
+import {
+  AriakitRadioGroup,
+  useAriakitRadioState,
+} from '@real-system/ariakit-library';
+import type { ValidationProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { Radio } from './Radio';
-import { RadioGroupContextProvider } from './RadioContext';
-import type { RadioGroupProps } from './types';
+import { RadioGroupContextProvider } from './Radio.context';
 
-export interface RadioGroupComponent
+type RadioGroupProps = {
+  children?: React.ReactNode;
+  onChange?: AriakitRadioStateProps['setValue'];
+  name?: string;
+  id?: string;
+} & Pick<ValidationProps, 'hasError' | 'disabled'> &
+  Pick<AriakitRadioStateProps, 'value' | 'defaultValue'>;
+
+interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<RadioGroupProps> {
   Radio: typeof Radio;
 }
@@ -19,40 +29,34 @@ export interface RadioGroupComponent
 const RadioGroup: RadioGroupComponent = forwardRef<
   HTMLDivElement,
   RadioGroupProps
->(function RadioGroup(props, ref) {
-  const state = useRadioGroupState(props);
-  const { radioGroupProps, labelProps } = useRadioGroup(props, state);
-  const { invalid, label, helpText, required, children, orientation } = props;
+>(function RadioGroup(
+  { children, hasError, disabled, onChange, value, defaultValue, id, name },
+  ref
+) {
+  const radio = useAriakitRadioState({
+    setValue: onChange,
+    defaultValue,
+    value,
+  });
 
   return (
-    <Flex
-      vertical
-      {...radioGroupProps}
-      data-testid={makeTestId('checkbox-group')}
+    <AriakitRadioGroup
+      data-testid={makeTestId('radio-group')}
+      state={radio}
+      id={id}
       ref={ref}>
-      <Text.Label
-        as="legend"
-        required={required}
-        marginBottom={helpText ? 2 : 6}
-        cursor="default"
-        {...labelProps}>
-        {label}
-      </Text.Label>
-      {helpText && (
-        <Text.HelperText marginBottom={6}>{helpText}</Text.HelperText>
-      )}
-      <Flex vertical={orientation === 'vertical' ? true : false}>
-        <RadioGroupContextProvider state={{ ...state, orientation, invalid }}>
-          {children}
-        </RadioGroupContextProvider>
-      </Flex>
-      {invalid && <Text.HelperText invalid={invalid} marginBottom={8} mt={2} />}
-    </Flex>
+      <RadioGroupContextProvider
+        {...radio}
+        name={name}
+        disabled={disabled}
+        hasError={hasError}>
+        {children}
+      </RadioGroupContextProvider>
+    </AriakitRadioGroup>
   );
 });
 
 RadioGroup.Radio = Radio;
-RadioGroup.defaultProps = { orientation: 'vertical' };
 
 export type { RadioGroupProps };
-export { RadioGroup };
+export { RadioGroup, RadioGroupComponent };

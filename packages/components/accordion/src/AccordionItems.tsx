@@ -12,9 +12,10 @@ const AccordionItems = ({
   allowMultiple,
   allowToggle,
   children,
+  defaultExpanded,
 }: AccordionItemsProps) => {
   const [disclosures, setDisclosures] = React.useState<Map<number, boolean>>(
-    new Map()
+    new Map(defaultExpanded?.map((idx) => [idx, true]))
   );
   const focusManager = useFocusManager();
 

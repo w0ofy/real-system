@@ -3,74 +3,61 @@ import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box';
 import { Icon } from '@real-system/icon';
-import {
-  Menu,
-  MenuButton,
-  MenuGroup,
-  MenuGroupLabel,
-  MenuItem,
-  MenuItemCheckbox,
-  MenuItemCommand,
-  MenuItemIcon,
-  MenuItemLink,
-  MenuItemRadio,
-  MenuList,
-  MenuSeparator,
-} from '@real-system/menu';
+import { Menu } from '@real-system/menu';
 
 export default {
   title: 'Components/Menu',
   component: Menu,
   subcomponents: {
-    MenuButton,
-    MenuGroup,
-    MenuGroupLabel,
-    MenuItem,
-    MenuItemCheckbox,
-    MenuItemCommand,
-    MenuItemIcon,
-    MenuItemLink,
-    MenuItemRadio,
-    MenuList,
-    MenuSeparator,
+    'Menu.Button': Menu.Button,
+    'Menu.Group': Menu.Group,
+    'Menu.Group.Label': Menu.Group.Label,
+    'Menu.List': Menu.List,
+    'Menu.Separator': Menu.Separator,
+    'Menu.Item': Menu.Item,
+    'Item.Checkbox': Menu.Item.Checkbox,
+    'Item.Command': Menu.Item.Command,
+    'Item.Icon': Menu.Item.Icon,
+    'Item.Link': Menu.Item.Link,
+    'Item.Radio': Menu.Item.Radio,
   },
 } as Meta;
 
 export const Default = () => (
   <Box height="24rem">
     <Menu>
-      <MenuButton variant="minimal">
+      <Menu.Button variant="minimal">
         <Icon icon="menu" />
-      </MenuButton>
-      <MenuList>
-        <MenuItem>
-          <MenuItemIcon icon="pencil-alt" />
+      </Menu.Button>
+      <Menu.List>
+        <Menu.Item>
+          <Menu.Item.Icon icon="pencil-alt" />
           Edit
-          <MenuItemCommand>E</MenuItemCommand>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon icon="share" />
+          <Menu.Item.Command>E</Menu.Item.Command>
+        </Menu.Item>
+        <Menu.Item>
+          <Menu.Item.Icon icon="share" />
           Share
-          <MenuItemCommand>S</MenuItemCommand>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon icon="archive" />
+          <Menu.Item.Command>S</Menu.Item.Command>
+        </Menu.Item>
+        <Menu.Item>
+          <Menu.Item.Icon icon="archive" />
           Archive
-          <MenuItemCommand>A</MenuItemCommand>
-        </MenuItem>
-        <MenuItem disabled>
-          <MenuItemIcon icon="trash" />
+          <Menu.Item.Command>A</Menu.Item.Command>
+        </Menu.Item>
+        <Menu.Item disabled>
+          <Menu.Item.Icon icon="trash" />
           Delete
-          <MenuItemCommand>D</MenuItemCommand>
-        </MenuItem>
-        <MenuSeparator />
-        <MenuItemLink
+          <Menu.Item.Command>D</Menu.Item.Command>
+        </Menu.Item>
+        <Menu.Separator />
+        <Menu.Item.Link
           href="https://system.themikewolf.com"
           external
           showExternal>
-          Report
-        </MenuItemLink>
-      </MenuList>
+          Report issue
+        </Menu.Item.Link>
+      </Menu.List>
     </Menu>
   </Box>
 );
@@ -78,27 +65,27 @@ export const Default = () => (
 export const MenuGroups = () => (
   <Box height="24rem">
     <Menu>
-      <MenuButton variant="minimal">
+      <Menu.Button variant="minimal">
         <Icon icon="menu" />
-      </MenuButton>
-      <MenuList>
-        <MenuGroup>
-          <MenuGroupLabel>Profile Actions</MenuGroupLabel>
-          <MenuItem>My Account</MenuItem>
-          <MenuItem>Billing</MenuItem>
-        </MenuGroup>
-        <MenuSeparator />
-        <MenuGroup>
-          <MenuGroupLabel>Help</MenuGroupLabel>
-          <MenuItem>Docs</MenuItem>
-          <MenuItemLink
+      </Menu.Button>
+      <Menu.List>
+        <Menu.Group>
+          <Menu.Group.Label>Account</Menu.Group.Label>
+          <Menu.Item>Profile details</Menu.Item>
+          <Menu.Item>Billing</Menu.Item>
+        </Menu.Group>
+        <Menu.Separator />
+        <Menu.Group>
+          <Menu.Group.Label>Help</Menu.Group.Label>
+          <Menu.Item>Docs</Menu.Item>
+          <Menu.Item.Link
             href="https://system.themikewolf.com"
             external
             showExternal>
             FAQ
-          </MenuItemLink>
-        </MenuGroup>
-      </MenuList>
+          </Menu.Item.Link>
+        </Menu.Group>
+      </Menu.List>
     </Menu>
   </Box>
 );
@@ -110,30 +97,30 @@ export const CheckboxMenu = () => {
 
   return (
     <Box height="24rem">
-      <Menu values={values} setValues={setValues}>
-        <MenuButton
+      <Menu values={values} setValues={(value) => setValues(value)}>
+        <Menu.Button
           size="sm"
           variant="outline"
           leadingIcon={<Icon icon="eye" size="xs" />}>
           Watch
-        </MenuButton>
-        <MenuList>
-          <MenuItemCheckbox name="watching" value="issues">
+        </Menu.Button>
+        <Menu.List>
+          <Menu.Item.Checkbox name="watching" value="issues">
             Issues
-          </MenuItemCheckbox>
-          <MenuItemCheckbox name="watching" value="pull-requests">
+          </Menu.Item.Checkbox>
+          <Menu.Item.Checkbox name="watching" value="pull-requests">
             Pull requests
-          </MenuItemCheckbox>
-          <MenuItemCheckbox name="watching" value="releases">
+          </Menu.Item.Checkbox>
+          <Menu.Item.Checkbox name="watching" value="releases">
             Releases
-          </MenuItemCheckbox>
-          <MenuItemCheckbox name="watching" value="discussions">
+          </Menu.Item.Checkbox>
+          <Menu.Item.Checkbox name="watching" value="discussions">
             Discussions
-          </MenuItemCheckbox>
-          <MenuItemCheckbox name="watching" value="security-alerts">
+          </Menu.Item.Checkbox>
+          <Menu.Item.Checkbox name="watching" value="security-alerts">
             Security alerts
-          </MenuItemCheckbox>
-        </MenuList>
+          </Menu.Item.Checkbox>
+        </Menu.List>
       </Menu>
     </Box>
   );
@@ -146,27 +133,27 @@ export const RadioMenu = () => {
 
   return (
     <Box height="24rem">
-      <Menu values={values} setValues={setValues}>
-        <MenuButton
+      <Menu values={values} setValues={(value) => setValues(value)}>
+        <Menu.Button
           size="sm"
           variant="outline"
           leadingIcon={<Icon icon="sort-descending" size="xs" />}>
           Sort by: {values.sortBy}
-        </MenuButton>
-        <MenuList>
-          <MenuItemRadio name="sortBy" value="name">
+        </Menu.Button>
+        <Menu.List>
+          <Menu.Item.Radio name="" value="name">
             Name
-          </MenuItemRadio>
-          <MenuItemRadio name="sortBy" value="description">
+          </Menu.Item.Radio>
+          <Menu.Item.Radio name="sortBy" value="description">
             Description
-          </MenuItemRadio>
-          <MenuItemRadio name="sortBy" value="release">
+          </Menu.Item.Radio>
+          <Menu.Item.Radio name="sortBy" value="release">
             Release
-          </MenuItemRadio>
-          <MenuItemRadio name="sortBy" value="color">
+          </Menu.Item.Radio>
+          <Menu.Item.Radio name="sortBy" value="color">
             Color
-          </MenuItemRadio>
-        </MenuList>
+          </Menu.Item.Radio>
+        </Menu.List>
       </Menu>
     </Box>
   );

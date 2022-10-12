@@ -3,12 +3,13 @@ import { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box';
 import { Separator } from '@real-system/separator';
-import { Stack, StackSeparator } from '@real-system/stack';
+import { Stack } from '@real-system/stack';
 import { Text } from '@real-system/typography';
 
 export default {
   title: 'Layout/Stack',
   component: Stack,
+  subcomponents: { StackSeparator: Stack.Separator, StackItem: Stack.Item },
 } as Meta;
 
 export const Default = () => (
@@ -86,7 +87,7 @@ export const Responsive = () => (
 export const ResponsiveSpacingAndDirection = () => (
   <Stack
     spacing={['10px', '60px']}
-    separator={<StackSeparator borderColor="gray-200" />}
+    separator={<Stack.Separator borderColor="gray-200" />}
     direction={['column', 'row']}>
     <Box bgColor="red-500">First</Box>
     <Box bgColor="blue-500">Second</Box>
@@ -98,7 +99,7 @@ export const ResponseWithSeparator = () => (
   <Stack
     mt={10}
     direction={['column', 'row']}
-    separator={<StackSeparator borderColor="gray-200" />}
+    separator={<Stack.Separator borderColor="gray-200" />}
     spacing={4}>
     <Box flex="1" w={['100%', '40px']} h="40px" bgColor="yellow-200">
       <Text>1</Text>

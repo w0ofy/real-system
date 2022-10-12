@@ -45,7 +45,7 @@ const PinInputField = forwardRef<HTMLInputElement, PinInputFieldProps>(
   function PinInputField(props, ref) {
     const inputProps = usePinInputField(props, ref);
     return (
-      <InputBox width="auto" error={inputProps['aria-invalid'] as boolean}>
+      <InputBox width="auto" hasError={inputProps['aria-invalid'] as boolean}>
         <StyledInput {...inputProps} />
       </InputBox>
     );

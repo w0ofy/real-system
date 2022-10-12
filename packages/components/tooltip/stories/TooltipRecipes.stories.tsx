@@ -39,7 +39,7 @@ export const CopyInputText = (args) => {
   return (
     <Box padding={20} width="30rem">
       <Input
-        readOnly
+        readonly
         type="email"
         id="input-4"
         name="email-address"

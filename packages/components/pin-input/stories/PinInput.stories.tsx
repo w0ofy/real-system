@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import { PinInput, PinInputField } from '@real-system/pin-input';
+import { PinInput } from '@real-system/pin-input';
 
 export default {
   title: 'Components/Pin Input',
   component: PinInput,
-  subcomponents: { PinInputField },
+  subcomponents: { Field: PinInput.Field },
 } as Meta;
 
 /**
@@ -15,19 +15,19 @@ export default {
 
 export const Default = (args) => (
   <PinInput {...args}>
-    <PinInputField />
-    <PinInputField />
-    <PinInputField />
-    <PinInputField />
+    <PinInput.Field />
+    <PinInput.Field />
+    <PinInput.Field />
+    <PinInput.Field />
   </PinInput>
 );
 
 export const Masked = () => (
   <PinInput mask>
-    <PinInputField />
-    <PinInputField />
-    <PinInputField />
-    <PinInputField />
+    <PinInput.Field />
+    <PinInput.Field />
+    <PinInput.Field />
+    <PinInput.Field />
   </PinInput>
 );
 
@@ -44,10 +44,10 @@ export const Controlled = () => {
 
   return (
     <PinInput value={value} onChange={handleChange} onComplete={handleComplete}>
-      <PinInputField />
-      <PinInputField />
-      <PinInputField />
-      <PinInputField />
+      <PinInput.Field />
+      <PinInput.Field />
+      <PinInput.Field />
+      <PinInput.Field />
     </PinInput>
   );
 };

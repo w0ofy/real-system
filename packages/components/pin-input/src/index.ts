@@ -1,2 +1,2 @@
 export * from './PinInput';
-export * from './PinInputField';
+export type { PinInputFieldProps } from './PinInputField';

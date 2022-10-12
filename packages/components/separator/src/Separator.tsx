@@ -12,8 +12,9 @@ import { makeTestId } from '@real-system/utils-library';
 type SeparatorProps = Pick<SeparatorPrimitiveProps, 'orientation'> &
   Omit<RealElementPrimitiveProps, keyof BorderProps> & {
     /**
-     * Controls the width of the separator (`borderWidth` CSS property) — intelligently applies the border width to the correct border e.g. `borderLeftWidth` or `borderBottomWidth`
-     *
+     * Controls the width of the separator (`borderWidth` CSS property) —
+     * intelligently applies the border width to the correct border
+     * e.g. `borderLeftWidth` or `borderBottomWidth`
      */
     borderWidth?: RealElementPrimitiveProps['borderWidth'];
     /**

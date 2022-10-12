@@ -16,4 +16,4 @@ export type { AnimatedProps, UseSpringProps, UseTransitionProps };
 export { animated, config, useSpring, useSpringRef, useTransition };
 
 /** maintained by us */
-export * from './useReducedMotion';
+export * from './usePrefersReducedMotion';

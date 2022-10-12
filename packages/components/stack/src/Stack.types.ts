@@ -1,4 +1,7 @@
-import { ResponsiveValue, StylishProps } from '@real-system/styled-library';
+import type {
+  ResponsiveValue,
+  StylishProps,
+} from '@real-system/styled-library';
 
 type StackDirection = ResponsiveValue<
   'row' | 'column' | 'row-reverse' | 'column-reverse'

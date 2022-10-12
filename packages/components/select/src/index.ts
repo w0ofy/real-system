@@ -1,5 +1,7 @@
 export * from './Select';
-export * from './SelectContainer';
-export * from './SelectGroup/index';
-export * from './SelectItem';
-export * from './SelectSeparator';
+export type {
+  SelectGroupLabelProps,
+  SelectGroupProps,
+} from './SelectGroup/index';
+export type { SelectItemProps } from './SelectItem';
+export type { SelectSeparatorProps } from './SelectSeparator';

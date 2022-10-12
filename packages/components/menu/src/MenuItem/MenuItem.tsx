@@ -1,70 +1,47 @@
 import React, { forwardRef } from 'react';
 
-import { real } from '@real-system/elements-primitive';
 import { MenuItemPrimitive } from '@real-system/menu-primitive';
-import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
+import { MenuItemWrapper } from './MenuItem.style';
 import { CommonMenuItemProps } from './MenuItem.types';
+import { MenuItemCheckbox } from './MenuItemCheckbox';
+import { MenuItemCommand } from './MenuItemCommand';
+import { MenuItemIcon } from './MenuItemIcon';
+import { MenuItemLink } from './MenuItemLink';
+import { MenuItemRadio } from './MenuItemRadio';
 
 type MenuItemProps = CommonMenuItemProps;
 
-const menuItemStyles: StylishProps = {
-  transition: 'background-color 150ms ease-out, color 150ms ease-out',
-  paddingX: 7,
-  paddingY: 5,
-  display: 'inline-flex',
-  alignItems: 'center',
-  width: '100%',
-  color: 'gray-500',
-  fontScale: 'menu-item',
-  fontWeight: 'menu-item',
-  letterSpacing: 'menu-item',
-  textDecoration: 'none',
-  cursor: 'pointer',
-  _hover: {
-    backgroundColor: 'gray-50',
-    color: 'gray-600',
-  },
-  _focus: {
-    outline: 'none',
-    backgroundColor: 'gray-50',
-    color: 'gray-600',
-  },
-  _active: {
-    backgroundColor: 'gray-100',
-    color: 'gray-700',
-  },
-  _checked: {
-    color: 'gray-700',
-  },
-  _disabled: { backgroundColor: 'none', color: 'gray-300' },
-};
+export interface MenuItemComponent
+  extends React.ForwardRefExoticComponent<MenuItemProps> {
+  Checkbox: typeof MenuItemCheckbox;
+  Command: typeof MenuItemCommand;
+  Icon: typeof MenuItemIcon;
+  Link: typeof MenuItemLink;
+  Radio: typeof MenuItemRadio;
+}
 
-const RealMenuItem = forwardRef<HTMLDivElement, MenuItemProps>(
-  function RealMenuItem({ children, ...restProps }, ref) {
+// @ts-ignore MenuItem properties are defined below
+const MenuItem: MenuItemComponent = forwardRef<HTMLDivElement, MenuItemProps>(
+  function MenuItem({ children, ...restProps }, ref) {
     return (
-      <real.div {...menuItemStyles} {...restProps} ref={ref}>
+      <MenuItemPrimitive
+        as={MenuItemWrapper}
+        data-testid={makeTestId('menu-item')}
+        {...restProps}
+        ref={ref}>
         {children}
-      </real.div>
+      </MenuItemPrimitive>
     );
   }
 );
 
-const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(function MenuItem(
-  { children, ...restProps },
-  ref
-) {
-  return (
-    <MenuItemPrimitive
-      as={RealMenuItem}
-      data-testid={makeTestId('menu-item')}
-      {...restProps}
-      ref={ref}>
-      {children}
-    </MenuItemPrimitive>
-  );
-});
+MenuItem.Checkbox = MenuItemCheckbox;
+MenuItem.Command = MenuItemCommand;
+MenuItem.Icon = MenuItemIcon;
+MenuItem.Link = MenuItemLink;
+MenuItem.Radio = MenuItemRadio;
 
 export type { MenuItemProps };
-export { MenuItem, menuItemStyles, RealMenuItem };
+export { MenuItem, MenuItemWrapper };

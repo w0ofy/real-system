@@ -25,19 +25,13 @@ $ yarn add @real-system/disclosure
 ### Code Example
 
 ```tsx
-import {
-  Disclosure,
-  DisclosureToggle,
-  DisclosureContent,
-  DisclosureTrigger,
-  DisclosureHeading
-} from '@real-system/disclosure';
+import { Disclosure } from '@real-system/disclosure';
 import { Icon } from '@real-system/icon';
 const DefaultDisclosure = () => {
   return (
     <Disclosure>
-      <DisclosureToggle>Accordion Item 1</DisclosureToggle>
-      <DisclosureContent>Some content to expand and collapse</DisclosureContent>
+      <Disclosure.Toggle>Accordion Item 1</Disclosure.Toggle>
+      <Disclosure.Content>Some content to expand and collapse</Disclosure.Content>
     </Disclosure>
   )
 }
@@ -45,21 +39,21 @@ const DefaultDisclosure = () => {
 const ContainedDisclosure = () => {
   return (
     <Disclosure contained>
-      <DisclosureToggle>Accordion Item 1</DisclosureToggle>
-      <DisclosureContent>Some content to expand and collapse</DisclosureContent>
+      <Disclosure.Toggle>Accordion Item 1</Disclosure.Toggle>
+      <Disclosure.Content>Some content to expand and collapse</Disclosure.Content>
     </Disclosure>
   )
 }
 
 const CustomHeadingDisclosure = () => {
   return (
-    <Disclosure contained hideToggleIcon>
+    <Disclosure contained>
       {({ visible }) => (
-        <DisclosureHeading>
-        <Icon icon={visible ? 'arrow-down' : 'arrow-right'} mr={4}>
-        <DisclosureTrigger>Accordion Item 1</DisclosureTrigger>
-      </DisclosureHeading>
-      <DisclosureContent>Some content to expand and collapse</DisclosureContent>
+        <Disclosure.Trigger hideToggleIcon>
+          <Icon icon={visible ? 'arrow-down' : 'arrow-right'} mr={4} />
+          <Disclosure.Heading>Accordion Item 1</Disclosure.Heading>
+        </Disclosure.Trigger>
+        <Disclosure.Content>Some content to expand and collapse</Disclosure.Content>
       )}
     </Disclosure>
   )

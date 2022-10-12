@@ -15,7 +15,7 @@ export default {
   },
   argTypes: {
     disabled: { type: 'boolean' },
-    isOpen: { type: 'boolean' },
+    open: { type: 'boolean' },
     delay: { type: 'number' },
   },
 } as Meta;

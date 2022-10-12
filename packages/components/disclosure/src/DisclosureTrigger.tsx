@@ -60,6 +60,7 @@ const StyledDisclosureTrigger = styled('span')<{ contained?: boolean }>(
 
 type DisclosureTriggerProps = RealSystemComponentProps<'div'> & {
   hideToggleIcon?: boolean;
+  disabled?: boolean;
 };
 
 /**

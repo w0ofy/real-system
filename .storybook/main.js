@@ -21,6 +21,10 @@ module.exports = {
     checkOptions: {
       // check all ts and tsx files
       reportFiles: ['packages/**/*.{ts,tsx}'],
+      configOverwrite: {
+        compilerOptions: { isolatedModules: false },
+        exclude: ['node_modules', 'lib', 'public'],
+      },
     },
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {

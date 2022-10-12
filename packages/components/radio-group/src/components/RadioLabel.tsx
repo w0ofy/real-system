@@ -14,6 +14,10 @@ const RadioLabel = ({ children, disabled }: RadioLabelProps) => {
       fontFamily="body"
       fontScale="body"
       fontWeight={3}
+      display="inline-flex"
+      cursor={disabled ? 'default' : 'pointer'}
+      alignItems="center"
+      justifyContent="center"
       marginBottom={0}>
       {children}
     </real.span>

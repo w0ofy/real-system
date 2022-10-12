@@ -27,16 +27,12 @@ const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
   ) {
     const state = useMenuStateContext();
     const chevron = useMemo(() => {
-      if (trailingArrow) {
-        return {
-          trailingIcon: <Icon icon="chevron-down" />,
-        };
-      }
-      if (leadingArrow) {
-        return {
-          leadingIcon: <Icon icon="chevron-down" />,
-        };
-      }
+      if (!trailingArrow && !leadingArrow) return {};
+      return {
+        [leadingArrow ? 'leadingIcon' : 'trailingIcon']: (
+          <Icon icon="chevron-down" />
+        ),
+      };
     }, [trailingArrow, leadingArrow]);
 
     return (

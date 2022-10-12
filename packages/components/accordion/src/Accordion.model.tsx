@@ -11,7 +11,7 @@ type AccordionProps = {
   /** Allow each item to be toggled upon press */
   allowToggle?: boolean;
   /** Disclosures expanded by default. Keys should be the item's `index` and the value should be `true`  */
-  defaultExpanded?: Record<number, boolean>;
+  defaultExpanded?: number[];
 } & Partial<Pick<DisclosureProps, 'contained'>> &
   RealSystemComponentProps<'div'>;
 

@@ -1,22 +1,35 @@
-import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import {
   SelectStatePrimitive,
   SelectStatePrimitiveProps,
 } from '@real-system/select-primitive';
-import type { StylishProps } from '@real-system/styled-library';
+import type {
+  RealSystemChildrenProp,
+  StylishProps,
+} from '@real-system/styled-library';
+import { ValidationProps } from '@real-system/utils-library';
 
 type SelectState = SelectStatePrimitive;
 type SelectStateProps = SelectStatePrimitiveProps;
 type InternalSelectProps = { state: SelectState };
 
-type SelectFormStateProps = {
-  error?: boolean;
-};
-
 /** Select Container component */
-type SelectContainerProps = SelectStateProps &
-  RealElementPrimitiveProps<'div'> &
-  SelectFormStateProps;
+type SelectProps = {
+  onChange?: SelectStateProps['setValue'];
+  label?: React.ReactNode;
+} & Pick<
+  SelectStateProps,
+  | 'defaultValue'
+  | 'defaultOpen'
+  | 'flip'
+  | 'setValue'
+  | 'value'
+  | 'open'
+  | 'sameWidth'
+  | 'placement'
+> &
+  StylishProps &
+  RealSystemChildrenProp &
+  Pick<ValidationProps, 'hasError' | 'disabled' | 'required'>;
 
 type OmitSelectPrivateProps<T> = Omit<T, 'state' | 'as'>;
 type CommonSelectProps<T> = Omit<T, 'state' | 'as'> &
@@ -26,7 +39,7 @@ export type {
   CommonSelectProps,
   InternalSelectProps,
   OmitSelectPrivateProps,
-  SelectContainerProps,
+  SelectProps,
   SelectState,
   SelectStateProps,
 };
