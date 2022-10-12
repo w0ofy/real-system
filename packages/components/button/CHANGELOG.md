@@ -1,5 +1,17 @@
 # @real-system/button
 
+## 0.0.57
+
+### Patch Changes
+
+- [#588](https://github.com/bigwoof91/real-system/pull/588) [`f3f17fa5`](https://github.com/bigwoof91/real-system/commit/f3f17fa502b5bbc68f394c3169863e667585f365) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Subcomponents purely accessible from primary components
+
+- Updated dependencies [[`f3f17fa5`](https://github.com/bigwoof91/real-system/commit/f3f17fa502b5bbc68f394c3169863e667585f365)]:
+  - @real-system/spinner@0.0.53
+  - @real-system/styled-library@0.0.17
+  - @real-system/utils-library@0.0.29
+  - @real-system/button-primitive@0.0.41
+
 ## 0.0.56
 
 ### Patch Changes

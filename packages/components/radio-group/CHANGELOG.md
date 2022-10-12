@@ -1,5 +1,24 @@
 # @real-system/radio-group
 
+## 0.0.35
+
+### Patch Changes
+
+- [#588](https://github.com/bigwoof91/real-system/pull/588) [`f3f17fa5`](https://github.com/bigwoof91/real-system/commit/f3f17fa502b5bbc68f394c3169863e667585f365) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Subcomponents purely accessible from primary components
+
+- [#583](https://github.com/bigwoof91/real-system/pull/583) [`630b1e9a`](https://github.com/bigwoof91/real-system/commit/630b1e9ab65bba4d5010eaa7d335041ec0a52672) Thanks [@bigwoof91](https://github.com/bigwoof91)! - renamed HelpText to HelperText and replaced errorText prop with invalid config/boolean type
+
+- Updated dependencies [[`f3f17fa5`](https://github.com/bigwoof91/real-system/commit/f3f17fa502b5bbc68f394c3169863e667585f365), [`b50da4c5`](https://github.com/bigwoof91/real-system/commit/b50da4c55f3d1414b574b477a19a1f94ce69ead1), [`630b1e9a`](https://github.com/bigwoof91/real-system/commit/630b1e9ab65bba4d5010eaa7d335041ec0a52672)]:
+  - @real-system/flex@0.0.48
+  - @real-system/typography@0.0.56
+  - @real-system/visually-hidden@0.0.51
+  - @real-system/a11y-library@0.0.14
+  - @real-system/ariakit-library@0.0.20
+  - @real-system/state-library@0.0.18
+  - @real-system/styled-library@0.0.17
+  - @real-system/utils-library@0.0.29
+  - @real-system/elements-primitive@0.0.19
+
 ## 0.0.34
 
 ### Patch Changes

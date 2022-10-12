@@ -1,5 +1,11 @@
 # @real-system/state
 
+## 0.0.18
+
+### Patch Changes
+
+- [#588](https://github.com/bigwoof91/real-system/pull/588) [`f3f17fa5`](https://github.com/bigwoof91/real-system/commit/f3f17fa502b5bbc68f394c3169863e667585f365) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Subcomponents purely accessible from primary components
+
 ## 0.0.17
 
 ### Patch Changes
