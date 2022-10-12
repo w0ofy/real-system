@@ -24,9 +24,36 @@ $ yarn add @real-system/checkbox
 
 ### Code Example
 
-```typescript
-import { Checkbox } from '@real-system/checkbox';
+```jsx
+import { Checkbox, CheckboxGroup } from '@real-system/checkbox';
 
-...
+const MyCheckbox = (args) => (
+  <Checkbox
+    helpText="Determines if the user has permission to add, edit and delete other users"
+    {...args}
+  />
+);
 
+const MyCheckboxGroup = () => {
+  return (
+    <CheckboxGroup
+      label="What engineering level is the new team member?"
+      defaultValue={['associate']}
+      helpText="Select at least 1 level for the new engineer"
+      {...args}>
+      <CheckboxGroup.Item value="architect">Architect</CheckboxGroup.Item>
+      <CheckboxGroup.Item value="principle">Principle</CheckboxGroup.Item>
+      <CheckboxGroup.Item value="staff">Staff</CheckboxGroup.Item>
+      <CheckboxGroup.Item value="senior" disabled>
+        Senior
+      </CheckboxGroup.Item>
+      <CheckboxGroup.Item value="mid" disabled>
+        Mid
+      </CheckboxGroup.Item>
+      <CheckboxGroup.Item value="associate" disabled>
+        Associate
+      </CheckboxGroup.Item>
+    </CheckboxGroup>
+  );
+};
 ```

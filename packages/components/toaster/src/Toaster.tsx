@@ -17,9 +17,9 @@ import { useToaster } from './useToaster';
 
 const AnimatedToast = animated(real.div);
 
-interface ReturnTargetState {
+type ReturnTargetState = {
   trigger: HTMLElement | null;
-}
+};
 
 const enterWithReduceMotion = {
   marginBottom: 2,

@@ -28,11 +28,7 @@ export const Default = (args) => (
 );
 
 export const WithError = () => (
-  <Field
-    id="first-name"
-    inline
-    invalid={{ status: true, message: 'This field is required' }}
-    required>
+  <Field id="first-name" inline required>
     <Field.Label>First name</Field.Label>
     <Input type="text" id="first-name" />
     <Field.Help>Provide your first name</Field.Help>

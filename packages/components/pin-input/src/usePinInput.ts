@@ -35,9 +35,9 @@ type PinInputContextValue = Omit<UsePinInputReturn, 'descendants'> & {
    */
   disabled?: boolean;
   /**
-   * Sets the pin input component to the invalid state
+   * Sets the pin input component to the hasError state
    */
-  invalid?: boolean;
+  hasError?: boolean;
 };
 
 type PinInputContext = {
@@ -69,7 +69,7 @@ const usePinInput = ({
   otp = false,
   id: idProp,
   disabled,
-  invalid,
+  hasError,
   type = 'number',
   mask,
 }: UsePinInputProps = {}) => {
@@ -232,7 +232,7 @@ const usePinInput = ({
         ...restProps,
         id: `${id}-${index}`,
         disabled: disabled,
-        'aria-invalid': invalid ? true : false,
+        'aria-invalid': hasError ? true : false,
         onChange: callAllHandlers(restProps.onChange, onChange),
         onKeyDown: callAllHandlers(restProps.onKeyDown, onKeyDown),
         onFocus: callAllHandlers(restProps.onFocus, onFocus),
@@ -248,7 +248,7 @@ const usePinInput = ({
       mask,
       id,
       disabled,
-      invalid,
+      hasError,
       values,
       otp,
       placeholder,

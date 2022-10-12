@@ -16,16 +16,8 @@ type MenuGroupProps = {
   children?: React.ReactNode;
 } & CommonMenuProps;
 
-export interface MenuGroupComponent
-  extends React.ForwardRefExoticComponent<MenuGroupProps> {
-  Label: typeof MenuGroupLabel;
-}
-
 // @ts-ignore MenuGroup properties are defined below
-const MenuGroup: MenuGroupComponent = ({
-  children,
-  ...restProps
-}: MenuGroupProps) => {
+const MenuGroup = ({ children, ...restProps }: MenuGroupProps) => {
   return (
     <MenuGroupPrimitive
       as={StyledMenuGroup}

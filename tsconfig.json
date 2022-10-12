@@ -34,7 +34,6 @@
     "esModuleInterop": true
   },
   "watchOptions": {
-    "fallbackPolling": "dynamicpriority",
     "excludeDirectories": [
       "node_modules",
       "**/node_modules",

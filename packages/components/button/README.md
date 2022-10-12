@@ -28,12 +28,11 @@ $ yarn add @real-system/button
 import { ThemeProvider } from '@real-system/styled-library';
 import { Button } from '@real-system/button';
 
-const MyComponent = () => {
+const MyButton = () => {
   return (
-    <ThemeProvider>
-      <Button>Button</Button>
-    </ThemeProvider>
+    <Button colorScheme="purple" size="lg">
+      Button
+    </Button>
   );
 };
-
 ```

@@ -54,6 +54,7 @@ const DisclosureContent = React.forwardRef<
       ref={ref}
       as={real.div}
       overflow="hidden"
+      data-disclosure-content
       {...(contained ? containedStyles : defaultStyles)}
       {...transitionStyles}
       state={state}>

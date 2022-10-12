@@ -1,28 +1,31 @@
 import * as React from 'react';
 import { Meta } from '@storybook/react';
 
-import {
-  Disclosure,
-  DisclosureContent,
-  DisclosureToggle,
-} from '@real-system/disclosure';
+import { Disclosure } from '@real-system/disclosure';
 import { real } from '@real-system/elements-primitive';
 
 export default {
   title: 'Components/Disclosure',
   component: Disclosure,
+  subcomponents: {
+    Disclosure,
+    'Disclosure.Content': Disclosure.Content,
+    'Disclosure.Toggle': Disclosure.Toggle,
+    'Disclosure.Primitives.Heading': Disclosure.Primitives.Heading,
+    'Disclosure.Primitives.Trigger': Disclosure.Primitives.Trigger,
+  },
 } as Meta;
 
 export const Default = (args) => (
   <real.div width="450px">
     <Disclosure {...args}>
-      <DisclosureToggle>Toggle</DisclosureToggle>
-      <DisclosureContent>
+      <Disclosure.Toggle>Toggle</Disclosure.Toggle>
+      <Disclosure.Content>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
-      </DisclosureContent>
+      </Disclosure.Content>
     </Disclosure>
   </real.div>
 );
@@ -30,13 +33,13 @@ export const Default = (args) => (
 export const Contained = (args) => (
   <real.div width="450px">
     <Disclosure {...args} contained>
-      <DisclosureToggle>Toggle</DisclosureToggle>
-      <DisclosureContent>
+      <Disclosure.Toggle>Toggle</Disclosure.Toggle>
+      <Disclosure.Content>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
-      </DisclosureContent>
+      </Disclosure.Content>
     </Disclosure>
   </real.div>
 );
@@ -49,13 +52,13 @@ export const RenderProp = (args) => (
         console.log(props);
         return (
           <>
-            <DisclosureToggle>Toggle</DisclosureToggle>
-            <DisclosureContent>
+            <Disclosure.Toggle>Toggle</Disclosure.Toggle>
+            <Disclosure.Content>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
-            </DisclosureContent>
+            </Disclosure.Content>
           </>
         );
       }}

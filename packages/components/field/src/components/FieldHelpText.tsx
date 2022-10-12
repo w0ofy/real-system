@@ -6,7 +6,7 @@ import { makeTestId } from '@real-system/utils-library';
 
 import { useFieldControl } from '../FieldControl';
 
-type FieldHelpTextProps = Omit<HelpTextProps, 'invalid'>;
+type FieldHelpTextProps = Omit<HelpTextProps, 'variant'>;
 
 /**
  * @name Field.HelpText

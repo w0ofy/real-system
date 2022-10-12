@@ -21,20 +21,4 @@ type HeadingAsTags =
 
 type TypographyTags = TextAsTags | HeadingAsTags;
 
-type InvalidConfig = {
-  /**
-   * @todo
-   */
-  status: boolean;
-  /**
-   * @todo
-   */
-  message?: React.ReactNode;
-  /**
-   * @todo
-   * Hides the "invalid icon"
-   */
-  hideIcon?: boolean;
-};
-
-export type { CommonTextProps, InvalidConfig, TextAsTags, TypographyTags };
+export type { CommonTextProps, TextAsTags, TypographyTags };

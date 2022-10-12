@@ -1,6 +1,5 @@
 export * from './Disclosure';
-export * from './DisclosureContent';
-export * from './DisclosureContext';
-export * from './DisclosureHeading';
-export * from './DisclosureToggle';
-export * from './DisclosureTrigger';
+export type { DisclosureContentProps } from './DisclosureContent';
+export type { DisclosureHeadingProps } from './DisclosureHeading';
+export type { DisclosureToggleProps } from './DisclosureToggle';
+export type { DisclosureTriggerProps } from './DisclosureTrigger';

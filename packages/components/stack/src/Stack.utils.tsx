@@ -7,10 +7,10 @@ export type StackDirection = ResponsiveValue<
 
 export const selector = '& > *:not(style) ~ *:not(style)';
 
-interface Options {
+type Options = {
   spacing: StylishProps['margin'];
   direction: StackDirection;
-}
+};
 
 export function getStackStyles(options: Options) {
   const { spacing, direction } = options;

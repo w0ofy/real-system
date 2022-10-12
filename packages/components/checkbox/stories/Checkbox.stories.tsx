@@ -13,7 +13,7 @@ export default {
   component: Checkbox,
   subcomponents: {
     CheckboxGroup: CheckboxGroup,
-    CheckboxGroupItem: CheckboxGroup.Item,
+    'CheckboxGroup.Item': CheckboxGroup.Item,
   },
   args: {
     children: 'Give this user "Owner" permissions',

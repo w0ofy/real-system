@@ -21,7 +21,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     id,
     required,
     hasError,
-    // input props
+    // input component props
     type = 'text',
     suffix,
     prefix,

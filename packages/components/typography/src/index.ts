@@ -3,7 +3,6 @@ export type {
   CodeProps,
   HeadingProps,
   HelpTextProps,
-  InvalidConfig,
   LabelProps,
   TruncateProps,
 } from './components';

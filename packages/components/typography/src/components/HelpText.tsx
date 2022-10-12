@@ -11,15 +11,6 @@ import type { CommonTextProps } from '../Text.model';
 
 import { BaseText } from './BaseText';
 
-export type InvalidConfig = {
-  status: boolean;
-  message?: string;
-  /**
-   * Hides the "invalid icon". This value is prioritized over `hideIcon` prop.
-   */
-  hideIcon?: boolean;
-};
-
 export type HelpTextProps = {
   as?: Extract<keyof JSX.IntrinsicElements, 'span' | 'div'>;
   children?: React.ReactNode;

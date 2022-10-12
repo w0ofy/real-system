@@ -1,14 +1,12 @@
 import React from 'react';
 
-import type { HelpTextProps, InvalidConfig } from '@real-system/typography';
+import type { HelpTextProps } from '@real-system/typography';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 import { useFieldControl } from '../FieldControl';
 
-type FieldWarningTextProps = Omit<HelpTextProps, 'hideIcon'> & {
-  invalid?: InvalidConfig;
-};
+type FieldWarningTextProps = Omit<HelpTextProps, 'hideIcon'>;
 
 /**
  * @name Field.WarningText

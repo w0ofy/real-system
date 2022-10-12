@@ -2,40 +2,34 @@ import * as React from 'react';
 import { Meta } from '@storybook/react';
 
 import { Accordion } from '@real-system/accordion';
-import {
-  Disclosure as RealDisclosure,
-  DisclosureContent,
-  DisclosureHeading,
-  DisclosureToggle,
-  DisclosureTrigger,
-} from '@real-system/disclosure';
+import { Disclosure } from '@real-system/disclosure';
 
 export default {
   title: 'Components/Accordion',
   component: Accordion,
   subcomponents: {
-    Disclosure: RealDisclosure,
-    DisclosureContent,
-    DisclosureToggle,
-    DisclosureHeading,
-    DisclosureTrigger,
+    Disclosure,
+    'Disclosure.Content': Disclosure.Content,
+    'Disclosure.Toggle': Disclosure.Toggle,
+    'Disclosure.Primitives.Heading': Disclosure.Primitives.Heading,
+    'Disclosure.Primitives.Trigger': Disclosure.Primitives.Trigger,
   },
 } as Meta;
 
 const AccordionItem = (props) => (
-  <RealDisclosure {...props}>
-    <DisclosureToggle>Toggle</DisclosureToggle>
-    <DisclosureContent>
+  <Disclosure {...props}>
+    <Disclosure.Toggle>Toggle</Disclosure.Toggle>
+    <Disclosure.Content>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.
-    </DisclosureContent>
-  </RealDisclosure>
+    </Disclosure.Content>
+  </Disclosure>
 );
 
 export const Default = (args) => (
-  <Accordion>
+  <Accordion {...args}>
     <AccordionItem />
     <AccordionItem />
     <AccordionItem />
@@ -75,7 +69,7 @@ export const AllowMultiple = (args) => (
 );
 
 export const DefaultExpanded = (args) => (
-  <Accordion {...args} defaultExpanded={{ 1: true }}>
+  <Accordion {...args} defaultExpanded={[1]}>
     <AccordionItem />
     <AccordionItem />
     <AccordionItem />
