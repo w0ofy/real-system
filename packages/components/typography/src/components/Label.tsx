@@ -11,7 +11,7 @@ import { RequiredDot } from './RequiredDot';
 export type LabelProps = {
   children?: React.ReactNode;
   htmlFor?: string;
-  as?: 'label' | 'legend';
+  as?: 'label' | 'legend' | 'span';
   disabled?: boolean;
   required?: boolean;
   containerProps?: StylishProps;

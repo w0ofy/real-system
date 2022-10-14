@@ -1,5 +1,8 @@
 import type { CSSObject } from '../styled/styled.types';
 
+const DISABLED =
+  '&:disabled, &:disabled:focus, &:disabled:hover, &[aria-disabled=true], &[aria-disabled=true]:focus, &[aria-disabled=true]:hover';
+
 const pseudoProps = {
   __moz_focus_inner: '&::-moz-focus-inner',
   __webkit_calendar_picker_indicator_hover:
@@ -9,8 +12,9 @@ const pseudoProps = {
   _after: '&:after',
   _before: '&:before',
   _checked: '&:checked, &[aria-checked=true]',
-  _disabled:
-    '&:disabled, &:disabled:focus, &:disabled:hover, &[aria-disabled=true], &[aria-disabled=true]:focus, &[aria-disabled=true]:hover',
+  _notDisabled:
+    '&:not(:disabled,:disabled:focus,:disabled:hover,[aria-disabled=true],[aria-disabled=true]:focus,[aria-disabled=true]:hover)',
+  _disabled: DISABLED,
   _enter: '&[data-enter]',
   _leave: '&[data-leave]',
   _even: '&:nth-of-type(even)',

@@ -7,9 +7,8 @@ export default {
   title: 'Components/Select',
   component: Select,
   subcomponents: {
-    Select,
     Group: Select.Group,
-    GroupLabel: Select.GroupLabel,
+    GroupLabel: Select.Group.Label,
     Item: Select.Item,
     Separator: Select.Separator,
   },
@@ -17,7 +16,7 @@ export default {
 
 export const Default = (args) => {
   return (
-    <Select {...args} label="Select a fruit" disabled maxW="22rem">
+    <Select {...args} label="Select a fruit" maxW="22rem">
       <Select.Item value="Apple">Apple</Select.Item>
       <Select.Item value="Grape" disabled />
       <Select.Item value="Melon" />
@@ -29,14 +28,14 @@ export const SelectGroupStory = (args) => {
   return (
     <Select maxW="20rem" label="Select a fruit">
       <Select.Group>
-        <Select.GroupLabel>Fruits</Select.GroupLabel>
+        <Select.Group.Label>Fruits</Select.Group.Label>
         <Select.Item value="Apple" />
         <Select.Item value="Grape" disabled />
         <Select.Item value="Melon" />
       </Select.Group>
       <Select.Separator />
       <Select.Group>
-        <Select.GroupLabel>Vegatables</Select.GroupLabel>
+        <Select.Group.Label>Vegatables</Select.Group.Label>
         <Select.Item value="Cucumber" />
         <Select.Item value="Pepper" disabled />
         <Select.Item value="Onion" />

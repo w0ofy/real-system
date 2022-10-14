@@ -1,4 +1,5 @@
 export * from './button';
+export * from './checkbox';
 export * from './disclosure';
 export * from './menu';
 export * from './popover';

@@ -32,13 +32,12 @@ export type UseControllableStateProps<T> = {
 /**
  * Use optionally-controlled local/component state.
  */
-const useControllableState = <T>(props: UseControllableStateProps<T>) => {
-  const {
-    value: valueProp,
-    defaultValue,
-    onChange,
-    shouldUpdate = (prev, next) => prev !== next,
-  } = props;
+const useControllableState = <T>({
+  value: valueProp,
+  defaultValue,
+  onChange,
+  shouldUpdate = (prev, next) => prev !== next,
+}: UseControllableStateProps<T>) => {
   const onChangeProp = useCallbackRef(onChange);
   const shouldUpdateProp = useCallbackRef(shouldUpdate);
 

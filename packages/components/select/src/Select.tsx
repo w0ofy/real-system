@@ -15,7 +15,7 @@ import { Text } from '@real-system/typography';
 import { merge } from '@real-system/utils-library';
 
 import { SelectContextProvider } from './SelectContext';
-import { SelectGroup, SelectGroupLabel } from './SelectGroup';
+import { SelectGroup } from './SelectGroup';
 import { SelectItem } from './SelectItem';
 import { SelectPopover } from './SelectPopover';
 import { SelectSeparator } from './SelectSeparator';
@@ -90,7 +90,6 @@ export interface SelectComponent
   Item: typeof SelectItem;
   Separator: typeof SelectSeparator;
   Group: typeof SelectGroup;
-  GroupLabel: typeof SelectGroupLabel;
 }
 
 // @ts-expect-error Select component properties are defined on the fn object after this is defined
@@ -141,7 +140,7 @@ const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
               disabled={disabled}
               ref={ref}
             />
-            <SelectPopover>{children}</SelectPopover>
+            <SelectPopover>{children as React.ReactNode}</SelectPopover>
           </>
         </SelectContextProvider>
       </real.div>
@@ -152,7 +151,6 @@ const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
 Select.Item = SelectItem;
 Select.Separator = SelectSeparator;
 Select.Group = SelectGroup;
-Select.GroupLabel = SelectGroupLabel;
 
 export type { SelectProps };
 export { Select };

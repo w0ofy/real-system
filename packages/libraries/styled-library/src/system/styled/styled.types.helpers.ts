@@ -85,7 +85,7 @@ type StyledChildren<T = any> =
   | React.ReactNode
   | RenderProp<PropUnion<React.HTMLAttributes<T> & React.RefAttributes<T>>>;
 
-type RealSystemChildren = StyledChildren | undefined;
+type RealSystemChildren = StyledChildren | StyledChildren[] | undefined;
 type RealSystemChildrenProp = { children?: RealSystemChildren };
 
 type StyledPropsWithChildren<P> = P & RealSystemChildrenProp;

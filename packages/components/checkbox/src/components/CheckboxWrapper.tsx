@@ -45,8 +45,8 @@ const CheckboxWrapper = forwardRef<
       </Text.Label>
       {(helpText || hasError) && (
         <Text.Help
-          mt={2}
-          marginLeft={12}
+          mt={1}
+          marginLeft={13}
           variant={hasError ? 'danger' : 'default'}>
           {helpText}
         </Text.Help>

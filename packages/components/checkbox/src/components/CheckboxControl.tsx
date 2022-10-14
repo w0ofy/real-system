@@ -18,7 +18,7 @@ const CheckboxIcon = ({
   return (
     <Icon
       icon={indeterminate ? 'minus' : 'check'}
-      size="xs"
+      size="sm"
       solid
       color={
         isSelected
@@ -86,9 +86,9 @@ const CheckboxControl = ({
 
   return (
     <real.span
-      width={8}
-      height={8}
-      marginRight={5}
+      width={9}
+      height={9}
+      marginRight={4}
       borderStyle="solid"
       borderWidth={1}
       backgroundColor={backgroundColor}
