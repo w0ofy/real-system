@@ -22,7 +22,7 @@ export type UseControllableStateProps<T> = {
   /**
    * The callback fired when the value changes
    */
-  onChange?: (value: T) => void;
+  onChange?: (value: T, ...args: any[]) => void;
   /**
    * The function that determines if the state should be updated
    */
@@ -47,7 +47,7 @@ const useControllableState = <T>({
   const value = isControlled ? (valueProp as T) : valueState;
 
   const updateValue = React.useCallback(
-    (next: React.SetStateAction<T>) => {
+    (next: React.SetStateAction<T>, ...args: any[]) => {
       const nextValue = runIfFn(next, value);
 
       if (!shouldUpdateProp(value, nextValue)) {
@@ -58,12 +58,15 @@ const useControllableState = <T>({
         setValueState(nextValue);
       }
 
-      onChangeProp(nextValue);
+      onChangeProp(nextValue, ...args);
     },
     [isControlled, onChangeProp, value, shouldUpdateProp]
   );
 
-  return [value, updateValue] as [T, React.Dispatch<React.SetStateAction<T>>];
+  return [value, updateValue] as [
+    T,
+    (nextValue: React.SetStateAction<T>, ...args: any[]) => void
+  ];
 };
 
 export { useControllableProp, useControllableState };

@@ -4,9 +4,10 @@ import type { AriakitCheckboxProps } from '@real-system/ariakit-library';
 import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
+import { VisuallyHidden } from '@real-system/visually-hidden';
 
 const Knob = real.span;
-const KnobTrack = real.div;
+const KnobButton = real.div;
 const KnobWrapper = real.span;
 const knobBoxModel: StylishProps = {
   boxSizing: 'content-box',
@@ -16,7 +17,7 @@ const knobBoxModel: StylishProps = {
 
 const styleConfig: Record<'on' | 'off', Record<string, StylishProps>> = {
   on: {
-    track: {
+    knobButton: {
       bgColor: 'blue-500',
       _notDisabled: {
         cursor: 'pointer',
@@ -24,6 +25,12 @@ const styleConfig: Record<'on' | 'off', Record<string, StylishProps>> = {
           bgColor: 'blue-600',
           '& [data-knob]': { transform: 'translateX(-105%)' },
         },
+      },
+      _focus: {
+        boxShadow: 'focus-outline',
+      },
+      _active: {
+        boxShadow: 'none',
       },
       _disabled: {
         bgColor: 'blue-200',
@@ -38,7 +45,7 @@ const styleConfig: Record<'on' | 'off', Record<string, StylishProps>> = {
     },
   },
   off: {
-    track: {
+    knobButton: {
       bgColor: 'gray-200',
       _notDisabled: {
         cursor: 'pointer',
@@ -50,6 +57,12 @@ const styleConfig: Record<'on' | 'off', Record<string, StylishProps>> = {
       _disabled: {
         bgColor: 'gray-100',
         cursor: 'default',
+      },
+      _focus: {
+        boxShadow: 'focus-outline',
+      },
+      _active: {
+        boxShadow: 'none',
       },
     },
     knobWrapper: {
@@ -64,63 +77,68 @@ const styleConfig: Record<'on' | 'off', Record<string, StylishProps>> = {
 type SwitchKnobProps = AriakitCheckboxProps & {
   labelId?: string;
   helpTextId?: string;
+  on?: boolean;
 };
 
 const SwitchKnob = forwardRef<HTMLDivElement, SwitchKnobProps>(
   function SwitchKnob(
-    { checked, disabled, labelId, helpTextId, id, ...props }: SwitchKnobProps,
+    { on, disabled, labelId, helpTextId, id, ...props }: SwitchKnobProps,
     ref
   ) {
-    const style = checked ? styleConfig['on'] : styleConfig['off'];
+    const style = on ? styleConfig['on'] : styleConfig['off'];
 
     return (
-      <KnobTrack
-        display="inline-block"
-        position="relative"
-        width={16}
-        p={1}
-        borderRadius="pill"
-        transition="background-color .2s ease-in-out"
-        data-testid={makeTestId('switch-knob-track')}
-        ref={ref}
-        {...knobBoxModel}
-        {...style.track}
-        {...props}
-        id={id}
-        tabIndex={0}
-        role="switch"
-        overflow="hidden"
-        aria-checked={!!checked}
+      <KnobButton
+        aria-checked={!!on}
+        aria-describedby={helpTextId}
         aria-disabled={disabled}
         aria-labelledby={labelId}
-        aria-describedby={helpTextId}>
+        type="button"
+        borderRadius="pill"
+        data-testid={makeTestId('switch-knob-button')}
+        display="inline-block"
+        id={id}
+        outline="none"
+        px={1}
+        position="relative"
+        ref={ref}
+        role="switch"
+        tabIndex={0}
+        transition="background-color .2s ease-in-out, box-shadow .2s ease-in-out"
+        width={16}
+        {...knobBoxModel}
+        {...style.knobButton}
+        {...props}
+        overflow="hidden">
         <KnobWrapper
-          position="absolute"
+          data-testid={makeTestId('switch-knob-wrapper')}
           display="block"
-          width="calc(100% - 0.45rem)"
           height="100%"
-          transition="transform .2s ease-in-out"
-          data-wrapper
-          {...style.knobWrapper}
+          position="absolute"
           role="presentation"
-          data-testid={makeTestId('switch-knob-wrapper')}>
+          transition="transform .2s ease-in-out"
+          width="calc(100% - 0.45rem)"
+          aria-hidden="true"
+          {...style.knobWrapper}>
           <Knob
-            data-knob
-            display="flex"
             alignItems="center"
-            justifyContent="center"
-            borderRadius="circle"
-            width={7}
-            height={7}
             bgColor="white"
+            borderRadius="circle"
             boxShadow="knob"
-            transition="transform .2s ease-in-out"
-            {...style.knob}
-            role="presentation"
+            data-knob
             data-testid={makeTestId('switch-knob')}
-          />
+            display="flex"
+            height={7}
+            justifyContent="center"
+            role="presentation"
+            transition="transform .2s ease-in-out"
+            width={7}
+            aria-hidden="true"
+            {...style.knob}>
+            <VisuallyHidden>{on ? 'on' : 'off'}</VisuallyHidden>
+          </Knob>
         </KnobWrapper>
-      </KnobTrack>
+      </KnobButton>
     );
   }
 );

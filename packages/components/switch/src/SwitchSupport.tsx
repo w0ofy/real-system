@@ -37,16 +37,17 @@ const SwitchSupport = ({
       alignItems="flex-start"
       justifyContent="flex-start"
       data-testid={makeTestId('switch-support')}>
-      <real.label
-        {...knobBoxModel}
-        onClick={onClick}
-        data-testid={makeTestId('switch-label')}
-        htmlFor={switchId}
-        id={labelId}>
-        <Text.Label as="span" required={required} disabled={disabled}>
+      <real.span {...knobBoxModel}>
+        <Text.Label
+          required={required}
+          disabled={disabled}
+          onClick={onClick}
+          data-testid={makeTestId('switch-label')}
+          htmlFor={switchId}
+          id={labelId}>
           {label}
         </Text.Label>
-      </real.label>
+      </real.span>
       {helpText && (
         <Text.Help
           helpTextId={helpTextId}

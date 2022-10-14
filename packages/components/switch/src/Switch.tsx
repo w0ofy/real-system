@@ -1,4 +1,4 @@
-import React, { forwardRef, useCallback } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
 import { AriakitCheckboxProps } from '@real-system/ariakit-library';
 import { real } from '@real-system/elements-primitive';
@@ -9,13 +9,12 @@ import { SwitchKnob } from './SwitchKnob';
 import { SwitchSupport } from './SwitchSupport';
 
 type SwitchProps = {
-  checked?: boolean;
-  defaultChecked?: boolean;
+  on?: boolean;
   /**
    * Updates controlled state. This is not the native event `onClick`.
    * Use `_onClick` to access `MouseEvent` on the click event, use the `_onClick` prop.
    */
-  onClick?: (updatedCheckedState: boolean) => void;
+  onClick?: () => void;
 } & Omit<
   ValidationProps,
   'warningMessage' | 'readonly' | 'hasError' | 'errorMessage'
@@ -26,16 +25,15 @@ type SwitchProps = {
   >;
 /**
  * `Switch` is an interactive binary control, similar to `Checkbox`, but with a more literal toggle-like aesthetic.
- * `Switch` can be optionally controlled. If a `checked` value is passed,
- * simply pass `onClick` to update the `checked` state.
+ * `Switch` can be optionally controlled. If a `on` value is passed,
+ * simply pass `onClick` to update the `on` state.
  *
- * @todo build container (e.g. `SwitchControl`, `CheckboxControl`) pattern
+ * @todo focus switch when clicking label
  */
 const Switch = forwardRef<HTMLDivElement, SwitchProps>(function Switch(
   {
     children,
-    checked,
-    defaultChecked,
+    on,
     disabled = false,
     onClick,
     helpText,
@@ -51,22 +49,32 @@ const Switch = forwardRef<HTMLDivElement, SwitchProps>(function Switch(
   switchId = id || switchId;
 
   const [switchIsOn, setSwitchIsOn] = useControllableState<boolean>({
-    defaultValue: defaultChecked,
-    value: checked,
+    defaultValue: on,
+    value: on,
     onChange: onClick,
   });
-  const handleOnClick = useCallback(() => {
-    const nextState = !switchIsOn;
-    setSwitchIsOn((prev) => !prev);
-    onClick?.(nextState);
-  }, [onClick, setSwitchIsOn, switchIsOn]);
-  const handleKeyDown = React.useCallback(
-    (event: React.KeyboardEvent): void => {
-      if (event.key === ' ' || event.key === 'Enter')
+
+  const { handleOnClick, handleOnKeyDown } = useMemo(() => {
+    const onClick = () => {
+      setSwitchIsOn((prev) => !prev);
+    };
+
+    const onKeyDown = (event: React.KeyboardEvent): void => {
+      if (event.key === ' ' || event.key === 'Enter' || event.key === 'Space')
         setSwitchIsOn((prev) => !prev);
-    },
-    [setSwitchIsOn]
-  );
+    };
+
+    if (disabled) {
+      return {
+        handleOnClick: () => undefined,
+        handleOnKeyDown: () => undefined,
+      };
+    }
+    return {
+      handleOnClick: onClick,
+      handleOnKeyDown: onKeyDown,
+    };
+  }, [disabled, setSwitchIsOn]);
 
   return (
     <real.span
@@ -78,13 +86,13 @@ const Switch = forwardRef<HTMLDivElement, SwitchProps>(function Switch(
       data-testid={makeTestId('switch-wrapper')}>
       <SwitchKnob
         id={switchId}
-        checked={switchIsOn}
+        on={switchIsOn}
         ref={ref}
         disabled={disabled}
         labelId={labelId}
         helpTextId={helpText ? helpTextId : undefined}
         onClick={handleOnClick}
-        onKeyDown={handleKeyDown}
+        onKeyDown={handleOnKeyDown}
         {...restProps}
       />
       <SwitchSupport
