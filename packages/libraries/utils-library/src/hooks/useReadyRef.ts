@@ -1,21 +1,25 @@
 import { useCallback, useRef, useState } from 'react';
 
+import type { ReactRef } from '../helpers/mergeRefs';
+
 import { useMergeRefs } from './useMergeRefs';
 
-const useReadyRef = (ref: any = null) => {
+const useReadyRef = <T>(
+  ...refs: (ReactRef<T> | null | undefined)[]
+): [(node: T) => void, React.RefObject<T>, boolean] => {
   const [ready, setReady] = useState(false);
-  const internalRef = useRef<any>(null);
-  const mergeRefs = useMergeRefs(internalRef, ref);
+  const internalRef = useRef<T>(null);
+  const mergeRefs = useMergeRefs(internalRef, ...refs);
 
   const setRef = useCallback(
-    <T>(node: T) => {
+    (node: T) => {
       mergeRefs(node);
       setReady(!!node);
     },
-    [ref]
+    [mergeRefs, refs]
   );
 
-  return [setRef, ref, ready];
+  return [setRef, internalRef, ready];
 };
 
 export { useReadyRef };

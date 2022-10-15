@@ -28,11 +28,10 @@ export type UseControllableStateProps<T> = {
    */
   shouldUpdate?: (prev: T, next: T) => boolean;
 };
-
 /**
  * Use optionally-controlled local/component state.
  */
-const useControllableState = <T>({
+const useControllableState = <T, OnChangeArgs = any>({
   value: valueProp,
   defaultValue,
   onChange,
@@ -47,7 +46,7 @@ const useControllableState = <T>({
   const value = isControlled ? (valueProp as T) : valueState;
 
   const updateValue = React.useCallback(
-    (next: React.SetStateAction<T>, ...args: any[]) => {
+    (next: React.SetStateAction<T>, ...args: OnChangeArgs[]) => {
       const nextValue = runIfFn(next, value);
 
       if (!shouldUpdateProp(value, nextValue)) {
@@ -60,12 +59,12 @@ const useControllableState = <T>({
 
       onChangeProp(nextValue, ...args);
     },
-    [isControlled, onChangeProp, value, shouldUpdateProp]
+    [isControlled, onChangeProp, shouldUpdateProp, value]
   );
 
   return [value, updateValue] as [
     T,
-    (nextValue: React.SetStateAction<T>, ...args: any[]) => void
+    (nextValue: React.SetStateAction<T>, ...args: OnChangeArgs[]) => void
   ];
 };
 

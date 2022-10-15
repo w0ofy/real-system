@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { AriakitCheckboxProps } from '@real-system/ariakit-library';
 import { real } from '@real-system/elements-primitive';
@@ -19,46 +19,53 @@ type SwitchSupportProps = {
 > &
   Pick<AriakitCheckboxProps, 'children' | 'disabled'>;
 
-const SwitchSupport = ({
-  children: label,
-  disabled = false,
-  helpText,
-  helpTextId,
-  labelId,
-  switchId,
-  required,
-  onClick,
-}) => {
-  if (!label) return null;
-  return (
-    <real.span
-      display="flex"
-      flexDirection="column"
-      alignItems="flex-start"
-      justifyContent="flex-start"
-      data-testid={makeTestId('switch-support')}>
-      <real.span {...knobBoxModel}>
-        <Text.Label
-          required={required}
-          disabled={disabled}
-          onClick={onClick}
-          data-testid={makeTestId('switch-label')}
-          htmlFor={switchId}
-          id={labelId}>
-          {label}
-        </Text.Label>
+const SwitchSupport = forwardRef<HTMLSpanElement, SwitchSupportProps>(
+  function SwitchSupport(
+    {
+      children: label,
+      disabled = false,
+      helpText,
+      helpTextId,
+      labelId,
+      switchId,
+      required,
+      onClick,
+    },
+    ref
+  ) {
+    if (!label) return null;
+    return (
+      <real.span
+        display="flex"
+        flexDirection="column"
+        alignItems="flex-start"
+        justifyContent="flex-start"
+        data-testid={makeTestId('switch-support')}
+        ref={ref}>
+        <real.span {...knobBoxModel}>
+          <Text.Label
+            required={required}
+            disabled={disabled}
+            onClick={onClick}
+            data-testid={makeTestId('switch-label')}
+            htmlFor={switchId}
+            data-switch-support
+            id={labelId}>
+            {label}
+          </Text.Label>
+        </real.span>
+        {helpText && (
+          <Text.Help
+            helpTextId={helpTextId}
+            mt={1}
+            data-testid={makeTestId('switch-help-text')}>
+            {helpText}
+          </Text.Help>
+        )}
       </real.span>
-      {helpText && (
-        <Text.Help
-          helpTextId={helpTextId}
-          mt={1}
-          data-testid={makeTestId('switch-help-text')}>
-          {helpText}
-        </Text.Help>
-      )}
-    </real.span>
-  );
-};
+    );
+  }
+);
 
 export type { SwitchSupportProps };
 export { SwitchSupport };
