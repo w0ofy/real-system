@@ -40,6 +40,6 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@reach/dialog": "^0.17.0"
+    "@reach/dialog": "^0.18.0"
   }
 }
