@@ -4912,18 +4912,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reach/alert@npm:^0.17.0":
-  version: 0.17.0
-  resolution: "@reach/alert@npm:0.17.0"
+"@reach/alert@npm:^0.18.0":
+  version: 0.18.0
+  resolution: "@reach/alert@npm:0.18.0"
   dependencies:
-    "@reach/utils": 0.17.0
-    "@reach/visually-hidden": 0.17.0
-    prop-types: ^15.7.2
-    tslib: ^2.3.0
+    "@reach/polymorphic": 0.18.0
+    "@reach/utils": 0.18.0
+    "@reach/visually-hidden": 0.18.0
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 5e0b53f3bf473aa20ce18e0f5808012488c298ca5cb182126f1e78197e385b0d2b990fd9ba139de7cd1a9fc0bc6ecec36b91a2cce8fb3ca99d5164a92cb39b14
+  checksum: 679a90427b1aec2dfd76a4bbcec7dee3f86a80f643f0a3a9060eb9debe93010e248883ac8cb4a7141fed58ad6e803695b78ecf06f13777fdbb67cfdad11f3676
   languageName: node
   linkType: hard
 
@@ -4941,6 +4940,15 @@ __metadata:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
   checksum: 720abec5376d8e8034b3ebbfbb98273cf00e46e72cb387e56bf966d1d230ad13ad2d37363d406c52a5af745cea51069987ab60142a5828b85297d128a9ec01c1
+  languageName: node
+  linkType: hard
+
+"@reach/polymorphic@npm:0.18.0":
+  version: 0.18.0
+  resolution: "@reach/polymorphic@npm:0.18.0"
+  peerDependencies:
+    react: ^16.8.0 || 17.x
+  checksum: 0d62260a55c71e0dc95f38867f24b3d699e0bb7ea2273c6fa5a1fa3d804269e2deb63a458f1f1eb7b74c32bc0add3ab31a1c2668c1dee6b2837187876d3c4cc2
   languageName: node
   linkType: hard
 
@@ -4971,16 +4979,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reach/visually-hidden@npm:0.17.0":
-  version: 0.17.0
-  resolution: "@reach/visually-hidden@npm:0.17.0"
-  dependencies:
-    prop-types: ^15.7.2
-    tslib: ^2.3.0
+"@reach/utils@npm:0.18.0":
+  version: 0.18.0
+  resolution: "@reach/utils@npm:0.18.0"
   peerDependencies:
     react: ^16.8.0 || 17.x
     react-dom: ^16.8.0 || 17.x
-  checksum: 8b665ee5740dbd616bcd5b5dd5e3a3e5f2b3984819bb1dc20c5ec11690523c86eeb8b28254b193d5ac9261bc25341287229185bc0a4591e10182cc80ed2882bc
+  checksum: eeda20a74c1db71e95680c622371c6efc46e2c767b28902bc43b580654436a34ec7f8b5f63c51a7c4cc8fd48c94066e3215496ba5a053c96e65c7a9bdcdc2687
+  languageName: node
+  linkType: hard
+
+"@reach/visually-hidden@npm:0.18.0":
+  version: 0.18.0
+  resolution: "@reach/visually-hidden@npm:0.18.0"
+  dependencies:
+    "@reach/polymorphic": 0.18.0
+  peerDependencies:
+    react: ^16.8.0 || 17.x || 18.x
+    react-dom: ^16.8.0 || 17.x || 18.x
+  checksum: 675ad41121d0ae52a55d3e75ad9e60a4ca7cb91defe756565bf7b8fb3d27553d76f851f9cd069455240ec955465d6e235a8f92b73859e091265607b0cb3358ae
   languageName: node
   linkType: hard
 
@@ -5411,7 +5428,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/alert-primitive@workspace:packages/primitives/alert-primitive"
   dependencies:
-    "@reach/alert": ^0.17.0
+    "@reach/alert": ^0.18.0
     concurrently: ^7.4.0
     react: ^18.2.0
     react-dom: ^18.2.0
