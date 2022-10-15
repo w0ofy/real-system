@@ -1,24 +1,32 @@
 import React, { forwardRef, useMemo } from 'react';
 
-import { AriakitCheckboxProps } from '@real-system/ariakit-library';
 import { real } from '@real-system/elements-primitive';
-import {
-  useReadyRef,
-  useUID,
-  ValidationProps,
-} from '@real-system/utils-library';
+import type { StylishProps } from '@real-system/styled-library';
+import type { ValidationProps } from '@real-system/utils-library';
+import { useReadyRef, useUID } from '@real-system/utils-library';
 import { makeTestId, useControllableState } from '@real-system/utils-library';
 
-import { GenericSwitchProps } from './Switch.model';
+import type { CommonSwitchProps, LabelPlacement } from './Switch.model';
 import { SwitchKnob } from './SwitchKnob';
 import { SwitchSupport } from './SwitchSupport';
 
 type SwitchProps = {
   /**
+   * Label for the switch
+   */
+  children?: React.ReactNode;
+  /**
    * Controlled toggle (on / off) state for `Switch`
    */
   on?: boolean;
+  /**
+   * Name for the switch field
+   */
   name?: string;
+  /**
+   * Whether to place the label on the left or right of the switch
+   */
+  labelPlacement?: LabelPlacement;
   /**
    * Updates controlled state. This is not the native event `onClick`.
    * Use `_onClick` to access `MouseEvent` on the click event, use the `_onClick` prop.
@@ -28,10 +36,7 @@ type SwitchProps = {
   ValidationProps,
   'warningMessage' | 'readonly' | 'hasError' | 'errorMessage'
 > &
-  Pick<
-    GenericSwitchProps,
-    'children' | 'disabled' | 'id' | 'onBlur' | 'onFocus' | 'onChange'
-  >;
+  Pick<CommonSwitchProps, 'id' | 'onBlur' | 'onFocus' | 'onChange'>;
 
 const useSwitchIds = (id?: string) => {
   let switchId = useUID();
@@ -43,6 +48,23 @@ const useSwitchIds = (id?: string) => {
     helpTextId,
     labelId,
     switchId,
+  };
+};
+
+const getPlacement = (
+  placement: SwitchProps['labelPlacement']
+): Pick<StylishProps, 'alignItems' | 'justifyContent' | 'flexDirection'> => {
+  if (placement === 'left') {
+    return {
+      alignItems: 'flex-end',
+      justifyContent: 'flex-end',
+      flexDirection: 'row-reverse',
+    };
+  }
+  return {
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
   };
 };
 /**
@@ -58,6 +80,7 @@ const Switch = forwardRef<HTMLDivElement, SwitchProps>(function Switch(
     helpText,
     id,
     required,
+    labelPlacement = 'right',
     ...restProps
   },
   ref
@@ -97,8 +120,7 @@ const Switch = forwardRef<HTMLDivElement, SwitchProps>(function Switch(
   return (
     <real.span
       display="flex"
-      alignItems="flex-start"
-      justifyContent="flex-start"
+      {...getPlacement(labelPlacement)}
       flexShrink={0}
       gap={5}
       data-testid={makeTestId('switch-wrapper')}>

@@ -19,20 +19,19 @@ $ yarn add @real-system/core react react-dom
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/core/theme-library';
+import { RealSystemProvider } from '@real-system/core/theme-library';
 import { Box } from '@real-system/core/box-primitive';
 import { Button } from '@real-system/core/button';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Box>
         <Button>Button</Button>
       </Box>
-    </ThemeProvider>
-  )
-}
-
+    </RealSystemProvider>
+  );
+};
 ```
 
 ## How bundling works

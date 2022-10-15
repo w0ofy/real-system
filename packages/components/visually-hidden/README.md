@@ -27,15 +27,14 @@ $ yarn add @real-system/visually-hidden
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <VisuallyHidden>Screen reader only text</VisuallyHidden>
-    </ThemeProvider>
+    </RealSystemProvider>
   );
 };
-
 ```

@@ -36,7 +36,7 @@ type IconProps = {
    * Overrides colorScheme and can be used to customize the icon color beyond what colorScheme provides i.e. a checkmark for Checkbox component
    */
   color?: StylishProps['color'];
-  /** sets color scheme of the icon; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
+  /** Sets color scheme of the icon; color scheme is dictated by the `palette` which dictates the `theme` object from `RealSystemProvider` */
   colorScheme?: ColorSchemes;
   /**
    * Controls solid or outline (default) icon style

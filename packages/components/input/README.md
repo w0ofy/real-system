@@ -25,15 +25,14 @@ $ yarn add @real-system/input
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { Input } from '@real-system/core/input';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Input>Body text...</Input>
-    </ThemeProvider>
-  )
-}
-
+    </RealSystemProvider>
+  );
+};
 ```

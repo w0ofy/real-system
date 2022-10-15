@@ -25,7 +25,7 @@ type ButtonProps = RealSystemComponentProps & {
   variant?: ButtonVariants;
   /** controls the size of the button */
   size?: ButtonSize;
-  /** sets color scheme of the button; color scheme is dictated by the `palette` which dictates the `theme` object from `ThemeProvider` */
+  /** sets color scheme of the button; color scheme is dictated by the `palette` which dictates the `theme` object from `RealSystemProvider` */
   colorScheme?: ColorSchemes;
 };
 

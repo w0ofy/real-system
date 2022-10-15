@@ -16,7 +16,7 @@ Let's walk through the major components within Real System's theming API.
 The primary driver of a `theme` is a `palette`. A `palette` consists of `12` core color schemes of your choosing.
 The `palette` is fed into a color-scheming mechanism which [shades](https://polished.js.org/docs/#shade) and
 [tints](https://polished.js.org/docs/#tint) colors. In turn, this creates an extensive
-[design token](/docs/real-system-theming-token-system--page) system which live within the `theme` object, in the [ThemeProvider](#themeprovider).
+[design token](/docs/real-system-theming-token-system--page) system which live within the `theme` object, in the [RealSystemProvider](#themeprovider).
 
 _Learn how to [customize a palette](/docs/real-system-theming-theme-customization--page#high-level-philosophy-palettes)_
 
@@ -61,11 +61,11 @@ const realSystem: Palette = {
 };
 ```
 
-## Theme & ThemeProvider
+## Theme & RealSystemProvider
 
-The `ThemeProvider` provides all components with their styles - Without `ThemeProvider`
+The `RealSystemProvider` provides all components with their styles - Without `RealSystemProvider`
 [Real System](https://github.com/bigwoof91/real-system) is broken.
-`ThemeProvider` accepts a strictly typed theme but it can be extended with new properties.
+`RealSystemProvider` accepts a strictly typed theme but it can be extended with new properties.
 will use the `realSystem` theme if a `theme` prop isn't provided.
 
 **_Note: themes and palettes have the same names_**
@@ -73,16 +73,16 @@ will use the `realSystem` theme if a `theme` prop isn't provided.
 _Learn how to [customize a theme](/docs/real-system-theming-theme-customization--page#low-level-philosophy-themes-and-tokens)_
 
 ```jsx
-import { ThemeProvider, themes } from '@real-system/core/styled-library';
+import { RealSystemProvider, themes } from '@real-system/core/styled-library';
 
 // default theme is themes.realSystem
 const App = () => {
-  return <ThemeProvider>...</ThemeProvider>;
+  return <RealSystemProvider>...</RealSystemProvider>;
 };
 
 // use a different built-in theme
 const App = () => {
-  return <ThemeProvider theme={themes.stripe}>...</ThemeProvider>;
+  return <RealSystemProvider theme={themes.stripe}>...</RealSystemProvider>;
 };
 ```
 

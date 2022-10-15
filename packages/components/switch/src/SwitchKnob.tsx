@@ -1,12 +1,11 @@
 import React, { forwardRef } from 'react';
 
-import type { AriakitCheckboxProps } from '@real-system/ariakit-library';
 import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
-import { GenericSwitchProps } from './Switch.model';
+import type { CommonSwitchProps } from './Switch.model';
 
 const Knob = real.span;
 const KnobButton = real.div;
@@ -76,7 +75,7 @@ const styleConfig: Record<'on' | 'off', Record<string, StylishProps>> = {
   },
 };
 
-type SwitchKnobProps = GenericSwitchProps & {
+type SwitchKnobProps = CommonSwitchProps & {
   labelId?: string;
   helpTextId?: string;
   on?: boolean;

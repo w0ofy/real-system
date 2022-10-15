@@ -1,12 +1,12 @@
 # Contributing
 
-**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
+**Working on your first Pull Request?** You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
 
 ## **Packages**
 
 ### **Libraries**
 
-Libraries are deemed libraries if they are used system-wide and primarily export a series of functions or react components (e.g. css, styled, ThemeProvider, constate). They do not primarily export elementals (e.g. div, input, textarea).
+Libraries are deemed libraries if they are used system-wide and primarily export a series of functions or react components (e.g. css, styled, RealSystemProvider, constate). They do not primarily export elementals (e.g. div, input, textarea).
 
 - All `library` packages and their directory names should be suffixed with `-library`
 

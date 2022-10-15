@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 
-import { AriakitCheckboxProps } from '@real-system/ariakit-library';
 import { real } from '@real-system/elements-primitive';
 import { Text } from '@real-system/typography';
 import type { ValidationProps } from '@real-system/utils-library';
@@ -13,11 +12,11 @@ type SwitchSupportProps = {
   helpTextId: string;
   switchId: string;
   onClick?: any;
+  children?: React.ReactNode;
 } & Omit<
   ValidationProps,
   'warningMessage' | 'readonly' | 'hasError' | 'errorMessage'
-> &
-  Pick<AriakitCheckboxProps, 'children' | 'disabled'>;
+>;
 
 const SwitchSupport = forwardRef<HTMLSpanElement, SwitchSupportProps>(
   function SwitchSupport(

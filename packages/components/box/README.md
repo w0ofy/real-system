@@ -27,18 +27,16 @@ $ yarn add @real-system/box
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { Box } from '@real-system/box';
-
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Box as="aside" bgColor="white" display="flex" flexDirection="column">
         <Box display="flex">...</Box>
       </Box>
-    </ThemeProvider>
+    </RealSystemProvider>
   );
 };
-
 ```

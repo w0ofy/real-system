@@ -1,4 +1,5 @@
 import type { AriakitCheckboxProps } from '@real-system/ariakit-library';
-type GenericSwitchProps = AriakitCheckboxProps<'div'>;
+type CommonSwitchProps = AriakitCheckboxProps<'div'>;
+type LabelPlacement = 'left' | 'right';
 
-export type { GenericSwitchProps };
+export type { CommonSwitchProps, LabelPlacement };

@@ -44,7 +44,7 @@ You can **add** and **modify** tokens as you see fit.
 
 ```jsx
 import {
-  ThemeProvider,
+  RealSystemProvider,
   overridePalette,
   makeTheme,
 } from '@real-system/core/styled-library';
@@ -59,7 +59,7 @@ const palette: overridePalette('realSystem', {
 const theme = makeTheme(palette);
 
 const MyComponent = () => {
-  return <ThemeProvider theme={theme}>...</ThemeProvider>;
+  return <RealSystemProvider theme={theme}>...</RealSystemProvider>;
 };
 ```
 
@@ -67,7 +67,7 @@ const MyComponent = () => {
 
 ```jsx
 import {
-  ThemeProvider,
+  RealSystemProvider,
   Palette,
   makeTheme,
 } from '@real-system/core/styled-library';
@@ -91,7 +91,7 @@ const palette: Palette = {
 const myTheme = makeTheme(palette);
 
 const App = () => {
-  return <ThemeProvider theme={myTheme}>...</ThemeProvider>;
+  return <RealSystemProvider theme={myTheme}>...</RealSystemProvider>;
 };
 ```
 
@@ -101,7 +101,7 @@ const App = () => {
 
 ```jsx
 import {
-  ThemeProvider,
+  RealSystemProvider,
   extendTheme,
   themes,
 } from '@real-system/core/styled-library';
@@ -130,10 +130,10 @@ const myTheme = extendTheme(themes.realSystem, {
   },
 });
 
-// THEN: pass the customized theme to ThemeProvider
+// THEN: pass the customized theme to RealSystemProvider
 
 const App = () => {
-  return <ThemeProvider theme={myTheme}>...</ThemeProvider>;
+  return <RealSystemProvider theme={myTheme}>...</RealSystemProvider>;
 };
 ```
 
@@ -141,7 +141,7 @@ const App = () => {
 
 ```jsx
 import {
-  ThemeProvider,
+  RealSystemProvider,
   Palette,
   makeTheme,
   extendTheme,
@@ -194,9 +194,9 @@ const myTheme = extendTheme(themeFromPalette, (colors) => ({
   },
 }));
 
-// FINALLY: pass your theme to ThemeProvider
+// FINALLY: pass your theme to RealSystemProvider
 
 const App = () => {
-  return <ThemeProvider theme={myTheme}>...</ThemeProvider>;
+  return <RealSystemProvider theme={myTheme}>...</RealSystemProvider>;
 };
 ```

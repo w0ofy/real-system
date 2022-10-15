@@ -25,14 +25,14 @@ $ yarn add @real-system/spinner
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { Spinner } from '@real-system/spinner';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Spinner />
-    </ThemeProvider>
-  )
-}
+    </RealSystemProvider>
+  );
+};
 ```

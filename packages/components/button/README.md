@@ -25,7 +25,7 @@ $ yarn add @real-system/button
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { Button } from '@real-system/button';
 
 const MyButton = () => {

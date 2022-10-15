@@ -49,20 +49,20 @@ $ yarn add @real-system/core
 // index.js
 import React, { ReactDOM } from 'react';
 
-import { ThemeProvider } from '@real-system/core/styled-library';
+import { RealSystemProvider } from '@real-system/core/styled-library';
 import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <RealSystemProvider>
       <App>
-    </ThemeProvider>
+    </RealSystemProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 ```
 
-> `ThemeProvider` obviously provides the `theme` object to all children via react context but it also renders `GlobalStyles` which uses `emotion`'s `Global` utility and is vital for Real System's look and feel. In short, it is responsible for
+> `RealSystemProvider` provides the `theme` object to all children via React Context but it also renders `GlobalStyles` which uses `emotion`'s `Global` utility and is vital for Real System's look and feel. In short, it is responsible for
 >
 > - normalizing styles for browsers via `normalize.css`,
 > - font smoothing,
@@ -79,14 +79,14 @@ You can use the Real System components so long is they are nested within Theme c
 // index.js
 import React, { ReactDOM } from 'react';
 
-import { ThemeProvider } from '@real-system/core/styled-library';
+import { RealSystemProvider } from '@real-system/core/styled-library';
 import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <RealSystemProvider>
       <App>
-    </ThemeProvider>
+    </RealSystemProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
