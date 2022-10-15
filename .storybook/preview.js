@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withPerformance } from 'storybook-addon-performance';
 import {
   themes,
-  ThemeProvider,
+  RealSystemProvider,
 } from '../packages/libraries/styled-library/src/index';
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -27,9 +27,9 @@ export const decorators = [
   (Story, context) => {
     const theme = themes[context.globals.theme || 'realSystem'];
     return (
-      <ThemeProvider theme={theme}>
+      <RealSystemProvider theme={theme}>
         <Story />
-      </ThemeProvider>
+      </RealSystemProvider>
     );
   },
   withPerformance,

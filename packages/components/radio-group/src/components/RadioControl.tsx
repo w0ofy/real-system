@@ -72,8 +72,8 @@ const RadioControl = ({
       shrink={0}
       xAlignContent="center"
       yAlignContent="center"
-      width={8}
-      height={8}
+      width={9}
+      height={9}
       marginRight={4}
       borderWidth="1px"
       borderStyle="solid"
@@ -83,8 +83,8 @@ const RadioControl = ({
       backgroundColor={backgroundColor()}
       transition={transition}>
       <real.span
-        width={3}
-        height={3}
+        width={4}
+        height={4}
         borderRadius="circle"
         backgroundColor={backgroundColor(true)}
       />

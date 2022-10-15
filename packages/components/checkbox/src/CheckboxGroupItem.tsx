@@ -6,7 +6,7 @@ import {
   useInteractions,
 } from '@real-system/a11y-library';
 import type { FlexProps } from '@real-system/flex';
-import { useMergedRef } from '@real-system/utils-library';
+import { useMergeRefs } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { useCheckboxGroupContext } from './Checkbox.context';
@@ -31,14 +31,13 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
     const interactionProps = useInteractions({ disabled: disabledProp });
     const state = useCheckboxGroupContext();
     const internalRef = useRef<HTMLInputElement>(null);
-    const mergedRef = useMergedRef(internalRef, ref);
+    const mergedRef = useMergeRefs(internalRef, ref);
     const { inputProps } = useCheckboxGroupItem(
       props,
       state,
-      mergedRef as React.RefObject<HTMLInputElement>
+      mergedRef as unknown as React.RefObject<HTMLInputElement>
     );
-    const disabled =
-      state.isDisabled || props.disabled || state.isReadOnly || props.readonly;
+    const disabled = state.isDisabled || props.disabled;
     const isSelected = state.isSelected(value);
 
     const dynamicStyles = useMemo((): FlexProps => {
@@ -64,7 +63,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
         marginLeft={4}
         {...dynamicStyles}
         {...interactionProps}>
-        <VisuallyHidden as="div">
+        <VisuallyHidden>
           <input {...inputProps} ref={mergedRef} />
         </VisuallyHidden>
         <CheckboxControl

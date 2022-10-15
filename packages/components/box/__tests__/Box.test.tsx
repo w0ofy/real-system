@@ -2,15 +2,15 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 
 import { Box } from '../src/Box';
 import { BoxProps } from '../src/types';
 
 const BoxComponent = (props: BoxProps = {}) => (
-  <ThemeProvider theme={TEST_THEME}>
+  <RealSystemProvider theme={TEST_THEME}>
     <Box {...props} />
-  </ThemeProvider>
+  </RealSystemProvider>
 );
 
 const queryBoxComponent = () => screen.queryByTestId('real-system-box');

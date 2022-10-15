@@ -91,7 +91,7 @@ const sizes = {
   'size-30': patchScale(30),
 
   /** should match fontSizes */
-  'icon-xxs': patchScale(5),
+  'icon-xxs': patchScale(6),
   'icon-xs': patchScale(7),
   'icon-sm': patchScale(8),
   'icon-md': patchScale(10),
@@ -149,6 +149,7 @@ const radii = {
   layer: patchScale(2),
   squarish: '1px',
   circle: '50%',
+  pill: '10rem',
 };
 
 /** @todo add font-size-0 */
@@ -182,9 +183,9 @@ const fontSizes = {
   badge: patchScale(6),
   'badge-lg': patchScale(6.5),
   'badge-xl': patchScale(7),
-  label: patchScale(6.5),
+  label: patchScale(7),
   link: patchScale(7),
-  help: patchScale(6.5),
+  help: patchScale(7),
   h1: patchScale(17),
   h2: patchScale(13),
   h3: patchScale(11),
@@ -224,8 +225,8 @@ const lineHeights = {
   badge: patchScale(6),
   'badge-lg': patchScale(6.5),
   'badge-xl': patchScale(7),
-  label: patchScale(6.5),
-  help: patchScale(6.5),
+  label: patchScale(7),
+  help: patchScale(7),
   link: patchScale(7),
   h1: patchScale(17),
   h2: patchScale(13),

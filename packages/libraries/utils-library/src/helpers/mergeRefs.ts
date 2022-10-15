@@ -2,15 +2,12 @@ import { _logger } from '../private';
 
 import { isFunction } from './assertion';
 
-type ReactRef<T> =
-  | React.Ref<T>
-  | React.RefObject<T>
-  | React.MutableRefObject<T>;
+type ReactRef<T> = React.RefCallback<T> | React.MutableRefObject<T>;
 
 /**
  * Assign a value to a ref callback or object
  */
-function assignRef<T = any>(ref: ReactRef<T> | undefined, value: T) {
+function assignRef<T = any>(ref: ReactRef<T> | null | undefined, value: T) {
   if (ref == null) return;
 
   if (isFunction(ref)) {
@@ -32,10 +29,13 @@ function assignRef<T = any>(ref: ReactRef<T> | undefined, value: T) {
 /**
  * Combine many React refs into a single ref fn
  */
-function mergeRefs<T>(...refs: (ReactRef<T> | undefined)[]) {
+function mergeRefs<T>(...refs: (ReactRef<T> | null | undefined)[]) {
   return (node: T | null) => {
-    refs.forEach((ref) => assignRef(ref, node));
+    refs.forEach((ref) => {
+      assignRef(ref, node);
+    });
   };
 }
 
+export type { ReactRef };
 export { mergeRefs };

@@ -28,7 +28,6 @@
 
 ## Installation
 
-
 ```sh
 # 1. Install peer dependencies
 
@@ -55,13 +54,13 @@ $ yarn add @real-system/styled-library @real-system/utils-library @real-system/b
 ## Usage
 
 ```jsx
-import { ThemeProvider } from '@real-system/core/theme-library';
+import { RealSystemProvider } from '@real-system/core/styled-library';
 import { Flex } from '@real-system/core/flex';
 import { Button } from '@real-system/core/button';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Flex vertical>
         <Button mb={8}>Default Button</Button>
         <Button mb={8} variant="fill">
@@ -70,7 +69,7 @@ const MyComponent = () => {
         <Button variant="minimal">Minimal Button</Button>
         <Button variant="floating">Floating Button</Button>
       </Flex>
-    </ThemeProvider>
+    </RealSystemProvider>
   );
 };
 ```

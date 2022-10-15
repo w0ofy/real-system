@@ -12,7 +12,7 @@ import { Text } from '@real-system/typography';
 import {
   isReactText,
   makeTestId,
-  useMergedRef,
+  useMergeRefs,
 } from '@real-system/utils-library';
 
 import { TRANSITIONS_CONFIG } from './constants';
@@ -44,7 +44,7 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
   ref
 ) {
   const internalRef = useRef<HTMLSpanElement>(null);
-  const mergedRef = useMergedRef<HTMLSpanElement>(ref, internalRef);
+  const mergedRef = useMergeRefs(ref, internalRef);
 
   const state = useTooltipStatePrimitive({
     placement,

@@ -28,6 +28,7 @@ const shadows = (colors: ThemeColors) => {
     dialog: `${colors['gray-300']} 0px 0px 1px, ${colors['gray-300']} 0px 16px 24px -4px`,
     menu: `0 4px 16px 0 ${colors['black-alpha-300']}`,
     tooltip: `0 3px 7px ${colors['gray-400']}`,
+    knob: `0 2px 8px 0 ${colors['white-alpha-600']}`,
   };
 };
 

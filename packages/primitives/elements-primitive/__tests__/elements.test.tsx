@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 
 import { real, RealElementPrimitiveProps } from '../src/elements';
 
@@ -11,11 +11,11 @@ const consoleSpy = jest
   .mockImplementation(() => undefined);
 
 const RealElement = (props: RealElementPrimitiveProps = {}) => (
-  <ThemeProvider theme={TEST_THEME}>
+  <RealSystemProvider theme={TEST_THEME}>
     <real.div data-testid="real-element" {...props}>
       contained text
     </real.div>
-  </ThemeProvider>
+  </RealSystemProvider>
 );
 
 const queryRealElement = () => screen.queryByText('contained text');

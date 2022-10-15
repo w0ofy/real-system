@@ -6,7 +6,7 @@ import {
   useInteractions,
   useToggleState,
 } from '@real-system/a11y-library';
-import { useMergedRef } from '@real-system/utils-library';
+import { useMergeRefs } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import type { CustomProps } from './Checkbox.model';
@@ -25,12 +25,12 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   const interactionProps = useInteractions({ disabled: props.disabled });
   const state = useToggleState(props);
   const internalRef = useRef<HTMLInputElement>(null);
-  const mergedRef = useMergedRef(internalRef, ref);
+  const mergedRef = useMergeRefs(internalRef, ref);
 
   const { inputProps } = useCheckbox(
     props as AriaCheckboxProps,
     state,
-    mergedRef as React.RefObject<HTMLInputElement>
+    mergedRef as unknown as React.RefObject<HTMLInputElement>
   );
 
   const { hasError, helpText, required, disabled, indeterminate, children } =
@@ -42,7 +42,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
       helpText={helpText}
       hasError={hasError}
       {...interactionProps}>
-      <VisuallyHidden as="div">
+      <VisuallyHidden>
         <input {...inputProps} ref={mergedRef} />
       </VisuallyHidden>
       <CheckboxControl

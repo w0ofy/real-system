@@ -16,7 +16,7 @@ import { CheckboxGroupItem } from './CheckboxGroupItem';
 
 type CheckboxGroupProps = AriaCheckboxGroupProps &
   CustomProps &
-  Omit<ValidationProps, 'warningMessage'>;
+  Omit<ValidationProps, 'warningMessage' | 'readonly'>;
 
 export interface CheckboxGroupComponent
   extends React.ForwardRefExoticComponent<CheckboxGroupProps> {

@@ -5,7 +5,7 @@ import { useInteractions } from '@real-system/a11y-library';
 import type { AriakitRadioProps } from '@real-system/ariakit-library';
 import { AriakitRadio } from '@real-system/ariakit-library';
 import { Text } from '@real-system/typography';
-import { useMergedRef } from '@real-system/utils-library';
+import { useMergeRefs } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { RadioControl, RadioLabel } from './components';
@@ -29,7 +29,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
   const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
     useInteractions({ disabled });
   const internalRef = useRef<HTMLInputElement>(null);
-  const mergedRef = useMergedRef(internalRef, ref);
+  const mergedRef = useMergeRefs(internalRef, ref);
 
   return (
     <Text.Label

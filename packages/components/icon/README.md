@@ -27,14 +27,14 @@ $ yarn add @real-system/icon
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { Button } from '@real-system/icon';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Button>Button</Button>
-    </ThemeProvider>
+    </RealSystemProvider>
   );
 };
 ```

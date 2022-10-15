@@ -25,12 +25,12 @@ $ yarn add @real-system/typography
 ### Code Example
 
 ```jsx
-import { ThemeProvider } from '@real-system/styled-library';
+import { RealSystemProvider } from '@real-system/styled-library';
 import { Text } from '@real-system/typography';
 
 const MyComponent = () => {
   return (
-    <ThemeProvider>
+    <RealSystemProvider>
       <Text>Body text</Text>
       <Text.Base>Base (low-level) text</Text.Base>
       <Text.Code>Code text</Text.Code>
@@ -46,7 +46,7 @@ const MyComponent = () => {
           Truncate long text to fit container
         </Text.Truncate>
       </Text>
-    </ThemeProvider>
+    </RealSystemProvider>
   );
 };
 ```
