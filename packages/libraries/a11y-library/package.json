@@ -37,7 +37,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@react-aria/checkbox": "^3.5.1",
+    "@react-aria/checkbox": "^3.6.0",
     "@react-aria/focus": "^3.8.0",
     "@react-aria/interactions": "^3.11.0",
     "@react-aria/radio": "^3.3.1",
