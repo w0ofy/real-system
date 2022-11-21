@@ -5341,12 +5341,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-types/radio@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "@react-types/radio@npm:3.3.1"
+  dependencies:
+    "@react-types/shared": ^3.16.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: d3d53145e44e695477f16dac9efda91cf547ca2489d01fe80813065fae2b231d6ad6faea83cf525d2e08de4b0bdbdeca358ad0670bb0f6f8c284945166147913
+  languageName: node
+  linkType: hard
+
 "@react-types/shared@npm:^3.14.1":
   version: 3.14.1
   resolution: "@react-types/shared@npm:3.14.1"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
   checksum: 117fe230f5a26b7fcaf535c1cfb7c4d42416b0f49d0e0b3436fef2a5851234967908c4e884fc5f2a99a04bee2543543348346a04e1f3f45aaa14c42b6f08491a
+  languageName: node
+  linkType: hard
+
+"@react-types/shared@npm:^3.16.0":
+  version: 3.16.0
+  resolution: "@react-types/shared@npm:3.16.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 3bb3aa77f4938fcd7788c5c5abf24f8f3d3c034d555962e44202d09673844cbb31d7b280edc9ac432bdd06847bc253527f8946f2604b9c88d5fcb96fdc56fbd1
   languageName: node
   linkType: hard
 
@@ -5375,7 +5395,7 @@ __metadata:
     "@react-stately/radio": ^3.5.1
     "@react-stately/toggle": ^3.4.1
     "@react-types/checkbox": ^3.3.3
-    "@react-types/radio": ^3.2.3
+    "@react-types/radio": ^3.3.1
     "@react-types/shared": ^3.14.1
     concurrently: ^7.4.0
     react: ^18.2.0
