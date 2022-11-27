@@ -47,11 +47,11 @@ export class DescendantsManager<
     if (nodeOrOptions == null) return;
 
     if (isElement(nodeOrOptions)) {
-      return this.registerNode(nodeOrOptions);
+      return this.registerNode(nodeOrOptions as any);
     }
 
     return (node: T | null) => {
-      this.registerNode(node, nodeOrOptions);
+      this.registerNode(node, nodeOrOptions as any);
     };
   };
 

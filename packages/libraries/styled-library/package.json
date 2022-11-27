@@ -37,16 +37,16 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.0",
     "@emotion/memoize": "^0.8.0",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@emotion/use-insertion-effect-with-fallbacks": "^1.0.0",
     "polished": "^4.2.2"
   },
   "devDependencies": {
     "@real-system/utils-library": "^0.0.29",
-    "concurrently": "^7.4.0",
+    "concurrently": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.3"
   }
 }

@@ -16,16 +16,20 @@ type InternalSelectProps = { state: SelectState };
 type SelectProps = {
   onChange?: SelectStateProps['setValue'];
   label?: React.ReactNode;
-} & Pick<
-  SelectStateProps,
-  | 'defaultValue'
-  | 'defaultOpen'
-  | 'flip'
-  | 'setValue'
-  | 'value'
-  | 'open'
-  | 'sameWidth'
-  | 'placement'
+} & Partial<
+  
+  Pick  <
+    SelectStateProps,
+      | 'defaultValue'
+      | 'defaultOpen'
+      | 'flip'
+      | 'setValue'
+      | 'value'
+      | 'open'
+      | 'sameWidth'
+      | 'placement'
+    >
+
 > &
   StylishProps &
   RealSystemChildrenProp &
