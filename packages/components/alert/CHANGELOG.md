@@ -1,5 +1,20 @@
 # @real-system/alert
 
+## 0.0.42
+
+### Patch Changes
+
+- [#620](https://github.com/bigwoof91/real-system/pull/620) [`f8c65116`](https://github.com/bigwoof91/real-system/commit/f8c65116bdd25aec01f60b0b1c5d115ae263ff1e) Thanks [@bigwoof91](https://github.com/bigwoof91)! - bumping all project deps
+
+- Updated dependencies [[`f8c65116`](https://github.com/bigwoof91/real-system/commit/f8c65116bdd25aec01f60b0b1c5d115ae263ff1e), [`1e1e3bb4`](https://github.com/bigwoof91/real-system/commit/1e1e3bb471530cdca7289cb8fa01022cc0826299)]:
+  - @real-system/button@0.0.58
+  - @real-system/flex@0.0.49
+  - @real-system/icon@0.0.56
+  - @real-system/typography@0.0.57
+  - @real-system/styled-library@0.0.18
+  - @real-system/utils-library@0.0.30
+  - @real-system/alert-primitive@0.0.19
+
 ## 0.0.41
 
 ### Patch Changes

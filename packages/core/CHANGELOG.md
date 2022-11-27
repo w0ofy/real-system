@@ -1,5 +1,61 @@
 # @real-system/core
 
+## 0.0.61
+
+### Patch Changes
+
+- [#620](https://github.com/bigwoof91/real-system/pull/620) [`f8c65116`](https://github.com/bigwoof91/real-system/commit/f8c65116bdd25aec01f60b0b1c5d115ae263ff1e) Thanks [@bigwoof91](https://github.com/bigwoof91)! - bumping all project deps
+
+- [#598](https://github.com/bigwoof91/real-system/pull/598) [`1e1e3bb4`](https://github.com/bigwoof91/real-system/commit/1e1e3bb471530cdca7289cb8fa01022cc0826299) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Add switch component package and rename ThemeProvider to RealSystemProvider
+
+- Updated dependencies [[`f8c65116`](https://github.com/bigwoof91/real-system/commit/f8c65116bdd25aec01f60b0b1c5d115ae263ff1e), [`1e1e3bb4`](https://github.com/bigwoof91/real-system/commit/1e1e3bb471530cdca7289cb8fa01022cc0826299)]:
+  - @real-system/accordion@0.0.13
+  - @real-system/alert@0.0.42
+  - @real-system/aspect-ratio@0.0.28
+  - @real-system/badge@0.0.26
+  - @real-system/box@0.0.30
+  - @real-system/button@0.0.58
+  - @real-system/checkbox@0.0.43
+  - @real-system/dialog@0.0.50
+  - @real-system/disclosure@0.0.13
+  - @real-system/field@0.0.35
+  - @real-system/flex@0.0.49
+  - @real-system/icon@0.0.56
+  - @real-system/input@0.0.56
+  - @real-system/link@0.0.27
+  - @real-system/menu@0.0.29
+  - @real-system/pin-input@0.0.22
+  - @real-system/popover@0.0.33
+  - @real-system/radio-group@0.0.36
+  - @real-system/select@0.0.24
+  - @real-system/separator@0.0.25
+  - @real-system/spinner@0.0.54
+  - @real-system/stack@0.0.16
+  - @real-system/switch@0.0.1
+  - @real-system/textarea@0.0.40
+  - @real-system/toaster@0.0.41
+  - @real-system/tooltip@0.0.34
+  - @real-system/typography@0.0.57
+  - @real-system/visually-hidden@0.0.52
+  - @real-system/a11y-library@0.0.15
+  - @real-system/animation-library@0.0.20
+  - @real-system/ariakit-library@0.0.21
+  - @real-system/descendants-library@0.0.13
+  - @real-system/state-library@0.0.19
+  - @real-system/styled-library@0.0.18
+  - @real-system/utils-library@0.0.30
+  - @real-system/alert-primitive@0.0.19
+  - @real-system/button-primitive@0.0.42
+  - @real-system/dialog-primitive@0.0.31
+  - @real-system/disclosure-primitive@0.0.10
+  - @real-system/elements-primitive@0.0.20
+  - @real-system/menu-primitive@0.0.16
+  - @real-system/popover-primitive@0.0.16
+  - @real-system/portal-primitive@0.0.19
+  - @real-system/select-primitive@0.0.16
+  - @real-system/separator-primitive@0.0.16
+  - @real-system/tooltip-primitive@0.0.16
+
 ## 0.0.60
 
 ### Patch Changes

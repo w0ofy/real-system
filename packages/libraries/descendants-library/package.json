@@ -1,6 +1,6 @@
 {
   "name": "@real-system/descendants-library",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Descendant node element manager for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,14 +30,14 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/state-library": "^0.0.18",
-    "@real-system/utils-library": "^0.0.29",
+    "@real-system/state-library": "^0.0.19",
+    "@real-system/utils-library": "^0.0.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/state-library": "^0.0.18",
-    "@real-system/utils-library": "^0.0.29",
+    "@real-system/state-library": "^0.0.19",
+    "@real-system/utils-library": "^0.0.30",
     "concurrently": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

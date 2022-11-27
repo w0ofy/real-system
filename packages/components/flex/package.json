@@ -1,6 +1,6 @@
 {
   "name": "@real-system/flex",
-  "version": "0.0.48",
+  "version": "0.0.49",
   "description": "Flex layout component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -29,16 +29,16 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/elements-primitive": "^0.0.19",
-    "@real-system/styled-library": "^0.0.17",
-    "@real-system/utils-library": "^0.0.29",
+    "@real-system/elements-primitive": "^0.0.20",
+    "@real-system/styled-library": "^0.0.18",
+    "@real-system/utils-library": "^0.0.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/elements-primitive": "^0.0.19",
-    "@real-system/styled-library": "^0.0.17",
-    "@real-system/utils-library": "^0.0.29",
+    "@real-system/elements-primitive": "^0.0.20",
+    "@real-system/styled-library": "^0.0.18",
+    "@real-system/utils-library": "^0.0.30",
     "concurrently": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
