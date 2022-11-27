@@ -50,6 +50,12 @@ module.exports = {
     ];
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
+      '@reach/utils': '@reach/utils/dist/reach-utils.cjs',
+      '@reach/dialog': '@reach/dialog/dist/reach-dialog.cjs',
+      '@reach/alert': '@reach/alert/dist/reach-alert.cjs',
+      '@reach/portal': '@reach/portal/dist/reach-portal.cjs',
+      '@reach/visually-hidden':
+        '@reach/visually-hidden/dist/reach-visually-hidden.cjs',
       '@emotion/core': '@emotion/react',
       '@emotion/styled': '@emotion/styled',
       'emotion-theming': '@emotion/react',
