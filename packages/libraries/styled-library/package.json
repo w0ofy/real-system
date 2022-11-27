@@ -1,6 +1,6 @@
 {
   "name": "@real-system/styled-library",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Styled system for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/utils-library": "^0.0.29",
+    "@real-system/utils-library": "^0.0.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -43,7 +43,7 @@
     "polished": "^4.2.2"
   },
   "devDependencies": {
-    "@real-system/utils-library": "^0.0.29",
+    "@real-system/utils-library": "^0.0.30",
     "concurrently": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
