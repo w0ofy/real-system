@@ -20,8 +20,8 @@ import { styleProps } from '../config';
 
 const STYLE_PROPS = Object.keys(styleProps) as StylePropNames[];
 
-const isStyleProp = (prop: PropertyKey) => !!styleProps[prop];
-const isNotStyleProp = (prop: PropertyKey) => !styleProps[prop];
+const isStyleProp = (prop: PropertyKey) => prop in styleProps;
+const isNotStyleProp = (prop: PropertyKey) => !(prop in styleProps);
 
 export type {
   AnimationProps,
