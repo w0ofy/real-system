@@ -17,19 +17,17 @@ type SelectProps = {
   onChange?: SelectStateProps['setValue'];
   label?: React.ReactNode;
 } & Partial<
-  
-  Pick  <
+  Pick<
     SelectStateProps,
-      | 'defaultValue'
-      | 'defaultOpen'
-      | 'flip'
-      | 'setValue'
-      | 'value'
-      | 'open'
-      | 'sameWidth'
-      | 'placement'
-    >
-
+    | 'defaultValue'
+    | 'defaultOpen'
+    | 'flip'
+    | 'setValue'
+    | 'value'
+    | 'open'
+    | 'sameWidth'
+    | 'placement'
+  >
 > &
   StylishProps &
   RealSystemChildrenProp &

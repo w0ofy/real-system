@@ -5725,6 +5725,7 @@ __metadata:
     "@real-system/stack": ^0.0.15
     "@real-system/state-library": ^0.0.18
     "@real-system/styled-library": ^0.0.17
+    "@real-system/switch": ^0.0.0
     "@real-system/textarea": ^0.0.39
     "@real-system/toaster": ^0.0.40
     "@real-system/tooltip": ^0.0.33
@@ -6299,7 +6300,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@real-system/switch@workspace:packages/components/switch":
+"@real-system/switch@^0.0.0, @real-system/switch@workspace:packages/components/switch":
   version: 0.0.0-use.local
   resolution: "@real-system/switch@workspace:packages/components/switch"
   dependencies:

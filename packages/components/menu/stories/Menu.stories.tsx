@@ -141,7 +141,7 @@ export const RadioMenu = () => {
           Sort by: {values.sortBy}
         </Menu.Button>
         <Menu.List>
-          <Menu.Item.Radio name="" value="name">
+          <Menu.Item.Radio name="sortBy" value="name">
             Name
           </Menu.Item.Radio>
           <Menu.Item.Radio name="sortBy" value="description">
