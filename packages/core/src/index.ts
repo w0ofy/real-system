@@ -30,6 +30,7 @@ export * from '@real-system/separator';
 export * from '@real-system/separator-primitive';
 export * from '@real-system/spinner';
 export * from '@real-system/stack';
+export * from '@real-system/switch';
 export * from '@real-system/textarea';
 export * from '@real-system/toaster';
 export * from '@real-system/tooltip';

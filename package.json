@@ -32,6 +32,7 @@
     "___________QUALITY___________": "code quality and maintenance",
     "lint": "eslint \"packages/**/*.{ts,tsx,mdx}\"",
     "lint:fix": "yarn lint --fix",
+    "typecheck": "yarn workspaces foreach --topological-dev run types --noEmit --emitDeclarationOnly false",
     "precise-commits": "precise-commits",
     "pkgs:check": "manypkg check",
     "pkgs:fix": "manypkg fix",

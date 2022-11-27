@@ -38,7 +38,7 @@ const makeDividerStyles = ({
   borderColor,
   borderWidth,
   borderStyle,
-}: SeparatorProps): DividerStyles => ({
+}: Partial<SeparatorProps>): DividerStyles => ({
   vertical: {
     borderLeftWidth: borderWidth || '1px',
     width: 0,
