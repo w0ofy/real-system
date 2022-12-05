@@ -88,7 +88,7 @@
     "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/jest": "^11.10.5",
     "@manypkg/cli": "^0.19.2",
-    "@storybook/addon-a11y": "^6.5.13",
+    "@storybook/addon-a11y": "^6.5.14",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
