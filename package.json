@@ -149,7 +149,7 @@
     "rimraf": "^3.0.2",
     "semver": "^7.3.8",
     "storybook-addon-performance": "^0.16.1",
-    "storybook-addon-playroom": "3.0.1",
+    "storybook-addon-playroom": "3.0.2",
     "terser": "^5.15.1",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
