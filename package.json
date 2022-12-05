@@ -117,7 +117,7 @@
     "commitizen": "^4.2.5",
     "concurrently": "^7.6.0",
     "directory-named-webpack-plugin": "^4.0.1",
-    "esbuild": "^0.15.15",
+    "esbuild": "^0.15.18",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^27.1.6",
