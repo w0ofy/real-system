@@ -40,6 +40,6 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "ariakit": "2.0.0-next.41"
+    "ariakit": "2.0.0-next.42"
   }
 }
