@@ -5710,7 +5710,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
-    ariakit: 2.0.0-next.42
+    ariakit: 2.0.0-next.41
     concurrently: ^7.6.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -10853,36 +10853,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit-react-utils@npm:0.17.0-next.27":
-  version: 0.17.0-next.27
-  resolution: "ariakit-react-utils@npm:0.17.0-next.27"
-  dependencies:
-    ariakit-utils: 0.17.0-next.27
+"ariakit-utils@npm:0.17.0-next.26":
+  version: 0.17.0-next.26
+  resolution: "ariakit-utils@npm:0.17.0-next.26"
   peerDependencies:
-    "@types/react": ^17.0.0 || ^18.0.0
     react: ^17.0.0 || ^18.0.0
-  checksum: c387969eecd71cd4199fa9eef35b9b758a96be51ad71dd502aa7187f57589bd0c840d8b9ae83d08f20e7c9539598b24ccf5adc1164e9c0ad40954b019e04edde
+  checksum: dc41a324c74561dfc6afa6037ac4227b06f73a16336d670285392d630bab42d259269ca1afe1c05cc3d5b2bdbc941a518053ba7427edec60080bd8bb3dffd226
   languageName: node
   linkType: hard
 
-"ariakit-utils@npm:0.17.0-next.27":
-  version: 0.17.0-next.27
-  resolution: "ariakit-utils@npm:0.17.0-next.27"
-  checksum: 65a859375144a997660b7f2d9c58c8d344aa5b81ae72feba3138e9a1c16b4ec01d607fd5955760042abfd6042695ba20c6395dc694a7a9d244ac9f0b4cbc6590
-  languageName: node
-  linkType: hard
-
-"ariakit@npm:2.0.0-next.42":
-  version: 2.0.0-next.42
-  resolution: "ariakit@npm:2.0.0-next.42"
+"ariakit@npm:2.0.0-next.41":
+  version: 2.0.0-next.41
+  resolution: "ariakit@npm:2.0.0-next.41"
   dependencies:
     "@floating-ui/dom": ^1.0.0
-    ariakit-react-utils: 0.17.0-next.27
-    ariakit-utils: 0.17.0-next.27
+    ariakit-utils: 0.17.0-next.26
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 19aaac6d1551eb4496bdad5f6165948e100a58a64c72bade5711bddf8c7d9b1b833c4da7508c829274df954187a526cb74972e1aff36f3e0b43cf7d488f2716b
+  checksum: a0384dbc4e44211f31e7347a9613a02e98965d4f675bda0a0d9ce002adfe7921abe1b1f77a56569cec93750feb05fd28809adf959006df145b679b94e143786d
   languageName: node
   linkType: hard
 
