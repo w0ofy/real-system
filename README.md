@@ -125,4 +125,3 @@ Real System uses the following projects which drive the majority of component co
 - [rollupjs](https://rollupjs.org/guide/en/)
 - [babel](https://babeljs.io/)
 - [storybook](https://storybook.js.org/)
-- [playroom](https://github.com/seek-oss/playroom)
