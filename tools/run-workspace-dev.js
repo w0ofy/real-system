@@ -87,7 +87,6 @@ const getAdditionalScripts = () => {
  *    yarn workspace @real-system/styled-library dev
  *    yarn workspace @real-system/utils-library dev
  *    yarn:storybook
- *    yarn:playroom
  * ```
  * * run ONLY certain packages
  * ```
@@ -96,7 +95,6 @@ const getAdditionalScripts = () => {
  * output:
  *    yarn workspace @real-system/box dev
  *    yarn:storybook
- *    yarn:playroom
  * ```
  * * SELECT certain packages to run
  * ```

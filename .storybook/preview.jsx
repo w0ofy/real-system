@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { withPerformance } from 'storybook-addon-performance';
 import {
   themes,
   RealSystemProvider,
 } from '../packages/libraries/styled-library/src/index';
-
-const isProduction = process.env.NODE_ENV === 'production';
 
 export const globalTypes = {
   theme: {
@@ -26,13 +23,13 @@ export const globalTypes = {
 export const decorators = [
   (Story, context) => {
     const theme = themes[context.globals.theme || 'realSystem'];
+    console.log(theme);
     return (
       <RealSystemProvider theme={theme}>
         <Story />
       </RealSystemProvider>
     );
   },
-  withPerformance,
 ];
 
 export const parameters = {
@@ -61,17 +58,7 @@ export const parameters = {
     as: { table: { disable: true } },
     forwardedAs: { table: { disable: true } },
   },
-  actions: { argTypesRegex: '^on[A-Z].*' },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-  },
-  playroom: {
-    url: isProduction ? '/playroom/' : undefined,
-    disable: true,
-  },
-  previewTabs: {
-    'storybook/playroom/panel': {
-      hidden: true,
-    },
   },
 };

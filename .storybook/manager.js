@@ -11,7 +11,7 @@ export const managerConfig = {
   hierarchyRootSeparator: /\|/,
   enableShortcuts: true,
   sidebar: {
-    // collapsedRoots: [],
+    collapsedRoots: [],
   },
   theme: create({
     ...themes.light,
