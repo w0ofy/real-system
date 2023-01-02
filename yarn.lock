@@ -6998,7 +6998,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/client-logger@npm:7.0.0-beta.19, @storybook/client-logger@npm:next":
+"@storybook/client-logger@npm:7.0.0-beta.19":
   version: 7.0.0-beta.19
   resolution: "@storybook/client-logger@npm:7.0.0-beta.19"
   dependencies:
@@ -7529,19 +7529,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/testing-library@npm:^0.0.14-next.1":
-  version: 0.0.14-next.1
-  resolution: "@storybook/testing-library@npm:0.0.14-next.1"
-  dependencies:
-    "@storybook/client-logger": next
-    "@storybook/instrumenter": next
-    "@testing-library/dom": ^8.3.0
-    "@testing-library/user-event": ^13.2.1
-    ts-dedent: ^2.2.0
-  checksum: b61885f05ecfc6c6eae497ebb9adba2ccbb47db6c4d83fa86294985df16622d9eb6a1376fbe4db2c25e3c28a6f9d7a2f0b1b77de20cbe09961cd8ffdd071549c
-  languageName: node
-  linkType: hard
-
 "@storybook/theming@npm:6.5.6":
   version: 6.5.6
   resolution: "@storybook/theming@npm:6.5.6"
@@ -7744,7 +7731,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^8.3.0, @testing-library/dom@npm:^8.5.0":
+"@testing-library/dom@npm:^8.5.0":
   version: 8.13.0
   resolution: "@testing-library/dom@npm:8.13.0"
   dependencies:
@@ -7827,17 +7814,6 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
   checksum: 51ec548c1fdb1271089a5c63e0908f0166f2c7fcd9cacd3108ebbe0ce64cb4351812d885892020dc37608418cfb15698514856502b3cab0e5cc58d6cc1bd4a3e
-  languageName: node
-  linkType: hard
-
-"@testing-library/user-event@npm:^13.2.1":
-  version: 13.5.0
-  resolution: "@testing-library/user-event@npm:13.5.0"
-  dependencies:
-    "@babel/runtime": ^7.12.5
-  peerDependencies:
-    "@testing-library/dom": ">=7.21.4"
-  checksum: 16319de685fbb7008f1ba667928f458b2d08196918002daca56996de80ef35e6d9de26e9e1ece7d00a004692b95a597cf9142fff0dc53f2f51606a776584f549
   languageName: node
   linkType: hard
 
@@ -18526,7 +18502,6 @@ __metadata:
     "@storybook/preview-web": ^7.0.0-beta.19
     "@storybook/react": ^7.0.0-beta.19
     "@storybook/react-vite": ^7.0.0-beta.19
-    "@storybook/testing-library": ^0.0.14-next.1
     "@testing-library/dom": ^8.19.1
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0

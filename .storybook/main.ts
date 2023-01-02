@@ -30,6 +30,7 @@ const config: StorybookConfig = {
       },
     });
   },
+  staticDirs: ['./static'],
   core: {
     disableTelemetry: true,
     builder: '@storybook/builder-vite', // 👈 The builder enabled here.
@@ -41,10 +42,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  features: {
-    storyStoreV7: true,
-  },
-
+  // features: {},
   typescript: {
     check: true,
   },

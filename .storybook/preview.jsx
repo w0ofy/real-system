@@ -23,7 +23,6 @@ export const globalTypes = {
 export const decorators = [
   (Story, context) => {
     const theme = themes[context.globals.theme || 'realSystem'];
-    console.log(theme);
     return (
       <RealSystemProvider theme={theme}>
         <Story />
