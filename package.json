@@ -55,7 +55,7 @@
     "build:js": "yarn workspaces foreach --topological-dev run build:js",
     "build:core": "yarn workspace @real-system/core run build",
     "build:pkg": "node tools/build-package.js",
-    "build:storybook": "storybook build -o ./storybook -c .storybook -s .storybook/static",
+    "build:storybook": "storybook build --no-manager-cache -o ./storybook -c .storybook -s .storybook/static",
     "___________DEVELOPMENT___________": "dev scripts",
     "bootstrap": "yarn && husky install",
     "dev": "node ./tools/run-workspace-dev --select=true --with=yarn:storybook",
