@@ -12,6 +12,7 @@ const config: StorybookConfig = {
   async viteFinal(config, options) {
     return mergeConfig(config, {
       resolve: {
+        mainFields: ['main:dev'],
         alias: {
           '@emotion/react': path.resolve(
             path.join(__dirname, '../node_modules/@emotion/react')
