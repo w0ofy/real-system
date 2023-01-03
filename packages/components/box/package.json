@@ -1,6 +1,6 @@
 {
   "name": "@real-system/box",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "A flexible div for building layouts in Real System.",
   "status": "production",
   "main": "lib/index.js",
@@ -31,14 +31,14 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/styled-library": "^0.0.18",
-    "@real-system/utils-library": "^0.0.30",
+    "@real-system/styled-library": "^0.0.19",
+    "@real-system/utils-library": "^0.0.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/styled-library": "^0.0.18",
-    "@real-system/utils-library": "^0.0.30",
+    "@real-system/styled-library": "^0.0.19",
+    "@real-system/utils-library": "^0.0.31",
     "concurrently": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

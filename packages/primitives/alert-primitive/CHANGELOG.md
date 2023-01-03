@@ -1,5 +1,11 @@
 # @real-system/alert-primitive
 
+## 0.0.20
+
+### Patch Changes
+
+- [#633](https://github.com/bigwoof91/real-system/pull/633) [`090e44fd`](https://github.com/bigwoof91/real-system/commit/090e44fd5171bde3b7150fbf2922ee2f8e98c109) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Bump infra and package dependencies
+
 ## 0.0.19
 
 ### Patch Changes
