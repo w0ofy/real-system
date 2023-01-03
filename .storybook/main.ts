@@ -9,10 +9,10 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
   ],
-  async viteFinal(config, options) {
+  async viteFinal(config, _options) {
     return mergeConfig(config, {
       resolve: {
-        mainFields: ['main:dev'],
+        mainFields: ['main:dev', 'main', 'module'],
         alias: {
           '@emotion/react': path.resolve(
             path.join(__dirname, '../node_modules/@emotion/react')
