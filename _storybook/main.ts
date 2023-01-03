@@ -23,7 +23,8 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   features: {
-    storyStoreV7: true,
+    /** @todo make `true` and fix chunks */
+    storyStoreV7: false,
   },
   typescript: {
     check: true,
@@ -31,7 +32,7 @@ const config: StorybookConfig = {
   async viteFinal(config, _options) {
     return mergeConfig(config, {
       resolve: {
-        mainFields: ['main:dev', 'browser', 'main', 'module'],
+        mainFields: ['main:dev', 'main', 'module'],
         alias: {
           '@emotion/react': path.resolve(
             path.join(__dirname, '../node_modules/@emotion/react')

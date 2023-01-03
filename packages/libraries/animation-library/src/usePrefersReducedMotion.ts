@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const REDUCE_QUERY = '(prefers-reduced-motion: reduce)';
 
-export const isRenderingOnServer = (() => {
+const isRenderingOnServer = () => {
   if (
     typeof window == 'undefined' ||
     !window.location ||
@@ -15,7 +15,7 @@ export const isRenderingOnServer = (() => {
     return true;
   }
   return false;
-})();
+};
 
 const getMediaQueryList = (): {
   matches: boolean;
@@ -24,7 +24,7 @@ const getMediaQueryList = (): {
   // eslint-disable-next-line @typescript-eslint/ban-types
   removeListener: Function;
 } => {
-  if (isRenderingOnServer) {
+  if (isRenderingOnServer()) {
     return {
       matches: true, // When SSR, true === disable animations
       // eslint-disable-next-line @typescript-eslint/no-empty-function
