@@ -60,7 +60,7 @@ const InputElement = forwardRef<HTMLInputElement, InputProps>(
         id={props.id}
         name={props.name}
         placeholder={props.placeholder}
-        readonly={props.readonly}
+        readOnly={props.readonly}
         required={props.required}
         value={props.value}
         {...spreadStyleProps(props, {

@@ -43,8 +43,7 @@
       ".jest",
       ".husky",
       ".github",
-      ".storybook",
-      "storybook",
+      ".storybook/dist",
       "**/stories",
       ".vscode",
       "packages/core"
