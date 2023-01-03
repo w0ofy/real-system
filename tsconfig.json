@@ -8,6 +8,7 @@
     "node_modules",
     "**/node_modules",
     "lib",
+    "dist",
     "**/lib",
     "tools/templates"
   ],
@@ -43,7 +44,7 @@
       ".jest",
       ".husky",
       ".github",
-      ".storybook/dist",
+      "_storybook/dist",
       "**/stories",
       ".vscode",
       "packages/core"

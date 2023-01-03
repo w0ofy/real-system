@@ -8,7 +8,7 @@
   - .changeset/**/*
   - .github/**/*
   - .husky/**/*
-  - .storybook/**/*
+  - _storybook/**/*
   - .vscode/**/*
   - tools/**/*
   - package.json
@@ -32,7 +32,7 @@
 # docs
 'type: storybook':
   - packages/**/stories/**/*
-  - .storybook/**/*
+  - _storybook/**/*
 
 # tests
 'type: test':
