@@ -1,5 +1,19 @@
 # @real-system/pin-input
 
+## 0.0.23
+
+### Patch Changes
+
+- [#633](https://github.com/bigwoof91/real-system/pull/633) [`090e44fd`](https://github.com/bigwoof91/real-system/commit/090e44fd5171bde3b7150fbf2922ee2f8e98c109) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Bump infra and package dependencies
+
+- Updated dependencies [[`090e44fd`](https://github.com/bigwoof91/real-system/commit/090e44fd5171bde3b7150fbf2922ee2f8e98c109)]:
+  - @real-system/descendants-library@0.0.14
+  - @real-system/elements-primitive@0.0.21
+  - @real-system/styled-library@0.0.19
+  - @real-system/state-library@0.0.20
+  - @real-system/utils-library@0.0.31
+  - @real-system/input@0.0.57
+
 ## 0.0.22
 
 ### Patch Changes

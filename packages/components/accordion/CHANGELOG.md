@@ -1,5 +1,17 @@
 # @real-system/accordion
 
+## 0.0.14
+
+### Patch Changes
+
+- [#633](https://github.com/bigwoof91/real-system/pull/633) [`090e44fd`](https://github.com/bigwoof91/real-system/commit/090e44fd5171bde3b7150fbf2922ee2f8e98c109) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Bump infra and package dependencies
+
+- Updated dependencies [[`090e44fd`](https://github.com/bigwoof91/real-system/commit/090e44fd5171bde3b7150fbf2922ee2f8e98c109)]:
+  - @real-system/styled-library@0.0.19
+  - @real-system/utils-library@0.0.31
+  - @real-system/a11y-library@0.0.16
+  - @real-system/disclosure@0.0.14
+
 ## 0.0.13
 
 ### Patch Changes
