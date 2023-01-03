@@ -42,7 +42,9 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  // features: {},
+  features: {
+    storyStoreV7: false,
+  },
   typescript: {
     check: true,
   },
