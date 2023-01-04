@@ -1,5 +1,12 @@
 # @real-system/accordion
 
+## 0.0.15
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/disclosure@0.0.15
+
 ## 0.0.14
 
 ### Patch Changes

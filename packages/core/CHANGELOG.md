@@ -1,5 +1,34 @@
 # @real-system/core
 
+## 0.0.63
+
+### Patch Changes
+
+- [#641](https://github.com/bigwoof91/real-system/pull/641) [`fd804433`](https://github.com/bigwoof91/real-system/commit/fd804433237971b31ca8543d85da9c79937adfd1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - bump ariakit pkg
+
+- Updated dependencies [[`fd804433`](https://github.com/bigwoof91/real-system/commit/fd804433237971b31ca8543d85da9c79937adfd1)]:
+  - @real-system/ariakit-library@0.0.23
+  - @real-system/radio-group@0.0.38
+  - @real-system/switch@0.0.3
+  - @real-system/button-primitive@0.0.44
+  - @real-system/disclosure-primitive@0.0.12
+  - @real-system/menu-primitive@0.0.18
+  - @real-system/popover-primitive@0.0.18
+  - @real-system/select-primitive@0.0.18
+  - @real-system/separator-primitive@0.0.18
+  - @real-system/tooltip-primitive@0.0.18
+  - @real-system/button@0.0.60
+  - @real-system/disclosure@0.0.15
+  - @real-system/menu@0.0.31
+  - @real-system/popover@0.0.35
+  - @real-system/select@0.0.26
+  - @real-system/separator@0.0.27
+  - @real-system/tooltip@0.0.36
+  - @real-system/alert@0.0.44
+  - @real-system/dialog@0.0.52
+  - @real-system/accordion@0.0.15
+  - @real-system/toaster@0.0.43
+
 ## 0.0.62
 
 ### Patch Changes

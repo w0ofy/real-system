@@ -1,6 +1,6 @@
 {
   "name": "@real-system/dialog",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "description": "Dialog component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/animation-library": "^0.0.21",
-    "@real-system/button": "^0.0.59",
+    "@real-system/button": "^0.0.60",
     "@real-system/dialog-primitive": "^0.0.32",
     "@real-system/elements-primitive": "^0.0.21",
     "@real-system/flex": "^0.0.50",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@real-system/animation-library": "^0.0.21",
-    "@real-system/button": "^0.0.59",
+    "@real-system/button": "^0.0.60",
     "@real-system/dialog-primitive": "^0.0.32",
     "@real-system/elements-primitive": "^0.0.21",
     "@real-system/flex": "^0.0.50",

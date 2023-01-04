@@ -1,5 +1,13 @@
 # @real-system/popover
 
+## 0.0.35
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/popover-primitive@0.0.18
+  - @real-system/button@0.0.60
+
 ## 0.0.34
 
 ### Patch Changes

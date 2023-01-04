@@ -1,5 +1,12 @@
 # @real-system/select
 
+## 0.0.26
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/select-primitive@0.0.18
+
 ## 0.0.25
 
 ### Patch Changes

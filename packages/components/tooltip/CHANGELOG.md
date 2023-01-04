@@ -1,5 +1,12 @@
 # @real-system/tooltip
 
+## 0.0.36
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/tooltip-primitive@0.0.18
+
 ## 0.0.35
 
 ### Patch Changes
