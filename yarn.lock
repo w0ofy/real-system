@@ -5383,7 +5383,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
-    ariakit: 2.0.0-next.42
+    ariakit: 2.0.0-next.43
     concurrently: ^7.6.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -9085,9 +9085,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-next.42":
-  version: 2.0.0-next.42
-  resolution: "ariakit@npm:2.0.0-next.42"
+"ariakit@npm:2.0.0-next.43":
+  version: 2.0.0-next.43
+  resolution: "ariakit@npm:2.0.0-next.43"
   dependencies:
     "@floating-ui/dom": ^1.0.0
     ariakit-react-utils: 0.17.0-next.27
@@ -9095,7 +9095,7 @@ __metadata:
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 19aaac6d1551eb4496bdad5f6165948e100a58a64c72bade5711bddf8c7d9b1b833c4da7508c829274df954187a526cb74972e1aff36f3e0b43cf7d488f2716b
+  checksum: 7dc3a6914c89a296fc8c4a8372dc4f87bd67252ae065dd33869ac0349f781b5bbd6a9ef2cbedacf4646502650f4ff89083aa656689d22d919fa120d849847aaf
   languageName: node
   linkType: hard
 
