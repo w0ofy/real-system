@@ -1,5 +1,59 @@
 # @real-system/core
 
+## 0.0.64
+
+### Patch Changes
+
+- [#646](https://github.com/bigwoof91/real-system/pull/646) [`1ffd4579`](https://github.com/bigwoof91/real-system/commit/1ffd457957d8939682b372ff92e7e58d3b93986a) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade tooling deps
+
+- Updated dependencies [[`1ffd4579`](https://github.com/bigwoof91/real-system/commit/1ffd457957d8939682b372ff92e7e58d3b93986a)]:
+  - @real-system/accordion@0.0.16
+  - @real-system/alert@0.0.45
+  - @real-system/aspect-ratio@0.0.30
+  - @real-system/badge@0.0.28
+  - @real-system/box@0.0.32
+  - @real-system/button@0.0.61
+  - @real-system/checkbox@0.0.45
+  - @real-system/dialog@0.0.53
+  - @real-system/disclosure@0.0.16
+  - @real-system/field@0.0.37
+  - @real-system/flex@0.0.51
+  - @real-system/icon@0.0.58
+  - @real-system/input@0.0.58
+  - @real-system/link@0.0.29
+  - @real-system/menu@0.0.32
+  - @real-system/pin-input@0.0.24
+  - @real-system/popover@0.0.36
+  - @real-system/radio-group@0.0.39
+  - @real-system/select@0.0.27
+  - @real-system/separator@0.0.28
+  - @real-system/spinner@0.0.56
+  - @real-system/stack@0.0.18
+  - @real-system/switch@0.0.4
+  - @real-system/textarea@0.0.42
+  - @real-system/toaster@0.0.44
+  - @real-system/tooltip@0.0.37
+  - @real-system/typography@0.0.59
+  - @real-system/visually-hidden@0.0.54
+  - @real-system/a11y-library@0.0.17
+  - @real-system/animation-library@0.0.22
+  - @real-system/ariakit-library@0.0.24
+  - @real-system/descendants-library@0.0.15
+  - @real-system/state-library@0.0.21
+  - @real-system/styled-library@0.0.20
+  - @real-system/utils-library@0.0.32
+  - @real-system/alert-primitive@0.0.21
+  - @real-system/button-primitive@0.0.45
+  - @real-system/dialog-primitive@0.0.33
+  - @real-system/disclosure-primitive@0.0.13
+  - @real-system/elements-primitive@0.0.22
+  - @real-system/menu-primitive@0.0.19
+  - @real-system/popover-primitive@0.0.19
+  - @real-system/portal-primitive@0.0.21
+  - @real-system/select-primitive@0.0.19
+  - @real-system/separator-primitive@0.0.19
+  - @real-system/tooltip-primitive@0.0.19
+
 ## 0.0.63
 
 ### Patch Changes

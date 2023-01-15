@@ -1,5 +1,17 @@
 # @real-system/link
 
+## 0.0.29
+
+### Patch Changes
+
+- [#646](https://github.com/bigwoof91/real-system/pull/646) [`1ffd4579`](https://github.com/bigwoof91/real-system/commit/1ffd457957d8939682b372ff92e7e58d3b93986a) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade tooling deps
+
+- Updated dependencies [[`1ffd4579`](https://github.com/bigwoof91/real-system/commit/1ffd457957d8939682b372ff92e7e58d3b93986a)]:
+  - @real-system/icon@0.0.58
+  - @real-system/styled-library@0.0.20
+  - @real-system/utils-library@0.0.32
+  - @real-system/elements-primitive@0.0.22
+
 ## 0.0.28
 
 ### Patch Changes
