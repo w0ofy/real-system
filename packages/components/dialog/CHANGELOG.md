@@ -1,5 +1,12 @@
 # @real-system/dialog
 
+## 0.0.52
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/button@0.0.60
+
 ## 0.0.51
 
 ### Patch Changes

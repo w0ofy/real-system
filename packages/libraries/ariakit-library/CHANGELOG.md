@@ -1,5 +1,11 @@
 # @real-system/ariakit-library
 
+## 0.0.23
+
+### Patch Changes
+
+- [#641](https://github.com/bigwoof91/real-system/pull/641) [`fd804433`](https://github.com/bigwoof91/real-system/commit/fd804433237971b31ca8543d85da9c79937adfd1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - bump ariakit pkg
+
 ## 0.0.22
 
 ### Patch Changes

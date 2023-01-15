@@ -1,6 +1,6 @@
 {
   "name": "@real-system/radio-group",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "description": "Radio group components for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/a11y-library": "^0.0.16",
-    "@real-system/ariakit-library": "^0.0.22",
+    "@real-system/ariakit-library": "^0.0.23",
     "@real-system/elements-primitive": "^0.0.21",
     "@real-system/flex": "^0.0.50",
     "@real-system/state-library": "^0.0.20",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@real-system/a11y-library": "^0.0.16",
-    "@real-system/ariakit-library": "^0.0.22",
+    "@real-system/ariakit-library": "^0.0.23",
     "@real-system/elements-primitive": "^0.0.21",
     "@real-system/flex": "^0.0.50",
     "@real-system/state-library": "^0.0.20",

@@ -1,5 +1,12 @@
 # @real-system/alert
 
+## 0.0.44
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/button@0.0.60
+
 ## 0.0.43
 
 ### Patch Changes

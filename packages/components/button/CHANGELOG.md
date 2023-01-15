@@ -1,5 +1,12 @@
 # @real-system/button
 
+## 0.0.60
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/button-primitive@0.0.44
+
 ## 0.0.59
 
 ### Patch Changes

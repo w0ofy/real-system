@@ -1,5 +1,13 @@
 # @real-system/menu
 
+## 0.0.31
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @real-system/menu-primitive@0.0.18
+  - @real-system/button@0.0.60
+
 ## 0.0.30
 
 ### Patch Changes

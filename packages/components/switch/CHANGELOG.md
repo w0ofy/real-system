@@ -1,5 +1,12 @@
 # @real-system/switch
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [[`fd804433`](https://github.com/bigwoof91/real-system/commit/fd804433237971b31ca8543d85da9c79937adfd1)]:
+  - @real-system/ariakit-library@0.0.23
+
 ## 0.0.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/accordion",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Accordion component for real system.",
   "status": "production",
   "main": "lib/index.js",
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
     "@real-system/a11y-library": "^0.0.16",
-    "@real-system/disclosure": "^0.0.14",
+    "@real-system/disclosure": "^0.0.15",
     "@real-system/styled-library": "^0.0.19",
     "@real-system/utils-library": "^0.0.31",
     "react": "^18.2.0",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@real-system/a11y-library": "^0.0.16",
-    "@real-system/disclosure": "^0.0.14",
+    "@real-system/disclosure": "^0.0.15",
     "@real-system/styled-library": "^0.0.19",
     "@real-system/utils-library": "^0.0.31",
     "concurrently": "^7.6.0",
