@@ -23,7 +23,8 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
   features: {
-    storyStoreV7: true,
+    /** @todo make `true` and fix chunks */
+    storyStoreV7: false,
   },
   typescript: {
     check: true,
