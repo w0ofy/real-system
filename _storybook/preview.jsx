@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 import {
-  themes,
   RealSystemProvider,
+  themes,
 } from '../packages/libraries/styled-library/src/index';
 
 export const globalTypes = {
