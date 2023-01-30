@@ -7103,6 +7103,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/channel-postmessage@npm:7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/channel-postmessage@npm:7.0.0-beta.36"
+  dependencies:
+    "@storybook/channels": 7.0.0-beta.36
+    "@storybook/client-logger": 7.0.0-beta.36
+    "@storybook/core-events": 7.0.0-beta.36
+    "@storybook/global": ^5.0.0
+    qs: ^6.10.0
+    telejson: ^7.0.3
+  checksum: b52b16159a2b77ed19e78fd15d5a9bfde4390cea98d4fcd154451297c0e9db7da628aa730b323ef2c083e36e991e05272cd02e04f1019f3540d41cb46b0f6807
+  languageName: node
+  linkType: hard
+
 "@storybook/channel-postmessage@npm:7.0.0-beta.8":
   version: 7.0.0-beta.8
   resolution: "@storybook/channel-postmessage@npm:7.0.0-beta.8"
@@ -7151,6 +7165,13 @@ __metadata:
   version: 7.0.0-beta.21
   resolution: "@storybook/channels@npm:7.0.0-beta.21"
   checksum: e4fe083a917f755b32656e67d03da9311a6961ebe956cba86e26455373ca153bc91b6888384457845be9eeaedacdfe2e749d3e92e98ce3da06cf80b29bc2b213
+  languageName: node
+  linkType: hard
+
+"@storybook/channels@npm:7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/channels@npm:7.0.0-beta.36"
+  checksum: 3fca634c06168d2a76baa4712ea9a0c3d42756e3f743d6c11aff903c25823c55533c07e9832fef5d21f8c9ef351b9566092c299f69b636309b6dbe626c830846
   languageName: node
   linkType: hard
 
@@ -7210,13 +7231,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/client-api@npm:=7.0.0-beta.21":
-  version: 7.0.0-beta.21
-  resolution: "@storybook/client-api@npm:7.0.0-beta.21"
+"@storybook/client-api@npm:=7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/client-api@npm:7.0.0-beta.36"
   dependencies:
-    "@storybook/client-logger": 7.0.0-beta.21
-    "@storybook/preview-api": 7.0.0-beta.21
-  checksum: 50b95d8127a707c1aa3170767289ccf957a901614fabf0c8933711bf5c13d063efcd34e191fa21896ee3b443c0ce1cb6dad29411cd3ffd9207a1d9081aa412f9
+    "@storybook/client-logger": 7.0.0-beta.36
+    "@storybook/preview-api": 7.0.0-beta.36
+  checksum: ce59011f1f00a86bf80c7aceb202b7250ffd496b0d02ecc6b2e317f6f78c5c223c5826b31f8664ee78cc429aca047668fa7cfc0a3e9e080a073b0cc49d274e00
   languageName: node
   linkType: hard
 
@@ -7245,6 +7266,15 @@ __metadata:
   dependencies:
     "@storybook/global": ^5.0.0
   checksum: 496e486bdc3bacca25023a21c20030e726f569281dc0f84c26ba24188e1f077f53a3e5d2e5486ac86c353fee33282f47547115fcd998ef51011fa59cdba271da
+  languageName: node
+  linkType: hard
+
+"@storybook/client-logger@npm:7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/client-logger@npm:7.0.0-beta.36"
+  dependencies:
+    "@storybook/global": ^5.0.0
+  checksum: b456e31bd59ee1609b52f254a1629a9feac0fd94017a9cd8f598c6c2c1c17eb55ef9ca7fd62dc5de9a1193a2fba263a00da94ade292aee92e76f53e8cfa5120e
   languageName: node
   linkType: hard
 
@@ -7378,6 +7408,13 @@ __metadata:
   version: 7.0.0-beta.21
   resolution: "@storybook/core-events@npm:7.0.0-beta.21"
   checksum: 7cd55adc06b9e1a67aecb298c8f1840f2c92b277d9ef4d1e570c90c8fed61c5d05c1cbf9bad4dcaa272ca948f982546062d1135ffad8b584a2b0e14351570c3a
+  languageName: node
+  linkType: hard
+
+"@storybook/core-events@npm:7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/core-events@npm:7.0.0-beta.36"
+  checksum: e9338352e24a0bf255b95c1543ab6600eac2ac776784326fef9161294890ea78f954eb92fc4ae3738c122e16cdbab426711cadf71a619071e9d306a2a30631c5
   languageName: node
   linkType: hard
 
@@ -7665,6 +7702,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/preview-api@npm:7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/preview-api@npm:7.0.0-beta.36"
+  dependencies:
+    "@storybook/channel-postmessage": 7.0.0-beta.36
+    "@storybook/channels": 7.0.0-beta.36
+    "@storybook/client-logger": 7.0.0-beta.36
+    "@storybook/core-events": 7.0.0-beta.36
+    "@storybook/csf": next
+    "@storybook/global": ^5.0.0
+    "@storybook/types": 7.0.0-beta.36
+    "@types/qs": ^6.9.5
+    dequal: ^2.0.2
+    lodash: ^4.17.21
+    memoizerific: ^1.11.3
+    qs: ^6.10.0
+    slash: ^3.0.0
+    synchronous-promise: ^2.0.15
+    ts-dedent: ^2.0.0
+    util-deprecate: ^1.0.2
+  checksum: eb6b503750658f868a895276fc32c8f3e35bead4ad6935e1f00f33c235b553352b846827d7f9553189e2f4406de5efa2d3469579c5633105e85900787e7519d9
+  languageName: node
+  linkType: hard
+
 "@storybook/preview-api@npm:7.0.0-beta.8":
   version: 7.0.0-beta.8
   resolution: "@storybook/preview-api@npm:7.0.0-beta.8"
@@ -7870,6 +7931,20 @@ __metadata:
     express: ^4.17.3
     file-system-cache: ^2.0.0
   checksum: 42d80fd32e6604de47a94bd55621eeac86ca0586bb1287f186798dfada6143a18ddd3fa31997e69f91f2969aa93afd398dfce20dd29dedb96a57397b6e642dc9
+  languageName: node
+  linkType: hard
+
+"@storybook/types@npm:7.0.0-beta.36":
+  version: 7.0.0-beta.36
+  resolution: "@storybook/types@npm:7.0.0-beta.36"
+  dependencies:
+    "@babel/core": ^7.12.10
+    "@storybook/channels": 7.0.0-beta.36
+    "@types/babel__core": ^7.0.0
+    "@types/express": ^4.7.0
+    express: ^4.17.3
+    file-system-cache: ^2.0.0
+  checksum: 4d7a3d1a2f65cde8eb0187bcd39e78c637046c4bfba8c70b046414a4fd93ef840ffee1f24caa23e95471293d134b24d2dc9a7a932aaf45ede119951830cd257e
   languageName: node
   linkType: hard
 
@@ -18846,7 +18921,7 @@ __metadata:
     "@storybook/addon-viewport": =7.0.0-beta.21
     "@storybook/builder-vite": =7.0.0-beta.21
     "@storybook/channel-websocket": =7.0.0-beta.21
-    "@storybook/client-api": =7.0.0-beta.21
+    "@storybook/client-api": =7.0.0-beta.36
     "@storybook/jest": ^0.0.11-next.0
     "@storybook/preview-web": =7.0.0-beta.21
     "@storybook/react": =7.0.0-beta.21
