@@ -15,13 +15,13 @@ const baseEsbuildConfig = {
   sourcemap: false,
 };
 
-const watch = (pkg = {}) => ({
-  // eslint-disable-next-line no-unused-vars
-  async onRebuild(err, _result) {
-    if (err) logger.error(err);
-    logger.info(`Rebundled ${pkg.name}`);
-  },
-});
+// const watch = (pkg = {}) => ({
+//   // eslint-disable-next-line no-unused-vars
+//   async onRebuild(err, _result) {
+//     if (err) logger.error(err);
+//     logger.info(`Rebundled ${pkg.name}`);
+//   },
+// });
 
 const getExternalDeps = (packageJson = {}) => {
   const externalDeps = Object.keys({
@@ -42,7 +42,8 @@ const makeEsbuildConfig = (pkgJson, { format } = { format: 'cjs' }) => {
   return {
     ...baseEsbuildConfig,
     entryPoints: [pkgJson['main:dev']],
-    watch: watch(pkgJson),
+    /** `watch` was deprecated in esbuild, but keeping this here to see how this was previously configured in case anything unexpected breaks */
+    // watch: watch(pkgJson),
     external: getExternalDeps(pkgJson),
     format,
     outfile: format === 'cjs' ? pkgJson.main : pkgJson.module,
