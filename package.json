@@ -116,7 +116,7 @@
     "babel-plugin-macros": "^3.1.0",
     "chalk": "^4.1.2",
     "commitizen": "^4.2.6",
-    "concurrently": "^7.6.0",
+    "concurrently": "^8.2.0",
     "esbuild": "^0.17.0",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
