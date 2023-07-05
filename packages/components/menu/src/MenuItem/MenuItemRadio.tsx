@@ -41,7 +41,8 @@ const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
         {...restProps}
         ref={ref}>
         <MenuItemCheckPrimitive />
-        {children}
+        {/** @todo fix this — error occured after upgrading to ts 5.x - probably should upgrade ariakit and fix every breaking change */}
+        {children as React.ReactNode}
       </MenuItemRadioPrimitive>
     );
   }
