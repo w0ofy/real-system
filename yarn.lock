@@ -6953,6 +6953,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-stately/checkbox@npm:^3.4.4":
+  version: 3.4.4
+  resolution: "@react-stately/checkbox@npm:3.4.4"
+  dependencies:
+    "@react-stately/toggle": ^3.6.1
+    "@react-stately/utils": ^3.7.0
+    "@react-types/checkbox": ^3.5.0
+    "@react-types/shared": ^3.19.0
+    "@swc/helpers": ^0.5.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: a752a187dacb26b47de09b692be9e89e83255f3e2324a819336479a2e0f6510348ba578d5bd21907509a947dc833b7227315025406000f687597ab242e1561a8
+  languageName: node
+  linkType: hard
+
 "@react-stately/radio@npm:^3.6.2":
   version: 3.6.2
   resolution: "@react-stately/radio@npm:3.6.2"
@@ -6981,6 +6996,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-stately/toggle@npm:^3.6.1":
+  version: 3.6.1
+  resolution: "@react-stately/toggle@npm:3.6.1"
+  dependencies:
+    "@react-stately/utils": ^3.7.0
+    "@react-types/checkbox": ^3.5.0
+    "@react-types/shared": ^3.19.0
+    "@swc/helpers": ^0.5.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 84426c687dd63536e91459761f162e76937874424365a99ff5bfccd2c21734aa425989e6ba19c77de0a0ee4ee11549e008b224acda230c969040cc6a20fa4ca2
+  languageName: node
+  linkType: hard
+
 "@react-stately/utils@npm:^3.5.2":
   version: 3.5.2
   resolution: "@react-stately/utils@npm:3.5.2"
@@ -6992,6 +7021,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-stately/utils@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "@react-stately/utils@npm:3.7.0"
+  dependencies:
+    "@swc/helpers": ^0.5.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 91feaae770d38a644b9ba3f633afb0560a51fddd153f75c9e486fca86409cb1b6917366859e59d0f62eab3440e530af97452949671e0f90a8a7e5638ba15b263
+  languageName: node
+  linkType: hard
+
 "@react-types/checkbox@npm:^3.4.1":
   version: 3.4.1
   resolution: "@react-types/checkbox@npm:3.4.1"
@@ -7000,6 +7040,17 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
   checksum: 6d16b9c9a0a94966b29c8b6c0aae7b91ddbc317a8ac31c36538f5628486b7d342bb74196d2c35f926c1faa5430e74fd1dcfe11e73e3dd1f6e8b0e9fd6870c890
+  languageName: node
+  linkType: hard
+
+"@react-types/checkbox@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@react-types/checkbox@npm:3.5.0"
+  dependencies:
+    "@react-types/shared": ^3.19.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: ed3833fe7cbadd1de3ae816d602538a12aec80c6e56fd5c06c7a09a5859fdbe2125200fe91dc7d5721d33b646ba1e2fec03b3c0bc48d98d6b8555c0937a31020
   languageName: node
   linkType: hard
 
@@ -7034,6 +7085,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-types/shared@npm:^3.19.0":
+  version: 3.19.0
+  resolution: "@react-types/shared@npm:3.19.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: e1cdabe05980be44b20d68e424f5891753f359c96bf151a17befa5a6e965dac315fd595657ed7c6572042078b5ca735735204175b020a8bdbb7dc11379a3be46
+  languageName: node
+  linkType: hard
+
 "@react-types/switch@npm:^3.2.5":
   version: 3.2.5
   resolution: "@react-types/switch@npm:3.2.5"
@@ -7055,7 +7115,7 @@ __metadata:
     "@react-aria/interactions": ^3.13.1
     "@react-aria/radio": ^3.4.2
     "@react-aria/utils": 3.14.2
-    "@react-stately/checkbox": ^3.3.2
+    "@react-stately/checkbox": ^3.4.4
     "@react-stately/radio": ^3.6.2
     "@react-stately/toggle": ^3.4.4
     "@react-types/checkbox": ^3.4.1
@@ -9402,6 +9462,15 @@ __metadata:
   dependencies:
     tslib: ^2.4.0
   checksum: 273fd3f3fc461a92f3790cc551ea054745c6d6959afbe1232e6d7aa1c722bbc114d308aab96bef5c78fc0303c85c7b472ef00e2253251cc89737f3b1af56e5a5
+  languageName: node
+  linkType: hard
+
+"@swc/helpers@npm:^0.5.0":
+  version: 0.5.1
+  resolution: "@swc/helpers@npm:0.5.1"
+  dependencies:
+    tslib: ^2.4.0
+  checksum: 71e0e27234590435e4c62b97ef5e796f88e786841a38c7116a5e27a3eafa7b9ead7cdec5249b32165902076de78446945311c973e59bddf77c1e24f33a8f272a
   languageName: node
   linkType: hard
 
