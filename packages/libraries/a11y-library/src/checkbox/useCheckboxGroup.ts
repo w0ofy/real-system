@@ -2,12 +2,10 @@ import {
   useCheckboxGroup as useAriaCheckboxGroup,
   useCheckboxGroupItem as useAriaCheckboxGroupItem,
 } from '@react-aria/checkbox';
-import {
-  CheckboxGroupState,
-  useCheckboxGroupState as useAriaCheckboxGroupState,
-} from '@react-stately/checkbox';
+import type { CheckboxGroupState } from '@react-stately/checkbox';
+import { useCheckboxGroupState as useAriaCheckboxGroupState } from '@react-stately/checkbox';
 
-import {
+import type {
   AriaCheckboxGroupItemProps,
   AriaCheckboxGroupProps,
   CustomCheckboxGroupProps,

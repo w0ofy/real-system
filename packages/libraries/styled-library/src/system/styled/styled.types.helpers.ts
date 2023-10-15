@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as CSS from 'csstype';
+import type * as React from 'react';
+import type * as CSS from 'csstype';
 
 import type { Dict, PropUnion } from '@real-system/utils-library';
 
@@ -44,19 +44,19 @@ type As<El = any> = React.ElementType<El>;
 
 type OmitCommonProps<
   Target,
-  OmitAdditionalProps extends keyof any = never
+  OmitAdditionalProps extends keyof any = never,
 > = Omit<Target, 'transition' | 'as' | 'color' | OmitAdditionalProps>;
 
 type RightJoinProps<
   SourceProps extends Dict = Dict,
-  OverrideProps extends Dict = Dict
+  OverrideProps extends Dict = Dict,
 > = OmitCommonProps<SourceProps, keyof OverrideProps> & OverrideProps;
 
 type MergeWithAs<
   ComponentProps extends Dict,
   AsProps extends Dict,
   AdditionalProps extends Dict = Dict,
-  AsComponent extends As = As
+  AsComponent extends As = As,
 > = RightJoinProps<ComponentProps, AdditionalProps> &
   RightJoinProps<AsProps, AdditionalProps> & {
     as?: AsComponent;

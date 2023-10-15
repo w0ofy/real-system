@@ -2,7 +2,7 @@ import type { Dict } from '@real-system/utils-library';
 
 import type { StylishProps } from '../props';
 
-import {
+import type {
   As,
   ComponentWithAs,
   CSSWithMultiValues,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { Button } from '@real-system/button';
 import { Flex } from '@real-system/flex';
@@ -11,7 +11,7 @@ export default {
   subcomponents: { Toast },
 } as Meta;
 
-export const Showcase = (args) => {
+export const Showcase = (_args) => {
   const toaster = useToaster();
   return (
     <Flex vertical>

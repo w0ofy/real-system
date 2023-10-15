@@ -46,7 +46,7 @@ const ifNotStylishProp = makeShouldForwardProp();
 shouldForwardProp.ifNotStylishProp = ifNotStylishProp;
 shouldForwardProp.ifValidHTMLProp = ifValidHTMLProp;
 
-type FilterFn<T> = (key: string) => boolean;
+type FilterFn<T extends string = string> = (key: T) => boolean;
 
 /**
  * Returns the items of an object that meet the condition specified in a callback function.
@@ -54,7 +54,7 @@ type FilterFn<T> = (key: string) => boolean;
  * @param object the object to loop through
  * @param fn The filter function
  */
-const objectFilter = <T extends Dict>(object: T, fn: FilterFn<T>) => {
+const objectFilter = <T extends Dict>(object: T, fn: FilterFn) => {
   const result: Dict = {};
 
   Object.keys(object).forEach((key) => {

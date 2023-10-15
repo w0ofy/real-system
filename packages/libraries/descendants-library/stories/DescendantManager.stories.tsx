@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { createDescendantContext } from '@real-system/descendants-library';
 import { Flex } from '@real-system/flex';

@@ -8,7 +8,7 @@ import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { menuItemStyles } from './MenuItem.style';
-import { CommonMenuItemProps } from './MenuItem.types';
+import type { CommonMenuItemProps } from './MenuItem.types';
 
 type MenuItemLinkProps = {
   href: string;

@@ -4,7 +4,7 @@ import { MenuItemPrimitive } from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
 import { MenuItemWrapper } from './MenuItem.style';
-import { CommonMenuItemProps } from './MenuItem.types';
+import type { CommonMenuItemProps } from './MenuItem.types';
 import { MenuItemCheckbox } from './MenuItemCheckbox';
 import { MenuItemCommand } from './MenuItemCommand';
 import { MenuItemIcon } from './MenuItemIcon';

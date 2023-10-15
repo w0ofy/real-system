@@ -1,4 +1,4 @@
-import * as IconComponents from '@heroicons/react/outline';
+import type * as IconComponents from '@heroicons/react/outline';
 
 import type {
   ColorSchemes,

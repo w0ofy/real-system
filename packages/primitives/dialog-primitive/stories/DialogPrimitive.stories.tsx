@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { animated } from '@real-system/animation-library';
 import { Button } from '@real-system/button';
@@ -44,7 +44,7 @@ export default {
   component: DialogOverlayPrimitive,
 } as Meta;
 
-const Template = (args) => {
+const Template = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>

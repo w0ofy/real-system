@@ -5,14 +5,15 @@ import type { FlexProps } from '@real-system/flex';
 import { Flex } from '@real-system/flex';
 import { makeTestId } from '@real-system/utils-library';
 
+import type { FieldWarningText } from './components';
 import {
   FieldErrorText,
   FieldGroup,
   FieldHelpText,
   FieldLabel,
-  FieldWarningText,
 } from './components';
-import { FieldControlOptions, FieldControlProvider } from './FieldControl';
+import type { FieldControlOptions } from './FieldControl';
+import { FieldControlProvider } from './FieldControl';
 
 type FieldProps = FlexProps & FieldControlOptions & { as?: 'fieldset' | 'div' };
 

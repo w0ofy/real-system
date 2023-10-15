@@ -6,7 +6,7 @@ import type {
 } from '@real-system/a11y-library';
 import { useLabel } from '@real-system/a11y-library';
 import { makeContext } from '@real-system/state-library';
-import { PropUnion } from '@real-system/utils-library';
+import type { PropUnion } from '@real-system/utils-library';
 
 type FieldControlOptions = {
   hasError?: boolean;

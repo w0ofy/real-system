@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "pflannery.vscode-versionlens",
+    "esbenp.prettier-vscode",
+    "unifiedjs.vscode-mdx",
+    "kamikillerto.vscode-colorize",
+    "vscode-icons-team.vscode-icons",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv",
+    "donjayamanne.githistory",
+    "iulian-radu-at.find-unused-exports",
+    "wix.vscode-import-cost",
+    "chakrounanas.turbo-console-log",
+    "figma.figma-vscode-extension",
+    "acoreyj.restart-ts-eslint-server",
+    "tamasfe.even-better-toml",
+    "mscolnick.export-typescript"
+  ]
+}

@@ -4,7 +4,8 @@
 import React, { forwardRef } from 'react';
 
 import type { InputProps } from './Input.model';
-import { InputBox, InputBoxTypes } from './InputBox';
+import type { InputBoxTypes } from './InputBox';
+import { InputBox } from './InputBox';
 import { InputElement } from './InputElement';
 
 type InputTypeProps = {

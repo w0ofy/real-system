@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 
+import type { MenuItemCheckboxPrimitiveProps } from '@real-system/menu-primitive';
 import {
   MenuItemCheckboxPrimitive,
-  MenuItemCheckboxPrimitiveProps,
   MenuItemCheckPrimitive,
 } from '@real-system/menu-primitive';
 import type { StylishProps } from '@real-system/styled-library';

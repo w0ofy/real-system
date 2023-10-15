@@ -6,7 +6,8 @@ import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { DialogContent, DialogOverlay } from './components';
-import { DialogContextProvider, DialogState } from './DialogContext';
+import type { DialogState } from './DialogContext';
+import { DialogContextProvider } from './DialogContext';
 
 const useTransitionProps = {
   from: { opacity: 0, transform: 'translate3d(0, 10px, 0)' },

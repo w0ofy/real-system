@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';

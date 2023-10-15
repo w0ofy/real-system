@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import { RealSystemComponentProps } from '@real-system/styled-library';
+import type { RealSystemComponentProps } from '@real-system/styled-library';
 
 type StackSeparatorProps = RealSystemComponentProps<'div'>;
 

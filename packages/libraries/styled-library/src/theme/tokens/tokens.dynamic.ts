@@ -1,4 +1,4 @@
-import { Palette } from '../palettes/types';
+import type { Palette } from '../palettes/types';
 
 import { makeColorTokensFromPalette } from './tokens.utils';
 

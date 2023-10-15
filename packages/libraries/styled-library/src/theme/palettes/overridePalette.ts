@@ -1,5 +1,5 @@
 import { palettes } from './config';
-import { Palette, PaletteValues } from './types';
+import type { Palette, PaletteValues } from './types';
 
 type InitialPalette = keyof typeof palettes | Palette;
 

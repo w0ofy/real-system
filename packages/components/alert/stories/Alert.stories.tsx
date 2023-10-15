@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { Alert, InlineAlert as RealInlineAlert } from '@real-system/alert';
 import { Box } from '@real-system/box';

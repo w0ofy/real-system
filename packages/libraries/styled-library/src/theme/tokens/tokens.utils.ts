@@ -2,7 +2,8 @@ import { readableColor, shade, tint, transparentize } from 'polished';
 
 import type { AddSuffix } from '@real-system/utils-library';
 
-import { ColorSchemes, Palette, palettes } from '../palettes';
+import type { ColorSchemes, Palette } from '../palettes';
+import { palettes } from '../palettes';
 
 type ColorSteps =
   | '50'

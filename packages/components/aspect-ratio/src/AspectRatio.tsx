@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react';
 
-import styled, {
+import type {
   RealSystemComponentProps,
   ResponsiveValue,
 } from '@real-system/styled-library';
+import styled from '@real-system/styled-library';
 import { makeTestId, mapResponsive } from '@real-system/utils-library';
 
 type AspectRatioOptions = {

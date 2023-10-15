@@ -1,8 +1,5 @@
-import {
-  isNotStylishProp,
-  isStylishProp,
-  StylishPropNames,
-} from './stylishProps';
+import type { StylishPropNames } from './stylishProps';
+import { isNotStylishProp, isStylishProp } from './stylishProps';
 
 type PropSpreaderProps = Record<string, any>;
 type PropFilter = (prop: any) => boolean;

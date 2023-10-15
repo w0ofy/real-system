@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react';
 
-import { Flex, FlexProps } from '@real-system/flex';
+import type { FlexProps } from '@real-system/flex';
+import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
+import type { PopoverPrimitiveProps } from '@real-system/popover-primitive';
 import {
   PopoverArrowPrimitive,
   PopoverPrimitive,
-  PopoverPrimitiveProps,
 } from '@real-system/popover-primitive';
 import type { RealSystemElementProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';

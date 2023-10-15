@@ -1,9 +1,9 @@
-import * as React from 'react';
+import type * as React from 'react';
 
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import type { ValidationProps } from '@real-system/utils-library';
 
-import { InputBoxProps } from './InputBox';
+import type { InputBoxProps } from './InputBox';
 
 export type InputProps = Partial<
   Pick<InputBoxProps, 'type' | 'prefix' | 'suffix' | 'addonProps'>

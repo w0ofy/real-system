@@ -1,4 +1,4 @@
-import { Property as CSS } from 'csstype';
+import type { Property as CSS } from 'csstype';
 
 import type { StylePropConfig, Token } from './_types';
 

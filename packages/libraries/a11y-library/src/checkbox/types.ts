@@ -1,7 +1,7 @@
 /**
  * Renamed props to make prop api consistent with other component prop names
  */
-import * as React from 'react';
+import type * as React from 'react';
 import type { CheckboxGroupState as AriaCheckboxGroupState } from '@react-stately/checkbox';
 import type {
   AriaCheckboxGroupItemProps as OriginalAriaCheckboxGroupItemProps,

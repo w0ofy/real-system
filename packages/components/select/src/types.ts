@@ -1,4 +1,4 @@
-import {
+import type {
   SelectStatePrimitive,
   SelectStatePrimitiveProps,
 } from '@real-system/select-primitive';
@@ -6,7 +6,7 @@ import type {
   RealSystemChildrenProp,
   StylishProps,
 } from '@real-system/styled-library';
-import { ValidationProps } from '@real-system/utils-library';
+import type { ValidationProps } from '@real-system/utils-library';
 
 type SelectState = SelectStatePrimitive;
 type SelectStateProps = SelectStatePrimitiveProps;

@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 
-import { Icon, IconProps } from '@real-system/icon';
+import type { IconProps } from '@real-system/icon';
+import { Icon } from '@real-system/icon';
 import { makeTestId } from '@real-system/utils-library';
 
 type MenuItemIconProps = (

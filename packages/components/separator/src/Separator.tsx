@@ -2,10 +2,8 @@ import * as React from 'react';
 
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import { real } from '@real-system/elements-primitive';
-import {
-  SeparatorPrimitive,
-  SeparatorPrimitiveProps,
-} from '@real-system/separator-primitive';
+import type { SeparatorPrimitiveProps } from '@real-system/separator-primitive';
+import { SeparatorPrimitive } from '@real-system/separator-primitive';
 import type { BorderProps, StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 

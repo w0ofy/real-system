@@ -5,7 +5,7 @@ import { Spinner } from '@real-system/spinner';
 import { makeTestId } from '@real-system/utils-library';
 
 import { BaseButton } from './BaseButton';
-import { ButtonProps, ButtonStates } from './Button.model';
+import type { ButtonProps, ButtonStates } from './Button.model';
 import { buttonStylesConfig } from './Button.styles';
 
 const getButtonState = (

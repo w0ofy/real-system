@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { Select } from '@real-system/select';
 
@@ -24,7 +24,7 @@ export const Default = (args) => {
   );
 };
 
-export const SelectGroupStory = (args) => {
+export const SelectGroupStory = (_args) => {
   return (
     <Select maxW="20rem" label="Select a fruit">
       <Select.Group>

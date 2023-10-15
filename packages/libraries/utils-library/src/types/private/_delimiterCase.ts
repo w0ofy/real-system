@@ -1,8 +1,8 @@
-import { UpperCaseCharacters, WordSeparators } from './_utilities';
+import type { UpperCaseCharacters, WordSeparators } from './_utilities';
 
 type SplitIncludingDelimiters<
   Source extends string,
-  Delimiter extends string
+  Delimiter extends string,
 > = Source extends ''
   ? []
   : Source extends `${infer FirstPart}${Delimiter}${infer SecondPart}`
@@ -12,7 +12,7 @@ type SplitIncludingDelimiters<
         ? [
             ...SplitIncludingDelimiters<FirstPart, Delimiter>,
             UsedDelimiter,
-            ...SplitIncludingDelimiters<SecondPart, Delimiter>
+            ...SplitIncludingDelimiters<SecondPart, Delimiter>,
           ]
         : never
       : never
@@ -25,7 +25,7 @@ type StringPartToDelimiterCase<
   Start extends boolean,
   UsedWordSeparators extends string,
   UsedUpperCaseCharacters extends string,
-  Delimiter extends string
+  Delimiter extends string,
 > = StringPart extends UsedWordSeparators
   ? Delimiter
   : Start extends true
@@ -40,7 +40,7 @@ type StringArrayToDelimiterCase<
   Start extends boolean,
   UsedWordSeparators extends string,
   UsedUpperCaseCharacters extends string,
-  Delimiter extends string
+  Delimiter extends string,
 > = Parts extends [`${infer FirstPart}`, ...infer RemainingParts]
   ? `${StringPartToDelimiterCase<
       FirstPart,

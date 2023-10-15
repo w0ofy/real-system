@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { Icon } from '@real-system/icon';
 import { Textarea } from '@real-system/textarea';

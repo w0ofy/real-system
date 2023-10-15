@@ -5,7 +5,8 @@ import debounce from 'lodash.debounce';
 import { Box } from '@real-system/box';
 import { Icon } from '@real-system/icon';
 import { Input } from '@real-system/input';
-import { themes, ThemeScales } from '@real-system/styled-library';
+import type { ThemeScales } from '@real-system/styled-library';
+import { themes } from '@real-system/styled-library';
 
 const ColorPalette = CP as React.FC<React.PropsWithChildren<any>>;
 

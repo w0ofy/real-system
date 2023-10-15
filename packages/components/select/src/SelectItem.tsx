@@ -4,7 +4,7 @@ import type { SelectItemPrimitiveProps } from '@real-system/select-primitive';
 import { SelectItemPrimitive } from '@real-system/select-primitive';
 import styled from '@real-system/styled-library';
 
-import { OmitSelectPrivateProps } from './types';
+import type { OmitSelectPrivateProps } from './types';
 
 type SelectItemProps = OmitSelectPrivateProps<SelectItemPrimitiveProps>;
 

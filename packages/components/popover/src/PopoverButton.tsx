@@ -1,6 +1,7 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Button, ButtonProps } from '@real-system/button';
+import type { ButtonProps } from '@real-system/button';
+import { Button } from '@real-system/button';
 import { PopoverDisclosurePrimitive } from '@real-system/popover-primitive';
 import { makeTestId } from '@real-system/utils-library';
 

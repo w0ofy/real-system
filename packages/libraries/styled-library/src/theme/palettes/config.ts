@@ -1,4 +1,4 @@
-import { Palette } from './types';
+import type { Palette } from './types';
 
 export type DefaultColorSchemes =
   | '#ffffff'

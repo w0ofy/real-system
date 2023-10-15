@@ -1,6 +1,6 @@
 import { useRadio as useAriaRadio } from '@react-aria/radio';
 
-import {
+import type {
   AriaRadioGroupState,
   AriaRadioProps,
   RestoredAriaRadioProps,

@@ -2,13 +2,12 @@ import * as React from 'react';
 
 import type { RealElementPrimitiveProps } from '@real-system/elements-primitive';
 import { real } from '@real-system/elements-primitive';
-import {
-  preventSpreadingStyleProps,
-  StylishProps,
-} from '@real-system/styled-library';
+import type { StylishProps } from '@real-system/styled-library';
+import { preventSpreadingStyleProps } from '@real-system/styled-library';
 import { makeTestId, merge } from '@real-system/utils-library';
 
-import { Addon, AddonProps } from './Addon';
+import type { AddonProps } from './Addon';
+import { Addon } from './Addon';
 
 export type InputBoxTypes =
   | 'text'

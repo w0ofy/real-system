@@ -1,10 +1,8 @@
 import { useRadioGroup as useAriaRadioGroup } from '@react-aria/radio';
-import {
-  RadioGroupState,
-  useRadioGroupState as useAriaRadioGroupState,
-} from '@react-stately/radio';
+import type { RadioGroupState } from '@react-stately/radio';
+import { useRadioGroupState as useAriaRadioGroupState } from '@react-stately/radio';
 
-import { AriaRadioGroupProps, RestoredAriaRadioGroupProps } from './types';
+import type { AriaRadioGroupProps, RestoredAriaRadioGroupProps } from './types';
 
 const restoreRadioGroupProps = (
   props: AriaRadioGroupProps

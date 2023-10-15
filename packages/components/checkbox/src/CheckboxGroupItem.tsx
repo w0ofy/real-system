@@ -1,7 +1,7 @@
 import React, { forwardRef, useMemo, useRef } from 'react';
 
+import type { AriaCheckboxGroupItemProps } from '@real-system/a11y-library';
 import {
-  AriaCheckboxGroupItemProps,
   useCheckboxGroupItem,
   useInteractions,
 } from '@real-system/a11y-library';
@@ -10,7 +10,7 @@ import { useMergeRefs } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { useCheckboxGroupContext } from './Checkbox.context';
-import { CustomProps } from './Checkbox.model';
+import type { CustomProps } from './Checkbox.model';
 import { CheckboxControl, CheckboxLabel, CheckboxWrapper } from './components';
 
 type CheckboxGroupItemProps = AriaCheckboxGroupItemProps & CustomProps;

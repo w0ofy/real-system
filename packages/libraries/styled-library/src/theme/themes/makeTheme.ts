@@ -1,6 +1,5 @@
-import { merge } from '@real-system/utils-library';
-
-import { Palette, palettes } from '../palettes';
+import type { Palette } from '../palettes';
+import { palettes } from '../palettes';
 import {
   borders,
   borderWidths,

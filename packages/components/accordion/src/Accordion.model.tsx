@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type * as React from 'react';
 
 import type { DisclosureProps } from '@real-system/disclosure';
 import type { RealSystemComponentProps } from '@real-system/styled-library';

@@ -1,4 +1,7 @@
-import { ResponsiveValue, StylishProps } from '@real-system/styled-library';
+import type {
+  ResponsiveValue,
+  StylishProps,
+} from '@real-system/styled-library';
 import { mapResponsive } from '@real-system/utils-library';
 
 export type StackDirection = ResponsiveValue<

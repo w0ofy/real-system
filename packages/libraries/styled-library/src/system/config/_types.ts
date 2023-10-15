@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import * as CSS from 'csstype';
+import type * as CSS from 'csstype';
 
 type ObjectOrArray<T, K extends keyof any = keyof any> =
   | T[]
@@ -61,7 +61,7 @@ type Union<T> = T | (string & {});
 
 type Token<
   CSSType,
-  ThemeKey extends keyof StylePropScales | (string & {}) = string
+  ThemeKey extends keyof StylePropScales | (string & {}) = string,
 > = ThemeKey extends keyof StylePropScales
   ? ResponsiveValue<Union<CSSType | StylePropScales[ThemeKey]>>
   : ResponsiveValue<CSSType>;

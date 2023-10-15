@@ -5,7 +5,7 @@ import { SelectGroupLabelPrimitive } from '@real-system/select-primitive';
 import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { CommonSelectProps } from '../types';
+import type { CommonSelectProps } from '../types';
 
 const StyledGroupLabel = styled(
   SelectGroupLabelPrimitive

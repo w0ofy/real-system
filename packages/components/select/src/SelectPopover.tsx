@@ -5,7 +5,7 @@ import type { SelectPopoverPrimitiveProps } from '@real-system/select-primitive'
 import { SelectPopoverPrimitive } from '@real-system/select-primitive';
 
 import { useSelectStateContext } from './SelectContext';
-import { OmitSelectPrivateProps } from './types';
+import type { OmitSelectPrivateProps } from './types';
 
 type SelectPopoverProps = OmitSelectPrivateProps<SelectPopoverPrimitiveProps>;
 

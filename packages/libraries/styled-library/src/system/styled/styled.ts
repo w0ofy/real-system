@@ -1,9 +1,10 @@
-import _styled, { FunctionInterpolation } from '@emotion/styled';
+import type { FunctionInterpolation } from '@emotion/styled';
+import _styled from '@emotion/styled';
 
 import type { Dict } from '@real-system/utils-library';
 import { runIfFn } from '@real-system/utils-library';
 
-import { ThemeShape } from '../../theme';
+import type { ThemeShape } from '../../theme';
 import { css } from '../cssFn';
 import { isStylishProp } from '../props';
 

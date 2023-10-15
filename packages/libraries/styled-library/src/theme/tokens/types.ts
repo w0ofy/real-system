@@ -1,7 +1,7 @@
 import type { StylePropScaleNames } from '../../system/config/_types';
 
-import { borders, colors, filters, shadows } from './tokens.dynamic';
-import {
+import type { borders, colors, filters, shadows } from './tokens.dynamic';
+import type {
   borderWidths,
   breakpoints,
   fonts,

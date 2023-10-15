@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import { Func, FuncArguments } from '../types';
+import type { Func, FuncArguments } from '../types';
 
 import { isFunction } from './assertion';
 

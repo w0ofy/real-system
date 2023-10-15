@@ -5,7 +5,7 @@ import { SelectSeparatorPrimitive } from '@real-system/select-primitive';
 import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { OmitSelectPrivateProps } from './types';
+import type { OmitSelectPrivateProps } from './types';
 
 type SelectSeparatorProps =
   OmitSelectPrivateProps<SelectSeparatorPrimitiveProps>;

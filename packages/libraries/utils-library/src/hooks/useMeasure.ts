@@ -13,7 +13,7 @@ type UseMeasureRect = Pick<
 type UseMeasureRef<E extends Element = Element> = (element: E) => void;
 type UseMeasureResult<E extends Element = Element> = [
   UseMeasureRef<E>,
-  UseMeasureRect
+  UseMeasureRect,
 ];
 
 const defaultState: UseMeasureRect = {

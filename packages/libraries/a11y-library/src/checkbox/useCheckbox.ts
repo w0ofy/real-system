@@ -1,7 +1,7 @@
 import { useCheckbox as useAriaCheckbox } from '@react-aria/checkbox';
 import { useToggleState as useAriaToggleState } from '@react-stately/toggle';
 
-import { AriaCheckboxProps, RestoredAriaCheckboxProps } from './types';
+import type { AriaCheckboxProps, RestoredAriaCheckboxProps } from './types';
 
 const restoreCheckboxProps = (
   props: AriaCheckboxProps

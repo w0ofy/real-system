@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
+import type { AriaCheckboxGroupProps } from '@real-system/a11y-library';
 import {
-  AriaCheckboxGroupProps,
   useCheckboxGroup,
   useCheckboxGroupState,
 } from '@real-system/a11y-library';
@@ -11,7 +11,7 @@ import type { ValidationProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { CheckboxGroupContextProvider } from './Checkbox.context';
-import { CustomProps } from './Checkbox.model';
+import type { CustomProps } from './Checkbox.model';
 import { CheckboxGroupItem } from './CheckboxGroupItem';
 
 type CheckboxGroupProps = AriaCheckboxGroupProps &

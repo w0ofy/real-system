@@ -1,4 +1,4 @@
-import { Dict, Func } from '../types';
+import type { Dict, Func } from '../types';
 
 // Number assertions
 function isNumber(value: any): value is number {

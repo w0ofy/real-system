@@ -1,9 +1,10 @@
-import styled, {
+import type {
   As,
   RealSystemComponent,
   RealSystemComponentProps,
   RealSystemStyledOptions,
 } from '@real-system/styled-library';
+import styled from '@real-system/styled-library';
 import type { Obj } from '@real-system/utils-library';
 
 type RealElements = {
@@ -57,7 +58,7 @@ type RealElementPrimitive<T extends As = any, P = Obj> = RealSystemComponent<
 
 type RealElementPrimitiveProps<
   T extends As = any,
-  P = Obj
+  P = Obj,
 > = RealSystemComponentProps<T, P>;
 
 export type { RealElementPrimitive, RealElementPrimitiveProps };

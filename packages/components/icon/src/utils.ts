@@ -1,6 +1,6 @@
 import { kebabCase } from '@real-system/utils-library';
 
-import { HeroIconNames, HeroIconSet, Icons, IconValue } from './types';
+import type { HeroIconNames, HeroIconSet, Icons, IconValue } from './types';
 
 const formatIconName = (heroIconName: HeroIconNames): Icons =>
   kebabCase<typeof heroIconName>(heroIconName).split('-icon').shift() as Icons;

@@ -12,7 +12,7 @@ import {
   TrackCircle,
   WheelCircle,
 } from './Spinner.styles';
-import { SpinnerProps } from './types';
+import type { SpinnerProps } from './types';
 
 /**
  * @todo refactor to use an icon wrapper w/ a11y in mind i.e. decorative + aria-hidden

@@ -1,6 +1,7 @@
 import React, { forwardRef, useCallback } from 'react';
 
-import { Button, ButtonProps } from '@real-system/button';
+import type { ButtonProps } from '@real-system/button';
+import { Button } from '@real-system/button';
 import { makeTestId } from '@real-system/utils-library';
 
 import { useDialogContext } from './DialogContext';

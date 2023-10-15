@@ -1,6 +1,6 @@
 import { merge } from '@real-system/utils-library';
 
-import { ThemeColors } from '../tokens';
+import type { ThemeColors } from '../tokens';
 
 import { themes } from './config';
 import type { ExtendableThemeShape, ThemeShape } from './makeTheme';

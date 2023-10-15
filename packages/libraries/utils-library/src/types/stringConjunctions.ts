@@ -1,6 +1,6 @@
 type RemoveSuffix<
   T extends string,
-  S extends string
+  S extends string,
 > = T extends `${infer Prefix}${S}` ? Prefix : never;
 
 /**
@@ -22,7 +22,7 @@ type AddSuffix<TKey, TSuffix extends string> = TKey extends string
  */
 type RemovePrefix<
   TPrefixedKey,
-  TPrefix extends string
+  TPrefix extends string,
 > = TPrefixedKey extends AddPrefix<infer TKey, TPrefix> ? TKey : '';
 /**
  * @description get the prefixed value in a string type
@@ -31,7 +31,7 @@ type GetPrefix<
   // eslint-disable-next-line @typescript-eslint/ban-types
   TObject extends object,
   TPrefixedKey extends string,
-  TPrefix extends string
+  TPrefix extends string,
 > = TObject extends { [K in RemovePrefix<TPrefixedKey, TPrefix>]: infer TValue }
   ? TValue
   : never;
@@ -41,7 +41,7 @@ type GetPrefix<
 type AddPrefixToObject<
   // eslint-disable-next-line @typescript-eslint/ban-types
   TObject extends object,
-  TPrefix extends string
+  TPrefix extends string,
 > = {
   [K in AddPrefix<keyof TObject, TPrefix>]: GetPrefix<TObject, K, TPrefix>;
 };

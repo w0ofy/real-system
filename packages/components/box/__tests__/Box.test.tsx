@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 import { RealSystemProvider } from '@real-system/styled-library';
 
 import { Box } from '../src/Box';
-import { BoxProps } from '../src/types';
+import type { BoxProps } from '../src/types';
 
 const BoxComponent = (props: BoxProps = {}) => (
   <RealSystemProvider theme={TEST_THEME}>

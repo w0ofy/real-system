@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import { HeadingProps, Text } from '@real-system/typography';
+import type { HeadingProps } from '@real-system/typography';
+import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
 type DialogHeadingProps = Omit<HeadingProps, 'variant'>;

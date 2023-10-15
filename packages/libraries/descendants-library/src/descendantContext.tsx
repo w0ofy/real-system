@@ -2,18 +2,20 @@
  * Kudos to chakra-ui https://github.com/chakra-ui/chakra-ui/tree/next/packages/descendant
  * This code is a slightly-modified version of their own.
  */
-import React, { RefCallback, useRef, useState } from 'react';
+import type { RefCallback } from 'react';
+import type React from 'react';
+import { useRef, useState } from 'react';
 
 import { constate } from '@real-system/state-library';
+import type { AnyObj, Obj } from '@real-system/utils-library';
 import {
-  AnyObj,
   cast,
   mergeRefs,
-  Obj,
   useSafeLayoutEffect,
 } from '@real-system/utils-library';
 
-import { DescendantOptions, DescendantsManager } from './descendant';
+import type { DescendantOptions } from './descendant';
+import { DescendantsManager } from './descendant';
 
 /**
  * @internal
@@ -21,7 +23,7 @@ import { DescendantOptions, DescendantsManager } from './descendant';
  */
 function useDescendants<
   T extends HTMLElement = HTMLElement,
-  K extends AnyObj = Obj
+  K extends AnyObj = Obj,
 >() {
   const descendants = useRef(new DescendantsManager<T, K>());
   useSafeLayoutEffect(() => {
@@ -78,7 +80,7 @@ function useDescendant<T extends HTMLElement = HTMLElement, K = Obj>(
 
 type ContextProviderType<
   T extends HTMLElement = HTMLElement,
-  K extends AnyObj = Obj
+  K extends AnyObj = Obj,
 > = React.Provider<DescendantsManager<T, K>>;
 
 /**
@@ -86,7 +88,7 @@ type ContextProviderType<
  */
 export function createDescendantContext<
   T extends HTMLElement = HTMLElement,
-  K extends AnyObj = Obj
+  K extends AnyObj = Obj,
 >() {
   const ContextProvider = cast<ContextProviderType<T, K>>(
     DescendantsContextProvider

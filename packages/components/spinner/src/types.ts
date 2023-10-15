@@ -1,4 +1,4 @@
-import { BoxProps } from '@real-system/box';
+import type { BoxProps } from '@real-system/box';
 import type { ColorTokens, ThemeSizes } from '@real-system/styled-library';
 
 export type SpinnerProps = {

@@ -1,7 +1,9 @@
 import * as React from 'react';
 
-import { DisclosureHeading, DisclosureHeadingProps } from './DisclosureHeading';
-import { DisclosureTrigger, DisclosureTriggerProps } from './DisclosureTrigger';
+import type { DisclosureHeadingProps } from './DisclosureHeading';
+import { DisclosureHeading } from './DisclosureHeading';
+import type { DisclosureTriggerProps } from './DisclosureTrigger';
+import { DisclosureTrigger } from './DisclosureTrigger';
 
 type DisclosureToggleProps = DisclosureHeadingProps &
   Pick<DisclosureTriggerProps, 'hideToggleIcon' | 'disabled'>;

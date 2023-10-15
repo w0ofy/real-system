@@ -2,7 +2,7 @@ import TextareaAutosize from 'react-autosize-textarea';
 
 import styled, { majorScale } from '@real-system/styled-library';
 
-import { TextareaProps } from './types';
+import type { TextareaProps } from './types';
 
 const TextareaElement = styled(TextareaAutosize)<TextareaProps>({
   appearance: 'none',

@@ -5,7 +5,7 @@ import styled, { useTokens } from '@real-system/styled-library';
 
 import { ICON_SIZE_MAP } from './constants';
 import { OutlineIcons, SolidIcons } from './icons';
-import { IconProps, Icons, InternalIconProps } from './types';
+import type { IconProps, Icons, InternalIconProps } from './types';
 
 const StyledIcon = styled(({ Icon, ...restProps }: InternalIconProps) => {
   return <Icon {...(restProps as any)} />;

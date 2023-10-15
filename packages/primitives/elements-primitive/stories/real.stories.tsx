@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
-import {
-  real,
+import type {
   RealElementPrimitive,
   RealElementPrimitiveProps,
 } from '@real-system/elements-primitive';
+import { real } from '@real-system/elements-primitive';
 import { Text } from '@real-system/typography';
 
 export default {

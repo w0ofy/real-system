@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
 
-import { UseInteractionsReturnValue } from '@real-system/a11y-library';
+import type { UseInteractionsReturnValue } from '@real-system/a11y-library';
 import { real } from '@real-system/elements-primitive';
 import { Flex } from '@real-system/flex';
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { Flex } from '@real-system/flex';
 import { Link } from '@real-system/link';

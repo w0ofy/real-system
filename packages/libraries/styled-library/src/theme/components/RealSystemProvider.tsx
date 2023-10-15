@@ -1,11 +1,12 @@
 import * as React from 'react';
+import type { ThemeProviderProps as EmotionProviderProps } from '@emotion/react';
 import {
   ThemeContext as RealSystemContext,
   ThemeProvider as EmotionProvider,
-  ThemeProviderProps as EmotionProviderProps,
 } from '@emotion/react';
 
-import { ExtendableThemeShape, themes } from '../themes';
+import type { ExtendableThemeShape } from '../themes';
+import { themes } from '../themes';
 
 import { GlobalStyles } from './GlobalStyles';
 

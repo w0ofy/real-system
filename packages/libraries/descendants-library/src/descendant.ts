@@ -39,7 +39,7 @@ export type Descendant<T, K> = DescendantOptions<K> & {
  */
 export class DescendantsManager<
   T extends HTMLElement,
-  K extends Record<string, any> = Dict
+  K extends Record<string, any> = Dict,
 > {
   private descendants = new Map<T, Descendant<T, K>>();
 

@@ -3,11 +3,13 @@
     "source.fixAll.eslint": true
   },
   "editor.tabSize": 2,
-  "eslint.alwaysShowStatus": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "auto-close-tag.disableOnLanguage": ["typescript"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

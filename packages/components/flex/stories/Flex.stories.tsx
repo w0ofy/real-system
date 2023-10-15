@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Meta, Story } from '@storybook/react';
+import type { Meta, Story } from '@storybook/react';
 
 import { Box } from '@real-system/box';
-import { Flex, FlexProps } from '@real-system/flex';
+import type { FlexProps } from '@real-system/flex';
+import { Flex } from '@real-system/flex';
 import { Text } from '@real-system/typography';
 
 export default {

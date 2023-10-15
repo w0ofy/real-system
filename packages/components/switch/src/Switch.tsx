@@ -1,12 +1,12 @@
 import React, { forwardRef, useMemo } from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import type { StylishProps } from '@real-system/styled-library';
 import type { ValidationProps } from '@real-system/utils-library';
-import { useReadyRef, useUID } from '@real-system/utils-library';
+import { useReadyRef } from '@real-system/utils-library';
 import { makeTestId, useControllableState } from '@real-system/utils-library';
 
 import type { CommonSwitchProps, LabelPlacement } from './Switch.model';
+import { getPlacement, useSwitchIds } from './Switch.utils';
 import { SwitchKnob } from './SwitchKnob';
 import { SwitchSupport } from './SwitchSupport';
 
@@ -38,35 +38,6 @@ type SwitchProps = {
 > &
   Pick<CommonSwitchProps, 'id' | 'onBlur' | 'onFocus' | 'onChange'>;
 
-const useSwitchIds = (id?: string) => {
-  let switchId = useUID();
-  const helpTextId = useUID();
-  const labelId = useUID();
-  switchId = id || switchId;
-
-  return {
-    helpTextId,
-    labelId,
-    switchId,
-  };
-};
-
-const getPlacement = (
-  placement: SwitchProps['labelPlacement']
-): Pick<StylishProps, 'alignItems' | 'justifyContent' | 'flexDirection'> => {
-  if (placement === 'left') {
-    return {
-      alignItems: 'flex-end',
-      justifyContent: 'flex-end',
-      flexDirection: 'row-reverse',
-    };
-  }
-  return {
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-  };
-};
 /**
  * `Switch` is an interactive binary control that follows the ARIA `switch` role semantics.
  * `Switch` can be optionally controlled. If an `on` value is passed, simply pass `onClick` to update the `on` state.

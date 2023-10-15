@@ -1,13 +1,14 @@
 import React, { forwardRef } from 'react';
 
 import { AlertPrimitive } from '@real-system/alert-primitive';
-import { Button, ButtonProps } from '@real-system/button';
+import type { ButtonProps } from '@real-system/button';
+import { Button } from '@real-system/button';
 import { Flex } from '@real-system/flex';
 import { Icon } from '@real-system/icon';
 import { Text } from '@real-system/typography';
 import { makeTestId } from '@real-system/utils-library';
 
-import { CommonAlertProps } from './types';
+import type { CommonAlertProps } from './types';
 import { ICON_MAP, INTENT_COLOR_MAP } from './utils';
 
 type AlertProps = {

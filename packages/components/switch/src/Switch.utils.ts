@@ -1,4 +1,4 @@
-import { StylishProps } from '@real-system/styled-library';
+import type { StylishProps } from '@real-system/styled-library';
 import { useUID } from '@real-system/utils-library';
 
 import type { LabelPlacement } from './Switch.model';
@@ -32,3 +32,5 @@ const getPlacement = (
     flexDirection: 'row',
   };
 };
+
+export { getPlacement, useSwitchIds };

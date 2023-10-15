@@ -64,7 +64,7 @@ const useControllableState = <T, OnChangeArgs = any>({
 
   return [value, updateValue] as [
     T,
-    (nextValue: React.SetStateAction<T>, ...args: OnChangeArgs[]) => void
+    (nextValue: React.SetStateAction<T>, ...args: OnChangeArgs[]) => void,
   ];
 };
 

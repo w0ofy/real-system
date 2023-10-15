@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 
-import {
+import type {
   PopoverStatePrimitive,
   PopoverStatePrimitiveProps,
-  usePopoverStatePrimitive,
 } from '@real-system/popover-primitive';
+import { usePopoverStatePrimitive } from '@real-system/popover-primitive';
 import { constate } from '@real-system/state-library';
 
 type CustomPopoverState = {

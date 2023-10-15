@@ -1,10 +1,8 @@
 import React, { forwardRef } from 'react';
 
 import { real } from '@real-system/elements-primitive';
-import {
-  SelectPrimitiveOptions,
-  useSelectStatePrimitive,
-} from '@real-system/select-primitive';
+import type { SelectPrimitiveOptions } from '@real-system/select-primitive';
+import { useSelectStatePrimitive } from '@real-system/select-primitive';
 import {
   SelectLabelPrimitive,
   SelectPrimitive,

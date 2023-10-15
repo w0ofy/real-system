@@ -4,7 +4,8 @@ import { render, screen } from '@testing-library/react';
 
 import { RealSystemProvider } from '@real-system/styled-library';
 
-import { real, RealElementPrimitiveProps } from '../src/elements';
+import type { RealElementPrimitiveProps } from '../src/elements';
+import { real } from '../src/elements';
 
 const consoleSpy = jest
   .spyOn(console, 'error')

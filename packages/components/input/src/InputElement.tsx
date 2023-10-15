@@ -4,7 +4,7 @@ import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 import { spreadStyleProps } from '@real-system/styled-library';
 
-import { InputProps } from './Input.model';
+import type { InputProps } from './Input.model';
 
 const getCursor = ({
   disabled,
