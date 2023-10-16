@@ -64,12 +64,8 @@ function isNull(value: any): value is null {
   return value == null;
 }
 
-const REACT_TEXT = {
-  string: true,
-  number: true,
-};
-
-const isReactText = (value: any) => !!REACT_TEXT[typeof value];
+const isReactText = (value: any): value is string | number =>
+  typeof value === 'string' || typeof value === 'number';
 
 // String assertions
 function isString(value: any): value is string {

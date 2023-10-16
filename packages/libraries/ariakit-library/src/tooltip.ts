@@ -6,6 +6,8 @@ export {
   type TooltipArrowOptions as AriakitTooltipArrowOptions,
   type TooltipArrowProps as AriakitTooltipArrowProps,
   type TooltipProps as AriakitTooltipProps,
+  TooltipProvider as AriakitTooltipProvider,
+  type TooltipProviderProps as AriakitTooltipProviderProps,
   type TooltipStore as AriakitTooltipStore,
   type TooltipStoreProps as AriakitTooltipStoreProps,
   useTooltipStore as useAriakitTooltipStore,

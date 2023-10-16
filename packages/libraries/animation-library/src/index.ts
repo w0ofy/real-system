@@ -1,19 +1,14 @@
-import type {
-  AnimatedProps,
-  UseSpringProps,
-  UseTransitionProps,
-} from 'react-spring';
-import {
+/** library tools */
+export {
   animated,
+  type AnimatedProps,
   config,
   useSpring,
+  type UseSpringProps,
   useSpringRef,
   useTransition,
+  type UseTransitionProps,
 } from 'react-spring';
-
-/** library tools */
-export type { AnimatedProps, UseSpringProps, UseTransitionProps };
-export { animated, config, useSpring, useSpringRef, useTransition };
 
 /** maintained by us */
 export * from './usePrefersReducedMotion';
