@@ -1,10 +1,9 @@
 export {
   Radio as AriakitRadio,
   RadioGroup as AriakitRadioGroup,
-  RadioGroupProps as AriakitRadioGroupProps,
-  RadioProps as AriakitRadioProps,
-  RadioState as AriakitRadioState,
-  RadioStateProps as AriakitRadioStateProps,
-  useRadio as useAriakitRadio,
-  useRadioState as useAriakitRadioState,
-} from 'ariakit/radio';
+  type RadioGroupProps as AriakitRadioGroupProps,
+  type RadioProps as AriakitRadioProps,
+  type RadioStoreProps as AriakitRadioStoreProps,
+  useRadioContext as useAriakitRadio,
+  useRadioStore as useAriakitRadioStore,
+} from '@ariakit/react/radio';
