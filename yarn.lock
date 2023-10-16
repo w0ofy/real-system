@@ -50,33 +50,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:^7.22.6":
-  version: 7.22.6
-  resolution: "@babel/cli@npm:7.22.6"
-  dependencies:
-    "@jridgewell/trace-mapping": ^0.3.17
-    "@nicolo-ribaudo/chokidar-2": 2.1.8-no-fsevents.3
-    chokidar: ^3.4.0
-    commander: ^4.0.1
-    convert-source-map: ^1.1.0
-    fs-readdir-recursive: ^1.1.0
-    glob: ^7.2.0
-    make-dir: ^2.1.0
-    slash: ^2.0.0
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  dependenciesMeta:
-    "@nicolo-ribaudo/chokidar-2":
-      optional: true
-    chokidar:
-      optional: true
-  bin:
-    babel: ./bin/babel.js
-    babel-external-helpers: ./bin/babel-external-helpers.js
-  checksum: c2a6b7d68226f1601446a0e452fcbec9df40c5aabb991f427ad1e2d0eb75f123f530c1319b55b040d32b3593e003fced99e073ed556435e301d97a10965ac947
-  languageName: node
-  linkType: hard
-
 "@babel/cli@npm:^7.23.0":
   version: 7.23.0
   resolution: "@babel/cli@npm:7.23.0"
@@ -7048,7 +7021,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/core@workspace:packages/core"
   dependencies:
-    "@babel/cli": ^7.22.6
+    "@babel/cli": ^7.23.0
     "@babel/core": ^7.22.6
     "@real-system/a11y-library": ^0.0.17
     "@real-system/accordion": ^0.0.16
@@ -12260,7 +12233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"convert-source-map@npm:^1.1.0, convert-source-map@npm:^1.5.0, convert-source-map@npm:^1.6.0, convert-source-map@npm:^1.7.0":
+"convert-source-map@npm:^1.5.0, convert-source-map@npm:^1.6.0, convert-source-map@npm:^1.7.0":
   version: 1.8.0
   resolution: "convert-source-map@npm:1.8.0"
   dependencies:
