@@ -1,5 +1,5 @@
 export {
   FocusScope,
-  FocusScopeProps,
+  type FocusScopeProps,
   useFocusManager,
 } from '@react-aria/focus';

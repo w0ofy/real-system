@@ -1,5 +1,5 @@
-export type {
-  LabelAriaProps as UseLabelOptions,
-  LabelAria as UseLabelReturnValue,
+export {
+  useLabel,
+  type LabelAriaProps as UseLabelOptions,
+  type LabelAria as UseLabelReturnValue,
 } from '@react-aria/label';
-export { useLabel } from '@react-aria/label';

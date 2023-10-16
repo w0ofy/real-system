@@ -20,7 +20,7 @@ const FieldErrorText = React.forwardRef<HTMLSpanElement, FieldErrorTextProps>(
 
     return (
       <Text.Help
-        testId={makeTestId('field-error-text')}
+        data-testid={makeTestId('field-error-text')}
         variant="danger"
         {...restProps}
         ref={ref}>
