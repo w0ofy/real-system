@@ -8,7 +8,7 @@ import type {
 } from '@real-system/styled-library';
 import { useSafeMeasure } from '@real-system/utils-library';
 
-import { useDisclosureStateContext } from './DisclosureContext';
+import { useDisclosureStoreContext } from './DisclosureContext';
 
 const defaultStyles: StylishProps = {
   position: 'relative',
@@ -36,7 +36,7 @@ const DisclosureContent = React.forwardRef<
   HTMLDivElement,
   DisclosureContentProps
 >(function DisclosureContent({ children, ...restProps }, ref) {
-  const { contained, state } = useDisclosureStateContext();
+  const { contained, store } = useDisclosureStoreContext();
   const [measureRef, { blockSize }] = useSafeMeasure();
 
   const transitionStyles = React.useMemo(() => {
@@ -57,7 +57,7 @@ const DisclosureContent = React.forwardRef<
       data-disclosure-content
       {...(contained ? containedStyles : defaultStyles)}
       {...transitionStyles}
-      state={state}>
+      store={store}>
       <real.div
         py={6}
         px={6}

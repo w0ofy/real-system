@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useDisclosureStatePrimitive } from '@real-system/disclosure-primitive';
+import { useDisclosureStorePrimitive } from '@real-system/disclosure-primitive';
 import { real } from '@real-system/elements-primitive';
 import type { RenderProp } from '@real-system/styled-library';
 import type { Func } from '@real-system/utils-library';
@@ -9,7 +9,7 @@ import { isFunction, makeTestId } from '@real-system/utils-library';
 import { DisclosureContent } from './DisclosureContent';
 import type {
   DisclosureContext,
-  DisclosureStateProps,
+  DisclosureStoreProps,
 } from './DisclosureContext';
 import { DisclosureContextProvider } from './DisclosureContext';
 import { DisclosureHeading } from './DisclosureHeading';
@@ -18,7 +18,7 @@ import { DisclosureTrigger } from './DisclosureTrigger';
 
 type DisclosureProps = {
   children: RenderProp<DisclosureContext> | React.ReactNode;
-} & Omit<DisclosureStateProps, 'animated'>;
+} & Omit<DisclosureStoreProps, 'animated'>;
 
 const TRIGGER_CSS_SELECTOR =
   '& > [data-disclosure-trigger], & > [data-disclosure-content]';
@@ -28,20 +28,20 @@ const Disclosure = ({
   contained = false,
   ...restProps
 }: DisclosureProps) => {
-  const state = useDisclosureStatePrimitive({
+  const store = useDisclosureStorePrimitive({
     ...restProps,
     animated: true,
   });
   const children = React.useMemo(() => {
     if (isFunction(childrenProp)) {
       const childrenFn = childrenProp as Func;
-      return childrenFn({ state, contained });
+      return childrenFn({ store, contained });
     }
     return childrenProp;
-  }, [childrenProp, state, contained]);
+  }, [childrenProp, store, contained]);
 
   return (
-    <DisclosureContextProvider state={state} contained={contained}>
+    <DisclosureContextProvider store={store} contained={contained}>
       <real.div
         data-testid={makeTestId('disclosure')}
         _firstAndNotOnly={{

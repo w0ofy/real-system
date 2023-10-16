@@ -1,11 +1,11 @@
 export type {
   AriakitDisclosureContentProps as DisclosureContentPrimitiveProps,
   AriakitDisclosureProps as DisclosurePrimitiveProps,
-  AriakitDisclosureState as DisclosureStatePrimitive,
-  AriakitDisclosureStateProps as DisclosureStatePrimitiveProps,
+  AriakitDisclosureStore as DisclosureStorePrimitive,
+  AriakitDisclosureStoreProps as DisclosureStorePrimitiveProps,
 } from '@real-system/ariakit-library';
 export {
   AriakitDisclosureContent as DisclosureContentPrimitive,
   AriakitDisclosure as DisclosurePrimitive,
-  useAriakitDisclosureState as useDisclosureStatePrimitive,
+  useAriakitDisclosureStore as useDisclosureStorePrimitive,
 } from '@real-system/ariakit-library';

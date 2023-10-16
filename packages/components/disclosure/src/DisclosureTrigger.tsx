@@ -9,7 +9,7 @@ import type {
 import styled from '@real-system/styled-library';
 import { merge } from '@real-system/utils-library';
 
-import { useDisclosureStateContext } from './DisclosureContext';
+import { useDisclosureStoreContext } from './DisclosureContext';
 
 const defaultStyles: StylishProps = {
   position: 'relative',
@@ -73,14 +73,14 @@ const DisclosureTrigger = ({
   hideToggleIcon,
   ...restProps
 }: DisclosureTriggerProps) => {
-  const { state, ...restContext } = useDisclosureStateContext();
-  const { open } = state;
+  const { store, ...restContext } = useDisclosureStoreContext();
+  const { open } = store.getState();
 
   return (
     <DisclosurePrimitive
       as={StyledDisclosureTrigger}
       disabled={disabled}
-      state={state}
+      store={store}
       {...restContext}
       {...restProps}
       data-disclosure-trigger>
