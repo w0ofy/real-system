@@ -5,7 +5,7 @@ import { Button } from '@real-system/button';
 import {
   TooltipAnchorPrimitive,
   TooltipPrimitive,
-  useTooltipStatePrimitive,
+  useTooltipStorePrimitive,
 } from '@real-system/tooltip-primitive';
 
 export default {
@@ -17,7 +17,7 @@ export default {
 } as Meta;
 
 const Template = () => {
-  const tooltip = useTooltipStatePrimitive();
+  const tooltip = useTooltipStorePrimitive();
   return (
     <>
       <TooltipAnchorPrimitive state={tooltip} as={Button}>

@@ -1,11 +1,11 @@
 import type * as React from 'react';
 
 import type { RealSystemElementProps } from '@real-system/styled-library';
-import type { TooltipStatePrimitiveProps } from '@real-system/tooltip-primitive';
+import type { TooltipStorePrimitiveProps } from '@real-system/tooltip-primitive';
 
 type StateProps = Pick<
-  TooltipStatePrimitiveProps,
-  'open' | 'timeout' | 'placement' | 'gutter'
+  TooltipStorePrimitiveProps,
+  'open' | 'timeout' | 'placement'
 >;
 type TooltipProps = {
   children: React.ReactNode;

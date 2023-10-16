@@ -3,12 +3,12 @@ export type {
   AriakitTooltipArrowOptions as TooltipArrowPrimitiveOptions,
   AriakitTooltipArrowProps as TooltipArrowPrimitiveProps,
   AriakitTooltipProps as TooltipPrimitiveProps,
-  AriakitTooltipState as TooltipStatePrimitive,
-  AriakitTooltipStateProps as TooltipStatePrimitiveProps,
+  AriakitTooltipStore as TooltipStorePrimitive,
+  AriakitTooltipStoreProps as TooltipStorePrimitiveProps,
 } from '@real-system/ariakit-library';
 export {
   AriakitTooltipAnchor as TooltipAnchorPrimitive,
   AriakitTooltipArrow as TooltipArrowPrimitive,
   AriakitTooltip as TooltipPrimitive,
-  useAriakitTooltipState as useTooltipStatePrimitive,
+  useAriakitTooltipStore as useTooltipStorePrimitive,
 } from '@real-system/ariakit-library';

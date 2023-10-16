@@ -6,7 +6,7 @@ import {
   TooltipAnchorPrimitive,
   TooltipArrowPrimitive,
   TooltipPrimitive,
-  useTooltipStatePrimitive,
+  useTooltipStorePrimitive,
 } from '@real-system/tooltip-primitive';
 import { Text } from '@real-system/typography';
 import {
@@ -38,7 +38,6 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
     disabled,
     open,
     hideArrow = false,
-    gutter = 2,
     ...restProps
   },
   ref
@@ -46,20 +45,20 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
   const internalRef = useRef<HTMLSpanElement>(null);
   const mergedRef = useMergeRefs(ref, internalRef);
 
-  const state = useTooltipStatePrimitive({
+  const store = useTooltipStorePrimitive({
     placement,
     open: !disabled && open,
-    gutter,
     ...restProps,
   });
-  const isOpen = useMemo(() => !disabled && state.open, [disabled, state.open]);
+  const { open: openState } = store.getState();
+  const isOpen = useMemo(() => !disabled && openState, [disabled, openState]);
   const transitions = useTransition(isOpen, TRANSITIONS_CONFIG);
 
   // create the trigger if children is number, text or element
   const trigger = useMemo(() => {
     if (isReactText(children)) {
       return (
-        <TooltipAnchorPrimitive as="span" state={state} ref={mergedRef}>
+        <TooltipAnchorPrimitive as="span" store={store} ref={mergedRef}>
           {children}
         </TooltipAnchorPrimitive>
       );
@@ -69,7 +68,7 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
     return (
       <TooltipAnchorPrimitive
         as="span"
-        state={state}
+        store={store}
         ref={mergedRef}
         {...Child.props}>
         {(anchorProps) =>
@@ -77,7 +76,7 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
         }
       </TooltipAnchorPrimitive>
     );
-  }, [children, state, mergedRef]);
+  }, [children, store, mergedRef]);
 
   return (
     <>
@@ -88,10 +87,10 @@ const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
             <TooltipPrimitive
               data-testid={makeTestId('tooltip')}
               {...restProps}
-              state={state}
+              store={store}
               as={StyledTooltip}
               style={style}>
-              {hideArrow ? null : <TooltipArrowPrimitive state={state} />}
+              {hideArrow ? null : <TooltipArrowPrimitive store={store} />}
               <Text as="span" color="white">
                 {label}
               </Text>
