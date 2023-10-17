@@ -28,26 +28,21 @@ $ yarn add @real-system/select-primitive
 import type {
   SelectGroupLabelPrimitiveProps,
   SelectGroupPrimitiveProps,
-  SelectItemCheckPrimitiveProps,
   SelectItemPrimitiveProps,
-  SelectLabelPrimitiveProps,
   SelectPopoverPrimitiveProps,
-  SelectPrimitiveOptions,
   SelectPrimitiveProps,
   SelectSeparatorPrimitiveProps,
-  SelectStatePrimitive,
-  SelectStatePrimitiveProps,
+  SelectProviderPrimitiveProps,
 } from '@real-system/select-primitive';
 import {
   SelectGroupLabelPrimitive,
   SelectGroupPrimitive,
-  SelectItemCheckPrimitive,
   SelectItemPrimitive,
   SelectLabelPrimitive,
   SelectPopoverPrimitive,
   SelectPrimitive,
+  SelectProviderPrimitive,
   SelectSeparatorPrimitive,
-  useSelectStatePrimitive,
 } from '@real-system/select-primitive';
 
 ...

@@ -5,7 +5,7 @@ import { Button } from '@real-system/button';
 import { PopoverDismissPrimitive } from '@real-system/popover-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-import { usePopoverStateContext } from './PopoverContext';
+import { usePopoverStoreContext } from './PopoverContext';
 
 type PopoverDismissProps = Partial<Omit<ButtonProps, 'onClick' | 'as'>> & {
   /** Override the `PopoverDismiss` `onClick` callback. If used, you will have
@@ -16,20 +16,20 @@ type PopoverDismissProps = Partial<Omit<ButtonProps, 'onClick' | 'as'>> & {
 
 const PopoverDismiss = forwardRef<HTMLButtonElement, PopoverDismissProps>(
   function PopoverDismiss({ children, onClick, ...restProps }, ref) {
-    const { hide, ...restState } = usePopoverStateContext();
+    const { hide, ...restState } = usePopoverStoreContext();
     const handleHide = useCallback(() => {
       if (onClick) return onClick(hide);
       hide();
     }, [onClick, hide]);
 
-    const state = {
+    const store = {
       hide: handleHide,
       ...restState,
     };
 
     return (
       <PopoverDismissPrimitive
-        state={state}
+        store={store}
         as={Button}
         data-testid={makeTestId('popover-dismiss')}
         {...restProps}

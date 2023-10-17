@@ -1,21 +1,11 @@
 export type {
-  AriakitMenuArrowProps as MenuArrowPrimitiveProps,
-  AriakitMenuButtonArrowProps as MenuButtonArrowPrimitiveProps,
-  AriakitMenuButtonProps as MenuButtonPrimitiveProps,
-  AriakitMenuGroupLabelProps as MenuGroupLabelPrimitiveProps,
-  AriakitMenuGroupProps as MenuGroupPrimitiveProps,
   AriakitMenuItemCheckboxProps as MenuItemCheckboxPrimitiveProps,
-  AriakitMenuItemCheckProps as MenuItemCheckPrimitiveProps,
   AriakitMenuItemProps as MenuItemPrimitiveProps,
   AriakitMenuItemRadioProps as MenuItemRadioPrimitiveProps,
-  AriakitMenuProps as MenuPrimitiveProps,
+  AriakitMenuProviderProps as MenuProviderPrimitiveProps,
   AriakitMenuSeparatorProps as MenuSeparatorPrimitiveProps,
-  AriakitMenuState as MenuStatePrimitive,
-  AriakitMenuStateProps as MenuStatePrimitiveProps,
 } from '@real-system/ariakit-library';
 export {
-  AriakitMenuArrow as MenuArrowPrimitive,
-  AriakitMenuButtonArrow as MenuButtonArrowPrimitive,
   AriakitMenuButton as MenuButtonPrimitive,
   AriakitMenuGroupLabel as MenuGroupLabelPrimitive,
   AriakitMenuGroup as MenuGroupPrimitive,
@@ -24,6 +14,6 @@ export {
   AriakitMenuItem as MenuItemPrimitive,
   AriakitMenuItemRadio as MenuItemRadioPrimitive,
   AriakitMenu as MenuPrimitive,
+  AriakitMenuProvider as MenuProviderPrimitive,
   AriakitMenuSeparator as MenuSeparatorPrimitive,
-  useAriakitMenuState as useMenuStatePrimitive,
 } from '@real-system/ariakit-library';

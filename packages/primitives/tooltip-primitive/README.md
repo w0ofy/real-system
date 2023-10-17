@@ -30,14 +30,14 @@ import type {
   TooltipArrowPrimitiveOptions,
   TooltipArrowPrimitiveProps,
   TooltipPrimitiveProps,
-  TooltipStatePrimitive,
-  TooltipStatePrimitiveProps,
+  TooltipStorePrimitive,
+  TooltipStorePrimitiveProps,
 } from '@real-system/tooltip-primitive';
 import {
   TooltipAnchorPrimitive,
   TooltipArrowPrimitive,
   ATooltipPrimitive,
-  useTooltipStatePrimitive,
+  useTooltipStorePrimitive,
 } from '@real-system/tooltip-primitive';
 
 ...

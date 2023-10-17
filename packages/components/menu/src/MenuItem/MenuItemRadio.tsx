@@ -8,11 +8,11 @@ import {
 import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import type { CommonMenuProps, OmitMenuState } from '../types';
+import type { CommonMenuProps, OmitMenuStore } from '../types';
 
 import { MenuItemWrapper } from './MenuItem';
 
-type MenuItemRadioProps = OmitMenuState<MenuItemRadioPrimitiveProps> &
+type MenuItemRadioProps = OmitMenuStore<MenuItemRadioPrimitiveProps> &
   CommonMenuProps;
 
 const styleProps: StylishProps = {
@@ -30,14 +30,13 @@ const MenuItemRadio = forwardRef<HTMLDivElement, MenuItemRadioProps>(
     return (
       /** @ts-ignore `as` prop type conflicts */
       <MenuItemRadioPrimitive
-        as={MenuItemWrapper}
+        render={<MenuItemWrapper {...styleProps} />}
         disabled={disabled}
         hideOnClick={hideOnClick}
         onClick={onClick}
         name={name}
         value={value}
         data-testid={makeTestId('menu-item-radio')}
-        {...styleProps}
         {...restProps}
         ref={ref}>
         <MenuItemCheckPrimitive />

@@ -1,55 +1,49 @@
 import React, { useCallback } from 'react';
 
 import type {
-  PopoverStatePrimitive,
-  PopoverStatePrimitiveProps,
+  PopoverStorePrimitive,
+  PopoverStorePrimitiveProps,
 } from '@real-system/popover-primitive';
-import { usePopoverStatePrimitive } from '@real-system/popover-primitive';
+import { usePopoverStorePrimitive } from '@real-system/popover-primitive';
 import { constate } from '@real-system/state-library';
 
-type CustomPopoverState = {
+type CustomPopoverStore = {
   onHide?: () => void;
 };
 type PopoverContext = {
-  state: PopoverStatePrimitive;
+  store: PopoverStorePrimitive;
 };
 
-type PopoverContainerProps = Pick<
-  PopoverStatePrimitiveProps,
-  'placement' | 'flip'
-> & {
+type PopoverContainerProps = Pick<PopoverStorePrimitiveProps, 'placement'> & {
   children: React.ReactNode;
-} & CustomPopoverState;
+} & CustomPopoverStore;
 
-const usePopover = ({ state }: PopoverContext): PopoverStatePrimitive => state;
+const usePopover = ({ store }: PopoverContext): PopoverStorePrimitive => store;
 
-const [PopoverContextProvider, usePopoverStateContext] = constate(usePopover);
+const [PopoverContextProvider, usePopoverStoreContext] = constate(usePopover);
 
 const PopoverContainer = ({
   children,
   onHide,
   placement = 'bottom-end',
-  flip = true,
 }: PopoverContainerProps) => {
-  const { hide, ...restState } = usePopoverStatePrimitive({
+  const { hide, ...restState } = usePopoverStorePrimitive({
     placement,
-    gutter: 2,
-    flip,
   });
   const handleHide = useCallback(() => {
     onHide && onHide();
     hide();
   }, [hide, onHide]);
 
-  const state = {
+  const store = {
     ...restState,
     hide: handleHide,
   };
 
   return (
-    <PopoverContextProvider state={state}>{children}</PopoverContextProvider>
+    <PopoverContextProvider store={store}>{children}</PopoverContextProvider>
   );
 };
 
 export type { PopoverContainerProps, PopoverContext };
-export { PopoverContainer, usePopoverStateContext };
+export { PopoverContainer, usePopoverStoreContext };

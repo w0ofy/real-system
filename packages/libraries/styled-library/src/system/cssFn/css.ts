@@ -3,7 +3,7 @@
  * @see https://raw.githubusercontent.com/styled-system/styled-system/master/packages/css/src/index.js
  */
 
-import type { Dict, Obj } from '@real-system/utils-library';
+import type { AnyObj, Dict } from '@real-system/utils-library';
 
 import type { ThemeScales } from '../../theme/tokens/types';
 import { pseudoProps } from '../config';
@@ -17,11 +17,12 @@ import {
   transforms,
 } from './css.utils';
 
-const defaultTheme: Partial<Record<ThemeScales, (number | string)[] | Obj>> = {
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
-  breakpoints: ['30em', '48em', '62em', '80em', '96em'],
-};
+const defaultTheme: Partial<Record<ThemeScales, (number | string)[] | AnyObj>> =
+  {
+    space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+    fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+    breakpoints: ['30em', '48em', '62em', '80em', '96em'],
+  };
 
 /**
  * A recursive styleFn for mapping real system stylish-props

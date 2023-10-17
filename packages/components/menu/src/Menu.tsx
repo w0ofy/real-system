@@ -1,54 +1,50 @@
 import * as React from 'react';
 
-import type {
-  MenuStatePrimitive,
-  MenuStatePrimitiveProps,
+import {
+  MenuProviderPrimitive,
+  type MenuProviderPrimitiveProps,
 } from '@real-system/menu-primitive';
-import { useMenuStatePrimitive } from '@real-system/menu-primitive';
 
 import { MenuGroup } from './MenuGroup/index';
 import { MenuItem } from './MenuItem/index';
 import { MenuButton } from './MenuButton';
-import type { Values } from './MenuContext';
-import { MenuContextProvider } from './MenuContext';
 import { MenuList } from './MenuList';
 import { MenuSeparator } from './MenuSeparator';
 
 /**
  * @todo reset all component api props to `setValue` instead of renaming???
  */
-type MenuProps<V extends Values = Values> = {
+type MenuProps = {
   children: React.ReactNode;
-  onSelect?: MenuStatePrimitiveProps<V>['setValues'];
-} & Omit<MenuStatePrimitiveProps<V>, 'orientation'>;
+  onSelect?: MenuProviderPrimitiveProps['setValues'];
+} & Pick<
+  MenuProviderPrimitiveProps,
+  'placement' | 'open' | 'values' | 'defaultValues' | 'setOpen'
+>;
 
 /**
  * @description Dropdown menu for the common dropdown menu button pattern.
+ * @todo Make a permanent fix for patch to ariakit ""`undefined` middleware when arrow is not used" bug
  */
-function Menu<V extends Values = Values>({
+function Menu({
   children,
   placement = 'bottom-end',
   open,
   values,
   defaultValues,
-  flip = true,
   onSelect,
-  ...restProps
-}: MenuProps<V>) {
-  const state = useMenuStatePrimitive<V>({
-    gutter: 4,
-    placement,
-    open,
-    values,
-    defaultValues,
-    flip,
-    setValues: onSelect,
-    ...restProps,
-  });
+  setOpen,
+}: MenuProps) {
   return (
-    <MenuContextProvider value={state as unknown as MenuStatePrimitive}>
-      <>{children}</>
-    </MenuContextProvider>
+    <MenuProviderPrimitive
+      placement={placement}
+      open={open}
+      setOpen={setOpen}
+      values={values}
+      setValues={onSelect}
+      defaultValues={defaultValues}>
+      {children}
+    </MenuProviderPrimitive>
   );
 }
 

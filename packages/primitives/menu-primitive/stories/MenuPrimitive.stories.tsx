@@ -6,8 +6,8 @@ import {
   MenuButtonPrimitive,
   MenuItemPrimitive,
   MenuPrimitive,
+  MenuProviderPrimitive,
   MenuSeparatorPrimitive,
-  useMenuStatePrimitive,
 } from '@real-system/menu-primitive';
 export default {
   title: 'Primitives/Menu Primitive',
@@ -21,14 +21,10 @@ export default {
 const itemStyles = { padding: '8px', cursor: 'pointer', width: '100%' };
 
 const Template = () => {
-  const menu = useMenuStatePrimitive({ gutter: 8 });
   return (
-    <>
-      <MenuButtonPrimitive state={menu} as={Button}>
-        Actions
-      </MenuButtonPrimitive>
+    <MenuProviderPrimitive>
+      <MenuButtonPrimitive as={Button}>Actions</MenuButtonPrimitive>
       <MenuPrimitive
-        state={menu}
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -52,7 +48,7 @@ const Template = () => {
           Report
         </MenuItemPrimitive>
       </MenuPrimitive>
-    </>
+    </MenuProviderPrimitive>
   );
 };
 

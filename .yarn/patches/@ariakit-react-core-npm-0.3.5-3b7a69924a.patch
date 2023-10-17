@@ -1,0 +1,26 @@
+diff --git a/cjs/__chunks/JA2O66IU.cjs b/cjs/__chunks/JA2O66IU.cjs
+index daa05939cd7e0df65d642fcc20b1942a65c41be5..d818378a6b5873b40f84759f1d212696026ab533 100644
+--- a/cjs/__chunks/JA2O66IU.cjs
++++ b/cjs/__chunks/JA2O66IU.cjs
+@@ -233,7 +233,7 @@ var usePopover = _VKYTJKYNcjs.createHook.call(void 0,
+             fitViewport,
+             overflowPadding
+           })
+-        ];
++        ].filter(Boolean);
+         const pos = await _dom.computePosition.call(void 0, anchor, popoverElement, {
+           placement,
+           strategy: fixed ? "fixed" : "absolute",
+diff --git a/esm/__chunks/QAVVMLZP.js b/esm/__chunks/QAVVMLZP.js
+index 19a3a0197942e69e44c8f3dae22c9c7d117bfb8f..b9eb9d18eeaf726e2c50a05c0396433f2d160aae 100644
+--- a/esm/__chunks/QAVVMLZP.js
++++ b/esm/__chunks/QAVVMLZP.js
+@@ -233,7 +233,7 @@ var usePopover = createHook(
+             fitViewport,
+             overflowPadding
+           })
+-        ];
++        ].filter(Boolean);
+         const pos = await computePosition(anchor, popoverElement, {
+           placement,
+           strategy: fixed ? "fixed" : "absolute",

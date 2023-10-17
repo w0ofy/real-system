@@ -8,11 +8,11 @@ import {
 import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import type { CommonMenuProps, OmitMenuState } from '../types';
+import type { CommonMenuProps, OmitMenuStore } from '../types';
 
 import { MenuItemWrapper } from './MenuItem';
 
-type MenuItemCheckboxProps = OmitMenuState<MenuItemCheckboxPrimitiveProps> &
+type MenuItemCheckboxProps = OmitMenuStore<MenuItemCheckboxPrimitiveProps> &
   CommonMenuProps;
 
 const styleProps: StylishProps = {
@@ -29,13 +29,12 @@ const MenuItemCheckbox = forwardRef<HTMLDivElement, MenuItemCheckboxProps>(
   ) {
     return (
       <MenuItemCheckboxPrimitive
-        as={MenuItemWrapper}
+        render={<MenuItemWrapper {...styleProps} />}
         disabled={disabled}
         onClick={onClick}
         name={name}
         value={value}
         data-testid={makeTestId('menu-item-checkbox')}
-        {...styleProps}
         {...restProps}
         ref={ref}>
         <>

@@ -1,20 +1,20 @@
 import type {
-  DisclosureStatePrimitive,
-  DisclosureStatePrimitiveProps,
+  DisclosureStorePrimitive,
+  DisclosureStorePrimitiveProps,
 } from '@real-system/disclosure-primitive';
 import { constate } from '@real-system/state-library';
 
 type CustomProps = { contained?: boolean };
 
-type DisclosureState = DisclosureStatePrimitive;
-type DisclosureStateProps = DisclosureStatePrimitiveProps & CustomProps;
+type DisclosureStore = DisclosureStorePrimitive;
+type DisclosureStoreProps = DisclosureStorePrimitiveProps & CustomProps;
 type DisclosureContext = {
-  state: DisclosureState;
+  store: DisclosureStore;
 } & CustomProps;
 
-const [DisclosureContextProvider, useDisclosureStateContext] = constate(
+const [DisclosureContextProvider, useDisclosureStoreContext] = constate(
   (props: DisclosureContext) => props
 );
 
-export type { DisclosureContext, DisclosureState, DisclosureStateProps };
-export { DisclosureContextProvider, useDisclosureStateContext };
+export type { DisclosureContext, DisclosureStore, DisclosureStoreProps };
+export { DisclosureContextProvider, useDisclosureStoreContext };

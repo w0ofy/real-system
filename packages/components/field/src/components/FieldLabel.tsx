@@ -18,7 +18,7 @@ const FieldLabel = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
 
     return (
       <Text.Label
-        testId={makeTestId('field-label')}
+        data-testid={makeTestId('field-label')}
         required={required}
         whiteSpace="nowrap"
         {...restProps}

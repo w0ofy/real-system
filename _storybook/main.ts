@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
+    '@storybook/addon-interactions',
   ],
   staticDirs: ['./static'],
   core: {
@@ -20,11 +21,12 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: true,
+    defaultName: 'Documentation',
   },
   features: {
     /** @todo make `true` and fix chunks */
-    storyStoreV7: false,
+    storyStoreV7: true,
   },
   typescript: {
     check: true,

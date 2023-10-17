@@ -6,7 +6,7 @@ import {
   SelectLabelPrimitive,
   SelectPopoverPrimitive,
   SelectPrimitive,
-  useSelectStatePrimitive,
+  SelectProviderPrimitive,
 } from '@real-system/select-primitive';
 
 export default {
@@ -20,21 +20,18 @@ export default {
 } as Meta;
 
 const Template = () => {
-  const select = useSelectStatePrimitive({
-    defaultValue: 'Apple',
-    sameWidth: true,
-    gutter: 4,
-  });
   return (
     <div className="wrapper">
-      <SelectLabelPrimitive state={select}>Favorite fruit</SelectLabelPrimitive>
-      <SelectPrimitive state={select} />
-      <SelectPopoverPrimitive state={select}>
-        <SelectItemPrimitive value="Apple" />
-        <SelectItemPrimitive value="Banana" />
-        <SelectItemPrimitive value="Grape" disabled />
-        <SelectItemPrimitive value="Orange" />
-      </SelectPopoverPrimitive>
+      <SelectProviderPrimitive defaultValue="Apple">
+        <SelectLabelPrimitive>Favorite fruit</SelectLabelPrimitive>
+        <SelectPrimitive />
+        <SelectPopoverPrimitive sameWidth gutter={4}>
+          <SelectItemPrimitive value="Apple" />
+          <SelectItemPrimitive value="Banana" />
+          <SelectItemPrimitive value="Grape" disabled />
+          <SelectItemPrimitive value="Orange" />
+        </SelectPopoverPrimitive>
+      </SelectProviderPrimitive>
     </div>
   );
 };

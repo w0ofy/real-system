@@ -1,29 +1,19 @@
 export type {
-  MenuArrowProps as AriakitMenuArrowProps,
-  MenuButtonArrowProps as AriakitMenuButtonArrowProps,
-  MenuButtonProps as AriakitMenuButtonProps,
-  MenuGroupLabelProps as AriakitMenuGroupLabelProps,
-  MenuGroupProps as AriakitMenuGroupProps,
   MenuItemCheckboxProps as AriakitMenuItemCheckboxProps,
-  MenuItemCheckProps as AriakitMenuItemCheckProps,
   MenuItemProps as AriakitMenuItemProps,
   MenuItemRadioProps as AriakitMenuItemRadioProps,
-  MenuProps as AriakitMenuProps,
+  MenuProviderProps as AriakitMenuProviderProps,
   MenuSeparatorProps as AriakitMenuSeparatorProps,
-  MenuState as AriakitMenuState,
-  MenuStateProps as AriakitMenuStateProps,
-} from 'ariakit/menu';
+} from '@ariakit/react/menu';
 export {
   Menu as AriakitMenu,
-  MenuArrow as AriakitMenuArrow,
   MenuButton as AriakitMenuButton,
-  MenuButtonArrow as AriakitMenuButtonArrow,
   MenuGroup as AriakitMenuGroup,
   MenuGroupLabel as AriakitMenuGroupLabel,
   MenuItem as AriakitMenuItem,
   MenuItemCheck as AriakitMenuItemCheck,
   MenuItemCheckbox as AriakitMenuItemCheckbox,
   MenuItemRadio as AriakitMenuItemRadio,
+  MenuProvider as AriakitMenuProvider,
   MenuSeparator as AriakitMenuSeparator,
-  useMenuState as useAriakitMenuState,
-} from 'ariakit/menu';
+} from '@ariakit/react/menu';

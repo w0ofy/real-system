@@ -8,26 +8,13 @@ import { Menu } from '@real-system/menu';
 export default {
   title: 'Components/Menu',
   component: Menu,
-  subcomponents: {
-    'Menu.Button': Menu.Button,
-    'Menu.Group': Menu.Group,
-    'Menu.Group.Label': Menu.Group.Label,
-    'Menu.List': Menu.List,
-    'Menu.Separator': Menu.Separator,
-    'Menu.Item': Menu.Item,
-    'Item.Checkbox': Menu.Item.Checkbox,
-    'Item.Command': Menu.Item.Command,
-    'Item.Icon': Menu.Item.Icon,
-    'Item.Link': Menu.Item.Link,
-    'Item.Radio': Menu.Item.Radio,
-  },
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => (
   <Box height="24rem">
     <Menu>
-      <Menu.Button variant="minimal">
-        <Icon icon="menu" />
+      <Menu.Button variant="minimal" leadingArrow>
+        Menu
       </Menu.Button>
       <Menu.List>
         <Menu.Item>
@@ -97,7 +84,9 @@ export const CheckboxMenu = () => {
 
   return (
     <Box height="24rem">
-      <Menu values={values} setValues={(value) => setValues(value)}>
+      <Menu
+        values={values}
+        onSelect={(value: typeof values) => setValues(value)}>
         <Menu.Button
           size="sm"
           variant="outline"
@@ -133,7 +122,9 @@ export const RadioMenu = () => {
 
   return (
     <Box height="24rem">
-      <Menu values={values} setValues={(value) => setValues(value)}>
+      <Menu
+        values={values}
+        onSelect={(value: typeof values) => setValues(value)}>
         <Menu.Button
           size="sm"
           variant="outline"

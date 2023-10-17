@@ -1,14 +1,15 @@
-import type * as React from 'react';
-
 import type { RealSystemElementProps } from '@real-system/styled-library';
-import type { TooltipStatePrimitiveProps } from '@real-system/tooltip-primitive';
+import type {
+  TooltipPrimitiveProps,
+  TooltipStorePrimitiveProps,
+} from '@real-system/tooltip-primitive';
 
 type StateProps = Pick<
-  TooltipStatePrimitiveProps,
-  'open' | 'timeout' | 'placement' | 'gutter'
+  TooltipStorePrimitiveProps,
+  'open' | 'showTimeout' | 'hideTimeout' | 'skipTimeout'
 >;
 type TooltipProps = {
-  children: React.ReactNode;
+  children: string | number | React.ReactElement;
   label: string;
   disabled?: boolean;
   /**
@@ -16,7 +17,15 @@ type TooltipProps = {
    * @default false
    */
   hideArrow?: boolean;
-} & Partial<StateProps> &
+  /** @default 'span' */
+  wrapperElement?: keyof JSX.IntrinsicElements;
+  /**
+   * The placement of the tooltip's popover
+   * @default 'top'
+   **/
+  placement?: TooltipStorePrimitiveProps['placement'];
+} & Pick<TooltipPrimitiveProps, 'gutter'> &
+  Partial<StateProps> &
   RealSystemElementProps<'span'>;
 
 export type { TooltipProps };

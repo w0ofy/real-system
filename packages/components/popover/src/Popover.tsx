@@ -12,12 +12,12 @@ import type { RealSystemElementProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
 import { PopoverButton } from './PopoverButton';
-import { PopoverContainer, usePopoverStateContext } from './PopoverContext';
+import { PopoverContainer, usePopoverStoreContext } from './PopoverContext';
 import { PopoverDescription } from './PopoverDescription';
 import { PopoverDismiss } from './PopoverDismiss';
 import { PopoverHeading } from './PopoverHeading';
 
-type PopoverProps = Omit<PopoverPrimitiveProps, 'state' | 'as'> &
+type PopoverProps = Omit<PopoverPrimitiveProps, 'store' | 'as'> &
   RealSystemElementProps<'div'> & {
     hideCloseButton?: boolean;
     hideArrow?: boolean;
@@ -65,15 +65,15 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
     }: PopoverProps,
     ref
   ) {
-    const state = usePopoverStateContext();
+    const store = usePopoverStoreContext();
     return (
       <PopoverPrimitive
-        state={state}
+        store={store}
         data-testid={makeTestId('popover')}
         as={StyledPopover}
         {...restProps}
         ref={ref}>
-        {hideArrow ? null : <PopoverArrowPrimitive state={state} />}
+        {hideArrow ? null : <PopoverArrowPrimitive store={store} />}
         {!hideCloseButton && (
           <PopoverDismiss
             variant="minimal"

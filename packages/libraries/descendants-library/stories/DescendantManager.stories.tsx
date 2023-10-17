@@ -43,7 +43,7 @@ function Input() {
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
       ref={register}
-      maxlength="1"
+      maxLength="1"
       onKeyDown={(event) => {
         if (event.key === 'ArrowRight') {
           descendants.next(index)?.node.focus();

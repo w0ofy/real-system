@@ -3,8 +3,8 @@ import React, { forwardRef } from 'react';
 import { MenuItemPrimitive } from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
+import type { CommonMenuItemProps } from './MenuItem.model';
 import { MenuItemWrapper } from './MenuItem.style';
-import type { CommonMenuItemProps } from './MenuItem.types';
 import { MenuItemCheckbox } from './MenuItemCheckbox';
 import { MenuItemCommand } from './MenuItemCommand';
 import { MenuItemIcon } from './MenuItemIcon';
@@ -27,7 +27,7 @@ const MenuItem: MenuItemComponent = forwardRef<HTMLDivElement, MenuItemProps>(
   function MenuItem({ children, ...restProps }, ref) {
     return (
       <MenuItemPrimitive
-        as={MenuItemWrapper}
+        render={<MenuItemWrapper />}
         data-testid={makeTestId('menu-item')}
         {...restProps}
         ref={ref}>

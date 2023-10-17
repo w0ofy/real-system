@@ -28,8 +28,8 @@ $ yarn add @real-system/popover-primitive
 import type {
   PopoverDisclosurePrimitiveProps,
   PopoverPrimitiveProps,
-  PopoverStatePrimitive,
-  PopoverStatePrimitiveProps,
+  PopoverStorePrimitive,
+  PopoverStorePrimitiveProps,
 } from '@real-system/popover-primitive';
 import {
   PopoverArrowPrimitive,
@@ -38,7 +38,7 @@ import {
   PopoverDismissPrimitive,
   PopoverHeadingPrimitive,
   PopoverPrimitive,
-  usePopoverStatePrimitive,
+  usePopoverStorePrimitive,
 } from '@real-system/popover-primitive';
 
 ...

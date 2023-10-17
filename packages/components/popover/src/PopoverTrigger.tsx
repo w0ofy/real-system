@@ -3,7 +3,7 @@ import React, { forwardRef, useCallback, useMemo } from 'react';
 import { PopoverDisclosurePrimitive } from '@real-system/popover-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-import { usePopoverStateContext } from './PopoverContext';
+import { usePopoverStoreContext } from './PopoverContext';
 
 type ConditionalProps =
   | {
@@ -30,7 +30,7 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
     { children, onShow, onHide, onToggle, ...restProps },
     ref
   ) {
-    const { show, toggle, hide, ...restState } = usePopoverStateContext();
+    const { show, toggle, hide, ...restState } = usePopoverStoreContext();
     const handleShow = useCallback(() => {
       if (onShow) return onShow(show);
       show();
@@ -44,7 +44,7 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
       toggle();
     }, [toggle, onToggle]);
 
-    const state = {
+    const store = {
       ...restState,
       show: handleShow,
       hide: handleHide,
@@ -55,7 +55,7 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
 
     return (
       <PopoverDisclosurePrimitive
-        state={state}
+        store={store}
         data-testid={makeTestId('popover-disclosure')}
         {...restProps}
         /** @ts-ignore ref will exist on ReactElement */

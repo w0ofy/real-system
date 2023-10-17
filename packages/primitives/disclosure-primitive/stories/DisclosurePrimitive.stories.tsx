@@ -4,7 +4,7 @@ import type { Meta } from '@storybook/react';
 import {
   DisclosureContentPrimitive,
   DisclosurePrimitive,
-  useDisclosureStatePrimitive,
+  useDisclosureStorePrimitive,
 } from '@real-system/disclosure-primitive';
 import { Icon } from '@real-system/icon';
 import { Text } from '@real-system/typography';
@@ -15,17 +15,17 @@ export default {
 } as Meta;
 
 const Template = () => {
-  const disclosure = useDisclosureStatePrimitive();
+  const disclosure = useDisclosureStorePrimitive();
   return (
     <div className="wrapper">
       <DisclosurePrimitive
         display="inline-flex"
-        state={disclosure}
+        store={disclosure}
         as={Text.Heading}
         size="h5">
         Info about vegetables <Icon ml={3} icon="chevron-down" />
       </DisclosurePrimitive>
-      <DisclosureContentPrimitive state={disclosure}>
+      <DisclosureContentPrimitive store={disclosure}>
         <Text>
           Vegetables are parts of plants that are consumed by humans or other
           animals as food. The original meaning is still commonly used and is

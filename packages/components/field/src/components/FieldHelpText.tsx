@@ -17,7 +17,7 @@ const FieldHelpText = React.forwardRef<HTMLSpanElement, FieldHelpTextProps>(
     const { helpText } = useFieldControl();
     return (
       <Text.Help
-        testId={makeTestId('field-helper-text')}
+        data-testid={makeTestId('field-helper-text')}
         {...restProps}
         ref={ref}>
         {helpText || children}

@@ -5,7 +5,7 @@ import { Button } from '@real-system/button';
 import { PopoverDisclosurePrimitive } from '@real-system/popover-primitive';
 import { makeTestId } from '@real-system/utils-library';
 
-import { usePopoverStateContext } from './PopoverContext';
+import { usePopoverStoreContext } from './PopoverContext';
 
 type ConditionalProps =
   | {
@@ -27,7 +27,7 @@ const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
     { children, onShow, onHide, onToggle, ...restProps },
     ref
   ) {
-    const { show, toggle, hide, ...restState } = usePopoverStateContext();
+    const { show, toggle, hide, ...restState } = usePopoverStoreContext();
     const handleShow = useCallback(() => {
       if (onShow) return onShow(show);
       show();
@@ -41,7 +41,7 @@ const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
       toggle();
     }, [toggle, onToggle]);
 
-    const state = {
+    const store = {
       ...restState,
       show: handleShow,
       hide: handleHide,
@@ -51,7 +51,7 @@ const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
     return (
       <PopoverDisclosurePrimitive
         as={Button}
-        state={state}
+        store={store}
         data-testid={makeTestId('popover-disclosure')}
         {...restProps}
         ref={ref}>

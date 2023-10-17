@@ -11,13 +11,10 @@ import {
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
-  subcomponents: {
-    CheckboxGroup: CheckboxGroup,
-    'CheckboxGroup.Item': CheckboxGroup.Item,
-  },
   args: {
     children: 'Give this user "Owner" permissions',
   },
+  tags: ['autodocs'],
   argTypes: {
     helpText: { type: 'string' },
     checked: { type: 'boolean' },

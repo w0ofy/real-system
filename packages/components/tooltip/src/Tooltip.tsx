@@ -1,21 +1,18 @@
-import React, { cloneElement, forwardRef, useMemo, useRef } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 
 import { animated, useTransition } from '@real-system/animation-library';
 import styled from '@real-system/styled-library';
 import {
-  TooltipAnchorPrimitive,
   TooltipArrowPrimitive,
   TooltipPrimitive,
-  useTooltipStatePrimitive,
+  TooltipProviderPrimitive,
+  useTooltipStorePrimitive,
 } from '@real-system/tooltip-primitive';
 import { Text } from '@real-system/typography';
-import {
-  isReactText,
-  makeTestId,
-  useMergeRefs,
-} from '@real-system/utils-library';
+import { makeTestId } from '@real-system/utils-library';
 
 import { TRANSITIONS_CONFIG } from './constants';
+import { TooltipAnchor } from './TooltipAnchor';
 import type { TooltipProps } from './types';
 
 const StyledTooltip = styled(animated('div'))({
@@ -30,79 +27,68 @@ const StyledTooltip = styled(animated('div'))({
   maxWidth: '30rem',
 });
 
-const Tooltip = forwardRef<HTMLSpanElement, TooltipProps>(function Tooltip(
+const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
   {
     label,
     children,
-    placement,
+    placement = 'top',
     disabled,
     open,
+    gutter = 0,
     hideArrow = false,
-    gutter = 2,
+    showTimeout = 0,
+    hideTimeout = 250,
+    skipTimeout = 3000,
+    wrapperElement = 'span',
     ...restProps
   },
   ref
 ) {
-  const internalRef = useRef<HTMLSpanElement>(null);
-  const mergedRef = useMergeRefs(ref, internalRef);
-
-  const state = useTooltipStatePrimitive({
+  const store = useTooltipStorePrimitive({
     placement,
     open: !disabled && open,
-    gutter,
+    skipTimeout,
+    hideTimeout,
+    showTimeout,
     ...restProps,
   });
-  const isOpen = useMemo(() => !disabled && state.open, [disabled, state.open]);
-  const transitions = useTransition(isOpen, TRANSITIONS_CONFIG);
-
-  // create the trigger if children is number, text or element
-  const trigger = useMemo(() => {
-    if (isReactText(children)) {
-      return (
-        <TooltipAnchorPrimitive as="span" state={state} ref={mergedRef}>
-          {children}
-        </TooltipAnchorPrimitive>
-      );
-    }
-    // casted type because if it is not ReactText it will be ReactElement
-    const Child = children as React.ReactElement;
-    return (
-      <TooltipAnchorPrimitive
-        as="span"
-        state={state}
-        ref={mergedRef}
-        {...Child.props}>
-        {(anchorProps) =>
-          cloneElement(children as React.ReactElement, anchorProps)
-        }
-      </TooltipAnchorPrimitive>
-    );
-  }, [children, state, mergedRef]);
+  const mounted = store.useState('mounted');
+  const isMounted = useMemo(() => !disabled && mounted, [disabled, mounted]);
+  const transitions = useTransition<boolean, typeof TRANSITIONS_CONFIG>(
+    isMounted,
+    TRANSITIONS_CONFIG
+  );
 
   return (
-    <>
-      {trigger}
+    <TooltipProviderPrimitive store={store}>
+      <TooltipAnchor wrapperElement={wrapperElement} ref={ref}>
+        {children}
+      </TooltipAnchor>
       {transitions(
         (style, item) =>
           item && (
             <TooltipPrimitive
               data-testid={makeTestId('tooltip')}
-              {...restProps}
-              state={state}
-              as={StyledTooltip}
-              style={style}>
-              {hideArrow ? null : <TooltipArrowPrimitive state={state} />}
+              render={<StyledTooltip style={style} />}
+              alwaysVisible
+              gutter={gutter}
+              {...restProps}>
+              {!hideArrow && <TooltipArrowPrimitive />}
               <Text as="span" color="white">
                 {label}
               </Text>
             </TooltipPrimitive>
           )
       )}
-    </>
+    </TooltipProviderPrimitive>
   );
 });
 
 Tooltip.defaultProps = {
+  gutter: 0,
+  showTimeout: 0,
+  hideTimeout: 250,
+  skipTimeout: 300,
   placement: 'top',
   'data-testid': 'tooltip',
 };

@@ -1,9 +1,6 @@
-export type { MenuProps } from './Menu';
-export { Menu } from './Menu';
+export { Menu, type MenuProps } from './Menu';
 export type { MenuButtonProps } from './MenuButton';
-export type { MenuState } from './MenuContext';
-export { useMenuStateContext } from './MenuContext';
-export type { MenuGroupLabelProps, MenuGroupProps } from './MenuGroup/index';
+export type { MenuGroupLabelProps, MenuGroupProps } from './MenuGroup';
 export type {
   MenuItemCheckboxProps,
   MenuItemCommandProps,
@@ -11,6 +8,6 @@ export type {
   MenuItemLinkProps,
   MenuItemProps,
   MenuItemRadioProps,
-} from './MenuItem/index';
+} from './MenuItem';
 export type { MenuListProps } from './MenuList';
 export type { MenuSeparatorProps } from './MenuSeparator';

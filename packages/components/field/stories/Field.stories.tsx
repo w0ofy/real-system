@@ -10,13 +10,13 @@ import { Text } from '@real-system/typography';
 export default {
   title: 'WIP/Components/Field',
   component: Field,
-  subcomponents: {
-    FieldGroup: Field.Group,
-    FieldLabel: Field.Label,
-    FieldHelpText: Field.Help,
-    FieldErrorText: Field.Error,
-    FieldWarningText: Field.Warning,
-  },
+  // subcomponents: {
+  //   FieldGroup: Field.Group,
+  //   FieldLabel: Field.Label,
+  //   FieldHelpText: Field.Help,
+  //   FieldErrorText: Field.Error,
+  //   FieldWarningText: Field.Warning,
+  // },
 } as Meta;
 
 export const Default = (args) => (

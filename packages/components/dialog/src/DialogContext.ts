@@ -6,9 +6,9 @@ export type DialogState = {
 };
 
 export type DialogContext = {
-  state: DialogState;
+  store: DialogState;
 };
 
-const useDialog = ({ state }: DialogContext) => state;
+const useDialog = ({ store }: DialogContext) => store;
 
 export const [DialogContextProvider, useDialogContext] = constate(useDialog);

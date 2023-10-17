@@ -1,12 +1,10 @@
-import React, { forwardRef, useMemo } from 'react';
+import React, { forwardRef } from 'react';
 
 import type { ButtonProps } from '@real-system/button';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
 import { MenuButtonPrimitive } from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
-
-import { useMenuStateContext } from './MenuContext';
 
 type MenuButtonProps = (
   | {
@@ -18,36 +16,38 @@ type MenuButtonProps = (
       leadingArrow?: boolean;
     }
 ) &
-  ButtonProps;
+  Omit<ButtonProps, 'children' | 'as'> & { children: string };
 
 const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
   function MenuButton(
     { children, trailingArrow, leadingArrow, ...restProps },
     ref
   ) {
-    const state = useMenuStateContext();
-    const chevron = useMemo(() => {
-      if (!trailingArrow && !leadingArrow) return {};
-      return {
-        [leadingArrow ? 'leadingIcon' : 'trailingIcon']: (
-          <Icon icon="chevron-down" />
-        ),
-      };
-    }, [trailingArrow, leadingArrow]);
-
     return (
       <MenuButtonPrimitive
-        as={Button}
         data-testid={makeTestId('menu-button')}
-        state={state}
-        {...restProps}
-        {...chevron}
+        render={
+          <Button
+            {...getChevronProp(trailingArrow, leadingArrow)}
+            {...restProps}
+          />
+        }
         ref={ref}>
         {children}
       </MenuButtonPrimitive>
     );
   }
 );
+
+const getChevronProp = (trailingArrow?: boolean, leadingArrow?: boolean) => {
+  if (trailingArrow || leadingArrow) {
+    const buttonIconPropKey = leadingArrow ? 'leadingIcon' : 'trailingIcon';
+    return {
+      [buttonIconPropKey]: <Icon icon="chevron-down" />,
+    };
+  }
+  return {};
+};
 
 export type { MenuButtonProps };
 export { MenuButton };

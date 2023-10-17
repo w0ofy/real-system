@@ -20,7 +20,7 @@ const FieldWarningText = React.forwardRef<
 
   return (
     <Text.Help
-      testId={makeTestId('field-error-text')}
+      data-testid={makeTestId('field-error-text')}
       variant="warning"
       {...restProps}
       ref={ref}>

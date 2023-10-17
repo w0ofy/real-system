@@ -8,7 +8,7 @@ import {
   PopoverDisclosurePrimitive,
   PopoverHeadingPrimitive,
   PopoverPrimitive,
-  usePopoverStatePrimitive,
+  usePopoverStorePrimitive,
 } from '@real-system/popover-primitive';
 export default {
   title: 'Primitives/Popover Primitive',
@@ -22,18 +22,18 @@ export default {
 } as Meta;
 
 const Template = () => {
-  const popover = usePopoverStatePrimitive();
+  const popover = usePopoverStorePrimitive();
   return (
     <>
       <PopoverDisclosurePrimitive
         as={Button}
         variant="fill"
         colorScheme="blue"
-        state={popover}>
+        store={popover}>
         Accept invite
       </PopoverDisclosurePrimitive>
       <PopoverPrimitive
-        state={popover}
+        store={popover}
         style={{
           background: 'white',
           zIndex: 1,

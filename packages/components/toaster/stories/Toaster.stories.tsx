@@ -85,7 +85,7 @@ export const Showcase = (_args) => {
         }>
         Success toaster
       </Button>
-      <Toaster state={toaster} />
+      <Toaster store={toaster} />
     </Flex>
   );
 };

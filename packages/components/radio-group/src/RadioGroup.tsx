@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 
-import type { AriakitRadioStateProps } from '@real-system/ariakit-library';
+import type { AriakitRadioStoreProps } from '@real-system/ariakit-library';
 import {
   AriakitRadioGroup,
-  useAriakitRadioState,
+  useAriakitRadioStore,
 } from '@real-system/ariakit-library';
 import type { ValidationProps } from '@real-system/utils-library';
 import { makeTestId } from '@real-system/utils-library';
@@ -14,11 +14,11 @@ import { RadioGroupContextProvider } from './Radio.context';
 
 type RadioGroupProps = {
   children?: React.ReactNode;
-  onChange?: AriakitRadioStateProps['setValue'];
+  onChange?: AriakitRadioStoreProps['setValue'];
   name?: string;
   id?: string;
 } & Pick<ValidationProps, 'hasError' | 'disabled'> &
-  Pick<AriakitRadioStateProps, 'value' | 'defaultValue'>;
+  Pick<AriakitRadioStoreProps, 'value' | 'defaultValue'>;
 
 interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<RadioGroupProps> {
@@ -33,7 +33,7 @@ const RadioGroup: RadioGroupComponent = forwardRef<
   { children, hasError, disabled, onChange, value, defaultValue, id, name },
   ref
 ) {
-  const radio = useAriakitRadioState({
+  const radio = useAriakitRadioStore({
     setValue: onChange,
     defaultValue,
     value,
@@ -42,7 +42,7 @@ const RadioGroup: RadioGroupComponent = forwardRef<
   return (
     <AriakitRadioGroup
       data-testid={makeTestId('radio-group')}
-      state={radio}
+      store={radio}
       id={id}
       ref={ref}>
       <RadioGroupContextProvider
