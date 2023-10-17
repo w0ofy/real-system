@@ -7,7 +7,7 @@ import type React from 'react';
 import { useRef, useState } from 'react';
 
 import { constate } from '@real-system/state-library';
-import type { AnyObj, Obj } from '@real-system/utils-library';
+import type { AnyObj } from '@real-system/utils-library';
 import {
   cast,
   mergeRefs,
@@ -23,7 +23,7 @@ import { DescendantsManager } from './descendant';
  */
 function useDescendants<
   T extends HTMLElement = HTMLElement,
-  K extends AnyObj = Obj,
+  K extends AnyObj = AnyObj,
 >() {
   const descendants = useRef(new DescendantsManager<T, K>());
   useSafeLayoutEffect(() => {
@@ -44,7 +44,7 @@ const [DescendantsContextProvider, useDescendantsContext] = constate(
  * @internal
  * Provides information about a particular descendant
  */
-function useDescendant<T extends HTMLElement = HTMLElement, K = Obj>(
+function useDescendant<T extends HTMLElement = HTMLElement, K = AnyObj>(
   options?: DescendantOptions<K>
 ) {
   const descendants = useDescendantsContext();
@@ -80,7 +80,7 @@ function useDescendant<T extends HTMLElement = HTMLElement, K = Obj>(
 
 type ContextProviderType<
   T extends HTMLElement = HTMLElement,
-  K extends AnyObj = Obj,
+  K extends AnyObj = AnyObj,
 > = React.Provider<DescendantsManager<T, K>>;
 
 /**
@@ -88,7 +88,7 @@ type ContextProviderType<
  */
 export function createDescendantContext<
   T extends HTMLElement = HTMLElement,
-  K extends AnyObj = Obj,
+  K extends AnyObj = AnyObj,
 >() {
   const ContextProvider = cast<ContextProviderType<T, K>>(
     DescendantsContextProvider

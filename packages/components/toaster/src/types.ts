@@ -63,14 +63,14 @@ type UseToasterReturnedProps = {
 };
 
 type ToasterProps = {
-  state: Pick<UseToasterReturnedProps, 'toasts' | 'pop'> & {
-    /** **DO NOT USE.** This is typed here so it's easier to spread `state={toaster}` props to the Toaster component */
+  store: Pick<UseToasterReturnedProps, 'toasts' | 'pop'> & {
+    /** **DO NOT USE.** This is typed here so it's easier to spread `store={toaster}` props to the Toaster component */
     danger?: PushCallback;
-    /** **DO NOT USE.** This is typed here so it's easier to spread `state={toaster}` props to the Toaster component */
+    /** **DO NOT USE.** This is typed here so it's easier to spread `store={toaster}` props to the Toaster component */
     warning?: PushCallback;
-    /** **DO NOT USE.** This is typed here so it's easier to pass `state={toaster}` props to the Toaster component */
+    /** **DO NOT USE.** This is typed here so it's easier to pass `store={toaster}` props to the Toaster component */
     success?: PushCallback;
-    /** **DO NOT USE.** This is typed here so it's easier to spread `state={toaster}` props to the Toaster component */
+    /** **DO NOT USE.** This is typed here so it's easier to spread `store={toaster}` props to the Toaster component */
     notify?: PushCallback;
   };
 };

@@ -34,8 +34,8 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
   HTMLDivElement,
   CheckboxGroupProps
 >(function CheckboxGroup(props, ref) {
-  const state = useCheckboxGroupState(props);
-  const { groupProps, labelProps } = useCheckboxGroup(props, state);
+  const store = useCheckboxGroupState(props);
+  const { groupProps, labelProps } = useCheckboxGroup(props, store);
   const {
     children,
     helpText,
@@ -67,8 +67,8 @@ const CheckboxGroup: CheckboxGroupComponent = forwardRef<
         xAlignContent="left"
         yAlignContent={orientation === 'vertical' ? 'top' : 'center'}>
         <CheckboxGroupContextProvider
-          state={{
-            ...state,
+          store={{
+            ...store,
             canSelectAll,
             orientation,
             hasError,

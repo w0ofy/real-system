@@ -47,7 +47,7 @@ const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   const transition = useTransition(isOpen, useTransitionProps);
 
   return (
-    <DialogContextProvider state={{ onDismiss, isOpen }}>
+    <DialogContextProvider store={{ onDismiss, isOpen }}>
       {transition(
         (styles, isOpen) =>
           isOpen && (

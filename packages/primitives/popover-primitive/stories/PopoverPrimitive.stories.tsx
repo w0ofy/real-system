@@ -29,11 +29,11 @@ const Template = () => {
         as={Button}
         variant="fill"
         colorScheme="blue"
-        state={popover}>
+        store={popover}>
         Accept invite
       </PopoverDisclosurePrimitive>
       <PopoverPrimitive
-        state={popover}
+        store={popover}
         style={{
           background: 'white',
           zIndex: 1,

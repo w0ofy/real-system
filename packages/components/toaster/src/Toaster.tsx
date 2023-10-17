@@ -47,8 +47,8 @@ const onFocus =
  * @see {@link useToaster}
  * @see {@link Toast}
  */
-const Toaster = function Toaster({ state }: ToasterProps) {
-  const { toasts, pop } = state;
+const Toaster = function Toaster({ store }: ToasterProps) {
+  const { toasts, pop } = store;
   const [refMap] = useState(() => new WeakMap());
   const [returnTarget, setReturnTarget] = useState<ReturnTargetState>({
     trigger: null,

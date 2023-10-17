@@ -20,10 +20,10 @@ const Template = () => {
   const tooltip = useTooltipStorePrimitive();
   return (
     <>
-      <TooltipAnchorPrimitive state={tooltip} as={Button}>
+      <TooltipAnchorPrimitive store={tooltip} as={Button}>
         Hover or focus on me
       </TooltipAnchorPrimitive>
-      <TooltipPrimitive state={tooltip}>Tooltip</TooltipPrimitive>
+      <TooltipPrimitive store={tooltip}>Tooltip</TooltipPrimitive>
     </>
   );
 };

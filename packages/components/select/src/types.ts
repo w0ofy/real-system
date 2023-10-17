@@ -21,8 +21,8 @@ type SelectProps = {
   RealSystemChildrenProp &
   Pick<ValidationProps, 'hasError' | 'disabled' | 'required'>;
 
-type OmitSelectPrivateProps<T> = Omit<T, 'state' | 'as'>;
-type CommonSelectProps<T> = Omit<T, 'state' | 'as'> &
+type OmitSelectPrivateProps<T> = Omit<T, 'store' | 'as'>;
+type CommonSelectProps<T> = Omit<T, 'store' | 'as'> &
   Omit<StylishProps, keyof T | 'as'>;
 
 export type { CommonSelectProps, OmitSelectPrivateProps, SelectProps };

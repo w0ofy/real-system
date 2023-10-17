@@ -20,15 +20,13 @@ type StringUnion<T> = T | (string & {});
 // eslint-disable-next-line @typescript-eslint/ban-types
 type StringUnionWithString<T> = T | (string & {});
 
-type Obj<T = any> = Record<string, T>;
+type AnyObj<T = any> = Record<PropertyKey, T>;
 
-type AnyObj = Record<any, any>;
-
-type ObjUnion<T> = T & Obj;
+type ObjUnion<T> = T & AnyObj;
 
 type PropUnion<T> = ObjUnion<T>;
 
-type RequireSome<T extends Obj, S extends keyof T> = Omit<T, S> &
+type RequireSome<T extends AnyObj, S extends keyof T> = Omit<T, S> &
   Required<Pick<T, S>>;
 
 export type {
@@ -38,7 +36,6 @@ export type {
   Func,
   FuncArguments,
   Merge,
-  Obj,
   ObjUnion,
   PropUnion,
   RequireSome,

@@ -7,7 +7,7 @@ export type RadioGroupContext = { name?: string } & NonNullable<
 > &
   Pick<ValidationProps, 'hasError' | 'disabled'>;
 
-const useRadioGroup = (state: RadioGroupContext) => state;
+const useRadioGroup = (store: RadioGroupContext) => store;
 
 const [RadioGroupContextProvider, useRadioGroupStateContext] =
   constate(useRadioGroup);
