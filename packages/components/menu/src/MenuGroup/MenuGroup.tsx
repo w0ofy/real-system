@@ -20,9 +20,8 @@ type MenuGroupProps = {
 const MenuGroup = ({ children, ...restProps }: MenuGroupProps) => {
   return (
     <MenuGroupPrimitive
-      as={StyledMenuGroup}
-      data-testid={makeTestId('menu-group')}
-      {...restProps}>
+      render={<StyledMenuGroup {...restProps} />}
+      data-testid={makeTestId('menu-group')}>
       {children}
     </MenuGroupPrimitive>
   );

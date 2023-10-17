@@ -69,10 +69,10 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
           item && (
             <TooltipPrimitive
               data-testid={makeTestId('tooltip')}
-              render={<StyledTooltip />}
+              render={<StyledTooltip style={style} />}
+              alwaysVisible
               gutter={gutter}
-              {...restProps}
-              style={style}>
+              {...restProps}>
               {!hideArrow && <TooltipArrowPrimitive />}
               <Text as="span" color="white">
                 {label}

@@ -40,7 +40,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@ariakit/react": "^0.3.5",
-    "ariakit": "2.0.0-next.43"
+    "@ariakit/react": "^0.3.5"
   }
 }

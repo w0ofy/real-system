@@ -22,9 +22,9 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
   { value, disabled: disabledProp, children, ...restProps },
   ref
 ) {
-  const state = useRadioGroupStateContext();
-
-  const disabled = state.disabled || disabledProp;
+  const store = useRadioGroupStateContext();
+  const storeValue = store.useState('value');
+  const disabled = store.disabled || disabledProp;
 
   const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
     useInteractions({ disabled });
@@ -43,16 +43,16 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
           ref={mergedRef}
           value={value}
           disabled={disabled}
-          name={state.name}
+          name={store.name}
           {...restProps}
         />
       </VisuallyHidden>
       <RadioLabel disabled={disabled}>
         <>
           <RadioControl
-            isInvalid={state.hasError}
+            isInvalid={store.hasError}
             isDisabled={disabled}
-            isSelected={state.value === value}
+            isSelected={storeValue === value}
             {...restInteractions}
           />
           {children}

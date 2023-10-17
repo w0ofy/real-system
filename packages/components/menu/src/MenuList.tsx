@@ -4,10 +4,9 @@ import { MenuPrimitive } from '@real-system/menu-primitive';
 import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import { useMenuStateContext } from './MenuContext';
 import type { CommonMenuProps } from './types';
 
-const StyledMenuList = styled('div')({
+const StyledMenuList = styled(MenuPrimitive)({
   py: 4,
   zIndex: 'dropdown',
   backgroundColor: 'white',
@@ -21,22 +20,19 @@ const StyledMenuList = styled('div')({
 
 type MenuListProps = {
   children: React.ReactNode;
-} & CommonMenuProps;
+} & CommonMenuProps<'div'>;
 
 const MenuList = forwardRef<HTMLDivElement, MenuListProps>(function MenuList(
   { children, ...restProps },
   ref
 ) {
-  const state = useMenuStateContext();
   return (
-    <MenuPrimitive
-      as={StyledMenuList}
-      state={state}
+    <StyledMenuList
       data-testid={makeTestId('menu-list')}
       {...restProps}
       ref={ref}>
       {children}
-    </MenuPrimitive>
+    </StyledMenuList>
   );
 });
 

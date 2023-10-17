@@ -26,19 +26,13 @@ $ yarn add @real-system/menu-primitive
 
 ```typescript
 import type {
-  MenuArrowPrimitiveProps,
-  MenuButtonArrowPrimitiveProps,
-  MenuButtonPrimitiveProps,
-  MenuGroupLabelPrimitiveProps,
-  MenuGroupPrimitiveProps,
   MenuItemCheckboxPrimitiveProps,
-  MenuItemCheckPrimitiveProps,
   MenuItemPrimitiveProps,
   MenuItemRadioPrimitiveProps,
   MenuPrimitiveProps,
   MenuSeparatorPrimitiveProps,
-  MenuStatePrimitive,
-  MenuStatePrimitiveProps,
+  MenuStorePrimitive,
+  MenuStorePrimitiveProps,
 } from '@real-system/menu-primitive';
 import {
   MenuArrowPrimitive,
@@ -52,7 +46,7 @@ import {
   MenuItemRadioPrimitive,
   MenuPrimitive,
   MenuSeparatorPrimitive,
-  useMenuStatePrimitive,
+  useMenuStorePrimitive,
 } from '@real-system/menu-primitive';
 
 ...

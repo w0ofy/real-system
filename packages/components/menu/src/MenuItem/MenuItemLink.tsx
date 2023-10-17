@@ -7,8 +7,8 @@ import { MenuItemPrimitive } from '@real-system/menu-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
+import type { CommonMenuItemProps } from './MenuItem.model';
 import { menuItemStyles } from './MenuItem.style';
-import type { CommonMenuItemProps } from './MenuItem.types';
 
 type MenuItemLinkProps = {
   href: string;
@@ -48,7 +48,7 @@ const BoxMenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
   }
 );
 
-const MenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
+const MenuItemLink = forwardRef<HTMLDivElement, MenuItemLinkProps>(
   function MenuLink(
     { children, href, external = false, showExternal = false, ...restProps },
     ref
@@ -56,22 +56,22 @@ const MenuItemLink = forwardRef<HTMLAnchorElement, MenuItemLinkProps>(
     const externalLinkProps = external ? EXTERNAL_LINK_PROPS : {};
     return (
       <MenuItemPrimitive
-        {...externalLinkProps}
         data-testid={makeTestId('menu-item-link')}
         {...restProps}
-        as={BoxMenuItemLink}
-        href={href}
+        render={<BoxMenuItemLink {...externalLinkProps} href={href} />}
         ref={ref}>
-        {children}
-        {showExternal ? (
-          <Icon
-            icon="external-link"
-            size="sm"
-            display="inline-block"
-            verticalAlign="text-bottom"
-            marginLeft={2}
-          />
-        ) : null}
+        <>
+          {children}
+          {showExternal ? (
+            <Icon
+              icon="external-link"
+              size="sm"
+              display="inline-block"
+              verticalAlign="text-bottom"
+              marginLeft={2}
+            />
+          ) : null}
+        </>
       </MenuItemPrimitive>
     );
   }

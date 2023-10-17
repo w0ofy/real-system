@@ -5,9 +5,9 @@ import { MenuSeparatorPrimitive } from '@real-system/menu-primitive';
 import styled from '@real-system/styled-library';
 import { makeTestId } from '@real-system/utils-library';
 
-import type { CommonMenuProps, OmitMenuState } from './types';
+import type { CommonMenuProps, OmitMenuStore } from './types';
 
-type MenuSeparatorProps = OmitMenuState<MenuSeparatorPrimitiveProps> &
+type MenuSeparatorProps = OmitMenuStore<MenuSeparatorPrimitiveProps> &
   CommonMenuProps;
 
 const StyledSeparator = styled(

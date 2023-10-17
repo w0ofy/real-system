@@ -171,7 +171,8 @@
     "@types/react-test-renderer": "18.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@ariakit/react-core@0.3.5": "patch:@ariakit/react-core@npm%3A0.3.5#./.yarn/patches/@ariakit-react-core-npm-0.3.5-3b7a69924a.patch"
   },
   "packageManager": "yarn@3.6.4"
 }

@@ -1,6 +1,6 @@
-import type { RealSystemComponentProps } from '@real-system/styled-library';
+import type { As, RealSystemComponentProps } from '@real-system/styled-library';
 
-type CommonMenuProps = RealSystemComponentProps<any>;
-type OmitMenuState<Props> = Omit<Props, 'state'>;
+type CommonMenuProps<el extends As = any> = RealSystemComponentProps<el>;
+type OmitMenuStore<Props> = Omit<Props, 'store'>;
 
-export type { CommonMenuProps, OmitMenuState };
+export type { CommonMenuProps, OmitMenuStore };

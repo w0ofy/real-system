@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 import { real } from '@real-system/elements-primitive';
 import type { StylishProps } from '@real-system/styled-library';
 
-import type { CommonMenuItemProps } from './MenuItem.types';
+import type { CommonMenuItemProps } from './MenuItem.model';
 
 const menuItemStyles: StylishProps = {
   transition: 'background-color 150ms ease-out, color 150ms ease-out',

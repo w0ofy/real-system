@@ -6,13 +6,7 @@ import { Select } from '@real-system/select';
 export default {
   title: 'Components/Select',
   component: Select,
-  subcomponents: {
-    Group: Select.Group,
-    GroupLabel: Select.Group.Label,
-    Item: Select.Item,
-    Separator: Select.Separator,
-  },
-} as Meta;
+} satisfies Meta<typeof Select>;
 
 export const Default = (args) => {
   return (
