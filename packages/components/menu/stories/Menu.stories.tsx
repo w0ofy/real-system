@@ -13,9 +13,7 @@ export default {
 export const Default = () => (
   <Box height="24rem">
     <Menu>
-      <Menu.Button variant="minimal" leadingArrow>
-        Menu
-      </Menu.Button>
+      <Menu.Button variant="fill">Actions</Menu.Button>
       <Menu.List>
         <Menu.Item>
           <Menu.Item.Icon icon="pencil-alt" />
@@ -52,9 +50,7 @@ export const Default = () => (
 export const MenuGroups = () => (
   <Box height="24rem">
     <Menu>
-      <Menu.Button variant="minimal">
-        <Icon icon="menu" />
-      </Menu.Button>
+      <Menu.Button variant="fill">Settings</Menu.Button>
       <Menu.List>
         <Menu.Group>
           <Menu.Group.Label>Account</Menu.Group.Label>
