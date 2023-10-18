@@ -7120,7 +7120,6 @@ __metadata:
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
-    clean-package: ^2.2.0
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2

@@ -4,7 +4,6 @@
   "description": "Pin input component for real system.",
   "status": "production",
   "main": "src/index.ts",
-  "types": "src/index.ts",
   "sideEffects": false,
   "scripts": {
     "build": "NODE_ENV=production node ./tools/build.js && yarn types",
@@ -13,7 +12,8 @@
     "types:watch": "tsc --watch",
     "types": "tsc",
     "prepack": "clean-package -c ../../../tools/build/clean-package.config.json",
-    "postpack": "clean-package r -c ../../../tools/build/clean-package.config.json"
+    "postpack": "clean-package r -c ../../../tools/build/clean-package.config.json",
+    "tscheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "repository": {
     "type": "git",
