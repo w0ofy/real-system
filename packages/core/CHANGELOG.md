@@ -1,5 +1,59 @@
 # @real-system/core
 
+## 0.0.65
+
+### Patch Changes
+
+- [#1083](https://github.com/bigwoof91/real-system/pull/1083) [`f11d0b3f`](https://github.com/bigwoof91/real-system/commit/f11d0b3f391cb743a7f5d01226c57251ce8a93e1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit to stable version and standardize naming and usage
+
+- Updated dependencies [[`f11d0b3f`](https://github.com/bigwoof91/real-system/commit/f11d0b3f391cb743a7f5d01226c57251ce8a93e1)]:
+  - @real-system/disclosure-primitive@0.0.14
+  - @real-system/separator-primitive@0.0.20
+  - @real-system/descendants-library@0.0.16
+  - @real-system/elements-primitive@0.0.23
+  - @real-system/popover-primitive@0.0.20
+  - @real-system/tooltip-primitive@0.0.20
+  - @real-system/animation-library@0.0.23
+  - @real-system/button-primitive@0.0.46
+  - @real-system/dialog-primitive@0.0.34
+  - @real-system/portal-primitive@0.0.22
+  - @real-system/select-primitive@0.0.20
+  - @real-system/visually-hidden@0.0.55
+  - @real-system/alert-primitive@0.0.22
+  - @real-system/ariakit-library@0.0.25
+  - @real-system/menu-primitive@0.0.20
+  - @real-system/styled-library@0.0.21
+  - @real-system/aspect-ratio@0.0.31
+  - @real-system/state-library@0.0.22
+  - @real-system/utils-library@0.0.33
+  - @real-system/radio-group@0.0.40
+  - @real-system/a11y-library@0.0.18
+  - @real-system/disclosure@0.0.17
+  - @real-system/typography@0.0.60
+  - @real-system/accordion@0.0.17
+  - @real-system/pin-input@0.0.25
+  - @real-system/separator@0.0.29
+  - @real-system/checkbox@0.0.46
+  - @real-system/textarea@0.0.43
+  - @real-system/popover@0.0.37
+  - @real-system/spinner@0.0.57
+  - @real-system/toaster@0.0.45
+  - @real-system/tooltip@0.0.38
+  - @real-system/button@0.0.62
+  - @real-system/dialog@0.0.54
+  - @real-system/select@0.0.28
+  - @real-system/switch@0.0.5
+  - @real-system/alert@0.0.46
+  - @real-system/badge@0.0.29
+  - @real-system/field@0.0.38
+  - @real-system/input@0.0.59
+  - @real-system/stack@0.0.19
+  - @real-system/flex@0.0.52
+  - @real-system/icon@0.0.59
+  - @real-system/link@0.0.30
+  - @real-system/menu@0.0.33
+  - @real-system/box@0.0.33
+
 ## 0.0.64
 
 ### Patch Changes
