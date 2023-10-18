@@ -1,6 +1,6 @@
 {
   "name": "@real-system/alert-primitive",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Alert primitive component for real system.",
   "status": "production",
   "main": "src/index.ts",

@@ -1,5 +1,19 @@
 # @real-system/toaster
 
+## 0.0.45
+
+### Patch Changes
+
+- [#1083](https://github.com/bigwoof91/real-system/pull/1083) [`f11d0b3f`](https://github.com/bigwoof91/real-system/commit/f11d0b3f391cb743a7f5d01226c57251ce8a93e1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit to stable version and standardize naming and usage
+
+- Updated dependencies [[`f11d0b3f`](https://github.com/bigwoof91/real-system/commit/f11d0b3f391cb743a7f5d01226c57251ce8a93e1)]:
+  - @real-system/elements-primitive@0.0.23
+  - @real-system/animation-library@0.0.23
+  - @real-system/portal-primitive@0.0.22
+  - @real-system/styled-library@0.0.21
+  - @real-system/utils-library@0.0.33
+  - @real-system/alert@0.0.46
+
 ## 0.0.44
 
 ### Patch Changes

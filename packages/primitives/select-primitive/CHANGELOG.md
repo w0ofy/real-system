@@ -1,5 +1,14 @@
 # @real-system/select-primitive
 
+## 0.0.20
+
+### Patch Changes
+
+- [#1083](https://github.com/bigwoof91/real-system/pull/1083) [`f11d0b3f`](https://github.com/bigwoof91/real-system/commit/f11d0b3f391cb743a7f5d01226c57251ce8a93e1) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit to stable version and standardize naming and usage
+
+- Updated dependencies [[`f11d0b3f`](https://github.com/bigwoof91/real-system/commit/f11d0b3f391cb743a7f5d01226c57251ce8a93e1)]:
+  - @real-system/ariakit-library@0.0.25
+
 ## 0.0.19
 
 ### Patch Changes
