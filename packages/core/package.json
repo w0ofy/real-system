@@ -9,7 +9,6 @@
   },
   "author": "Michael Wolf",
   "license": "MIT",
-  "main:dev": "src/index.ts",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "sideEffects": false,

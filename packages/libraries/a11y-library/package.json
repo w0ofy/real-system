@@ -3,16 +3,16 @@
   "version": "0.0.17",
   "description": "React aria library for real system.",
   "status": "production",
-  "main": "lib/index.js",
-  "main:dev": "src/index.ts",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.ts",
   "sideEffects": false,
   "scripts": {
     "build": "NODE_ENV=production node ./tools/build.js && yarn types",
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
-    "types": "tsc"
+    "types": "tsc",
+    "prepack": "clean-package -c ../../../tools/build/clean-package.config.json",
+    "postpack": "clean-package r -c ../../../tools/build/clean-package.config.json",
+    "tscheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "clean-package": "^2.2.0",
     "concurrently": "^8.2.1",
     "react": "^18.2.0",
     "typescript": "^5.2.2"
@@ -48,5 +49,9 @@
     "@react-types/checkbox": "^3.5.2",
     "@react-types/radio": "^3.5.2",
     "@react-types/shared": "^3.21.0"
-  }
+  },
+  "files": [
+    "lib"
+  ],
+  "main:test": "src/index.ts"
 }

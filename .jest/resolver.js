@@ -24,13 +24,13 @@ const keyedPackages = cachedPackages.reduce((acc, currentPackage) => {
   const packageJson = require(`${currentPackage.location}/package.json`);
 
   // If there's no main entrypoint, don't update the location path
-  if (packageJson['main:dev'] == null) {
+  if (!packageJson['main:test']) {
     acc[currentPackage.name] = currentPackage;
   } else {
     // Make sure to set the location to the lib/main entrypoint
     acc[currentPackage.name] = {
       ...currentPackage,
-      location: `${currentPackage.location}/${packageJson['main:dev']}`,
+      location: `${currentPackage.location}/${packageJson['main:test']}`,
     };
   }
   return acc;

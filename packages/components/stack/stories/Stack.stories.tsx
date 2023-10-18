@@ -95,7 +95,7 @@ export const ResponsiveSpacingAndDirection = () => (
   </Stack>
 );
 
-export const ResponseWithSeparator = () => (
+export const ResponsiveWithSeparator = () => (
   <Stack
     mt={10}
     direction={['column', 'row']}

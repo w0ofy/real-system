@@ -49,7 +49,7 @@ $ yarn generate:pkg
 - [ ] a `package.json` file with the following sub-requirements:
   - The following scripts: `build, build:js, dev, types, types:watch`.
   - Author must be your `first name` and `last name`
-  - You must define the `main`, `module`, `types`, and `main:dev` (src entrypoint file for storybook to find and hot-reload on changes)
+  - You must define the `main`, `module`, `types`, and `main:jest` (src entrypoint file for storybook to find and hot-reload on changes)
   - You package should be sideEffects free (`"sideEffects": false,`). A "side effect" is defined as code that performs a special behavior when imported, other than exposing one or more exports. An example of this is a polyfill, which affect the global scope and usually do not provide an export. This allows tree-shaking to work. [Additional reading](https://webpack.js.org/guides/tree-shaking/).
   - You must define the `"status"` of the component to be one of (run `yarn productionize` to update the status)
     - `"production"`
