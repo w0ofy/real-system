@@ -1,4 +1,4 @@
-const { logger, ENV } = require('../utils');
+const { ENV } = require('../utils');
 
 // ESbuild config
 const baseEsbuildConfig = {
@@ -41,7 +41,7 @@ const getExternalDeps = (packageJson = {}) => {
 const makeEsbuildConfig = (pkgJson, { format } = { format: 'cjs' }) => {
   return {
     ...baseEsbuildConfig,
-    entryPoints: [pkgJson['main:dev']],
+    entryPoints: [pkgJson['main']],
     /** `watch` was deprecated in esbuild, but keeping this here to see how this was previously configured in case anything unexpected breaks */
     // watch: watch(pkgJson),
     external: getExternalDeps(pkgJson),

@@ -1,0 +1,8 @@
+{
+  "replace": {
+    "main": "lib/index.js",
+    "module": "lib/index.mjs",
+    "types": "lib/index.d.ts"
+  },
+  "remove": ["status", "main:test"]
+}

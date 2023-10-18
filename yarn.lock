@@ -4501,9 +4501,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/android-arm64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/android-arm64@npm:0.19.5"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@esbuild/android-arm@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/android-arm@npm:0.18.20"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@esbuild/android-arm@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/android-arm@npm:0.19.5"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
@@ -4515,9 +4529,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/android-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/android-x64@npm:0.19.5"
+  conditions: os=android & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@esbuild/darwin-arm64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/darwin-arm64@npm:0.18.20"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/darwin-arm64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/darwin-arm64@npm:0.19.5"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -4529,9 +4557,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/darwin-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/darwin-x64@npm:0.19.5"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@esbuild/freebsd-arm64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/freebsd-arm64@npm:0.18.20"
+  conditions: os=freebsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/freebsd-arm64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/freebsd-arm64@npm:0.19.5"
   conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
@@ -4543,9 +4585,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/freebsd-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/freebsd-x64@npm:0.19.5"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@esbuild/linux-arm64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/linux-arm64@npm:0.18.20"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-arm64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-arm64@npm:0.19.5"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -4557,9 +4613,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/linux-arm@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-arm@npm:0.19.5"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
 "@esbuild/linux-ia32@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/linux-ia32@npm:0.18.20"
+  conditions: os=linux & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-ia32@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-ia32@npm:0.19.5"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
@@ -4571,9 +4641,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/linux-loong64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-loong64@npm:0.19.5"
+  conditions: os=linux & cpu=loong64
+  languageName: node
+  linkType: hard
+
 "@esbuild/linux-mips64el@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/linux-mips64el@npm:0.18.20"
+  conditions: os=linux & cpu=mips64el
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-mips64el@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-mips64el@npm:0.19.5"
   conditions: os=linux & cpu=mips64el
   languageName: node
   linkType: hard
@@ -4585,9 +4669,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/linux-ppc64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-ppc64@npm:0.19.5"
+  conditions: os=linux & cpu=ppc64
+  languageName: node
+  linkType: hard
+
 "@esbuild/linux-riscv64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/linux-riscv64@npm:0.18.20"
+  conditions: os=linux & cpu=riscv64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-riscv64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-riscv64@npm:0.19.5"
   conditions: os=linux & cpu=riscv64
   languageName: node
   linkType: hard
@@ -4599,9 +4697,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/linux-s390x@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-s390x@npm:0.19.5"
+  conditions: os=linux & cpu=s390x
+  languageName: node
+  linkType: hard
+
 "@esbuild/linux-x64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/linux-x64@npm:0.18.20"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/linux-x64@npm:0.19.5"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -4613,9 +4725,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/netbsd-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/netbsd-x64@npm:0.19.5"
+  conditions: os=netbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@esbuild/openbsd-x64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/openbsd-x64@npm:0.18.20"
+  conditions: os=openbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/openbsd-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/openbsd-x64@npm:0.19.5"
   conditions: os=openbsd & cpu=x64
   languageName: node
   linkType: hard
@@ -4627,9 +4753,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/sunos-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/sunos-x64@npm:0.19.5"
+  conditions: os=sunos & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@esbuild/win32-arm64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/win32-arm64@npm:0.18.20"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/win32-arm64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/win32-arm64@npm:0.19.5"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -4641,9 +4781,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/win32-ia32@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/win32-ia32@npm:0.19.5"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
 "@esbuild/win32-x64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/win32-x64@npm:0.18.20"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/win32-x64@npm:0.19.5":
+  version: 0.19.5
+  resolution: "@esbuild/win32-x64@npm:0.19.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -6677,6 +6831,7 @@ __metadata:
     "@react-types/checkbox": ^3.5.2
     "@react-types/radio": ^3.5.2
     "@react-types/shared": ^3.21.0
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     typescript: ^5.2.2
@@ -6693,6 +6848,7 @@ __metadata:
     "@real-system/disclosure": ^0.0.16
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6712,6 +6868,7 @@ __metadata:
   resolution: "@real-system/alert-primitive@workspace:packages/primitives/alert-primitive"
   dependencies:
     "@reach/alert": ^0.18.0
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6733,6 +6890,7 @@ __metadata:
     "@real-system/styled-library": ^0.0.20
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6754,6 +6912,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/animation-library@workspace:packages/libraries/animation-library"
   dependencies:
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-spring: ^9.7.3
@@ -6768,6 +6927,7 @@ __metadata:
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
     "@ariakit/react": ^0.3.5
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6784,6 +6944,7 @@ __metadata:
   dependencies:
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6803,6 +6964,7 @@ __metadata:
     "@real-system/elements-primitive": ^0.0.22
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6822,6 +6984,7 @@ __metadata:
   dependencies:
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6839,6 +7002,7 @@ __metadata:
   resolution: "@real-system/button-primitive@workspace:packages/primitives/button-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6858,6 +7022,7 @@ __metadata:
     "@real-system/spinner": 0.0.56
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6884,6 +7049,7 @@ __metadata:
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6954,6 +7120,7 @@ __metadata:
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
+    clean-package: ^2.2.0
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6969,6 +7136,7 @@ __metadata:
   dependencies:
     "@real-system/state-library": ^0.0.21
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6986,6 +7154,7 @@ __metadata:
   resolution: "@real-system/dialog-primitive@workspace:packages/primitives/dialog-primitive"
   dependencies:
     "@reach/dialog": ^0.18.0
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7009,6 +7178,7 @@ __metadata:
     "@real-system/styled-library": ^0.0.20
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7033,6 +7203,7 @@ __metadata:
   resolution: "@real-system/disclosure-primitive@workspace:packages/primitives/disclosure-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7054,6 +7225,7 @@ __metadata:
     "@real-system/state-library": ^0.0.21
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7076,6 +7248,7 @@ __metadata:
   dependencies:
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7098,6 +7271,7 @@ __metadata:
     "@real-system/styled-library": ^0.0.20
     "@real-system/typography": ^0.0.59
     "@real-system/utils": ^0.0.11
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7121,6 +7295,7 @@ __metadata:
     "@real-system/elements-primitive": ^0.0.22
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7142,6 +7317,7 @@ __metadata:
     "@real-system/elements-primitive": ^0.0.22
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7164,6 +7340,7 @@ __metadata:
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7187,6 +7364,7 @@ __metadata:
     "@real-system/icon": ^0.0.58
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7206,6 +7384,7 @@ __metadata:
   resolution: "@real-system/menu-primitive@workspace:packages/primitives/menu-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7229,6 +7408,7 @@ __metadata:
     "@real-system/state-library": ^0.0.21
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7257,6 +7437,7 @@ __metadata:
     "@real-system/state-library": ^0.0.21
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7278,6 +7459,7 @@ __metadata:
   resolution: "@real-system/popover-primitive@workspace:packages/primitives/popover-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7301,6 +7483,7 @@ __metadata:
     "@real-system/styled-library": ^0.0.20
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7324,6 +7507,7 @@ __metadata:
   resolution: "@real-system/portal-primitive@workspace:packages/primitives/portal-primitive"
   dependencies:
     "@reach/portal": ^0.18.0
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7347,6 +7531,7 @@ __metadata:
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7371,6 +7556,7 @@ __metadata:
   resolution: "@real-system/select-primitive@workspace:packages/primitives/select-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7392,6 +7578,7 @@ __metadata:
     "@real-system/styled-library": ^0.0.20
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7413,6 +7600,7 @@ __metadata:
   resolution: "@real-system/separator-primitive@workspace:packages/primitives/separator-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7432,6 +7620,7 @@ __metadata:
     "@real-system/separator-primitive": ^0.0.19
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7453,6 +7642,7 @@ __metadata:
     "@real-system/elements-primitive": ^0.0.22
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7473,6 +7663,7 @@ __metadata:
     "@real-system/elements-primitive": ^0.0.22
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7490,6 +7681,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/state-library@workspace:packages/libraries/state-library"
   dependencies:
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     constate: ^3.3.2
     react: ^18.2.0
@@ -7509,6 +7701,7 @@ __metadata:
     "@emotion/styled": ^11.11.0
     "@emotion/use-insertion-effect-with-fallbacks": ^1.0.1
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     polished: ^4.2.2
     react: ^18.2.0
@@ -7531,6 +7724,7 @@ __metadata:
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7554,6 +7748,7 @@ __metadata:
     "@real-system/input": ^0.0.58
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-autosize-textarea: ^7.1.0
@@ -7578,6 +7773,7 @@ __metadata:
     "@real-system/portal-primitive": ^0.0.21
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7599,6 +7795,7 @@ __metadata:
   resolution: "@real-system/tooltip-primitive@workspace:packages/primitives/tooltip-primitive"
   dependencies:
     "@real-system/ariakit-library": ^0.0.24
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7619,6 +7816,7 @@ __metadata:
     "@real-system/tooltip-primitive": ^0.0.19
     "@real-system/typography": ^0.0.59
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7642,6 +7840,7 @@ __metadata:
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
     "@real-system/visually-hidden": ^0.0.54
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7660,6 +7859,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/utils-library@workspace:packages/libraries/utils-library"
   dependencies:
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     deepmerge: ^4.3.1
     lodash.get: ^4.4.2
@@ -7696,6 +7896,7 @@ __metadata:
     "@real-system/elements-primitive": 0.0.22
     "@real-system/styled-library": ^0.0.20
     "@real-system/utils-library": ^0.0.32
+    clean-package: ^2.2.0
     concurrently: ^8.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -11649,6 +11850,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clean-package@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "clean-package@npm:2.2.0"
+  dependencies:
+    dot-prop: ^6.0.1
+  bin:
+    clean-package: bin/main.js
+  checksum: 6585ace5d378405bda3d1b0080a30fc3755d334e6b610d4daa7bede820b407473d6860f77b89cbdbd9b474e1c719c09b21ae67bf1b91b6a61e55611bf18988e1
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -12921,6 +13133,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dot-prop@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "dot-prop@npm:6.0.1"
+  dependencies:
+    is-obj: ^2.0.0
+  checksum: 0f47600a4b93e1dc37261da4e6909652c008832a5d3684b5bf9a9a0d3f4c67ea949a86dceed9b72f5733ed8e8e6383cc5958df3bbd0799ee317fd181f2ece700
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:^10.0.0":
   version: 10.0.0
   resolution: "dotenv-expand@npm:10.0.0"
@@ -13354,7 +13575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.18.0, esbuild@npm:^0.18.10, esbuild@npm:^0.18.20":
+"esbuild@npm:^0.18.0, esbuild@npm:^0.18.10":
   version: 0.18.20
   resolution: "esbuild@npm:0.18.20"
   dependencies:
@@ -13428,6 +13649,83 @@ __metadata:
   bin:
     esbuild: bin/esbuild
   checksum: 5d253614e50cdb6ec22095afd0c414f15688e7278a7eb4f3720a6dd1306b0909cf431e7b9437a90d065a31b1c57be60130f63fe3e8d0083b588571f31ee6ec7b
+  languageName: node
+  linkType: hard
+
+"esbuild@npm:^0.19.5":
+  version: 0.19.5
+  resolution: "esbuild@npm:0.19.5"
+  dependencies:
+    "@esbuild/android-arm": 0.19.5
+    "@esbuild/android-arm64": 0.19.5
+    "@esbuild/android-x64": 0.19.5
+    "@esbuild/darwin-arm64": 0.19.5
+    "@esbuild/darwin-x64": 0.19.5
+    "@esbuild/freebsd-arm64": 0.19.5
+    "@esbuild/freebsd-x64": 0.19.5
+    "@esbuild/linux-arm": 0.19.5
+    "@esbuild/linux-arm64": 0.19.5
+    "@esbuild/linux-ia32": 0.19.5
+    "@esbuild/linux-loong64": 0.19.5
+    "@esbuild/linux-mips64el": 0.19.5
+    "@esbuild/linux-ppc64": 0.19.5
+    "@esbuild/linux-riscv64": 0.19.5
+    "@esbuild/linux-s390x": 0.19.5
+    "@esbuild/linux-x64": 0.19.5
+    "@esbuild/netbsd-x64": 0.19.5
+    "@esbuild/openbsd-x64": 0.19.5
+    "@esbuild/sunos-x64": 0.19.5
+    "@esbuild/win32-arm64": 0.19.5
+    "@esbuild/win32-ia32": 0.19.5
+    "@esbuild/win32-x64": 0.19.5
+  dependenciesMeta:
+    "@esbuild/android-arm":
+      optional: true
+    "@esbuild/android-arm64":
+      optional: true
+    "@esbuild/android-x64":
+      optional: true
+    "@esbuild/darwin-arm64":
+      optional: true
+    "@esbuild/darwin-x64":
+      optional: true
+    "@esbuild/freebsd-arm64":
+      optional: true
+    "@esbuild/freebsd-x64":
+      optional: true
+    "@esbuild/linux-arm":
+      optional: true
+    "@esbuild/linux-arm64":
+      optional: true
+    "@esbuild/linux-ia32":
+      optional: true
+    "@esbuild/linux-loong64":
+      optional: true
+    "@esbuild/linux-mips64el":
+      optional: true
+    "@esbuild/linux-ppc64":
+      optional: true
+    "@esbuild/linux-riscv64":
+      optional: true
+    "@esbuild/linux-s390x":
+      optional: true
+    "@esbuild/linux-x64":
+      optional: true
+    "@esbuild/netbsd-x64":
+      optional: true
+    "@esbuild/openbsd-x64":
+      optional: true
+    "@esbuild/sunos-x64":
+      optional: true
+    "@esbuild/win32-arm64":
+      optional: true
+    "@esbuild/win32-ia32":
+      optional: true
+    "@esbuild/win32-x64":
+      optional: true
+  bin:
+    esbuild: bin/esbuild
+  checksum: 5a0227cf6ffffa3076714d88230af1dfdd2fc363d91bd712a81fb91230c315a395e2c9b7588eee62986aeebf4999804b9b1b59eeab8e2457184eb0056bfe20c8
   languageName: node
   linkType: hard
 
@@ -20652,9 +20950,10 @@ __metadata:
     babel-loader: ^9.1.3
     babel-plugin-macros: ^3.1.0
     chalk: ^4.1.2
+    clean-package: ^2.2.0
     commitizen: ^4.3.0
     concurrently: ^8.2.1
-    esbuild: ^0.18.20
+    esbuild: ^0.19.5
     eslint: ^8.51.0
     eslint-config-prettier: ^9.0.0
     eslint-plugin-jest: ^27.4.2

@@ -6,16 +6,15 @@ const {
   makeEsbuildConfig,
   getExternalsFromPeerDeps,
 } = require('./utils');
+const pkgConfig = require('./clean-package.config.json');
 
 async function build(packageJson) {
-  const {
-    name: packageName,
-    main: outFileCJS,
-    module: outFileESM,
-  } = packageJson;
+  const outFileCJS = pkgConfig.replace.main;
+  const outFileESM = pkgConfig.replace.module;
+  const { name: packageName } = packageJson;
 
   const external = getExternalsFromPeerDeps(packageJson.peerDependencies);
-  const setConfig = makeEsbuildConfig([packageJson['main:dev']], external);
+  const setConfig = makeEsbuildConfig([packageJson['main']], external);
   /**
    * @todo still need this?
    * Fixes a bug related to replacing require with import statements https://github.com/evanw/esbuild/issues/566
