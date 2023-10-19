@@ -1,5 +1,16 @@
 # @real-system/accordion
 
+## 0.0.18
+
+### Patch Changes
+
+- [#1087](https://github.com/bigwoof91/real-system/pull/1087) [`cde714c6`](https://github.com/bigwoof91/real-system/commit/cde714c6fbd2f8908b709fda827e3646a8ea1aea) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix disclosure open state tracking and standardize useTokens usage
+
+- Updated dependencies [[`cde714c6`](https://github.com/bigwoof91/real-system/commit/cde714c6fbd2f8908b709fda827e3646a8ea1aea)]:
+  - @real-system/styled-library@0.0.22
+  - @real-system/utils-library@0.0.34
+  - @real-system/disclosure@0.0.18
+
 ## 0.0.17
 
 ### Patch Changes
