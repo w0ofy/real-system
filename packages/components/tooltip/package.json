@@ -45,7 +45,7 @@
     "@real-system/typography": "^0.0.61",
     "@real-system/utils-library": "^0.0.34",
     "clean-package": "^2.2.0",
-    "concurrently": "^8.2.1",
+    "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"

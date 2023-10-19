@@ -15,6 +15,7 @@
     "dev": "concurrently 'NODE_ENV=development node ./tools/dev.js' 'yarn types:watch'",
     "types:watch": "tsc --watch",
     "types": "tsc",
+    "tscheck": "tsc --noEmit --emitDeclarationOnly false",
     "prepack": "clean-package -c ../../../tools/build/clean-package.config.json",
     "postpack": "clean-package r -c ../../../tools/build/clean-package.config.json"
   },
@@ -38,7 +39,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-     "concurrently": "^8.2.1",
+     "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"

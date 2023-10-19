@@ -33,16 +33,16 @@
   },
   "devDependencies": {
     "clean-package": "^2.2.0",
-    "concurrently": "^8.2.1",
+    "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@react-aria/checkbox": "^3.11.1",
-    "@react-aria/focus": "^3.14.2",
-    "@react-aria/interactions": "^3.19.0",
-    "@react-aria/radio": "^3.8.1",
-    "@react-aria/utils": "3.21.0",
+    "@react-aria/checkbox": "^3.11.2",
+    "@react-aria/focus": "^3.14.3",
+    "@react-aria/interactions": "^3.19.1",
+    "@react-aria/radio": "^3.8.2",
+    "@react-aria/utils": "3.21.1",
     "@react-stately/checkbox": "^3.5.1",
     "@react-stately/radio": "^3.9.1",
     "@react-stately/toggle": "^3.6.3",
