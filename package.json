@@ -33,7 +33,7 @@
     "w": "./tools/workspace-command",
     "lint": "eslint \"packages/**/*.{ts,tsx,mdx}\"",
     "lint:fix": "yarn lint --fix",
-    "tscheck": "yarn workspaces foreach run tscheck",
+    "tscheck": "yarn workspaces foreach -p run tscheck",
     "precise-commits": "precise-commits",
     "pkgs:check": "manypkg check",
     "pkgs:fix": "manypkg fix",
