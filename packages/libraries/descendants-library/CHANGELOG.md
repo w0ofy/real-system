@@ -1,5 +1,12 @@
 # @real-system/descendants-library
 
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies [[`cde714c6`](https://github.com/bigwoof91/real-system/commit/cde714c6fbd2f8908b709fda827e3646a8ea1aea)]:
+  - @real-system/utils-library@0.0.34
+
 ## 0.0.16
 
 ### Patch Changes

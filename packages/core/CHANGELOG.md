@@ -1,5 +1,43 @@
 # @real-system/core
 
+## 0.0.66
+
+### Patch Changes
+
+- Updated dependencies [[`cde714c6`](https://github.com/bigwoof91/real-system/commit/cde714c6fbd2f8908b709fda827e3646a8ea1aea)]:
+  - @real-system/styled-library@0.0.22
+  - @real-system/utils-library@0.0.34
+  - @real-system/disclosure@0.0.18
+  - @real-system/accordion@0.0.18
+  - @real-system/icon@0.0.60
+  - @real-system/alert@0.0.47
+  - @real-system/aspect-ratio@0.0.32
+  - @real-system/badge@0.0.30
+  - @real-system/box@0.0.34
+  - @real-system/button@0.0.63
+  - @real-system/checkbox@0.0.47
+  - @real-system/dialog@0.0.55
+  - @real-system/field@0.0.39
+  - @real-system/flex@0.0.53
+  - @real-system/input@0.0.60
+  - @real-system/link@0.0.31
+  - @real-system/menu@0.0.34
+  - @real-system/pin-input@0.0.26
+  - @real-system/popover@0.0.38
+  - @real-system/radio-group@0.0.41
+  - @real-system/select@0.0.29
+  - @real-system/separator@0.0.30
+  - @real-system/spinner@0.0.58
+  - @real-system/stack@0.0.20
+  - @real-system/switch@0.0.6
+  - @real-system/textarea@0.0.44
+  - @real-system/toaster@0.0.46
+  - @real-system/tooltip@0.0.39
+  - @real-system/typography@0.0.61
+  - @real-system/visually-hidden@0.0.56
+  - @real-system/elements-primitive@0.0.24
+  - @real-system/descendants-library@0.0.17
+
 ## 0.0.65
 
 ### Patch Changes

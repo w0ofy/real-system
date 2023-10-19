@@ -1,5 +1,11 @@
 # @real-system/utils
 
+## 0.0.34
+
+### Patch Changes
+
+- [#1087](https://github.com/bigwoof91/real-system/pull/1087) [`cde714c6`](https://github.com/bigwoof91/real-system/commit/cde714c6fbd2f8908b709fda827e3646a8ea1aea) Thanks [@bigwoof91](https://github.com/bigwoof91)! - fix disclosure open state tracking and standardize useTokens usage
+
 ## 0.0.33
 
 ### Patch Changes
