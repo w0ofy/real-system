@@ -136,21 +136,26 @@ import styled from '@real-system/styled-library';
 
 const StyledBox = styled(Box)({
   margin: 2,
-  backgroundColor: 'white-50'
-})
+  backgroundColor: 'white-50',
+});
 
 // `useTokens` and `useToken` usage
 import { useTokens, useToken } from '@real-system/styled-library';
 
 const MyComponent = () => {
-  const zIndex = useToken(1, 'zIndices')
-  const [black200, white200, fivePixelsOrHalfRem] = useTokens({ colors: 'black-200', colors: 'white-200' space: 5 });
-  const styles = {
+  const zIndex = useToken(1, 'zIndices');
+  const [black200, white200, fivePixelsOrHalfRem] = useTokens(
+    ['colors', 'black-200'],
+    ['colors', 'white-200'],
+    ['space', 5]
+  );
+
+  const style = {
     color: white200,
     backgroundColor: black200,
     margin: fivePixelsOrHalfRem,
     zIndex,
   };
-  return <div styles={styles}>...</div>;
+  return <div style={style}>...</div>;
 };
 ```

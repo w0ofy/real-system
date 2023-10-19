@@ -17,12 +17,11 @@ const useToken = <T extends WildCardThemeToken = ThemeTokens, O = any>(
   return getToken<T, O>(token, scale, fallback)({ theme });
 };
 
-const useTokens = <T extends WildCardThemeToken = ThemeTokens, O = any>(
-  tokenMap: Partial<Record<ThemeScales, ExtendedThemeTokens<T>>>,
-  fallback?: O
-): O[] => {
+const useTokens = <T extends WildCardThemeToken = ThemeTokens>(
+  ...tokenMaps: [ThemeScales, ExtendedThemeTokens<T>][]
+) => {
   const theme = useTheme();
-  return getTokens<T, O>(tokenMap, fallback)({ theme });
+  return getTokens<T>(...tokenMaps)({ theme });
 };
 
 export { useToken, useTokens };

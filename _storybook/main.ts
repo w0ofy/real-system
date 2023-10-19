@@ -1,5 +1,3 @@
-import path from 'path';
-
 import type { StorybookConfig } from '@storybook/react-vite';
 import { mergeConfig } from 'vite';
 
@@ -33,22 +31,12 @@ const config: StorybookConfig = {
   },
   async viteFinal(config, _options) {
     return mergeConfig(config, {
+      optimizeDeps: {
+        include: ['@emotion/react'],
+      },
       resolve: {
-        mainFields: ['main'],
-        alias: {
-          '@emotion/react': path.resolve(
-            path.join(__dirname, '../node_modules/@emotion/react')
-          ),
-          '@emotion/styled': path.resolve(
-            path.join(__dirname, '../node_modules/@emotion/styled')
-          ),
-          '@emotion/core': path.resolve(
-            path.join(__dirname, '../node_modules/@emotion/react')
-          ),
-          'emotion-theming': path.resolve(
-            path.join(__dirname, '../node_modules/@emotion/react')
-          ),
-        },
+        mainFields: ['main', 'module'],
+        dedupe: ['@emotion/react'],
       },
     });
   },

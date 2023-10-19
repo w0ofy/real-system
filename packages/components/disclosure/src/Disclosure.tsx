@@ -24,7 +24,7 @@ const TRIGGER_CSS_SELECTOR =
   '& > [data-disclosure-trigger], & > [data-disclosure-content]';
 
 const Disclosure = ({
-  children: childrenProp,
+  children: renderPropOrChildren,
   contained = false,
   ...restProps
 }: DisclosureProps) => {
@@ -32,13 +32,14 @@ const Disclosure = ({
     ...restProps,
     animated: true,
   });
+
   const children = React.useMemo(() => {
-    if (isFunction(childrenProp)) {
-      const childrenFn = childrenProp as Func;
+    if (isFunction(renderPropOrChildren)) {
+      const childrenFn = renderPropOrChildren as Func;
       return childrenFn({ store, contained });
     }
-    return childrenProp;
-  }, [childrenProp, store, contained]);
+    return renderPropOrChildren;
+  }, [renderPropOrChildren, store, contained]);
 
   return (
     <DisclosureContextProvider store={store} contained={contained}>

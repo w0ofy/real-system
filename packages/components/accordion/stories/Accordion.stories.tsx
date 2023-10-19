@@ -7,13 +7,6 @@ import { Disclosure } from '@real-system/disclosure';
 export default {
   title: 'Components/Accordion',
   component: Accordion,
-  subcomponents: {
-    Disclosure,
-    'Disclosure.Content': Disclosure.Content,
-    'Disclosure.Toggle': Disclosure.Toggle,
-    'Disclosure.Primitives.Heading': Disclosure.Primitives.Heading,
-    'Disclosure.Primitives.Trigger': Disclosure.Primitives.Trigger,
-  },
 } as Meta;
 
 const AccordionItem = (props) => (
@@ -40,16 +33,6 @@ export const Default = (args) => (
 
 export const ContainedAccordion = (args) => (
   <Accordion {...args} contained>
-    <AccordionItem />
-    <AccordionItem />
-    <AccordionItem />
-    <AccordionItem />
-    <AccordionItem />
-  </Accordion>
-);
-
-export const AllowToggle = (args) => (
-  <Accordion {...args} allowToggle>
     <AccordionItem />
     <AccordionItem />
     <AccordionItem />

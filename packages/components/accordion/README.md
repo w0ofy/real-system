@@ -31,7 +31,7 @@ import { Disclosure, DisclosureToggle, DisclosureContent } from '@real-system/di
 const MyComponent = () => {
   return (
     // available props
-    <Accordion allowMultiple allowToggle contained defaultExpanded={{ 1: true, 2: true, 3: true }}>
+    <Accordion allowMultiple contained defaultExpanded={{ 1: true, 2: true, 3: true }}>
       <Disclosure>
         <DisclosureToggle>Accordion Item 1</DisclosureToggle>
         <DisclosureContent>Some content to expand and collapse</DisclosureContent>

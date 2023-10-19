@@ -33,10 +33,10 @@ const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     [icon, solid]
   );
   // eslint-disable-next-line prefer-const
-  let [iconSize, iconColor] = useTokens({
-    sizes: ICON_SIZE_MAP[size],
-    colors: `${colorScheme || 'gray'}-${maybeOrange(colorScheme)}`,
-  });
+  let [iconSize, iconColor] = useTokens(
+    ['sizes', ICON_SIZE_MAP[size]],
+    ['colors', `${colorScheme || 'gray'}-${maybeOrange(colorScheme)}`]
+  );
 
   if (colorScheme === undefined) {
     if (!restProps.color) {
