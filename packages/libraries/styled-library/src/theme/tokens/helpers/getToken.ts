@@ -16,24 +16,25 @@ const getToken = <T extends WildCardThemeToken = ThemeTokens, O = any>(
   fallback?: O
 ) => {
   return function <P = O>(props): P {
-    return _get(props.theme, `${scale}.${token}`, fallback);
+    return _get(props.theme, `${scale}.${token}`, fallback || token);
   };
 };
 
 /**
  * A styleFn to get many theme tokens
  */
-const getTokens = <T extends WildCardThemeToken = ThemeTokens, O = any>(
-  tokenMap: Partial<Record<ThemeScales, ExtendedThemeTokens<T>>>,
-  fallback?: O
+const getTokens = <T extends WildCardThemeToken = ThemeTokens>(
+  ...tokenMaps: [ThemeScales, ExtendedThemeTokens<T>][]
 ) => {
-  return function <P extends O = O>(props): P[] {
-    const values = [] as unknown as P[];
+  return function <P = any[]>(props: any): P {
+    const values = tokenMaps.map((arr) => {
+      const scale = arr[0];
+      const token = arr[1];
+      const value = _get(props?.theme, `${scale}.${token}`, token);
+      return value;
+    });
 
-    for (const scale in tokenMap) {
-      values.push(_get(props?.theme, `${scale}.${tokenMap[scale]}`, fallback));
-    }
-    return values;
+    return values as P;
   };
 };
 

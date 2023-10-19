@@ -43,25 +43,5 @@ type EventKeys =
   | ' '
   | 'Shift';
 
-/**
- * Get the normalized event key across all browsers
- */
-function normalizeEventKey(event: Pick<KeyboardEvent, 'key' | 'keyCode'>) {
-  const { key, keyCode } = event;
-
-  const isArrowKey =
-    keyCode >= 37 && keyCode <= 40 && key.indexOf('Arrow') !== 0;
-
-  const eventKey = isArrowKey ? `Arrow${key}` : key;
-
-  return eventKey as EventKeys;
-}
-
 export type { EventKeys };
-export {
-  canUseDOM,
-  getOwnerDocument,
-  isElement,
-  isHTMLElement,
-  normalizeEventKey,
-};
+export { canUseDOM, getOwnerDocument, isElement, isHTMLElement };

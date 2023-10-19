@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { useFocusManager } from '@real-system/a11y-library';
-import { normalizeEventKey } from '@real-system/utils-library';
 
 import type { AccordionProps } from './Accordion.model';
 
@@ -23,7 +22,7 @@ const AccordionItems = ({
     (index: number) => () => {
       const updatedDisclosures = new Map<number, boolean>(disclosures);
 
-      if (allowToggle || (allowMultiple && allowToggle !== false)) {
+      if (allowToggle || allowMultiple) {
         if (updatedDisclosures.get(index)) {
           setDisclosures(updatedDisclosures.set(index, false));
           return;
@@ -42,13 +41,11 @@ const AccordionItems = ({
   );
 
   const onKeyDown = React.useCallback(
-    (event: KeyboardEvent) => {
-      const key = normalizeEventKey({
-        key: event.key,
-        keyCode: event?.keyCode,
-      });
-      if (key === 'ArrowDown') focusManager.focusNext({ wrap: true });
-      if (key === 'ArrowUp') focusManager.focusPrevious({ wrap: true });
+    ({ code }: KeyboardEvent) => {
+      if (code === 'ArrowDown' || code === 'ArrowRight')
+        focusManager.focusNext({ wrap: true });
+      if (code === 'ArrowUp' || code === 'ArrowLeft')
+        focusManager.focusPrevious({ wrap: true });
     },
     [focusManager]
   );
@@ -58,7 +55,7 @@ const AccordionItems = ({
       open: disclosures.get(index),
       setOpen: makeOnClick(index),
       onKeyDown,
-      contained,
+      contained: Boolean(contained),
     })
   );
 

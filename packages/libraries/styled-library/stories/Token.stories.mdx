@@ -60,8 +60,7 @@ import {
 } from '@real-system/styled-library';
 
 // use `getToken`
-const getTextColor = (theme, dark) =>
-  getToken(dark ? 'gray-800' : 'gray-500')({ theme });
+const getTextColor = (theme) => getToken('gray-800')({ theme });
 
 const MyComponent = () => {
   // maybe use `useTheme`
@@ -69,7 +68,10 @@ const MyComponent = () => {
   const textColor = getTextColor(theme);
 
   // or simply use `useToken`(s)
-  const [black, fivePixelsOrHalfRem] = useTokens({ colors: 'black', space: 5 });
+  const [black, fivePixelsOrHalfRem] = useTokens(
+    ['colors', 'black'],
+    ['space', 5]
+  );
   const zIndex = useToken(2, 'zIndices');
 
   const styles = {
@@ -78,7 +80,7 @@ const MyComponent = () => {
     margin: fivePixelsOrHalfRem,
     zIndex,
   };
-  return <div styles={styles}>...</div>;
+  return <div style={style}>...</div>;
 };
 
 // or use `Box`
@@ -113,12 +115,7 @@ function getToken(
  * A styleFn to get many theme tokens
  */
 
-type ReturnValue = any[];
-
-function getTokens(
-  tokenMap: Partial<Record<ThemeScales, ThemeTokens>>,
-  fallback: ReturnValue
-): ReturnValue;
+function getTokens(...tokenMap: [ThemeScales, ThemeTokens][]): any[];
 ```
 
 #### `useToken` signature
@@ -141,10 +138,7 @@ function useToken(
  * A styleFn to get theme tokens
  */
 
-type ReturnValue = any[];
-
 function useTokens(
-  tokenMap: Partial<Record<ThemeScales, ThemeTokens>>,
-  fallback: ReturnValue = undefined
-): ReturnValue;
+  ...tokenMaps: [ThemeScales, ExtendedThemeTokens<T>][]
+): (string | number | undefined)[];
 ```

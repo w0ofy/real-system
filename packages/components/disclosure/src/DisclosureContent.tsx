@@ -52,11 +52,14 @@ const DisclosureContent = React.forwardRef<
   return (
     <DisclosureContentPrimitive
       ref={ref}
-      as={real.div}
-      overflow="hidden"
+      render={
+        <real.div
+          overflow="hidden"
+          {...(contained ? containedStyles : defaultStyles)}
+          {...transitionStyles}
+        />
+      }
       data-disclosure-content
-      {...(contained ? containedStyles : defaultStyles)}
-      {...transitionStyles}
       store={store}>
       <real.div
         py={6}

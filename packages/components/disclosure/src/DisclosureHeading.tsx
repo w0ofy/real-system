@@ -6,11 +6,11 @@ import type {
   ResponsiveValue,
 } from '@real-system/styled-library';
 
-type DisclosureHeadingAsTags = 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type DisclosureHeadingTags = 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 type DisclosureHeadingProps = Omit<RealSystemComponentProps<'div'>, 'size'> & {
-  as?: DisclosureHeadingAsTags;
-  size?: ResponsiveValue<DisclosureHeadingAsTags | 'button'>;
+  as?: DisclosureHeadingTags;
+  size?: ResponsiveValue<DisclosureHeadingTags | 'button'>;
 };
 
 const DisclosureHeading = ({

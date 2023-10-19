@@ -89,7 +89,15 @@ Some notes before you begin.
 $ yarn bootstrap
 
 # develop components locally with storybook
+$ yarn storybook
+
+# The scripts below are rarely used. They can be used to catch compiler edge-cases
+
+# develop components locally with "build --watch"
 $ yarn dev
+
+# develop components locally with "build --watch" and storybook
+$ yarn dev:storybook
 ```
 
 ## Contributing

@@ -73,16 +73,19 @@ const DisclosureTrigger = ({
   hideToggleIcon,
   ...restProps
 }: DisclosureTriggerProps) => {
-  const { store, ...restContext } = useDisclosureStoreContext();
-  const { open } = store.getState();
+  const { store, contained } = useDisclosureStoreContext();
+  const open = store.useState('open');
 
   return (
     <DisclosurePrimitive
-      as={StyledDisclosureTrigger}
+      render={
+        <StyledDisclosureTrigger
+          contained={contained ? contained : undefined}
+          {...restProps}
+        />
+      }
       disabled={disabled}
       store={store}
-      {...restContext}
-      {...restProps}
       data-disclosure-trigger>
       <>
         {!hideToggleIcon && (

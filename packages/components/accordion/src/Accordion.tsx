@@ -16,8 +16,8 @@ const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
     {
       children,
       contained,
-      allowMultiple,
-      allowToggle,
+      allowMultiple = false,
+      allowToggle = true,
       defaultExpanded,
       ...restProps
     },
