@@ -1,11 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { forwardRef } from 'react';
 
 import { useInteractions } from '@real-system/a11y-library';
 import type { AriakitRadioProps } from '@real-system/ariakit-library';
 import { AriakitRadio } from '@real-system/ariakit-library';
 import { Text } from '@real-system/typography';
-import { useMergeRefs } from '@real-system/utils-library';
 import { VisuallyHidden } from '@real-system/visually-hidden';
 
 import { RadioControl, RadioLabel } from './components';
@@ -28,8 +27,6 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
 
   const { hoverProps, pressProps, focusWithinProps, ...restInteractions } =
     useInteractions({ disabled });
-  const internalRef = useRef<HTMLInputElement>(null);
-  const mergedRef = useMergeRefs(internalRef, ref);
 
   return (
     <Text.Label
@@ -40,7 +37,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
       {...focusWithinProps}>
       <VisuallyHidden>
         <AriakitRadio
-          ref={mergedRef}
+          ref={ref}
           value={value}
           disabled={disabled}
           name={store.name}

@@ -13,8 +13,10 @@ const useReadyRef = <T>(
 
   const setRef = useCallback(
     (node: T) => {
-      mergeRefs(node);
-      setReady(!!node);
+      if (node) {
+        mergeRefs(node);
+        setReady(!!node);
+      }
     },
     [mergeRefs, refs]
   );

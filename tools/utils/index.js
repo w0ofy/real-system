@@ -17,6 +17,7 @@ const {
   getPurePkgName,
 } = require('./workspaceUtils');
 const { updatePackageCache } = require('./updatePackageCache');
+const { updateDependabotConfig } = require('./update-dependabot-config');
 
 module.exports = {
   writeToFile,
@@ -29,6 +30,7 @@ module.exports = {
   getFullPkgName,
   getPurePkgName,
   updatePackageCache,
+  updateDependabotConfig,
   CORE_PATH,
   ROOT_PATH,
   PACKAGE_STATUS_CONFIG,
