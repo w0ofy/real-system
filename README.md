@@ -110,7 +110,7 @@ $ git add .
 $ git commit -m "<your_commit_message>"
 
 # or to be prompted by commitizen :)
-$ yarn commit
+$ git commit
 $ git push origin <branch_name>
 
 # then raise a PR

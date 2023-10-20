@@ -5,6 +5,7 @@ const {
   getWorkspacesInfo,
   logger,
   writeToFile,
+  updateDependabotConfig,
   PRODUCTION,
 } = require('./utils');
 
@@ -37,8 +38,10 @@ const getPackagesToProductionize = async () => {
   if (!packagesToProductionize) {
     return logger.info('All packages are productionized already.');
   }
+
   /** update each original package.json */
-  packagesToProductionize.forEach(({ name, location }) => {
+  for (const pkg of packagesToProductionize) {
+    const { name, location } = pkg;
     const pathToPkgJson = `${resolve(location)}/package.json`;
     const pkgJson = fs.readFileSync(pathToPkgJson, 'utf-8');
 
@@ -51,5 +54,6 @@ const getPackagesToProductionize = async () => {
       successMessage: `Productionized ${name}.`,
       errorMessage: `Failed to productionize ${name}.`,
     });
-  });
+  }
+  updateDependabotConfig();
 })();
