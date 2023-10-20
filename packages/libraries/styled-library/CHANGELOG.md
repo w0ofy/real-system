@@ -1,5 +1,14 @@
 # @real-system/styled-library
 
+## 0.0.23
+
+### Patch Changes
+
+- [`c8f86658`](https://github.com/bigwoof91/real-system/commit/c8f86658caed93da3b3f9e40e3cb41ab1e4abc73) Thanks [@bigwoof91](https://github.com/bigwoof91)! - internal dependency bumps
+
+- Updated dependencies [[`c8f86658`](https://github.com/bigwoof91/real-system/commit/c8f86658caed93da3b3f9e40e3cb41ab1e4abc73)]:
+  - @real-system/utils-library@0.0.35
+
 ## 0.0.22
 
 ### Patch Changes

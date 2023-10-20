@@ -1,5 +1,14 @@
 # @real-system/separator-primitive
 
+## 0.0.21
+
+### Patch Changes
+
+- [`c8f86658`](https://github.com/bigwoof91/real-system/commit/c8f86658caed93da3b3f9e40e3cb41ab1e4abc73) Thanks [@bigwoof91](https://github.com/bigwoof91)! - internal dependency bumps
+
+- Updated dependencies [[`c8f86658`](https://github.com/bigwoof91/real-system/commit/c8f86658caed93da3b3f9e40e3cb41ab1e4abc73)]:
+  - @real-system/ariakit-library@0.0.26
+
 ## 0.0.20
 
 ### Patch Changes
