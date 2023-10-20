@@ -1,5 +1,11 @@
 # @real-system/dialog-primitive
 
+## 0.0.35
+
+### Patch Changes
+
+- [`c8f86658`](https://github.com/bigwoof91/real-system/commit/c8f86658caed93da3b3f9e40e3cb41ab1e4abc73) Thanks [@bigwoof91](https://github.com/bigwoof91)! - internal dependency bumps
+
 ## 0.0.34
 
 ### Patch Changes

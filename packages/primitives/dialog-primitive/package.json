@@ -1,6 +1,6 @@
 {
   "name": "@real-system/dialog-primitive",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "description": "Dialog primitive components for real system.",
   "status": "production",
   "main": "src/index.ts",
