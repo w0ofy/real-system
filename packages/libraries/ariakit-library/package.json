@@ -1,6 +1,6 @@
 {
   "name": "@real-system/ariakit-library",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Ariakit library for real system.",
   "status": "production",
   "main": "src/index.ts",
