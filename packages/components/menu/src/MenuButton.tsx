@@ -3,8 +3,13 @@ import React, { forwardRef } from 'react';
 import type { ButtonProps } from '@real-system/button';
 import { Button } from '@real-system/button';
 import { Icon } from '@real-system/icon';
-import { MenuButtonPrimitive } from '@real-system/menu-primitive';
+import {
+  MenuButtonPrimitive,
+  useMenuContextPrimitive,
+} from '@real-system/menu-primitive';
 import { makeTestId } from '@real-system/utils-library';
+
+import { MenuItem } from './MenuItem';
 
 type MenuButtonProps = (
   | {
@@ -23,6 +28,17 @@ const MenuButton = forwardRef<HTMLButtonElement, MenuButtonProps>(
     { children, trailingArrow, leadingArrow, ...restProps },
     ref
   ) {
+    const menu = useMenuContextPrimitive();
+
+    if (menu?.parent) {
+      return (
+        <MenuItem isSubmenu>
+          {children}
+          <MenuItem.Icon icon="chevron-right" alignRight />
+        </MenuItem>
+      );
+    }
+
     return (
       <MenuButtonPrimitive
         data-testid={makeTestId('menu-button')}

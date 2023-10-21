@@ -36,7 +36,6 @@ import type {
 } from '@real-system/menu-primitive';
 import {
   MenuArrowPrimitive,
-  MenuButtonArrowPrimitive,
   MenuButtonPrimitive,
   MenuGroupLabelPrimitive,
   MenuGroupPrimitive,

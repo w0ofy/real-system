@@ -4,7 +4,7 @@ export type DefaultColorSchemes =
   | '#ffffff'
   | '#101840'
   | '#596375'
-  | '#3366FF'
+  | '#006DFA'
   | '#da1e28'
   | '#ffb020'
   | '#ffca58'
@@ -37,8 +37,8 @@ const palettes: PaletteConfig = {
   realSystem: {
     white: '#ffffff',
     black: '#101840',
-    gray: '#596375',
-    blue: '#3366FF',
+    gray: '#596375', // #596375
+    blue: '#006DFA', // #3366FF
     red: '#da1e28',
     orange: '#ffb020',
     yellow: '#ffca58',
