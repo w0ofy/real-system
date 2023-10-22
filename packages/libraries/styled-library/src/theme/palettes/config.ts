@@ -37,8 +37,8 @@ const palettes: PaletteConfig = {
   realSystem: {
     white: '#ffffff',
     black: '#101840',
-    gray: '#596375', // #596375
-    blue: '#006DFA', // #3366FF
+    gray: '#596375',
+    blue: '#006DFA', // previous: #3366FF
     red: '#da1e28',
     orange: '#ffb020',
     yellow: '#ffca58',
