@@ -82,7 +82,7 @@
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^17.8.0",
-    "@commitlint/config-conventional": "^17.8.0",
+    "@commitlint/config-conventional": "^18.0.0",
     "@commitlint/cz-commitlint": "^17.8.0",
     "@commitlint/prompt-cli": "^17.8.0",
     "@emotion/babel-preset-css-prop": "^11.11.0",
