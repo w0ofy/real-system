@@ -42,7 +42,7 @@
     "@react-aria/focus": "^3.14.3",
     "@react-aria/interactions": "^3.19.1",
     "@react-aria/radio": "^3.8.2",
-    "@react-aria/utils": "3.21.1",
+    "@react-aria/utils": "3.22.0",
     "@react-stately/checkbox": "^3.5.1",
     "@react-stately/radio": "^3.9.1",
     "@react-stately/toggle": "^3.6.3",
