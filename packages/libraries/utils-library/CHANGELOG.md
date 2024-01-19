@@ -1,5 +1,11 @@
 # @real-system/utils
 
+## 0.0.36
+
+### Patch Changes
+
+- [#1090](https://github.com/bigwoof91/real-system/pull/1090) [`aa445777`](https://github.com/bigwoof91/real-system/commit/aa445777ff680c8b03006de72d217b2df8fdfbe7) Thanks [@bigwoof91](https://github.com/bigwoof91)! - remove unused useMergeRefs and add truthy check to useReadyRef
+
 ## 0.0.35
 
 ### Patch Changes
