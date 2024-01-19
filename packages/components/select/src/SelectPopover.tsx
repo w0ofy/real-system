@@ -8,9 +8,6 @@ import type { OmitSelectPrivateProps } from './types';
 
 type SelectPopoverProps = OmitSelectPrivateProps<SelectPopoverPrimitiveProps>;
 
-/**
- * @todo animate popover
- */
 const SelectPopover = ({
   children,
   sameWidth = true,
@@ -30,6 +27,10 @@ const SelectPopover = ({
           border="weak"
           bgColor="white"
           py={4}
+          px={4}
+          opacity="0"
+          transition="opacity .2s ease-in-out"
+          _enter={{ opacity: 1 }}
           color="white"
           filter="popover"
           outline="none"

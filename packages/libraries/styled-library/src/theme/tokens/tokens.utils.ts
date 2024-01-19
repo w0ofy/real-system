@@ -35,6 +35,7 @@ const makeColorRangeFromPalette = <T extends ColorSchemes>(
   const paletteColor = plt[paletteKey];
 
   const colorRange = {
+    [`${paletteKey}-25`]: tint(0.975, paletteColor),
     [`${paletteKey}-50`]: tint(0.95, paletteColor),
     [`${paletteKey}-100`]: tint(0.85, paletteColor),
     [`${paletteKey}-200`]: tint(0.65, paletteColor),
@@ -46,6 +47,7 @@ const makeColorRangeFromPalette = <T extends ColorSchemes>(
     [`${paletteKey}-800`]: shade(0.65, paletteColor),
     [`${paletteKey}-900`]: shade(0.8, paletteColor),
     [`${paletteKey}-950`]: shade(0.95, paletteColor),
+    [`${paletteKey}-975`]: tint(0.975, paletteColor),
   };
 
   const readableTextRange = Object.keys(colorRange).reduce((a, b) => {

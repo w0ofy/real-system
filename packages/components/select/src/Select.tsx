@@ -61,6 +61,7 @@ const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
           placement={placement}
           setValue={onChange}
           setOpen={setOpen}
+          animated
           value={value}
           defaultValue={defaultValue}
           open={open}>

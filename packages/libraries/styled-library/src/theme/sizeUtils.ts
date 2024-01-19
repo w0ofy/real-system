@@ -1,20 +1,22 @@
 import { _logger } from '@real-system/utils-library';
 
 type Format = 'rem' | 'px';
-type FormatScaleReturnValue = `-${string}${Format}` | `${string}${Format}`;
+type FormatScaleReturnValue<T extends Format> =
+  | `-${string}${T}`
+  | `${string}${T}`;
 
-const formatScale = (
-  size: number,
-  format: Format = 'rem',
+const formatScale = <S extends number = number, F extends Format = 'rem'>(
+  size: S,
+  format?: F,
   destructive?: boolean
-): FormatScaleReturnValue => {
+): FormatScaleReturnValue<F> => {
   let prefix = '';
   if (destructive) prefix = '-';
-  if (format === 'rem') {
-    // divide by 10 because real system's html size is sized down to 0.625rem
-    return `${prefix}${size / 10}rem`;
+  if (format === 'px') {
+    return `${prefix}${size}px` as FormatScaleReturnValue<F>;
   }
-  return `${prefix}${size}px`;
+  // divide by 10 because real system's html size is sized down to 0.625rem
+  return `${prefix}${size / 10}rem` as FormatScaleReturnValue<F>;
 };
 
 type MakeScaleUtilOptions = {
@@ -43,33 +45,33 @@ type ScalerOptions = {
   destructive?: boolean;
 };
 
-const defaultScalerOptions: ScalerOptions = {
+const DEFAULT_SCALER_OPTS: ScalerOptions = {
   format: 'rem',
   destructive: false,
 };
 
 /**
- * Creates a multiple-of-8 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
+ * Creates a measurement multipled by 8 in rem (by default) or pixels. Can return non-integers via `destructive`
  */
 const majorScale = (
   size: number,
-  { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
+  { format = 'rem', destructive = false }: ScalerOptions = DEFAULT_SCALER_OPTS
 ) => makeScaleUtil(size, 8, { origin: 'majorScale', format, destructive });
 
 /**
- * Creates a multiple-of-4 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
+ * Creates a measurement multipled by 4 in rem (by default) or pixels. Can return non-integers via `destructive`
  */
 const minorScale = (
   size: number,
-  { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
+  { format = 'rem', destructive = false }: ScalerOptions = DEFAULT_SCALER_OPTS
 ) => makeScaleUtil(size, 4, { origin: 'minorScale', format, destructive });
 
 /**
- * Creates a multiple-of-2 measurement in rem (by default) or pixels. Can return non-integers via `destructive`
+ * Creates a measurement multipled by 2 in rem (by default) or pixels. Can return non-integers via `destructive`
  */
 const patchScale = (
   size: number,
-  { format = 'rem', destructive = false }: ScalerOptions = defaultScalerOptions
+  { format = 'rem', destructive = false }: ScalerOptions = DEFAULT_SCALER_OPTS
 ) => makeScaleUtil(size, 2, { origin: 'patchScale', format, destructive });
 
 export type { ScalerOptions };

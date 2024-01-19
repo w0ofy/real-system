@@ -16,4 +16,6 @@ export {
   MenuItemRadio as AriakitMenuItemRadio,
   MenuProvider as AriakitMenuProvider,
   MenuSeparator as AriakitMenuSeparator,
+  useMenuContext as useAriakitMenuContext,
+  useMenuStore as useAriakitMenuStore,
 } from '@ariakit/react/menu';

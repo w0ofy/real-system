@@ -5,10 +5,11 @@ import type { StylishProps } from '@real-system/styled-library';
 
 import type { CommonMenuItemProps } from './MenuItem.model';
 
-const menuItemStyles: StylishProps = {
+const menuItemStyles = {
   transition: 'background-color 150ms ease-out, color 150ms ease-out',
-  paddingX: 7,
+  paddingX: 8,
   paddingY: 5,
+  borderRadius: 4,
   display: 'inline-flex',
   alignItems: 'center',
   width: '100%',
@@ -19,25 +20,27 @@ const menuItemStyles: StylishProps = {
   textDecoration: 'none',
   cursor: 'pointer',
   _hover: {
-    backgroundColor: 'gray-50',
-    color: 'gray-600',
+    backgroundColor: `gray-50`,
+    color: `gray-500`,
   },
   _focus: {
     outline: 'none',
-    backgroundColor: 'gray-50',
-    color: 'gray-600',
+    backgroundColor: `gray-50`,
+    color: `gray-500`,
   },
   _active: {
-    backgroundColor: 'gray-100',
-    color: 'gray-700',
+    bgColor: `gray-50`,
+    color: `gray-500`,
   },
   _checked: {
-    color: 'gray-700',
+    color: `gray-500`,
   },
   _disabled: { backgroundColor: 'none', color: 'gray-300' },
-};
+} satisfies StylishProps;
 
-const MenuItemWrapper = forwardRef<HTMLDivElement, CommonMenuItemProps>(
+type MenuItemWrapperProps = CommonMenuItemProps;
+
+const MenuItemWrapper = forwardRef<HTMLDivElement, MenuItemWrapperProps>(
   function MenuItemWrapper({ children, ...restProps }, ref) {
     return (
       <real.div {...menuItemStyles} {...restProps} ref={ref}>
