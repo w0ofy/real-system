@@ -12,7 +12,7 @@ const baseEsbuildConfig = {
     'process.env.NODE_ENV': `"${ENV}"`,
   },
   logLevel: 'error',
-  sourcemap: false,
+  sourcemap: true,
 };
 
 // const watch = (pkg = {}) => ({

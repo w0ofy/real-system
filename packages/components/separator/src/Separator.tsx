@@ -58,7 +58,7 @@ const makeDividerStyles = ({
  * It renders the semantic `hr` HTML element by default and leverages borders
  * to display a horizontal or vertical line.
  * */
-const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
+const Separator = React.forwardRef<HTMLHRElement, SeparatorProps>(
   function Separator(
     {
       orientation = 'horizontal',
@@ -77,11 +77,15 @@ const Separator = React.forwardRef<HTMLElement, SeparatorProps>(
 
     return (
       <SeparatorPrimitive
-        as={RealHR}
+        render={(htmlProps) => (
+          <RealHR
+            borderWidth={0}
+            {...htmlProps}
+            {...dividerStyles[orientation]}
+            {...restProps}
+          />
+        )}
         data-testid={makeTestId('separator')}
-        borderWidth={0}
-        {...dividerStyles[orientation]}
-        {...restProps}
         ref={ref}
       />
     );

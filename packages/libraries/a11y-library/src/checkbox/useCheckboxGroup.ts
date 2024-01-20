@@ -68,6 +68,7 @@ const useCheckboxGroupItem: typeof useAriaCheckboxGroupItem = (
   ref
 ) => {
   const restoredProps = restoreCheckboxGroupItemProps(props);
+  console.log(ref);
   return useAriaCheckboxGroupItem(restoredProps, state, ref);
 };
 

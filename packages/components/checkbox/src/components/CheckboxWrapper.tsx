@@ -26,6 +26,9 @@ const CheckboxWrapper = forwardRef<
     focusWithinProps,
     helpText,
     hasError,
+    isFocusedWithin: _,
+    isHovered: __,
+    isPressed: ___,
     ...restProps
   },
   ref

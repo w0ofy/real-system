@@ -31,12 +31,8 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
     const interactionProps = useInteractions({ disabled: disabledProp });
     const store = useCheckboxGroupContext();
     const internalRef = useRef<HTMLInputElement>(null);
-    const mergedRef = useMergeRefs(internalRef, ref);
-    const { inputProps } = useCheckboxGroupItem(
-      props,
-      store,
-      mergedRef as unknown as React.RefObject<HTMLInputElement>
-    );
+    const mergeRefs = useMergeRefs(internalRef, ref);
+    const { inputProps } = useCheckboxGroupItem(props, store, internalRef);
     const disabled = store.isDisabled || props.disabled;
     const isSelected = store.isSelected(value);
 
@@ -64,7 +60,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
         {...dynamicStyles}
         {...interactionProps}>
         <VisuallyHidden>
-          <input {...inputProps} ref={mergedRef} />
+          <input {...inputProps} ref={mergeRefs} />
         </VisuallyHidden>
         <CheckboxControl
           disabled={disabled}

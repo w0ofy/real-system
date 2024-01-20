@@ -57,16 +57,16 @@ const PopoverTrigger = forwardRef<HTMLElement, PopoverTriggerProps>(
       <PopoverDisclosurePrimitive
         store={store}
         data-testid={makeTestId('popover-disclosure')}
-        {...restProps}
-        /** @ts-ignore ref will exist on ReactElement */
-        ref={ref ?? disclosure.ref}>
-        {(disclosureProps) =>
+        render={(htmlProps) =>
           React.cloneElement(disclosure, {
-            ...disclosureProps,
+            ...htmlProps,
+            ...restProps,
             ...disclosure.props,
           })
         }
-      </PopoverDisclosurePrimitive>
+        /** @ts-ignore ref will exist on ReactElement */
+        ref={ref ?? disclosure.ref}
+      />
     );
   }
 );

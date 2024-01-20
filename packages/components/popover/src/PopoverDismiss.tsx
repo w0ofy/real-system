@@ -30,9 +30,8 @@ const PopoverDismiss = forwardRef<HTMLButtonElement, PopoverDismissProps>(
     return (
       <PopoverDismissPrimitive
         store={store}
-        as={Button}
+        render={(htmlProps) => <Button {...htmlProps} {...restProps} />}
         data-testid={makeTestId('popover-dismiss')}
-        {...restProps}
         ref={ref}>
         {children}
       </PopoverDismissPrimitive>

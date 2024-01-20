@@ -50,10 +50,9 @@ const PopoverButton = forwardRef<HTMLButtonElement, PopoverButtonProps>(
 
     return (
       <PopoverDisclosurePrimitive
-        as={Button}
+        render={(htmlProps) => <Button {...htmlProps} {...restProps} />}
         store={store}
         data-testid={makeTestId('popover-disclosure')}
-        {...restProps}
         ref={ref}>
         {children}
       </PopoverDisclosurePrimitive>

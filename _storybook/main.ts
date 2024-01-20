@@ -38,6 +38,7 @@ const config: StorybookConfig = {
         mainFields: ['main', 'module'],
         dedupe: ['@emotion/react'],
       },
+      define: { 'process.env': {} },
     });
   },
 };
