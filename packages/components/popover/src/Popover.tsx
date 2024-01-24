@@ -72,7 +72,7 @@ const Popover: PopoverComponent = forwardRef<HTMLDivElement, PopoverProps>(
         data-testid={makeTestId('popover')}
         render={(htmlProps) => <StyledPopover {...htmlProps} {...restProps} />}
         ref={ref}>
-        {hideArrow ? null : <PopoverArrowPrimitive store={store} />}
+        <PopoverArrowPrimitive store={store} size={hideArrow ? 0 : 30} />
         {!hideCloseButton && (
           <PopoverDismiss
             variant="minimal"
