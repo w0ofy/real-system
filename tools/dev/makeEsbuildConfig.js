@@ -6,7 +6,14 @@ const baseEsbuildConfig = {
   mainFields: ['module', 'main'],
   platform: 'node',
   bundle: true,
-  target: ['es2015', 'chrome66', 'firefox58', 'safari11', 'edge79', 'node12'],
+  target: [
+    'es2015',
+    'chrome100',
+    'firefox100',
+    'safari14',
+    'edge100',
+    'node18.16.0',
+  ],
   minify: false,
   define: {
     'process.env.NODE_ENV': `"${ENV}"`,
@@ -14,14 +21,6 @@ const baseEsbuildConfig = {
   logLevel: 'error',
   sourcemap: true,
 };
-
-// const watch = (pkg = {}) => ({
-//   // eslint-disable-next-line no-unused-vars
-//   async onRebuild(err, _result) {
-//     if (err) logger.error(err);
-//     logger.info(`Rebundled ${pkg.name}`);
-//   },
-// });
 
 const getExternalDeps = (packageJson = {}) => {
   const externalDeps = Object.keys({
@@ -32,8 +31,6 @@ const getExternalDeps = (packageJson = {}) => {
 };
 
 /**
- *
- * @param {object} customConfig
  * @param {object} pkgJson
  * @param {object} overrides {format: 'cjs' | 'esm'}
  * @returns {object}
@@ -42,8 +39,6 @@ const makeEsbuildConfig = (pkgJson, { format } = { format: 'cjs' }) => {
   return {
     ...baseEsbuildConfig,
     entryPoints: [pkgJson['main']],
-    /** `watch` was deprecated in esbuild, but keeping this here to see how this was previously configured in case anything unexpected breaks */
-    // watch: watch(pkgJson),
     external: getExternalDeps(pkgJson),
     format,
     outfile: format === 'cjs' ? pkgJson.main : pkgJson.module,

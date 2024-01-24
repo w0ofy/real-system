@@ -38,17 +38,14 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@react-aria/checkbox": "3.11.2",
-    "@react-aria/focus": "3.14.3",
-    "@react-aria/interactions": "3.19.1",
-    "@react-aria/radio": "3.8.2",
-    "@react-aria/utils": "3.21.1",
-    "@react-stately/checkbox": "3.5.1",
-    "@react-stately/radio": "3.9.1",
-    "@react-stately/toggle": "3.6.3",
-    "@react-types/checkbox": "3.5.2",
-    "@react-types/radio": "3.5.2",
-    "@react-types/shared": "3.21.0"
+    "@react-aria/checkbox": "^3.13.0",
+    "@react-aria/focus": "^3.16.0",
+    "@react-aria/interactions": "^3.20.1",
+    "@react-aria/utils": "^3.23.0",
+    "@react-stately/checkbox": "^3.6.1",
+    "@react-stately/toggle": "^3.7.0",
+    "@react-types/checkbox": "^3.6.0",
+    "@react-types/shared": "^3.22.0"
   },
   "files": [
     "lib"

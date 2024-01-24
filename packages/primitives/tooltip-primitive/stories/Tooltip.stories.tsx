@@ -1,11 +1,12 @@
 import * as React from 'react';
 import type { Meta } from '@storybook/react';
 
-import { Button } from '@real-system/button';
+import { Box } from '@real-system/box';
 import {
   TooltipAnchorPrimitive,
+  TooltipArrowPrimitive,
   TooltipPrimitive,
-  useTooltipStorePrimitive,
+  TooltipProviderPrimitive,
 } from '@real-system/tooltip-primitive';
 
 export default {
@@ -17,14 +18,18 @@ export default {
 } as Meta;
 
 const Template = () => {
-  const tooltip = useTooltipStorePrimitive();
   return (
-    <>
-      <TooltipAnchorPrimitive store={tooltip} as={Button}>
+    <TooltipProviderPrimitive placement="top">
+      <TooltipAnchorPrimitive render={<a href="#" />}>
         Hover or focus on me
       </TooltipAnchorPrimitive>
-      <TooltipPrimitive store={tooltip}>Tooltip</TooltipPrimitive>
-    </>
+      <TooltipPrimitive>
+        <TooltipArrowPrimitive size={0} />
+        <Box bgColor="black" color="white" p={3} borderRadius="md">
+          Tooltip
+        </Box>
+      </TooltipPrimitive>
+    </TooltipProviderPrimitive>
   );
 };
 

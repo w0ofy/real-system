@@ -6,18 +6,18 @@ type SplitIncludingDelimiters<
 > = Source extends ''
   ? []
   : Source extends `${infer FirstPart}${Delimiter}${infer SecondPart}`
-  ? Source extends `${FirstPart}${infer UsedDelimiter}${SecondPart}`
-    ? UsedDelimiter extends Delimiter
-      ? Source extends `${infer FirstPart}${UsedDelimiter}${infer SecondPart}`
-        ? [
-            ...SplitIncludingDelimiters<FirstPart, Delimiter>,
-            UsedDelimiter,
-            ...SplitIncludingDelimiters<SecondPart, Delimiter>,
-          ]
+    ? Source extends `${FirstPart}${infer UsedDelimiter}${SecondPart}`
+      ? UsedDelimiter extends Delimiter
+        ? Source extends `${infer FirstPart}${UsedDelimiter}${infer SecondPart}`
+          ? [
+              ...SplitIncludingDelimiters<FirstPart, Delimiter>,
+              UsedDelimiter,
+              ...SplitIncludingDelimiters<SecondPart, Delimiter>,
+            ]
+          : never
         : never
       : never
-    : never
-  : [Source];
+    : [Source];
 
 /** not exported */
 type StringPartToDelimiterCase<
@@ -29,10 +29,10 @@ type StringPartToDelimiterCase<
 > = StringPart extends UsedWordSeparators
   ? Delimiter
   : Start extends true
-  ? Lowercase<StringPart>
-  : StringPart extends UsedUpperCaseCharacters
-  ? `${Delimiter}${Lowercase<StringPart>}`
-  : StringPart;
+    ? Lowercase<StringPart>
+    : StringPart extends UsedUpperCaseCharacters
+      ? `${Delimiter}${Lowercase<StringPart>}`
+      : StringPart;
 
 /** not exported */
 type StringArrayToDelimiterCase<
@@ -56,8 +56,8 @@ type StringArrayToDelimiterCase<
       Delimiter
     >}`
   : Parts extends [string]
-  ? string
-  : '';
+    ? string
+    : '';
 
 type DelimiterCase<Value, Delimiter extends string> = Value extends string
   ? StringArrayToDelimiterCase<

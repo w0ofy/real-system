@@ -2,8 +2,10 @@ import {
   useCheckboxGroup as useAriaCheckboxGroup,
   useCheckboxGroupItem as useAriaCheckboxGroupItem,
 } from '@react-aria/checkbox';
-import type { CheckboxGroupState } from '@react-stately/checkbox';
-import { useCheckboxGroupState as useAriaCheckboxGroupState } from '@react-stately/checkbox';
+import {
+  type CheckboxGroupState,
+  useCheckboxGroupState as useAriaCheckboxGroupState,
+} from '@react-stately/checkbox';
 
 import type {
   AriaCheckboxGroupItemProps,
@@ -68,7 +70,6 @@ const useCheckboxGroupItem: typeof useAriaCheckboxGroupItem = (
   ref
 ) => {
   const restoredProps = restoreCheckboxGroupItemProps(props);
-  console.log(ref);
   return useAriaCheckboxGroupItem(restoredProps, state, ref);
 };
 

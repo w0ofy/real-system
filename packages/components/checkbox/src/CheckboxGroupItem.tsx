@@ -29,28 +29,29 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
     const { children, helpText, value, disabled: disabledProp } = props;
 
     const interactionProps = useInteractions({ disabled: disabledProp });
-    const store = useCheckboxGroupContext();
+    const { canSelectAll, hasError, orientation, state } =
+      useCheckboxGroupContext();
     const internalRef = useRef<HTMLInputElement>(null);
     const mergeRefs = useMergeRefs(internalRef, ref);
-    const { inputProps } = useCheckboxGroupItem(props, store, internalRef);
-    const disabled = store.isDisabled || props.disabled;
-    const isSelected = store.isSelected(value);
+    const { inputProps } = useCheckboxGroupItem(props, state, internalRef);
+    const disabled = state.isDisabled || props.disabled;
+    const isSelected = state.isSelected(value);
 
     const dynamicStyles = useMemo((): FlexProps => {
-      const maybeCanSelectAll = store.canSelectAll ? canSelectAllStyles : {};
+      const maybeCanSelectAll = canSelectAll ? canSelectAllStyles : {};
 
-      if (store.orientation === 'vertical') {
+      if (orientation === 'vertical') {
         return {
           ...maybeCanSelectAll,
           _notLast: { marginBottom: 5 },
-          _notFirst: { marginLeft: store.canSelectAll ? 11 : 4 },
+          _notFirst: { marginLeft: canSelectAll ? 11 : 4 },
         };
       }
       return {
         ...maybeCanSelectAll,
         _notLast: { marginRight: 5 },
       };
-    }, [store.orientation, store.canSelectAll]);
+    }, [orientation, canSelectAll]);
 
     return (
       <CheckboxWrapper
@@ -66,7 +67,7 @@ const CheckboxGroupItem = forwardRef<HTMLInputElement, CheckboxGroupItemProps>(
           disabled={disabled}
           isSelected={isSelected}
           indeterminate={props.indeterminate}
-          isInvalid={store?.hasError}
+          isInvalid={hasError}
           {...interactionProps}
         />
         <CheckboxLabel disabled={disabled}>{children}</CheckboxLabel>

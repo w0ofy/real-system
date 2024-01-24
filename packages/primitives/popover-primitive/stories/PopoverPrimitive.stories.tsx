@@ -25,11 +25,7 @@ const Template = () => {
   const popover = usePopoverStorePrimitive();
   return (
     <>
-      <PopoverDisclosurePrimitive
-        as={Button}
-        variant="fill"
-        colorScheme="blue"
-        store={popover}>
+      <PopoverDisclosurePrimitive render={<Button />} store={popover}>
         Accept invite
       </PopoverDisclosurePrimitive>
       <PopoverPrimitive
