@@ -1,7 +1,6 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
-/** */
 const TEST_THEME = require('./.jest/globals/testTheme');
 
+/** @type {import('ts-jest/dist/types').JestConfigWithTsJest} */
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -18,6 +17,15 @@ module.exports = {
     '<rootDir>/packages/core/',
   ],
   transformIgnorePatterns: ['node_modules/'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)?$': [
+      'ts-jest',
+      {
+        tsconfig: 'tsconfig.json',
+        isolatedModules: true,
+      },
+    ],
+  },
   coverageDirectory: '.jest/coverage',
   coverageReporters: ['html', 'text'],
   coverageThreshold: {
@@ -30,10 +38,6 @@ module.exports = {
   },
   globals: {
     TEST_THEME,
-    'ts-jest': {
-      tsconfig: 'tsconfig.json',
-      isolatedModules: true,
-    },
   },
   watchPlugins: [
     'jest-watch-typeahead/filename',
