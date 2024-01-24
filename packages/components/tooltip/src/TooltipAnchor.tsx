@@ -1,4 +1,4 @@
-import React, { cloneElement, forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 
 import type { TooltipAnchorPrimitiveProps } from '@real-system/tooltip-primitive';
 import { TooltipAnchorPrimitive } from '@real-system/tooltip-primitive';
@@ -10,15 +10,10 @@ type TooltipAnchorProps = TooltipAnchorPrimitiveProps &
   Pick<TooltipProps, 'wrapperElement'>;
 
 const TooltipAnchor = forwardRef<HTMLDivElement, TooltipAnchorProps>(
-  function Tooltip(
-    { children, wrapperElement: El = 'span', ...restProps },
-    ref
-  ) {
-    // create the trigger if children is number, text or element
-
+  function Tooltip({ children, wrapperElement: Wrapper = 'span' }, ref) {
     if (isReactText(children)) {
       return (
-        <TooltipAnchorPrimitive ref={ref} {...restProps} render={<El />}>
+        <TooltipAnchorPrimitive ref={ref} render={<Wrapper />}>
           {children}
         </TooltipAnchorPrimitive>
       );
@@ -26,9 +21,7 @@ const TooltipAnchor = forwardRef<HTMLDivElement, TooltipAnchorProps>(
     return (
       <TooltipAnchorPrimitive
         ref={ref}
-        render={(props) => (
-          <El>{cloneElement(children as React.ReactElement, props)}</El>
-        )}
+        render={children as React.ReactElement}
       />
     );
   }

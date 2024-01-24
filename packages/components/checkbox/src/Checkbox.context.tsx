@@ -6,10 +6,12 @@ import { constate } from '@real-system/state-library';
 import type { ValidationProps } from '@real-system/utils-library';
 
 export type CheckboxGroupContext = {
-  store: AriaCheckboxGroupState & {
+  store: {
+    state: AriaCheckboxGroupState;
     canSelectAll: boolean | undefined;
     orientation: AriaCheckboxGroupProps['orientation'];
-  } & Pick<ValidationProps, 'hasError'>;
+    hasError: ValidationProps['hasError'];
+  };
 };
 
 const useCheckboxGroup = ({ store }: CheckboxGroupContext) => store;
@@ -22,8 +24,8 @@ export const [
   useCheckboxGroupValue,
 ] = constate(
   useCheckboxGroup,
-  (state) => state,
-  (state) => state.isSelected,
-  (state) => state.isDisabled,
-  (state) => state.value
+  (store) => store,
+  ({ state }) => state.isSelected,
+  ({ state }) => state.isDisabled,
+  ({ state }) => state.value
 );

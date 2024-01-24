@@ -17,7 +17,7 @@ const PopoverHeading = forwardRef<HTMLHeadingElement, PopoverHeadingProps>(
   function PopoverHeading({ children, ...restProps }, ref) {
     return (
       <PopoverHeadingPrimitive
-        as={StyledHeading}
+        render={(htmlProps) => <StyledHeading {...htmlProps} {...restProps} />}
         data-testid={makeTestId('popover-heading')}
         {...restProps}
         ref={ref}>

@@ -50,7 +50,6 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
     skipTimeout,
     hideTimeout,
     showTimeout,
-    ...restProps,
   });
   const mounted = store.useState('mounted');
   const isMounted = useMemo(() => !disabled && mounted, [disabled, mounted]);
@@ -73,7 +72,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
               alwaysVisible
               gutter={gutter}
               {...restProps}>
-              {!hideArrow && <TooltipArrowPrimitive />}
+              <TooltipArrowPrimitive size={hideArrow ? 0 : 30} />
               <Text as="span" color="white">
                 {label}
               </Text>

@@ -13,9 +13,8 @@ const PopoverDescription = forwardRef<
 >(function PopoverDescription({ children, ...restProps }, ref) {
   return (
     <PopoverDescriptionPrimitive
-      as={Text}
+      render={(htmlProps) => <Text {...htmlProps} {...restProps} />}
       data-testid={makeTestId('popover-description')}
-      {...restProps}
       ref={ref}>
       {children}
     </PopoverDescriptionPrimitive>

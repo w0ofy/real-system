@@ -1,11 +1,12 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { mergeConfig } from 'vite';
+import { loadEnv, mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
   stories: ['../packages/**/*.stories.@(mdx|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-storysource',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
   ],
@@ -14,22 +15,19 @@ const config: StorybookConfig = {
     disableTelemetry: true,
     builder: '@storybook/builder-vite', // 👈 The builder enabled here.
   },
-  framework: {
-    name: '@storybook/react-vite',
-    options: {},
-  },
+  framework: '@storybook/react-vite',
   docs: {
     autodocs: true,
     defaultName: 'Documentation',
   },
   features: {
-    /** @todo make `true` and fix chunks */
     storyStoreV7: true,
   },
   typescript: {
     check: true,
   },
   async viteFinal(config, _options) {
+    const env = loadEnv(config.mode!, process.cwd(), '');
     return mergeConfig(config, {
       optimizeDeps: {
         include: ['@emotion/react'],
@@ -38,6 +36,7 @@ const config: StorybookConfig = {
         mainFields: ['main', 'module'],
         dedupe: ['@emotion/react'],
       },
+      define: { 'process.env': env },
     });
   },
 };

@@ -43,9 +43,9 @@ const AccordionItems = ({
   const onKeyDown = React.useCallback(
     ({ code }: KeyboardEvent) => {
       if (code === 'ArrowDown' || code === 'ArrowRight')
-        focusManager.focusNext({ wrap: true });
+        focusManager?.focusNext({ wrap: true });
       if (code === 'ArrowUp' || code === 'ArrowLeft')
-        focusManager.focusPrevious({ wrap: true });
+        focusManager?.focusPrevious({ wrap: true });
     },
     [focusManager]
   );

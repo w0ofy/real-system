@@ -18,11 +18,7 @@ const Template = () => {
   const disclosure = useDisclosureStorePrimitive();
   return (
     <div className="wrapper">
-      <DisclosurePrimitive
-        display="inline-flex"
-        store={disclosure}
-        as={Text.Heading}
-        size="h5">
+      <DisclosurePrimitive store={disclosure} render={<Text.Heading />}>
         Info about vegetables <Icon ml={3} icon="chevron-down" />
       </DisclosurePrimitive>
       <DisclosureContentPrimitive store={disclosure}>
