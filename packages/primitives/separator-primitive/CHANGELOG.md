@@ -1,5 +1,14 @@
 # @real-system/separator-primitive
 
+## 0.0.23
+
+### Patch Changes
+
+- [#1128](https://github.com/bigwoof91/real-system/pull/1128) [`9992fc4`](https://github.com/bigwoof91/real-system/commit/9992fc4bf0d86a35ab4e11b82776a501952f6c86) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit, react-aria and fix breaking api's
+
+- Updated dependencies [[`9992fc4`](https://github.com/bigwoof91/real-system/commit/9992fc4bf0d86a35ab4e11b82776a501952f6c86)]:
+  - @real-system/ariakit-library@0.0.28
+
 ## 0.0.22
 
 ### Patch Changes
