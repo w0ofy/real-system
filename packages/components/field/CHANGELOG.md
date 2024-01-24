@@ -1,5 +1,14 @@
 # @real-system/field
 
+## 0.0.41
+
+### Patch Changes
+
+- Updated dependencies [[`5803f943`](https://github.com/bigwoof91/real-system/commit/5803f94371f08912a2bef2513d9783675630efcc)]:
+  - @real-system/styled-library@0.0.24
+  - @real-system/flex@0.0.55
+  - @real-system/typography@0.0.63
+
 ## 0.0.40
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @real-system/ariakit-library
 
+## 0.0.27
+
+### Patch Changes
+
+- [#1092](https://github.com/bigwoof91/real-system/pull/1092) [`5803f943`](https://github.com/bigwoof91/real-system/commit/5803f94371f08912a2bef2513d9783675630efcc) Thanks [@bigwoof91](https://github.com/bigwoof91)! - add SubMenu functionality to Menu
+
 ## 0.0.26
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @real-system/alert
 
+## 0.0.49
+
+### Patch Changes
+
+- Updated dependencies [[`5803f943`](https://github.com/bigwoof91/real-system/commit/5803f94371f08912a2bef2513d9783675630efcc), [`aa445777`](https://github.com/bigwoof91/real-system/commit/aa445777ff680c8b03006de72d217b2df8fdfbe7)]:
+  - @real-system/styled-library@0.0.24
+  - @real-system/utils-library@0.0.36
+  - @real-system/button@0.0.65
+  - @real-system/flex@0.0.55
+  - @real-system/icon@0.0.62
+  - @real-system/typography@0.0.63
+
 ## 0.0.48
 
 ### Patch Changes

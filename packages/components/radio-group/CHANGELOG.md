@@ -1,5 +1,20 @@
 # @real-system/radio-group
 
+## 0.0.43
+
+### Patch Changes
+
+- [#1090](https://github.com/bigwoof91/real-system/pull/1090) [`aa445777`](https://github.com/bigwoof91/real-system/commit/aa445777ff680c8b03006de72d217b2df8fdfbe7) Thanks [@bigwoof91](https://github.com/bigwoof91)! - remove unused useMergeRefs and add truthy check to useReadyRef
+
+- Updated dependencies [[`5803f943`](https://github.com/bigwoof91/real-system/commit/5803f94371f08912a2bef2513d9783675630efcc), [`aa445777`](https://github.com/bigwoof91/real-system/commit/aa445777ff680c8b03006de72d217b2df8fdfbe7)]:
+  - @real-system/ariakit-library@0.0.27
+  - @real-system/styled-library@0.0.24
+  - @real-system/utils-library@0.0.36
+  - @real-system/flex@0.0.55
+  - @real-system/typography@0.0.63
+  - @real-system/visually-hidden@0.0.58
+  - @real-system/elements-primitive@0.0.26
+
 ## 0.0.42
 
 ### Patch Changes
