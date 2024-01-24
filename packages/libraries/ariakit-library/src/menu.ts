@@ -1,4 +1,5 @@
 export type {
+  MenuArrowProps as AriakitMenuArrowProps,
   MenuItemCheckboxProps as AriakitMenuItemCheckboxProps,
   MenuItemProps as AriakitMenuItemProps,
   MenuItemRadioProps as AriakitMenuItemRadioProps,
@@ -7,6 +8,7 @@ export type {
 } from '@ariakit/react/menu';
 export {
   Menu as AriakitMenu,
+  MenuArrow as AriakitMenuArrow,
   MenuButton as AriakitMenuButton,
   MenuGroup as AriakitMenuGroup,
   MenuGroupLabel as AriakitMenuGroupLabel,

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import {
+  MenuArrowPrimitive,
   MenuProviderPrimitive,
   type MenuProviderPrimitiveProps,
   useMenuStorePrimitive,
@@ -45,7 +46,10 @@ function Menu({
     setOpen,
   });
   return (
-    <MenuProviderPrimitive store={store}>{children}</MenuProviderPrimitive>
+    <MenuProviderPrimitive store={store}>
+      <MenuArrowPrimitive size={0} />
+      {children}
+    </MenuProviderPrimitive>
   );
 }
 
