@@ -1,4 +1,5 @@
 export type {
+  AriakitPopoverArrowProps as SelectArrowPrimitiveProps,
   AriakitSelectGroupLabelProps as SelectGroupLabelPrimitiveProps,
   AriakitSelectGroupProps as SelectGroupPrimitiveProps,
   AriakitSelectItemProps as SelectItemPrimitiveProps,
@@ -7,6 +8,7 @@ export type {
   AriakitSelectSeparatorProps as SelectSeparatorPrimitiveProps,
 } from '@real-system/ariakit-library';
 export {
+  AriakitPopoverArrow as SelectArrowPrimitive,
   AriakitSelectGroupLabel as SelectGroupLabelPrimitive,
   AriakitSelectGroup as SelectGroupPrimitive,
   AriakitSelectItem as SelectItemPrimitive,

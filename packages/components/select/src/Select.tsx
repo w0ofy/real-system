@@ -13,13 +13,11 @@ import { selectStyles } from './Select.style';
 import { SelectGroup } from './SelectGroup';
 import { SelectItem } from './SelectItem';
 import { SelectPopover } from './SelectPopover';
-import { SelectSeparator } from './SelectSeparator';
 import type { SelectProps } from './types';
 
 export interface SelectComponent
   extends React.ForwardRefExoticComponent<SelectProps> {
   Item: typeof SelectItem;
-  Separator: typeof SelectSeparator;
   Group: typeof SelectGroup;
 }
 
@@ -61,24 +59,21 @@ const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
           placement={placement}
           setValue={onChange}
           setOpen={setOpen}
-          animated
           value={value}
           defaultValue={defaultValue}
           open={open}>
-          <>
-            <SelectLabelPrimitive
-              render={
-                <Text.Label as="span" required={required} disabled={disabled} />
-              }>
-              {label}
-            </SelectLabelPrimitive>
-            <SelectPrimitive
-              render={<real.button {...styles} />}
-              disabled={disabled}
-              ref={ref}
-            />
-            <SelectPopover>{children as React.ReactNode}</SelectPopover>
-          </>
+          <SelectLabelPrimitive
+            render={
+              <Text.Label as="span" required={required} disabled={disabled} />
+            }>
+            {label}
+          </SelectLabelPrimitive>
+          <SelectPrimitive
+            render={<real.button {...styles} />}
+            disabled={disabled}
+            ref={ref}
+          />
+          <SelectPopover>{children as React.ReactNode}</SelectPopover>
         </SelectProviderPrimitive>
       </real.div>
     );
@@ -86,7 +81,6 @@ const Select: SelectComponent = forwardRef<HTMLButtonElement, SelectProps>(
 );
 
 Select.Item = SelectItem;
-Select.Separator = SelectSeparator;
 Select.Group = SelectGroup;
 
 export type { SelectProps };

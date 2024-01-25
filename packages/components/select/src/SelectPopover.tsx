@@ -2,7 +2,10 @@ import React from 'react';
 
 import { real } from '@real-system/elements-primitive';
 import type { SelectPopoverPrimitiveProps } from '@real-system/select-primitive';
-import { SelectPopoverPrimitive } from '@real-system/select-primitive';
+import {
+  SelectArrowPrimitive,
+  SelectPopoverPrimitive,
+} from '@real-system/select-primitive';
 
 import type { OmitSelectPrivateProps } from './types';
 
@@ -38,6 +41,7 @@ const SelectPopover = ({
         />
       }
       {...restProps}>
+      <SelectArrowPrimitive size={0} />
       {children}
     </SelectPopoverPrimitive>
   );
