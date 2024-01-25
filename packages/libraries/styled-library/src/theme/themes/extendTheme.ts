@@ -1,13 +1,11 @@
 import { merge } from '@real-system/utils-library';
 
-import type { ThemeColors } from '../tokens';
-
 import { themes } from './config';
 import type { ExtendableThemeShape, ThemeShape } from './makeTheme';
 
 type Overrides =
   | ExtendableThemeShape
-  | ((colors: ThemeColors) => ExtendableThemeShape);
+  | ((colors: ThemeShape) => ExtendableThemeShape);
 
 type ThemeNames = keyof typeof themes;
 type InitialTheme = ThemeNames | ThemeShape;
@@ -24,7 +22,7 @@ const extendTheme = (theme: InitialTheme, overrides: Overrides) => {
   const initialTheme = getInitialTheme(theme);
 
   if (typeof overrides === 'function') {
-    return merge(initialTheme, overrides(initialTheme.colors));
+    return merge(initialTheme, overrides(initialTheme));
   }
   return merge(initialTheme, overrides);
 };
