@@ -1,5 +1,4 @@
 export type {
-  SelectArrowProps as AriakitSelectArrowProps,
   SelectGroupLabelProps as AriakitSelectGroupLabelProps,
   SelectGroupProps as AriakitSelectGroupProps,
   SelectItemProps as AriakitSelectItemProps,
@@ -10,7 +9,6 @@ export type {
 } from '@ariakit/react/select';
 export {
   Select as AriakitSelect,
-  SelectArrow as AriakitSelectArrow,
   SelectGroup as AriakitSelectGroup,
   SelectGroupLabel as AriakitSelectGroupLabel,
   SelectItem as AriakitSelectItem,

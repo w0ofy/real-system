@@ -1,0 +1,26 @@
+diff --git a/cjs/__chunks/ID5QP4WT.cjs b/cjs/__chunks/ID5QP4WT.cjs
+index 5cd4886b760de45bde68278d843930168e841054..64198a8eae1008003be774f9cf4104c53d201b59 100644
+--- a/cjs/__chunks/ID5QP4WT.cjs
++++ b/cjs/__chunks/ID5QP4WT.cjs
+@@ -237,7 +237,7 @@ var usePopover = _Q67LZMDTcjs.createHook.call(void 0,
+             fitViewport,
+             overflowPadding
+           })
+-        ];
++        ].filter(Boolean);
+         const pos = await _dom.computePosition.call(void 0, anchor, popoverElement, {
+           placement,
+           strategy: fixed ? "fixed" : "absolute",
+diff --git a/esm/__chunks/KMWSQ7OZ.js b/esm/__chunks/KMWSQ7OZ.js
+index 36701588d8c1062b5cdcf929a5d89d7c0572e42c..7add8ee37f203847f566a1cd6ed4b8a5bdf59af9 100644
+--- a/esm/__chunks/KMWSQ7OZ.js
++++ b/esm/__chunks/KMWSQ7OZ.js
+@@ -237,7 +237,7 @@ var usePopover = createHook(
+             fitViewport,
+             overflowPadding
+           })
+-        ];
++        ].filter(Boolean);
+         const pos = await computePosition(anchor, popoverElement, {
+           placement,
+           strategy: fixed ? "fixed" : "absolute",

@@ -1,5 +1,4 @@
 export type {
-  AriakitMenuArrowProps as MenuArrowPrimitiveProps,
   AriakitMenuItemCheckboxProps as MenuItemCheckboxPrimitiveProps,
   AriakitMenuItemProps as MenuItemPrimitiveProps,
   AriakitMenuItemRadioProps as MenuItemRadioPrimitiveProps,
@@ -7,7 +6,6 @@ export type {
   AriakitMenuSeparatorProps as MenuSeparatorPrimitiveProps,
 } from '@real-system/ariakit-library';
 export {
-  AriakitMenuArrow as MenuArrowPrimitive,
   AriakitMenuButton as MenuButtonPrimitive,
   AriakitMenuGroupLabel as MenuGroupLabelPrimitive,
   AriakitMenuGroup as MenuGroupPrimitive,
