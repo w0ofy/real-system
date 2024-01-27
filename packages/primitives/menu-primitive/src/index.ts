@@ -16,4 +16,6 @@ export {
   AriakitMenu as MenuPrimitive,
   AriakitMenuProvider as MenuProviderPrimitive,
   AriakitMenuSeparator as MenuSeparatorPrimitive,
+  useAriakitMenuContext as useMenuContextPrimitive,
+  useAriakitMenuStore as useMenuStorePrimitive,
 } from '@real-system/ariakit-library';

@@ -1,6 +1,6 @@
 {
   "name": "@real-system/dialog-primitive",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "Dialog primitive components for real system.",
   "status": "production",
   "main": "src/index.ts",
@@ -38,7 +38,7 @@
     "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@reach/dialog": "^0.18.0"

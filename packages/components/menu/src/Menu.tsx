@@ -3,6 +3,7 @@ import * as React from 'react';
 import {
   MenuProviderPrimitive,
   type MenuProviderPrimitiveProps,
+  useMenuStorePrimitive,
 } from '@real-system/menu-primitive';
 
 import { MenuGroup } from './MenuGroup/index';
@@ -35,16 +36,16 @@ function Menu({
   onSelect,
   setOpen,
 }: MenuProps) {
+  const store = useMenuStorePrimitive({
+    placement,
+    open,
+    values,
+    defaultValues,
+    setValues: onSelect,
+    setOpen,
+  });
   return (
-    <MenuProviderPrimitive
-      placement={placement}
-      open={open}
-      setOpen={setOpen}
-      values={values}
-      setValues={onSelect}
-      defaultValues={defaultValues}>
-      {children}
-    </MenuProviderPrimitive>
+    <MenuProviderPrimitive store={store}>{children}</MenuProviderPrimitive>
   );
 }
 

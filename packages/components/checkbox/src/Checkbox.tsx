@@ -23,12 +23,12 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const interactionProps = useInteractions({ disabled: props.disabled });
     const state = useToggleState(props);
     const internalRef = useRef<HTMLInputElement>(null);
-    const mergedRef = useMergeRefs(internalRef, ref);
+    const mergeRefs = useMergeRefs(internalRef, ref);
 
     const { inputProps } = useCheckbox(
       props as AriaCheckboxProps,
       state,
-      mergedRef as unknown as React.RefObject<HTMLInputElement>
+      internalRef
     );
 
     const { hasError, helpText, required, disabled, indeterminate, children } =
@@ -41,7 +41,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         hasError={hasError}
         {...interactionProps}>
         <VisuallyHidden>
-          <input {...inputProps} ref={mergedRef} />
+          <input {...inputProps} ref={mergeRefs} />
         </VisuallyHidden>
         <CheckboxControl
           disabled={disabled}

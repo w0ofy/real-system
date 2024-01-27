@@ -1,6 +1,6 @@
 {
   "name": "@real-system/styled-library",
-  "version": "0.0.23",
+  "version": "0.0.25",
   "description": "Styled system for real system.",
   "status": "production",
   "main": "src/index.ts",
@@ -30,25 +30,25 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/utils-library": "^0.0.35",
+    "@real-system/utils-library": "^0.0.37",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",
     "@emotion/memoize": "^0.8.1",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@emotion/use-insertion-effect-with-fallbacks": "^1.0.1",
     "polished": "^4.2.2"
   },
   "devDependencies": {
-    "@real-system/utils-library": "^0.0.35",
+    "@real-system/utils-library": "^0.0.37",
     "clean-package": "^2.2.0",
     "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "files": [
     "lib"

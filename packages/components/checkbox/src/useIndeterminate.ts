@@ -39,8 +39,8 @@ const useIndeterminate = <V extends string, A extends string>({
         indeterminateWithoutValueSelected
           ? emptyValues
           : value.length
-          ? setValues(value)
-          : value
+            ? setValues(value)
+            : value
       );
     },
     [indeterminateValue, setCheckedItems, setValues]
@@ -51,8 +51,8 @@ const useIndeterminate = <V extends string, A extends string>({
         indeterminate
           ? setValues(values)
           : value
-          ? setValues(values)
-          : emptyValues
+            ? setValues(values)
+            : emptyValues
       ),
     [indeterminate, setCheckedItems, values, setValues]
   );

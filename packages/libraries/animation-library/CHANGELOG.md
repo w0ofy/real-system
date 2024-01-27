@@ -1,5 +1,11 @@
 # @real-system/animation
 
+## 0.0.25
+
+### Patch Changes
+
+- [#1128](https://github.com/bigwoof91/real-system/pull/1128) [`9992fc4`](https://github.com/bigwoof91/real-system/commit/9992fc4bf0d86a35ab4e11b82776a501952f6c86) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit, react-aria and fix breaking api's
+
 ## 0.0.24
 
 ### Patch Changes

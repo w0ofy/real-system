@@ -32,6 +32,7 @@ function assignRef<T = any>(ref: ReactRef<T> | null | undefined, value: T) {
 function mergeRefs<T>(...refs: (ReactRef<T> | null | undefined)[]) {
   return (node: T | null) => {
     refs.forEach((ref) => {
+      console.log('ref', ref);
       assignRef(ref, node);
     });
   };

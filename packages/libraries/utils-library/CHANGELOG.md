@@ -1,5 +1,17 @@
 # @real-system/utils
 
+## 0.0.37
+
+### Patch Changes
+
+- [#1128](https://github.com/bigwoof91/real-system/pull/1128) [`9992fc4`](https://github.com/bigwoof91/real-system/commit/9992fc4bf0d86a35ab4e11b82776a501952f6c86) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit, react-aria and fix breaking api's
+
+## 0.0.36
+
+### Patch Changes
+
+- [#1090](https://github.com/bigwoof91/real-system/pull/1090) [`aa445777`](https://github.com/bigwoof91/real-system/commit/aa445777ff680c8b03006de72d217b2df8fdfbe7) Thanks [@bigwoof91](https://github.com/bigwoof91)! - remove unused useMergeRefs and add truthy check to useReadyRef
+
 ## 0.0.35
 
 ### Patch Changes

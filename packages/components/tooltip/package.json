@@ -1,6 +1,6 @@
 {
   "name": "@real-system/tooltip",
-  "version": "0.0.40",
+  "version": "0.0.42",
   "description": "Tooltip component for real system.",
   "status": "production",
   "main": "src/index.ts",
@@ -30,25 +30,25 @@
   },
   "homepage": "https://github.com/bigwoof91/real-system#readme",
   "peerDependencies": {
-    "@real-system/animation-library": "^0.0.24",
-    "@real-system/styled-library": "^0.0.23",
-    "@real-system/tooltip-primitive": "^0.0.21",
-    "@real-system/typography": "^0.0.62",
-    "@real-system/utils-library": "^0.0.35",
+    "@real-system/animation-library": "^0.0.25",
+    "@real-system/styled-library": "^0.0.25",
+    "@real-system/tooltip-primitive": "^0.0.23",
+    "@real-system/typography": "^0.0.64",
+    "@real-system/utils-library": "^0.0.37",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@real-system/animation-library": "^0.0.24",
-    "@real-system/styled-library": "^0.0.23",
-    "@real-system/tooltip-primitive": "^0.0.21",
-    "@real-system/typography": "^0.0.62",
-    "@real-system/utils-library": "^0.0.35",
+    "@real-system/animation-library": "^0.0.25",
+    "@real-system/styled-library": "^0.0.25",
+    "@real-system/tooltip-primitive": "^0.0.23",
+    "@real-system/typography": "^0.0.64",
+    "@real-system/utils-library": "^0.0.37",
     "clean-package": "^2.2.0",
     "concurrently": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "files": [
     "lib"

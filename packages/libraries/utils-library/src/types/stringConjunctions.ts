@@ -20,10 +20,8 @@ type AddSuffix<TKey, TSuffix extends string> = TKey extends string
 /**
  * @description remove a prefix to a string type
  */
-type RemovePrefix<
-  TPrefixedKey,
-  TPrefix extends string,
-> = TPrefixedKey extends AddPrefix<infer TKey, TPrefix> ? TKey : '';
+type RemovePrefix<TPrefixedKey, TPrefix extends string> =
+  TPrefixedKey extends AddPrefix<infer TKey, TPrefix> ? TKey : '';
 /**
  * @description get the prefixed value in a string type
  */

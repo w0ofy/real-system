@@ -12,12 +12,12 @@ const MenuGroupLabel = ({ children, ...restProps }: MenuGroupLabelProps) => {
     <MenuGroupLabelPrimitive
       render={
         <real.div
-          fontScale="label"
-          fontWeight="bold"
-          letterSpacing="label"
+          fontScale="group-label"
+          fontWeight="group-label"
+          letterSpacing="group-label"
           color="gray-500"
           margin={0}
-          marginLeft={7}
+          paddingX={8}
           marginBottom={4}
           cursor="text"
         />

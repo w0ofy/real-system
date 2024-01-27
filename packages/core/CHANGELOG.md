@@ -1,5 +1,105 @@
 # @real-system/core
 
+## 0.0.69
+
+### Patch Changes
+
+- [#1128](https://github.com/bigwoof91/real-system/pull/1128) [`9992fc4`](https://github.com/bigwoof91/real-system/commit/9992fc4bf0d86a35ab4e11b82776a501952f6c86) Thanks [@bigwoof91](https://github.com/bigwoof91)! - upgrade ariakit, react-aria and fix breaking api's
+
+- Updated dependencies [[`9992fc4`](https://github.com/bigwoof91/real-system/commit/9992fc4bf0d86a35ab4e11b82776a501952f6c86)]:
+  - @real-system/disclosure-primitive@0.0.17
+  - @real-system/separator-primitive@0.0.23
+  - @real-system/descendants-library@0.0.20
+  - @real-system/elements-primitive@0.0.27
+  - @real-system/popover-primitive@0.0.23
+  - @real-system/tooltip-primitive@0.0.23
+  - @real-system/animation-library@0.0.25
+  - @real-system/button-primitive@0.0.49
+  - @real-system/dialog-primitive@0.0.36
+  - @real-system/portal-primitive@0.0.24
+  - @real-system/select-primitive@0.0.23
+  - @real-system/visually-hidden@0.0.59
+  - @real-system/alert-primitive@0.0.24
+  - @real-system/ariakit-library@0.0.28
+  - @real-system/menu-primitive@0.0.23
+  - @real-system/styled-library@0.0.25
+  - @real-system/aspect-ratio@0.0.35
+  - @real-system/state-library@0.0.24
+  - @real-system/utils-library@0.0.37
+  - @real-system/radio-group@0.0.44
+  - @real-system/a11y-library@0.0.20
+  - @real-system/disclosure@0.0.21
+  - @real-system/typography@0.0.64
+  - @real-system/accordion@0.0.21
+  - @real-system/pin-input@0.0.29
+  - @real-system/separator@0.0.33
+  - @real-system/checkbox@0.0.50
+  - @real-system/textarea@0.0.47
+  - @real-system/popover@0.0.41
+  - @real-system/spinner@0.0.61
+  - @real-system/toaster@0.0.49
+  - @real-system/tooltip@0.0.42
+  - @real-system/button@0.0.66
+  - @real-system/dialog@0.0.58
+  - @real-system/select@0.0.32
+  - @real-system/switch@0.0.9
+  - @real-system/alert@0.0.50
+  - @real-system/badge@0.0.33
+  - @real-system/field@0.0.42
+  - @real-system/input@0.0.63
+  - @real-system/stack@0.0.23
+  - @real-system/flex@0.0.56
+  - @real-system/icon@0.0.63
+  - @real-system/link@0.0.34
+  - @real-system/menu@0.0.37
+  - @real-system/box@0.0.37
+
+## 0.0.68
+
+### Patch Changes
+
+- Updated dependencies [[`5803f943`](https://github.com/bigwoof91/real-system/commit/5803f94371f08912a2bef2513d9783675630efcc), [`aa445777`](https://github.com/bigwoof91/real-system/commit/aa445777ff680c8b03006de72d217b2df8fdfbe7)]:
+  - @real-system/ariakit-library@0.0.27
+  - @real-system/menu-primitive@0.0.22
+  - @real-system/styled-library@0.0.24
+  - @real-system/select@0.0.31
+  - @real-system/menu@0.0.36
+  - @real-system/utils-library@0.0.36
+  - @real-system/radio-group@0.0.43
+  - @real-system/switch@0.0.8
+  - @real-system/button-primitive@0.0.48
+  - @real-system/disclosure-primitive@0.0.16
+  - @real-system/popover-primitive@0.0.22
+  - @real-system/select-primitive@0.0.22
+  - @real-system/separator-primitive@0.0.22
+  - @real-system/tooltip-primitive@0.0.22
+  - @real-system/accordion@0.0.20
+  - @real-system/alert@0.0.49
+  - @real-system/aspect-ratio@0.0.34
+  - @real-system/badge@0.0.32
+  - @real-system/box@0.0.36
+  - @real-system/button@0.0.65
+  - @real-system/checkbox@0.0.49
+  - @real-system/dialog@0.0.57
+  - @real-system/disclosure@0.0.20
+  - @real-system/field@0.0.41
+  - @real-system/flex@0.0.55
+  - @real-system/icon@0.0.62
+  - @real-system/input@0.0.62
+  - @real-system/link@0.0.33
+  - @real-system/pin-input@0.0.28
+  - @real-system/popover@0.0.40
+  - @real-system/separator@0.0.32
+  - @real-system/spinner@0.0.60
+  - @real-system/stack@0.0.22
+  - @real-system/textarea@0.0.46
+  - @real-system/toaster@0.0.48
+  - @real-system/tooltip@0.0.41
+  - @real-system/typography@0.0.63
+  - @real-system/visually-hidden@0.0.58
+  - @real-system/elements-primitive@0.0.26
+  - @real-system/descendants-library@0.0.19
+
 ## 0.0.67
 
 ### Patch Changes

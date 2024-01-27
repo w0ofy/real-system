@@ -4,6 +4,7 @@ import type { Meta } from '@storybook/react';
 import { Box } from '@real-system/box';
 import { Button } from '@real-system/button';
 import { Tooltip } from '@real-system/tooltip';
+import { Text } from '@real-system/typography';
 
 export default {
   title: 'Components/Tooltip',
@@ -30,6 +31,8 @@ export const Default = (args) => (
 
 export const TextAsTrigger = (args) => (
   <Box padding={20}>
-    <Tooltip {...args}>Hover me</Tooltip>
+    <Tooltip {...args}>
+      <Text as="span">Hover me</Text>
+    </Tooltip>
   </Box>
 );

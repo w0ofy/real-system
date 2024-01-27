@@ -20,9 +20,9 @@ const SelectGroupLabel = ({
   return (
     <StyledGroupLabel
       data-testid={makeTestId('select-group')}
-      fontScale="label"
-      fontWeight="label"
-      letterSpacing="body"
+      fontScale="group-label"
+      fontWeight="group-label"
+      letterSpacing="group-label"
       color="gray-500"
       m={0}
       ml={7}

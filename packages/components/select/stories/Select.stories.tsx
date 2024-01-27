@@ -27,7 +27,6 @@ export const SelectGroupStory = (_args) => {
         <Select.Item value="Grape" disabled />
         <Select.Item value="Melon" />
       </Select.Group>
-      <Select.Separator />
       <Select.Group>
         <Select.Group.Label>Vegatables</Select.Group.Label>
         <Select.Item value="Cucumber" />

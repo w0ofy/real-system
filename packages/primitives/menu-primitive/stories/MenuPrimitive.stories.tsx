@@ -23,7 +23,7 @@ const itemStyles = { padding: '8px', cursor: 'pointer', width: '100%' };
 const Template = () => {
   return (
     <MenuProviderPrimitive>
-      <MenuButtonPrimitive as={Button}>Actions</MenuButtonPrimitive>
+      <MenuButtonPrimitive render={<Button />}>Actions</MenuButtonPrimitive>
       <MenuPrimitive
         style={{
           display: 'flex',
