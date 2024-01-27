@@ -1,5 +1,51 @@
 # @real-system/core
 
+## 0.0.70
+
+### Patch Changes
+
+- [#1131](https://github.com/bigwoof91/real-system/pull/1131) [`38fd456`](https://github.com/bigwoof91/real-system/commit/38fd456c059bb24bec8a1988cc29ac3b467bc00d) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Fix popover placement bug; caused when a popover arrow is not mounted
+
+- Updated dependencies [[`38fd456`](https://github.com/bigwoof91/real-system/commit/38fd456c059bb24bec8a1988cc29ac3b467bc00d)]:
+  - @real-system/ariakit-library@0.0.29
+  - @real-system/menu-primitive@0.0.24
+  - @real-system/styled-library@0.0.26
+  - @real-system/popover@0.0.42
+  - @real-system/tooltip@0.0.43
+  - @real-system/select@0.0.33
+  - @real-system/menu@0.0.38
+  - @real-system/radio-group@0.0.45
+  - @real-system/switch@0.0.10
+  - @real-system/button-primitive@0.0.50
+  - @real-system/disclosure-primitive@0.0.18
+  - @real-system/popover-primitive@0.0.24
+  - @real-system/select-primitive@0.0.24
+  - @real-system/separator-primitive@0.0.24
+  - @real-system/tooltip-primitive@0.0.24
+  - @real-system/accordion@0.0.22
+  - @real-system/alert@0.0.51
+  - @real-system/aspect-ratio@0.0.36
+  - @real-system/badge@0.0.34
+  - @real-system/box@0.0.38
+  - @real-system/button@0.0.67
+  - @real-system/checkbox@0.0.51
+  - @real-system/dialog@0.0.59
+  - @real-system/disclosure@0.0.22
+  - @real-system/field@0.0.43
+  - @real-system/flex@0.0.57
+  - @real-system/icon@0.0.64
+  - @real-system/input@0.0.64
+  - @real-system/link@0.0.35
+  - @real-system/pin-input@0.0.30
+  - @real-system/separator@0.0.34
+  - @real-system/spinner@0.0.62
+  - @real-system/stack@0.0.24
+  - @real-system/textarea@0.0.48
+  - @real-system/toaster@0.0.50
+  - @real-system/typography@0.0.65
+  - @real-system/visually-hidden@0.0.60
+  - @real-system/elements-primitive@0.0.28
+
 ## 0.0.69
 
 ### Patch Changes

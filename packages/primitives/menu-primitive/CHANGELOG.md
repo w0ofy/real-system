@@ -1,5 +1,14 @@
 # @real-system/menu-primitive
 
+## 0.0.24
+
+### Patch Changes
+
+- [#1131](https://github.com/bigwoof91/real-system/pull/1131) [`38fd456`](https://github.com/bigwoof91/real-system/commit/38fd456c059bb24bec8a1988cc29ac3b467bc00d) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Fix popover placement bug; caused when a popover arrow is not mounted
+
+- Updated dependencies [[`38fd456`](https://github.com/bigwoof91/real-system/commit/38fd456c059bb24bec8a1988cc29ac3b467bc00d)]:
+  - @real-system/ariakit-library@0.0.29
+
 ## 0.0.23
 
 ### Patch Changes

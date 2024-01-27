@@ -1,6 +1,6 @@
 {
   "name": "@real-system/styled-library",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Styled system for real system.",
   "status": "production",
   "main": "src/index.ts",
