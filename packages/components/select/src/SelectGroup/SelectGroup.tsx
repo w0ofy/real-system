@@ -13,7 +13,12 @@ import { SelectGroupLabel } from './SelectGroupLabel';
 type SelectGroupProps = OmitSelectPrivateProps<SelectGroupPrimitiveProps> &
   StylishProps;
 
-const StyledSelectGroup = styled(SelectGroupPrimitive)<SelectGroupProps>({});
+const StyledSelectGroup = styled(SelectGroupPrimitive)<SelectGroupProps>({
+  _firstAndNotOnly: {
+    borderBottom: 'weak',
+    paddingBottom: 3,
+  },
+});
 
 export interface SelectGroupComponent
   extends React.ForwardRefExoticComponent<SelectGroupProps> {

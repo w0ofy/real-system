@@ -1,8 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Only run commitizen if no commit message was already provided
 if [ -z "${2-}" ]; then
     # By default git hooks are not interactive. exec < /dev/tty allows a users terminal to interact with commitizen
-    exec < /dev/tty && pnpm commit --hook || true
+    exec < /dev/tty && yarn commit --hook || true
 fi

@@ -4,4 +4,3 @@ export type {
   SelectGroupProps,
 } from './SelectGroup/index';
 export type { SelectItemProps } from './SelectItem';
-export type { SelectSeparatorProps } from './SelectSeparator';

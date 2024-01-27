@@ -1,6 +1,7 @@
 export {
   Popover as AriakitPopover,
   PopoverArrow as AriakitPopoverArrow,
+  type PopoverArrowProps as AriakitPopoverArrowProps,
   PopoverDescription as AriakitPopoverDescription,
   PopoverDisclosure as AriakitPopoverDisclosure,
   type PopoverDisclosureProps as AriakitPopoverDisclosureProps,

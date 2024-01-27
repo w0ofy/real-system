@@ -72,7 +72,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
               alwaysVisible
               gutter={gutter}
               {...restProps}>
-              <TooltipArrowPrimitive size={hideArrow ? 0 : 30} />
+              {hideArrow ? null : <TooltipArrowPrimitive />}
               <Text as="span" color="white">
                 {label}
               </Text>
