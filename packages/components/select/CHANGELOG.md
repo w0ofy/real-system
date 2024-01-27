@@ -1,5 +1,17 @@
 # @real-system/select
 
+## 0.0.33
+
+### Patch Changes
+
+- [#1131](https://github.com/bigwoof91/real-system/pull/1131) [`38fd456`](https://github.com/bigwoof91/real-system/commit/38fd456c059bb24bec8a1988cc29ac3b467bc00d) Thanks [@bigwoof91](https://github.com/bigwoof91)! - Fix popover placement bug; caused when a popover arrow is not mounted
+
+- Updated dependencies [[`38fd456`](https://github.com/bigwoof91/real-system/commit/38fd456c059bb24bec8a1988cc29ac3b467bc00d)]:
+  - @real-system/styled-library@0.0.26
+  - @real-system/select-primitive@0.0.24
+  - @real-system/typography@0.0.65
+  - @real-system/elements-primitive@0.0.28
+
 ## 0.0.32
 
 ### Patch Changes
