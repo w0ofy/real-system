@@ -1,5 +1,17 @@
 # @real-system/radio-group
 
+## 0.0.46
+
+### Patch Changes
+
+- Updated dependencies [[`b8c1603`](https://github.com/bigwoof91/real-system/commit/b8c1603a2a6e1315611bc8d62bdadd7ae3fae66c)]:
+  - @real-system/ariakit-library@0.0.30
+  - @real-system/styled-library@0.0.27
+  - @real-system/flex@0.0.58
+  - @real-system/typography@0.0.66
+  - @real-system/visually-hidden@0.0.61
+  - @real-system/elements-primitive@0.0.29
+
 ## 0.0.45
 
 ### Patch Changes
