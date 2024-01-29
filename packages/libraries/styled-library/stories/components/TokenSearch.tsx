@@ -42,7 +42,6 @@ const TokenSearch = ({ scale }: { scale: ThemeScales }) => {
       <Box display="block" marginBottom={10} width="25rem">
         <Input
           type="text"
-          // @ts-ignore
           prefix={<Icon icon="search" />}
           placeholder="filter by name"
           onChange={debouncedSearchHandler}
