@@ -39,50 +39,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ariakit/core@npm:0.4.0":
-  version: 0.4.0
-  resolution: "@ariakit/core@npm:0.4.0"
-  checksum: ef34178875d9a0ecce6e0f6d6186f7b673354986e5288e8918b487e6202a807fe2bf91ad62b8a4180487856374c284104d5c44aed96166722bc698e94de23f21
+"@ariakit/core@npm:0.4.1":
+  version: 0.4.1
+  resolution: "@ariakit/core@npm:0.4.1"
+  checksum: 7e0be49464c6562d3470335915f083a896527d01841ec9022c05be38a68cda27622976a5bd033447313561532f526317223e273712d3e214c933515a0ea908c3
   languageName: node
   linkType: hard
 
-"@ariakit/react-core@npm:0.4.0":
-  version: 0.4.0
-  resolution: "@ariakit/react-core@npm:0.4.0"
+"@ariakit/react-core@npm:0.4.1":
+  version: 0.4.1
+  resolution: "@ariakit/react-core@npm:0.4.1"
   dependencies:
-    "@ariakit/core": 0.4.0
+    "@ariakit/core": 0.4.1
     "@floating-ui/dom": ^1.0.0
     use-sync-external-store: ^1.2.0
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: f9a6820675e059578e6766fdc725cbe7008a3829c8dba42ca50c358855c9453bdc02c97a2cd18799b49a223cbf7d5b947622ec11cd0a5b4546cc5e6c86a298ff
+  checksum: 267962e9e25ec9fdb5930eca734cb3a264b10c119b00d14037b315a43abfc528dba0a180fe86002381fc1b8ff0b3d9104d9f843924be827b83997f8cff80e2a6
   languageName: node
   linkType: hard
 
-"@ariakit/react-core@patch:@ariakit/react-core@npm%3A0.4.0#./.yarn/patches/@ariakit-react-core-npm-0.4.0-09b9e9aaa6.patch::locator=real-system%40workspace%3A.":
-  version: 0.4.0
-  resolution: "@ariakit/react-core@patch:@ariakit/react-core@npm%3A0.4.0#./.yarn/patches/@ariakit-react-core-npm-0.4.0-09b9e9aaa6.patch::version=0.4.0&hash=acb1f4&locator=real-system%40workspace%3A."
+"@ariakit/react@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@ariakit/react@npm:0.4.1"
   dependencies:
-    "@ariakit/core": 0.4.0
-    "@floating-ui/dom": ^1.0.0
-    use-sync-external-store: ^1.2.0
+    "@ariakit/react-core": 0.4.1
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 9c3dcfb91731caf574a36b0482ce86d3b75116100d77531b8e5132507a03f50d32e15ab3a8df4ce6c79e490244ebd409f77c888fb6e31380ee27ed3ff4745c2d
-  languageName: node
-  linkType: hard
-
-"@ariakit/react@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@ariakit/react@npm:0.4.0"
-  dependencies:
-    "@ariakit/react-core": 0.4.0
-  peerDependencies:
-    react: ^17.0.0 || ^18.0.0
-    react-dom: ^17.0.0 || ^18.0.0
-  checksum: c03ccafbf97bcf1362191085baa3166666911e86718e8a62ab34c4b3bb3393c7f4be4308d62a1099c98f06ad45232caf2ed65b43849dad1b3b250a8e5853243b
+  checksum: 92a72680ac66e119f917cde78a687de3b7f7cdc56827231e3ecf463bb33e5d4f1482eeb79315b82ac28b71ea5bc1b34aef878d098edf909182b4351b9f774eea
   languageName: node
   linkType: hard
 
@@ -7682,7 +7668,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/ariakit-library@workspace:packages/libraries/ariakit-library"
   dependencies:
-    "@ariakit/react": ^0.4.0
+    "@ariakit/react": ^0.4.1
     clean-package: ^2.2.0
     concurrently: ^8.2.2
     react: ^18.2.0
