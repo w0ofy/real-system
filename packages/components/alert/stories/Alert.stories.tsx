@@ -46,13 +46,8 @@ export const DismissableAlert = (args) => (
 export const InlineAlert = (args) => (
   <Box width="40rem">
     <Text.Heading as="h4">Short text</Text.Heading>
-    <RealInlineAlert {...args} marginBottom={8}>
-      There are over 5000 integrations available
-    </RealInlineAlert>
+    <RealInlineAlert {...args} marginBottom={8} />
     <Text.Heading as="h4">Long text</Text.Heading>
-    <RealInlineAlert {...args}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dod eiusmod
-      tempor incididunt ut labore et dolore magna aliqua
-    </RealInlineAlert>
+    <RealInlineAlert {...args} />
   </Box>
 );
