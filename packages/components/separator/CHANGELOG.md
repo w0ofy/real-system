@@ -1,5 +1,14 @@
 # @real-system/separator
 
+## 0.0.35
+
+### Patch Changes
+
+- Updated dependencies [[`b8c1603`](https://github.com/bigwoof91/real-system/commit/b8c1603a2a6e1315611bc8d62bdadd7ae3fae66c)]:
+  - @real-system/styled-library@0.0.27
+  - @real-system/separator-primitive@0.0.25
+  - @real-system/elements-primitive@0.0.29
+
 ## 0.0.34
 
 ### Patch Changes

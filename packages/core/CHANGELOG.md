@@ -1,5 +1,49 @@
 # @real-system/core
 
+## 0.0.71
+
+### Patch Changes
+
+- Updated dependencies [[`b8c1603`](https://github.com/bigwoof91/real-system/commit/b8c1603a2a6e1315611bc8d62bdadd7ae3fae66c)]:
+  - @real-system/ariakit-library@0.0.30
+  - @real-system/styled-library@0.0.27
+  - @real-system/radio-group@0.0.46
+  - @real-system/switch@0.0.11
+  - @real-system/button-primitive@0.0.51
+  - @real-system/disclosure-primitive@0.0.19
+  - @real-system/menu-primitive@0.0.25
+  - @real-system/popover-primitive@0.0.25
+  - @real-system/select-primitive@0.0.25
+  - @real-system/separator-primitive@0.0.25
+  - @real-system/tooltip-primitive@0.0.25
+  - @real-system/accordion@0.0.23
+  - @real-system/alert@0.0.52
+  - @real-system/aspect-ratio@0.0.37
+  - @real-system/badge@0.0.35
+  - @real-system/box@0.0.39
+  - @real-system/button@0.0.68
+  - @real-system/checkbox@0.0.52
+  - @real-system/dialog@0.0.60
+  - @real-system/disclosure@0.0.23
+  - @real-system/field@0.0.44
+  - @real-system/flex@0.0.58
+  - @real-system/icon@0.0.65
+  - @real-system/input@0.0.65
+  - @real-system/link@0.0.36
+  - @real-system/menu@0.0.39
+  - @real-system/pin-input@0.0.31
+  - @real-system/popover@0.0.43
+  - @real-system/select@0.0.34
+  - @real-system/separator@0.0.35
+  - @real-system/spinner@0.0.63
+  - @real-system/stack@0.0.25
+  - @real-system/textarea@0.0.49
+  - @real-system/toaster@0.0.51
+  - @real-system/tooltip@0.0.44
+  - @real-system/typography@0.0.66
+  - @real-system/visually-hidden@0.0.61
+  - @real-system/elements-primitive@0.0.29
+
 ## 0.0.70
 
 ### Patch Changes

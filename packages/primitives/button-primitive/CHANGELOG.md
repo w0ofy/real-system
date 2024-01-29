@@ -1,5 +1,12 @@
 # @real-system/button-primitive
 
+## 0.0.51
+
+### Patch Changes
+
+- Updated dependencies [[`b8c1603`](https://github.com/bigwoof91/real-system/commit/b8c1603a2a6e1315611bc8d62bdadd7ae3fae66c)]:
+  - @real-system/ariakit-library@0.0.30
+
 ## 0.0.50
 
 ### Patch Changes
