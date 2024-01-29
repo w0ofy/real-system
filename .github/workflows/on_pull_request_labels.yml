@@ -9,12 +9,12 @@ jobs:
     name: Categorize PR
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v5
         if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           configuration-path: .github/opened-pr-labeler.yml
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v5
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           sync-labels: true
