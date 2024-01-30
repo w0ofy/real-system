@@ -2,38 +2,48 @@
 
 # Add 'repo' label to any root file changes
 'area: repo':
-  - '*'
+- changed-files:
+  - any-glob-to-any-file: '*'
 
 'area: infra':
-  - .changeset/**/*
-  - .github/**/*
-  - .husky/**/*
-  - _storybook/**/*
-  - .vscode/**/*
-  - tools/**/*
-  - package.json
+- changed-files:
+  - any-glob-to-any-file:
+    - .changeset/**/*
+    - .github/**/*
+    - .husky/**/*
+    - _storybook/**/*
+    - .vscode/**/*
+    - tools/**/*
+    - package.json
 
 # components
 'area: components':
-  - packages/components/**/*
+- changed-files:
+  - any-glob-to-any-file: packages/components/**/*
 
 # core bundle
 'area: core':
-  - packages/core/**/*
+  - changed-files:
+  - any-glob-to-any-file: packages/core/**/*
 
 # libraries
 'area: libraries':
-  - packages/libraries/**/*
+- changed-files:
+  - any-glob-to-any-file: packages/libraries/**/*
 
 # primitives
 'area: primitives':
-  - packages/primitives/**/*
+- changed-files:
+  - any-glob-to-any-file: packages/primitives/**/*
 
 # docs
 'type: storybook':
-  - packages/**/stories/**/*
-  - _storybook/**/*
+- changed-files:
+  - any-glob-to-any-file:
+    - packages/**/stories/**/*
+    - _storybook/**/*
 
 # tests
 'type: test':
-  - '**/__tests__/**/*'
+- changed-files:
+  - any-glob-to-any-file: '**/__tests__/**/*'
