@@ -5783,12 +5783,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/react@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "@heroicons/react@npm:1.0.6"
+"@heroicons/react@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "@heroicons/react@npm:2.1.3"
   peerDependencies:
     react: ">= 16"
-  checksum: 372b1eda3ce735ef069777bc96304f70de585ebb71a6d1cedc121bb695f9bca235619112e3ee14e8779e95a03096813cbbe3b755927a54b7580d1ce084fa4096
+  checksum: 2a72920fa36d789d08aab76f09a687dd86f2ed665d21d796593e3f744457d5436467f1c3324103a794afa9ca7235ffd1fde00953ce348b501c7304890b1fe746
   languageName: node
   linkType: hard
 
@@ -8054,7 +8054,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@real-system/icon@workspace:packages/components/icon"
   dependencies:
-    "@heroicons/react": ^1.0.6
+    "@heroicons/react": ^2.1.3
     "@real-system/elements-primitive": ^0.0.29
     "@real-system/styled-library": ^0.0.27
     "@real-system/utils-library": ^0.0.37
